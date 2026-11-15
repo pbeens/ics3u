@@ -4,75 +4,46 @@ subtitle: "Grade 11, University Preparation · Taught in Python"
 toc: false
 ---
 
-A complete course of study for Ontario's ICS3U course (2008 curriculum), taught in Python. Every lesson comes with a teaching plan, slides, runnable code examples, and student activities, all aligned to the curriculum expectations.
+Ready-to-teach lessons for Ontario ICS3U, each with slides, runnable code, and teacher prompts. Students read code before they write it. Teaching a similar course in Python somewhere else? These lessons work for you too.
 
-::: {.callout-tip appearance="simple"}
-**Start here:** set up a working Python computer ([Before You Begin](before-you-begin.qmd)), read the [Scope and Sequence](scope-and-sequence.qmd), then try [Module 1, Lesson 1](modules/module-01-about-this-computer/lesson-01-ask-the-computer.qmd).
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card .h-100 .p-3}
+### 1. Set up
+Get Python running on your computer and your students' computers.
+
+[Before You Begin →](before-you-begin.qmd)
+:::
 :::
 
-## The Philosophy of This Course
+::: {.g-col-12 .g-col-md-4}
+::: {.card .h-100 .p-3}
+### 2. See the plan
+Six modules, the spiral of ideas, and expectation coverage.
 
-### 1. Read before you write
-
-Students read code before they write it. Every new idea is first met by reading a short program, predicting what it will do, and tracing it line by line. Writing new code comes last, once students can read it fluently. Every worksheet opens with reading tasks, and every quiz and test includes a code-reading section.
-
-### 2. Start deep, with real code
-
-Because students read first, they can meet real, interesting programs long before they could write them. The first program students see isn't "Hello, World". It asks the computer what kind of processor it has. Students don't need to understand every line on day one. The parts they can't yet explain become reasons to keep learning.
-
-### 3. One new idea at a time
-
-Deep doesn't mean fast. Lessons start small, often from a single line, and add one piece at a time. Module 1 uses only one library until students are comfortable with it.
-
-### 4. A spiral, not a list of topics
-
-The course isn't divided into an output unit, then an input unit, then a decisions unit. Students meet output, input, decisions, loops, strings, and lists early, inside programs they read. Each module comes back to these ideas at a deeper level. Each idea moves through four stages over the course: **read** it, **modify** it, **write** it, then **design** with it. The [spiral table](scope-and-sequence.qmd#the-spiral) shows where each idea sits in each module.
-
-### 5. Teacher-led, then gradually independent
-
-Lessons use explicit, direct instruction. The teacher models a worked example, thinking aloud, and students then practise with steadily less support. Each lesson follows the PRIMM sequence: students **Predict** what code will do, **Run** it, **Investigate** how it works, **Modify** it, and finally **Make** their own. The course builds toward an independent software project at the end, not from one at the start.
-
-## What a Lesson Looks Like
-
-| Stage | What happens |
-|---|---|
-| Review | Short retrieval questions, often reading or tracing code |
-| Teach | The teacher reads a worked example aloud and traces it |
-| Predict | Students read new code and write down what it will do, before running it |
-| Run | Students run the code and compare the result with their prediction |
-| Investigate | Trace tables, line-by-line questions, explaining code in plain English |
-| Modify | Students change working code to do something new |
-| Make | Students write their own code using the idea |
-| Check | An exit ticket, usually a short reading or tracing question |
-
-## Interactive by Design
-
-- **Runnable code on every page.** Students can edit and run Python right in the lesson page or on the slides, with nothing to install.
-- **Predict, then step.** Students type a prediction beside the code, then run the program one line at a time and watch the output and variables appear next to their prediction.
-- **Where does my code run?** The same program gives different answers on the classroom computer, in the browser, and on a cloud server. The course uses those differences to teach how computers work.
-
-## Built on Research
-
-This approach draws on research about how novices learn to program:
-
-- Students who can't reliably read and trace code have trouble writing it (Lister et al., 2004; Lopez et al., 2008).
-- Novices learn more from explicit instruction and worked examples than from open-ended discovery (Sweller & Cooper, 1985; Kirschner, Sweller & Clark, 2006).
-- Effective lessons review prior learning, present new material in small steps, model, and guide practice before independent work (Rosenshine, 2012).
-- PRIMM puts reading and predicting ahead of writing in programming lessons (Sentance, Waite & Kallia, 2019).
-
-::: {.callout-note collapse="true" appearance="simple"}
-## References
-
-- Kirschner, P. A., Sweller, J., & Clark, R. E. (2006). Why minimal guidance during instruction does not work. *Educational Psychologist, 41*(2), 75–86.
-- Lister, R., et al. (2004). A multi-national study of reading and tracing skills in novice programmers. *ITiCSE Working Group Reports*, 119–150.
-- Lopez, M., Whalley, J., Robbins, P., & Lister, R. (2008). Relationships between reading, tracing and writing skills in introductory programming. *Proceedings of ICER 2008*, 101–112.
-- Rosenshine, B. (2012). Principles of instruction: Research-based strategies that all teachers should know. *American Educator, 36*(1), 12–19, 39.
-- Sentance, S., Waite, J., & Kallia, M. (2019). Teaching computer programming with PRIMM: A sociocultural perspective. *Computer Science Education, 29*(2–3), 136–176.
-- Sweller, J., & Cooper, G. A. (1985). The use of worked examples as a substitute for problem solving in learning algebra. *Cognition and Instruction, 2*(1), 59–89.
+[Scope and Sequence →](scope-and-sequence.qmd)
+:::
 :::
 
-## About This Site
+::: {.g-col-12 .g-col-md-4}
+::: {.card .h-100 .p-3}
+### 3. Teach
+Students ask the computer about itself, using one line of Python.
 
-- Built for teachers. Lesson pages include timings, teacher prompts (what to say at key moments), and teacher notes.
-- Quizzes, tests, and answer keys are not published here, so students can't find them. They are shared with teachers directly.
-- The course is being written module by module. Check the [Scope and Sequence](scope-and-sequence.qmd) for the full plan.
+[Start Lesson 1 →](modules/module-01-about-this-computer/lesson-01-ask-the-computer.qmd)
+:::
+:::
+
+:::
+
+## Lessons {.mt-5}
+
+| Module 1: About This Computer | | |
+|---|---|---|
+| Lesson 1: Ask the Computer About Itself | [Lesson](modules/module-01-about-this-computer/lesson-01-ask-the-computer.qmd) | [Slides](modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.qmd) |
+| Lesson 2: Exploring the platform Library | [Lesson](modules/module-01-about-this-computer/lesson-02-exploring-platform.qmd) | [Slides](modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.qmd) |
+
+More modules are on the way. See the [Scope and Sequence](scope-and-sequence.qmd) for the full plan.
+
+New here? Read [About This Course](about.qmd) for the teaching philosophy and the research behind it.

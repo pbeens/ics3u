@@ -295,6 +295,10 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -330,7 +334,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#python-notes" id="toc-python-notes" class="nav-link" data-scroll-target="#python-notes">Python Notes for Teachers</a></li>
   <li><a href="#teaching-approach" id="toc-teaching-approach" class="nav-link" data-scroll-target="#teaching-approach">Teaching Approach</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/pbeens/ics3u/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -935,6 +939,49 @@ Note
 </section>
 
 </main> <!-- /main -->
+<script>
+/*
+  Feedback links: open the GitHub feedback form with this page's title and
+  address filled in. Rewrites Quarto's "Report an issue" link in the margin
+  and adds a line at the end of the page.
+*/
+(function () {
+  var main = document.querySelector("main#quarto-document-content");
+  if (!main) return; // slides and other formats
+  var heading = document.querySelector("h1.title");
+  var pageTitle = (heading ? heading.textContent : document.title).trim();
+  var url = "https://github.com/pbeens/ics3u/issues/new?template=feedback.yml" +
+    "&title=" + encodeURIComponent("[" + pageTitle + "] ") +
+    "&page=" + encodeURIComponent(window.location.href.split("#")[0]);
+  var label = "Report an error or suggest a change";
+
+  function rewrite(a) {
+    a.href = url;
+    a.setAttribute("data-original-href", url);
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.innerHTML = '<i class="bi bi-github"></i>' + label;
+  }
+  function rewriteAll() {
+    document.querySelectorAll('a[href$="/issues/new"]').forEach(rewrite);
+  }
+  // Quarto copies the margin links after this script runs, so repeat on load
+  // and catch any copy at click time.
+  rewriteAll();
+  window.addEventListener("load", rewriteAll);
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href$="/issues/new"]');
+    if (a) rewrite(a);
+  }, true);
+
+  var note = document.createElement("p");
+  note.className = "feedback-link small text-muted";
+  note.style.marginTop = "3rem";
+  note.innerHTML = 'Found a mistake or have an idea? <a target="_blank" rel="noopener" href="' +
+    url + '">' + label + "</a> on GitHub. Feedback is always appreciated.";
+  main.appendChild(note);
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1021,7 +1068,7 @@ Note
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/pbeens\.github\.io\/ics3u\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1362,8 +1409,8 @@ Note
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>ICS3U · Ontario Curriculum (2008)</p>
-</div>
+<p>ICS3U · Ontario Curriculum (2008) · <a href="https://github.com/pbeens/ics3u/blob/main/LICENSE">MIT License</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/pbeens/ics3u/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

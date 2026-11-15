@@ -9,3 +9,6 @@ __pycache__/
 
 # macOS
 .DS_Store
+
+# Teacher-only material (answer keys, tests). Never commit.
+private/

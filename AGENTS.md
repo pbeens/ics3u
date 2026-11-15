@@ -16,8 +16,9 @@ Build a complete, public teacher website for Ontario ICS3U (Grade 11 Introductio
 - `project-docs/` — teaching approach, lesson template, style and process notes.
 - `site/` — Quarto source for everything published. Public.
 - `notebooks/` — every example program mirrored as a Jupyter notebook (`MM-LL-name.ipynb`). Generated; not published.
+- `.github/` — the feedback issue form.
 - `scripts/` — shared utilities, e.g. `build_notebooks.py`.
-- `private/` — tests, quizzes, answer keys, teacher-only notes. Never published.
+- `private/` — tests, quizzes, answer keys, teacher-only notes. Git-ignored; never pushed or published.
 - `docs/` — generated site. Never edit by hand; `quarto render site` overwrites it.
 
 ## Rules for Agents
@@ -51,7 +52,9 @@ Students read code before they write code. This applies to every lesson, workshe
 ## Public vs Private
 
 - Anything in `site/` is public. Never place tests, quizzes, answer keys, solutions, or teacher-only notes there, and never link to them from the site.
-- Put assessment material in `private/`.
+- The GitHub repository (https://github.com/pbeens/ics3u) is public too. Put assessment material in `private/`, which is git-ignored: never commit it, and never remove it from `.gitignore`.
+- The project is MIT licensed ([LICENSE](LICENSE)); Ministry documents in `references/official-curriculum/` are excluded.
+- Every site page gets a "Report an error or suggest a change" link (from `site/_feedback.html`) that opens the GitHub feedback form (`.github/ISSUE_TEMPLATE/feedback.yml`) with the page filled in.
 
 ## Code Examples
 

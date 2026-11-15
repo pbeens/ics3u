@@ -1,0 +1,86 @@
+---
+title: "About This Course"
+subtitle: "How the course is designed, and why"
+---
+
+## Who This Course Is For
+
+This course is built to address every expectation in Ontario's ICS3U course (Grade 11 Introduction to Computer Science, University Preparation, 2008 curriculum), and every lesson is tagged with the expectations it covers.
+
+It isn't only for Ontario. The lessons suit any similar high school introduction to computer science that's taught in Python. If you teach elsewhere, use the modules in order, skip the expectation codes, and adapt freely: everything here is [MIT licensed](https://github.com/pbeens/ics3u/blob/main/LICENSE).
+
+## The Philosophy
+
+### 1. Read before you write
+
+Students read code before they write it. Every new idea is first met by reading a short program, predicting what it will do, and tracing it line by line. Writing new code comes last, once students can read it fluently. Every worksheet opens with reading tasks, and every quiz and test includes a code-reading section.
+
+### 2. Start deep, with real code
+
+Because students read first, they can meet real, interesting programs long before they could write them. The first program students see isn't "Hello, World". It asks the computer what kind of processor it has. Students don't need to understand every line on day one. The parts they can't yet explain become reasons to keep learning.
+
+### 3. One new idea at a time
+
+Deep doesn't mean fast. Lessons start small, often from a single line, and add one piece at a time. Module 1 uses only one library until students are comfortable with it.
+
+### 4. A spiral, not a list of topics
+
+The course isn't divided into an output unit, then an input unit, then a decisions unit. Students meet output, input, decisions, loops, strings, and lists early, inside programs they read. Each module comes back to these ideas at a deeper level. Each idea moves through four stages over the course: **read** it, **modify** it, **write** it, then **design** with it. The [spiral table](scope-and-sequence.qmd#the-spiral) shows where each idea sits in each module.
+
+### 5. Teacher-led, then gradually independent
+
+Lessons use explicit, direct instruction. The teacher models a worked example, thinking aloud, and students then practise with steadily less support. Each lesson follows the PRIMM sequence: students **Predict** what code will do, **Run** it, **Investigate** how it works, **Modify** it, and finally **Make** their own. The course builds toward an independent software project at the end, not from one at the start.
+
+## What a Lesson Looks Like
+
+| Stage | What happens |
+|---|---|
+| Review | Short retrieval questions, often reading or tracing code |
+| Teach | The teacher reads a worked example aloud and traces it |
+| Predict | Students read new code and write down what it will do, before running it |
+| Run | Students run the code and compare the result with their prediction |
+| Investigate | Trace tables, line-by-line questions, explaining code in plain English |
+| Modify | Students change working code to do something new |
+| Make | Students write their own code using the idea |
+| Check | An exit ticket, usually a short reading or tracing question |
+
+## Interactive by Design
+
+- **Runnable code on every page.** Students can edit and run Python right in the lesson page or on the slides, with nothing to install.
+- **Predict, then step.** Students type a prediction beside the code, then run the program one line at a time and watch the output and variables appear next to their prediction.
+- **Where does my code run?** The same program gives different answers on the classroom computer, in the browser, and on a cloud server. The course uses those differences to teach how computers work.
+
+## Built on Research
+
+This approach draws on research about how novices learn to program:
+
+- Students who can't reliably read and trace code have trouble writing it (Lister et al., 2004; Lopez et al., 2008).
+- Novices learn more from explicit instruction and worked examples than from open-ended discovery (Sweller & Cooper, 1985; Kirschner, Sweller & Clark, 2006).
+- Effective lessons review prior learning, present new material in small steps, model, and guide practice before independent work (Rosenshine, 2012).
+- PRIMM puts reading and predicting ahead of writing in programming lessons (Sentance, Waite & Kallia, 2019).
+
+::: {.callout-note collapse="true" appearance="simple"}
+## References
+
+- Kirschner, P. A., Sweller, J., & Clark, R. E. (2006). Why minimal guidance during instruction does not work. *Educational Psychologist, 41*(2), 75–86.
+- Lister, R., et al. (2004). A multi-national study of reading and tracing skills in novice programmers. *ITiCSE Working Group Reports*, 119–150.
+- Lopez, M., Whalley, J., Robbins, P., & Lister, R. (2008). Relationships between reading, tracing and writing skills in introductory programming. *Proceedings of ICER 2008*, 101–112.
+- Rosenshine, B. (2012). Principles of instruction: Research-based strategies that all teachers should know. *American Educator, 36*(1), 12–19, 39.
+- Sentance, S., Waite, J., & Kallia, M. (2019). Teaching computer programming with PRIMM: A sociocultural perspective. *Computer Science Education, 29*(2–3), 136–176.
+- Sweller, J., & Cooper, G. A. (1985). The use of worked examples as a substitute for problem solving in learning algebra. *Cognition and Instruction, 2*(1), 59–89.
+:::
+
+## About This Site
+
+- Built for teachers. Lesson pages include timings, teacher prompts (what to say at key moments), and teacher notes.
+- Quizzes, tests, and answer keys are not published here, so students can't find them. They are shared with teachers directly.
+- The course is being written module by module.
+- Notebook versions of every example program, with Open in Callysto | Colab links, are in the [notebooks folder](https://github.com/pbeens/ics3u/tree/main/notebooks) on GitHub. Check the [Scope and Sequence](scope-and-sequence.qmd) for the full plan.
+
+## Feedback Is Welcome
+
+This course gets better with every correction and suggestion. If you find a mistake, a code example that doesn't run, or have an idea for a lesson, use the **Report an error or suggest a change** link on any page. It opens a short form on GitHub with the page already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.
+
+## License
+
+The lessons, code, and materials on this site are shared under the [MIT License](https://github.com/pbeens/ics3u/blob/main/LICENSE): use them, adapt them, and share them. Curriculum expectations are quoted from *The Ontario Curriculum, Grades 10 to 12: Computer Studies (Revised 2008)*.

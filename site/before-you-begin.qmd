@@ -16,11 +16,19 @@ Get Python working before Lesson 1, both on your own demonstration computer and 
 You will model nearly every lesson: reading code aloud, predicting, running it, and stepping through mistakes. For this you need a computer that:
 
 - has **Python 3 installed locally**, not just a browser tab;
-- has a beginner-friendly editor. [Thonny](https://thonny.org) is a good first choice because its debugger steps through code one line at a time. IDLE (included with Python) and VS Code also work;
+- has an editor students will also use. [Thonny](https://thonny.org) is the best first choice for beginners because its debugger steps through code one line at a time. IDLE (included with Python) also works;
 - connects to the projector, with the editor's font large enough to read from the back of the room;
 - has already run each lesson's example programs. Run them the day before, so you know what *this* computer will report.
 
 Don't count on a board-imaged laptop letting you install software on the day. Ask IT early.
+
+### For you: VS Code and agentic programming
+
+Install [VS Code](https://code.visualstudio.com) as well, and learn to use it. It's the editor many professional developers use, and it's where **agentic programming** happens: AI coding agents (such as GitHub Copilot, Claude Code, and Codex) work inside the editor. They read your project, write and change code, run it, and explain what they did.
+
+Every teacher, and especially every CS teacher, should learn to work this way. It's quickly becoming how software gets built. Knowing it firsthand helps you prepare examples faster and answer students' questions about AI honestly. It also prepares you for the world your students are heading into. GitHub Copilot is free for verified teachers through [GitHub Education](https://education.github.com).
+
+Students start in Thonny, where they read and trace every line themselves. VS Code is a natural next step once they're comfortable, and a good place to show how AI tools change (and don't change) the need to read code carefully.
 
 ## Student Computers
 
@@ -34,7 +42,7 @@ The best choice. Lab or classroom computers with Python and an editor installed 
 
 Strongly recommended if your school doesn't have enough computers. Older desktops and laptops are cheap and run Python perfectly well.
 
-- In Canada, the federal [Computers for Schools Plus](https://ised-isde.canada.ca/site/computers-for-schools-plus/en) program supplies refurbished computers to schools. In Ontario it's run by Renewed Computer Technology.
+- In Canada, the federal [Computers for Schools Plus](https://ised-isde.canada.ca/site/computers-for-schools-plus/en) program supplies refurbished computers to schools. In Ontario it's run by Renewed Computer Technology. Schools can order through [Computers for Schools Ontario](https://rcto.ca/computers-for-schools/#schoolorder).
 - Many older computers can't run Windows 11, and Windows 10 stopped receiving security updates in October 2025. A free Linux system (for example, Ubuntu or Linux Mint) runs well on older hardware and comes with Python already installed.
 - A room with a mix of Windows, macOS, and Linux computers is a bonus. Each one gives different answers to the same program, which is exactly what Lesson 1 investigates.
 - Refurbishing ties into the curriculum: expectation D1.4 names "private companies that refurbish computers" as an example.

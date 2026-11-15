@@ -12,6 +12,10 @@ lang: en-CA
 website:
   title: "ICS3U"
   description: "Teacher resources for Ontario ICS3U: Introduction to Computer Science, Grade 11, University Preparation."
+  site-url: https://pbeens.github.io/ics3u/
+  repo-url: https://github.com/pbeens/ics3u
+  repo-subdir: site
+  repo-actions: [issue]
   search: true
   navbar:
     left:
@@ -31,8 +35,10 @@ website:
             text: "Lesson 2: Exploring the platform Library"
           - href: modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.qmd
             text: "Lesson 2 slides"
+      - href: about.qmd
+        text: About
   page-footer:
-    center: "ICS3U · Ontario Curriculum (2008)"
+    center: "ICS3U · Ontario Curriculum (2008) · [MIT License](https://github.com/pbeens/ics3u/blob/main/LICENSE)"
 
 # Shared options apply to every page format (html and live-html).
 # Slide decks override theme in their own front matter.
@@ -43,5 +49,6 @@ toc: true
 code-copy: true
 link-external-newwindow: true
 link-external-icon: true
+include-after-body: _feedback.html
 
 format: html

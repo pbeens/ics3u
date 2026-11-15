@@ -295,6 +295,10 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -312,7 +316,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#your-demonstration-computer" id="toc-your-demonstration-computer" class="nav-link active" data-scroll-target="#your-demonstration-computer">Your Demonstration Computer</a></li>
+  <li><a href="#your-demonstration-computer" id="toc-your-demonstration-computer" class="nav-link active" data-scroll-target="#your-demonstration-computer">Your Demonstration Computer</a>
+  <ul class="collapse">
+  <li><a href="#for-you-vs-code-and-agentic-programming" id="toc-for-you-vs-code-and-agentic-programming" class="nav-link" data-scroll-target="#for-you-vs-code-and-agentic-programming">For you: VS Code and agentic programming</a></li>
+  </ul></li>
   <li><a href="#student-computers" id="toc-student-computers" class="nav-link" data-scroll-target="#student-computers">Student Computers</a>
   <ul class="collapse">
   <li><a href="#real-computers-with-python-installed" id="toc-real-computers-with-python-installed" class="nav-link" data-scroll-target="#real-computers-with-python-installed">1. Real computers with Python installed</a></li>
@@ -322,7 +329,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#online-options-fine-in-a-pinch" id="toc-online-options-fine-in-a-pinch" class="nav-link" data-scroll-target="#online-options-fine-in-a-pinch">Online Options: Fine in a Pinch</a></li>
   <li><a href="#checklist-before-lesson-1" id="toc-checklist-before-lesson-1" class="nav-link" data-scroll-target="#checklist-before-lesson-1">Checklist Before Lesson 1</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/pbeens/ics3u/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -365,11 +372,17 @@ ul.task-list li input[type="checkbox"] {
 <p>You will model nearly every lesson: reading code aloud, predicting, running it, and stepping through mistakes. For this you need a computer that:</p>
 <ul>
 <li>has <strong>Python 3 installed locally</strong>, not just a browser tab;</li>
-<li>has a beginner-friendly editor. <a href="https://thonny.org">Thonny</a> is a good first choice because its debugger steps through code one line at a time. IDLE (included with Python) and VS Code also work;</li>
+<li>has an editor students will also use. <a href="https://thonny.org">Thonny</a> is the best first choice for beginners because its debugger steps through code one line at a time. IDLE (included with Python) also works;</li>
 <li>connects to the projector, with the editor’s font large enough to read from the back of the room;</li>
 <li>has already run each lesson’s example programs. Run them the day before, so you know what <em>this</em> computer will report.</li>
 </ul>
 <p>Don’t count on a board-imaged laptop letting you install software on the day. Ask IT early.</p>
+<section id="for-you-vs-code-and-agentic-programming" class="level3">
+<h3 class="anchored" data-anchor-id="for-you-vs-code-and-agentic-programming">For you: VS Code and agentic programming</h3>
+<p>Install <a href="https://code.visualstudio.com">VS Code</a> as well, and learn to use it. It’s the editor many professional developers use, and it’s where <strong>agentic programming</strong> happens: AI coding agents (such as GitHub Copilot, Claude Code, and Codex) work inside the editor. They read your project, write and change code, run it, and explain what they did.</p>
+<p>Every teacher, and especially every CS teacher, should learn to work this way. It’s quickly becoming how software gets built. Knowing it firsthand helps you prepare examples faster and answer students’ questions about AI honestly. It also prepares you for the world your students are heading into. GitHub Copilot is free for verified teachers through <a href="https://education.github.com">GitHub Education</a>.</p>
+<p>Students start in Thonny, where they read and trace every line themselves. VS Code is a natural next step once they’re comfortable, and a good place to show how AI tools change (and don’t change) the need to read code carefully.</p>
+</section>
 </section>
 <section id="student-computers" class="level2">
 <h2 class="anchored" data-anchor-id="student-computers">Student Computers</h2>
@@ -382,7 +395,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="refurbished-computers">2. Refurbished computers</h3>
 <p>Strongly recommended if your school doesn’t have enough computers. Older desktops and laptops are cheap and run Python perfectly well.</p>
 <ul>
-<li>In Canada, the federal <a href="https://ised-isde.canada.ca/site/computers-for-schools-plus/en">Computers for Schools Plus</a> program supplies refurbished computers to schools. In Ontario it’s run by Renewed Computer Technology.</li>
+<li>In Canada, the federal <a href="https://ised-isde.canada.ca/site/computers-for-schools-plus/en">Computers for Schools Plus</a> program supplies refurbished computers to schools. In Ontario it’s run by Renewed Computer Technology. Schools can order through <a href="https://rcto.ca/computers-for-schools/#schoolorder">Computers for Schools Ontario</a>.</li>
 <li>Many older computers can’t run Windows 11, and Windows 10 stopped receiving security updates in October 2025. A free Linux system (for example, Ubuntu or Linux Mint) runs well on older hardware and comes with Python already installed.</li>
 <li>A room with a mix of Windows, macOS, and Linux computers is a bonus. Each one gives different answers to the same program, which is exactly what Lesson 1 investigates.</li>
 <li>Refurbishing ties into the curriculum: expectation D1.4 names “private companies that refurbish computers” as an example.</li>
@@ -463,6 +476,49 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<script>
+/*
+  Feedback links: open the GitHub feedback form with this page's title and
+  address filled in. Rewrites Quarto's "Report an issue" link in the margin
+  and adds a line at the end of the page.
+*/
+(function () {
+  var main = document.querySelector("main#quarto-document-content");
+  if (!main) return; // slides and other formats
+  var heading = document.querySelector("h1.title");
+  var pageTitle = (heading ? heading.textContent : document.title).trim();
+  var url = "https://github.com/pbeens/ics3u/issues/new?template=feedback.yml" +
+    "&title=" + encodeURIComponent("[" + pageTitle + "] ") +
+    "&page=" + encodeURIComponent(window.location.href.split("#")[0]);
+  var label = "Report an error or suggest a change";
+
+  function rewrite(a) {
+    a.href = url;
+    a.setAttribute("data-original-href", url);
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.innerHTML = '<i class="bi bi-github"></i>' + label;
+  }
+  function rewriteAll() {
+    document.querySelectorAll('a[href$="/issues/new"]').forEach(rewrite);
+  }
+  // Quarto copies the margin links after this script runs, so repeat on load
+  // and catch any copy at click time.
+  rewriteAll();
+  window.addEventListener("load", rewriteAll);
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href$="/issues/new"]');
+    if (a) rewrite(a);
+  }, true);
+
+  var note = document.createElement("p");
+  note.className = "feedback-link small text-muted";
+  note.style.marginTop = "3rem";
+  note.innerHTML = 'Found a mistake or have an idea? <a target="_blank" rel="noopener" href="' +
+    url + '">' + label + "</a> on GitHub. Feedback is always appreciated.";
+  main.appendChild(note);
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -549,7 +605,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/pbeens\.github\.io\/ics3u\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -890,8 +946,8 @@ ul.task-list li input[type="checkbox"] {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>ICS3U · Ontario Curriculum (2008)</p>
-</div>
+<p>ICS3U · Ontario Curriculum (2008) · <a href="https://github.com/pbeens/ics3u/blob/main/LICENSE">MIT License</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/pbeens/ics3u/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

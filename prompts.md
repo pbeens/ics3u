@@ -4,6 +4,70 @@ Program-related prompts for this project, newest first. Paraphrased, not verbati
 
 ---
 
+## User Prompt 31
+
+- **Timestamp:** 2026-11-15T15:45
+- **Goal:** Say the course suits non-Ontario courses too.
+- **Summary:** In the preface, note that although the course is designed to address all the Ontario ICS3U expectations, it suits any similar high school computer science course taught in Python.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** New "Who This Course Is For" section at the top of the About page; one sentence added to the home page intro.
+
+---
+
+## User Prompt 30
+
+- **Timestamp:** 2026-11-15T15:40
+- **Goal:** Add the Ontario Computers for Schools link.
+- **Summary:** Because the course is Ontario-specific, list the Ontario Computers for Schools order page (rcto.ca) alongside the federal program.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+
+---
+
+## User Prompt 29
+
+- **Timestamp:** 2026-11-15T15:20
+- **Goal:** Recommend VS Code alongside Thonny.
+- **Summary:** Besides Thonny, mention VS Code for its strength in agentic programming, which every teacher (especially CS teachers) should learn.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** New "For you: VS Code and agentic programming" section on Before You Begin.
+
+---
+
+## User Prompt 28
+
+- **Timestamp:** 2026-11-15T15:10
+- **Goal:** Make the home page quick to use.
+- **Summary:** Teachers landing on the home page should be able to start quickly, without much text; move the course philosophy and similar material to another page.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Home page reduced to quick-start cards and a lesson table; new `about.qmd` holds philosophy, lesson structure, research, feedback, and license.
+
+---
+
+## User Prompt 27
+
+- **Timestamp:** 2026-11-15T15:00
+- **Goal:** Feedback links, MIT license, and a feedback note.
+- **Summary:** The repo is published at github.com/pbeens/ics3u. Add a link on each lesson for opening a GitHub issue, prefilled with the lesson the user is on, for feedback and errors. Add an MIT license, and note in the preface that feedback and recommendations are appreciated.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Issue form `.github/ISSUE_TEMPLATE/feedback.yml`; `site/_feedback.html` prefills title and page URL. Found answer keys in the public repo; `private/` now git-ignored.
+
+---
+
+## User Prompt 26
+
+- **Timestamp:** 2026-11-15T14:50
+- **Goal:** Add Open in Callysto | Colab links to notebooks.
+- **Summary:** Using the URL patterns from the author's custom GPT (Callysto nbgitpuller and Colab GitHub links), put a text line "Open in Callysto | Colab" at the top of each notebook instead of button images.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+
+---
+
 ## User Prompt 25
 
 - **Timestamp:** 2026-11-15T14:45

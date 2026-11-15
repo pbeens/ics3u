@@ -1,0 +1,35 @@
+name: Feedback or error
+description: Report a mistake, a broken example, or suggest an improvement to a lesson or page.
+title: "[Page] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve this course! Feedback, corrections, and suggestions are all welcome.
+        Please don't post answers to worksheets, quizzes, or tests here: issues are public.
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The page or lesson this is about. Filled in automatically when you use the link on the site.
+      placeholder: https://pbeens.github.io/ics3u/...
+    validations:
+      required: false
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of feedback is this?
+      options:
+        - Error in the content (wrong fact, typo, broken link)
+        - Code example doesn't run or gives a different result
+        - Suggestion or idea
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What did you notice? For code problems, include what you expected, what happened, and where you ran it (classroom computer, the page itself, Colab, Callysto).
+    validations:
+      required: true

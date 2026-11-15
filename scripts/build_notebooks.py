@@ -13,10 +13,13 @@ removed. Run from anywhere:
 import json
 import re
 from pathlib import Path
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent.parent
 MODULES = ROOT / "site" / "modules"
 OUT = ROOT / "notebooks"
+REPO = "https://github.com/pbeens/ics3u"
+BRANCH = "main"
 GENERATED = re.compile(r"^\d{2}-\d{2}-[a-z0-9-]+\.ipynb$")
 
 
@@ -67,7 +70,19 @@ def code(text):
     }
 
 
-def build(program, lesson_info, rel_source):
+def open_links(notebook_path):
+    """
+    Return the "Open in Callysto | Colab" markdown line for a notebook path in the repo.
+    """
+    callysto = (
+        "https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo="
+        f"{quote(REPO, safe='')}&branch={BRANCH}&subPath={notebook_path}&depth=1"
+    )
+    colab = f"https://colab.research.google.com/github/{REPO.split('github.com/')[1]}/blob/{BRANCH}/{notebook_path}"
+    return f"Open in [Callysto]({callysto}) | [Colab]({colab})"
+
+
+def build(program, lesson_info, rel_source, notebook_path):
     """
     Return the notebook dictionary for one example program.
     """
@@ -80,6 +95,7 @@ def build(program, lesson_info, rel_source):
         heading = "Mistake: " + name.split("_", 1)[1].replace("_", " ")
 
     title = (
+        f"{open_links(notebook_path)}\n\n"
         f"# {heading}\n\n"
         f"**{lesson_info['subtitle']}** · {lesson_info['title']}  \n"
         f"**Expectations:** {lesson_info['expectations']}\n\n"
@@ -152,7 +168,9 @@ def main():
             info = front_matter(lesson_file(module_dir, lesson))
             name = program.stem.split("_", 1)[1].replace("_", "-")
             target = OUT / f"{module}-{lesson}-{name}.ipynb"
-            notebook = build(program, info, program.relative_to(ROOT).as_posix())
+            notebook = build(
+                program, info, program.relative_to(ROOT).as_posix(), target.relative_to(ROOT).as_posix()
+            )
             target.write_text(json.dumps(notebook, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
             written.add(target.name)
             print(f"wrote {target.relative_to(ROOT)}")
