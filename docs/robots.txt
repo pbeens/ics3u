@@ -1,1 +1,1 @@
-Sitemap: https://pbeens.github.io/ics3u/sitemap.xml
+Sitemap: https://peter.beens.ca/ics3u/sitemap.xml
