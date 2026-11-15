@@ -5,6 +5,7 @@ Quarto source for the public ICS3U teacher website. Everything here is published
 - `_quarto.yml` — site settings and navigation.
 - `index.qmd` — home page: quick start and lesson list.
 - `about.qmd` — course philosophy, lesson structure, research, feedback, and license.
+- `_extensions/lesson-tools/` — `{{< lesson-code >}}` (code downloads and notebook links) and `{{< feedback >}}` (Feedback section) shortcodes for lesson pages.
 - `_feedback.html` — adds "Report an error or suggest a change" links that open the GitHub feedback form with the page filled in.
 - `before-you-begin.qmd` — teacher setup: a local Python computer for demonstrations and for students, with online options as backups.
 - `scope-and-sequence.qmd` — modules, hours, the spiral table, expectation coverage, and assessment overview.

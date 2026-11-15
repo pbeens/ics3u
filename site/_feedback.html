@@ -33,6 +33,7 @@
     if (a) rewrite(a);
   }, true);
 
+  if (document.querySelector(".feedback-section")) return; // page has its own Feedback section
   var note = document.createElement("p");
   note.className = "feedback-link small text-muted";
   note.style.marginTop = "3rem";

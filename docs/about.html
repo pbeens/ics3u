@@ -300,6 +300,13 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://buymeacoffee.com/pbeens"> <i class="bi bi-cup-hot" role="img" aria-label="Buy Me a Coffee">
+</i> 
+<span class="menu-text">Buy Me a Coffee</span></a>
+  </li>  
+</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -330,6 +337,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#built-on-research" id="toc-built-on-research" class="nav-link" data-scroll-target="#built-on-research">Built on Research</a></li>
   <li><a href="#about-this-site" id="toc-about-this-site" class="nav-link" data-scroll-target="#about-this-site">About This Site</a></li>
   <li><a href="#feedback-is-welcome" id="toc-feedback-is-welcome" class="nav-link" data-scroll-target="#feedback-is-welcome">Feedback Is Welcome</a></li>
+  <li><a href="#free-with-no-ads" id="toc-free-with-no-ads" class="nav-link" data-scroll-target="#free-with-no-ads">Free, With No Ads</a></li>
   <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/pbeens/ics3u/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -489,6 +497,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="feedback-is-welcome">Feedback Is Welcome</h2>
 <p>This course gets better with every correction and suggestion. If you find a mistake, a code example that doesn’t run, or have an idea for a lesson, use the <strong>Report an error or suggest a change</strong> link on any page. It opens a short form on GitHub with the page already filled in. Please don’t post answers to worksheets, quizzes, or tests: issues are public.</p>
 </section>
+<section id="free-with-no-ads" class="level2">
+<h2 class="anchored" data-anchor-id="free-with-no-ads">Free, With No Ads</h2>
+<p>Everything here is free to use: no ads, no sign-up, and no paid version. It’s written and maintained by one teacher in their own time. If the course saves you time, a token <a href="https://buymeacoffee.com/pbeens">coffee</a> every so often is appreciated and helps keep new lessons coming.</p>
+</section>
 <section id="license" class="level2">
 <h2 class="anchored" data-anchor-id="license">License</h2>
 <p>The lessons, code, and materials on this site are shared under the <a href="https://github.com/pbeens/ics3u/blob/main/LICENSE">MIT License</a>: use them, adapt them, and share them. Curriculum expectations are quoted from <em>The Ontario Curriculum, Grades 10 to 12: Computer Studies (Revised 2008)</em>.</p>
@@ -532,6 +544,7 @@ ul.task-list li input[type="checkbox"] {
     if (a) rewrite(a);
   }, true);
 
+  if (document.querySelector(".feedback-section")) return; // page has its own Feedback section
   var note = document.createElement("p");
   note.className = "feedback-link small text-muted";
   note.style.marginTop = "3rem";

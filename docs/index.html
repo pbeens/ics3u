@@ -300,6 +300,13 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://buymeacoffee.com/pbeens"> <i class="bi bi-cup-hot" role="img" aria-label="Buy Me a Coffee">
+</i> 
+<span class="menu-text">Buy Me a Coffee</span></a>
+  </li>  
+</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -336,7 +343,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Ready-to-teach lessons for Ontario ICS3U, each with slides, runnable code, and teacher prompts. Students read code before they write it. Teaching a similar course in Python somewhere else? These lessons work for you too.</p>
+<p>Ready-to-teach lessons for Ontario ICS3U, each with slides, runnable code, and teacher prompts. Teaching a similar course in Python somewhere else? These lessons work for you too.</p>
+<p><strong>How the course works</strong></p>
+<ul>
+<li><strong>Read first.</strong> Students read, predict, and trace real code before they write their own.</li>
+<li><strong>A spiral, not a list of topics.</strong> Output, input, decisions, loops, and lists all appear early inside programs students read, then return in every module at a deeper level.</li>
+<li><strong>Real programs from day one.</strong> The first program asks the computer what processor it has, not “Hello, World”. Later modules build games, secret codes, and data investigations.</li>
+</ul>
+<p><a href="./about.html">More about the course design →</a></p>
+<p>The whole course is free, with no ads and no sign-up. If it saves you time, a <a href="https://buymeacoffee.com/pbeens">coffee now and then</a> is always appreciated.</p>
 <div class="grid">
 <div class="g-col-12 g-col-md-4">
 <section id="set-up" class="level3 card h-100 p-3">
@@ -384,7 +399,6 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>More modules are on the way. See the <a href="./scope-and-sequence.html">Scope and Sequence</a> for the full plan.</p>
-<p>New here? Read <a href="./about.html">About This Course</a> for the teaching philosophy and the research behind it.</p>
 
 
 </section>
@@ -425,6 +439,7 @@ ul.task-list li input[type="checkbox"] {
     if (a) rewrite(a);
   }, true);
 
+  if (document.querySelector(".feedback-section")) return; // page has its own Feedback section
   var note = document.createElement("p");
   note.className = "feedback-link small text-muted";
   note.style.marginTop = "3rem";

@@ -4,7 +4,17 @@ subtitle: "Grade 11, University Preparation · Taught in Python"
 toc: false
 ---
 
-Ready-to-teach lessons for Ontario ICS3U, each with slides, runnable code, and teacher prompts. Students read code before they write it. Teaching a similar course in Python somewhere else? These lessons work for you too.
+Ready-to-teach lessons for Ontario ICS3U, each with slides, runnable code, and teacher prompts. Teaching a similar course in Python somewhere else? These lessons work for you too.
+
+**How the course works**
+
+- **Read first.** Students read, predict, and trace real code before they write their own.
+- **A spiral, not a list of topics.** Output, input, decisions, loops, and lists all appear early inside programs students read, then return in every module at a deeper level.
+- **Real programs from day one.** The first program asks the computer what processor it has, not "Hello, World". Later modules build games, secret codes, and data investigations.
+
+[More about the course design →](about.qmd)
+
+The whole course is free, with no ads and no sign-up. If it saves you time, a [coffee now and then](https://buymeacoffee.com/pbeens) is always appreciated.
 
 ::: {.grid}
 
@@ -45,5 +55,3 @@ Students ask the computer about itself, using one line of Python.
 | Lesson 2: Exploring the platform Library | [Lesson](modules/module-01-about-this-computer/lesson-02-exploring-platform.qmd) | [Slides](modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.qmd) |
 
 More modules are on the way. See the [Scope and Sequence](scope-and-sequence.qmd) for the full plan.
-
-New here? Read [About This Course](about.qmd) for the teaching philosophy and the research behind it.

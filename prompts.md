@@ -4,6 +4,50 @@ Program-related prompts for this project, newest first. Paraphrased, not verbati
 
 ---
 
+## User Prompt 35
+
+- **Timestamp:** 2026-11-15T16:30
+- **Goal:** Mention Buy Me a Coffee and that the course is free.
+- **Summary:** In the introductory text, mention the Buy Me a Coffee link and emphasize that the course is free with no ads; a token coffee now and then is appreciated.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** One sentence on the home page; "Free, With No Ads" section on the About page.
+
+---
+
+## User Prompt 34
+
+- **Timestamp:** 2026-11-15T16:20
+- **Goal:** Expand the home intro with a brief philosophy overview; get feedback on the hardware theme.
+- **Summary:** GitHub Pages is already on. The home intro is a little too short: add a very brief overview of the course philosophy (the spiral design, the emphasis on computer hardware). The author is unsure whether the hardware focus can last the whole course and asked for feedback.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Site is served at the custom domain peter.beens.ca/ics3u; updated site-url, feedback links, and issue form. Home page gained a three-point "How the course works" list.
+
+---
+
+## User Prompt 33
+
+- **Timestamp:** 2026-11-15T16:05
+- **Goal:** Add the Buy Me a Coffee link.
+- **Summary:** Put the author's usual "Buy Me a Coffee" link in the top-right corner of the site.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Navbar right item (cup-hot icon) to buymeacoffee.com/pbeens, matching the author's education-analysis site.
+
+---
+
+## User Prompt 32
+
+- **Timestamp:** 2026-11-15T15:55
+- **Goal:** Feedback section and code downloads on every lesson.
+- **Summary:** Put an issues link with a short feedback section at the bottom of every lesson. The notebooks weren't referenced in the lessons; consider offering the Python files as separate downloads too.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** New `lesson-tools` extension: `{{< lesson-code >}}` (table of .py downloads, notebook on GitHub, Open in Callysto | Colab) and `{{< feedback >}}` (Feedback section, prefilled issue link). Example .py files now published as site resources.
+
+---
+
 ## User Prompt 31
 
 - **Timestamp:** 2026-11-15T15:45

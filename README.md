@@ -2,7 +2,7 @@
 
 A complete teacher website for Ontario **ICS3U — Introduction to Computer Science, Grade 11, University Preparation** (2008 curriculum). It provides lessons, readings, code examples, worksheets, quizzes, and tests in Python, with an emphasis on reading code before writing it.
 
-Website: <https://pbeens.github.io/ics3u/> · Repository: <https://github.com/pbeens/ics3u>
+Website: <https://peter.beens.ca/ics3u/> · Repository: <https://github.com/pbeens/ics3u>
 
 Both the website and this repository are public. Tests, quizzes, and answer keys live in a local `private/` folder that is git-ignored and never pushed; back it up separately.
 

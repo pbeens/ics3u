@@ -6,13 +6,14 @@ project:
     - "**/*.qmd"
   resources:
     - .nojekyll
+    - "modules/*/examples/*.py"
 
 lang: en-CA
 
 website:
   title: "ICS3U"
   description: "Teacher resources for Ontario ICS3U: Introduction to Computer Science, Grade 11, University Preparation."
-  site-url: https://pbeens.github.io/ics3u/
+  site-url: https://peter.beens.ca/ics3u/
   repo-url: https://github.com/pbeens/ics3u
   repo-subdir: site
   repo-actions: [issue]
@@ -37,6 +38,11 @@ website:
             text: "Lesson 2 slides"
       - href: about.qmd
         text: About
+    right:
+      - icon: cup-hot
+        href: https://buymeacoffee.com/pbeens
+        aria-label: Buy Me a Coffee
+        text: "Buy Me a Coffee"
   page-footer:
     center: "ICS3U · Ontario Curriculum (2008) · [MIT License](https://github.com/pbeens/ics3u/blob/main/LICENSE)"
 

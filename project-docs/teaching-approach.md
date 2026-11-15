@@ -107,7 +107,9 @@ expectations: [A2.1, A2.3]
 ## Modify
 ## Make
 ## Check (exit ticket)
+## Code for This Lesson   ({{< lesson-code >}}: .py downloads, notebooks, Open in Callysto | Colab)
 ## Teacher Notes
+## Feedback               ({{< feedback >}}: link to the GitHub feedback form)
 ```
 
 ## References

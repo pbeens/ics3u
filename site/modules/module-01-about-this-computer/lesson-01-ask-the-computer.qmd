@@ -143,6 +143,12 @@ print("Report")
 print("CPU:", platform.machine())
 ```
 
+## Code for This Lesson
+
+Every program in this lesson, ready to run outside the browser. Download the `.py` file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.
+
+{{< lesson-code >}}
+
 ## Teacher Notes
 
 - **Why `platform` only.** Every `platform` function follows one pattern (`platform.something()` gives back text), is safe to experiment with, and answers a question students care about. Other modules (`os` for cores, `shutil` for storage) come later, one at a time.
@@ -156,3 +162,7 @@ print("CPU:", platform.machine())
 - **First load.** The step-through box and the runnable boxes download Python into the browser the first time (about 10 MB), which can take a few seconds.
 - **Spiral.** Students meet `import`, function calls, and comma-separated `print()` items through reading today. Variables come in Lesson 2.
 - Answers are in the private teacher files.
+
+## Feedback
+
+{{< feedback >}}

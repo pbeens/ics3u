@@ -12,7 +12,7 @@ body:
     attributes:
       label: Page
       description: The page or lesson this is about. Filled in automatically when you use the link on the site.
-      placeholder: https://pbeens.github.io/ics3u/...
+      placeholder: https://peter.beens.ca/ics3u/...
     validations:
       required: false
   - type: dropdown

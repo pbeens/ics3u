@@ -15,7 +15,7 @@
 ## Open Questions
 
 - Remove the answer keys from the public Git history (rewrite the initial commit and force-push), and decide where `private/` is backed up now that it isn't in Git.
-- Enable GitHub Pages (main branch, `docs/` folder) and confirm https://pbeens.github.io/ics3u/ loads; then test the notebook Open in Callysto | Colab links.
+- After the next push, test the notebook Open in Callysto | Colab links. (GitHub Pages is on; the site is served at https://peter.beens.ca/ics3u/.)
 
 - Networking: the author is considering programs that look at the network (e.g., the computer's address and name). Decide whether and where it fits in the scope and sequence.
 
@@ -26,6 +26,8 @@
 - This Mac has a global Jupyter kernel pointing to a missing environment (`/Volumes/Extreme-SSD/.../.venv`). Lesson pages avoid it with `engine: markdown`, but it may affect other Quarto projects.
 
 ## Recently Completed
+
+- 2026-11-15: Lessons now end with "Code for This Lesson" (`.py` downloads, notebooks, Open in Callysto | Colab, via `{{< lesson-code >}}`) and "Feedback" (`{{< feedback >}}`) sections; added a Buy Me a Coffee link (top right); Ontario Computers for Schools link and a "Who This Course Is For" section on About.
 
 - 2026-11-15: Repo published at github.com/pbeens/ics3u. Found `private/` (answer keys) had been pushed; added it to `.gitignore` and untracked it locally (history rewrite pending author approval). Added MIT LICENSE; feedback issue form plus per-page "Report an error or suggest a change" links prefilled with page title and URL (verified in headless Chrome on all pages); Open in Callysto | Colab links in every notebook. Slimmed the home page to quick-start cards and a lesson table; moved philosophy, research, feedback, and license to a new About page. Added a VS Code and agentic programming section to Before You Begin.
 

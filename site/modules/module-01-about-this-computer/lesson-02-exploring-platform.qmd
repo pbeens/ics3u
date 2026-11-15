@@ -153,6 +153,12 @@ print("Again:", cpu)
 1. What will it print? Write the exact output.
 2. How many times does the program ask the computer for its CPU type?
 
+## Code for This Lesson
+
+Every program in this lesson, ready to run outside the browser. Download the `.py` file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.
+
+{{< lesson-code >}}
+
 ## Teacher Notes
 
 - **Variables.** A variable is a name that stores a value. `cpu = platform.machine()` asks the question once and keeps the answer, so the program can use it later, as many times as needed.
@@ -162,3 +168,7 @@ print("Again:", cpu)
 - **Spot the problem.** Without parentheses, `platform.machine` is the tool itself, not its answer, so Python prints a description of the function, e.g. `<function machine at 0x104cb3e20>`. The `AttributeError` says the module has no tool by that name. The step-through box highlights the line that caused the error and shows the error type and message; Thonny, IDLE, and VS Code show the same information as a full traceback, which students should learn to read too.
 - **Spiral.** Students now write variables and read error messages. Calculating with values (`os.cpu_count()`, storage in gigabytes) comes in Module 2.
 - Answers are in the private teacher files.
+
+## Feedback
+
+{{< feedback >}}
