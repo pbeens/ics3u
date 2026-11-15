@@ -1,0 +1,158 @@
+---
+title: "Lesson 1: Ask the Computer About Itself"
+subtitle: "Module 1 — About This Computer"
+format: live-html
+engine: markdown
+expectations: [A2.2, A3.1, C1.1]
+---
+
+::: {.callout-note appearance="simple"}
+**Time:** 75 minutes · **Expectations:** A2.2, A3.1, C1.1 · **Slides:** [Lesson 1 slides](lesson-01-ask-the-computer-slides.qmd) · **Next:** [Lesson 2](lesson-02-exploring-platform.qmd)
+:::
+
+## Learning Goals
+
+- Read a short Python program and predict what it will print.
+- Explain what `import platform` and `print()` do.
+- Explain what a CPU type such as `arm64` or `x86_64` tells us.
+- Recognize that a program reports on whatever computer it actually runs on.
+
+## Success Criteria
+
+Students can say:
+
+- I can predict which parts of a program's output are fixed text and which parts come from the computer.
+- I can name the CPU type and operating system of the computer I am using.
+- I can explain why the same program gives different answers in different places.
+
+## Warm-up (5 min)
+
+Students write down their best guesses about the computer in front of them:
+
+1. What kind of processor (CPU) does it have?
+2. Which operating system does it run?
+3. What is the computer's name?
+
+Keep the guesses. Today's programs will check them.
+
+## Teach: Two Lines of Python (15 min)
+
+Show this program and read it aloud **before** running it.
+
+```python
+import platform
+
+print(platform.machine())
+```
+
+::: {.callout-tip title="Teacher prompt"}
+Think aloud while reading, one line at a time:
+
+- "`import platform` brings in a *module*: a toolbox of ready-made code that comes with Python. This one can answer questions about the computer."
+- "`platform.machine()` asks one question: *what type of CPU is this?* The dot means 'the `machine` tool from the `platform` toolbox'. The parentheses mean 'use it now'."
+- "`print()` shows the answer on the screen."
+- "Python runs a program from top to bottom, one line at a time."
+:::
+
+Now run it on the classroom computer (Thonny, IDLE, or VS Code). Compare the answer with the warm-up guesses.
+
+**What the answer means.** The CPU type names the family of processor and the instructions it understands:
+
+| Answer | Meaning | Found in |
+|---|---|---|
+| `arm64` or `aarch64` | 64-bit ARM processor | Apple silicon Macs, most phones and tablets, some Chromebooks and Windows laptops |
+| `x86_64` or `AMD64` | 64-bit Intel or AMD processor | Most Windows laptops and desktops, older Macs, most servers |
+
+Windows reports Intel and AMD processors as `AMD64` because AMD designed the 64-bit version of this processor family.
+
+## Predict, Then Run (15 min)
+
+Read this program **without running it**, then answer:
+
+1. How many lines will it print?
+2. Which words will appear exactly as they are written in the code?
+3. Which parts will depend on the computer?
+
+Type your prediction in the box. Then press **Step** to run the program one line at a time, and compare each line of output with your prediction.
+
+::: {.callout-tip title="Teacher prompt: the step-through box (first use)"}
+Before anyone presses Step, explain the colours:
+
+- "This box runs the program **one line at a time**. Nothing has run yet."
+- "The **red arrow on a yellow line** marks the *next* line Python will run. It hasn't run yet."
+- "When I press **Step**, that line runs and turns **green**. Green means *just ran*. The arrow moves to the next line."
+- "Anything the program prints appears in the **Output** box the moment its line turns green. Your prediction stays above it, so you can compare."
+- "**Back** replays a step. **Run all** jumps to the end. **Start over** resets everything."
+
+Then: "Write your prediction first. No pressing Step until you've committed."
+:::
+
+{{< stepper file="examples/l01_computer_report.py" >}}
+
+Now run the same program on the classroom computer (Thonny, IDLE, or VS Code). Which lines of output are the same as on this page? Which are different?
+
+## Investigate: Where Does My Code Run? (20 min)
+
+The same four lines give different answers depending on where they run. Fill in this table:
+
+| | Classroom computer (Thonny, IDLE, or VS Code) | This web page | Google Colab (teacher demo) |
+|---|---|---|---|
+| CPU type | | | |
+| Operating system | | | |
+| Computer name | | | |
+
+::: {.callout-tip title="Teacher prompt"}
+"Every column came from exactly the same four lines of code. So the code didn't change. What *did* change?" Let students answer before naming it: the computer the code ran on.
+:::
+
+Then discuss:
+
+1. Why does this web page report `wasm32` and `Emscripten`? Is that the classroom computer?
+2. Where is the computer that Colab describes? Who owns it?
+3. In which of the three places does the program run on the computer in front of you?
+4. Line by line: which line produced each answer in your table?
+
+## Modify (15 min)
+
+Change the program, predict the output, then run it.
+
+1. Change the labels: for example, `"Processor:"` instead of `"CPU type:"`.
+2. Add a line that prints the Python version using `platform.python_version()`.
+3. Swap the order of two `print()` lines. What changes in the output? What stays the same?
+
+```{pyodide}
+import platform
+
+print("CPU type:", platform.machine())
+print("Operating system:", platform.system())
+print("Computer name:", platform.node())
+```
+
+## Make (if time allows)
+
+Write a two-line program (plus the `import`) that prints the operating system and its version number, using `platform.system()` and `platform.release()`. Run it here and on the classroom computer.
+
+## Check: Exit Ticket (5 min)
+
+This program runs on a Windows laptop with an Intel processor. What will it print? Write the exact output.
+
+```python
+import platform
+
+print("Report")
+print("CPU:", platform.machine())
+```
+
+## Teacher Notes
+
+- **Why `platform` only.** Every `platform` function follows one pattern (`platform.something()` gives back text), is safe to experiment with, and answers a question students care about. Other modules (`os` for cores, `shutil` for storage) come later, one at a time.
+- **`machine()`, not `processor()`.** `platform.processor()` is unreliable: it returns a long description on Windows, `arm` on Apple silicon, and often nothing on Linux or in the browser.
+- **Three places, three computers.**
+  - *Classroom computer:* the real hardware, e.g. `arm64` / `Darwin` (macOS) or `AMD64` / `Windows`. macOS reports itself as "Darwin", the name of its core.
+  - *This web page:* Python runs inside the browser (Pyodide, WebAssembly). It reports `wasm32`, `Emscripten`, and `emscripten`: a small virtual computer that exists only inside the browser tab, though it still uses the classroom computer's processor underneath.
+  - *Google Colab:* the code runs on a Google server in a data centre. It typically reports `x86_64`, `Linux`, and a random-looking machine name. Check by running the program in Colab before class.
+- **Colab access.** Many school boards disable Colab for student accounts, so plan it as a teacher demonstration. For setting up classroom computers, see [Before You Begin](../../before-you-begin.qmd).
+- **Predict, then run.** The step-through box keeps the prediction next to the real output. Encourage students to commit to a prediction before pressing Step; the **Back** button lets them replay any line.
+- **First load.** The step-through box and the runnable boxes download Python into the browser the first time (about 10 MB), which can take a few seconds.
+- **Spiral.** Students meet `import`, function calls, and comma-separated `print()` items through reading today. Variables come in Lesson 2.
+- Answers are in the private teacher files.

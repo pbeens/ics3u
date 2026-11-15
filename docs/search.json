@@ -1,0 +1,415 @@
+[
+  {
+    "objectID": "scope-and-sequence.html",
+    "href": "scope-and-sequence.html",
+    "title": "Scope and Sequence",
+    "section": "",
+    "text": "Note\n\n\n\nDraft. Module order, hours, and expectation coverage are proposed and open to revision."
+  },
+  {
+    "objectID": "scope-and-sequence.html#how-this-course-is-organized",
+    "href": "scope-and-sequence.html#how-this-course-is-organized",
+    "title": "Scope and Sequence",
+    "section": "How This Course Is Organized",
+    "text": "How This Course Is Organized\nThis is a spiral course, not a sequence of topic units. Students do not spend weeks on output, then weeks on input, then weeks on decisions. From the first week, they read real programs that already use output, input, variables, decisions, loops, strings, and lists. Each module comes back to all of these ideas at a deeper level.\n\nModules are built around themes and anchor programs, not single programming constructs. Each module has a purpose students can see (find out about this computer, check whether it meets a need, build a game, send a secret message, investigate data).\nReading makes early depth possible. Students can read and predict code that uses a loop or a list weeks before they are asked to write one. When code uses something not yet taught, the teacher explains it briefly and moves on: “You’ll learn to write these properly later.”\nEach idea moves through four levels across the course: read it, modify it, write it, then design with it.\nNot project-based. Lessons stay teacher-led and structured (see the teaching approach); a full independent project comes only at the end."
+  },
+  {
+    "objectID": "scope-and-sequence.html#course-at-a-glance",
+    "href": "scope-and-sequence.html#course-at-a-glance",
+    "title": "Scope and Sequence",
+    "section": "Course at a Glance",
+    "text": "Course at a Glance\nThe course runs 110 hours, roughly 88 periods of 75 minutes. Hours are a guide.\n\n\n\n\n\n\n\n\n\nModule\nTheme\nHours\nReading : Writing\n\n\n\n\n1\nAbout This Computer\n15\n75 : 25\n\n\n2\nSpec Checker\n17\n65 : 35\n\n\n3\nGames of Chance\n17\n55 : 45\n\n\n4\nSecret Messages\n17\n50 : 50\n\n\n5\nData Detective\n18\n45 : 55\n\n\n6\nSoftware Development Project\n20\n20 : 80\n\n\n—\nComputer Science in the World (runs alongside Modules 2–5)\n6\n—\n\n\n\nTotal\n110\n\n\n\n\nReading : Writing is the approximate share of student work time spent reading, tracing, predicting, and modifying existing code versus writing new code."
+  },
+  {
+    "objectID": "scope-and-sequence.html#the-spiral",
+    "href": "scope-and-sequence.html#the-spiral",
+    "title": "Scope and Sequence",
+    "section": "The Spiral",
+    "text": "The Spiral\nHow deeply each programming idea is used in each module.\n\n\n\n\n\n\n\n\n\n\n\n\nIdea\nM1\nM2\nM3\nM4\nM5\nM6\n\n\n\n\nOutput and formatting (print, f-strings)\nW\nW\nW\nW\nW\nD\n\n\nVariables and data types\nW\nW\nW\nW\nW\nD\n\n\nInput and type conversion\nM\nW\nW\nW\nW\nD\n\n\nArithmetic expressions\nM\nW\nW\nW\nW\nD\n\n\nDecisions (if/elif/else, and/or/not)\nR\nW\nW\nW\nW\nD\n\n\nLoops (for, while)\nR\nM\nW\nW\nW\nD\n\n\nStrings (indexing, slicing, methods)\nR\nM\nM\nW\nW\nD\n\n\nLists (one-dimensional arrays)\nR\nM\nM\nM\nW\nD\n\n\nCalling functions and modules\nM\nW\nW\nW\nW\nD\n\n\nWriting functions\nR\nR\nM\nW\nW\nD\n\n\nErrors, debugging, and testing\nR\nW\nW\nW\nW\nD\n\n\n\nR = Read: meets it in programs students read, predict, and trace. M = Modify: changes existing code that uses it. W = Write: writes new code with it. D = Design: chooses and combines it in their own project."
+  },
+  {
+    "objectID": "scope-and-sequence.html#modules",
+    "href": "scope-and-sequence.html#modules",
+    "title": "Scope and Sequence",
+    "section": "Modules",
+    "text": "Modules\n\nModule 1 — About This Computer (15 h)\nPurpose: Ask the computer about itself.\nAnchor programs: a two-line program that prints the CPU type (platform.machine()); a labelled computer report built from the platform module; a report that stores answers in variables; later, a version that asks the user’s name and greets them with a hardware summary, and one that loops through a list of facts.\nPacing: one library first. Lessons 1–2 use only platform, starting from a single line. Other modules (os for cores, shutil for storage) wait until Module 2.\n\nTaught explicitly: what a program is; reading and predicting output; import and calling a module’s functions; print() and f-strings; variables; tracing line by line; finding tools with dir() and the documentation; comments and naming conventions; syntax and run-time errors and how to read them\nMet through reading: input(), a simple if, a for loop over a list\nComputer science: CPU types (arm64, x86_64) and operating systems; where code runs: the classroom computer, a virtual computer in the browser, and a cloud server (Google Colab); where variables live (RAM) and where arithmetic happens (CPU); source code vs. machine code; interpreters vs. compilers; the parts of the programming environment; organizing program files\n\nExpectations: A1.1, A2.1, A2.2, A3.1, A4.2, A4.3, A4.4, C1.1, C1.4, C2.1, C3.1, C3.3, C3.4, C3.5\n\n\nModule 2 — Spec Checker (17 h)\nPurpose: Decide whether a computer meets a user’s needs.\nAnchor programs: a storage calculator (bytes to gigabytes, percentage used); a “will this game run?” checker comparing a computer’s specifications to requirements; a computer recommender for different users.\n\nNew modules, one at a time: os.cpu_count() for cores, then shutil.disk_usage() for storage\nTaught explicitly: input and type conversion; data types; arithmetic, integer division, remainder, order of operations; comparison and logical operators; if/elif/else; handling bad input with try/except; user-friendly prompts and messages; test plans with normal and boundary cases\nRevisited and extended: output formatting, variables, reading error messages\nMet through modifying: a loop that checks a list of requirements; string methods for cleaning input (.strip(), .lower())\nComputer science: internal components and peripherals and their specifications; relating specifications to user requirements; the input-process-output model\n\nExpectations: A1.1, A1.3, A1.4, A2.1, A2.2, A4.1, A4.3, A4.5, B1.1, B1.3, B2.5, B3.2, B3.3, B4.4, C1.1, C1.2, C1.3\n\n\nModule 3 — Games of Chance (17 h)\nPurpose: Build games and simulations with randomness.\nAnchor programs: dice rolling and a simulation of 1000 rolls; a number-guessing game; rock-paper-scissors against the computer; a “lucky prime” challenge.\n\nTaught explicitly: while loops (game loops, input validation); for loops and range(); counters and accumulators; nested loops and decisions; the random module; writing first simple functions; flow charts and pseudocode; debugging by tracing and printing variables\nRevisited and extended: decisions, input validation, test plans, formatted output\nMet through modifying: lists of choices; strings in game messages\nComputer science: problem-solving strategies; designing from a program skeleton; determining primes\n\nExpectations: A2.2, A2.3, A3.1, A3.2, A4.1, A4.4, B1.1, B2.1, B2.4, B3.2, B4.5\n\n\nModule 4 — Secret Messages (17 h)\nPurpose: Hide and reveal messages, and learn how computers store text.\nAnchor programs: a binary and hexadecimal converter; a program that shows the Unicode value of every character in a message; a Caesar cipher that encodes and decodes; a password strength checker.\n\nTaught explicitly: strings as sequences (indexing, slicing, traversal, methods); ord() and chr(); writing functions with parameters and return values; local and global scope; reusable modules\nRevisited and extended: loops, decisions, input validation, debugging\nMet through modifying: lists of words and characters\nComputer science: binary, hexadecimal, ASCII, and Unicode; cryptography as a research area; malware and a system protection plan; backing up and archiving files\n\nExpectations: A1.2, A3.1, A3.2, A4.1, B1.1, B2.3, C2.2, C2.3, D2.1\n\n\nModule 5 — Data Detective (18 h)\nPurpose: Investigate real data about computers and the environment.\nAnchor programs: an analysis of device power use and e-waste data; a class survey analyzer; a sorted leaderboard that accepts new scores and removes old ones.\n\nTaught explicitly: lists as one-dimensional arrays (elements, indexes, bounds); creating, modifying, and accessing lists; count, total, highest and lowest value, linear search; inserting into a sorted list and deleting from the middle; breaking a program into functions; structure charts; describing and comparing program designs\nRevisited and extended: functions and scope, loops, strings, testing with a full range of cases\nComputer science: environmental and health effects of computer use; reducing the impact of computers; using computers to protect the environment; recycling and community partners\n\nExpectations: A1.5, A1.6, A2.3, A3.2, A4.4, A4.5, B2.2, B2.3, B2.4, B3.1, D1.1, D1.2, D1.3, D1.4\n\n\nModule 6 — Software Development Project (20 h)\nPurpose: Plan, build, test, and present a program of the student’s own design.\n\nTaught explicitly: phases, milestones, and products of the software development life cycle; clarifying a specification (dialogue, questionnaires, research); Gantt charts and milestones in a teacher-led project; written status reports\nDesign level: students choose and combine every idea from the spiral\nWorking practices: working independently with documentation and as part of a team; test plans; debugging; professional code conventions\n\nExpectations: A4.2, A4.5, B1.2, B2.1, B2.2, B2.3, B2.4, B2.5, B4.1, B4.2, B4.3, B4.4, B4.5, B4.6, C3.2\n\n\nComputer Science in the World (6 h, alongside Modules 2–5)\nPurpose: See where computer science leads.\nShort lessons placed between modules, with an independent research report submitted in stages:\n\nEmerging research areas (e.g., artificial intelligence, cryptography, computer vision) and collaborative research with other fields\nResearch report on an area of computer science, in a format of the student’s choice\nCareers, trends, experiential learning, postsecondary programs, and supports for non-traditional career choices\nEssential Skills and work habits (Ontario Skills Passport)\n\nExpectations: D2.1, D2.2, D2.3, D3.1, D3.2, D3.3, D3.4, D3.5"
+  },
+  {
+    "objectID": "scope-and-sequence.html#expectation-coverage",
+    "href": "scope-and-sequence.html#expectation-coverage",
+    "title": "Scope and Sequence",
+    "section": "Expectation Coverage",
+    "text": "Expectation Coverage\nEvery specific expectation is addressed in at least one module. “World” is Computer Science in the World.\n\n\n\nExpectation\nModules\n\n\n\n\nA1.1\n1, 2\n\n\nA1.2\n4\n\n\nA1.3\n2\n\n\nA1.4\n2\n\n\nA1.5\n5\n\n\nA1.6\n5\n\n\nA2.1\n1, 2\n\n\nA2.2\n1, 2, 3\n\n\nA2.3\n3, 5\n\n\nA3.1\n1, 3, 4\n\n\nA3.2\n3, 4, 5\n\n\nA4.1\n2, 3, 4\n\n\nA4.2\n1, 6\n\n\nA4.3\n1, 2\n\n\nA4.4\n1, 3, 5\n\n\nA4.5\n2, 5, 6\n\n\nB1.1\n2, 3, 4\n\n\nB1.2\n6\n\n\nB1.3\n2\n\n\nB2.1\n3, 6\n\n\nB2.2\n5, 6\n\n\nB2.3\n4, 5, 6\n\n\nB2.4\n3, 5, 6\n\n\nB2.5\n2, 6\n\n\nB3.1\n5\n\n\nB3.2\n2, 3\n\n\nB3.3\n2\n\n\nB4.1\n6\n\n\nB4.2\n6\n\n\nB4.3\n6\n\n\nB4.4\n2, 6\n\n\nB4.5\n3, 6\n\n\nB4.6\n6\n\n\nC1.1\n1, 2\n\n\nC1.2\n2\n\n\nC1.3\n2\n\n\nC1.4\n1\n\n\nC2.1\n1\n\n\nC2.2\n4\n\n\nC2.3\n4\n\n\nC3.1\n1\n\n\nC3.2\n6\n\n\nC3.3\n1\n\n\nC3.4\n1\n\n\nC3.5\n1\n\n\nD1.1\n5\n\n\nD1.2\n5\n\n\nD1.3\n5\n\n\nD1.4\n5\n\n\nD2.1\n4, World\n\n\nD2.2\nWorld\n\n\nD2.3\nWorld\n\n\nD3.1\nWorld\n\n\nD3.2\nWorld\n\n\nD3.3\nWorld\n\n\nD3.4\nWorld\n\n\nD3.5\nWorld"
+  },
+  {
+    "objectID": "scope-and-sequence.html#assessment-overview",
+    "href": "scope-and-sequence.html#assessment-overview",
+    "title": "Scope and Sequence",
+    "section": "Assessment Overview",
+    "text": "Assessment Overview\nFollowing Ontario’s Growing Success policy: 70% of the final grade comes from evaluations during the course and 30% from final evaluations.\n\nEvery lesson: an exit ticket, usually a code-reading or tracing question (assessment for and as learning, not counted toward the grade).\nWithin each module: short quizzes, and a few small programs built from the anchor programs.\nEnd of Modules 1–5: a module test that always includes a code-reading and tracing section. Because the course spirals, every test may include earlier ideas.\nComputer Science in the World: the staged research report.\nFinal 30%: the Module 6 software development project and a final exam that includes code reading and tracing."
+  },
+  {
+    "objectID": "scope-and-sequence.html#python-notes",
+    "href": "scope-and-sequence.html#python-notes",
+    "title": "Scope and Sequence",
+    "section": "Python Notes for Teachers",
+    "text": "Python Notes for Teachers\nThe 2008 curriculum uses general terms. In Python:\n\nConstants (A1.1) are a naming convention (UPPER_CASE); Python does not enforce them.\nOne-dimensional arrays (A1.5, A1.6) are taught as Python lists, used with a single data type and fixed purpose.\nProcedures (A3.2) are functions that do not return a value.\nCompiler error messages (A4.3) appear in Python as tracebacks; C3.4 contrasts Python’s interpreter with compiled languages such as C or Java.\nHardware programs use only the standard library (platform, then os and shutil). Results depend on where the code runs: macOS reports itself as “Darwin”; the course website’s runnable code reports a browser virtual computer (wasm32, Emscripten); Google Colab reports a Google cloud server (typically x86_64, Linux). These differences are a deliberate teaching point. Use platform.machine() for the CPU type; platform.processor() is unreliable across systems. Total RAM is not available from the standard library."
+  },
+  {
+    "objectID": "scope-and-sequence.html#teaching-approach",
+    "href": "scope-and-sequence.html#teaching-approach",
+    "title": "Scope and Sequence",
+    "section": "Teaching Approach",
+    "text": "Teaching Approach\nEvery lesson follows the course’s reading-first approach: students read, trace, and predict code before they write it. Each lesson moves through review, a teacher-led worked example, then Predict, Run, Investigate, Modify, and Make (PRIMM). Writing new code from scratch always comes after reading and modifying."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#review",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#review",
+    "title": "Exploring the platform Library",
+    "section": "Review",
+    "text": "Review\n\nWhat does platform.machine() print on the classroom computer? On the web page?\nWhat does the dot in platform.machine() mean? The parentheses?"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#what-else-is-in-the-toolbox",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#what-else-is-in-the-toolbox",
+    "title": "Exploring the platform Library",
+    "section": "What else is in the toolbox?",
+    "text": "What else is in the toolbox?\n\n\n\n\n\n\nPython documentation: platform\n\nSkip names starting with an underscore. Point out familiar names (machine, system, node, python_version, release) and new ones (platform, architecture, version, uname). Then open docs.python.org/3/library/platform.html and read the entry for machine() together."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#predict-then-step",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#predict-then-step",
+    "title": "Exploring the platform Library",
+    "section": "Predict, then step",
+    "text": "Predict, then step\nimport platform\n\ncpu = platform.machine()\nsystem = platform.system()\nname = platform.node()\n\nprint(\"Computer report for\", name)\nprint(\"CPU type:\", cpu)\nprint(\"Operating system:\", system)\n\nTEACHER PROMPT (first use of the Variables panel): “Same colours as last lesson. New panel: Variables. A variable is a name that holds a value — watch a row appear when line 3 runs.” After line 3: “Nothing printed, but the answer was stored under the name cpu. The quotation marks around ‘wasm32’ mean the value is text — a string. They won’t be printed.” This is Lesson 1’s report with each answer stored in a variable first. Ask: Which lines ask a question? Which lines print? What will the first line of output be? After predicting, step through and watch the Variables panel: lines 3–5 print nothing, but the variables appear."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#what-the-variables-hold",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#what-the-variables-hold",
+    "title": "Exploring the platform Library",
+    "section": "What the variables hold",
+    "text": "What the variables hold\n\nAfter line 3, which variable exists? What is its value?\nLines 3–5 print nothing. Where did the answers go?\nWhat if line 7 came before line 5?\n\n\nQuotation marks in the Variables panel (e.g. ‘wasm32’) show the value is text (a string); they are not printed."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#spot-the-problem-a",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#spot-the-problem-a",
+    "title": "Exploring the platform Library",
+    "section": "Spot the problem: A",
+    "text": "Spot the problem: A\nimport platform\n\nprint(platform.machine)\n\nNo parentheses, so Python prints the tool itself, not its answer."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#spot-the-problem-b",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#spot-the-problem-b",
+    "title": "Exploring the platform Library",
+    "section": "Spot the problem: B",
+    "text": "Spot the problem: B\nimport platform\n\nprint(platform.cpu())\n\nTEACHER PROMPT (first error): “A red line means Python stopped there because of an error; the lines below never ran. Read the message in order: line number, kind of error, description. Errors are Python telling us exactly where to look.” AttributeError on line 3: the module has no tool called cpu. Then run it in Thonny, IDLE, or VS Code and read the full traceback."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#modify",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#modify",
+    "title": "Exploring the platform Library",
+    "section": "Modify",
+    "text": "Modify\nAdd a variable and a labelled line for:\n\nplatform.python_version()\nplatform.release()"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#make-my-computer-report",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#make-my-computer-report",
+    "title": "Exploring the platform Library",
+    "section": "Make: My Computer Report",
+    "text": "Make: My Computer Report\n\nUse four platform functions\nAt least one you found with dir() or the documentation\nStore each answer in a well-named variable\nPrint a labelled report; run it here and on the classroom computer"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#exit-ticket",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#exit-ticket",
+    "title": "Exploring the platform Library",
+    "section": "Exit ticket",
+    "text": "Exit ticket\nThis runs on a Windows laptop with an Intel processor.\nimport platform\n\ncpu = platform.machine()\nprint(\"CPU:\", cpu)\nprint(\"Again:\", cpu)\n\nWhat will it print?\nHow many times does it ask for the CPU type?"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#warm-up",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#warm-up",
+    "title": "Ask the Computer About Itself",
+    "section": "Warm-up",
+    "text": "Warm-up\nWrite down your best guesses about this computer:\n\nWhat kind of processor (CPU) does it have?\nWhich operating system does it run?\nWhat is the computer’s name?"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#two-lines-of-python",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#two-lines-of-python",
+    "title": "Ask the Computer About Itself",
+    "section": "Two lines of Python",
+    "text": "Two lines of Python\nimport platform\n\nprint(platform.machine())\n\n\nimport platform brings in a toolbox of ready-made code\nplatform.machine() asks: what type of CPU is this?\nprint() shows the answer\n\n\n\nRead the program aloud before running it. The dot means “the machine tool from the platform toolbox”; the parentheses mean “use it now”. Then run it on the classroom computer in Thonny, IDLE, or VS Code and compare with the warm-up guesses."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#what-does-the-answer-mean",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#what-does-the-answer-mean",
+    "title": "Ask the Computer About Itself",
+    "section": "What does the answer mean?",
+    "text": "What does the answer mean?\n\n\n\n\n\n\n\n\nAnswer\nMeaning\nFound in\n\n\n\n\narm64 / aarch64\n64-bit ARM\nApple silicon Macs, phones, tablets\n\n\nx86_64 / AMD64\n64-bit Intel or AMD\nMost Windows PCs, older Macs, servers\n\n\n\n\nWindows reports Intel and AMD processors as AMD64 because AMD designed the 64-bit version of this processor family."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#predict-then-run",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#predict-then-run",
+    "title": "Ask the Computer About Itself",
+    "section": "Predict, then run",
+    "text": "Predict, then run\nimport platform\n\nprint(\"CPU type:\", platform.machine())\nprint(\"Operating system:\", platform.system())\nprint(\"Computer name:\", platform.node())\n\nTEACHER PROMPT (first use of the step-through box): “Nothing has run yet. The red arrow on a yellow line is the NEXT line Python will run. When I press Step, that line runs and turns GREEN — green means just ran. Anything printed appears in Output the moment its line turns green. Back replays a step; Run all jumps to the end; Start over resets.” Then: “Write your prediction first — no pressing Step until you’ve committed.” Ask first: How many lines will it print? Which words appear exactly as written? Which parts depend on the computer? Have students commit to a prediction (type it in the box or write it down), then press Step one line at a time. Afterwards, run the same program on the classroom computer and compare."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#where-does-my-code-run",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#where-does-my-code-run",
+    "title": "Ask the Computer About Itself",
+    "section": "Where does my code run?",
+    "text": "Where does my code run?\n\n\n\n\nClassroom computer\nThis web page\nGoogle Colab\n\n\n\n\nCPU type\n\n\n\n\n\nOperating system\n\n\n\n\n\nComputer name\n\n\n\n\n\n\n\nFill in the classroom column from Thonny/IDLE/VS Code, the web page column from the previous slide, and the Colab column from a teacher demonstration. Colab typically reports x86_64, Linux, and a random-looking machine name — check before class."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#three-places-three-computers",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#three-places-three-computers",
+    "title": "Ask the Computer About Itself",
+    "section": "Three places, three computers",
+    "text": "Three places, three computers\n\nClassroom computer: the real hardware in front of you\nThis web page: a small virtual computer inside the browser tab (wasm32, Emscripten)\nColab: a Google server in a data centre, possibly in another country\nA program reports on whatever computer it actually runs on"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#modify",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#modify",
+    "title": "Ask the Computer About Itself",
+    "section": "Modify",
+    "text": "Modify\n\nChange the labels, e.g. \"Processor:\"\nAdd a line that prints platform.python_version()\nSwap two print() lines. What changes?"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#exit-ticket",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#exit-ticket",
+    "title": "Ask the Computer About Itself",
+    "section": "Exit ticket",
+    "text": "Exit ticket\nThis runs on a Windows laptop with an Intel processor. What will it print?\nimport platform\n\nprint(\"Report\")\nprint(\"CPU:\", platform.machine())"
+  },
+  {
+    "objectID": "before-you-begin.html",
+    "href": "before-you-begin.html",
+    "title": "Before You Begin",
+    "section": "",
+    "text": "Expectations: C3.1 (software development environment), D1.4 (organizations that refurbish computers)\nThis course asks the computer about itself. The first program students read reports the CPU type, the operating system, and the computer’s name. Module 2 adds the number of CPU cores and the free disk space, and later modules may look at the network. All of this only means something when the code runs on the computer in front of the student.\nGet Python working before Lesson 1, both on your own demonstration computer and on the computers your students will use."
+  },
+  {
+    "objectID": "before-you-begin.html#your-demonstration-computer",
+    "href": "before-you-begin.html#your-demonstration-computer",
+    "title": "Before You Begin",
+    "section": "Your Demonstration Computer",
+    "text": "Your Demonstration Computer\nYou will model nearly every lesson: reading code aloud, predicting, running it, and stepping through mistakes. For this you need a computer that:\n\nhas Python 3 installed locally, not just a browser tab;\nhas a beginner-friendly editor. Thonny is a good first choice because its debugger steps through code one line at a time. IDLE (included with Python) and VS Code also work;\nconnects to the projector, with the editor’s font large enough to read from the back of the room;\nhas already run each lesson’s example programs. Run them the day before, so you know what this computer will report.\n\nDon’t count on a board-imaged laptop letting you install software on the day. Ask IT early."
+  },
+  {
+    "objectID": "before-you-begin.html#student-computers",
+    "href": "before-you-begin.html#student-computers",
+    "title": "Before You Begin",
+    "section": "Student Computers",
+    "text": "Student Computers\nStudents need a place to run, change, break, and fix programs every day, not only to read them. In order of preference:\n\n1. Real computers with Python installed\nThe best choice. Lab or classroom computers with Python and an editor installed give the real experience: real hardware, real files, and a real operating system to explore.\n\n\n2. Refurbished computers\nStrongly recommended if your school doesn’t have enough computers. Older desktops and laptops are cheap and run Python perfectly well.\n\nIn Canada, the federal Computers for Schools Plus program supplies refurbished computers to schools. In Ontario it’s run by Renewed Computer Technology.\nMany older computers can’t run Windows 11, and Windows 10 stopped receiving security updates in October 2025. A free Linux system (for example, Ubuntu or Linux Mint) runs well on older hardware and comes with Python already installed.\nA room with a mix of Windows, macOS, and Linux computers is a bonus. Each one gives different answers to the same program, which is exactly what Lesson 1 investigates.\nRefurbishing ties into the curriculum: expectation D1.4 names “private companies that refurbish computers” as an example.\n\n\n\n3. Raspberry Pi and other small computers\nA Raspberry Pi is a small, inexpensive computer. Raspberry Pi OS comes with Python 3 and Thonny already installed. Each one needs a power supply, a microSD card, and a monitor, keyboard, and mouse (classroom monitors often work). Its ARM processor reports something different again (on the 64-bit system, aarch64 and Linux), which makes for a good comparison. Other small or portable computers that can install Python work too.\n\n\n\n\n\n\nTipChromebooks\n\n\n\nIf your board allows it, a Chromebook’s Linux development environment can install Python and Thonny. The code runs inside a Linux container, so it reports Linux rather than ChromeOS. That’s a good discussion point, but it isn’t the same as a computer running Python directly."
+  },
+  {
+    "objectID": "before-you-begin.html#online-options-fine-in-a-pinch",
+    "href": "before-you-begin.html#online-options-fine-in-a-pinch",
+    "title": "Before You Begin",
+    "section": "Online Options: Fine in a Pinch",
+    "text": "Online Options: Fine in a Pinch\nBrowser-based Python is useful when a computer can’t install anything, for homework, or as a backup on a day the lab is down:\n\nThe runnable boxes on this site. These need nothing installed. Python runs inside the browser tab.\nGoogle Colab. These are notebooks that run on Google’s servers. Many school boards turn Colab off for student accounts, so check before you plan around it.\nCallysto Hub. These are free Jupyter notebooks for Canadian classrooms, hosted on Canadian servers. Cybera and PIMS wound down their involvement in Callysto in 2024, and the resources remain available. Confirm that sign-in works for your students before relying on it.\n\nNone of these gives students the experience this course is built around. The code doesn’t run on the student’s computer, so the hardware questions get answers about a different machine:\n\n\n\n\n\n\n\n\nWhere the code runs\nWhat platform describes\nTypical CPU / operating system\n\n\n\n\nClassroom computer\nThe computer in front of the student\nAMD64 / Windows, arm64 / Darwin, x86_64 / Linux\n\n\nThis site’s runnable boxes\nA small virtual computer inside the browser tab\nwasm32 / Emscripten\n\n\nColab or Callysto\nA server in a data centre somewhere else\nUsually x86_64 / Linux\n\n\n\nOnline notebooks also can’t see the student’s own files, drives, or classroom network. Lesson 1 uses these differences on purpose, as a comparison. They make a poor only option."
+  },
+  {
+    "objectID": "before-you-begin.html#checklist-before-lesson-1",
+    "href": "before-you-begin.html#checklist-before-lesson-1",
+    "title": "Before You Begin",
+    "section": "Checklist Before Lesson 1",
+    "text": "Checklist Before Lesson 1\n\nPython 3 and an editor are installed on your demonstration computer, and it works with the projector.\nEvery student has a computer that runs Python locally (lab computer, refurbished computer, Raspberry Pi, or a similar device).\nYou’ve run l01_computer_report.py on both your computer and a student computer, and noted what each reports.\nThe lesson pages load on student computers. The runnable boxes download about 10 MB the first time.\nYou know whether Colab or the Callysto Hub works for your students’ accounts, in case you need a backup.\n\nWhen you’re ready, start with Module 1, Lesson 1."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ICS3U: Introduction to Computer Science",
+    "section": "",
+    "text": "A complete course of study for Ontario’s ICS3U course (2008 curriculum), taught in Python. Every lesson comes with a teaching plan, slides, runnable code examples, and student activities, all aligned to the curriculum expectations."
+  },
+  {
+    "objectID": "index.html#the-philosophy-of-this-course",
+    "href": "index.html#the-philosophy-of-this-course",
+    "title": "ICS3U: Introduction to Computer Science",
+    "section": "The Philosophy of This Course",
+    "text": "The Philosophy of This Course\n\n1. Read before you write\nStudents read code before they write it. Every new idea is first met by reading a short program, predicting what it will do, and tracing it line by line. Writing new code comes last, once students can read it fluently. Every worksheet opens with reading tasks, and every quiz and test includes a code-reading section.\n\n\n2. Start deep, with real code\nBecause students read first, they can meet real, interesting programs long before they could write them. The first program students see isn’t “Hello, World”. It asks the computer what kind of processor it has. Students don’t need to understand every line on day one. The parts they can’t yet explain become reasons to keep learning.\n\n\n3. One new idea at a time\nDeep doesn’t mean fast. Lessons start small, often from a single line, and add one piece at a time. Module 1 uses only one library until students are comfortable with it.\n\n\n4. A spiral, not a list of topics\nThe course isn’t divided into an output unit, then an input unit, then a decisions unit. Students meet output, input, decisions, loops, strings, and lists early, inside programs they read. Each module comes back to these ideas at a deeper level. Each idea moves through four stages over the course: read it, modify it, write it, then design with it. The spiral table shows where each idea sits in each module.\n\n\n5. Teacher-led, then gradually independent\nLessons use explicit, direct instruction. The teacher models a worked example, thinking aloud, and students then practise with steadily less support. Each lesson follows the PRIMM sequence: students Predict what code will do, Run it, Investigate how it works, Modify it, and finally Make their own. The course builds toward an independent software project at the end, not from one at the start."
+  },
+  {
+    "objectID": "index.html#what-a-lesson-looks-like",
+    "href": "index.html#what-a-lesson-looks-like",
+    "title": "ICS3U: Introduction to Computer Science",
+    "section": "What a Lesson Looks Like",
+    "text": "What a Lesson Looks Like\n\n\n\n\n\n\n\nStage\nWhat happens\n\n\n\n\nReview\nShort retrieval questions, often reading or tracing code\n\n\nTeach\nThe teacher reads a worked example aloud and traces it\n\n\nPredict\nStudents read new code and write down what it will do, before running it\n\n\nRun\nStudents run the code and compare the result with their prediction\n\n\nInvestigate\nTrace tables, line-by-line questions, explaining code in plain English\n\n\nModify\nStudents change working code to do something new\n\n\nMake\nStudents write their own code using the idea\n\n\nCheck\nAn exit ticket, usually a short reading or tracing question"
+  },
+  {
+    "objectID": "index.html#interactive-by-design",
+    "href": "index.html#interactive-by-design",
+    "title": "ICS3U: Introduction to Computer Science",
+    "section": "Interactive by Design",
+    "text": "Interactive by Design\n\nRunnable code on every page. Students can edit and run Python right in the lesson page or on the slides, with nothing to install.\nPredict, then step. Students type a prediction beside the code, then run the program one line at a time and watch the output and variables appear next to their prediction.\nWhere does my code run? The same program gives different answers on the classroom computer, in the browser, and on a cloud server. The course uses those differences to teach how computers work."
+  },
+  {
+    "objectID": "index.html#built-on-research",
+    "href": "index.html#built-on-research",
+    "title": "ICS3U: Introduction to Computer Science",
+    "section": "Built on Research",
+    "text": "Built on Research\nThis approach draws on research about how novices learn to program:\n\nStudents who can’t reliably read and trace code have trouble writing it (Lister et al., 2004; Lopez et al., 2008).\nNovices learn more from explicit instruction and worked examples than from open-ended discovery (Sweller & Cooper, 1985; Kirschner, Sweller & Clark, 2006).\nEffective lessons review prior learning, present new material in small steps, model, and guide practice before independent work (Rosenshine, 2012).\nPRIMM puts reading and predicting ahead of writing in programming lessons (Sentance, Waite & Kallia, 2019).\n\n\n\n\n\n\n\nNoteReferences\n\n\n\n\n\n\nKirschner, P. A., Sweller, J., & Clark, R. E. (2006). Why minimal guidance during instruction does not work. Educational Psychologist, 41(2), 75–86.\nLister, R., et al. (2004). A multi-national study of reading and tracing skills in novice programmers. ITiCSE Working Group Reports, 119–150.\nLopez, M., Whalley, J., Robbins, P., & Lister, R. (2008). Relationships between reading, tracing and writing skills in introductory programming. Proceedings of ICER 2008, 101–112.\nRosenshine, B. (2012). Principles of instruction: Research-based strategies that all teachers should know. American Educator, 36(1), 12–19, 39.\nSentance, S., Waite, J., & Kallia, M. (2019). Teaching computer programming with PRIMM: A sociocultural perspective. Computer Science Education, 29(2–3), 136–176.\nSweller, J., & Cooper, G. A. (1985). The use of worked examples as a substitute for problem solving in learning algebra. Cognition and Instruction, 2(1), 59–89."
+  },
+  {
+    "objectID": "index.html#about-this-site",
+    "href": "index.html#about-this-site",
+    "title": "ICS3U: Introduction to Computer Science",
+    "section": "About This Site",
+    "text": "About This Site\n\nBuilt for teachers. Lesson pages include timings, teacher prompts (what to say at key moments), and teacher notes.\nQuizzes, tests, and answer keys are not published here, so students can’t find them. They are shared with teachers directly.\nThe course is being written module by module. Check the Scope and Sequence for the full plan."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html",
+    "title": "Lesson 1: Ask the Computer About Itself",
+    "section": "",
+    "text": "Time: 75 minutes · Expectations: A2.2, A3.1, C1.1 · Slides: Lesson 1 slides · Next: Lesson 2"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#learning-goals",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#learning-goals",
+    "title": "Lesson 1: Ask the Computer About Itself",
+    "section": "Learning Goals",
+    "text": "Learning Goals\n\nRead a short Python program and predict what it will print.\nExplain what import platform and print() do.\nExplain what a CPU type such as arm64 or x86_64 tells us.\nRecognize that a program reports on whatever computer it actually runs on."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#success-criteria",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#success-criteria",
+    "title": "Lesson 1: Ask the Computer About Itself",
+    "section": "Success Criteria",
+    "text": "Success Criteria\nStudents can say:\n\nI can predict which parts of a program’s output are fixed text and which parts come from the computer.\nI can name the CPU type and operating system of the computer I am using.\nI can explain why the same program gives different answers in different places."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#warm-up-5-min",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#warm-up-5-min",
+    "title": "Lesson 1: Ask the Computer About Itself",
+    "section": "Warm-up (5 min)",
+    "text": "Warm-up (5 min)\nStudents write down their best guesses about the computer in front of them:\n\nWhat kind of processor (CPU) does it have?\nWhich operating system does it run?\nWhat is the computer’s name?\n\nKeep the guesses. Today’s programs will check them."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#teach-two-lines-of-python-15-min",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#teach-two-lines-of-python-15-min",
+    "title": "Lesson 1: Ask the Computer About Itself",
+    "section": "Teach: Two Lines of Python (15 min)",
+    "text": "Teach: Two Lines of Python (15 min)\nShow this program and read it aloud before running it.\nimport platform\n\nprint(platform.machine())\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\nThink aloud while reading, one line at a time:\n\n“import platform brings in a module: a toolbox of ready-made code that comes with Python. This one can answer questions about the computer.”\n“platform.machine() asks one question: what type of CPU is this? The dot means ‘the machine tool from the platform toolbox’. The parentheses mean ‘use it now’.”\n“print() shows the answer on the screen.”\n“Python runs a program from top to bottom, one line at a time.”\n\n\n\nNow run it on the classroom computer (Thonny, IDLE, or VS Code). Compare the answer with the warm-up guesses.\nWhat the answer means. The CPU type names the family of processor and the instructions it understands:\n\n\n\n\n\n\n\n\nAnswer\nMeaning\nFound in\n\n\n\n\narm64 or aarch64\n64-bit ARM processor\nApple silicon Macs, most phones and tablets, some Chromebooks and Windows laptops\n\n\nx86_64 or AMD64\n64-bit Intel or AMD processor\nMost Windows laptops and desktops, older Macs, most servers\n\n\n\nWindows reports Intel and AMD processors as AMD64 because AMD designed the 64-bit version of this processor family."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#predict-then-run-15-min",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#predict-then-run-15-min",
+    "title": "Lesson 1: Ask the Computer About Itself",
+    "section": "Predict, Then Run (15 min)",
+    "text": "Predict, Then Run (15 min)\nRead this program without running it, then answer:\n\nHow many lines will it print?\nWhich words will appear exactly as they are written in the code?\nWhich parts will depend on the computer?\n\nType your prediction in the box. Then press Step to run the program one line at a time, and compare each line of output with your prediction.\n\n\n\n\n\n\nTipTeacher prompt: the step-through box (first use)\n\n\n\nBefore anyone presses Step, explain the colours:\n\n“This box runs the program one line at a time. Nothing has run yet.”\n“The red arrow on a yellow line marks the next line Python will run. It hasn’t run yet.”\n“When I press Step, that line runs and turns green. Green means just ran. The arrow moves to the next line.”\n“Anything the program prints appears in the Output box the moment its line turns green. Your prediction stays above it, so you can compare.”\n“Back replays a step. Run all jumps to the end. Start over resets everything.”\n\nThen: “Write your prediction first. No pressing Step until you’ve committed.”\n\n\nimport platform\n\nprint(\"CPU type:\", platform.machine())\nprint(\"Operating system:\", platform.system())\nprint(\"Computer name:\", platform.node())\nNow run the same program on the classroom computer (Thonny, IDLE, or VS Code). Which lines of output are the same as on this page? Which are different?"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#investigate-where-does-my-code-run-20-min",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#investigate-where-does-my-code-run-20-min",
+    "title": "Lesson 1: Ask the Computer About Itself",
+    "section": "Investigate: Where Does My Code Run? (20 min)",
+    "text": "Investigate: Where Does My Code Run? (20 min)\nThe same four lines give different answers depending on where they run. Fill in this table:\n\n\n\n\n\n\n\n\n\n\nClassroom computer (Thonny, IDLE, or VS Code)\nThis web page\nGoogle Colab (teacher demo)\n\n\n\n\nCPU type\n\n\n\n\n\nOperating system\n\n\n\n\n\nComputer name\n\n\n\n\n\n\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\n“Every column came from exactly the same four lines of code. So the code didn’t change. What did change?” Let students answer before naming it: the computer the code ran on.\n\n\nThen discuss:\n\nWhy does this web page report wasm32 and Emscripten? Is that the classroom computer?\nWhere is the computer that Colab describes? Who owns it?\nIn which of the three places does the program run on the computer in front of you?\nLine by line: which line produced each answer in your table?"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#modify-15-min",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#modify-15-min",
+    "title": "Lesson 1: Ask the Computer About Itself",
+    "section": "Modify (15 min)",
+    "text": "Modify (15 min)\nChange the program, predict the output, then run it.\n\nChange the labels: for example, \"Processor:\" instead of \"CPU type:\".\nAdd a line that prints the Python version using platform.python_version().\nSwap the order of two print() lines. What changes in the output? What stays the same?"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#make-if-time-allows",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#make-if-time-allows",
+    "title": "Lesson 1: Ask the Computer About Itself",
+    "section": "Make (if time allows)",
+    "text": "Make (if time allows)\nWrite a two-line program (plus the import) that prints the operating system and its version number, using platform.system() and platform.release(). Run it here and on the classroom computer."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#check-exit-ticket-5-min",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#check-exit-ticket-5-min",
+    "title": "Lesson 1: Ask the Computer About Itself",
+    "section": "Check: Exit Ticket (5 min)",
+    "text": "Check: Exit Ticket (5 min)\nThis program runs on a Windows laptop with an Intel processor. What will it print? Write the exact output.\nimport platform\n\nprint(\"Report\")\nprint(\"CPU:\", platform.machine())"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#teacher-notes",
+    "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#teacher-notes",
+    "title": "Lesson 1: Ask the Computer About Itself",
+    "section": "Teacher Notes",
+    "text": "Teacher Notes\n\nWhy platform only. Every platform function follows one pattern (platform.something() gives back text), is safe to experiment with, and answers a question students care about. Other modules (os for cores, shutil for storage) come later, one at a time.\nmachine(), not processor(). platform.processor() is unreliable: it returns a long description on Windows, arm on Apple silicon, and often nothing on Linux or in the browser.\nThree places, three computers.\n\nClassroom computer: the real hardware, e.g. arm64 / Darwin (macOS) or AMD64 / Windows. macOS reports itself as “Darwin”, the name of its core.\nThis web page: Python runs inside the browser (Pyodide, WebAssembly). It reports wasm32, Emscripten, and emscripten: a small virtual computer that exists only inside the browser tab, though it still uses the classroom computer’s processor underneath.\nGoogle Colab: the code runs on a Google server in a data centre. It typically reports x86_64, Linux, and a random-looking machine name. Check by running the program in Colab before class.\n\nColab access. Many school boards disable Colab for student accounts, so plan it as a teacher demonstration. For setting up classroom computers, see Before You Begin.\nPredict, then run. The step-through box keeps the prediction next to the real output. Encourage students to commit to a prediction before pressing Step; the Back button lets them replay any line.\nFirst load. The step-through box and the runnable boxes download Python into the browser the first time (about 10 MB), which can take a few seconds.\nSpiral. Students meet import, function calls, and comma-separated print() items through reading today. Variables come in Lesson 2.\nAnswers are in the private teacher files."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html",
+    "title": "Lesson 2: Exploring the platform Library",
+    "section": "",
+    "text": "Time: 75 minutes · Expectations: A1.1, A3.1, A4.3, A4.4, C1.1 · Slides: Lesson 2 slides · Previous: Lesson 1"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#learning-goals",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#learning-goals",
+    "title": "Lesson 2: Exploring the platform Library",
+    "section": "Learning Goals",
+    "text": "Learning Goals\n\nFind out what tools a module contains, using dir() and the Python documentation.\nStore answers in variables and use them later in a program.\nTrace which variables exist and what they hold, line by line.\nRead two common error messages and explain what caused them."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#success-criteria",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#success-criteria",
+    "title": "Lesson 2: Exploring the platform Library",
+    "section": "Success Criteria",
+    "text": "Success Criteria\nStudents can say:\n\nI can find a new function in the platform module and use it.\nI can predict the output of a program that stores values in variables.\nI can explain what an AttributeError message is telling me."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#review-5-min",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#review-5-min",
+    "title": "Lesson 2: Exploring the platform Library",
+    "section": "Review (5 min)",
+    "text": "Review (5 min)\nWithout running anything, answer:\n\nWhat does platform.machine() print on the classroom computer? On the course web page?\nWhat does the dot in platform.machine() mean? What do the parentheses mean?"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#teach-what-else-is-in-the-toolbox-15-min",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#teach-what-else-is-in-the-toolbox-15-min",
+    "title": "Lesson 2: Exploring the platform Library",
+    "section": "Teach: What Else Is in the Toolbox? (15 min)",
+    "text": "Teach: What Else Is in the Toolbox? (15 min)\nA module can contain many tools. dir() lists them. Run it and read the list together.\n\n\n\n\n\n\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\nThink aloud while reading the list:\n\n“Names starting with an underscore, like _comparable_version, are for Python’s own use. We skip those.”\n“Some names look familiar from Lesson 1: machine, system, node, python_version, release.”\n“Others are new: platform, architecture, version, uname. The name gives a hint, but the documentation tells us for sure.”\n\n\n\nOpen the official documentation for the module: docs.python.org/3/library/platform.html. Find platform.machine() and read its description together. Then choose one new function from the list, predict what it does from its name, and try it."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#predict-then-step-15-min",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#predict-then-step-15-min",
+    "title": "Lesson 2: Exploring the platform Library",
+    "section": "Predict, Then Step (15 min)",
+    "text": "Predict, Then Step (15 min)\nThis is Lesson 1’s computer report, rewritten so that each answer is stored in a variable before it is printed. Read it without running it, then answer:\n\nWhich lines ask the computer a question? Which lines print?\nWhat will the first line of output be?\nHow is this program different from Lesson 1’s program? Will the output be different?\n\nType your prediction in the box, then press Step to run one line at a time. Watch the Variables panel as well as the output.\n\n\n\n\n\n\nTipTeacher prompt: the Variables panel (first use)\n\n\n\n\n“Same colours as last lesson: yellow with an arrow is the next line, green just ran.”\n“There’s a new panel today: Variables. A variable is a name that holds a value. When line 3 runs, watch a new row appear.”\nAfter stepping line 3: “Nothing was printed, but something happened. The answer was stored under the name cpu.”\n“The quotation marks around 'wasm32' tell us the value is text. Python calls text a string. The quotation marks won’t be printed.”\n\n\n\nimport platform\n\ncpu = platform.machine()\nsystem = platform.system()\nname = platform.node()\n\nprint(\"Computer report for\", name)\nprint(\"CPU type:\", cpu)\nprint(\"Operating system:\", system)"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#investigate-20-min",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#investigate-20-min",
+    "title": "Lesson 2: Exploring the platform Library",
+    "section": "Investigate (20 min)",
+    "text": "Investigate (20 min)\n\nWhat the variables hold\nUse Back and Step to answer:\n\nAfter line 3 runs, which variable exists and what is its value?\nLines 3–5 run, but nothing is printed yet. Where did the answers go?\nLine 7 uses name, which was created on line 5. What would happen if line 7 came before line 5?\nComplete a trace table:\n\n\n\n\nLine\ncpu\nsystem\nname\nOutput\n\n\n\n\n3\n\n\n\n\n\n\n4\n\n\n\n\n\n\n5\n\n\n\n\n\n\n7\n\n\n\n\n\n\n8\n\n\n\n\n\n\n9\n\n\n\n\n\n\n\n\n\nSpot the problem\nEach program has a mistake. Predict what will happen, then step through it and read the result carefully.\n\n\n\n\n\n\nTipTeacher prompt: reading an error (first use)\n\n\n\nAfter Program B stops:\n\n“A red line means Python stopped on that line because of an error. The lines below it never ran.”\n“The message under the buttons has three parts: the line number, the kind of error (AttributeError), and a description in plain words. Read them in that order.”\n“Errors aren’t failures. They’re Python telling us exactly where to look.”\n\n\n\nProgram A\nimport platform\n\nprint(platform.machine)\nProgram B\nimport platform\n\nprint(platform.cpu())\n\nProgram A does not crash, but prints something strange. What is missing?\nProgram B stops with an AttributeError. Which line caused it? What is the message telling you?\nHow could dir(platform) have prevented the mistake in Program B?\nRun Program B on the classroom computer. How does the full error message there show the same information?"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#modify-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#modify-10-min",
+    "title": "Lesson 2: Exploring the platform Library",
+    "section": "Modify (10 min)",
+    "text": "Modify (10 min)\nAdd two more facts to the report. For each one, create a variable and print it with a label.\n\nThe Python version: platform.python_version()\nThe operating system’s version number: platform.release()"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#make-my-computer-report-if-time-allows",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#make-my-computer-report-if-time-allows",
+    "title": "Lesson 2: Exploring the platform Library",
+    "section": "Make: My Computer Report (if time allows)",
+    "text": "Make: My Computer Report (if time allows)\nWrite a computer report that uses four platform functions, including at least one you found with dir() or the documentation. Store each answer in a variable with a clear name, then print a labelled report. Run it here and on the classroom computer, and compare."
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#check-exit-ticket-5-min",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#check-exit-ticket-5-min",
+    "title": "Lesson 2: Exploring the platform Library",
+    "section": "Check: Exit Ticket (5 min)",
+    "text": "Check: Exit Ticket (5 min)\nThis program runs on a Windows laptop with an Intel processor.\nimport platform\n\ncpu = platform.machine()\nprint(\"CPU:\", cpu)\nprint(\"Again:\", cpu)\n\nWhat will it print? Write the exact output.\nHow many times does the program ask the computer for its CPU type?"
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#teacher-notes",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#teacher-notes",
+    "title": "Lesson 2: Exploring the platform Library",
+    "section": "Teacher Notes",
+    "text": "Teacher Notes\n\nVariables. A variable is a name that stores a value. cpu = platform.machine() asks the question once and keeps the answer, so the program can use it later, as many times as needed.\nStep-through box. It runs the real program in the browser, so platform works and the variables hold the browser’s answers ('wasm32', 'Emscripten'). Python Tutor is not used here because it does not allow the platform module.\nChanging a variable (e.g. system = \"macOS\" after system = \"Darwin\") is not part of this lesson; it comes when programs start calculating with stored values.\ndir() output is long and includes names starting with _; tell students to skip those. In the browser and on the classroom computer, the lists may differ slightly between Python versions.\nSpot the problem. Without parentheses, platform.machine is the tool itself, not its answer, so Python prints a description of the function, e.g. &lt;function machine at 0x104cb3e20&gt;. The AttributeError says the module has no tool by that name. The step-through box highlights the line that caused the error and shows the error type and message; Thonny, IDLE, and VS Code show the same information as a full traceback, which students should learn to read too.\nSpiral. Students now write variables and read error messages. Calculating with values (os.cpu_count(), storage in gigabytes) comes in Module 2.\nAnswers are in the private teacher files."
+  }
+]

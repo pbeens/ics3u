@@ -1,0 +1,102 @@
+---
+title: "Ask the Computer About Itself"
+subtitle: "Module 1, Lesson 1"
+format:
+  live-revealjs:
+    theme: default
+    slide-number: true
+    code-line-numbers: true
+    toc: false
+engine: markdown
+---
+
+## Warm-up
+
+Write down your best guesses about **this** computer:
+
+1. What kind of processor (CPU) does it have?
+2. Which operating system does it run?
+3. What is the computer's name?
+
+## Two lines of Python
+
+```{.python code-line-numbers="|1|3"}
+import platform
+
+print(platform.machine())
+```
+
+::: {.fragment}
+- `import platform` brings in a toolbox of ready-made code
+- `platform.machine()` asks: *what type of CPU is this?*
+- `print()` shows the answer
+:::
+
+::: {.notes}
+Read the program aloud before running it. The dot means "the machine tool from the platform toolbox"; the parentheses mean "use it now". Then run it on the classroom computer in Thonny, IDLE, or VS Code and compare with the warm-up guesses.
+:::
+
+## What does the answer mean?
+
+| Answer | Meaning | Found in |
+|---|---|---|
+| `arm64` / `aarch64` | 64-bit ARM | Apple silicon Macs, phones, tablets |
+| `x86_64` / `AMD64` | 64-bit Intel or AMD | Most Windows PCs, older Macs, servers |
+
+::: {.notes}
+Windows reports Intel and AMD processors as AMD64 because AMD designed the 64-bit version of this processor family.
+:::
+
+## Predict, then run
+
+{{< stepper file="examples/l01_computer_report.py" >}}
+
+::: {.notes}
+TEACHER PROMPT (first use of the step-through box): "Nothing has run yet. The red arrow on a yellow line is the NEXT line Python will run. When I press Step, that line runs and turns GREEN — green means just ran. Anything printed appears in Output the moment its line turns green. Back replays a step; Run all jumps to the end; Start over resets." Then: "Write your prediction first — no pressing Step until you've committed." Ask first: How many lines will it print? Which words appear exactly as written? Which parts depend on the computer? Have students commit to a prediction (type it in the box or write it down), then press Step one line at a time. Afterwards, run the same program on the classroom computer and compare.
+:::
+
+## Where does my code run?
+
+| | Classroom computer | This web page | Google Colab |
+|---|---|---|---|
+| CPU type | | | |
+| Operating system | | | |
+| Computer name | | | |
+
+::: {.notes}
+Fill in the classroom column from Thonny/IDLE/VS Code, the web page column from the previous slide, and the Colab column from a teacher demonstration. Colab typically reports x86_64, Linux, and a random-looking machine name — check before class.
+:::
+
+## Three places, three computers
+
+::: {.incremental}
+- **Classroom computer:** the real hardware in front of you
+- **This web page:** a small virtual computer inside the browser tab (`wasm32`, `Emscripten`)
+- **Colab:** a Google server in a data centre, possibly in another country
+- A program reports on whatever computer it **actually runs on**
+:::
+
+## Modify
+
+1. Change the labels, e.g. `"Processor:"`
+2. Add a line that prints `platform.python_version()`
+3. Swap two `print()` lines. What changes?
+
+```{pyodide}
+import platform
+
+print("CPU type:", platform.machine())
+print("Operating system:", platform.system())
+print("Computer name:", platform.node())
+```
+
+## Exit ticket
+
+This runs on a Windows laptop with an Intel processor. What will it print?
+
+```python
+import platform
+
+print("Report")
+print("CPU:", platform.machine())
+```

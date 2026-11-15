@@ -1,0 +1,7 @@
+title: Predict and Step
+author: "ICS3U: Introduction to Computer Science"
+version: 1.0.0
+quarto-required: ">=1.4.0"
+contributes:
+  shortcodes:
+    - stepper.lua

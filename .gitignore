@@ -1,0 +1,11 @@
+# Quarto
+.quarto/
+site/.quarto/
+site/_site/
+
+# Python
+__pycache__/
+.venv/
+
+# macOS
+.DS_Store

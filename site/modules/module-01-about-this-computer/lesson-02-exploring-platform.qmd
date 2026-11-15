@@ -1,0 +1,164 @@
+---
+title: "Lesson 2: Exploring the platform Library"
+subtitle: "Module 1 — About This Computer"
+format: live-html
+engine: markdown
+expectations: [A1.1, A3.1, A4.3, A4.4, C1.1]
+---
+
+::: {.callout-note appearance="simple"}
+**Time:** 75 minutes · **Expectations:** A1.1, A3.1, A4.3, A4.4, C1.1 · **Slides:** [Lesson 2 slides](lesson-02-exploring-platform-slides.qmd) · **Previous:** [Lesson 1](lesson-01-ask-the-computer.qmd)
+:::
+
+## Learning Goals
+
+- Find out what tools a module contains, using `dir()` and the Python documentation.
+- Store answers in variables and use them later in a program.
+- Trace which variables exist and what they hold, line by line.
+- Read two common error messages and explain what caused them.
+
+## Success Criteria
+
+Students can say:
+
+- I can find a new function in the `platform` module and use it.
+- I can predict the output of a program that stores values in variables.
+- I can explain what an `AttributeError` message is telling me.
+
+## Review (5 min)
+
+Without running anything, answer:
+
+1. What does `platform.machine()` print on the classroom computer? On the course web page?
+2. What does the dot in `platform.machine()` mean? What do the parentheses mean?
+
+## Teach: What Else Is in the Toolbox? (15 min)
+
+A module can contain many tools. `dir()` lists them. Run it and read the list together.
+
+```{pyodide}
+import platform
+
+print(dir(platform))
+```
+
+::: {.callout-tip title="Teacher prompt"}
+Think aloud while reading the list:
+
+- "Names starting with an underscore, like `_comparable_version`, are for Python's own use. We skip those."
+- "Some names look familiar from Lesson 1: `machine`, `system`, `node`, `python_version`, `release`."
+- "Others are new: `platform`, `architecture`, `version`, `uname`. The name gives a hint, but the documentation tells us for sure."
+:::
+
+Open the official documentation for the module: [docs.python.org/3/library/platform.html](https://docs.python.org/3/library/platform.html). Find `platform.machine()` and read its description together. Then choose one new function from the list, predict what it does from its name, and try it.
+
+## Predict, Then Step (15 min)
+
+This is Lesson 1's computer report, rewritten so that each answer is stored in a *variable* before it is printed. Read it **without running it**, then answer:
+
+1. Which lines ask the computer a question? Which lines print?
+2. What will the first line of output be?
+3. How is this program different from Lesson 1's program? Will the output be different?
+
+Type your prediction in the box, then press **Step** to run one line at a time. Watch the **Variables** panel as well as the output.
+
+::: {.callout-tip title="Teacher prompt: the Variables panel (first use)"}
+- "Same colours as last lesson: yellow with an arrow is the *next* line, green *just ran*."
+- "There's a new panel today: **Variables**. A variable is a name that holds a value. When line 3 runs, watch a new row appear."
+- After stepping line 3: "Nothing was printed, but something happened. The answer was stored under the name `cpu`."
+- "The quotation marks around `'wasm32'` tell us the value is *text*. Python calls text a *string*. The quotation marks won't be printed."
+:::
+
+{{< stepper file="examples/l02_report_variables.py" >}}
+
+## Investigate (20 min)
+
+### What the variables hold
+
+Use **Back** and **Step** to answer:
+
+1. After line 3 runs, which variable exists and what is its value?
+2. Lines 3–5 run, but nothing is printed yet. Where did the answers go?
+3. Line 7 uses `name`, which was created on line 5. What would happen if line 7 came before line 5?
+4. Complete a trace table:
+
+| Line | `cpu` | `system` | `name` | Output |
+|---|---|---|---|---|
+| 3 | | | | |
+| 4 | | | | |
+| 5 | | | | |
+| 7 | | | | |
+| 8 | | | | |
+| 9 | | | | |
+### Spot the problem
+
+Each program has a mistake. Predict what will happen, then step through it and read the result carefully.
+
+::: {.callout-tip title="Teacher prompt: reading an error (first use)"}
+After Program B stops:
+
+- "A **red** line means Python stopped on that line because of an error. The lines below it never ran."
+- "The message under the buttons has three parts: the **line number**, the **kind of error** (`AttributeError`), and a **description** in plain words. Read them in that order."
+- "Errors aren't failures. They're Python telling us exactly where to look."
+:::
+
+**Program A**
+
+{{< stepper file="examples/l02_mistake_parentheses.py" >}}
+
+**Program B**
+
+{{< stepper file="examples/l02_mistake_attribute.py" >}}
+
+1. Program A does not crash, but prints something strange. What is missing?
+2. Program B stops with an `AttributeError`. Which line caused it? What is the message telling you?
+3. How could `dir(platform)` have prevented the mistake in Program B?
+4. Run Program B on the classroom computer. How does the full error message there show the same information?
+
+## Modify (10 min)
+
+Add two more facts to the report. For each one, create a variable and print it with a label.
+
+1. The Python version: `platform.python_version()`
+2. The operating system's version number: `platform.release()`
+
+```{pyodide}
+import platform
+
+cpu = platform.machine()
+system = platform.system()
+name = platform.node()
+
+print("Computer report for", name)
+print("CPU type:", cpu)
+print("Operating system:", system)
+```
+
+## Make: My Computer Report (if time allows)
+
+Write a computer report that uses **four** `platform` functions, including at least one you found with `dir()` or the documentation. Store each answer in a variable with a clear name, then print a labelled report. Run it here and on the classroom computer, and compare.
+
+## Check: Exit Ticket (5 min)
+
+This program runs on a Windows laptop with an Intel processor.
+
+```python
+import platform
+
+cpu = platform.machine()
+print("CPU:", cpu)
+print("Again:", cpu)
+```
+
+1. What will it print? Write the exact output.
+2. How many times does the program ask the computer for its CPU type?
+
+## Teacher Notes
+
+- **Variables.** A variable is a name that stores a value. `cpu = platform.machine()` asks the question once and keeps the answer, so the program can use it later, as many times as needed.
+- **Step-through box.** It runs the real program in the browser, so `platform` works and the variables hold the browser's answers (`'wasm32'`, `'Emscripten'`). Python Tutor is not used here because it does not allow the `platform` module.
+- **Changing a variable** (e.g. `system = "macOS"` after `system = "Darwin"`) is not part of this lesson; it comes when programs start calculating with stored values.
+- **`dir()` output** is long and includes names starting with `_`; tell students to skip those. In the browser and on the classroom computer, the lists may differ slightly between Python versions.
+- **Spot the problem.** Without parentheses, `platform.machine` is the tool itself, not its answer, so Python prints a description of the function, e.g. `<function machine at 0x104cb3e20>`. The `AttributeError` says the module has no tool by that name. The step-through box highlights the line that caused the error and shows the error type and message; Thonny, IDLE, and VS Code show the same information as a full traceback, which students should learn to read too.
+- **Spiral.** Students now write variables and read error messages. Calculating with values (`os.cpu_count()`, storage in gigabytes) comes in Module 2.
+- Answers are in the private teacher files.

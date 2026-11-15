@@ -1,0 +1,95 @@
+/* Predict-and-step visualizer. Self-contained so it works on pages and slides. */
+.stepper {
+  --stepper-border: #c9ced6;
+  --stepper-bg: #ffffff;
+  --stepper-panel: #f6f8fa;
+  --stepper-text: #1f2328;
+  --stepper-muted: #59636e;
+  --stepper-ran: #d7f5dd;
+  --stepper-next: #fff1c2;
+  --stepper-error: #ffd8d8;
+  --stepper-accent: #0d6efd;
+  border: 1px solid var(--stepper-border);
+  border-radius: 6px;
+  background: var(--stepper-bg);
+  color: var(--stepper-text);
+  padding: 0.75rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: left;
+}
+.stepper .stepper-source { display: none !important; }
+.stepper-body { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.stepper-left { flex: 2 1 26rem; min-width: 0; }
+.stepper-side { flex: 1 1 13rem; min-width: 0; display: flex; flex-direction: column; }
+.stepper-code {
+  font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.9em;
+  background: var(--stepper-panel);
+  border: 1px solid var(--stepper-border);
+  border-radius: 4px;
+  padding: 0.4rem 0;
+  overflow-x: auto;
+}
+.stepper-line { display: flex; white-space: pre; padding: 0 0.5rem; }
+.stepper-line.ran { background: var(--stepper-ran); }
+.stepper-line.next { background: var(--stepper-next); }
+.stepper-line.error { background: var(--stepper-error); }
+.stepper-arrow { width: 1.4em; flex: none; color: #c2185b; font-weight: bold; }
+.stepper-num { width: 2em; flex: none; color: var(--stepper-muted); text-align: right; padding-right: 0.8em; user-select: none; }
+.stepper-legend { font-size: 0.75em; color: var(--stepper-muted); margin-top: 0.3rem; }
+.stepper-key { display: inline-block; width: 1.4em; height: 0.9em; vertical-align: middle; border-radius: 2px; text-align: center; line-height: 0.9em; color: #c2185b; font-weight: bold; }
+.stepper-key-ran { background: var(--stepper-ran); }
+.stepper-key-next { background: var(--stepper-next); }
+.stepper-label { font-size: 0.75em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--stepper-muted); margin: 0.2rem 0; }
+.stepper-prediction, .stepper-output {
+  font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.85em;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--stepper-border);
+  border-radius: 4px;
+  padding: 0.4rem;
+  margin: 0 0 0.4rem 0;
+  background: var(--stepper-bg);
+  color: var(--stepper-text);
+}
+.stepper-prediction { resize: vertical; }
+.stepper-output { min-height: 3.2em; white-space: pre-wrap; background: var(--stepper-panel); }
+.stepper-vars { font-size: 0.85em; }
+.stepper-vars-table { border-collapse: collapse; margin: 0; }
+.stepper-vars-table td { border: 1px solid var(--stepper-border); padding: 0.15rem 0.5rem; font-family: SFMono-Regular, Menlo, Consolas, monospace; }
+.stepper-var-name { font-weight: 600; }
+.stepper-empty { color: var(--stepper-muted); font-style: italic; }
+.stepper-controls { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem; }
+.stepper-btn {
+  font: inherit;
+  font-size: 0.85em;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--stepper-border);
+  border-radius: 4px;
+  background: var(--stepper-bg);
+  color: var(--stepper-text);
+  cursor: pointer;
+}
+.stepper-btn-primary { background: var(--stepper-accent); border-color: var(--stepper-accent); color: #fff; }
+.stepper-btn:disabled { opacity: 0.45; cursor: default; }
+.stepper-status { font-size: 0.8em; color: var(--stepper-muted); margin-top: 0.4rem; }
+.stepper-status-error { color: #b42318; font-weight: 600; }
+
+/* Slides: smaller base size so the widget fits. */
+.reveal .stepper { font-size: 0.5em; }
+.reveal .stepper pre.stepper-output { box-shadow: none; }
+
+/* Dark mode on pages (Quarto adds quarto-dark to body). */
+body.quarto-dark .stepper {
+  --stepper-border: #495057;
+  --stepper-bg: #222;
+  --stepper-panel: #2b2b2b;
+  --stepper-text: #e6e6e6;
+  --stepper-muted: #adb5bd;
+  --stepper-ran: #1f4d2b;
+  --stepper-next: #5a4a12;
+  --stepper-error: #5c1f1f;
+}

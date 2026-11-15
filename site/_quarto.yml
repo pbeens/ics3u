@@ -1,0 +1,47 @@
+project:
+  type: website
+  post-render:
+    - _scripts/sync_docs.py
+  render:
+    - "**/*.qmd"
+  resources:
+    - .nojekyll
+
+lang: en-CA
+
+website:
+  title: "ICS3U"
+  description: "Teacher resources for Ontario ICS3U: Introduction to Computer Science, Grade 11, University Preparation."
+  search: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: before-you-begin.qmd
+        text: Before You Begin
+      - href: scope-and-sequence.qmd
+        text: Scope and Sequence
+      - text: Module 1
+        menu:
+          - href: modules/module-01-about-this-computer/lesson-01-ask-the-computer.qmd
+            text: "Lesson 1: Ask the Computer About Itself"
+          - href: modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.qmd
+            text: "Lesson 1 slides"
+          - href: modules/module-01-about-this-computer/lesson-02-exploring-platform.qmd
+            text: "Lesson 2: Exploring the platform Library"
+          - href: modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.qmd
+            text: "Lesson 2 slides"
+  page-footer:
+    center: "ICS3U · Ontario Curriculum (2008)"
+
+# Shared options apply to every page format (html and live-html).
+# Slide decks override theme in their own front matter.
+theme:
+  light: cosmo
+  dark: darkly
+toc: true
+code-copy: true
+link-external-newwindow: true
+link-external-icon: true
+
+format: html

@@ -1,0 +1,76 @@
+---
+title: "Before You Begin"
+subtitle: "Set up a working Python computer for you and your students"
+---
+
+::: {.callout-note appearance="simple"}
+**Expectations:** C3.1 (software development environment), D1.4 (organizations that refurbish computers)
+:::
+
+This course asks the computer about itself. The first program students read reports the CPU type, the operating system, and the computer's name. Module 2 adds the number of CPU cores and the free disk space, and later modules may look at the network. All of this only means something when the code runs **on the computer in front of the student**.
+
+Get Python working before Lesson 1, both on your own demonstration computer and on the computers your students will use.
+
+## Your Demonstration Computer
+
+You will model nearly every lesson: reading code aloud, predicting, running it, and stepping through mistakes. For this you need a computer that:
+
+- has **Python 3 installed locally**, not just a browser tab;
+- has a beginner-friendly editor. [Thonny](https://thonny.org) is a good first choice because its debugger steps through code one line at a time. IDLE (included with Python) and VS Code also work;
+- connects to the projector, with the editor's font large enough to read from the back of the room;
+- has already run each lesson's example programs. Run them the day before, so you know what *this* computer will report.
+
+Don't count on a board-imaged laptop letting you install software on the day. Ask IT early.
+
+## Student Computers
+
+Students need a place to run, change, break, and fix programs every day, not only to read them. In order of preference:
+
+### 1. Real computers with Python installed
+
+The best choice. Lab or classroom computers with Python and an editor installed give the real experience: real hardware, real files, and a real operating system to explore.
+
+### 2. Refurbished computers
+
+Strongly recommended if your school doesn't have enough computers. Older desktops and laptops are cheap and run Python perfectly well.
+
+- In Canada, the federal [Computers for Schools Plus](https://ised-isde.canada.ca/site/computers-for-schools-plus/en) program supplies refurbished computers to schools. In Ontario it's run by Renewed Computer Technology.
+- Many older computers can't run Windows 11, and Windows 10 stopped receiving security updates in October 2025. A free Linux system (for example, Ubuntu or Linux Mint) runs well on older hardware and comes with Python already installed.
+- A room with a mix of Windows, macOS, and Linux computers is a bonus. Each one gives different answers to the same program, which is exactly what Lesson 1 investigates.
+- Refurbishing ties into the curriculum: expectation D1.4 names "private companies that refurbish computers" as an example.
+
+### 3. Raspberry Pi and other small computers
+
+A [Raspberry Pi](https://www.raspberrypi.com) is a small, inexpensive computer. Raspberry Pi OS comes with Python 3 and Thonny already installed. Each one needs a power supply, a microSD card, and a monitor, keyboard, and mouse (classroom monitors often work). Its ARM processor reports something different again (on the 64-bit system, `aarch64` and `Linux`), which makes for a good comparison. Other small or portable computers that can install Python work too.
+
+::: {.callout-tip title="Chromebooks"}
+If your board allows it, a Chromebook's **Linux development environment** can install Python and Thonny. The code runs inside a Linux container, so it reports Linux rather than ChromeOS. That's a good discussion point, but it isn't the same as a computer running Python directly.
+:::
+
+## Online Options: Fine in a Pinch
+
+Browser-based Python is useful when a computer can't install anything, for homework, or as a backup on a day the lab is down:
+
+- **The runnable boxes on this site.** These need nothing installed. Python runs inside the browser tab.
+- **[Google Colab](https://colab.research.google.com).** These are notebooks that run on Google's servers. Many school boards turn Colab off for student accounts, so check before you plan around it.
+- **[Callysto Hub](https://hub.callysto.ca).** These are free Jupyter notebooks for Canadian classrooms, hosted on Canadian servers. Cybera and PIMS wound down their involvement in Callysto in 2024, and the [resources remain available](https://www.cybera.ca/a-fond-farewell-and-securing-the-future-callysto-transitions-to-a-new-phase/). Confirm that sign-in works for your students before relying on it.
+
+None of these gives students the experience this course is built around. The code doesn't run on the student's computer, so the hardware questions get answers about a different machine:
+
+| Where the code runs | What `platform` describes | Typical CPU / operating system |
+|---|---|---|
+| Classroom computer | The computer in front of the student | `AMD64` / `Windows`, `arm64` / `Darwin`, `x86_64` / `Linux` |
+| This site's runnable boxes | A small virtual computer inside the browser tab | `wasm32` / `Emscripten` |
+| Colab or Callysto | A server in a data centre somewhere else | Usually `x86_64` / `Linux` |
+
+Online notebooks also can't see the student's own files, drives, or classroom network. Lesson 1 uses these differences on purpose, as a comparison. They make a poor *only* option.
+
+## Checklist Before Lesson 1
+
+- [ ] Python 3 and an editor are installed on your demonstration computer, and it works with the projector.
+- [ ] Every student has a computer that runs Python locally (lab computer, refurbished computer, Raspberry Pi, or a similar device).
+- [ ] You've run `l01_computer_report.py` on both your computer and a student computer, and noted what each reports.
+- [ ] The lesson pages load on student computers. The runnable boxes download about 10 MB the first time.
+- [ ] You know whether Colab or the Callysto Hub works for your students' accounts, in case you need a backup.
+
+When you're ready, start with [Module 1, Lesson 1](modules/module-01-about-this-computer/lesson-01-ask-the-computer.qmd).

@@ -1,0 +1,105 @@
+---
+title: "Exploring the platform Library"
+subtitle: "Module 1, Lesson 2"
+format:
+  live-revealjs:
+    theme: default
+    slide-number: true
+    code-line-numbers: true
+    toc: false
+engine: markdown
+---
+
+## Review
+
+1. What does `platform.machine()` print on the classroom computer? On the web page?
+2. What does the dot in `platform.machine()` mean? The parentheses?
+
+## What else is in the toolbox?
+
+```{pyodide}
+import platform
+
+print(dir(platform))
+```
+
+[Python documentation: platform](https://docs.python.org/3/library/platform.html)
+
+::: {.notes}
+Skip names starting with an underscore. Point out familiar names (machine, system, node, python_version, release) and new ones (platform, architecture, version, uname). Then open docs.python.org/3/library/platform.html and read the entry for machine() together.
+:::
+
+## Predict, then step
+
+{{< stepper file="examples/l02_report_variables.py" >}}
+
+::: {.notes}
+TEACHER PROMPT (first use of the Variables panel): "Same colours as last lesson. New panel: Variables. A variable is a name that holds a value — watch a row appear when line 3 runs." After line 3: "Nothing printed, but the answer was stored under the name cpu. The quotation marks around 'wasm32' mean the value is text — a string. They won't be printed." This is Lesson 1's report with each answer stored in a variable first. Ask: Which lines ask a question? Which lines print? What will the first line of output be? After predicting, step through and watch the Variables panel: lines 3–5 print nothing, but the variables appear.
+:::
+
+## What the variables hold
+
+1. After line 3, which variable exists? What is its value?
+2. Lines 3–5 print nothing. Where did the answers go?
+3. What if line 7 came before line 5?
+
+::: {.notes}
+Quotation marks in the Variables panel (e.g. 'wasm32') show the value is text (a string); they are not printed.
+:::
+
+## Spot the problem: A
+
+{{< stepper file="examples/l02_mistake_parentheses.py" >}}
+
+::: {.notes}
+No parentheses, so Python prints the tool itself, not its answer.
+:::
+
+## Spot the problem: B
+
+{{< stepper file="examples/l02_mistake_attribute.py" >}}
+
+::: {.notes}
+TEACHER PROMPT (first error): "A red line means Python stopped there because of an error; the lines below never ran. Read the message in order: line number, kind of error, description. Errors are Python telling us exactly where to look." AttributeError on line 3: the module has no tool called cpu. Then run it in Thonny, IDLE, or VS Code and read the full traceback.
+:::
+
+## Modify
+
+Add a variable and a labelled line for:
+
+1. `platform.python_version()`
+2. `platform.release()`
+
+```{pyodide}
+import platform
+
+cpu = platform.machine()
+system = platform.system()
+name = platform.node()
+
+print("Computer report for", name)
+print("CPU type:", cpu)
+print("Operating system:", system)
+```
+
+## Make: My Computer Report
+
+- Use **four** `platform` functions
+- At least one you found with `dir()` or the documentation
+- Store each answer in a well-named variable
+- Print a labelled report; run it here **and** on the classroom computer
+
+## Exit ticket
+
+This runs on a Windows laptop with an Intel processor.
+
+```python
+import platform
+
+cpu = platform.machine()
+print("CPU:", cpu)
+print("Again:", cpu)
+```
+
+1. What will it print?
+2. How many times does it ask for the CPU type?
