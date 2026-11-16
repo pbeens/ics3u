@@ -74,6 +74,8 @@ Approved: the quick fixes, and the recommended options for Decision 1 (Lesson 1)
 
 ## Recently Completed
 
+- 2026-11-16: Research references (About page and `teaching-approach.md`) expanded to full APA 7 with DOI links, after Grok's reference audit (`audits/references-audit.md`); all details confirmed against Crossref. In-text citations for three or more authors now use "et al.".
+
 - 2026-11-15: Overviews, practice, and assignments. New How a Lesson Works page (who each piece is for; before, during, and after class; cycle diagram). Lesson plans now open with a "For teachers" banner and At a Glance summary, and gain an After the Lesson section. New Module 1 overview, student Practice page (Lessons 1–2, reading first, interactive, code tables without exit tickets), and draft Module 1 Assignment (Computer Report Card) with rubric. Slides end with an "After class" slide. Getting Started and Module 1 menus reorganized by audience. Private answer keys for practice and the assignment. New example programs run and verified.
 
 - 2026-11-15: Lessons now end with "Code for This Lesson" (`.py` downloads, notebooks, Open in Callysto | Colab, via `{{< lesson-code >}}`) and "Feedback" (`{{< feedback >}}`) sections; added a Buy Me a Coffee link (top right); Ontario Computers for Schools link and a "Who This Course Is For" section on About.

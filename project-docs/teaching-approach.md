@@ -28,9 +28,9 @@ The course is organized as a spiral, not as topic units. There is no "output uni
 ## Why
 
 - **Reading and tracing come before writing.** Studies of novice programmers found that many students who could not write working code also could not reliably trace or explain short code. Tracing and explaining ability is strongly related to writing ability (Lister et al., 2004; Lopez et al., 2008).
-- **Novices learn more from explicit instruction and worked examples** than from open-ended discovery (Sweller & Cooper, 1985; Kirschner, Sweller & Clark, 2006).
+- **Novices learn more from explicit instruction and worked examples** than from open-ended discovery (Sweller & Cooper, 1985; Kirschner et al., 2006).
 - **Direct instruction principles** — daily review, small steps, modelling, guided practice, checking for understanding, independent practice — give the lesson its shape (Rosenshine, 2012).
-- **PRIMM** (Predict, Run, Investigate, Modify, Make) puts reading ahead of writing within each lesson (Sentance, Waite & Kallia, 2019).
+- **PRIMM** (Predict, Run, Investigate, Modify, Make) puts reading ahead of writing within each lesson (Sentance et al., 2019).
 
 ## Lesson Sequence
 
@@ -120,9 +120,9 @@ Each module also has an overview page (`index.qmd`, for teachers), a Practice pa
 
 ## References
 
-- Kirschner, P. A., Sweller, J., & Clark, R. E. (2006). Why minimal guidance during instruction does not work. *Educational Psychologist, 41*(2), 75–86.
-- Lister, R., et al. (2004). A multi-national study of reading and tracing skills in novice programmers. *ITiCSE Working Group Reports*, 119–150.
-- Lopez, M., Whalley, J., Robbins, P., & Lister, R. (2008). Relationships between reading, tracing and writing skills in introductory programming. *Proceedings of ICER 2008*, 101–112.
-- Rosenshine, B. (2012). Principles of instruction: Research-based strategies that all teachers should know. *American Educator, 36*(1), 12–19, 39.
-- Sentance, S., Waite, J., & Kallia, M. (2019). Teaching computer programming with PRIMM: A sociocultural perspective. *Computer Science Education, 29*(2–3), 136–176.
-- Sweller, J., & Cooper, G. A. (1985). The use of worked examples as a substitute for problem solving in learning algebra. *Cognition and Instruction, 2*(1), 59–89.
+- Kirschner, P. A., Sweller, J., & Clark, R. E. (2006). Why minimal guidance during instruction does not work: An analysis of the failure of constructivist, discovery, problem-based, experiential, and inquiry-based teaching. *Educational Psychologist, 41*(2), 75–86. <https://doi.org/10.1207/s15326985ep4102_1>
+- Lister, R., Adams, E. S., Fitzgerald, S., Fone, W., Hamer, J., Lindholm, M., McCartney, R., Moström, J. E., Sanders, K., Seppälä, O., Simon, B., & Thomas, L. (2004). A multi-national study of reading and tracing skills in novice programmers. In *Working Group Reports from ITiCSE on Innovation and Technology in Computer Science Education* (pp. 119–150). ACM. <https://doi.org/10.1145/1044550.1041673>
+- Lopez, M., Whalley, J., Robbins, P., & Lister, R. (2008). Relationships between reading, tracing and writing skills in introductory programming. In *Proceedings of the Fourth International Workshop on Computing Education Research* (pp. 101–112). ACM. <https://doi.org/10.1145/1404520.1404531>
+- Rosenshine, B. (2012). Principles of instruction: Research-based strategies that all teachers should know. *American Educator, 36*(1), 12–19, 39. <https://eric.ed.gov/?id=EJ971753>
+- Sentance, S., Waite, J., & Kallia, M. (2019). Teaching computer programming with PRIMM: A sociocultural perspective. *Computer Science Education, 29*(2–3), 136–176. <https://doi.org/10.1080/08993408.2019.1608781>
+- Sweller, J., & Cooper, G. A. (1985). The use of worked examples as a substitute for problem solving in learning algebra. *Cognition and Instruction, 2*(1), 59–89. <https://doi.org/10.1207/s1532690xci0201_3>

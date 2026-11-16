@@ -4,6 +4,47 @@ Program-related prompts for this project, newest first. Paraphrased, not verbati
 
 ---
 
+## User Prompt 49
+
+- **Timestamp:** 2026-11-16T11:21
+- **Goal:** Correct the research reference list.
+- **Summary:** Review the research-reference audit and, if it holds up, apply its corrections to the reference list on the About page and in the teaching approach.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Verified all five DOIs with Crossref; kept APA 7 title case for proceedings names and a capital after the subtitle colon.
+
+---
+
+## User Prompt 48
+
+- **Timestamp:** 2026-11-16T11:20
+- **Goal:** Put the citation audit at the intended filename.
+- **Summary:** Move the research-citation issues to `audits/references-audit.md` (the earlier `references/audit.md` path was a dictation error) and remove the extra folder.
+- **Host:** m4-mini
+- **Agent:** Grok
+
+---
+
+## User Prompt 47
+
+- **Timestamp:** 2026-11-16T11:16
+- **Goal:** File the research-citation issues in the audits tree.
+- **Summary:** With site audits now in `audits/`, write the bibliographic issues from the six About-page references to `audits/references/audit.md`.
+- **Host:** m4-mini
+- **Agent:** Grok
+
+---
+
+## User Prompt 46
+
+- **Timestamp:** 2026-11-16T10:40
+- **Goal:** Verify the six research citations on the About page.
+- **Summary:** Confirm whether the listed Kirschner, Lister, Lopez, Rosenshine, Sentance, and Sweller references match the published record.
+- **Host:** m4-mini
+- **Agent:** Grok
+
+---
+
 ## User Prompt 45
 
 - **Timestamp:** 2026-11-16T10:25
