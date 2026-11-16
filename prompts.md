@@ -4,6 +4,38 @@ Program-related prompts for this project, newest first. Paraphrased, not verbati
 
 ---
 
+## User Prompt 53
+
+- **Timestamp:** 2026-11-16T11:45
+- **Goal:** Connect the new Google feedback form to the site.
+- **Summary:** The author built the feedback form and shared its link. Add it to every page's feedback area with the page address filled in automatically.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Read the Page question's entry ID from the public form; added "send it privately" links in `_feedback.html` and the `feedback` shortcode; updated About and README.
+
+---
+
+## User Prompt 52
+
+- **Timestamp:** 2026-11-16T11:32
+- **Goal:** Set up Google Drive for course forms and documents.
+- **Summary:** The author created a Drive folder for the site and asked for help with a Google feedback form. The form must record the page the submission came from automatically.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Added Feedback, Quizzes, and Handouts subfolders and a form build sheet; the page URL will come from a pre-filled form link built by `_feedback.html`.
+
+---
+
+## User Prompt 51
+
+- **Timestamp:** 2026-11-16T11:40
+- **Goal:** Settle where quizzes and tests live.
+- **Summary:** Nothing in the repository needs to be secret, quizzes and tests included. Students finding answers in the repo is not a concern; revisit only if teachers report problems.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+
+---
+
 ## User Prompt 50
 
 - **Timestamp:** 2026-11-16T11:30

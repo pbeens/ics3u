@@ -59,7 +59,7 @@ Students read code before they write code. This applies to every lesson, workshe
 
 - Anything in `site/` is published on the website. Never place answer keys, solutions, marking notes, or teacher-only notes there, and never link to them from the site.
 - The GitHub repository (https://github.com/pbeens/ics3u) is public, including `answer-keys/`. The author accepts that answer keys are visible in the repo; they just stay off the website. Lesson plans may name the folder in plain text (no link) so teachers can find it.
-- Quizzes and tests that must stay secret have no home yet; ask before creating one.
+- Nothing in the repository is secret. Quizzes and tests go in `answer-keys/` with their answers, off the website. Revisit only if teachers report problems.
 - The project is MIT licensed ([LICENSE](LICENSE)); Ministry documents in `references/official-curriculum/` are excluded.
 - Every site page gets a "Report an error or suggest a change" link (from `site/_feedback.html`) that opens the GitHub feedback form (`.github/ISSUE_TEMPLATE/feedback.yml`) with the page filled in.
 

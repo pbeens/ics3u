@@ -36,8 +36,8 @@ Approved: the quick fixes, and the recommended options for Decision 1 (Lesson 1)
 
 **Outstanding: needs discussion or a decision:**
 
-- D3 is mostly resolved by `answer-keys/` being public. Still open: where quizzes and tests go if they must stay secret (anything in the repo is public).
-- D4: feedback route for teachers without a GitHub account (e.g. a Google Form)?
+- ~~D3~~ Resolved 2026-11-16: nothing in the repo needs to be secret. Quizzes and tests go in `answer-keys/` with their answers; revisit only if teachers report problems.
+- ~~D4~~ Resolved 2026-11-16: every page also links a private Google Form ("send it privately") with the page address pre-filled (`entry.1446477366`). Form and response sheet live in the Drive folder `peter.beens.ca-ics3u/Feedback`.
 - Lesson plans now name the `answer-keys` folder in plain text (no link). Confirm that's wanted, given the goal of not drawing attention to it.
 
 **Outstanding: verify first, then fix if real:**
@@ -56,7 +56,7 @@ Approved: the quick fixes, and the recommended options for Decision 1 (Lesson 1)
 
 1. Revise Lessons 1–2 from author feedback; decide whether Reveal.js slides, quarto-live, and Python Tutor stay.
 2. Confirm the Colab values in Lesson 1's teacher notes by running the program in Colab.
-3. Add quizzes for Lessons 1–2 (first decide where secret quizzes live; `answer-keys/` is public). Later: downloadable versions of practice and assignments (Google Docs, Word, or PDF).
+3. Add quizzes for Lessons 1–2, in `answer-keys/module-01-about-this-computer/` (public in the repo, off the site). Later: downloadable versions of practice and assignments (Google Docs, Word, or PDF).
 4. Revise the scope and sequence from author feedback; remove the "Draft" callout when approved.
 5. Publish to GitHub Pages and confirm the site, runnable code, and Python Tutor work online.
 

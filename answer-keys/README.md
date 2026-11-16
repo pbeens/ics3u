@@ -3,7 +3,7 @@
 Answer keys and teacher-only material. This folder is in the public GitHub repository, but it is **never** published on the website or linked from it.
 
 **Belongs here:** answer keys, solutions, marking notes, teacher-only notes.
-**Not yet decided:** quizzes and tests that must stay secret (anything here is public).
+**Also here:** quizzes and tests, with their answers. Nothing in this repository is secret; students could find these, and that is accepted (see `decisions.md`, 2026-11-16).
 **Does not belong here:** anything meant for the public site (use `site/`).
 
 ## Contents

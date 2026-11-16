@@ -525,6 +525,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="feedback-is-welcome" class="level2">
 <h2 class="anchored" data-anchor-id="feedback-is-welcome">Feedback Is Welcome</h2>
 <p>This course gets better with every correction and suggestion. If you find a mistake, a code example that doesn’t run, or have an idea for a lesson, use the <strong>Report an error or suggest a change</strong> link on any page. It opens a short form on GitHub with the page already filled in. Please don’t post answers to worksheets, quizzes, or tests: issues are public.</p>
+<p>No GitHub account? Every page also has a <strong>send it privately</strong> link to a short Google Form, with the page filled in. Only the author sees those responses.</p>
 </section>
 <section id="free-with-no-ads" class="level2">
 <h2 class="anchored" data-anchor-id="free-with-no-ads">Free, With No Ads</h2>
@@ -542,7 +543,8 @@ ul.task-list li input[type="checkbox"] {
 /*
   Feedback links: open the GitHub feedback form with this page's title and
   address filled in. Rewrites Quarto's "Report an issue" link in the margin
-  and adds a line at the end of the page.
+  and adds a line at the end of the page, which also links the Google Form
+  (for people without a GitHub account) with this page's address filled in.
 */
 (function () {
   var main = document.querySelector("main#quarto-document-content");
@@ -553,6 +555,8 @@ ul.task-list li input[type="checkbox"] {
     "&title=" + encodeURIComponent("[" + pageTitle + "] ") +
     "&page=" + encodeURIComponent(window.location.href.split("#")[0]);
   var label = "Report an error or suggest a change";
+  var formUrl = "https://docs.google.com/forms/d/e/1FAIpQLScI9qD_mr02kj8sqVdfarnlmPOxlr66rbpZL0aRaIlB37XQiQ/viewform?usp=pp_url&entry.1446477366=" +
+    encodeURIComponent(window.location.href.split("#")[0]);
 
   function rewrite(a) {
     a.href = url;
@@ -578,7 +582,8 @@ ul.task-list li input[type="checkbox"] {
   note.className = "feedback-link small text-muted";
   note.style.marginTop = "3rem";
   note.innerHTML = 'Found a mistake or have an idea? <a target="_blank" rel="noopener" href="' +
-    url + '">' + label + "</a> on GitHub. Feedback is always appreciated.";
+    url + '">' + label + '</a> on GitHub, or <a target="_blank" rel="noopener" href="' +
+    formUrl + '">send it privately</a> (no account needed). Feedback is always appreciated.';
   main.appendChild(note);
 })();
 </script>

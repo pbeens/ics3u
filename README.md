@@ -8,7 +8,7 @@ Both the website and this repository are public. Answer keys and marking notes a
 
 ## Feedback
 
-Feedback, corrections, and suggestions are appreciated. Use the "Report an error or suggest a change" link on any page of the site, or [open an issue](https://github.com/pbeens/ics3u/issues/new?template=feedback.yml). Please don't post assessment answers in issues; they're public.
+Feedback, corrections, and suggestions are appreciated. Use the "Report an error or suggest a change" link on any page of the site, or [open an issue](https://github.com/pbeens/ics3u/issues/new?template=feedback.yml). Please don't post assessment answers in issues; they're public. Without a GitHub account, use the page's "send it privately" link, which opens a [Google Form](https://forms.gle/EKQseR3NLWVgDUAf9) with the page filled in.
 
 ## Folders
 

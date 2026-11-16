@@ -18,7 +18,8 @@ Consequential project decisions, newest first. Current files and newer instructi
 - **Decision:** Rename `private/` to `answer-keys/` and track it in the public repository. Answer keys stay off the website and are never linked from it; lesson plans name the folder in plain text so teachers can find it.
 - **Context:** A folder called "private" in a public repo attracts attention, and the author is comfortable with answer keys being public as long as they aren't on the site. This also removes the need to rewrite Git history and gives teachers a way to get the keys.
 - **Alternatives:** Git-ignored local folder (no backup, no access for other teachers); a separate private repository.
-- **Revisit if:** Quizzes or tests need to stay secret; they would need a separate, non-public home.
+- **Follow-up (same day):** Nothing in the repository needs to be secret, including quizzes and tests. They go in `answer-keys/` with their answers. Students who look up answers in the repository are not a concern.
+- **Revisit if:** Teachers report problems and ask for assessments to be kept private.
 
 ---
 

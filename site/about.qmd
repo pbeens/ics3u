@@ -81,6 +81,8 @@ This approach draws on research about how novices learn to program:
 
 This course gets better with every correction and suggestion. If you find a mistake, a code example that doesn't run, or have an idea for a lesson, use the **Report an error or suggest a change** link on any page. It opens a short form on GitHub with the page already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.
 
+No GitHub account? Every page also has a **send it privately** link to a short Google Form, with the page filled in. Only the author sees those responses.
+
 ## Free, With No Ads
 
 Everything here is free to use: no ads, no sign-up, and no paid version. It's written and maintained by one teacher in their own time. If the course saves you time, a token [coffee](https://buymeacoffee.com/pbeens) every so often is appreciated and helps keep new lessons coming.

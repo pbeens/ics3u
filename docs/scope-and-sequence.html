@@ -979,7 +979,8 @@ Note
 /*
   Feedback links: open the GitHub feedback form with this page's title and
   address filled in. Rewrites Quarto's "Report an issue" link in the margin
-  and adds a line at the end of the page.
+  and adds a line at the end of the page, which also links the Google Form
+  (for people without a GitHub account) with this page's address filled in.
 */
 (function () {
   var main = document.querySelector("main#quarto-document-content");
@@ -990,6 +991,8 @@ Note
     "&title=" + encodeURIComponent("[" + pageTitle + "] ") +
     "&page=" + encodeURIComponent(window.location.href.split("#")[0]);
   var label = "Report an error or suggest a change";
+  var formUrl = "https://docs.google.com/forms/d/e/1FAIpQLScI9qD_mr02kj8sqVdfarnlmPOxlr66rbpZL0aRaIlB37XQiQ/viewform?usp=pp_url&entry.1446477366=" +
+    encodeURIComponent(window.location.href.split("#")[0]);
 
   function rewrite(a) {
     a.href = url;
@@ -1015,7 +1018,8 @@ Note
   note.className = "feedback-link small text-muted";
   note.style.marginTop = "3rem";
   note.innerHTML = 'Found a mistake or have an idea? <a target="_blank" rel="noopener" href="' +
-    url + '">' + label + "</a> on GitHub. Feedback is always appreciated.";
+    url + '">' + label + '</a> on GitHub, or <a target="_blank" rel="noopener" href="' +
+    formUrl + '">send it privately</a> (no account needed). Feedback is always appreciated.';
   main.appendChild(note);
 })();
 </script>

@@ -16,6 +16,8 @@ Lesson page helpers.
 local REPO = "https://github.com/pbeens/ics3u"
 local REPO_PATH = "pbeens/ics3u"
 local BRANCH = "main"
+local FORM = "https://docs.google.com/forms/d/e/1FAIpQLScI9qD_mr02kj8sqVdfarnlmPOxlr66rbpZL0aRaIlB37XQiQ/viewform"
+local FORM_PAGE_ENTRY = "entry.1446477366"
 local SITE = "https://peter.beens.ca/ics3u/"
 
 local function url_encode(s)
@@ -86,11 +88,16 @@ local function feedback(meta)
   local page = SITE .. rel:gsub("%.qmd$", ".html")
   local href = REPO .. "/issues/new?template=feedback.yml&title="
     .. url_encode("[" .. title .. "] ") .. "&page=" .. url_encode(page)
+  local form_href = FORM .. "?usp=pp_url&" .. FORM_PAGE_ENTRY .. "=" .. url_encode(page)
   local div = pandoc.Div({
     pandoc.Para({ pandoc.Str("Found a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.") }),
     pandoc.Para({ link({ pandoc.Strong("Report an error or suggest a change") }, href,
       { target = "_blank", rel = "noopener" }),
       pandoc.Str(" opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.") }),
+    pandoc.Para({ pandoc.Str("No GitHub account? "),
+      link({ pandoc.Strong("Send feedback privately") }, form_href,
+        { target = "_blank", rel = "noopener" }),
+      pandoc.Str(" with a Google Form instead. This page's address is filled in for you, and only the author sees your response.") }),
   }, pandoc.Attr("", { "feedback-section" }))
   return div
 end
