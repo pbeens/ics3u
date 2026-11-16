@@ -295,8 +295,11 @@
 print("CPU type:", platform.machine())
 print("Operating system:", platform.system())
 print("Computer name:", platform.node())</pre></div>
+<div class="fragment absolute" style="font-size: 0.5em; color: #555;left: 0px; bottom: 45px; right: 0px; ">
+<p>* <strong>Why <code>wasm32</code> and <code>Emscripten</code>?</strong> This box runs Python inside your web browser, using Pyodide, so it describes a small virtual computer in this browser tab. Run the program in Thonny, IDLE, or VS Code to see your computer’s real answers.</p>
+</div>
 <aside class="notes">
-<p>TEACHER PROMPT (first use of the step-through box): “Nothing has run yet. The red arrow on a yellow line is the NEXT line Python will run. When I press Step, that line runs and turns GREEN — green means just ran. Anything printed appears in Output the moment its line turns green. Back replays a step; Run all jumps to the end; Start over resets.” Then: “Write your prediction first — no pressing Step until you’ve committed.” Ask first: How many lines will it print? Which words appear exactly as written? Which parts depend on the computer? Have students commit to a prediction (type it in the box or write it down), then press Step one line at a time. Afterwards, run the same program on the classroom computer and compare.</p>
+<p>TEACHER PROMPT (first use of the step-through box): “Nothing has run yet. The red arrow on a yellow line is the NEXT line Python will run. When I press Step, that line runs and turns GREEN — green means just ran. Anything printed appears in Output the moment its line turns green. Back replays a step; Run all jumps to the end; Start over resets.” Then: “Write your prediction first — no pressing Step until you’ve committed.” Ask first: How many lines will it print? Which words appear exactly as written? Which parts depend on the computer? Have students commit to a prediction (type it in the box or write it down), then press Step one line at a time. Afterwards, click once to show the asterisk note explaining the odd answers (wasm32, Emscripten): the box runs Python inside the browser with Pyodide, so it describes a virtual computer in the tab. Then run the same program on the classroom computer and compare.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -308,61 +311,6 @@ print("Computer name:", platform.node())</pre></div>
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="where-does-my-code-run" class="slide level2">
-<h2>Where does my code run?</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th></th>
-<th>Classroom computer</th>
-<th>This web page</th>
-<th>Google Colab</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>CPU type</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Operating system</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Computer name</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<aside class="notes">
-<p>Fill in the classroom column from Thonny/IDLE/VS Code, the web page column from the previous slide, and the Colab column from a teacher demonstration. Colab typically reports x86_64, Linux, and a random-looking machine name — check before class.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="three-places-three-computers" class="slide level2">
-<h2>Three places, three computers</h2>
-<ul>
-<li class="fragment"><strong>Classroom computer:</strong> the real hardware in front of you</li>
-<li class="fragment"><strong>This web page:</strong> a small virtual computer inside the browser tab (<code>wasm32</code>, <code>Emscripten</code>)</li>
-<li class="fragment"><strong>Colab:</strong> a Google server in a data centre, possibly in another country</li>
-<li class="fragment">A program reports on whatever computer it <strong>actually runs on</strong></li>
-</ul>
 </section>
 <section id="modify" class="slide level2">
 <h2>Modify</h2>
@@ -382,11 +330,18 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IHBsYXRmb3JtXG5c
 </section>
 <section id="exit-ticket" class="slide level2">
 <h2>Exit ticket</h2>
-<p>This runs on a Windows laptop with an Intel processor. What will it print?</p>
+<p>What would the output be if this program were run on a Windows laptop with an Intel processor?</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a aria-label="1"></a><span class="im">import</span> platform</span>
 <span id="cb2-2"><a aria-label="2"></a></span>
 <span id="cb2-3"><a aria-label="3"></a><span class="bu">print</span>(<span class="st">"Report"</span>)</span>
 <span id="cb2-4"><a aria-label="4"></a><span class="bu">print</span>(<span class="st">"CPU:"</span>, platform.machine())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="after-class" class="slide level2">
+<h2>After class</h2>
+<ul>
+<li>Do the <a href="../../modules/module-01-about-this-computer/practice.html#after-lesson-1-ask-the-computer-about-itself">Lesson 1 practice</a>: read and predict first, then run</li>
+<li>Today’s programs are on the practice page: download the <code>.py</code> files, or open them as notebooks in Callysto or Colab</li>
+</ul>
 
 
 <script type="pyodide-data">

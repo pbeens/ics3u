@@ -43,6 +43,12 @@ Students read code before they write code. This applies to every lesson, workshe
 - Start deep: prefer authentic, interesting examples over toy ones (e.g., the first `print()` program reports the computer's own hardware, not "Hello, World"), and tie them to other expectations where it fits.
 - Full details and the lesson template: [project-docs/teaching-approach.md](project-docs/teaching-approach.md).
 
+## Audiences
+
+- Lesson plans (one page per lesson) are for teachers: they open with a "For teachers" banner and an At a Glance summary.
+- Students use the slides, the `.py` files and notebooks, and each module's Practice and Assignment pages. Keep exit tickets off student pages.
+- See [site/how-a-lesson-works.qmd](site/how-a-lesson-works.qmd) and the lesson template in [project-docs/teaching-approach.md](project-docs/teaching-approach.md).
+
 ## Curriculum Alignment
 
 - Take expectation codes and wording only from `references/official-curriculum/ics3u-expectations.md`, never from the raw `sections/` extraction.

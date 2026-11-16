@@ -22,20 +22,36 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: before-you-begin.qmd
-        text: Before You Begin
-      - href: scope-and-sequence.qmd
-        text: Scope and Sequence
+      - text: Getting Started
+        menu:
+          - href: before-you-begin.qmd
+            text: Before You Begin
+          - href: how-a-lesson-works.qmd
+            text: How a Lesson Works
+          - href: scope-and-sequence.qmd
+            text: Scope and Sequence
       - text: Module 1
         menu:
+          - href: modules/module-01-about-this-computer/index.qmd
+            text: "Module 1 overview"
+          - text: "---"
+          - text: "For teachers"
           - href: modules/module-01-about-this-computer/lesson-01-ask-the-computer.qmd
-            text: "Lesson 1: Ask the Computer About Itself"
+            text: "Lesson 1 plan: Ask the Computer About Itself"
+          - href: modules/module-01-about-this-computer/lesson-02-exploring-platform.qmd
+            text: "Lesson 2 plan: Exploring the platform Library"
+          - text: "---"
+          - text: "For the class"
           - href: modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.qmd
             text: "Lesson 1 slides"
-          - href: modules/module-01-about-this-computer/lesson-02-exploring-platform.qmd
-            text: "Lesson 2: Exploring the platform Library"
           - href: modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.qmd
             text: "Lesson 2 slides"
+          - text: "---"
+          - text: "For students"
+          - href: modules/module-01-about-this-computer/practice.qmd
+            text: "Practice"
+          - href: modules/module-01-about-this-computer/assignment.qmd
+            text: "Assignment: Computer Report Card"
       - href: about.qmd
         text: About
     right:

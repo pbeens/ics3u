@@ -4,6 +4,15 @@ Consequential project decisions, newest first. Current files and newer instructi
 
 ---
 
+## 2026-11-15 — Lesson plans are for teachers; students use slides, code, and practice pages
+
+- **Decision:** Each lesson has one page, the lesson plan, for teachers. It opens with a "For teachers" banner and an At a Glance summary. Students work from the slides, the `.py` files and notebooks, and each module's interactive Practice and Assignment pages on the site. Downloadable versions (Google Docs, Word, or PDF) may come later.
+- **Context:** The interactive lesson plans looked student-facing, and nothing described what happens before or after the slides, or what students do after class.
+- **Alternatives:** A separate student page per lesson (more to maintain); Google Docs worksheets only (loses interactivity).
+- **Revisit if:** Teachers need printable or LMS-ready versions.
+
+---
+
 ## 2026-11-15 — Public repo, MIT license, feedback through GitHub issues
 
 - **Decision:** The repository is public and MIT licensed (Ministry documents excluded). `private/` is git-ignored and kept only locally. Feedback goes through a GitHub issue form, linked from every page with the page title and URL prefilled.

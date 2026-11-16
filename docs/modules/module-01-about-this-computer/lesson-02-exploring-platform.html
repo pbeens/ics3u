@@ -305,34 +305,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../before-you-begin.html"> 
-<span class="menu-text">Before You Begin</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Getting Started</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-getting-started">    
+        <li>
+    <a class="dropdown-item" href="../../before-you-begin.html">
+ <span class="dropdown-text">Before You Begin</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../scope-and-sequence.html"> 
-<span class="menu-text">Scope and Sequence</span></a>
+        <li>
+    <a class="dropdown-item" href="../../how-a-lesson-works.html">
+ <span class="dropdown-text">How a Lesson Works</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../scope-and-sequence.html">
+ <span class="dropdown-text">Scope and Sequence</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-module-1" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Module 1</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-module-1">    
         <li>
-    <a class="dropdown-item" href="../../modules/module-01-about-this-computer/lesson-01-ask-the-computer.html">
- <span class="dropdown-text">Lesson 1: Ask the Computer About Itself</span></a>
+    <a class="dropdown-item" href="../../modules/module-01-about-this-computer/index.html">
+ <span class="dropdown-text">Module 1 overview</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">For teachers</li>
+        <li>
+    <a class="dropdown-item" href="../../modules/module-01-about-this-computer/lesson-01-ask-the-computer.html">
+ <span class="dropdown-text">Lesson 1 plan: Ask the Computer About Itself</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-01-about-this-computer/lesson-02-exploring-platform.html">
+ <span class="dropdown-text">Lesson 2 plan: Exploring the platform Library</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">For the class</li>
         <li>
     <a class="dropdown-item" href="../../modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html">
  <span class="dropdown-text">Lesson 1 slides</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../modules/module-01-about-this-computer/lesson-02-exploring-platform.html">
- <span class="dropdown-text">Lesson 2: Exploring the platform Library</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="../../modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html">
  <span class="dropdown-text">Lesson 2 slides</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">For students</li>
+        <li>
+    <a class="dropdown-item" href="../../modules/module-01-about-this-computer/practice.html">
+ <span class="dropdown-text">Practice</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-01-about-this-computer/assignment.html">
+ <span class="dropdown-text">Assignment: Computer Report Card</span></a>
   </li>  
     </ul>
   </li>
@@ -364,7 +393,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link active" data-scroll-target="#learning-goals">Learning Goals</a></li>
+  <li><a href="#at-a-glance" id="toc-at-a-glance" class="nav-link active" data-scroll-target="#at-a-glance">At a Glance</a></li>
+  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link" data-scroll-target="#learning-goals">Learning Goals</a></li>
   <li><a href="#success-criteria" id="toc-success-criteria" class="nav-link" data-scroll-target="#success-criteria">Success Criteria</a></li>
   <li><a href="#review-5-min" id="toc-review-5-min" class="nav-link" data-scroll-target="#review-5-min">Review (5 min)</a></li>
   <li><a href="#teach-what-else-is-in-the-toolbox-15-min" id="toc-teach-what-else-is-in-the-toolbox-15-min" class="nav-link" data-scroll-target="#teach-what-else-is-in-the-toolbox-15-min">Teach: What Else Is in the Toolbox? (15 min)</a></li>
@@ -377,6 +407,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#modify-10-min" id="toc-modify-10-min" class="nav-link" data-scroll-target="#modify-10-min">Modify (10 min)</a></li>
   <li><a href="#make-my-computer-report-if-time-allows" id="toc-make-my-computer-report-if-time-allows" class="nav-link" data-scroll-target="#make-my-computer-report-if-time-allows">Make: My Computer Report (if time allows)</a></li>
   <li><a href="#check-exit-ticket-5-min" id="toc-check-exit-ticket-5-min" class="nav-link" data-scroll-target="#check-exit-ticket-5-min">Check: Exit Ticket (5 min)</a></li>
+  <li><a href="#after-the-lesson" id="toc-after-the-lesson" class="nav-link" data-scroll-target="#after-the-lesson">After the Lesson</a></li>
   <li><a href="#code-for-this-lesson" id="toc-code-for-this-lesson" class="nav-link" data-scroll-target="#code-for-this-lesson">Code for This Lesson</a></li>
   <li><a href="#teacher-notes" id="toc-teacher-notes" class="nav-link" data-scroll-target="#teacher-notes">Teacher Notes</a></li>
   <li><a href="#feedback" id="toc-feedback" class="nav-link" data-scroll-target="#feedback">Feedback</a></li>
@@ -407,6 +438,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<div class="callout callout-style-simple callout-important no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>For teachers.</strong> This is the lesson plan: use it to prepare and as your script in class. Students work from the <strong>slides</strong>, the <strong>code files and notebooks</strong>, and the <strong>practice</strong> page. The step-through boxes and runnable code are here so you can try every activity first. <a href="../../how-a-lesson-works.html">How a lesson works →</a></p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -417,6 +458,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<section id="at-a-glance" class="level2">
+<h2 class="anchored" data-anchor-id="at-a-glance">At a Glance</h2>
+<ul>
+<li><strong>Big idea:</strong> a module is a toolbox you can explore, and variables let a program remember answers to use later.</li>
+<li><strong>Students will:</strong> list the <code>platform</code> toolbox with <code>dir()</code>, look up a function in the documentation, trace a program that stores answers in variables, and read two common error messages.</li>
+<li><strong>Students make:</strong> a computer report built from four <code>platform</code> functions stored in variables.</li>
+<li><strong>Prepare:</strong> run <code>l02_report_variables.py</code> and both mistake programs, so you’ve seen the error messages students will see.</li>
+<li><strong>After class:</strong> <a href="../../modules/module-01-about-this-computer/practice.html#after-lesson-2-exploring-the-platform-library">Lesson 2 practice</a>, then the <a href="../../modules/module-01-about-this-computer/assignment.html">Module 1 Assignment</a>.</li>
+<li><strong>Where it fits:</strong> builds on <a href="../../modules/module-01-about-this-computer/lesson-01-ask-the-computer.html">Lesson 1</a>; part of <a href="../../modules/module-01-about-this-computer/index.html">Module 1</a>.</li>
+</ul>
+</section>
 <section id="learning-goals" class="level2">
 <h2 class="anchored" data-anchor-id="learning-goals">Learning Goals</h2>
 <ul>
@@ -637,16 +689,24 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IHBsYXRmb3JtXG5c
 </section>
 <section id="check-exit-ticket-5-min" class="level2">
 <h2 class="anchored" data-anchor-id="check-exit-ticket-5-min">Check: Exit Ticket (5 min)</h2>
-<p>This program runs on a Windows laptop with an Intel processor.</p>
+<p>Suppose this program were run on a Windows laptop with an Intel processor.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> platform</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>cpu <span class="op">=</span> platform.machine()</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"CPU:"</span>, cpu)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Again:"</span>, cpu)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol type="1">
-<li>What will it print? Write the exact output.</li>
+<li>What would the output be? Write it exactly.</li>
 <li>How many times does the program ask the computer for its CPU type?</li>
 </ol>
+</section>
+<section id="after-the-lesson" class="level2">
+<h2 class="anchored" data-anchor-id="after-the-lesson">After the Lesson</h2>
+<ul>
+<li>Students do the <a href="../../modules/module-01-about-this-computer/practice.html#after-lesson-2-exploring-the-platform-library">Lesson 2 practice</a>: trace a program that changes a variable, fix a mistake, and use a function they found with <code>dir()</code>.</li>
+<li>Students then start the <a href="../../modules/module-01-about-this-computer/assignment.html">Module 1 Assignment</a>, the Computer Report Card.</li>
+<li>Read the exit tickets. Students who answered “twice” to question 2 still think a variable re-asks the computer; revisit the trace table.</li>
+</ul>
 </section>
 <section id="code-for-this-lesson" class="level2">
 <h2 class="anchored" data-anchor-id="code-for-this-lesson">Code for This Lesson</h2>
@@ -680,6 +740,18 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IHBsYXRmb3JtXG5c
 <td><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fpbeens%2Fics3u&amp;branch=main&amp;subPath=notebooks/01-02-mistake-parentheses.ipynb&amp;depth=1">Callysto</a> | <a href="https://colab.research.google.com/github/pbeens/ics3u/blob/main/notebooks/01-02-mistake-parentheses.ipynb">Colab</a></td>
 </tr>
 <tr class="even">
+<td>Practice mistake</td>
+<td><a href="examples/l02_practice_mistake.py" download="l02_practice_mistake.py"><code>l02_practice_mistake.py</code></a></td>
+<td><a href="https://github.com/pbeens/ics3u/blob/main/notebooks/01-02-practice-mistake.ipynb">View or download</a></td>
+<td><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fpbeens%2Fics3u&amp;branch=main&amp;subPath=notebooks/01-02-practice-mistake.ipynb&amp;depth=1">Callysto</a> | <a href="https://colab.research.google.com/github/pbeens/ics3u/blob/main/notebooks/01-02-practice-mistake.ipynb">Colab</a></td>
+</tr>
+<tr class="odd">
+<td>Practice trace</td>
+<td><a href="examples/l02_practice_trace.py" download="l02_practice_trace.py"><code>l02_practice_trace.py</code></a></td>
+<td><a href="https://github.com/pbeens/ics3u/blob/main/notebooks/01-02-practice-trace.ipynb">View or download</a></td>
+<td><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fpbeens%2Fics3u&amp;branch=main&amp;subPath=notebooks/01-02-practice-trace.ipynb&amp;depth=1">Callysto</a> | <a href="https://colab.research.google.com/github/pbeens/ics3u/blob/main/notebooks/01-02-practice-trace.ipynb">Colab</a></td>
+</tr>
+<tr class="even">
 <td>Report variables</td>
 <td><a href="examples/l02_report_variables.py" download="l02_report_variables.py"><code>l02_report_variables.py</code></a></td>
 <td><a href="https://github.com/pbeens/ics3u/blob/main/notebooks/01-02-report-variables.ipynb">View or download</a></td>
@@ -704,7 +776,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IHBsYXRmb3JtXG5c
 <h2 class="anchored" data-anchor-id="feedback">Feedback</h2>
 <div class="feedback-section">
 <p>Found a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.</p>
-<p><a href="https://github.com/pbeens/ics3u/issues/new?template=feedback.yml&amp;title=%5BLesson%202%3A%20Exploring%20the%20platform%20Library%5D%20&amp;page=https%3A%2F%2Fpeter.beens.ca%2Fics3u%2Fmodules%2Fmodule-01-about-this-computer%2Flesson-02-exploring-platform.html" target="_blank" rel="noopener"><strong>Report an error or suggest a change</strong></a> opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.</p>
+<p><a href="https://github.com/pbeens/ics3u/issues/new?template=feedback.yml&amp;title=%5BLesson%202%3A%20Exploring%20the%20platform%20Library%5D%20&amp;page=https%3A%2F%2Fpeter.beens.ca%2Fics3u%2Fmodules%2Fmodule-01-about-this-computer%2Flesson-02-exploring-platform.html" rel="noopener" target="_blank"><strong>Report an error or suggest a change</strong></a> opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.</p>
 </div>
 
 

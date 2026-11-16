@@ -29,10 +29,10 @@ Get Python running on your computer and your students' computers.
 
 ::: {.g-col-12 .g-col-md-4}
 ::: {.card .h-100 .p-3}
-### 2. See the plan
-Six modules, the spiral of ideas, and expectation coverage.
+### 2. Learn the routine
+What's for you, what's for students, and what happens before, during, and after class.
 
-[Scope and Sequence →](scope-and-sequence.qmd)
+[How a Lesson Works →](how-a-lesson-works.qmd)
 :::
 :::
 
@@ -49,9 +49,12 @@ Students ask the computer about itself, using one line of Python.
 
 ## Lessons {.mt-5}
 
-| Module 1: About This Computer | | |
-|---|---|---|
-| Lesson 1: Ask the Computer About Itself | [Lesson](modules/module-01-about-this-computer/lesson-01-ask-the-computer.qmd) | [Slides](modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.qmd) |
-| Lesson 2: Exploring the platform Library | [Lesson](modules/module-01-about-this-computer/lesson-02-exploring-platform.qmd) | [Slides](modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.qmd) |
+**[Module 1: About This Computer](modules/module-01-about-this-computer/index.qmd)**
 
-More modules are on the way. See the [Scope and Sequence](scope-and-sequence.qmd) for the full plan.
+| Lesson | For teachers | For the class | For students |
+|---|---|---|---|
+| 1. Ask the Computer About Itself | [Lesson plan](modules/module-01-about-this-computer/lesson-01-ask-the-computer.qmd) | [Slides](modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.qmd) | [Practice](modules/module-01-about-this-computer/practice.qmd#after-lesson-1-ask-the-computer-about-itself) |
+| 2. Exploring the platform Library | [Lesson plan](modules/module-01-about-this-computer/lesson-02-exploring-platform.qmd) | [Slides](modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.qmd) | [Practice](modules/module-01-about-this-computer/practice.qmd#after-lesson-2-exploring-the-platform-library) |
+| Module assignment | | | [Computer Report Card](modules/module-01-about-this-computer/assignment.qmd) |
+
+More modules are on the way. See the [Scope and Sequence](scope-and-sequence.qmd) for the full plan of six modules.

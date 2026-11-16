@@ -1,0 +1,109 @@
+---
+title: "Module 1 Practice"
+subtitle: "Module 1 — About This Computer · For students"
+format: live-html
+engine: markdown
+expectations: [A1.1, A2.2, A3.1, A4.3, A4.4, C1.1]
+---
+
+::: {.callout-note appearance="simple"}
+**For students.** Do each lesson's practice after that lesson. Read first: predict before you run anything. Your teacher will tell you what to hand in.
+:::
+
+## After Lesson 1: Ask the Computer About Itself
+
+### Code files
+
+Lesson 1's programs, including the ones below. Download a `.py` file for Thonny, IDLE, or VS Code, or open the notebook in Callysto or Colab.
+
+{{< lesson-code lesson="01" hide="exit_ticket" >}}
+
+### Read and predict
+
+Read this program **without running it**. Write your answers, then type your prediction in the box and press **Step**.
+
+1. How many lines will it print?
+2. Which lines will be exactly the same on every computer?
+3. Which parts will change from computer to computer?
+4. Which line of code prints `Done`?
+
+{{< stepper file="examples/l01_practice_read.py" >}}
+
+### Modify
+
+Make each change, predict the new output, then run it.
+
+1. Add a line that prints the CPU type with the label `CPU:`.
+2. Change the first line so it prints your name instead of `Python report`, for example `Python report by Sam`.
+3. Move `print("Done")` to the top of the program. What happens? Why?
+
+```{pyodide}
+import platform
+
+print("Python report")
+print("System:", platform.system())
+print("Python version:", platform.python_version())
+print("Done")
+```
+
+### Make
+
+On your classroom computer (Thonny, IDLE, or VS Code), write a program that prints:
+
+- a title line, and
+- three labelled facts about the computer: its CPU type, its operating system, and the operating system's version number (`platform.release()`).
+
+Run it, then copy its output under your code as a comment.
+
+## After Lesson 2: Exploring the platform Library
+
+### Code files
+
+{{< lesson-code lesson="02" hide="exit_ticket" >}}
+
+### Trace
+
+Read this program **without running it**. Fill in a trace table like the one below, one row per line of code that runs. Then type your prediction and press **Step** to check, watching the **Variables** panel.
+
+| Line | `system` | `version` | Output |
+|---|---|---|---|
+| 3 | | | |
+| 4 | | | |
+| 5 | | | |
+| 6 | | | |
+| 7 | | | |
+
+{{< stepper file="examples/l02_practice_trace.py" >}}
+
+1. What does `system` hold after line 3? After line 6?
+2. Why does the last line print `my computer` and not the operating system's name?
+
+### Spot the mistake
+
+This program has a mistake. Predict what will happen, then press **Step** to find out.
+
+1. What type of error is it?
+2. Which line does it point to?
+3. Python makes a suggestion. What is it? Fix the program on your classroom computer and run it.
+
+{{< stepper file="examples/l02_practice_mistake.py" >}}
+
+### Make
+
+1. Run `print(dir(platform))` (after `import platform`) and choose one function you haven't used yet. Check what it does in the [`platform` documentation](https://docs.python.org/3/library/platform.html).
+2. On your classroom computer, write a program that stores its answer in a variable with a clear name and prints it with a label.
+3. Add a comment at the top explaining, in your own words, what the function tells you.
+
+```{pyodide}
+import platform
+
+print(dir(platform))
+```
+
+## Next
+
+When you've finished both, start the [Module 1 Assignment](assignment.qmd).
+
+## Feedback
+
+{{< feedback >}}

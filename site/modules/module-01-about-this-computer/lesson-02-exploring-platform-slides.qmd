@@ -91,7 +91,7 @@ print("Operating system:", system)
 
 ## Exit ticket
 
-This runs on a Windows laptop with an Intel processor.
+Suppose this program were run on a Windows laptop with an Intel processor.
 
 ```python
 import platform
@@ -101,5 +101,11 @@ print("CPU:", cpu)
 print("Again:", cpu)
 ```
 
-1. What will it print?
+1. What would the output be?
 2. How many times does it ask for the CPU type?
+
+## After class
+
+- Do the [Lesson 2 practice](practice.qmd#after-lesson-2-exploring-the-platform-library): read and predict first, then run
+- Then start the [Module 1 Assignment](assignment.qmd)
+- Today's programs are on the practice page: download the `.py` files, or open them as notebooks in Callysto or Colab

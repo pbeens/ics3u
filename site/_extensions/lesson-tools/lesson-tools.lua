@@ -1,7 +1,8 @@
 --[[
 Lesson page helpers.
 
-{{< lesson-code >}}
+{{< lesson-code >}}  or  {{< lesson-code lesson="01" hide="exit_ticket" >}}
+  (lesson= for a non-lesson page; hide= skips files whose names contain that text)
   Lists every example program for this lesson (examples/lLL_*.py, where LL is
   the lesson number from the file name lesson-LL-*.qmd), with a .py download,
   the matching notebook on GitHub (notebooks/MM-LL-name.ipynb, built by
@@ -23,11 +24,13 @@ local function url_encode(s)
   end))
 end
 
-local function lesson_numbers()
+local function lesson_numbers(kwargs)
   local input = quarto.doc.input_file
   local file = pandoc.path.filename(input)
   local dir = pandoc.path.filename(pandoc.path.directory(input))
-  return dir:match("^module%-(%d%d)%-"), file:match("^lesson%-(%d%d)%-"), pandoc.path.directory(input)
+  local lesson = pandoc.utils.stringify(kwargs["lesson"] or "")
+  if lesson == "" then lesson = file:match("^lesson%-(%d%d)%-") end
+  return dir:match("^module%-(%d%d)%-"), lesson, pandoc.path.directory(input)
 end
 
 local function nice_name(name)
@@ -42,14 +45,17 @@ local function link(text, href, attrs)
   return pandoc.Link(text, href, "", attrs or {})
 end
 
-local function lesson_code()
-  local module, lesson, dir = lesson_numbers()
+local function lesson_code(kwargs)
+  local module, lesson, dir = lesson_numbers(kwargs)
   if not module or not lesson then
     return pandoc.Strong(pandoc.Str("lesson-code: not a lesson page"))
   end
+  local hide = pandoc.utils.stringify(kwargs["hide"] or "")
   local files = {}
   for _, f in ipairs(pandoc.system.list_directory(pandoc.path.join({ dir, "examples" }))) do
-    if f:match("^l" .. lesson .. "_.+%.py$") then table.insert(files, f) end
+    if f:match("^l" .. lesson .. "_.+%.py$") and (hide == "" or not f:find(hide, 1, true)) then
+      table.insert(files, f)
+    end
   end
   table.sort(files)
   if #files == 0 then return pandoc.Para({}) end
@@ -90,6 +96,6 @@ local function feedback(meta)
 end
 
 return {
-  ["lesson-code"] = function(args, kwargs, meta) return lesson_code() end,
+  ["lesson-code"] = function(args, kwargs, meta) return lesson_code(kwargs) end,
   ["feedback"] = function(args, kwargs, meta) return feedback(meta) end,
 }

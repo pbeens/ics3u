@@ -1,0 +1,34 @@
+---
+title: "Module 1: About This Computer"
+subtitle: "About 15 hours · For teachers"
+---
+
+**The big idea:** students ask the computer about itself. They start with one line of Python that prints the processor type and build up to a labelled report stored in variables. Along the way they learn to read, predict, and trace code, use a module's tools, and read error messages. They also discover that a program reports on whatever computer it actually runs on.
+
+**Expectations:** A1.1, A2.1, A2.2, A3.1, A4.2, A4.3, A4.4, C1.1, C1.4, C2.1, C3.1, C3.3, C3.4, C3.5 (across the whole module)
+
+## Lessons
+
+| Lesson | For teachers | For the class | For students |
+|---|---|---|---|
+| 1. Ask the Computer About Itself | [Lesson plan](lesson-01-ask-the-computer.qmd) | [Slides](lesson-01-ask-the-computer-slides.qmd) | [Practice](practice.qmd#after-lesson-1-ask-the-computer-about-itself) |
+| 2. Exploring the platform Library | [Lesson plan](lesson-02-exploring-platform.qmd) | [Slides](lesson-02-exploring-platform-slides.qmd) | [Practice](practice.qmd#after-lesson-2-exploring-the-platform-library) |
+| More lessons | Coming soon | | |
+
+Each lesson plan's **Code for This Lesson** section has the `.py` files and notebooks students run.
+
+## Assignment
+
+[**Computer Report Card**](assignment.qmd) (draft, covers Lessons 1–2). Students read and trace a short program, write a report card using five `platform` functions stored in variables, then run it in two places and explain the difference.
+
+## How Module 1 Fits
+
+- **Before:** nothing. This is the first module; students need no programming experience.
+- **Planned for the rest of the module:** f-strings, comments and naming, `input()` to greet the user, and reading a simple `if` and a `for` loop over a list of facts. See the [Scope and Sequence](../../scope-and-sequence.qmd#module-1-about-this-computer-15-h).
+- **Next:** Module 2, Spec Checker, adds `os` and `shutil` to check whether a computer meets a program's requirements.
+
+New to the course? Read [How a Lesson Works](../../how-a-lesson-works.qmd) first.
+
+## Feedback
+
+{{< feedback >}}

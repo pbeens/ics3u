@@ -98,6 +98,9 @@ title: "Lesson title"
 expectations: [A2.1, A2.3]
 ---
 
+(callout) For teachers banner: students use the slides, code files, and practice page
+(callout) Time · Expectations · Slides · Previous/Next
+## At a Glance             (big idea, students will, students make, prepare, after class, where it fits)
 ## Learning Goals
 ## Success Criteria
 ## Review
@@ -107,10 +110,13 @@ expectations: [A2.1, A2.3]
 ## Modify
 ## Make
 ## Check (exit ticket)
+## After the Lesson       (practice link; what to look for in the exit tickets)
 ## Code for This Lesson   ({{< lesson-code >}}: .py downloads, notebooks, Open in Callysto | Colab)
 ## Teacher Notes
 ## Feedback               ({{< feedback >}}: link to the GitHub feedback form)
 ```
+
+Each module also has an overview page (`index.qmd`, for teachers), a Practice page (students; one section per lesson, reading first, with `{{< lesson-code lesson="NN" hide="exit_ticket" >}}`), and an Assignment page (students). Slides end with an "After class" slide that links to the practice.
 
 ## References
 

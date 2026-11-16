@@ -51,29 +51,12 @@ Windows reports Intel and AMD processors as AMD64 because AMD designed the 64-bi
 
 {{< stepper file="examples/l01_computer_report.py" >}}
 
-::: {.notes}
-TEACHER PROMPT (first use of the step-through box): "Nothing has run yet. The red arrow on a yellow line is the NEXT line Python will run. When I press Step, that line runs and turns GREEN — green means just ran. Anything printed appears in Output the moment its line turns green. Back replays a step; Run all jumps to the end; Start over resets." Then: "Write your prediction first — no pressing Step until you've committed." Ask first: How many lines will it print? Which words appear exactly as written? Which parts depend on the computer? Have students commit to a prediction (type it in the box or write it down), then press Step one line at a time. Afterwards, run the same program on the classroom computer and compare.
+::: {.fragment .absolute bottom="45" left="0" right="0" style="font-size: 0.5em; color: #555;"}
+\* **Why `wasm32` and `Emscripten`?** This box runs Python inside your web browser, using Pyodide, so it describes a small virtual computer in this browser tab. Run the program in Thonny, IDLE, or VS Code to see your computer's real answers.
 :::
 
-## Where does my code run?
-
-| | Classroom computer | This web page | Google Colab |
-|---|---|---|---|
-| CPU type | | | |
-| Operating system | | | |
-| Computer name | | | |
-
 ::: {.notes}
-Fill in the classroom column from Thonny/IDLE/VS Code, the web page column from the previous slide, and the Colab column from a teacher demonstration. Colab typically reports x86_64, Linux, and a random-looking machine name — check before class.
-:::
-
-## Three places, three computers
-
-::: {.incremental}
-- **Classroom computer:** the real hardware in front of you
-- **This web page:** a small virtual computer inside the browser tab (`wasm32`, `Emscripten`)
-- **Colab:** a Google server in a data centre, possibly in another country
-- A program reports on whatever computer it **actually runs on**
+TEACHER PROMPT (first use of the step-through box): "Nothing has run yet. The red arrow on a yellow line is the NEXT line Python will run. When I press Step, that line runs and turns GREEN — green means just ran. Anything printed appears in Output the moment its line turns green. Back replays a step; Run all jumps to the end; Start over resets." Then: "Write your prediction first — no pressing Step until you've committed." Ask first: How many lines will it print? Which words appear exactly as written? Which parts depend on the computer? Have students commit to a prediction (type it in the box or write it down), then press Step one line at a time. Afterwards, click once to show the asterisk note explaining the odd answers (wasm32, Emscripten): the box runs Python inside the browser with Pyodide, so it describes a virtual computer in the tab. Then run the same program on the classroom computer and compare.
 :::
 
 ## Modify
@@ -92,7 +75,7 @@ print("Computer name:", platform.node())
 
 ## Exit ticket
 
-This runs on a Windows laptop with an Intel processor. What will it print?
+What would the output be if this program were run on a Windows laptop with an Intel processor?
 
 ```python
 import platform
@@ -100,3 +83,8 @@ import platform
 print("Report")
 print("CPU:", platform.machine())
 ```
+
+## After class
+
+- Do the [Lesson 1 practice](practice.qmd#after-lesson-1-ask-the-computer-about-itself): read and predict first, then run
+- Today's programs are on the practice page: download the `.py` files, or open them as notebooks in Callysto or Colab

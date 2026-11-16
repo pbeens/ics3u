@@ -6,9 +6,22 @@ engine: markdown
 expectations: [A1.1, A3.1, A4.3, A4.4, C1.1]
 ---
 
+::: {.callout-important appearance="simple" icon=false}
+**For teachers.** This is the lesson plan: use it to prepare and as your script in class. Students work from the **slides**, the **code files and notebooks**, and the **practice** page. The step-through boxes and runnable code are here so you can try every activity first. [How a lesson works →](../../how-a-lesson-works.qmd)
+:::
+
 ::: {.callout-note appearance="simple"}
 **Time:** 75 minutes · **Expectations:** A1.1, A3.1, A4.3, A4.4, C1.1 · **Slides:** [Lesson 2 slides](lesson-02-exploring-platform-slides.qmd) · **Previous:** [Lesson 1](lesson-01-ask-the-computer.qmd)
 :::
+
+## At a Glance
+
+- **Big idea:** a module is a toolbox you can explore, and variables let a program remember answers to use later.
+- **Students will:** list the `platform` toolbox with `dir()`, look up a function in the documentation, trace a program that stores answers in variables, and read two common error messages.
+- **Students make:** a computer report built from four `platform` functions stored in variables.
+- **Prepare:** run `l02_report_variables.py` and both mistake programs, so you've seen the error messages students will see.
+- **After class:** [Lesson 2 practice](practice.qmd#after-lesson-2-exploring-the-platform-library), then the [Module 1 Assignment](assignment.qmd).
+- **Where it fits:** builds on [Lesson 1](lesson-01-ask-the-computer.qmd); part of [Module 1](index.qmd).
 
 ## Learning Goals
 
@@ -140,7 +153,7 @@ Write a computer report that uses **four** `platform` functions, including at le
 
 ## Check: Exit Ticket (5 min)
 
-This program runs on a Windows laptop with an Intel processor.
+Suppose this program were run on a Windows laptop with an Intel processor.
 
 ```python
 import platform
@@ -150,8 +163,14 @@ print("CPU:", cpu)
 print("Again:", cpu)
 ```
 
-1. What will it print? Write the exact output.
+1. What would the output be? Write it exactly.
 2. How many times does the program ask the computer for its CPU type?
+
+## After the Lesson
+
+- Students do the [Lesson 2 practice](practice.qmd#after-lesson-2-exploring-the-platform-library): trace a program that changes a variable, fix a mistake, and use a function they found with `dir()`.
+- Students then start the [Module 1 Assignment](assignment.qmd), the Computer Report Card.
+- Read the exit tickets. Students who answered "twice" to question 2 still think a variable re-asks the computer; revisit the trace table.
 
 ## Code for This Lesson
 

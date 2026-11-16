@@ -8,7 +8,7 @@
 
 1. Revise Lessons 1–2 from author feedback; decide whether Reveal.js slides, quarto-live, and Python Tutor stay.
 2. Confirm the Colab values in Lesson 1's teacher notes by running the program in Colab.
-3. Add worksheets and quizzes for Lessons 1–2 (worksheet format depends on the Google Docs decision below).
+3. Add quizzes for Lessons 1–2 (private). Later: downloadable versions of practice and assignments (Google Docs, Word, or PDF).
 4. Revise the scope and sequence from author feedback; remove the "Draft" callout when approved.
 5. Publish to GitHub Pages and confirm the site, runnable code, and Python Tutor work online.
 
@@ -26,6 +26,8 @@
 - This Mac has a global Jupyter kernel pointing to a missing environment (`/Volumes/Extreme-SSD/.../.venv`). Lesson pages avoid it with `engine: markdown`, but it may affect other Quarto projects.
 
 ## Recently Completed
+
+- 2026-11-15: Overviews, practice, and assignments. New How a Lesson Works page (who each piece is for; before, during, and after class; cycle diagram). Lesson plans now open with a "For teachers" banner and At a Glance summary, and gain an After the Lesson section. New Module 1 overview, student Practice page (Lessons 1–2, reading first, interactive, code tables without exit tickets), and draft Module 1 Assignment (Computer Report Card) with rubric. Slides end with an "After class" slide. Getting Started and Module 1 menus reorganized by audience. Private answer keys for practice and the assignment. New example programs run and verified.
 
 - 2026-11-15: Lessons now end with "Code for This Lesson" (`.py` downloads, notebooks, Open in Callysto | Colab, via `{{< lesson-code >}}`) and "Feedback" (`{{< feedback >}}`) sections; added a Buy Me a Coffee link (top right); Ontario Computers for Schools link and a "Who This Course Is For" section on About.
 

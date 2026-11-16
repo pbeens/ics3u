@@ -4,6 +4,49 @@ Program-related prompts for this project, newest first. Paraphrased, not verbati
 
 ---
 
+## User Prompt 39
+
+- **Timestamp:** 2026-11-15T17:15
+- **Goal:** Build overviews, practice, and assignments with clear audiences.
+- **Summary:** Keep one page per lesson, intended for the teacher; students use the slides and notebooks. Put practice and assignments on the site for their interactivity, noting Google Docs, Word, or PDF versions as a later possibility.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** New How a Lesson Works page, Module 1 overview, Practice and Assignment pages; lesson plans gain a teacher banner, At a Glance, and After the Lesson; `lesson-code` shortcode gains `lesson=` and `hide=`; private answer keys added.
+
+---
+
+## User Prompt 38
+
+- **Timestamp:** 2026-11-15T17:00
+- **Goal:** Add overviews of the teaching process and student assignments.
+- **Summary:** Overviews are missing. The lesson plan (for teachers) and slideshow (for students) exist, but nothing explains the process a teacher goes through, or what happens after the slideshow. Lesson pages are so interactive they look student-facing, so it needs to be clear they're for teachers. Students need assignments. Each lesson also needs a big-picture summary. Asked whether this is on the right track.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+
+---
+
+## User Prompt 37
+
+- **Timestamp:** 2026-11-15T16:50
+- **Goal:** Clarify exit ticket wording.
+- **Summary:** "This runs on a Windows laptop with an Intel processor. What will it print?" is confusing; reword to something like "What would the output be if this were run on a Windows laptop with an Intel processor?"
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Reworded the Lesson 1 and Lesson 2 exit tickets on both lesson pages and slides.
+
+---
+
+## User Prompt 36
+
+- **Timestamp:** 2026-11-15T16:40
+- **Goal:** Simplify Lesson 1 slides about where code runs.
+- **Summary:** The Lesson 1 slides don't need slides emphasizing the different places code runs. Instead, on the step-through slide (which gives odd output), show a small asterisk note explaining the result, mentioning Pyodide.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Removed the "Where does my code run?" and "Three places, three computers" slides; added a click-to-reveal footnote on the Predict, then run slide and updated the speaker notes.
+
+---
+
 ## User Prompt 35
 
 - **Timestamp:** 2026-11-15T16:30

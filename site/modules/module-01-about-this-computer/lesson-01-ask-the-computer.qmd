@@ -6,9 +6,22 @@ engine: markdown
 expectations: [A2.2, A3.1, C1.1]
 ---
 
+::: {.callout-important appearance="simple" icon=false}
+**For teachers.** This is the lesson plan: use it to prepare and as your script in class. Students work from the **slides**, the **code files and notebooks**, and the **practice** page. The step-through boxes and runnable code are here so you can try every activity first. [How a lesson works →](../../how-a-lesson-works.qmd)
+:::
+
 ::: {.callout-note appearance="simple"}
 **Time:** 75 minutes · **Expectations:** A2.2, A3.1, C1.1 · **Slides:** [Lesson 1 slides](lesson-01-ask-the-computer-slides.qmd) · **Next:** [Lesson 2](lesson-02-exploring-platform.qmd)
 :::
+
+## At a Glance
+
+- **Big idea:** a program can ask the computer about itself, and the answer depends on which computer runs it.
+- **Students will:** guess their computer's processor and operating system, read and step through a four-line program that checks, then change it.
+- **Students make:** a short report program that prints the operating system and its version.
+- **Prepare:** run `l01_computer_report.py` on your computer and on a student computer; optionally in Colab for the demonstration.
+- **After class:** [Lesson 1 practice](practice.qmd#after-lesson-1-ask-the-computer-about-itself).
+- **Where it fits:** the first lesson of [Module 1](index.qmd). Lesson 2 adds `dir()`, variables, and error messages.
 
 ## Learning Goals
 
@@ -134,7 +147,7 @@ Write a two-line program (plus the `import`) that prints the operating system an
 
 ## Check: Exit Ticket (5 min)
 
-This program runs on a Windows laptop with an Intel processor. What will it print? Write the exact output.
+What would the output be if this program were run on a Windows laptop with an Intel processor? Write the exact output.
 
 ```python
 import platform
@@ -142,6 +155,11 @@ import platform
 print("Report")
 print("CPU:", platform.machine())
 ```
+
+## After the Lesson
+
+- Students do the [Lesson 1 practice](practice.qmd#after-lesson-1-ask-the-computer-about-itself): read and predict, modify, then make a three-fact report on the classroom computer.
+- Read the exit tickets. If many students mixed up the fixed text and the computer's answers, start Lesson 2's review there.
 
 ## Code for This Lesson
 
