@@ -55,10 +55,8 @@ website:
       - href: about.qmd
         text: About
     right:
-      - icon: cup-hot
-        href: https://buymeacoffee.com/pbeens
-        aria-label: Buy Me a Coffee
-        text: "Buy Me a Coffee"
+      - href: https://buymeacoffee.com/pbeens
+        text: "☕ Buy me a coffee"
   page-footer:
     center: "ICS3U · Ontario Curriculum (2008) · [MIT License](https://github.com/pbeens/ics3u/blob/main/LICENSE)"
 

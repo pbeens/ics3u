@@ -4,6 +4,17 @@ Program-related prompts for this project, newest first. Paraphrased, not verbati
 
 ---
 
+## User Prompt 50
+
+- **Timestamp:** 2026-11-16T11:30
+- **Goal:** Match the Buy Me a Coffee link to the author's other site.
+- **Summary:** Use the same coffee-cup style as the AI in Education Policies site (peter.beens.ca/ai-in-education-policies) for the navbar's Buy Me a Coffee link.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** That site uses a ☕ emoji in the link text; replaced the Bootstrap `cup-hot` icon in `site/_quarto.yml`.
+
+---
+
 ## User Prompt 49
 
 - **Timestamp:** 2026-11-16T11:21
