@@ -105,6 +105,7 @@
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-4acba538537102877edb8514a3e71d97.css">
+  <link rel="stylesheet" href="../../styles.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -295,11 +296,57 @@
 print("CPU type:", platform.machine())
 print("Operating system:", platform.system())
 print("Computer name:", platform.node())</pre></div>
-<div class="fragment absolute" style="font-size: 0.5em; color: #555;left: 0px; bottom: 45px; right: 0px; ">
+<div class="fragment absolute" style="font-size: 0.6em; color: #333;left: 0px; bottom: 45px; right: 0px; ">
 <p>* <strong>Why <code>wasm32</code> and <code>Emscripten</code>?</strong> This box runs Python inside your web browser, using Pyodide, so it describes a small virtual computer in this browser tab. Run the program in Thonny, IDLE, or VS Code to see your computer’s real answers.</p>
 </div>
 <aside class="notes">
 <p>TEACHER PROMPT (first use of the step-through box): “Nothing has run yet. The red arrow on a yellow line is the NEXT line Python will run. When I press Step, that line runs and turns GREEN — green means just ran. Anything printed appears in Output the moment its line turns green. Back replays a step; Run all jumps to the end; Start over resets.” Then: “Write your prediction first — no pressing Step until you’ve committed.” Ask first: How many lines will it print? Which words appear exactly as written? Which parts depend on the computer? Have students commit to a prediction (type it in the box or write it down), then press Step one line at a time. Afterwards, click once to show the asterisk note explaining the odd answers (wasm32, Emscripten): the box runs Python inside the browser with Pyodide, so it describes a virtual computer in the tab. Then run the same program on the classroom computer and compare.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="compare-where-did-it-run" class="slide level2">
+<h2>Compare: where did it run?</h2>
+<p>Copy this table and fill it in:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Classroom computer</th>
+<th>This web page</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CPU type</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Operating system</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Computer name</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>Same code. Different answers. <strong>What changed?</strong></p>
+</div>
+<aside class="notes">
+<p>About 10 minutes. Students run l01_computer_report.py in Thonny, IDLE, or VS Code and fill in the classroom column; the web page column comes from the step-through box on the previous slide. TEACHER PROMPT: “Every column came from exactly the same four lines of code. So the code didn’t change. What did change?” Let students answer before naming it: the computer the code ran on. Ask: Why does the web page report wasm32 and Emscripten? Is that the classroom computer? Optional: demonstrate the program in Google Colab and add a third column (a Google server, usually x86_64 / Linux).</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -327,6 +374,28 @@ print("Computer name:", platform.node())</pre></div>
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IHBsYXRmb3JtXG5cbnByaW50KFwiQ1BVIHR5cGU6XCIsIHBsYXRmb3JtLm1hY2hpbmUoKSlcbnByaW50KFwiT3BlcmF0aW5nIHN5c3RlbTpcIiwgcGxhdGZvcm0uc3lzdGVtKCkpXG5wcmludChcIkNvbXB1dGVyIG5hbWU6XCIsIHBsYXRmb3JtLm5vZGUoKSkifQ==
 </script>
 </div>
+</section>
+<section id="make" class="slide level2">
+<h2>Make</h2>
+<p>On the classroom computer, write a program that prints:</p>
+<ul>
+<li>the operating system: <code>platform.system()</code></li>
+<li>its version number: <code>platform.release()</code></li>
+</ul>
+<p>Give each answer a label. Finished? Add a third fact.</p>
+<aside class="notes">
+<p>About 10 minutes, in Thonny, IDLE, or VS Code. Two print lines plus the import.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="exit-ticket" class="slide level2">
 <h2>Exit ticket</h2>
@@ -365,7 +434,7 @@ W10=
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-
+<p><a href="lesson-01-ask-the-computer.html">← Lesson 1 plan</a> · <a href="index.html">Module 1</a></p>
 </div>
 </div></div>
 

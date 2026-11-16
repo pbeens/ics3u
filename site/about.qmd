@@ -73,7 +73,7 @@ This approach draws on research about how novices learn to program:
 ## About This Site
 
 - Built for teachers. Lesson pages include timings, teacher prompts (what to say at key moments), and teacher notes.
-- Quizzes, tests, and answer keys are not published here, so students can't find them. They are shared with teachers directly.
+- Answer keys and marking notes are not on this site. Teachers can find them in the `answer-keys` folder of the course's GitHub repository.
 - The course is being written module by module.
 - Notebook versions of every example program, with Open in Callysto | Colab links, are in the [notebooks folder](https://github.com/pbeens/ics3u/tree/main/notebooks) on GitHub. Check the [Scope and Sequence](scope-and-sequence.qmd) for the full plan.
 

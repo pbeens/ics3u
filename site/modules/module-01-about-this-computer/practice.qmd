@@ -7,16 +7,10 @@ expectations: [A1.1, A2.2, A3.1, A4.3, A4.4, C1.1]
 ---
 
 ::: {.callout-note appearance="simple"}
-**For students.** Do each lesson's practice after that lesson. Read first: predict before you run anything. Your teacher will tell you what to hand in.
+**For students.** Do each lesson's practice after that lesson. Read first: predict before you run anything. Your teacher will tell you what to hand in. · [Module 1 overview](index.qmd)
 :::
 
 ## After Lesson 1: Ask the Computer About Itself
-
-### Code files
-
-Lesson 1's programs, including the ones below. Download a `.py` file for Thonny, IDLE, or VS Code, or open the notebook in Callysto or Colab.
-
-{{< lesson-code lesson="01" hide="exit_ticket" >}}
 
 ### Read and predict
 
@@ -55,18 +49,21 @@ On your classroom computer (Thonny, IDLE, or VS Code), write a program that prin
 
 Run it, then copy its output under your code as a comment.
 
-## After Lesson 2: Exploring the platform Library
-
 ### Code files
 
-{{< lesson-code lesson="02" hide="exit_ticket" >}}
+Lesson 1's programs, including the ones above. Download a `.py` file for Thonny, IDLE, or VS Code, or open the notebook in Callysto or Colab.
+
+{{< lesson-code lesson="01" hide="exit_ticket" >}}
+
+## After Lesson 2: Exploring the platform Library
 
 ### Trace
 
-Read this program **without running it**. Fill in a trace table like the one below, one row per line of code that runs. Then type your prediction and press **Step** to check, watching the **Variables** panel.
+Read this program **without running it**. Fill in a trace table like the one below: every line that runs gets a row, and blank lines don't. Line 1 is filled in for you. Then type your prediction and press **Step** to check, watching the **Variables** panel.
 
 | Line | `system` | `version` | Output |
 |---|---|---|---|
+| 1 | — | — | — |
 | 3 | | | |
 | 4 | | | |
 | 5 | | | |
@@ -100,10 +97,16 @@ import platform
 print(dir(platform))
 ```
 
+### Code files
+
+Lesson 2's programs, including the ones above. Download a `.py` file, or open the notebook in Callysto or Colab.
+
+{{< lesson-code lesson="02" hide="exit_ticket" >}}
+
 ## Next
 
 When you've finished both, start the [Module 1 Assignment](assignment.qmd).
 
-## Feedback
+## Feedback {.unlisted}
 
 {{< feedback >}}

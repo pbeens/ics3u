@@ -4,6 +4,71 @@ Program-related prompts for this project, newest first. Paraphrased, not verbati
 
 ---
 
+## User Prompt 45
+
+- **Timestamp:** 2026-11-16T10:25
+- **Goal:** Tone down the agentic programming advice.
+- **Summary:** Replace the Before You Begin section on agentic programming with a brief note that VS Code is the preferred editor for teachers who want to experiment with agentic programming.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+
+---
+
+## User Prompt 44
+
+- **Timestamp:** 2026-11-16T10:05
+- **Goal:** Rename the private folder and make answer keys public in the repo.
+- **Summary:** Rename `private/` to `answer-keys/`, because a folder called "private" draws attention. Answer keys may be public in the repository, as long as they never appear on the website.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Removed the folder from `.gitignore`; updated AGENTS, READMEs, decisions, and site wording; the Git history rewrite is no longer needed.
+
+---
+
+## User Prompt 43
+
+- **Timestamp:** 2026-11-16T09:15
+- **Goal:** Act on the audit response.
+- **Summary:** Apply the recommended options and the quick fixes from `audit-response.md`, tracking what is done and what still needs discussion in `tasks.md`.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Lesson 1 Compare and Make slides; reassignment taught in Lesson 2; slide footers; trace-table line-1 rows; assignment starter file; heading scroll offset; vertical cycle diagram.
+
+---
+
+## User Prompt 42
+
+- **Timestamp:** 2026-11-16T09:00
+- **Goal:** Respond to the two site audits.
+- **Summary:** Review `audit-antigravity.md` and `audit-grok.md`, weigh their findings, and write a response with verdicts, proposed actions, and decisions needed to `audit-response.md`.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Verified audit claims against the source; confirmed the Lesson 1 Investigate mismatch and a Lesson 2 / practice / assignment conflict on variable reassignment.
+
+---
+
+## User Prompt 41
+
+- **Timestamp:** 2026-11-16T08:38
+- **Goal:** Audit the live ICS3U site for first-time teacher usability and pedagogy.
+- **Summary:** Review https://peter.beens.ca/ics3u/ as both a pedagogical expert and a teacher arriving for the first time. Judge whether the site is easy to traverse and whether lesson plans, slides, practice, and assignments are usable. Write the full report to `audit-grok.md`.
+- **Host:** m4-mini
+- **Agent:** Grok
+- **Technical context:** Walked every published page in headless Chrome (desktop and mobile), stepped through steppers and slides, and checked hash links, nav menus, and interactive widgets.
+
+---
+
+## User Prompt 40
+
+- **Timestamp:** 2026-11-16T08:33
+- **Goal:** Audit the ICS3U website for pedagogy, usability, and traversability.
+- **Summary:** Review `https://peter.beens.ca/ics3u/` as both a pedagogical expert and a teacher visiting the site for the first time. Evaluate overall usability and how easy it is to traverse and use the lesson plans, slides, practice pages, and assignments. Save the full report to `audit-antigravity.md`.
+- **Host:** m4-mini
+- **Agent:** Antigravity (Gemini 4 Argon)
+- **Technical context:** Audited all pages, Reveal.js slide decks, custom `stepper` and `lesson-tools` extensions, practice pages, and assignments; wrote findings and prioritized recommendations to `audit-antigravity.md`.
+
+---
+
 ## User Prompt 39
 
 - **Timestamp:** 2026-11-15T17:15

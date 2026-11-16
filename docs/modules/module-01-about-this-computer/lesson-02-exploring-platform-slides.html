@@ -105,6 +105,7 @@
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-4acba538537102877edb8514a3e71d97.css">
+  <link rel="stylesheet" href="../../styles.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -289,6 +290,28 @@ print("Operating system:", system)</pre></div>
           display:block!important;
       }</style></aside>
 </section>
+<section id="a-variable-can-change" class="slide level2">
+<h2>A variable can change</h2>
+<div class="stepper"><pre class="stepper-source" hidden="">import platform
+
+system = platform.system()
+print("Before:", system)
+system = "my computer"
+print("After:", system)</pre></div>
+<aside class="notes">
+<p>About 5 minutes. Read first: what will each output line be? Step through and watch the system row in Variables. TEACHER PROMPT (first time a variable changes): “Line 5 uses the same name again. Watch the Variables panel.” After line 5: “The old value is gone. A variable holds one value at a time; a new value replaces the old one. Line 4 already printed the old value, and Python never goes back.”</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="spot-the-problem-a" class="slide level2">
 <h2>Spot the problem: A</h2>
 <div class="stepper"><pre class="stepper-source" hidden="">import platform
@@ -349,7 +372,8 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IHBsYXRmb3JtXG5c
 <li>Use <strong>four</strong> <code>platform</code> functions</li>
 <li>At least one you found with <code>dir()</code> or the documentation</li>
 <li>Store each answer in a well-named variable</li>
-<li>Print a labelled report; run it here <strong>and</strong> on the classroom computer</li>
+<li>Print a labelled report</li>
+<li>Write and run it on the classroom computer</li>
 </ul>
 </section>
 <section id="exit-ticket" class="slide level2">
@@ -395,7 +419,7 @@ W10=
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-
+<p><a href="lesson-02-exploring-platform.html">← Lesson 2 plan</a> · <a href="index.html">Module 1</a></p>
 </div>
 </div></div>
 

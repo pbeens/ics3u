@@ -11,13 +11,13 @@ expectations: [A1.1, A3.1, A4.3, A4.4, C1.1]
 :::
 
 ::: {.callout-note appearance="simple"}
-**Time:** 75 minutes · **Expectations:** A1.1, A3.1, A4.3, A4.4, C1.1 · **Slides:** [Lesson 2 slides](lesson-02-exploring-platform-slides.qmd) · **Previous:** [Lesson 1](lesson-01-ask-the-computer.qmd)
+**Time:** 75 minutes · **Expectations:** A1.1, A3.1, A4.3, A4.4, C1.1 · **Slides:** [Lesson 2 slides](lesson-02-exploring-platform-slides.qmd) (press **S** for speaker notes) · [Module 1 overview](index.qmd) · **Previous:** [Lesson 1](lesson-01-ask-the-computer.qmd)
 :::
 
 ## At a Glance
 
 - **Big idea:** a module is a toolbox you can explore, and variables let a program remember answers to use later.
-- **Students will:** list the `platform` toolbox with `dir()`, look up a function in the documentation, trace a program that stores answers in variables, and read two common error messages.
+- **Students will:** list the `platform` toolbox with `dir()`, look up a function in the documentation, trace a program that stores answers in variables, see that a variable can be changed, and read two common error messages.
 - **Students make:** a computer report built from four `platform` functions stored in variables.
 - **Prepare:** run `l02_report_variables.py` and both mistake programs, so you've seen the error messages students will see.
 - **After class:** [Lesson 2 practice](practice.qmd#after-lesson-2-exploring-the-platform-library), then the [Module 1 Assignment](assignment.qmd).
@@ -27,7 +27,7 @@ expectations: [A1.1, A3.1, A4.3, A4.4, C1.1]
 
 - Find out what tools a module contains, using `dir()` and the Python documentation.
 - Store answers in variables and use them later in a program.
-- Trace which variables exist and what they hold, line by line.
+- Trace which variables exist and what they hold, line by line, including when a variable is given a new value.
 - Read two common error messages and explain what caused them.
 
 ## Success Criteria
@@ -84,7 +84,7 @@ Type your prediction in the box, then press **Step** to run one line at a time. 
 
 {{< stepper file="examples/l02_report_variables.py" >}}
 
-## Investigate (20 min)
+## Investigate (25 min)
 
 ### What the variables hold
 
@@ -93,16 +93,33 @@ Use **Back** and **Step** to answer:
 1. After line 3 runs, which variable exists and what is its value?
 2. Lines 3–5 run, but nothing is printed yet. Where did the answers go?
 3. Line 7 uses `name`, which was created on line 5. What would happen if line 7 came before line 5?
-4. Complete a trace table:
+4. Complete a trace table. Every line that runs gets a row; blank lines don't. Line 1 is filled in for you.
 
 | Line | `cpu` | `system` | `name` | Output |
 |---|---|---|---|---|
+| 1 | — | — | — | — |
 | 3 | | | | |
 | 4 | | | | |
 | 5 | | | | |
 | 7 | | | | |
 | 8 | | | | |
 | 9 | | | | |
+
+### A variable can change (5 min)
+
+Read this program **without running it**. What will each line of output be? Then step through it and watch the `system` row in the **Variables** panel.
+
+{{< stepper file="examples/l02_change_variable.py" >}}
+
+::: {.callout-tip title="Teacher prompt: changing a variable (first use)"}
+- "Line 5 uses the same name, `system`, again. Watch the Variables panel when it runs."
+- After line 5: "The old value is gone. A variable holds **one** value at a time; giving it a new value replaces the old one."
+- "Line 4 already printed the old value, so that output doesn't change. Python never goes back."
+:::
+
+1. What does `system` hold after line 3? After line 5?
+2. Why does the first output line show the operating system but the second doesn't?
+
 ### Spot the problem
 
 Each program has a mistake. Predict what will happen, then step through it and read the result carefully.
@@ -149,7 +166,7 @@ print("Operating system:", system)
 
 ## Make: My Computer Report (if time allows)
 
-Write a computer report that uses **four** `platform` functions, including at least one you found with `dir()` or the documentation. Store each answer in a variable with a clear name, then print a labelled report. Run it here and on the classroom computer, and compare.
+On the classroom computer (Thonny, IDLE, or VS Code), write a computer report that uses **four** `platform` functions, including at least one you found with `dir()` or the documentation. Store each answer in a variable with a clear name, then print a labelled report. Early finishers can paste it into the Modify box above and compare the browser's answers.
 
 ## Check: Exit Ticket (5 min)
 
@@ -169,6 +186,7 @@ print("Again:", cpu)
 ## After the Lesson
 
 - Students do the [Lesson 2 practice](practice.qmd#after-lesson-2-exploring-the-platform-library): trace a program that changes a variable, fix a mistake, and use a function they found with `dir()`.
+- **Suggested hand-in:** the trace table, and the Make program's `.py` file with its output pasted as a comment at the bottom.
 - Students then start the [Module 1 Assignment](assignment.qmd), the Computer Report Card.
 - Read the exit tickets. Students who answered "twice" to question 2 still think a variable re-asks the computer; revisit the trace table.
 
@@ -182,12 +200,17 @@ Every program in this lesson, ready to run outside the browser. Download the `.p
 
 - **Variables.** A variable is a name that stores a value. `cpu = platform.machine()` asks the question once and keeps the answer, so the program can use it later, as many times as needed.
 - **Step-through box.** It runs the real program in the browser, so `platform` works and the variables hold the browser's answers (`'wasm32'`, `'Emscripten'`). Python Tutor is not used here because it does not allow the `platform` module.
-- **Changing a variable** (e.g. `system = "macOS"` after `system = "Darwin"`) is not part of this lesson; it comes when programs start calculating with stored values.
+- **Changing a variable.** Introduced briefly, through reading only: a variable holds one value at a time, and a new value replaces the old one. Students trace it again in the practice and in Assignment Part A. Updating a variable from its own value (`count = count + 1`) comes later, when programs start calculating.
 - **`dir()` output** is long and includes names starting with `_`; tell students to skip those. In the browser and on the classroom computer, the lists may differ slightly between Python versions.
 - **Spot the problem.** Without parentheses, `platform.machine` is the tool itself, not its answer, so Python prints a description of the function, e.g. `<function machine at 0x104cb3e20>`. The `AttributeError` says the module has no tool by that name. The step-through box highlights the line that caused the error and shows the error type and message; Thonny, IDLE, and VS Code show the same information as a full traceback, which students should learn to read too.
+- **Slides.** Open the slides on the projector and this plan on your own screen. Press **S** in the slides for speaker view.
 - **Spiral.** Students now write variables and read error messages. Calculating with values (`os.cpu_count()`, storage in gigabytes) comes in Module 2.
-- Answers are in the private teacher files.
+- Answers are in the `answer-keys` folder of the course's GitHub repository, not on this site.
 
-## Feedback
+## Previous and Next {.unlisted}
+
+[← Lesson 1](lesson-01-ask-the-computer.qmd) · [Lesson 2 slides](lesson-02-exploring-platform-slides.qmd) · [Module 1 overview](index.qmd) · [Practice →](practice.qmd#after-lesson-2-exploring-the-platform-library)
+
+## Feedback {.unlisted}
 
 {{< feedback >}}

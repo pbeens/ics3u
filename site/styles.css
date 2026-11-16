@@ -1,0 +1,6 @@
+/* Site-wide styles. */
+
+/* Keep headings visible below the fixed navbar when a link jumps to them. */
+h1[id], h2[id], h3[id], h4[id], section[id] {
+  scroll-margin-top: 5rem;
+}

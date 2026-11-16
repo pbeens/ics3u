@@ -32,7 +32,9 @@
   padding: 0.4rem 0;
   overflow-x: auto;
 }
-.stepper-line { display: flex; white-space: pre; padding: 0 0.5rem; }
+.stepper-line { display: flex; white-space: pre-wrap; padding: 0 0.5rem; }
+/* Long lines wrap instead of scrolling sideways. */
+.stepper-line > :last-child { flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere; }
 .stepper-line.ran { background: var(--stepper-ran); }
 .stepper-line.next { background: var(--stepper-next); }
 .stepper-line.error { background: var(--stepper-error); }
@@ -79,7 +81,7 @@
 .stepper-status-error { color: #b42318; font-weight: 600; }
 
 /* Slides: smaller base size so the widget fits. */
-.reveal .stepper { font-size: 0.5em; }
+.reveal .stepper { font-size: 0.6em; }
 .reveal .stepper pre.stepper-output { box-shadow: none; }
 
 /* Dark mode on pages (Quarto adds quarto-dark to body). */

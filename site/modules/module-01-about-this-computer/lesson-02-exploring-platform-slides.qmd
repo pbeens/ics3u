@@ -7,6 +7,7 @@ format:
     slide-number: true
     code-line-numbers: true
     toc: false
+    footer: "[← Lesson 2 plan](lesson-02-exploring-platform.html) · [Module 1](index.html)"
 engine: markdown
 ---
 
@@ -45,6 +46,14 @@ TEACHER PROMPT (first use of the Variables panel): "Same colours as last lesson.
 
 ::: {.notes}
 Quotation marks in the Variables panel (e.g. 'wasm32') show the value is text (a string); they are not printed.
+:::
+
+## A variable can change
+
+{{< stepper file="examples/l02_change_variable.py" >}}
+
+::: {.notes}
+About 5 minutes. Read first: what will each output line be? Step through and watch the system row in Variables. TEACHER PROMPT (first time a variable changes): "Line 5 uses the same name again. Watch the Variables panel." After line 5: "The old value is gone. A variable holds one value at a time; a new value replaces the old one. Line 4 already printed the old value, and Python never goes back."
 :::
 
 ## Spot the problem: A
@@ -87,7 +96,8 @@ print("Operating system:", system)
 - Use **four** `platform` functions
 - At least one you found with `dir()` or the documentation
 - Store each answer in a well-named variable
-- Print a labelled report; run it here **and** on the classroom computer
+- Print a labelled report
+- Write and run it on the classroom computer
 
 ## Exit ticket
 

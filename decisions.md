@@ -13,9 +13,18 @@ Consequential project decisions, newest first. Current files and newer instructi
 
 ---
 
+## 2026-11-16 — Answer keys public in the repo, off the website
+
+- **Decision:** Rename `private/` to `answer-keys/` and track it in the public repository. Answer keys stay off the website and are never linked from it; lesson plans name the folder in plain text so teachers can find it.
+- **Context:** A folder called "private" in a public repo attracts attention, and the author is comfortable with answer keys being public as long as they aren't on the site. This also removes the need to rewrite Git history and gives teachers a way to get the keys.
+- **Alternatives:** Git-ignored local folder (no backup, no access for other teachers); a separate private repository.
+- **Revisit if:** Quizzes or tests need to stay secret; they would need a separate, non-public home.
+
+---
+
 ## 2026-11-15 — Public repo, MIT license, feedback through GitHub issues
 
-- **Decision:** The repository is public and MIT licensed (Ministry documents excluded). `private/` is git-ignored and kept only locally. Feedback goes through a GitHub issue form, linked from every page with the page title and URL prefilled.
+- **Decision:** The repository is public and MIT licensed (Ministry documents excluded). `private/` is git-ignored and kept only locally (superseded 2026-11-16: now `answer-keys/`, tracked). Feedback goes through a GitHub issue form, linked from every page with the page title and URL prefilled.
 - **Context:** Publishing the repo makes GitHub Pages and the Colab/Callysto notebook links work; issues give one public place for corrections and ideas.
 - **Alternatives:** Private repo with a separate public notebooks repo; CC BY 4.0 for course content.
 - **Revisit if:** Teacher-only material needs version control (consider a separate private repo).

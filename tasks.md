@@ -2,19 +2,66 @@
 
 ## Current Focus
 
+### Audit follow-up (approved 2026-11-16; audits are in the git-ignored `audits/` folder)
+
+Approved: the quick fixes, and the recommended options for Decision 1 (Lesson 1), Decision 2 (reassignment in Lesson 2), and Decision 5 (VS Code placement; later reduced to one sentence at the author's request). Item numbers match `audits/audit-response.md`.
+
+**Done (verified in a fresh render and headless Chrome):**
+
+- [x] D1 Lesson 1: new "Compare: where did it run?" slide (classroom vs. web page; Colab optional in notes), new Make slide; plan's Investigate trimmed to 10 min, Make now 10 min on the classroom computer (#1, #2)
+- [x] D2 Lesson 2: new `l02_change_variable.py` stepper ("A variable can change", 5 min) on plan and slides, teacher prompt, learning goal; Teacher Note rewritten; Investigate 20 → 25 min (#3)
+- [x] D5 Before You Begin: agentic section replaced by one sentence (VS Code is the editor to choose for experimenting with agentic programming)
+- [x] #4 Slide footer "← Lesson N plan · Module 1" on both decks
+- [x] #5 Speaker notes (`S`) and two-screen setup in How a Lesson Works and lesson plans
+- [x] #6 Stepper on slides 0.5em → 0.6em; wasm32 note 0.6em, darker. Note: one long line now wraps on the Lesson 1 Predict slide; acceptable
+- [x] #7 Trace tables have a line-1 "—" row and the rule "every line that runs gets a row" (Lesson 2, practice, assignment, answer keys)
+- [x] #10 Stepper long lines wrap
+- [x] #11 Practice: code-files tables moved to the end of each lesson's section
+- [x] #12 Assignment Part A: numbered lines and a trace grid
+- [x] #13 `examples/m01_report_card_starter.py` download (runs; one file to hand in)
+- [x] #14 Banner now "Ready to use for Lessons 1–2"; #15 first-load note by the Part C box
+- [x] #17 Suggested hand-in in each lesson plan's After the Lesson
+- [x] #19 `site/styles.css`: `scroll-margin-top` (heading lands at 85 px, below the 61 px navbar)
+- [x] #20 Cycle diagram now vertical with short labels (readable on desktop)
+- [x] #21 Previous / Next links at the bottom of lesson plans and the module page
+- [x] #22 "Module 1 overview" link on lesson, practice, and assignment pages
+- [x] #26 "What to give students" section in How a Lesson Works
+- [x] #28 Feedback (and Previous/Next) headings `{.unlisted}`, so they're out of the page TOC
+- [x] Notebooks rebuilt (new `01-02-change-variable.ipynb`); answer keys updated
+
+**Also done at the author's request:**
+
+- [x] Renamed `private/` to `answer-keys/` and tracked it in the public repo (off the website, never linked). Updated `.gitignore`, AGENTS, README files, decisions, About, How a Lesson Works, and lesson Teacher Notes. Replaced the author's computer name in the marking notes with `LAB-PC-14`.
+- [x] Moved the audit files to `audits/` (git-ignored).
+
+**Outstanding: needs discussion or a decision:**
+
+- D3 is mostly resolved by `answer-keys/` being public. Still open: where quizzes and tests go if they must stay secret (anything in the repo is public).
+- D4: feedback route for teachers without a GitHub account (e.g. a Google Form)?
+- Lesson plans now name the `answer-keys` folder in plain text (no link). Confirm that's wanted, given the goal of not drawing attention to it.
+
+**Outstanding: verify first, then fix if real:**
+
+- #8 Pyodide "Downloading" notice on slides (seen on the Compare and Predict slides in testing); check whether quarto-live can delay loading.
+- #9 Grok's report that the "Two lines of Python" fragments duplicate the code.
+- Cycle diagram on a phone (not re-checked at 390 px).
+
+**Later:** #16 one practice page per lesson (at 3+ lessons), #18 rubric on phones, #23 Modules menu and sidebar (when Module 2 arrives), #24 expectation-code glosses, dark-mode check of stepper and live editors.
+
+### Earlier focus
+
 - Author review of Module 1, Lessons 1–2 (slower pacing, `platform` only, "Where does my code run?" comparison) and the draft scope and sequence.
 
 ## Next Tasks
 
 1. Revise Lessons 1–2 from author feedback; decide whether Reveal.js slides, quarto-live, and Python Tutor stay.
 2. Confirm the Colab values in Lesson 1's teacher notes by running the program in Colab.
-3. Add quizzes for Lessons 1–2 (private). Later: downloadable versions of practice and assignments (Google Docs, Word, or PDF).
+3. Add quizzes for Lessons 1–2 (first decide where secret quizzes live; `answer-keys/` is public). Later: downloadable versions of practice and assignments (Google Docs, Word, or PDF).
 4. Revise the scope and sequence from author feedback; remove the "Draft" callout when approved.
 5. Publish to GitHub Pages and confirm the site, runnable code, and Python Tutor work online.
 
 ## Open Questions
 
-- Remove the answer keys from the public Git history (rewrite the initial commit and force-push), and decide where `private/` is backed up now that it isn't in Git.
 - After the next push, test the notebook Open in Callysto | Colab links. (GitHub Pages is on; the site is served at https://peter.beens.ca/ics3u/.)
 
 - Networking: the author is considering programs that look at the network (e.g., the computer's address and name). Decide whether and where it fits in the scope and sequence.

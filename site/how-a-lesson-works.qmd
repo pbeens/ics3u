@@ -12,19 +12,20 @@ subtitle: "What each piece is for, and what you do before, during, and after cla
 | **`.py` files and notebooks** | Students, on their own computers | During class, and for practice |
 | **Practice** | Students | After each lesson (homework or the next class's start) |
 | **Assignment** | Students | Near the end of each module |
-| **Quizzes, tests, answer keys** | You only | Not on this site; shared with teachers directly |
+| **Answer keys and marking notes** | You only | Not on this site; in the `answer-keys` folder of the course's GitHub repository |
 
 The lesson plans look interactive because they contain the same step-through boxes and runnable code that appear on the slides. That lets you try every activity yourself before class. **The lesson plan is for you, not for students.** Students work from the slides, the code files, and the practice pages.
 
 ## The Cycle
 
 ```{mermaid}
-flowchart LR
-  A["Before class<br/>Read the lesson plan<br/>Run the examples"] --> B["In class<br/>Project the slides<br/>Students read, predict, run"]
-  B --> C["After class<br/>Students do the practice<br/>You read exit tickets"]
-  C --> D["Next class<br/>Review uses what<br/>the exit tickets showed"]
+%%| fig-width: 4
+flowchart TD
+  A["Before class:<br/>read the plan, run the examples"] --> B["In class:<br/>slides; read, predict, run"]
+  B --> C["After class:<br/>practice; read exit tickets"]
+  C --> D["Next class:<br/>review from the exit tickets"]
   D --> B
-  C -. "end of module" .-> E["Assignment<br/>and module test"]
+  C -. "end of module" .-> E["Assignment and test"]
 ```
 
 ### Before class
@@ -35,14 +36,16 @@ flowchart LR
 
 ### In class (75 minutes)
 
-Project the slides and follow the lesson plan's timings. Every lesson follows the same rhythm:
+Use two screens: the **slides on the projector** and the **lesson plan on your own laptop**. Press **S** in the slides to open speaker view, which shows the teacher prompts on your screen only. Each slide deck has a link back to its lesson plan at the bottom.
+
+Follow the lesson plan's timings. Every lesson follows the same rhythm:
 
 | Stage | What happens | Where |
 |---|---|---|
 | Review or warm-up | Short retrieval or guessing questions | Slides |
 | Teach | You read a worked example aloud and trace it | Slides, your computer |
 | Predict, then run | Students write a prediction, then step through the code | Slides; students' computers |
-| Investigate | Trace tables and line-by-line questions | Slides, paper or notebooks |
+| Investigate | Trace tables and line-by-line questions | Slides; students copy tables into their notebooks |
 | Modify | Students change working code | Students' computers |
 | Make | Students write a little code of their own | Students' computers |
 | Check | Exit ticket: one short reading question | Slides, paper |
@@ -51,6 +54,12 @@ Project the slides and follow the lesson plan's timings. Every lesson follows th
 
 - Students complete that lesson's **practice** (linked from the last slide and from each module page). Practice also starts with reading: predict, then run.
 - Read the exit tickets. Use what they show to choose the next class's review questions.
+
+### What to give students
+
+The whole site is public, so students *can* open the lesson plans. They don't reveal quiz answers, but they do show what's coming next. In your learning management system, share the **slides** and **practice** links (and the **assignment** at the end of the module), and keep the lesson plans for yourself.
+
+The step-through boxes are cramped on a phone. In class, students should use a computer.
 
 ### End of module
 
@@ -61,6 +70,6 @@ Project the slides and follow the lesson plan's timings. Every lesson follows th
 
 Practice and assignments live on this site because they're interactive: students predict, step through, and run code right on the page. Downloadable versions (Google Docs, Word, or PDF) may be added later for printing or for a learning management system.
 
-## Feedback
+## Feedback {.unlisted}
 
 {{< feedback >}}

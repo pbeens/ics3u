@@ -82,6 +82,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -361,10 +362,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#before-class" id="toc-before-class" class="nav-link" data-scroll-target="#before-class">Before class</a></li>
   <li><a href="#in-class-75-minutes" id="toc-in-class-75-minutes" class="nav-link" data-scroll-target="#in-class-75-minutes">In class (75 minutes)</a></li>
   <li><a href="#after-class" id="toc-after-class" class="nav-link" data-scroll-target="#after-class">After class</a></li>
+  <li><a href="#what-to-give-students" id="toc-what-to-give-students" class="nav-link" data-scroll-target="#what-to-give-students">What to give students</a></li>
   <li><a href="#end-of-module" id="toc-end-of-module" class="nav-link" data-scroll-target="#end-of-module">End of module</a></li>
   </ul></li>
   <li><a href="#formats" id="toc-formats" class="nav-link" data-scroll-target="#formats">Formats</a></li>
-  <li><a href="#feedback" id="toc-feedback" class="nav-link" data-scroll-target="#feedback">Feedback</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/pbeens/ics3u/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -434,9 +435,9 @@ ul.task-list li input[type="checkbox"] {
 <td>Near the end of each module</td>
 </tr>
 <tr class="even">
-<td><strong>Quizzes, tests, answer keys</strong></td>
+<td><strong>Answer keys and marking notes</strong></td>
 <td>You only</td>
-<td>Not on this site; shared with teachers directly</td>
+<td>Not on this site; in the <code>answer-keys</code> folder of the course’s GitHub repository</td>
 </tr>
 </tbody>
 </table>
@@ -444,17 +445,17 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-cycle" class="level2">
 <h2 class="anchored" data-anchor-id="the-cycle">The Cycle</h2>
-<div class="cell" data-layout-align="default">
+<div class="cell" data-fig-width="4" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart LR
-  A["Before class&lt;br/&gt;Read the lesson plan&lt;br/&gt;Run the examples"] --&gt; B["In class&lt;br/&gt;Project the slides&lt;br/&gt;Students read, predict, run"]
-  B --&gt; C["After class&lt;br/&gt;Students do the practice&lt;br/&gt;You read exit tickets"]
-  C --&gt; D["Next class&lt;br/&gt;Review uses what&lt;br/&gt;the exit tickets showed"]
+<pre class="mermaid mermaid-js">flowchart TD
+  A["Before class:&lt;br/&gt;read the plan, run the examples"] --&gt; B["In class:&lt;br/&gt;slides; read, predict, run"]
+  B --&gt; C["After class:&lt;br/&gt;practice; read exit tickets"]
+  C --&gt; D["Next class:&lt;br/&gt;review from the exit tickets"]
   D --&gt; B
-  C -. "end of module" .-&gt; E["Assignment&lt;br/&gt;and module test"]
+  C -. "end of module" .-&gt; E["Assignment and test"]
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -471,7 +472,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="in-class-75-minutes" class="level3">
 <h3 class="anchored" data-anchor-id="in-class-75-minutes">In class (75 minutes)</h3>
-<p>Project the slides and follow the lesson plan’s timings. Every lesson follows the same rhythm:</p>
+<p>Use two screens: the <strong>slides on the projector</strong> and the <strong>lesson plan on your own laptop</strong>. Press <strong>S</strong> in the slides to open speaker view, which shows the teacher prompts on your screen only. Each slide deck has a link back to its lesson plan at the bottom.</p>
+<p>Follow the lesson plan’s timings. Every lesson follows the same rhythm:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -504,7 +506,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td>Investigate</td>
 <td>Trace tables and line-by-line questions</td>
-<td>Slides, paper or notebooks</td>
+<td>Slides; students copy tables into their notebooks</td>
 </tr>
 <tr class="odd">
 <td>Modify</td>
@@ -531,6 +533,11 @@ ul.task-list li input[type="checkbox"] {
 <li>Read the exit tickets. Use what they show to choose the next class’s review questions.</li>
 </ul>
 </section>
+<section id="what-to-give-students" class="level3">
+<h3 class="anchored" data-anchor-id="what-to-give-students">What to give students</h3>
+<p>The whole site is public, so students <em>can</em> open the lesson plans. They don’t reveal quiz answers, but they do show what’s coming next. In your learning management system, share the <strong>slides</strong> and <strong>practice</strong> links (and the <strong>assignment</strong> at the end of the module), and keep the lesson plans for yourself.</p>
+<p>The step-through boxes are cramped on a phone. In class, students should use a computer.</p>
+</section>
 <section id="end-of-module" class="level3">
 <h3 class="anchored" data-anchor-id="end-of-module">End of module</h3>
 <ul>
@@ -543,8 +550,8 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="formats">Formats</h2>
 <p>Practice and assignments live on this site because they’re interactive: students predict, step through, and run code right on the page. Downloadable versions (Google Docs, Word, or PDF) may be added later for printing or for a learning management system.</p>
 </section>
-<section id="feedback" class="level2">
-<h2 class="anchored" data-anchor-id="feedback">Feedback</h2>
+<section id="feedback" class="level2 unlisted">
+<h2 class="unlisted anchored" data-anchor-id="feedback">Feedback</h2>
 <div class="feedback-section">
 <p>Found a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.</p>
 <p><a href="https://github.com/pbeens/ics3u/issues/new?template=feedback.yml&amp;title=%5BHow%20a%20Lesson%20Works%5D%20&amp;page=https%3A%2F%2Fpeter.beens.ca%2Fics3u%2Fhow-a-lesson-works.html" rel="noopener" target="_blank"><strong>Report an error or suggest a change</strong></a> opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.</p>

@@ -118,6 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -395,7 +396,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#part-b-write" id="toc-part-b-write" class="nav-link" data-scroll-target="#part-b-write">Part B: Write</a></li>
   <li><a href="#part-c-run-it-in-two-places" id="toc-part-c-run-it-in-two-places" class="nav-link" data-scroll-target="#part-c-run-it-in-two-places">Part C: Run It in Two Places</a></li>
   <li><a href="#success-criteria" id="toc-success-criteria" class="nav-link" data-scroll-target="#success-criteria">Success Criteria</a></li>
-  <li><a href="#feedback" id="toc-feedback" class="nav-link" data-scroll-target="#feedback">Feedback</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/pbeens/ics3u/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -429,7 +429,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>For students.</strong> Covers Lessons 1–2. Work on your classroom computer (Thonny, IDLE, or VS Code). <strong>Hand in:</strong> your <code>.py</code> file and your answers to Parts A and C.</p>
+<p><strong>For students.</strong> Covers Lessons 1–2. Work on your classroom computer (Thonny, IDLE, or VS Code). <strong>Hand in:</strong> one <code>.py</code> file. Start from the <a href="examples/m01_report_card_starter.py" download="report_card_starter.py">starter file</a>: it has spaces for your Part A and Part C answers, and a place for your Part B program. · <a href="../../modules/module-01-about-this-computer/index.html">Module 1 overview</a></p>
 </div>
 </div>
 </div>
@@ -439,26 +439,80 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Draft.</strong> This assignment will grow as more Module 1 lessons are added.</p>
+<p><strong>Ready to use for Lessons 1–2.</strong> More parts will be added as Module 1 grows.</p>
 </div>
 </div>
 </div>
 <section id="part-a-read" class="level2">
 <h2 class="anchored" data-anchor-id="part-a-read">Part A: Read</h2>
-<p>Read this program <strong>without running it</strong>, then answer the questions.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> platform</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> platform.node()</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>cpu <span class="op">=</span> platform.machine()</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Report card for"</span>, name)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"CPU:"</span>, cpu)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>cpu <span class="op">=</span> <span class="st">"unknown"</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Checked:"</span>, cpu)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Read this program <strong>without running it</strong>, then answer the questions. Use the line numbers shown.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-label="1"></a><span class="im">import</span> platform</span>
+<span id="cb1-2"><a href="#cb1-2" aria-label="2"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-label="3"></a>name <span class="op">=</span> platform.node()</span>
+<span id="cb1-4"><a href="#cb1-4" aria-label="4"></a>cpu <span class="op">=</span> platform.machine()</span>
+<span id="cb1-5"><a href="#cb1-5" aria-label="5"></a><span class="bu">print</span>(<span class="st">"Report card for"</span>, name)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-label="6"></a><span class="bu">print</span>(<span class="st">"CPU:"</span>, cpu)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-label="7"></a>cpu <span class="op">=</span> <span class="st">"unknown"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-label="8"></a><span class="bu">print</span>(<span class="st">"Checked:"</span>, cpu)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol type="1">
-<li>How many lines will it print?</li>
-<li>Fill in a trace table (Line, <code>name</code>, <code>cpu</code>, Output) for every line that runs.</li>
-<li>What does the last line print? Explain why.</li>
-<li>How many times does the program ask the computer for its CPU type?</li>
+<li><p>How many lines will it print?</p></li>
+<li><p>Fill in a trace table. Every line that runs gets a row; blank lines don’t. Line 1 is filled in for you.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Line</th>
+<th><code>name</code></th>
+<th><code>cpu</code></th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>What does the last line print? Explain why.</p></li>
+<li><p>How many times does the program ask the computer for its CPU type?</p></li>
 </ol>
 </section>
 <section id="part-b-write" class="level2">
@@ -482,7 +536,7 @@ Operating system: Windows
 <h2 class="anchored" data-anchor-id="part-c-run-it-in-two-places">Part C: Run It in Two Places</h2>
 <ol type="1">
 <li>Run your program on the classroom computer and copy the output into a comment at the bottom of your file.</li>
-<li>Paste the same program into the box below and run it in the browser.</li>
+<li>Paste the same program into the box below and run it in the browser. The first run downloads Python into the browser (about 10 MB), so it can take a few seconds.</li>
 </ol>
 <div>
 <div id="pyodide-1" class="exercise-cell">
@@ -546,11 +600,11 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBQYXN0ZSB5b3VyIHByb2dy
 </tbody>
 </table>
 </section>
-<section id="feedback" class="level2">
-<h2 class="anchored" data-anchor-id="feedback">Feedback</h2>
+<section id="feedback" class="level2 unlisted">
+<h2 class="unlisted anchored" data-anchor-id="feedback">Feedback</h2>
 <div class="feedback-section">
 <p>Found a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.</p>
-<p><a href="https://github.com/pbeens/ics3u/issues/new?template=feedback.yml&amp;title=%5BModule%201%20Assignment%3A%20Computer%20Report%20Card%5D%20&amp;page=https%3A%2F%2Fpeter.beens.ca%2Fics3u%2Fmodules%2Fmodule-01-about-this-computer%2Fassignment.html" target="_blank" rel="noopener"><strong>Report an error or suggest a change</strong></a> opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.</p>
+<p><a href="https://github.com/pbeens/ics3u/issues/new?template=feedback.yml&amp;title=%5BModule%201%20Assignment%3A%20Computer%20Report%20Card%5D%20&amp;page=https%3A%2F%2Fpeter.beens.ca%2Fics3u%2Fmodules%2Fmodule-01-about-this-computer%2Fassignment.html" rel="noopener" target="_blank"><strong>Report an error or suggest a change</strong></a> opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.</p>
 </div>
 
 

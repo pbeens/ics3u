@@ -15,11 +15,11 @@ subtitle: "About 15 hours · For teachers"
 | 2. Exploring the platform Library | [Lesson plan](lesson-02-exploring-platform.qmd) | [Slides](lesson-02-exploring-platform-slides.qmd) | [Practice](practice.qmd#after-lesson-2-exploring-the-platform-library) |
 | More lessons | Coming soon | | |
 
-Each lesson plan's **Code for This Lesson** section has the `.py` files and notebooks students run.
+Each lesson plan's **Code for This Lesson** section has the `.py` files and notebooks. Students find the same files at the end of each lesson's section on the Practice page.
 
 ## Assignment
 
-[**Computer Report Card**](assignment.qmd) (draft, covers Lessons 1–2). Students read and trace a short program, write a report card using five `platform` functions stored in variables, then run it in two places and explain the difference.
+[**Computer Report Card**](assignment.qmd) (ready for Lessons 1–2; will grow with the module). Students read and trace a short program, write a report card using five `platform` functions stored in variables, then run it in two places and explain the difference. Students hand in one `.py` file built from a starter file.
 
 ## How Module 1 Fits
 
@@ -29,6 +29,10 @@ Each lesson plan's **Code for This Lesson** section has the `.py` files and note
 
 New to the course? Read [How a Lesson Works](../../how-a-lesson-works.qmd) first.
 
-## Feedback
+## Previous and Next {.unlisted}
+
+[← How a Lesson Works](../../how-a-lesson-works.qmd) · [Lesson 1 plan →](lesson-01-ask-the-computer.qmd)
+
+## Feedback {.unlisted}
 
 {{< feedback >}}

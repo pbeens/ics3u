@@ -36,7 +36,7 @@ Each lesson in `modules/module-NN-name/` has:
 - `lesson-NN-name-slides.qmd` — the slide deck (`format: live-revealjs`, `theme: default`, `toc: false`).
 - `examples/*.py` — every example program, run and tested before publishing. Step-through boxes and Python Tutor embeds read these files directly. File names are `lLL_name.py` (lesson number first); `scripts/build_notebooks.py` mirrors each one into `../notebooks/`.
 
-Answer keys for each lesson go in `../private/module-NN-name/`.
+Answer keys for each lesson go in `../answer-keys/module-NN-name/`.
 
 ## Interactive Code
 
@@ -49,7 +49,7 @@ Answer keys for each lesson go in `../private/module-NN-name/`.
 ## Rules
 
 - Only `.qmd` files are rendered, so README files like this one are not published.
-- Never put tests, quizzes, answer keys, or teacher-only notes here; they go in `../private/`.
+- Never put answer keys, marking notes, or teacher-only notes here; they go in `../answer-keys/`, and the site never links to them.
 - Lessons follow [../project-docs/teaching-approach.md](../project-docs/teaching-approach.md): reading code comes before writing code.
 - Use lowercase kebab-case names, e.g. `modules/module-01-about-this-computer/lesson-01-ask-the-computer.qmd`.
 - Links that leave the site always open in a new tab, with a small external-link icon (`link-external-newwindow` and `link-external-icon` in `_quarto.yml`). Write external links as normal Markdown links; no extra markup is needed.

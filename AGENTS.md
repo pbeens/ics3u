@@ -18,7 +18,7 @@ Build a complete, public teacher website for Ontario ICS3U (Grade 11 Introductio
 - `notebooks/` — every example program mirrored as a Jupyter notebook (`MM-LL-name.ipynb`). Generated; not published.
 - `.github/` — the feedback issue form.
 - `scripts/` — shared utilities, e.g. `build_notebooks.py`.
-- `private/` — tests, quizzes, answer keys, teacher-only notes. Git-ignored; never pushed or published.
+- `answer-keys/` — answer keys, marking notes, teacher-only notes. In the public repository, but never on the website.
 - `docs/` — generated site. Never edit by hand; `quarto render site` overwrites it.
 
 ## Rules for Agents
@@ -57,8 +57,9 @@ Students read code before they write code. This applies to every lesson, workshe
 
 ## Public vs Private
 
-- Anything in `site/` is public. Never place tests, quizzes, answer keys, solutions, or teacher-only notes there, and never link to them from the site.
-- The GitHub repository (https://github.com/pbeens/ics3u) is public too. Put assessment material in `private/`, which is git-ignored: never commit it, and never remove it from `.gitignore`.
+- Anything in `site/` is published on the website. Never place answer keys, solutions, marking notes, or teacher-only notes there, and never link to them from the site.
+- The GitHub repository (https://github.com/pbeens/ics3u) is public, including `answer-keys/`. The author accepts that answer keys are visible in the repo; they just stay off the website. Lesson plans may name the folder in plain text (no link) so teachers can find it.
+- Quizzes and tests that must stay secret have no home yet; ask before creating one.
 - The project is MIT licensed ([LICENSE](LICENSE)); Ministry documents in `references/official-curriculum/` are excluded.
 - Every site page gets a "Report an error or suggest a change" link (from `site/_feedback.html`) that opens the GitHub feedback form (`.github/ISSUE_TEMPLATE/feedback.yml`) with the page filled in.
 

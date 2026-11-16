@@ -4,7 +4,7 @@ A complete teacher website for Ontario **ICS3U — Introduction to Computer Scie
 
 Website: <https://peter.beens.ca/ics3u/> · Repository: <https://github.com/pbeens/ics3u>
 
-Both the website and this repository are public. Tests, quizzes, and answer keys live in a local `private/` folder that is git-ignored and never pushed; back it up separately.
+Both the website and this repository are public. Answer keys and marking notes are in the `answer-keys/` folder of this repository; they are never published on the website.
 
 ## Feedback
 
@@ -15,7 +15,7 @@ Feedback, corrections, and suggestions are appreciated. Use the "Report an error
 - [references/](references/README.md) — the official curriculum and other source material.
 - [project-docs/](project-docs/README.md) — teaching approach and project notes.
 - [site/](site/README.md) — Quarto source for the public website.
-- `private/` — tests, answer keys, and teacher-only material. Local only: git-ignored, never pushed or published.
+- `answer-keys/` — answer keys, marking notes, and teacher-only material. In the repository, never on the website.
 - [notebooks/](notebooks/README.md) — every example program as a Jupyter notebook, with Open in Callysto | Colab links.
 - [scripts/](scripts/README.md) — shared utilities, e.g. the notebook generator.
 - [.github/](.github/README.md) — the feedback issue form.

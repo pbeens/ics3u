@@ -7,6 +7,7 @@ format:
     slide-number: true
     code-line-numbers: true
     toc: false
+    footer: "[← Lesson 1 plan](lesson-01-ask-the-computer.html) · [Module 1](index.html)"
 engine: markdown
 ---
 
@@ -51,12 +52,30 @@ Windows reports Intel and AMD processors as AMD64 because AMD designed the 64-bi
 
 {{< stepper file="examples/l01_computer_report.py" >}}
 
-::: {.fragment .absolute bottom="45" left="0" right="0" style="font-size: 0.5em; color: #555;"}
+::: {.fragment .absolute bottom="45" left="0" right="0" style="font-size: 0.6em; color: #333;"}
 \* **Why `wasm32` and `Emscripten`?** This box runs Python inside your web browser, using Pyodide, so it describes a small virtual computer in this browser tab. Run the program in Thonny, IDLE, or VS Code to see your computer's real answers.
 :::
 
 ::: {.notes}
 TEACHER PROMPT (first use of the step-through box): "Nothing has run yet. The red arrow on a yellow line is the NEXT line Python will run. When I press Step, that line runs and turns GREEN — green means just ran. Anything printed appears in Output the moment its line turns green. Back replays a step; Run all jumps to the end; Start over resets." Then: "Write your prediction first — no pressing Step until you've committed." Ask first: How many lines will it print? Which words appear exactly as written? Which parts depend on the computer? Have students commit to a prediction (type it in the box or write it down), then press Step one line at a time. Afterwards, click once to show the asterisk note explaining the odd answers (wasm32, Emscripten): the box runs Python inside the browser with Pyodide, so it describes a virtual computer in the tab. Then run the same program on the classroom computer and compare.
+:::
+
+## Compare: where did it run?
+
+Copy this table and fill it in:
+
+| | Classroom computer | This web page |
+|---|---|---|
+| CPU type | | |
+| Operating system | | |
+| Computer name | | |
+
+::: {.fragment}
+Same code. Different answers. **What changed?**
+:::
+
+::: {.notes}
+About 10 minutes. Students run l01_computer_report.py in Thonny, IDLE, or VS Code and fill in the classroom column; the web page column comes from the step-through box on the previous slide. TEACHER PROMPT: "Every column came from exactly the same four lines of code. So the code didn't change. What did change?" Let students answer before naming it: the computer the code ran on. Ask: Why does the web page report wasm32 and Emscripten? Is that the classroom computer? Optional: demonstrate the program in Google Colab and add a third column (a Google server, usually x86_64 / Linux).
 :::
 
 ## Modify
@@ -72,6 +91,19 @@ print("CPU type:", platform.machine())
 print("Operating system:", platform.system())
 print("Computer name:", platform.node())
 ```
+
+## Make
+
+On the classroom computer, write a program that prints:
+
+- the operating system: `platform.system()`
+- its version number: `platform.release()`
+
+Give each answer a label. Finished? Add a third fact.
+
+::: {.notes}
+About 10 minutes, in Thonny, IDLE, or VS Code. Two print lines plus the import.
+:::
 
 ## Exit ticket
 

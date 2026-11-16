@@ -120,6 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -399,9 +400,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#review-5-min" id="toc-review-5-min" class="nav-link" data-scroll-target="#review-5-min">Review (5 min)</a></li>
   <li><a href="#teach-what-else-is-in-the-toolbox-15-min" id="toc-teach-what-else-is-in-the-toolbox-15-min" class="nav-link" data-scroll-target="#teach-what-else-is-in-the-toolbox-15-min">Teach: What Else Is in the Toolbox? (15 min)</a></li>
   <li><a href="#predict-then-step-15-min" id="toc-predict-then-step-15-min" class="nav-link" data-scroll-target="#predict-then-step-15-min">Predict, Then Step (15 min)</a></li>
-  <li><a href="#investigate-20-min" id="toc-investigate-20-min" class="nav-link" data-scroll-target="#investigate-20-min">Investigate (20 min)</a>
+  <li><a href="#investigate-25-min" id="toc-investigate-25-min" class="nav-link" data-scroll-target="#investigate-25-min">Investigate (25 min)</a>
   <ul class="collapse">
   <li><a href="#what-the-variables-hold" id="toc-what-the-variables-hold" class="nav-link" data-scroll-target="#what-the-variables-hold">What the variables hold</a></li>
+  <li><a href="#a-variable-can-change-5-min" id="toc-a-variable-can-change-5-min" class="nav-link" data-scroll-target="#a-variable-can-change-5-min">A variable can change (5 min)</a></li>
   <li><a href="#spot-the-problem" id="toc-spot-the-problem" class="nav-link" data-scroll-target="#spot-the-problem">Spot the problem</a></li>
   </ul></li>
   <li><a href="#modify-10-min" id="toc-modify-10-min" class="nav-link" data-scroll-target="#modify-10-min">Modify (10 min)</a></li>
@@ -410,7 +412,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#after-the-lesson" id="toc-after-the-lesson" class="nav-link" data-scroll-target="#after-the-lesson">After the Lesson</a></li>
   <li><a href="#code-for-this-lesson" id="toc-code-for-this-lesson" class="nav-link" data-scroll-target="#code-for-this-lesson">Code for This Lesson</a></li>
   <li><a href="#teacher-notes" id="toc-teacher-notes" class="nav-link" data-scroll-target="#teacher-notes">Teacher Notes</a></li>
-  <li><a href="#feedback" id="toc-feedback" class="nav-link" data-scroll-target="#feedback">Feedback</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/pbeens/ics3u/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -454,7 +455,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Time:</strong> 75 minutes · <strong>Expectations:</strong> A1.1, A3.1, A4.3, A4.4, C1.1 · <strong>Slides:</strong> <a href="../../modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html">Lesson 2 slides</a> · <strong>Previous:</strong> <a href="../../modules/module-01-about-this-computer/lesson-01-ask-the-computer.html">Lesson 1</a></p>
+<p><strong>Time:</strong> 75 minutes · <strong>Expectations:</strong> A1.1, A3.1, A4.3, A4.4, C1.1 · <strong>Slides:</strong> <a href="../../modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html">Lesson 2 slides</a> (press <strong>S</strong> for speaker notes) · <a href="../../modules/module-01-about-this-computer/index.html">Module 1 overview</a> · <strong>Previous:</strong> <a href="../../modules/module-01-about-this-computer/lesson-01-ask-the-computer.html">Lesson 1</a></p>
 </div>
 </div>
 </div>
@@ -462,7 +463,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="at-a-glance">At a Glance</h2>
 <ul>
 <li><strong>Big idea:</strong> a module is a toolbox you can explore, and variables let a program remember answers to use later.</li>
-<li><strong>Students will:</strong> list the <code>platform</code> toolbox with <code>dir()</code>, look up a function in the documentation, trace a program that stores answers in variables, and read two common error messages.</li>
+<li><strong>Students will:</strong> list the <code>platform</code> toolbox with <code>dir()</code>, look up a function in the documentation, trace a program that stores answers in variables, see that a variable can be changed, and read two common error messages.</li>
 <li><strong>Students make:</strong> a computer report built from four <code>platform</code> functions stored in variables.</li>
 <li><strong>Prepare:</strong> run <code>l02_report_variables.py</code> and both mistake programs, so you’ve seen the error messages students will see.</li>
 <li><strong>After class:</strong> <a href="../../modules/module-01-about-this-computer/practice.html#after-lesson-2-exploring-the-platform-library">Lesson 2 practice</a>, then the <a href="../../modules/module-01-about-this-computer/assignment.html">Module 1 Assignment</a>.</li>
@@ -474,7 +475,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Find out what tools a module contains, using <code>dir()</code> and the Python documentation.</li>
 <li>Store answers in variables and use them later in a program.</li>
-<li>Trace which variables exist and what they hold, line by line.</li>
+<li>Trace which variables exist and what they hold, line by line, including when a variable is given a new value.</li>
 <li>Read two common error messages and explain what caused them.</li>
 </ul>
 </section>
@@ -563,8 +564,8 @@ print("Computer report for", name)
 print("CPU type:", cpu)
 print("Operating system:", system)</pre></div>
 </section>
-<section id="investigate-20-min" class="level2">
-<h2 class="anchored" data-anchor-id="investigate-20-min">Investigate (20 min)</h2>
+<section id="investigate-25-min" class="level2">
+<h2 class="anchored" data-anchor-id="investigate-25-min">Investigate (25 min)</h2>
 <section id="what-the-variables-hold" class="level3">
 <h3 class="anchored" data-anchor-id="what-the-variables-hold">What the variables hold</h3>
 <p>Use <strong>Back</strong> and <strong>Step</strong> to answer:</p>
@@ -572,7 +573,7 @@ print("Operating system:", system)</pre></div>
 <li>After line 3 runs, which variable exists and what is its value?</li>
 <li>Lines 3–5 run, but nothing is printed yet. Where did the answers go?</li>
 <li>Line 7 uses <code>name</code>, which was created on line 5. What would happen if line 7 came before line 5?</li>
-<li>Complete a trace table:</li>
+<li>Complete a trace table. Every line that runs gets a row; blank lines don’t. Line 1 is filled in for you.</li>
 </ol>
 <table class="caption-top table">
 <thead>
@@ -586,41 +587,48 @@ print("Operating system:", system)</pre></div>
 </thead>
 <tbody>
 <tr class="odd">
+<td>1</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr class="even">
 <td>3</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>4</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>5</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>7</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>8</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>9</td>
 <td></td>
 <td></td>
@@ -629,6 +637,37 @@ print("Operating system:", system)</pre></div>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="a-variable-can-change-5-min" class="level3">
+<h3 class="anchored" data-anchor-id="a-variable-can-change-5-min">A variable can change (5 min)</h3>
+<p>Read this program <strong>without running it</strong>. What will each line of output be? Then step through it and watch the <code>system</code> row in the <strong>Variables</strong> panel.</p>
+<div class="stepper"><pre class="stepper-source" hidden="">import platform
+
+system = platform.system()
+print("Before:", system)
+system = "my computer"
+print("After:", system)</pre></div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Teacher prompt: changing a variable (first use)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Teacher prompt: changing a variable (first use)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>“Line 5 uses the same name, <code>system</code>, again. Watch the Variables panel when it runs.”</li>
+<li>After line 5: “The old value is gone. A variable holds <strong>one</strong> value at a time; giving it a new value replaces the old one.”</li>
+<li>“Line 4 already printed the old value, so that output doesn’t change. Python never goes back.”</li>
+</ul>
+</div>
+</div>
+<ol type="1">
+<li>What does <code>system</code> hold after line 3? After line 5?</li>
+<li>Why does the first output line show the operating system but the second doesn’t?</li>
+</ol>
 </section>
 <section id="spot-the-problem" class="level3">
 <h3 class="anchored" data-anchor-id="spot-the-problem">Spot the problem</h3>
@@ -685,7 +724,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IHBsYXRmb3JtXG5c
 </section>
 <section id="make-my-computer-report-if-time-allows" class="level2">
 <h2 class="anchored" data-anchor-id="make-my-computer-report-if-time-allows">Make: My Computer Report (if time allows)</h2>
-<p>Write a computer report that uses <strong>four</strong> <code>platform</code> functions, including at least one you found with <code>dir()</code> or the documentation. Store each answer in a variable with a clear name, then print a labelled report. Run it here and on the classroom computer, and compare.</p>
+<p>On the classroom computer (Thonny, IDLE, or VS Code), write a computer report that uses <strong>four</strong> <code>platform</code> functions, including at least one you found with <code>dir()</code> or the documentation. Store each answer in a variable with a clear name, then print a labelled report. Early finishers can paste it into the Modify box above and compare the browser’s answers.</p>
 </section>
 <section id="check-exit-ticket-5-min" class="level2">
 <h2 class="anchored" data-anchor-id="check-exit-ticket-5-min">Check: Exit Ticket (5 min)</h2>
@@ -704,6 +743,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IHBsYXRmb3JtXG5c
 <h2 class="anchored" data-anchor-id="after-the-lesson">After the Lesson</h2>
 <ul>
 <li>Students do the <a href="../../modules/module-01-about-this-computer/practice.html#after-lesson-2-exploring-the-platform-library">Lesson 2 practice</a>: trace a program that changes a variable, fix a mistake, and use a function they found with <code>dir()</code>.</li>
+<li><strong>Suggested hand-in:</strong> the trace table, and the Make program’s <code>.py</code> file with its output pasted as a comment at the bottom.</li>
 <li>Students then start the <a href="../../modules/module-01-about-this-computer/assignment.html">Module 1 Assignment</a>, the Computer Report Card.</li>
 <li>Read the exit tickets. Students who answered “twice” to question 2 still think a variable re-asks the computer; revisit the trace table.</li>
 </ul>
@@ -722,36 +762,42 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IHBsYXRmb3JtXG5c
 </thead>
 <tbody>
 <tr class="odd">
+<td>Change variable</td>
+<td><a href="examples/l02_change_variable.py" download="l02_change_variable.py"><code>l02_change_variable.py</code></a></td>
+<td><a href="https://github.com/pbeens/ics3u/blob/main/notebooks/01-02-change-variable.ipynb">View or download</a></td>
+<td><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fpbeens%2Fics3u&amp;branch=main&amp;subPath=notebooks/01-02-change-variable.ipynb&amp;depth=1">Callysto</a> | <a href="https://colab.research.google.com/github/pbeens/ics3u/blob/main/notebooks/01-02-change-variable.ipynb">Colab</a></td>
+</tr>
+<tr class="even">
 <td>Exit ticket</td>
 <td><a href="examples/l02_exit_ticket.py" download="l02_exit_ticket.py"><code>l02_exit_ticket.py</code></a></td>
 <td><a href="https://github.com/pbeens/ics3u/blob/main/notebooks/01-02-exit-ticket.ipynb">View or download</a></td>
 <td><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fpbeens%2Fics3u&amp;branch=main&amp;subPath=notebooks/01-02-exit-ticket.ipynb&amp;depth=1">Callysto</a> | <a href="https://colab.research.google.com/github/pbeens/ics3u/blob/main/notebooks/01-02-exit-ticket.ipynb">Colab</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Mistake: attribute</td>
 <td><a href="examples/l02_mistake_attribute.py" download="l02_mistake_attribute.py"><code>l02_mistake_attribute.py</code></a></td>
 <td><a href="https://github.com/pbeens/ics3u/blob/main/notebooks/01-02-mistake-attribute.ipynb">View or download</a></td>
 <td><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fpbeens%2Fics3u&amp;branch=main&amp;subPath=notebooks/01-02-mistake-attribute.ipynb&amp;depth=1">Callysto</a> | <a href="https://colab.research.google.com/github/pbeens/ics3u/blob/main/notebooks/01-02-mistake-attribute.ipynb">Colab</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Mistake: parentheses</td>
 <td><a href="examples/l02_mistake_parentheses.py" download="l02_mistake_parentheses.py"><code>l02_mistake_parentheses.py</code></a></td>
 <td><a href="https://github.com/pbeens/ics3u/blob/main/notebooks/01-02-mistake-parentheses.ipynb">View or download</a></td>
 <td><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fpbeens%2Fics3u&amp;branch=main&amp;subPath=notebooks/01-02-mistake-parentheses.ipynb&amp;depth=1">Callysto</a> | <a href="https://colab.research.google.com/github/pbeens/ics3u/blob/main/notebooks/01-02-mistake-parentheses.ipynb">Colab</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Practice mistake</td>
 <td><a href="examples/l02_practice_mistake.py" download="l02_practice_mistake.py"><code>l02_practice_mistake.py</code></a></td>
 <td><a href="https://github.com/pbeens/ics3u/blob/main/notebooks/01-02-practice-mistake.ipynb">View or download</a></td>
 <td><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fpbeens%2Fics3u&amp;branch=main&amp;subPath=notebooks/01-02-practice-mistake.ipynb&amp;depth=1">Callysto</a> | <a href="https://colab.research.google.com/github/pbeens/ics3u/blob/main/notebooks/01-02-practice-mistake.ipynb">Colab</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Practice trace</td>
 <td><a href="examples/l02_practice_trace.py" download="l02_practice_trace.py"><code>l02_practice_trace.py</code></a></td>
 <td><a href="https://github.com/pbeens/ics3u/blob/main/notebooks/01-02-practice-trace.ipynb">View or download</a></td>
 <td><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fpbeens%2Fics3u&amp;branch=main&amp;subPath=notebooks/01-02-practice-trace.ipynb&amp;depth=1">Callysto</a> | <a href="https://colab.research.google.com/github/pbeens/ics3u/blob/main/notebooks/01-02-practice-trace.ipynb">Colab</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Report variables</td>
 <td><a href="examples/l02_report_variables.py" download="l02_report_variables.py"><code>l02_report_variables.py</code></a></td>
 <td><a href="https://github.com/pbeens/ics3u/blob/main/notebooks/01-02-report-variables.ipynb">View or download</a></td>
@@ -765,18 +811,23 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IHBsYXRmb3JtXG5c
 <ul>
 <li><strong>Variables.</strong> A variable is a name that stores a value. <code>cpu = platform.machine()</code> asks the question once and keeps the answer, so the program can use it later, as many times as needed.</li>
 <li><strong>Step-through box.</strong> It runs the real program in the browser, so <code>platform</code> works and the variables hold the browser’s answers (<code>'wasm32'</code>, <code>'Emscripten'</code>). Python Tutor is not used here because it does not allow the <code>platform</code> module.</li>
-<li><strong>Changing a variable</strong> (e.g.&nbsp;<code>system = "macOS"</code> after <code>system = "Darwin"</code>) is not part of this lesson; it comes when programs start calculating with stored values.</li>
+<li><strong>Changing a variable.</strong> Introduced briefly, through reading only: a variable holds one value at a time, and a new value replaces the old one. Students trace it again in the practice and in Assignment Part A. Updating a variable from its own value (<code>count = count + 1</code>) comes later, when programs start calculating.</li>
 <li><strong><code>dir()</code> output</strong> is long and includes names starting with <code>_</code>; tell students to skip those. In the browser and on the classroom computer, the lists may differ slightly between Python versions.</li>
 <li><strong>Spot the problem.</strong> Without parentheses, <code>platform.machine</code> is the tool itself, not its answer, so Python prints a description of the function, e.g.&nbsp;<code>&lt;function machine at 0x104cb3e20&gt;</code>. The <code>AttributeError</code> says the module has no tool by that name. The step-through box highlights the line that caused the error and shows the error type and message; Thonny, IDLE, and VS Code show the same information as a full traceback, which students should learn to read too.</li>
+<li><strong>Slides.</strong> Open the slides on the projector and this plan on your own screen. Press <strong>S</strong> in the slides for speaker view.</li>
 <li><strong>Spiral.</strong> Students now write variables and read error messages. Calculating with values (<code>os.cpu_count()</code>, storage in gigabytes) comes in Module 2.</li>
-<li>Answers are in the private teacher files.</li>
+<li>Answers are in the <code>answer-keys</code> folder of the course’s GitHub repository, not on this site.</li>
 </ul>
 </section>
-<section id="feedback" class="level2">
-<h2 class="anchored" data-anchor-id="feedback">Feedback</h2>
+<section id="previous-and-next" class="level2 unlisted">
+<h2 class="unlisted anchored" data-anchor-id="previous-and-next">Previous and Next</h2>
+<p><a href="../../modules/module-01-about-this-computer/lesson-01-ask-the-computer.html">← Lesson 1</a> · <a href="../../modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html">Lesson 2 slides</a> · <a href="../../modules/module-01-about-this-computer/index.html">Module 1 overview</a> · <a href="../../modules/module-01-about-this-computer/practice.html#after-lesson-2-exploring-the-platform-library">Practice →</a></p>
+</section>
+<section id="feedback" class="level2 unlisted">
+<h2 class="unlisted anchored" data-anchor-id="feedback">Feedback</h2>
 <div class="feedback-section">
 <p>Found a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.</p>
-<p><a href="https://github.com/pbeens/ics3u/issues/new?template=feedback.yml&amp;title=%5BLesson%202%3A%20Exploring%20the%20platform%20Library%5D%20&amp;page=https%3A%2F%2Fpeter.beens.ca%2Fics3u%2Fmodules%2Fmodule-01-about-this-computer%2Flesson-02-exploring-platform.html" rel="noopener" target="_blank"><strong>Report an error or suggest a change</strong></a> opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.</p>
+<p><a href="https://github.com/pbeens/ics3u/issues/new?template=feedback.yml&amp;title=%5BLesson%202%3A%20Exploring%20the%20platform%20Library%5D%20&amp;page=https%3A%2F%2Fpeter.beens.ca%2Fics3u%2Fmodules%2Fmodule-01-about-this-computer%2Flesson-02-exploring-platform.html" target="_blank" rel="noopener"><strong>Report an error or suggest a change</strong></a> opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.</p>
 </div>
 
 

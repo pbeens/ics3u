@@ -22,13 +22,7 @@ You will model nearly every lesson: reading code aloud, predicting, running it, 
 
 Don't count on a board-imaged laptop letting you install software on the day. Ask IT early.
 
-### For you: VS Code and agentic programming
-
-Install [VS Code](https://code.visualstudio.com) as well, and learn to use it. It's the editor many professional developers use, and it's where **agentic programming** happens: AI coding agents (such as GitHub Copilot, Claude Code, and Codex) work inside the editor. They read your project, write and change code, run it, and explain what they did.
-
-Every teacher, and especially every CS teacher, should learn to work this way. It's quickly becoming how software gets built. Knowing it firsthand helps you prepare examples faster and answer students' questions about AI honestly. It also prepares you for the world your students are heading into. GitHub Copilot is free for verified teachers through [GitHub Education](https://education.github.com).
-
-Students start in Thonny, where they read and trace every line themselves. VS Code is a natural next step once they're comfortable, and a good place to show how AI tools change (and don't change) the need to read code carefully.
+[VS Code](https://code.visualstudio.com) is a good alternative editor, and the one to choose if you want to experiment with agentic programming, where an AI coding assistant works alongside you in the editor.
 
 ## Student Computers
 

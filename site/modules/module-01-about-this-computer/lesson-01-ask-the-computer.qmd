@@ -11,7 +11,7 @@ expectations: [A2.2, A3.1, C1.1]
 :::
 
 ::: {.callout-note appearance="simple"}
-**Time:** 75 minutes · **Expectations:** A2.2, A3.1, C1.1 · **Slides:** [Lesson 1 slides](lesson-01-ask-the-computer-slides.qmd) · **Next:** [Lesson 2](lesson-02-exploring-platform.qmd)
+**Time:** 75 minutes · **Expectations:** A2.2, A3.1, C1.1 · **Slides:** [Lesson 1 slides](lesson-01-ask-the-computer-slides.qmd) (press **S** for speaker notes) · [Module 1 overview](index.qmd) · **Next:** [Lesson 2](lesson-02-exploring-platform.qmd)
 :::
 
 ## At a Glance
@@ -104,11 +104,11 @@ Then: "Write your prediction first. No pressing Step until you've committed."
 
 Now run the same program on the classroom computer (Thonny, IDLE, or VS Code). Which lines of output are the same as on this page? Which are different?
 
-## Investigate: Where Does My Code Run? (20 min)
+## Investigate: Where Does My Code Run? (10 min)
 
-The same four lines give different answers depending on where they run. Fill in this table:
+The same four lines give different answers depending on where they run. Students copy this table into their notebooks and fill it in. Add the Colab column only if you demonstrate Colab.
 
-| | Classroom computer (Thonny, IDLE, or VS Code) | This web page | Google Colab (teacher demo) |
+| | Classroom computer (Thonny, IDLE, or VS Code) | This web page | Google Colab (optional teacher demo) |
 |---|---|---|---|
 | CPU type | | | |
 | Operating system | | | |
@@ -121,9 +121,8 @@ The same four lines give different answers depending on where they run. Fill in 
 Then discuss:
 
 1. Why does this web page report `wasm32` and `Emscripten`? Is that the classroom computer?
-2. Where is the computer that Colab describes? Who owns it?
-3. In which of the three places does the program run on the computer in front of you?
-4. Line by line: which line produced each answer in your table?
+2. In which place does the program run on the computer in front of you?
+3. (If you showed Colab) Where is the computer that Colab describes? Who owns it?
 
 ## Modify (15 min)
 
@@ -141,9 +140,9 @@ print("Operating system:", platform.system())
 print("Computer name:", platform.node())
 ```
 
-## Make (if time allows)
+## Make (10 min)
 
-Write a two-line program (plus the `import`) that prints the operating system and its version number, using `platform.system()` and `platform.release()`. Run it here and on the classroom computer.
+On the classroom computer (Thonny, IDLE, or VS Code), write a two-line program (plus the `import`) that prints the operating system and its version number, using `platform.system()` and `platform.release()`. Students who finish early can add a third labelled fact.
 
 ## Check: Exit Ticket (5 min)
 
@@ -159,6 +158,7 @@ print("CPU:", platform.machine())
 ## After the Lesson
 
 - Students do the [Lesson 1 practice](practice.qmd#after-lesson-1-ask-the-computer-about-itself): read and predict, modify, then make a three-fact report on the classroom computer.
+- **Suggested hand-in:** the written answers to the Read and predict questions, and the Make program's `.py` file with its output pasted as a comment at the bottom.
 - Read the exit tickets. If many students mixed up the fixed text and the computer's answers, start Lesson 2's review there.
 
 ## Code for This Lesson
@@ -178,9 +178,14 @@ Every program in this lesson, ready to run outside the browser. Download the `.p
 - **Colab access.** Many school boards disable Colab for student accounts, so plan it as a teacher demonstration. For setting up classroom computers, see [Before You Begin](../../before-you-begin.qmd).
 - **Predict, then run.** The step-through box keeps the prediction next to the real output. Encourage students to commit to a prediction before pressing Step; the **Back** button lets them replay any line.
 - **First load.** The step-through box and the runnable boxes download Python into the browser the first time (about 10 MB), which can take a few seconds.
+- **Slides.** Open the slides on the projector and this plan on your own screen. Press **S** in the slides to open speaker view, which shows the teacher prompts and timings.
 - **Spiral.** Students meet `import`, function calls, and comma-separated `print()` items through reading today. Variables come in Lesson 2.
-- Answers are in the private teacher files.
+- Answers are in the `answer-keys` folder of the course's GitHub repository, not on this site.
 
-## Feedback
+## Previous and Next {.unlisted}
+
+[← Module 1 overview](index.qmd) · [Lesson 1 slides](lesson-01-ask-the-computer-slides.qmd) · [Lesson 2 →](lesson-02-exploring-platform.qmd)
+
+## Feedback {.unlisted}
 
 {{< feedback >}}

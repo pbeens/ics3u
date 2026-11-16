@@ -120,6 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -399,14 +400,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#warm-up-5-min" id="toc-warm-up-5-min" class="nav-link" data-scroll-target="#warm-up-5-min">Warm-up (5 min)</a></li>
   <li><a href="#teach-two-lines-of-python-15-min" id="toc-teach-two-lines-of-python-15-min" class="nav-link" data-scroll-target="#teach-two-lines-of-python-15-min">Teach: Two Lines of Python (15 min)</a></li>
   <li><a href="#predict-then-run-15-min" id="toc-predict-then-run-15-min" class="nav-link" data-scroll-target="#predict-then-run-15-min">Predict, Then Run (15 min)</a></li>
-  <li><a href="#investigate-where-does-my-code-run-20-min" id="toc-investigate-where-does-my-code-run-20-min" class="nav-link" data-scroll-target="#investigate-where-does-my-code-run-20-min">Investigate: Where Does My Code Run? (20 min)</a></li>
+  <li><a href="#investigate-where-does-my-code-run-10-min" id="toc-investigate-where-does-my-code-run-10-min" class="nav-link" data-scroll-target="#investigate-where-does-my-code-run-10-min">Investigate: Where Does My Code Run? (10 min)</a></li>
   <li><a href="#modify-15-min" id="toc-modify-15-min" class="nav-link" data-scroll-target="#modify-15-min">Modify (15 min)</a></li>
-  <li><a href="#make-if-time-allows" id="toc-make-if-time-allows" class="nav-link" data-scroll-target="#make-if-time-allows">Make (if time allows)</a></li>
+  <li><a href="#make-10-min" id="toc-make-10-min" class="nav-link" data-scroll-target="#make-10-min">Make (10 min)</a></li>
   <li><a href="#check-exit-ticket-5-min" id="toc-check-exit-ticket-5-min" class="nav-link" data-scroll-target="#check-exit-ticket-5-min">Check: Exit Ticket (5 min)</a></li>
   <li><a href="#after-the-lesson" id="toc-after-the-lesson" class="nav-link" data-scroll-target="#after-the-lesson">After the Lesson</a></li>
   <li><a href="#code-for-this-lesson" id="toc-code-for-this-lesson" class="nav-link" data-scroll-target="#code-for-this-lesson">Code for This Lesson</a></li>
   <li><a href="#teacher-notes" id="toc-teacher-notes" class="nav-link" data-scroll-target="#teacher-notes">Teacher Notes</a></li>
-  <li><a href="#feedback" id="toc-feedback" class="nav-link" data-scroll-target="#feedback">Feedback</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/pbeens/ics3u/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -450,7 +450,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Time:</strong> 75 minutes · <strong>Expectations:</strong> A2.2, A3.1, C1.1 · <strong>Slides:</strong> <a href="../../modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html">Lesson 1 slides</a> · <strong>Next:</strong> <a href="../../modules/module-01-about-this-computer/lesson-02-exploring-platform.html">Lesson 2</a></p>
+<p><strong>Time:</strong> 75 minutes · <strong>Expectations:</strong> A2.2, A3.1, C1.1 · <strong>Slides:</strong> <a href="../../modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html">Lesson 1 slides</a> (press <strong>S</strong> for speaker notes) · <a href="../../modules/module-01-about-this-computer/index.html">Module 1 overview</a> · <strong>Next:</strong> <a href="../../modules/module-01-about-this-computer/lesson-02-exploring-platform.html">Lesson 2</a></p>
 </div>
 </div>
 </div>
@@ -585,9 +585,9 @@ print("Operating system:", platform.system())
 print("Computer name:", platform.node())</pre></div>
 <p>Now run the same program on the classroom computer (Thonny, IDLE, or VS Code). Which lines of output are the same as on this page? Which are different?</p>
 </section>
-<section id="investigate-where-does-my-code-run-20-min" class="level2">
-<h2 class="anchored" data-anchor-id="investigate-where-does-my-code-run-20-min">Investigate: Where Does My Code Run? (20 min)</h2>
-<p>The same four lines give different answers depending on where they run. Fill in this table:</p>
+<section id="investigate-where-does-my-code-run-10-min" class="level2">
+<h2 class="anchored" data-anchor-id="investigate-where-does-my-code-run-10-min">Investigate: Where Does My Code Run? (10 min)</h2>
+<p>The same four lines give different answers depending on where they run. Students copy this table into their notebooks and fill it in. Add the Colab column only if you demonstrate Colab.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -600,7 +600,7 @@ print("Computer name:", platform.node())</pre></div>
 <th></th>
 <th>Classroom computer (Thonny, IDLE, or VS Code)</th>
 <th>This web page</th>
-<th>Google Colab (teacher demo)</th>
+<th>Google Colab (optional teacher demo)</th>
 </tr>
 </thead>
 <tbody>
@@ -640,9 +640,8 @@ print("Computer name:", platform.node())</pre></div>
 <p>Then discuss:</p>
 <ol type="1">
 <li>Why does this web page report <code>wasm32</code> and <code>Emscripten</code>? Is that the classroom computer?</li>
-<li>Where is the computer that Colab describes? Who owns it?</li>
-<li>In which of the three places does the program run on the computer in front of you?</li>
-<li>Line by line: which line produced each answer in your table?</li>
+<li>In which place does the program run on the computer in front of you?</li>
+<li>(If you showed Colab) Where is the computer that Colab describes? Who owns it?</li>
 </ol>
 </section>
 <section id="modify-15-min" class="level2">
@@ -662,9 +661,9 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IHBsYXRmb3JtXG5c
 </script>
 </div>
 </section>
-<section id="make-if-time-allows" class="level2">
-<h2 class="anchored" data-anchor-id="make-if-time-allows">Make (if time allows)</h2>
-<p>Write a two-line program (plus the <code>import</code>) that prints the operating system and its version number, using <code>platform.system()</code> and <code>platform.release()</code>. Run it here and on the classroom computer.</p>
+<section id="make-10-min" class="level2">
+<h2 class="anchored" data-anchor-id="make-10-min">Make (10 min)</h2>
+<p>On the classroom computer (Thonny, IDLE, or VS Code), write a two-line program (plus the <code>import</code>) that prints the operating system and its version number, using <code>platform.system()</code> and <code>platform.release()</code>. Students who finish early can add a third labelled fact.</p>
 </section>
 <section id="check-exit-ticket-5-min" class="level2">
 <h2 class="anchored" data-anchor-id="check-exit-ticket-5-min">Check: Exit Ticket (5 min)</h2>
@@ -678,6 +677,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IHBsYXRmb3JtXG5c
 <h2 class="anchored" data-anchor-id="after-the-lesson">After the Lesson</h2>
 <ul>
 <li>Students do the <a href="../../modules/module-01-about-this-computer/practice.html#after-lesson-1-ask-the-computer-about-itself">Lesson 1 practice</a>: read and predict, modify, then make a three-fact report on the classroom computer.</li>
+<li><strong>Suggested hand-in:</strong> the written answers to the Read and predict questions, and the Make program’s <code>.py</code> file with its output pasted as a comment at the bottom.</li>
 <li>Read the exit tickets. If many students mixed up the fixed text and the computer’s answers, start Lesson 2’s review there.</li>
 </ul>
 </section>
@@ -735,12 +735,17 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IHBsYXRmb3JtXG5c
 <li><strong>Colab access.</strong> Many school boards disable Colab for student accounts, so plan it as a teacher demonstration. For setting up classroom computers, see <a href="../../before-you-begin.html">Before You Begin</a>.</li>
 <li><strong>Predict, then run.</strong> The step-through box keeps the prediction next to the real output. Encourage students to commit to a prediction before pressing Step; the <strong>Back</strong> button lets them replay any line.</li>
 <li><strong>First load.</strong> The step-through box and the runnable boxes download Python into the browser the first time (about 10 MB), which can take a few seconds.</li>
+<li><strong>Slides.</strong> Open the slides on the projector and this plan on your own screen. Press <strong>S</strong> in the slides to open speaker view, which shows the teacher prompts and timings.</li>
 <li><strong>Spiral.</strong> Students meet <code>import</code>, function calls, and comma-separated <code>print()</code> items through reading today. Variables come in Lesson 2.</li>
-<li>Answers are in the private teacher files.</li>
+<li>Answers are in the <code>answer-keys</code> folder of the course’s GitHub repository, not on this site.</li>
 </ul>
 </section>
-<section id="feedback" class="level2">
-<h2 class="anchored" data-anchor-id="feedback">Feedback</h2>
+<section id="previous-and-next" class="level2 unlisted">
+<h2 class="unlisted anchored" data-anchor-id="previous-and-next">Previous and Next</h2>
+<p><a href="../../modules/module-01-about-this-computer/index.html">← Module 1 overview</a> · <a href="../../modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html">Lesson 1 slides</a> · <a href="../../modules/module-01-about-this-computer/lesson-02-exploring-platform.html">Lesson 2 →</a></p>
+</section>
+<section id="feedback" class="level2 unlisted">
+<h2 class="unlisted anchored" data-anchor-id="feedback">Feedback</h2>
 <div class="feedback-section">
 <p>Found a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.</p>
 <p><a href="https://github.com/pbeens/ics3u/issues/new?template=feedback.yml&amp;title=%5BLesson%201%3A%20Ask%20the%20Computer%20About%20Itself%5D%20&amp;page=https%3A%2F%2Fpeter.beens.ca%2Fics3u%2Fmodules%2Fmodule-01-about-this-computer%2Flesson-01-ask-the-computer.html" target="_blank" rel="noopener"><strong>Report an error or suggest a change</strong></a> opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.</p>
