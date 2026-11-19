@@ -7,14 +7,16 @@ expectations: [A1.1, A2.2, A3.1, A4.3, A4.4, C1.1]
 ---
 
 ::: {.callout-note appearance="simple"}
-**For students.** Do each lesson's practice after that lesson. Read first: predict before you run anything. Your teacher will tell you what to hand in. · [Module 1 overview](index.qmd)
+**For students.** Do each lesson's practice after that lesson. Read first: predict before you run anything. Write your answers in your **tracing notebook** (paper). The prediction box beside the code isn't saved. If your teacher asks you to hand something in, put your written answers in a comment at the top of your `.py` file. · [Module 1 overview](index.qmd)
+
+Save every file in your [course folder](../../course-folder.qmd), in the folder for that lesson.
 :::
 
 ## After Lesson 1: Ask the Computer About Itself
 
 ### Read and predict
 
-Read this program **without running it**. Write your answers, then type your prediction in the box and press **Step**.
+Read this program **without running it**. Write your answers in your tracing notebook, then type your prediction in the box and press **Step**.
 
 1. How many lines will it print?
 2. Which lines will be exactly the same on every computer?
@@ -59,7 +61,7 @@ Lesson 1's programs, including the ones above. Download a `.py` file for Thonny,
 
 ### Trace
 
-Read this program **without running it**. Fill in a trace table like the one below: every line that runs gets a row, and blank lines don't. Line 1 is filled in for you. Then type your prediction and press **Step** to check, watching the **Variables** panel.
+Read this program **without running it**. In your tracing notebook, fill in a trace table like the one below: every line that runs gets a row, and blank lines don't. Line 1 is filled in for you. Then type your prediction and press **Step** to check, watching the **Variables** panel.
 
 | Line | `system` | `version` | Output |
 |---|---|---|---|

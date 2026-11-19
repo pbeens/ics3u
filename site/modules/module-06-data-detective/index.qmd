@@ -1,0 +1,70 @@
+---
+title: "Module 6: Data Detective"
+subtitle: "About 15 hours · For teachers"
+---
+
+::: {.callout-note appearance="simple"}
+**Planned module.** This page shows the direction for Module 6. Lessons, slides, and practice pages are not written yet.
+:::
+
+**The big idea:** students investigate data about their own computer use. They scan a messy folder to find out what's taking up space, keep a sorted top-ten list of the biggest files, write a backup script that proves its copies are perfect, analyze the network log they collected in Module 5, and use data on power use and e-waste to work out what the computer lab costs to run. Lists and list algorithms (search, highest and lowest, sorted insert and delete) are the core, with functions and structure charts to organize bigger programs.
+
+**Why students care:** "My computer is full" and "Where did that file go?" are everyday problems. So is losing work with no backup. Students leave with tools they can use on their own computers.
+
+**Expectations:** A1.5, A1.6, A2.3, A3.2, A4.4, A4.5, B2.2, B2.3, B2.4, B3.1, C2.1, C2.3, D1.1, D1.2, D1.3, D1.4
+
+## Anchor Programs
+
+- **Folder detective:** lists every file in a folder with `os.scandir()`, counts files by type, totals their size, and finds duplicates by hash. It runs on a sample folder built by the course's generator script.
+- **Top ten biggest files:** keeps a sorted list, inserting each new file in its place and dropping the smallest (add to a sorted array; delete from the middle, B3.1).
+- **Backup maker:** copies a project folder into a dated `.zip` with `shutil.make_archive()`, checks each copy against the original with a SHA-256 hash (Module 4 again), and writes a backup log.
+- **Network log analyzer:** the students' own Module 5 log: average response by day and time, and the worst hour.
+- **Lab power bill:** reads a CSV file of device wattages and calculates the yearly cost and energy use of the computer lab.
+
+## Planned Lessons
+
+| Lesson | Focus | Students read, then build |
+|---|---|---|
+| 1. What's in This Folder? | Building the sample folder with `make_sample_folder.py` (and reading how it works); `os.scandir()`; paths; file names, sizes, and dates; organizing files (C2.1) | List the files in the sample folder |
+| 2. Counting by Type | Parallel lists; linear search; counting (A1.6, A2.3) | How many `.py`, `.png`, and `.csv` files are there? |
+| 3. Where Did My Space Go? | Total, highest, lowest; the oldest file | Find the biggest and oldest files |
+| 4. Top Ten | Inserting into a sorted list; deleting from the middle; bounds (A1.5, B3.1) | A top-ten list of the biggest files |
+| 5. Breaking It into Functions | Structure charts (B2.4); modularity (B2.3); describing two designs (B2.2) | Reorganize the folder detective into functions |
+| 6. Back It Up, and Prove It | `shutil.make_archive()`; dated file names; the 3-2-1 backup rule; archiving (C2.3); checking copies with `hashlib`; finding duplicates | A backup of the course folder that verifies every file and writes a log |
+| 7. Reading Your Own Data | The `csv` module; lists from a file; the students' Module 5 network log | When was the network slowest? |
+| 8. What Does the Lab Cost to Run? | Watts, hours, kilowatt-hours, and electricity rates; sleep settings (D1.1, D1.2) | The yearly power bill for the lab, and the savings from sleep mode |
+| 9. Where Old Computers Go | E-waste; refurbishing and recycling; community partners such as Ontario Computers for Schools (D1.1, D1.3, D1.4) | Analyze e-waste data; plan a lab's end-of-life policy |
+| 10. Healthy Computing | Ergonomics, eye strain, and breaks (D1.1, D1.2) | A break reminder; an analysis of a week of screen-time data |
+| 11. Testing with Every Case | Empty folders, one file, unreadable files, ties in the top ten (A4.4, A4.5); regenerate the sample folder with different seeds | A full test plan for the folder detective |
+| 12. Module 6 test | Code reading and tracing; a short basics section | |
+
+## Assignment (Planned): Folder Detective
+
+Students run their folder detective on a sample folder generated with their own seed (so every student's results are different). The program reports the number of files of each type, the total size, the top ten biggest files, the oldest files, and any duplicates, and suggests what to archive. Running it on their own Downloads folder is an optional extension. Students hand in the program, a **structure chart**, a test plan, and a short write-up of what they found and what they did about it.
+
+**Adds to the toolkit:** `folder_detective.py` and `backup.py`, which import from the student's earlier toolkit files.
+
+## Practising the Basics (Planned)
+
+- **Skill Builder:** list algorithms (count, total, highest, lowest, linear search, sorted insert, delete), functions and scope, and reading and writing files. Includes Module 5 list review.
+- **Quick Builds** (small graded programs, before the assignment):
+  - **Extension Report:** counts the sample folder's files by type and writes the result to a CSV file.
+  - **Duplicate Finder:** lists every set of identical files in the sample folder, using hashes.
+- **Warm-ups** in every lesson include a question from an earlier module.
+
+## Notes for Teachers
+
+- **Open computers needed.** This module is the most likely to be blocked on a managed lab computer. Check the [requirements table](../../before-you-begin.qmd#what-students-programs-need) with IT before the module starts.
+- **Sample folder, not students' own files.** `make_sample_folder.py` (planned; see the [Scope and Sequence](../../scope-and-sequence.qmd#course-tools)) builds the same messy folder for everyone, or a different one per student with `--seed`. If a program wrecks it, run the script again.
+- **Read-only programs.** Nothing in this module deletes or moves files. Tell students why: programs that delete files are dangerous, and you always back up first. A "dry run" (print what *would* happen) is the safe habit.
+- **Lists, not dictionaries.** The curriculum asks for one-dimensional arrays, so use lists (and parallel lists). Dictionaries can appear as a marked extension.
+- **Electricity rates:** use the current Ontario rate, and let students look it up.
+
+## How Module 6 Fits
+
+- **Before:** [Module 5](../module-05-on-the-network/index.qmd) wrote lists for the first time and handled exceptions.
+- **Next:** [Module 7, Software Development Project](../module-07-software-project/index.qmd), where students design a program of their own.
+
+## Feedback {.unlisted}
+
+{{< feedback >}}

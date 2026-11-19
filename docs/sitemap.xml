@@ -2,43 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://peter.beens.ca/ics3u/scope-and-sequence.html</loc>
-    <lastmod>2026-11-14T19:09:17.888Z</lastmod>
+    <lastmod>2026-11-18T21:28:11.955Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peter.beens.ca/ics3u/modules/module-06-data-detective/index.html</loc>
+    <lastmod>2026-11-18T21:35:10.125Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peter.beens.ca/ics3u/modules/module-04-passwords-and-secret-messages/index.html</loc>
+    <lastmod>2026-11-18T21:27:38.679Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peter.beens.ca/ics3u/modules/module-02-spec-checker/index.html</loc>
+    <lastmod>2026-11-18T21:27:38.678Z</lastmod>
   </url>
   <url>
     <loc>https://peter.beens.ca/ics3u/modules/module-01-about-this-computer/lesson-02-exploring-platform.html</loc>
-    <lastmod>2026-11-16T15:29:15.738Z</lastmod>
+    <lastmod>2026-11-18T21:52:42.104Z</lastmod>
   </url>
   <url>
     <loc>https://peter.beens.ca/ics3u/modules/module-01-about-this-computer/lesson-01-ask-the-computer.html</loc>
-    <lastmod>2026-11-16T15:29:15.734Z</lastmod>
+    <lastmod>2026-11-18T21:54:31.026Z</lastmod>
   </url>
   <url>
     <loc>https://peter.beens.ca/ics3u/modules/module-01-about-this-computer/index.html</loc>
-    <lastmod>2026-11-16T15:28:34.618Z</lastmod>
+    <lastmod>2026-11-18T21:54:31.027Z</lastmod>
   </url>
   <url>
-    <loc>https://peter.beens.ca/ics3u/index.html</loc>
-    <lastmod>2026-11-15T22:13:41.295Z</lastmod>
-  </url>
-  <url>
-    <loc>https://peter.beens.ca/ics3u/before-you-begin.html</loc>
-    <lastmod>2026-11-16T15:30:46.251Z</lastmod>
-  </url>
-  <url>
-    <loc>https://peter.beens.ca/ics3u/about.html</loc>
-    <lastmod>2026-11-16T16:37:09.620Z</lastmod>
+    <loc>https://peter.beens.ca/ics3u/modules/computer-science-in-the-world/index.html</loc>
+    <lastmod>2026-11-18T21:19:44.488Z</lastmod>
   </url>
   <url>
     <loc>https://peter.beens.ca/ics3u/how-a-lesson-works.html</loc>
-    <lastmod>2026-11-16T15:29:15.745Z</lastmod>
+    <lastmod>2026-11-18T21:54:31.028Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peter.beens.ca/ics3u/before-you-begin.html</loc>
+    <lastmod>2026-11-18T21:54:31.028Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peter.beens.ca/ics3u/about.html</loc>
+    <lastmod>2026-11-18T21:35:10.124Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peter.beens.ca/ics3u/course-folder.html</loc>
+    <lastmod>2026-11-18T21:54:30.164Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peter.beens.ca/ics3u/index.html</loc>
+    <lastmod>2026-11-18T21:35:10.124Z</lastmod>
   </url>
   <url>
     <loc>https://peter.beens.ca/ics3u/modules/module-01-about-this-computer/assignment.html</loc>
-    <lastmod>2026-11-16T15:28:19.259Z</lastmod>
+    <lastmod>2026-11-18T21:54:31.027Z</lastmod>
   </url>
   <url>
     <loc>https://peter.beens.ca/ics3u/modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html</loc>
-    <lastmod>2026-11-16T15:27:20.770Z</lastmod>
+    <lastmod>2026-11-18T21:52:42.103Z</lastmod>
   </url>
   <url>
     <loc>https://peter.beens.ca/ics3u/modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html</loc>
@@ -46,6 +66,18 @@
   </url>
   <url>
     <loc>https://peter.beens.ca/ics3u/modules/module-01-about-this-computer/practice.html</loc>
-    <lastmod>2026-11-16T15:27:59.798Z</lastmod>
+    <lastmod>2026-11-18T21:54:31.027Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peter.beens.ca/ics3u/modules/module-03-benchmark-lab/index.html</loc>
+    <lastmod>2026-11-18T21:27:38.679Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peter.beens.ca/ics3u/modules/module-05-on-the-network/index.html</loc>
+    <lastmod>2026-11-18T21:35:10.124Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peter.beens.ca/ics3u/modules/module-07-software-project/index.html</loc>
+    <lastmod>2026-11-18T21:27:38.681Z</lastmod>
   </url>
 </urlset>

@@ -13,7 +13,7 @@ engine: markdown
 
 ## Warm-up
 
-Write down your best guesses about **this** computer:
+In your tracing notebook, write your best guesses about **this** computer:
 
 1. What kind of processor (CPU) does it have?
 2. Which operating system does it run?
@@ -62,7 +62,7 @@ TEACHER PROMPT (first use of the step-through box): "Nothing has run yet. The re
 
 ## Compare: where did it run?
 
-Copy this table and fill it in:
+Copy this table into your tracing notebook and fill it in:
 
 | | Classroom computer | This web page |
 |---|---|---|

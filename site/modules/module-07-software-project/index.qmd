@@ -1,0 +1,69 @@
+---
+title: "Module 7: Software Development Project"
+subtitle: "About 16 hours · For teachers"
+---
+
+::: {.callout-note appearance="simple"}
+**Planned module.** This page shows the direction for Module 7. Lessons, slides, and practice pages are not written yet.
+:::
+
+**The big idea:** students plan, build, test, and present a useful program for a real person. The module starts with a short teacher-led class project, so everyone practises the software development life cycle together, then moves to individual or pair projects.
+
+**Why students care:** they finish the course with a tool someone actually uses: a family member, a teacher, a club, or themselves.
+
+**Expectations:** A4.2, A4.5, B1.2, B2.1, B2.2, B2.3, B2.4, B2.5, B4.1, B4.2, B4.3, B4.4, B4.5, B4.6, C3.2
+
+## Part 1: Class Project, "Lab Health Check" (about 4 hours)
+
+The whole class builds one tool together from the parts of everyone's **My Computer Toolkit**. Each team owns one module: system facts (Modules 1–2), a quick benchmark (Module 3), network checks (Module 5), and storage and backups (Module 6). The teacher leads the life cycle out loud.
+
+| Lesson | Focus |
+|---|---|
+| 1. The Software Development Life Cycle | Phases, milestones, and products (B4.1); the class project's specification |
+| 2. Planning Together | A Gantt chart and milestones for the class project (B4.3); dividing the work; a shared skeleton (B2.1) |
+| 3. Build, Combine, Test | Teams write their modules; the class combines and tests them (B1.2, B2.3, B4.4) |
+
+## Part 2: Your Own Project (about 12 hours)
+
+| Lesson | Focus |
+|---|---|
+| 4. Find a Real User | Interviews and questionnaires to clarify a specification (B4.2) |
+| 5. Design | Structure chart or flow chart (B2.4); user interface: prompts and messages (B2.5); describing the design to a partner (B2.2) |
+| 6. Test Plan First | Write the test plan before the code (B4.4, A4.5) |
+| 7–9. Work periods | Using documentation independently (C3.2); debugging (B4.5); professional conventions (A4.2); a written status report each period (B4.6) |
+| 10. Test and Fix | Run the test plan; record results; fix bugs |
+| 11. Present | A short demonstration to the class and, if possible, to the real user |
+
+## Project Ideas
+
+All projects are practical and grow out of the course:
+
+- **Downloads organizer:** sorts files into folders by type, with a dry-run mode that shows what it would do first.
+- **Laptop chooser:** asks what a buyer needs and recommends specifications, explaining each choice.
+- **Home network checker:** a friendlier version of the Module 5 tool, for a family member.
+- **Family backup tool:** backs up chosen folders on a schedule, with a log.
+- **Lab inventory:** records the computers in a room and their specifications, and flags the ones due for replacement.
+- **Typing tutor:** lessons that get harder, with a progress record.
+- **Energy tracker:** a family's devices, their power use, and what changing habits would save.
+- **Computer parts quiz:** quizzes a younger student on hardware vocabulary, with explanations.
+- **Photo organizer:** sorts photos into folders by date and reports their sizes (extension: dimensions and thumbnails with the Pillow library).
+- **Toolkit 2.0:** a menu-driven version of the student's own toolkit, for a family member.
+- **A student's own idea**, approved by the teacher.
+
+## Practising the Basics (Planned)
+
+- **Skill Builder:** mixed review of every basic from Modules 1–6, organized for final exam preparation.
+- **Status reports** replace Quick Builds: each work period ends with a short written report (B4.6).
+
+## Assessment (Planned)
+
+Part of the final 30%. Evaluated on the specification, design documents, test plan and results, status reports, the program itself (correctness, conventions, user interface), and the presentation.
+
+## How Module 7 Fits
+
+- **Before:** [Modules 1–6](../../scope-and-sequence.qmd) took every programming idea through reading, modifying, and writing.
+- **Now:** students design with all of them.
+
+## Feedback {.unlisted}
+
+{{< feedback >}}

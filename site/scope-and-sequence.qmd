@@ -18,18 +18,19 @@ This is a **spiral course**, not a sequence of topic units. Students do not spen
 
 ## Course at a Glance
 
-The course runs 110 hours, roughly 88 periods of 75 minutes. Hours are a guide.
+The course runs 110 hours, roughly 88 periods of 75 minutes. Hours are a guide. Every module is about the computer students are sitting at, the way they use it, or the world it connects to.
 
-| Module | Theme | Hours | Reading : Writing |
-|---|---|---|---|
-| 1 | About This Computer | 15 | 75 : 25 |
-| 2 | Spec Checker | 17 | 65 : 35 |
-| 3 | Games of Chance | 17 | 55 : 45 |
-| 4 | Secret Messages | 17 | 50 : 50 |
-| 5 | Data Detective | 18 | 45 : 55 |
-| 6 | Software Development Project | 20 | 20 : 80 |
-| — | Computer Science in the World (runs alongside Modules 2–5) | 6 | — |
-| | **Total** | **110** | |
+| Module | Theme | Students find out… | Hours | Reading : Writing |
+|---|---|---|---|---|
+| 1 | [About This Computer](modules/module-01-about-this-computer/index.qmd) | what this computer is | 15 | 75 : 25 |
+| 2 | [Spec Checker](modules/module-02-spec-checker/index.qmd) | whether a computer meets someone's needs | 15 | 65 : 35 |
+| 3 | [Benchmark Lab](modules/module-03-benchmark-lab/index.qmd) | how fast it really is | 14 | 55 : 45 |
+| 4 | [Passwords and Secret Messages](modules/module-04-passwords-and-secret-messages/index.qmd) | how it stores text, and how to keep it safe | 15 | 50 : 50 |
+| 5 | [On the Network](modules/module-05-on-the-network/index.qmd) | how it talks to the rest of the world | 14 | 45 : 55 |
+| 6 | [Data Detective](modules/module-06-data-detective/index.qmd) | what's on it, how to back it up, and what it costs the planet | 15 | 40 : 60 |
+| 7 | [Software Development Project](modules/module-07-software-project/index.qmd) | how to build a useful tool for a real person | 16 | 20 : 80 |
+| — | [Computer Science in the World](modules/computer-science-in-the-world/index.qmd) (between Modules 2–6) | where computer science leads | 6 | — |
+| | **Total** | | **110** | |
 
 **Reading : Writing** is the approximate share of student work time spent reading, tracing, predicting, and modifying existing code versus writing new code.
 
@@ -37,110 +38,141 @@ The course runs 110 hours, roughly 88 periods of 75 minutes. Hours are a guide.
 
 How deeply each programming idea is used in each module.
 
-| Idea | M1 | M2 | M3 | M4 | M5 | M6 |
-|---|---|---|---|---|---|---|
-| Output and formatting (`print`, f-strings) | W | W | W | W | W | D |
-| Variables and data types | W | W | W | W | W | D |
-| Input and type conversion | M | W | W | W | W | D |
-| Arithmetic expressions | M | W | W | W | W | D |
-| Decisions (`if`/`elif`/`else`, `and`/`or`/`not`) | R | W | W | W | W | D |
-| Loops (`for`, `while`) | R | M | W | W | W | D |
-| Strings (indexing, slicing, methods) | R | M | M | W | W | D |
-| Lists (one-dimensional arrays) | R | M | M | M | W | D |
-| Calling functions and modules | M | W | W | W | W | D |
-| Writing functions | R | R | M | W | W | D |
-| Errors, debugging, and testing | R | W | W | W | W | D |
+| Idea | M1 | M2 | M3 | M4 | M5 | M6 | M7 |
+|---|---|---|---|---|---|---|---|
+| Output and formatting (`print`, f-strings) | W | W | W | W | W | W | D |
+| Variables and data types | W | W | W | W | W | W | D |
+| Input and type conversion | M | W | W | W | W | W | D |
+| Arithmetic expressions | M | W | W | W | W | W | D |
+| Decisions (`if`/`elif`/`else`, `and`/`or`/`not`) | R | W | W | W | W | W | D |
+| Loops (`for`, `while`) | R | M | W | W | W | W | D |
+| Strings (indexing, slicing, methods) | R | M | M | W | W | W | D |
+| Lists (one-dimensional arrays) | R | M | M | M | W | W | D |
+| Calling functions and modules | M | W | W | W | W | W | D |
+| Writing functions | R | R | M | W | W | W | D |
+| Errors, exceptions, debugging, and testing | R | W | W | W | W | W | D |
+| Files and folders: reading and writing (`os`, `shutil`, `csv`) | R | M | — | — | W | W | D |
+
+Every idea also gets deliberate practice in each module's Skill Builder (see [Practising the Basics](#practising-the-basics)).
 
 **R** = Read: meets it in programs students read, predict, and trace. **M** = Modify: changes existing code that uses it. **W** = Write: writes new code with it. **D** = Design: chooses and combines it in their own project.
 
+## The Toolkit Thread {#the-toolkit-thread}
+
+Students keep one folder, **My Computer Toolkit**, for the whole course. Each module's assignment adds a part, so students keep reopening and improving their own earlier code instead of starting fresh. From Module 4 on, toolkit files import functions from each other.
+
+| Module | Adds to the toolkit | Skill level |
+|---|---|---|
+| 1 | `report_card.py`: facts about this computer | Read and modify |
+| 2 | `drive_check.py`: storage and core checks with warning levels | Write |
+| 3 | `benchmark.py`: a benchmark suite as functions | Write |
+| 4 | `password_tools.py`: the first module of the student's own reusable functions | Write and reuse |
+| 5 | `network_check.py`, which writes `network_log.csv` | Combine; write files |
+| 6 | `folder_detective.py` and `backup.py`, which also analyze the Module 5 log | Extend and combine |
+| 7 | The class's "Lab Health Check" assembles everyone's toolkits; individual projects may build on them | Design |
+
+## Practising the Basics {#practising-the-basics}
+
+A spiral brings every idea back, but basics also need practice until they're automatic. Each module has:
+
+- **A Skill Builder page:** short drills on the module's basics and earlier ones (predict the output, fix the error, Parsons problems, fill in the blank, write a tiny program). Drills can be plainer than lessons; not every exercise needs to be about hardware.
+- **Quick Builds:** two small graded programs before the module assignment, such as a system banner and a parts receipt in Module 1, or a file name cleaner in Module 4.
+- **Spaced warm-ups:** every lesson's review includes a question from two or more lessons back, often an earlier module.
+
+## Course Tools {#course-tools}
+
+- **Sample folder generator (planned):** `make_sample_folder.py` builds a realistic, messy folder for file lessons: text, CSV, Python, and log files, real PNG images, zip archives, sub-folders, awkward names, duplicates, and backdated files. It uses only the standard library. With a fixed seed every student gets the same folder, so answer keys have exact answers; `--seed` gives each student a different one. It deletes only inside folders it created itself, so students can rebuild after a mistake. An optional `--download` adds real, licence-checked files hosted on this site, falling back to local generation if the network blocks it. Used in Modules 1, 5 (reading its download code), 6, and 7.
+
 ## Modules
+
+Each module's overview page has its planned lessons, anchor programs, and assignment. This section is the summary.
 
 ### Module 1 — About This Computer (15 h)
 
 **Purpose:** Ask the computer about itself.
 
-**Anchor programs:** a two-line program that prints the CPU type (`platform.machine()`); a labelled computer report built from the `platform` module; a report that stores answers in variables; later, a version that asks the user's name and greets them with a hardware summary, and one that loops through a list of facts.
+**Anchor programs:** a two-line program that prints the CPU type (`platform.machine()`); a labelled computer report built from the `platform` module and stored in variables; a greeter that asks the user's name and gives a hardware summary; a report that loops through a list of facts.
 
 **Pacing:** one library first. Lessons 1–2 use only `platform`, starting from a single line. Other modules (`os` for cores, `shutil` for storage) wait until Module 2.
 
-- **Taught explicitly:** what a program is; reading and predicting output; `import` and calling a module's functions; `print()` and f-strings; variables; tracing line by line; finding tools with `dir()` and the documentation; comments and naming conventions; syntax and run-time errors and how to read them
+- **Taught explicitly:** what a program is; reading and predicting output; `import` and calling a module's functions; `print()` in depth (arguments, `sep`, `end`, escape characters) and f-strings; variables and the basic types (`str`, `int`, `float`); simple arithmetic; tracing line by line; finding tools with `dir()` and the documentation; comments and naming conventions; syntax and run-time errors and how to read them
 - **Met through reading:** `input()`, a simple `if`, a `for` loop over a list
-- **Computer science:** CPU types (`arm64`, `x86_64`) and operating systems; where code runs: the classroom computer, a virtual computer in the browser, and a cloud server (Google Colab); where variables live (RAM) and where arithmetic happens (CPU); source code vs. machine code; interpreters vs. compilers; the parts of the programming environment; organizing program files
+- **Computer science:** CPU types and operating systems; where code runs (classroom computer, browser, cloud); where variables live (RAM) and where arithmetic happens (CPU); source code vs. machine code (bytecode with `dis`); interpreters vs. compilers; applications, languages, and operating systems; organizing program files
 
-**Expectations:** A1.1, A2.1, A2.2, A3.1, A4.2, A4.3, A4.4, C1.1, C1.4, C2.1, C3.1, C3.3, C3.4, C3.5
+**Quick Builds:** System Banner, Parts Receipt. **Assignment:** Computer Report Card. **Expectations:** A1.1, A2.1, A2.2, A3.1, A4.2, A4.3, A4.4, C1.1, C1.4, C2.1, C3.1, C3.3, C3.4, C3.5
 
-### Module 2 — Spec Checker (17 h)
+### Module 2 — Spec Checker (15 h)
 
 **Purpose:** Decide whether a computer meets a user's needs.
 
-**Anchor programs:** a storage calculator (bytes to gigabytes, percentage used); a "will this game run?" checker comparing a computer's specifications to requirements; a computer recommender for different users.
+**Anchor programs:** a core counter (`os.cpu_count()`); a storage calculator (why "1 TB" shows as 931 GB); a drive gauge (`shutil.disk_usage()`); "Will this game run?"; a monitor sharpness (pixels per inch) calculator.
 
-- **New modules, one at a time:** `os.cpu_count()` for cores, then `shutil.disk_usage()` for storage
-- **Taught explicitly:** input and type conversion; data types; arithmetic, integer division, remainder, order of operations; comparison and logical operators; `if`/`elif`/`else`; handling bad input with `try`/`except`; user-friendly prompts and messages; test plans with normal and boundary cases
-- **Revisited and extended:** output formatting, variables, reading error messages
-- **Met through modifying:** a loop that checks a list of requirements; string methods for cleaning input (`.strip()`, `.lower()`)
-- **Computer science:** internal components and peripherals and their specifications; relating specifications to user requirements; the input-process-output model
+- **Taught explicitly:** input and type conversion; data types; arithmetic, integer division, remainder, order of operations; comparison and logical operators; `if`/`elif`/`else`; `try`/`except` for bad input; user-friendly prompts and messages; test plans with normal, boundary, and invalid cases
+- **Met through modifying:** a loop over a list of requirements; `.strip()` and `.lower()` for cleaning input
+- **Computer science:** internal components, specifications, and peripherals related to user needs; the input-process-output model
 
-**Expectations:** A1.1, A1.3, A1.4, A2.1, A2.2, A4.1, A4.3, A4.5, B1.1, B1.3, B2.5, B3.2, B3.3, B4.4, C1.1, C1.2, C1.3
+**Quick Builds:** Storage Unit Converter, Battery Life Estimator. **Assignment:** Will It Run? **Expectations:** A1.1, A1.3, A1.4, A2.1, A2.2, A4.1, A4.3, A4.5, B1.1, B1.3, B2.5, B3.2, B3.3, B4.4, C1.1, C1.2, C1.3
 
-### Module 3 — Games of Chance (17 h)
+### Module 3 — Benchmark Lab (14 h)
 
-**Purpose:** Build games and simulations with randomness.
+**Purpose:** Measure how fast the computer really is.
 
-**Anchor programs:** dice rolling and a simulation of 1000 rolls; a number-guessing game; rock-paper-scissors against the computer; a "lucky prime" challenge.
+**Anchor programs:** count to a million with a stopwatch; a benchmark suite (counting, string building, checking primes); a study timer; a reaction timer; "Is shuffle really random?"; a typing speed test.
 
-- **Taught explicitly:** `while` loops (game loops, input validation); `for` loops and `range()`; counters and accumulators; nested loops and decisions; the `random` module; writing first simple functions; flow charts and pseudocode; debugging by tracing and printing variables
-- **Revisited and extended:** decisions, input validation, test plans, formatted output
-- **Met through modifying:** lists of choices; strings in game messages
-- **Computer science:** problem-solving strategies; designing from a program skeleton; determining primes
+- **Taught explicitly:** `for` loops and `range()`; `while` loops; counters and accumulators; nested loops and decisions; the `time` and `random` modules; reading and modifying first functions; flow charts and pseudocode; program skeletons; debugging by tracing and printing variables
+- **Met through modifying:** a list of counts; `random.shuffle()`; strings in prompts and messages
+- **Computer science:** benchmarks and fair tests; how CPU type, cores, and the interpreter affect speed; running the same code on different machines; determining primes
 
-**Expectations:** A2.2, A2.3, A3.1, A3.2, A4.1, A4.4, B1.1, B2.1, B2.4, B3.2, B4.5
+**Quick Builds:** Download Time Table, Study Timer. **Assignment:** Typing Speed Test, with a benchmark report. **Expectations:** A2.2, A2.3, A3.1, A3.2, A4.1, A4.4, B1.1, B2.1, B2.4, B3.2, B4.5, C1.2, C1.4
 
-### Module 4 — Secret Messages (17 h)
+### Module 4 — Passwords and Secret Messages (15 h)
 
-**Purpose:** Hide and reveal messages, and learn how computers store text.
+**Purpose:** Learn how computers store text, and keep it safe.
 
-**Anchor programs:** a binary and hexadecimal converter; a program that shows the Unicode value of every character in a message; a Caesar cipher that encodes and decodes; a password strength checker.
+**Anchor programs:** a binary and hex converter; a Unicode inspector; a password strength checker; a crack-time estimator (using Module 3's benchmark); a Caesar cipher (short activity) that shows why simple ciphers aren't secure.
 
-- **Taught explicitly:** strings as sequences (indexing, slicing, traversal, methods); `ord()` and `chr()`; writing functions with parameters and return values; local and global scope; reusable modules
-- **Revisited and extended:** loops, decisions, input validation, debugging
-- **Met through modifying:** lists of words and characters
-- **Computer science:** binary, hexadecimal, ASCII, and Unicode; cryptography as a research area; malware and a system protection plan; backing up and archiving files
+- **Taught explicitly:** strings as sequences (indexing, slicing, traversal, methods); `ord()` and `chr()`; writing functions with parameters and return values; local and global scope; reusable modules; `secrets` and `hashlib`
+- **Computer science:** binary, hexadecimal, ASCII, and Unicode; how websites store passwords; cryptography as a research area; malware and a system protection plan
 
-**Expectations:** A1.2, A3.1, A3.2, A4.1, B1.1, B2.3, C2.2, C2.3, D2.1
+**Quick Builds:** Username Maker, File Name Cleaner. **Assignment:** Password Toolkit, with a home system protection plan. **Expectations:** A1.2, A3.1, A3.2, A4.1, B1.1, B2.3, B4.4, C2.2, D2.1
 
-### Module 5 — Data Detective (18 h)
+### Module 5 — On the Network (14 h)
 
-**Purpose:** Investigate real data about computers and the environment.
+**Purpose:** Find out how the computer talks to the rest of the world.
 
-**Anchor programs:** an analysis of device power use and e-waste data; a class survey analyzer; a sorted leaderboard that accepts new scores and removes old ones.
+**Anchor programs:** "Who am I on the network?" (host name and local IP address); an IP address explainer (list of octets in binary, private or public); a website lookup (DNS); a response timer; a download speed test.
 
-- **Taught explicitly:** lists as one-dimensional arrays (elements, indexes, bounds); creating, modifying, and accessing lists; count, total, highest and lowest value, linear search; inserting into a sorted list and deleting from the middle; breaking a program into functions; structure charts; describing and comparing program designs
-- **Revisited and extended:** functions and scope, loops, strings, testing with a full range of cases
-- **Computer science:** environmental and health effects of computer use; reducing the impact of computers; using computers to protect the environment; recycling and community partners
+- **Taught explicitly:** lists as one-dimensional arrays (elements, indexes, bounds); `.split()` and `.append()`; count, total, highest, lowest; exceptions for network failures; testing with good, slow, and broken inputs; writing files (a CSV log with timestamps); `socket`, `ipaddress`, `urllib`, and `datetime`
+- **Computer science:** IP addresses, DNS, ports, packets, and routers; private and public networks; firewalls; running a web server; distributed computing; data flow diagrams
 
-**Expectations:** A1.5, A1.6, A2.3, A3.2, A4.4, A4.5, B2.2, B2.3, B2.4, B3.1, D1.1, D1.2, D1.3, D1.4
+**Quick Builds:** Speed Log Summary, Web Address Splitter. **Assignment:** Is It Me or the Wi-Fi? **Expectations:** A1.2, A1.5, A1.6, A2.3, A3.1, A3.2, A4.5, B1.1, B2.4, B3.3, D2.1
 
-### Module 6 — Software Development Project (20 h)
+### Module 6 — Data Detective (15 h)
 
-**Purpose:** Plan, build, test, and present a program of the student's own design.
+**Purpose:** Investigate data about the computer and its use.
 
-- **Taught explicitly:** phases, milestones, and products of the software development life cycle; clarifying a specification (dialogue, questionnaires, research); Gantt charts and milestones in a teacher-led project; written status reports
+**Anchor programs:** a folder detective on a generated sample folder (files by type, total size, biggest, oldest, duplicates); a top-ten list of the biggest files kept in sorted order; a backup maker that verifies copies with hashes; an analysis of the students' own Module 5 network log; the computer lab's yearly power bill from a CSV file.
+
+- **Taught explicitly:** lists and parallel lists; linear search; highest and lowest value; inserting into a sorted list and deleting from the middle; reading CSV files; breaking a program into functions; structure charts; describing and comparing designs; testing with a full range of cases
+- **Computer science:** organizing files and folders; backing up and archiving (the 3-2-1 rule); environmental and health effects of computer use; reducing them; e-waste, refurbishing, and community partners
+
+**Quick Builds:** Extension Report, Duplicate Finder. **Assignment:** Folder Detective. **Expectations:** A1.5, A1.6, A2.3, A3.2, A4.4, A4.5, B2.2, B2.3, B2.4, B3.1, C2.1, C2.3, D1.1, D1.2, D1.3, D1.4
+
+### Module 7 — Software Development Project (16 h)
+
+**Purpose:** Plan, build, test, and present a useful program for a real person.
+
+- **Part 1, teacher-led class project (about 4 h):** "Lab Health Check", built by teams from earlier modules' code; the software development life cycle, a Gantt chart, and milestones practised together
+- **Part 2, individual or pair project (about 12 h):** a real user; specification by interview or questionnaire; design documents; test plan first; written status reports; presentation
 - **Design level:** students choose and combine every idea from the spiral
-- **Working practices:** working independently with documentation and as part of a team; test plans; debugging; professional code conventions
 
 **Expectations:** A4.2, A4.5, B1.2, B2.1, B2.2, B2.3, B2.4, B2.5, B4.1, B4.2, B4.3, B4.4, B4.5, B4.6, C3.2
 
-### Computer Science in the World (6 h, alongside Modules 2–5)
+### Computer Science in the World (6 h, between Modules 2–6)
 
 **Purpose:** See where computer science leads.
 
-Short lessons placed between modules, with an independent research report submitted in stages:
-
-- Emerging research areas (e.g., artificial intelligence, cryptography, computer vision) and collaborative research with other fields
-- Research report on an area of computer science, in a format of the student's choice
-- Careers, trends, experiential learning, postsecondary programs, and supports for non-traditional career choices
-- Essential Skills and work habits (Ontario Skills Passport)
+Five short lessons, each placed after a module and tied to it (careers in hardware after Module 2, distributed computing after Module 3, security after Module 4, collaborative research after Module 5, postsecondary programs after Module 6), plus a research report submitted in stages.
 
 **Expectations:** D2.1, D2.2, D2.3, D3.1, D3.2, D3.3, D3.4, D3.5
 
@@ -151,55 +183,55 @@ Every specific expectation is addressed in at least one module. "World" is Compu
 | Expectation | Modules |
 |---|---|
 | A1.1 | 1, 2 |
-| A1.2 | 4 |
+| A1.2 | 4, 5 |
 | A1.3 | 2 |
 | A1.4 | 2 |
-| A1.5 | 5 |
-| A1.6 | 5 |
+| A1.5 | 5, 6 |
+| A1.6 | 5, 6 |
 | A2.1 | 1, 2 |
 | A2.2 | 1, 2, 3 |
-| A2.3 | 3, 5 |
-| A3.1 | 1, 3, 4 |
-| A3.2 | 3, 4, 5 |
+| A2.3 | 3, 5, 6 |
+| A3.1 | 1, 3, 4, 5 |
+| A3.2 | 3, 4, 5, 6 |
 | A4.1 | 2, 3, 4 |
-| A4.2 | 1, 6 |
+| A4.2 | 1, 7 |
 | A4.3 | 1, 2 |
-| A4.4 | 1, 3, 5 |
-| A4.5 | 2, 5, 6 |
-| B1.1 | 2, 3, 4 |
-| B1.2 | 6 |
+| A4.4 | 1, 3, 6 |
+| A4.5 | 2, 5, 6, 7 |
+| B1.1 | 2, 3, 4, 5 |
+| B1.2 | 7 |
 | B1.3 | 2 |
-| B2.1 | 3, 6 |
-| B2.2 | 5, 6 |
-| B2.3 | 4, 5, 6 |
-| B2.4 | 3, 5, 6 |
-| B2.5 | 2, 6 |
-| B3.1 | 5 |
+| B2.1 | 3, 7 |
+| B2.2 | 6, 7 |
+| B2.3 | 4, 6, 7 |
+| B2.4 | 3, 5, 6, 7 |
+| B2.5 | 2, 7 |
+| B3.1 | 6 |
 | B3.2 | 2, 3 |
-| B3.3 | 2 |
-| B4.1 | 6 |
-| B4.2 | 6 |
-| B4.3 | 6 |
-| B4.4 | 2, 6 |
-| B4.5 | 3, 6 |
-| B4.6 | 6 |
+| B3.3 | 2, 5 |
+| B4.1 | 7 |
+| B4.2 | 7 |
+| B4.3 | 7 |
+| B4.4 | 2, 4, 7 |
+| B4.5 | 3, 7 |
+| B4.6 | 7 |
 | C1.1 | 1, 2 |
-| C1.2 | 2 |
+| C1.2 | 2, 3 |
 | C1.3 | 2 |
-| C1.4 | 1 |
-| C2.1 | 1 |
+| C1.4 | 1, 3 |
+| C2.1 | 1, 6 |
 | C2.2 | 4 |
-| C2.3 | 4 |
+| C2.3 | 6 |
 | C3.1 | 1 |
-| C3.2 | 6 |
+| C3.2 | 7 |
 | C3.3 | 1 |
 | C3.4 | 1 |
 | C3.5 | 1 |
-| D1.1 | 5 |
-| D1.2 | 5 |
-| D1.3 | 5 |
-| D1.4 | 5 |
-| D2.1 | 4, World |
+| D1.1 | 6 |
+| D1.2 | 6 |
+| D1.3 | 6 |
+| D1.4 | 6 |
+| D2.1 | 4, 5, World |
 | D2.2 | World |
 | D2.3 | World |
 | D3.1 | World |
@@ -213,10 +245,10 @@ Every specific expectation is addressed in at least one module. "World" is Compu
 Following Ontario's *Growing Success* policy: 70% of the final grade comes from evaluations during the course and 30% from final evaluations.
 
 - **Every lesson:** an exit ticket, usually a code-reading or tracing question (assessment *for* and *as* learning, not counted toward the grade).
-- **Within each module:** short quizzes, and a few small programs built from the anchor programs.
-- **End of Modules 1–5:** a module test that always includes a code-reading and tracing section. Because the course spirals, every test may include earlier ideas.
+- **Within each module:** short quizzes, two Quick Builds (small graded programs), and the module assignment, which adds to the student's toolkit.
+- **End of Modules 1–6:** a module test that always includes a code-reading and tracing section and a short basics section. Because the course spirals, every test may include earlier ideas.
 - **Computer Science in the World:** the staged research report.
-- **Final 30%:** the Module 6 software development project and a final exam that includes code reading and tracing.
+- **Final 30%:** the Module 7 software development project and a final exam that includes code reading and tracing.
 
 ## Python Notes for Teachers {#python-notes}
 
@@ -226,8 +258,8 @@ The 2008 curriculum uses general terms. In Python:
 - **One-dimensional arrays** (A1.5, A1.6) are taught as Python lists, used with a single data type and fixed purpose.
 - **Procedures** (A3.2) are functions that do not return a value.
 - **Compiler error messages** (A4.3) appear in Python as tracebacks; C3.4 contrasts Python's interpreter with compiled languages such as C or Java.
-- **Hardware programs** use only the standard library (`platform`, then `os` and `shutil`). Results depend on where the code runs: macOS reports itself as "Darwin"; the course website's runnable code reports a browser virtual computer (`wasm32`, `Emscripten`); Google Colab reports a Google cloud server (typically `x86_64`, `Linux`). These differences are a deliberate teaching point. Use `platform.machine()` for the CPU type; `platform.processor()` is unreliable across systems. Total RAM is not available from the standard library.
+- **Hardware and network programs** use only the standard library (`platform`, then `os`, `shutil`, `time`, `socket`, `ipaddress`, and `urllib`). Network programs need a real computer: the site's browser boxes can't open network connections. Results depend on where the code runs: macOS reports itself as "Darwin"; the course website's runnable code reports a browser virtual computer (`wasm32`, `Emscripten`); Google Colab reports a Google cloud server (typically `x86_64`, `Linux`). These differences are a deliberate teaching point. Use `platform.machine()` for the CPU type; `platform.processor()` is unreliable across systems. Total RAM is not available from the standard library.
 
 ## Teaching Approach {#teaching-approach}
 
-Every lesson follows the course's reading-first approach: students read, trace, and predict code before they write it. Each lesson moves through review, a teacher-led worked example, then Predict, Run, Investigate, Modify, and Make (PRIMM). Writing new code from scratch always comes after reading and modifying.
+Every lesson follows the course's reading-first approach: students read, trace, and predict code before they write it. Each lesson opens with review and a useful problem ("How could we check 500 files without opening each one?"), then moves through a teacher-led worked example, then Predict, Run, Investigate, Modify, and Make (PRIMM). Writing new code from scratch always comes after reading and modifying.

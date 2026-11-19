@@ -45,7 +45,7 @@ Follow the lesson plan's timings. Every lesson follows the same rhythm:
 | Review or warm-up | Short retrieval or guessing questions | Slides |
 | Teach | You read a worked example aloud and trace it | Slides, your computer |
 | Predict, then run | Students write a prediction, then step through the code | Slides; students' computers |
-| Investigate | Trace tables and line-by-line questions | Slides; students copy tables into their notebooks |
+| Investigate | Trace tables and line-by-line questions | Slides; students copy tables into their tracing notebooks |
 | Modify | Students change working code | Students' computers |
 | Make | Students write a little code of their own | Students' computers |
 | Check | Exit ticket: one short reading question | Slides, paper |
@@ -60,6 +60,38 @@ Follow the lesson plan's timings. Every lesson follows the same rhythm:
 The whole site is public, so students *can* open the lesson plans. They don't reveal quiz answers, but they do show what's coming next. In your learning management system, share the **slides** and **practice** links (and the **assignment** at the end of the module), and keep the lesson plans for yourself.
 
 The step-through boxes are cramped on a phone. In class, students should use a computer.
+
+### Where students write answers
+
+- **Tracing notebook:** every student keeps a paper notebook for predictions, trace tables, and short answers, in class and on Practice pages. Tracing by hand is the point, and there's nothing to save or lose. (It's called a *tracing* notebook so it isn't confused with Jupyter notebooks.)
+- **Anything handed in:** written answers go in comments in the `.py` file, at the top. Assignments come with a starter file that has a space for every answer.
+- The prediction box in the step-through boxes isn't saved. It keeps the prediction next to the real output while students compare.
+
+### Handing In Work {#handing-in-work}
+
+**On day one,** students follow [Set Up Your Course Folder](course-folder.qmd): an `ics3u` folder in their home folder with a sub-folder for each module and lesson. Check it in Lesson 2; it saves a lot of "I can't find my file" later.
+
+**What gets handed in, and in what format:**
+
+| Work | Format | Notes |
+|---|---|---|
+| Lesson Make programs (optional) | `.py` file | Written answers in a comment at the top, output pasted at the bottom |
+| Quick Builds | `.py` file | Small graded programs, two per module |
+| Module assignments: the code | Starter `.py` file | Has a space for every short answer |
+| Module assignments: longer written parts | Document (planned) | Test plans, structure charts, the Module 4 protection plan, write-ups |
+| Module 7 project documents | Document (planned) | Specification, Gantt chart, test plan, status reports |
+| Research report (Computer Science in the World) | Student's choice | Website, slides, or video |
+| Practice pages | Not collected | Tracing notebook; spot-check as you circulate |
+
+**Not everything is Python.** Code and short answers belong in the `.py` file, but longer writing and tables are easier in a document. Downloadable **Word** documents (which also open in Google Docs) and **fillable PDFs** are planned for these parts. Until they arrive, students can use a Word or Google Docs copy of the instructions.
+
+**Jupyter notebooks** are fine where your class uses Colab or the Callysto Hub: students answer in text cells and hand in the `.ipynb` file. Remember that notebooks online report a different computer.
+
+**Practical tips:**
+
+- Pick one file-naming rule, such as `lastname_m01_report_card.py`, and use it all year. Your learning management system may rename files anyway; a clear name still helps when you download them all.
+- Download a whole class's submissions into one folder and run each program. Most marking starts with "does it run?"
+- From Module 6 on, students generate their own sample folder with their own seed, so each student's output is different.
 
 ### End of module
 

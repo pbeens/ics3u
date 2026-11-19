@@ -13,7 +13,25 @@ subtitle: "About 15 hours · For teachers"
 |---|---|---|---|
 | 1. Ask the Computer About Itself | [Lesson plan](lesson-01-ask-the-computer.qmd) | [Slides](lesson-01-ask-the-computer-slides.qmd) | [Practice](practice.qmd#after-lesson-1-ask-the-computer-about-itself) |
 | 2. Exploring the platform Library | [Lesson plan](lesson-02-exploring-platform.qmd) | [Slides](lesson-02-exploring-platform-slides.qmd) | [Practice](practice.qmd#after-lesson-2-exploring-the-platform-library) |
-| More lessons | Coming soon | | |
+
+### Planned lessons
+
+::: {.callout-note appearance="simple"}
+**Planned, not yet written.** Titles and focus may change as lessons are built.
+:::
+
+| Lesson | Focus | Students read, then build |
+|---|---|---|
+| 3. Getting Output Right | `print()` in depth: several arguments, `sep` and `end`, `\n` and `\t`, quotes inside strings, commas vs. `+`, common mistakes | A system info banner |
+| 4. Better Reports with f-strings | f-strings; comments; naming conventions (A4.2) | Turn the Lesson 2 report into a tidy, aligned report card |
+| 5. Values and Types | `str`, `int`, `float`, `type()`; simple arithmetic; why `"8" + "8"` is `"88"` (A1.1) | Pull numbers out of the Python version and do arithmetic with them |
+| 6. Where Do My Programs Live? | Files, folders, and paths; organizing a course folder on local and shared drives; the parts of the editor (C2.1, C3.1); first run of the sample folder generator; reading a two-line program that prints the current folder | Explain the course folder students set up on day one, then add the toolkit folder; run the same file from the editor and the terminal |
+| 7. What Python Actually Runs | Source code vs. machine code; interpreters vs. compilers; bytecode with `dis`; applications vs. languages vs. operating systems (C3.3, C3.4, C3.5) | Match `dis` output to lines of code; sort running programs into apps, languages, and OS parts |
+| 8. Inside the Computer: RAM and CPU | Where variables live and where arithmetic happens; `sys.getsizeof()` and `id()` (C1.1, C1.4) | Trace a program and label each line "RAM" or "CPU" |
+| 9. Talking Back with `input()` | Reading a program that greets the user by name and gives a hardware summary (A2.1) | Modify the greeter's questions and messages |
+| 10. A First Look at Decisions and Loops | Reading a simple `if` (e.g., "if this is Windows…") and a `for` loop over a list of facts | Predict the output on three different operating systems |
+| 11. Error Clinic and Review | Syntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4) | Fix five broken report programs |
+| 12. Module 1 test | Code reading and tracing; a short basics section | |
 
 Each lesson plan's **Code for This Lesson** section has the `.py` files and notebooks. Students find the same files at the end of each lesson's section on the Practice page.
 
@@ -21,11 +39,22 @@ Each lesson plan's **Code for This Lesson** section has the `.py` files and note
 
 [**Computer Report Card**](assignment.qmd) (ready for Lessons 1–2; will grow with the module). Students read and trace a short program, write a report card using five `platform` functions stored in variables, then run it in two places and explain the difference. Students hand in one `.py` file built from a starter file.
 
+**Planned additions:** an f-string version of the report, a short `input()` greeting, and a written part explaining what happens inside the computer when the report runs (RAM, CPU, interpreter).
+
+**Adds to the toolkit:** `report_card.py`, the first file in the student's **My Computer Toolkit** folder, which grows in every module ([see the toolkit thread](../../scope-and-sequence.qmd#the-toolkit-thread)).
+
+## Practising the Basics (Planned)
+
+- **Skill Builder:** short drills on `print()` arguments, `sep` and `end`, escape characters, quotes, variables, types, f-strings, and reading a traceback. Each drill set opens with predict-the-output and fix-the-error questions.
+- **Quick Builds** (small graded programs, before the assignment):
+  - **System Banner:** a boxed title banner for the computer, with exact spacing.
+  - **Parts Receipt:** a receipt for computer parts, with prices, HST, and a total in aligned columns.
+
 ## How Module 1 Fits
 
 - **Before:** nothing. This is the first module; students need no programming experience.
-- **Planned for the rest of the module:** f-strings, comments and naming, `input()` to greet the user, and reading a simple `if` and a `for` loop over a list of facts. See the [Scope and Sequence](../../scope-and-sequence.qmd#module-1-about-this-computer-15-h).
-- **Next:** Module 2, Spec Checker, adds `os` and `shutil` to check whether a computer meets a program's requirements.
+- **Planned for the rest of the module:** see Planned lessons above, and the [Scope and Sequence](../../scope-and-sequence.qmd).
+- **Next:** [Module 2, Spec Checker](../module-02-spec-checker/index.qmd), adds `os` and `shutil` to check whether a computer meets a program's requirements.
 
 New to the course? Read [How a Lesson Works](../../how-a-lesson-works.qmd) first.
 

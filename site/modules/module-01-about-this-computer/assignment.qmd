@@ -7,7 +7,7 @@ expectations: [A1.1, A2.2, A3.1, A4.3, A4.4, C1.1, C3.1]
 ---
 
 ::: {.callout-note appearance="simple"}
-**For students.** Covers Lessons 1–2. Work on your classroom computer (Thonny, IDLE, or VS Code). **Hand in:** one `.py` file. Start from the [starter file](examples/m01_report_card_starter.py){download="report_card_starter.py"}: it has spaces for your Part A and Part C answers, and a place for your Part B program. · [Module 1 overview](index.qmd)
+**For students.** Covers Lessons 1–2. Work on your classroom computer (Thonny, IDLE, or VS Code). **Hand in:** one `.py` file. Start from the [starter file](examples/m01_report_card_starter.py){download="report_card_starter.py"}: it has spaces for your Part A and Part C answers, and a place for your Part B program. Save it in `ics3u/module-01/assignment/` in your [course folder](../../course-folder.qmd). · [Module 1 overview](index.qmd)
 :::
 
 ::: {.callout-warning appearance="simple"}
@@ -16,7 +16,7 @@ expectations: [A1.1, A2.2, A3.1, A4.3, A4.4, C1.1, C3.1]
 
 ## Part A: Read
 
-Read this program **without running it**, then answer the questions. Use the line numbers shown.
+Read this program **without running it**, then answer the questions in **Part A of your starter file** (the comments near the top). Use the line numbers shown.
 
 ```{.python .number-lines}
 import platform
@@ -68,14 +68,14 @@ Operating system: Windows
 
 ## Part C: Run It in Two Places
 
-1. Run your program on the classroom computer and copy the output into a comment at the bottom of your file.
+1. Run your program on the classroom computer and paste the output into Part C of your starter file.
 2. Paste the same program into the box below and run it in the browser. The first run downloads Python into the browser (about 10 MB), so it can take a few seconds.
 
 ```{pyodide}
 # Paste your program here and run it.
 ```
 
-3. Answer in two or three sentences each:
+3. Answer in two or three sentences each, in **Part C of your starter file**:
    a. Which facts were the same in both places? Which were different?
    b. Why are they different? Where did the program actually run each time?
    c. Name one mistake you made while writing the program, and explain how the error message helped you fix it. If you made none, explain what an `AttributeError` would tell you.

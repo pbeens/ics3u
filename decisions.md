@@ -4,6 +4,25 @@ Consequential project decisions, newest first. Current files and newer instructi
 
 ---
 
+## 2026-11-18 — Where students write answers
+
+- **Decision:** Students write predictions, trace tables, and short answers in a paper *tracing notebook*, in class and on Practice pages. Anything handed in has its written answers as comments at the top of the `.py` file; assignments supply a starter file with a space for each answer. Every reading task says where to write. "Notebook" alone means Jupyter on this site.
+- **Context:** Pages said "answer the questions" without saying where, and "notebooks" was ambiguous.
+- **Alternatives:** A `.py` answer file for every Practice section; Google Docs worksheets; answer boxes on the page that save in the browser.
+- **Revisit if:** Teachers want Practice work collected digitally (then add answer files per Practice section).
+
+---
+
+## 2026-11-18 — Seven practical modules (proposed, awaiting author review)
+
+- **Decision (proposed):** Reorganize the course into seven modules, all about the student's own computer, its use, and its connections: About This Computer (14 h), Spec Checker (15), Benchmark Lab (15, replaces Games of Chance), Passwords and Secret Messages (15), On the Network (14, new), Data Detective (15, now about files, backups, and energy), Software Development Project (16, down from 20, starting with a teacher-led class project), plus Computer Science in the World (6). Each module has an overview page with planned lessons and a practical assignment.
+- **Context:** The author asked for plans for every module, with practical assignments for students who want to learn about their computers and computer use, and earlier asked where networking projects fit.
+- **Alternatives:** Keep six modules and fold networking into Secret Messages (too crowded); keep Games of Chance (less tied to computers).
+- **Revisit if:** The author prefers the original six, or the network module is impractical on school networks.
+- **Update (same day, approved by the author):** Basics get deliberate practice (Skill Builders, Quick Builds, spaced warm-ups); students build one "My Computer Toolkit" across modules; assignments must pass the "would a non-programmer use this?" test; file work uses a generated sample folder (`make_sample_folder.py`), not students' own files. Module 1 is 15 h and Module 3 is 14 h. Some ideas came from a ChatGPT review the author shared.
+
+---
+
 ## 2026-11-15 — Lesson plans are for teachers; students use slides, code, and practice pages
 
 - **Decision:** Each lesson has one page, the lesson plan, for teachers. It opens with a "For teachers" banner and an At a Glance summary. Students work from the slides, the `.py` files and notebooks, and each module's interactive Practice and Assignment pages on the site. Downloadable versions (Google Docs, Word, or PDF) may come later.
@@ -54,6 +73,7 @@ Consequential project decisions, newest first. Current files and newer instructi
 - **Decision:** The course assumes Python runs locally on teacher and student computers (lab, refurbished, or Raspberry Pi). Browser and cloud options (this site's runnable boxes, Colab, Callysto Hub) are backups and comparison points only. Setup guidance is on the site's Before You Begin page.
 - **Context:** Hardware and system programs report a different machine when run online, and online notebooks can't see local files, drives, or the network.
 - **Revisit if:** A school can only provide Chromebooks or browser access.
+- **Update (2026-11-18):** The site now says bluntly that the course needs open computers: ideally standalone refurbished computers outside board management, with no software restrictions; managed lab computers only if IT opens them up. Students' own computers are mentioned but not recommended. Before You Begin lists what students' programs need and what managed computers usually block.
 
 ---
 

@@ -40,7 +40,7 @@ Students can say:
 
 ## Review (5 min)
 
-Without running anything, answer:
+Without running anything, answer in tracing notebooks:
 
 1. What does `platform.machine()` print on the classroom computer? On the course web page?
 2. What does the dot in `platform.machine()` mean? What do the parentheses mean?
@@ -67,7 +67,7 @@ Open the official documentation for the module: [docs.python.org/3/library/platf
 
 ## Predict, Then Step (15 min)
 
-This is Lesson 1's computer report, rewritten so that each answer is stored in a *variable* before it is printed. Read it **without running it**, then answer:
+This is Lesson 1's computer report, rewritten so that each answer is stored in a *variable* before it is printed. Read it **without running it**, then answer in tracing notebooks:
 
 1. Which lines ask the computer a question? Which lines print?
 2. What will the first line of output be?
@@ -186,7 +186,7 @@ print("Again:", cpu)
 ## After the Lesson
 
 - Students do the [Lesson 2 practice](practice.qmd#after-lesson-2-exploring-the-platform-library): trace a program that changes a variable, fix a mistake, and use a function they found with `dir()`.
-- **Suggested hand-in:** the trace table, and the Make program's `.py` file with its output pasted as a comment at the bottom.
+- **Suggested hand-in:** the Make program's `.py` file with its output pasted as a comment at the bottom. Check trace tables in tracing notebooks as you circulate.
 - Students then start the [Module 1 Assignment](assignment.qmd), the Computer Report Card.
 - Read the exit tickets. Students who answered "twice" to question 2 still think a variable re-asks the computer; revisit the trace table.
 

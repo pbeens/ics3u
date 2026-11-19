@@ -7,9 +7,31 @@ subtitle: "Set up a working Python computer for you and your students"
 **Expectations:** C3.1 (software development environment), D1.4 (organizations that refurbish computers)
 :::
 
-This course asks the computer about itself. The first program students read reports the CPU type, the operating system, and the computer's name. Module 2 adds the number of CPU cores and the free disk space, and later modules may look at the network. All of this only means something when the code runs **on the computer in front of the student**.
+This course asks the computer about itself. The first program students read reports the CPU type, the operating system, and the computer's name. Later modules measure the disk, time the processor, test the network, run a small web server, and build, scan, and back up folders of files. All of this only means something when the code runs **on the computer in front of the student**.
+
+::: {.callout-important title="This course needs open computers"}
+Let's be blunt: **a typical board-imaged lab computer will not run this course well.** Students write real utilities, and real utilities do the things locked-down computers are set up to prevent: installing software, using the terminal, keeping files from one class to the next, opening network connections, and running a server.
+
+The ideal is a **standalone computer that students fully control**: not imaged or managed by the board, with a local administrator account and no software restrictions. **Refurbished computers are perfect for this**, and cheap. If you can only get managed computers, take the [list below](#what-students-programs-need) to IT early and ask what they can unlock.
+:::
 
 Get Python working before Lesson 1, both on your own demonstration computer and on the computers your students will use.
+
+## What Students' Programs Need {#what-students-programs-need}
+
+Check each row against the computers you have. The last column is what most often gets in the way on a managed computer.
+
+| Students need to… | Modules | Often blocked on managed computers |
+|---|---|---|
+| Install Python and an editor, and run programs from a terminal | All | Software installs; the terminal or command prompt |
+| Keep their files all year: the toolkit folder, and a log collected over several days | All, especially 5 and 6 | Profiles or drives that reset at log-out; home folders that live only on a network drive |
+| Read system information, folders, and disk usage | 1, 2, 6 | Usually fine, but some settings hide drives or system details |
+| Create, scan, hash, and zip hundreds of sample files | 6, 7 | Security software that flags scripts doing lots of file work |
+| Look up websites, time connections, and download pages from Python | 5 | Web filters and proxies that let the browser through but not Python |
+| Run a small web server that classmates can visit | 5 | Firewalls that need an administrator to allow it |
+| Install an extra library with `pip` (extensions only) | 7 | Software installs; package sites blocked by the filter |
+
+If some rows can't be solved, Modules 1–4 mostly still work. Module 5 is the hardest hit, and Modules 6 and 7 need files that stay put from one class to the next.
 
 ## Your Demonstration Computer
 
@@ -28,22 +50,32 @@ Don't count on a board-imaged laptop letting you install software on the day. As
 
 Students need a place to run, change, break, and fix programs every day, not only to read them. In order of preference:
 
-### 1. Real computers with Python installed
+### 1. Standalone refurbished computers
 
-The best choice. Lab or classroom computers with Python and an editor installed give the real experience: real hardware, real files, and a real operating system to explore.
+The best choice. Older desktops and laptops are cheap, run Python perfectly well, and can be set up with no restrictions, outside the board's management.
 
-### 2. Refurbished computers
-
-Strongly recommended if your school doesn't have enough computers. Older desktops and laptops are cheap and run Python perfectly well.
+- **One computer per student for the semester.** The student keeps their files on it, and looks after it: installing updates, making backups, and following the protection plan they write in Module 4. Looking after a real computer is part of the course.
+- **Reset at the end of the semester.** A fresh install of Linux takes under an hour and gives the next class a clean start.
+- **Network:** ask IT about a separate or guest network, so unmanaged computers can reach the internet for Module 5 without being on the board's own network.
 
 - In Canada, the federal [Computers for Schools Plus](https://ised-isde.canada.ca/site/computers-for-schools-plus/en) program supplies refurbished computers to schools. In Ontario it's run by Renewed Computer Technology. Schools can order through [Computers for Schools Ontario](https://rcto.ca/computers-for-schools/#schoolorder).
 - Many older computers can't run Windows 11, and Windows 10 stopped receiving security updates in October 2025. A free Linux system (for example, Ubuntu or Linux Mint) runs well on older hardware and comes with Python already installed.
 - A room with a mix of Windows, macOS, and Linux computers is a bonus. Each one gives different answers to the same program, which is exactly what Lesson 1 investigates.
 - Refurbishing ties into the curriculum: expectation D1.4 names "private companies that refurbish computers" as an example.
 
+### 2. School computers that IT has opened up
+
+Lab or classroom computers can work if IT can give students what the [table above](#what-students-programs-need) lists: Python and an editor, the terminal, files that persist, and network access from Python. A dedicated "computer science" image, or a separate lab that isn't reset every night, is the usual solution. Ask before the semester starts, not the week of Lesson 1.
+
 ### 3. Raspberry Pi and other small computers
 
 A [Raspberry Pi](https://www.raspberrypi.com) is a small, inexpensive computer. Raspberry Pi OS comes with Python 3 and Thonny already installed. Each one needs a power supply, a microSD card, and a monitor, keyboard, and mouse (classroom monitors often work). Its ARM processor reports something different again (on the 64-bit system, `aarch64` and `Linux`), which makes for a good comparison. Other small or portable computers that can install Python work too.
+
+::: {.callout-note title="Students' own computers"}
+We don't recommend *requiring* students to bring their own computers. Not every student has one, it raises privacy and school-policy questions, and a mistake in a student's program could affect their personal files.
+
+Where your school allows it and a student prefers to use their own computer, the course is designed to keep the risk low. File lessons use a [generated sample folder](scope-and-sequence.qmd#course-tools), not personal files, and Module 6's programs only read files, never delete them. Suggest a separate user account for course work.
+:::
 
 ::: {.callout-tip title="Chromebooks"}
 If your board allows it, a Chromebook's **Linux development environment** can install Python and Thonny. The code runs inside a Linux container, so it reports Linux rather than ChromeOS. That's a good discussion point, but it isn't the same as a computer running Python directly.
@@ -70,8 +102,11 @@ Online notebooks also can't see the student's own files, drives, or classroom ne
 ## Checklist Before Lesson 1
 
 - [ ] Python 3 and an editor are installed on your demonstration computer, and it works with the projector.
-- [ ] Every student has a computer that runs Python locally (lab computer, refurbished computer, Raspberry Pi, or a similar device).
+- [ ] Every student has a computer that runs Python locally (refurbished computer, opened-up lab computer, Raspberry Pi, or a similar device).
+- [ ] You've checked those computers against [What Students' Programs Need](#what-students-programs-need), or talked to IT about the rows that are blocked.
 - [ ] You've run `l01_computer_report.py` on both your computer and a student computer, and noted what each reports.
+- [ ] You've decided how students will hand in work and name their files (see [Handing In Work](how-a-lesson-works.qmd#handing-in-work)), and students know to follow [Set Up Your Course Folder](course-folder.qmd).
+- [ ] Every student has a paper **tracing notebook** for predictions and trace tables.
 - [ ] The lesson pages load on student computers. The runnable boxes download about 10 MB the first time.
 - [ ] You know whether Colab or the Callysto Hub works for your students' accounts, in case you need a backup.
 

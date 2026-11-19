@@ -19,7 +19,7 @@ expectations: [A2.2, A3.1, C1.1]
 - **Big idea:** a program can ask the computer about itself, and the answer depends on which computer runs it.
 - **Students will:** guess their computer's processor and operating system, read and step through a four-line program that checks, then change it.
 - **Students make:** a short report program that prints the operating system and its version.
-- **Prepare:** run `l01_computer_report.py` on your computer and on a student computer; optionally in Colab for the demonstration.
+- **Prepare:** run `l01_computer_report.py` on your computer and on a student computer; optionally in Colab for the demonstration. Students need their [course folder](../../course-folder.qmd) before Make: set it up beforehand, or take the first five minutes of Make.
 - **After class:** [Lesson 1 practice](practice.qmd#after-lesson-1-ask-the-computer-about-itself).
 - **Where it fits:** the first lesson of [Module 1](index.qmd). Lesson 2 adds `dir()`, variables, and error messages.
 
@@ -40,7 +40,7 @@ Students can say:
 
 ## Warm-up (5 min)
 
-Students write down their best guesses about the computer in front of them:
+Students write their best guesses about the computer in front of them in their tracing notebooks:
 
 1. What kind of processor (CPU) does it have?
 2. Which operating system does it run?
@@ -80,7 +80,7 @@ Windows reports Intel and AMD processors as `AMD64` because AMD designed the 64-
 
 ## Predict, Then Run (15 min)
 
-Read this program **without running it**, then answer:
+Read this program **without running it**, then answer (students write in their tracing notebooks):
 
 1. How many lines will it print?
 2. Which words will appear exactly as they are written in the code?
@@ -106,7 +106,7 @@ Now run the same program on the classroom computer (Thonny, IDLE, or VS Code). W
 
 ## Investigate: Where Does My Code Run? (10 min)
 
-The same four lines give different answers depending on where they run. Students copy this table into their notebooks and fill it in. Add the Colab column only if you demonstrate Colab.
+The same four lines give different answers depending on where they run. Students copy this table into their tracing notebooks and fill it in. Add the Colab column only if you demonstrate Colab.
 
 | | Classroom computer (Thonny, IDLE, or VS Code) | This web page | Google Colab (optional teacher demo) |
 |---|---|---|---|
@@ -142,7 +142,7 @@ print("Computer name:", platform.node())
 
 ## Make (10 min)
 
-On the classroom computer (Thonny, IDLE, or VS Code), write a two-line program (plus the `import`) that prints the operating system and its version number, using `platform.system()` and `platform.release()`. Students who finish early can add a third labelled fact.
+On the classroom computer (Thonny, IDLE, or VS Code), write a two-line program (plus the `import`) that prints the operating system and its version number, using `platform.system()` and `platform.release()`. Students who finish early can add a third labelled fact. They save it as `os_report.py` in `ics3u/module-01/lesson-01/` (see [Set Up Your Course Folder](../../course-folder.qmd)).
 
 ## Check: Exit Ticket (5 min)
 
@@ -158,7 +158,7 @@ print("CPU:", platform.machine())
 ## After the Lesson
 
 - Students do the [Lesson 1 practice](practice.qmd#after-lesson-1-ask-the-computer-about-itself): read and predict, modify, then make a three-fact report on the classroom computer.
-- **Suggested hand-in:** the written answers to the Read and predict questions, and the Make program's `.py` file with its output pasted as a comment at the bottom.
+- **Suggested hand-in:** the Make program's `.py` file, with the Read and predict answers in a comment at the top and its output pasted as a comment at the bottom.
 - Read the exit tickets. If many students mixed up the fixed text and the computer's answers, start Lesson 2's review there.
 
 ## Code for This Lesson

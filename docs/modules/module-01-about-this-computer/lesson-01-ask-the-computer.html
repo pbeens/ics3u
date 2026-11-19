@@ -323,6 +323,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../../scope-and-sequence.html">
  <span class="dropdown-text">Scope and Sequence</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">For students</li>
+        <li>
+    <a class="dropdown-item" href="../../course-folder.html">
+ <span class="dropdown-text">Set Up Your Course Folder</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-modules" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Modules</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-modules">    
+        <li>
+    <a class="dropdown-item" href="../../modules/module-01-about-this-computer/index.html">
+ <span class="dropdown-text">1. About This Computer</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-02-spec-checker/index.html">
+ <span class="dropdown-text">2. Spec Checker (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-03-benchmark-lab/index.html">
+ <span class="dropdown-text">3. Benchmark Lab (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-04-passwords-and-secret-messages/index.html">
+ <span class="dropdown-text">4. Passwords and Secret Messages (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-05-on-the-network/index.html">
+ <span class="dropdown-text">5. On the Network (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-06-data-detective/index.html">
+ <span class="dropdown-text">6. Data Detective (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-07-software-project/index.html">
+ <span class="dropdown-text">7. Software Development Project (planned)</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../modules/computer-science-in-the-world/index.html">
+ <span class="dropdown-text">Computer Science in the World (planned)</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -459,7 +505,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Big idea:</strong> a program can ask the computer about itself, and the answer depends on which computer runs it.</li>
 <li><strong>Students will:</strong> guess their computer’s processor and operating system, read and step through a four-line program that checks, then change it.</li>
 <li><strong>Students make:</strong> a short report program that prints the operating system and its version.</li>
-<li><strong>Prepare:</strong> run <code>l01_computer_report.py</code> on your computer and on a student computer; optionally in Colab for the demonstration.</li>
+<li><strong>Prepare:</strong> run <code>l01_computer_report.py</code> on your computer and on a student computer; optionally in Colab for the demonstration. Students need their <a href="../../course-folder.html">course folder</a> before Make: set it up beforehand, or take the first five minutes of Make.</li>
 <li><strong>After class:</strong> <a href="../../modules/module-01-about-this-computer/practice.html#after-lesson-1-ask-the-computer-about-itself">Lesson 1 practice</a>.</li>
 <li><strong>Where it fits:</strong> the first lesson of <a href="../../modules/module-01-about-this-computer/index.html">Module 1</a>. Lesson 2 adds <code>dir()</code>, variables, and error messages.</li>
 </ul>
@@ -484,7 +530,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="warm-up-5-min" class="level2">
 <h2 class="anchored" data-anchor-id="warm-up-5-min">Warm-up (5 min)</h2>
-<p>Students write down their best guesses about the computer in front of them:</p>
+<p>Students write their best guesses about the computer in front of them in their tracing notebooks:</p>
 <ol type="1">
 <li>What kind of processor (CPU) does it have?</li>
 <li>Which operating system does it run?</li>
@@ -549,7 +595,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="predict-then-run-15-min" class="level2">
 <h2 class="anchored" data-anchor-id="predict-then-run-15-min">Predict, Then Run (15 min)</h2>
-<p>Read this program <strong>without running it</strong>, then answer:</p>
+<p>Read this program <strong>without running it</strong>, then answer (students write in their tracing notebooks):</p>
 <ol type="1">
 <li>How many lines will it print?</li>
 <li>Which words will appear exactly as they are written in the code?</li>
@@ -586,7 +632,7 @@ print("Computer name:", platform.node())</pre></div>
 </section>
 <section id="investigate-where-does-my-code-run-10-min" class="level2">
 <h2 class="anchored" data-anchor-id="investigate-where-does-my-code-run-10-min">Investigate: Where Does My Code Run? (10 min)</h2>
-<p>The same four lines give different answers depending on where they run. Students copy this table into their notebooks and fill it in. Add the Colab column only if you demonstrate Colab.</p>
+<p>The same four lines give different answers depending on where they run. Students copy this table into their tracing notebooks and fill it in. Add the Colab column only if you demonstrate Colab.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -662,7 +708,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IHBsYXRmb3JtXG5c
 </section>
 <section id="make-10-min" class="level2">
 <h2 class="anchored" data-anchor-id="make-10-min">Make (10 min)</h2>
-<p>On the classroom computer (Thonny, IDLE, or VS Code), write a two-line program (plus the <code>import</code>) that prints the operating system and its version number, using <code>platform.system()</code> and <code>platform.release()</code>. Students who finish early can add a third labelled fact.</p>
+<p>On the classroom computer (Thonny, IDLE, or VS Code), write a two-line program (plus the <code>import</code>) that prints the operating system and its version number, using <code>platform.system()</code> and <code>platform.release()</code>. Students who finish early can add a third labelled fact. They save it as <code>os_report.py</code> in <code>ics3u/module-01/lesson-01/</code> (see <a href="../../course-folder.html">Set Up Your Course Folder</a>).</p>
 </section>
 <section id="check-exit-ticket-5-min" class="level2">
 <h2 class="anchored" data-anchor-id="check-exit-ticket-5-min">Check: Exit Ticket (5 min)</h2>
@@ -676,7 +722,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IHBsYXRmb3JtXG5c
 <h2 class="anchored" data-anchor-id="after-the-lesson">After the Lesson</h2>
 <ul>
 <li>Students do the <a href="../../modules/module-01-about-this-computer/practice.html#after-lesson-1-ask-the-computer-about-itself">Lesson 1 practice</a>: read and predict, modify, then make a three-fact report on the classroom computer.</li>
-<li><strong>Suggested hand-in:</strong> the written answers to the Read and predict questions, and the Make program’s <code>.py</code> file with its output pasted as a comment at the bottom.</li>
+<li><strong>Suggested hand-in:</strong> the Make program’s <code>.py</code> file, with the Read and predict answers in a comment at the top and its output pasted as a comment at the bottom.</li>
 <li>Read the exit tickets. If many students mixed up the fixed text and the computer’s answers, start Lesson 2’s review there.</li>
 </ul>
 </section>
@@ -796,10 +842,21 @@ W10=
     a.setAttribute("data-original-href", url);
     a.target = "_blank";
     a.rel = "noopener";
-    a.innerHTML = '<i class="bi bi-github"></i>' + label;
+    a.innerHTML = '<i class="bi bi-github"></i>' + label + ' (GitHub)';
+    addPrivate(a);
+  }
+  // Beside each GitHub link, add the private Google Form option.
+  function addPrivate(a) {
+    var li = a.closest("li");
+    if (!li || (li.nextElementSibling && li.nextElementSibling.classList.contains("feedback-private"))) return;
+    var item = document.createElement("li");
+    item.className = "feedback-private";
+    item.innerHTML = '<a class="' + a.className + '" target="_blank" rel="noopener" href="' + formUrl +
+      '"><i class="bi bi-envelope"></i>Send feedback privately (no account)</a>';
+    li.parentNode.insertBefore(item, li.nextSibling);
   }
   function rewriteAll() {
-    document.querySelectorAll('a[href$="/issues/new"]').forEach(rewrite);
+    document.querySelectorAll('a[href$="/issues/new"], a[href*="/issues/new?template=feedback.yml"]').forEach(rewrite);
   }
   // Quarto copies the margin links after this script runs, so repeat on load
   // and catch any copy at click time.

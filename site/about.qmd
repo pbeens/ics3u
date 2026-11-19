@@ -7,6 +7,8 @@ subtitle: "How the course is designed, and why"
 
 This course is built to address every expectation in Ontario's ICS3U course (Grade 11 Introduction to Computer Science, University Preparation, 2008 curriculum), and every lesson is tagged with the expectations it covers.
 
+**It needs open computers.** Students write real utilities that read the system, build and scan folders of files, and use the network, so a locked-down, board-imaged lab computer won't run the whole course. Standalone refurbished computers are ideal. See [Before You Begin](before-you-begin.qmd#what-students-programs-need).
+
 It isn't only for Ontario. The lessons suit any similar high school introduction to computer science that's taught in Python. If you teach elsewhere, use the modules in order, skip the expectation codes, and adapt freely: everything here is [MIT licensed](https://github.com/pbeens/ics3u/blob/main/LICENSE).
 
 ## The Philosophy

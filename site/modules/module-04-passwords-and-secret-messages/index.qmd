@@ -1,0 +1,68 @@
+---
+title: "Module 4: Passwords and Secret Messages"
+subtitle: "About 15 hours · For teachers"
+---
+
+::: {.callout-note appearance="simple"}
+**Planned module.** This page shows the direction for Module 4. Lessons, slides, and practice pages are not written yet.
+:::
+
+**The big idea:** students learn how computers store text, and how to keep it safe. They start with binary and hexadecimal, discover that every character is a number, then build tools for everyday security: a password strength checker, a password generator, a crack-time estimator, and a Caesar cipher they then learn to break.
+
+**Why students care:** every student has passwords, and most reuse them. This module shows, with their own programs, why length matters, how websites store passwords, and how to protect a home computer.
+
+**Expectations:** A1.2, A3.1, A3.2, A4.1, B1.1, B2.3, B4.4, C2.2, D2.1
+
+## Anchor Programs
+
+- **Binary and hex converter:** `bin()`, `hex()`, `int(text, 2)`; where hex shows up (colour codes, MAC addresses, error codes).
+- **What's in a message?** Prints the Unicode number of every character, including emoji.
+- **Password strength checker:** length, upper and lower case, digits, symbols, and common passwords.
+- **How long to crack?** Uses the Module 3 benchmark's guesses per second to estimate brute-force time.
+- **Caesar cipher (short activity):** encode, decode, and break by trying every shift, to show why simple ciphers aren't secure.
+
+## Planned Lessons
+
+| Lesson | Focus | Students read, then build |
+|---|---|---|
+| 1. Everything Is a Number | Binary and hexadecimal; why storage sizes are powers of two; where hex appears on a real computer (A1.2) | A binary and hex converter; decode a web colour and a MAC address |
+| 2. Text Is Numbers Too | `ord()`, `chr()`; ASCII and Unicode; how many bytes an emoji takes | Print the code of every character in a message |
+| 3. Strings Up Close | Indexing, slicing, `len()`, looping through a string | Show a password with all but the last two characters hidden |
+| 4. String Methods | `.isdigit()`, `.isupper()`, `.count()`, `.replace()`, `in` (A3.1) | Count the character types in a password |
+| 5. Writing Functions | Parameters, return values, local and global scope (A3.2) | `has_digit(password)` and friends |
+| 6. Password Strength Checker | Combining functions; testing with a test plan (B4.4) | A checker that explains its score |
+| 7. How Long to Crack a Password? | Combinations (`characters ** length`); guesses per second from Module 3; why length beats complexity | A crack-time estimator; passphrases with the `secrets` module |
+| 8. How Websites Store Passwords | Hashing with `hashlib`; data breaches; why reuse is risky | Compare the hashes of two nearly identical passwords |
+| 9. Why Simple Ciphers Fail | The Caesar cipher as a short activity: modulo wrap-around; breaking it by brute force and letter frequency; why real encryption is different; cryptography as a research area (B1.1, D2.1) | Encode a class message, then crack one by trying all 26 shifts |
+| 10. Malware and a Protection Plan | Viruses, worms, Trojans, spyware, adware, macros; updates, backups, and accounts (C2.2) | A protection plan for a real computer at home |
+| 11. Reusable Code | Putting functions in your own module and importing it (B2.3) | `password_tools.py` |
+| 12. Module 4 test | Includes a code-reading and tracing section | |
+
+## Assignment (Planned): Password Toolkit
+
+Students build `password_tools.py`, a module of their own functions (strength check, generator, crack-time estimate), and a short program that uses it. They hand in the code, a test plan, and a **system protection plan** for a real computer at home: what threats it faces and the specific steps (updates, accounts, backups, antivirus, browser habits) that protect it.
+
+**Adds to the toolkit:** `password_tools.py`: the student's first module of their own reusable functions; later toolkit files import from each other the same way.
+
+## Practising the Basics (Planned)
+
+- **Skill Builder:** indexing, slicing, string methods, `ord()` and `chr()`, binary and hex conversions, and writing functions with parameters and return values. Includes Module 3 loop tracing.
+- **Quick Builds** (small graded programs, before the assignment):
+  - **Username Maker:** builds a school-style username from a first and last name (slicing, `.lower()`).
+  - **File Name Cleaner:** turns `My Essay FINAL (2).docx` into `my-essay-final-2.docx`, as a function.
+- **Warm-ups** in every lesson include a question from an earlier module.
+
+## Notes for Teachers
+
+- **Never ask for real passwords.** Use made-up examples throughout, and say so out loud.
+- **Hashing, not encryption.** Keep the distinction simple: you can't get a password back from its hash, so websites compare hashes.
+- **Ethics:** cracking is shown only on the student's own made-up passwords and the class's Caesar messages. A short discussion of the law and responsible disclosure fits here.
+
+## How Module 4 Fits
+
+- **Before:** [Module 3](../module-03-benchmark-lab/index.qmd) wrote loops and met functions.
+- **Next:** [Module 5, On the Network](../module-05-on-the-network/index.qmd), turns IP addresses into binary and sends messages between computers.
+
+## Feedback {.unlisted}
+
+{{< feedback >}}

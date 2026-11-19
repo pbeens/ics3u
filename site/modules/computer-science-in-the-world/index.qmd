@@ -1,0 +1,30 @@
+---
+title: "Computer Science in the World"
+subtitle: "About 6 hours, spread through Modules 2–6 · For teachers"
+---
+
+::: {.callout-note appearance="simple"}
+**Planned strand.** This page shows the direction for these lessons. They are not written yet.
+:::
+
+**The big idea:** students look beyond the classroom: where computer science research is heading, how it works with other fields, and what education and careers it leads to. Instead of a separate unit, these are short lessons placed between modules, each tied to the module just finished, plus a research report submitted in stages.
+
+**Expectations:** D2.1, D2.2, D2.3, D3.1, D3.2, D3.3, D3.4, D3.5
+
+## Planned Lessons
+
+| When | Lesson | Focus |
+|---|---|---|
+| After Module 2 | Who Builds Computers? | Careers in hardware, support, and software, locally, nationally, and internationally (D3.1); Essential Skills and work habits from the Ontario Skills Passport (D3.5) |
+| After Module 3 | Faster Than One Computer | Parallel processing and distributed computing (D2.1); choosing a research topic |
+| After Module 4 | Security as a Career | Cryptography and security research (D2.1); experiential learning: co-op, job shadowing, competitions, career fairs (D3.2) |
+| After Module 5 | Computer Science + Another Field | Collaborative research, e.g., health informatics, climatology, or bioinformatics (D2.2); supports for non-traditional career choices (D3.4) |
+| After Module 6 | Where Next? | College and university programs, certifications, entrance requirements, and costs (D3.3); research report presentations (D2.3) |
+
+## Research Report (Planned)
+
+Students research one emerging area of computer science (for example, artificial intelligence, computer vision, cryptography, robotics, or human–computer interaction) and its link to another field. It is submitted in stages: topic and sources, notes and outline, then a final report in a format of the student's choice (website, slide presentation, or video). Where possible, students connect the topic to the kind of computer and network they have studied in the course.
+
+## Feedback {.unlisted}
+
+{{< feedback >}}

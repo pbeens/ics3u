@@ -4,6 +4,138 @@ Program-related prompts for this project, newest first. Paraphrased, not verbati
 
 ---
 
+## User Prompt 65
+
+- **Timestamp:** 2026-11-18T12:40
+- **Goal:** Help students organize their files, and plan how work is handed in.
+- **Summary:** Recommend up front that students create a local course folder, with a suggested structure. Add teacher notes on the hand-in strategy, and note that hand-ins don't always have to be Python: fillable PDFs or Word documents could be used too.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** New `site/course-folder.qmd`; "Handing In Work" section in `how-a-lesson-works.qmd`; documents pipeline added to `tasks.md`.
+
+---
+
+## User Prompt 64
+
+- **Timestamp:** 2026-11-18T12:25
+- **Goal:** Say where students write their answers.
+- **Summary:** Pages ask students to read a program and "answer the questions" without saying where. The author chose paper tracing notebooks for class and practice, and comments in the `.py` file for anything handed in.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Updated Module 1 pages and slides, How a Lesson Works, Before You Begin, and `teaching-approach.md`; new decision recorded.
+
+---
+
+## User Prompt 63
+
+- **Timestamp:** 2026-11-18T12:10
+- **Goal:** Offer both feedback options from the margin link.
+- **Summary:** The "Report an error or suggest a change" link on each page only leads to GitHub. Give readers an efficient choice that includes the private option.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** `_feedback.html` now adds a private Google Form link beside every GitHub margin link; tested in headless Chrome.
+
+---
+
+## User Prompt 62
+
+- **Timestamp:** 2026-11-18T11:55
+- **Goal:** Clarify the media-track idea.
+- **Summary:** ArtCraft is a website offering a suite of creative programs (such as PhotoCraft, a Photoshop alternative); Affinity is also a good candidate. The track stays parked as an idea, possibly for a separate repository.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Updated the two-track note in `tasks.md`.
+
+---
+
+## User Prompt 61
+
+- **Timestamp:** 2026-11-18T11:45
+- **Goal:** Record an idea for a second, media-based track.
+- **Summary:** The author suggested considering two tracks: Track 1 for computer utilities, and Track 2 for creating media and art, in the spirit of Turing graphics, possibly using MCP to control creative apps. Add it to the task list for later.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Added as an open question in `tasks.md` with library options, curriculum fit, MCP notes, and maintenance cost.
+
+---
+
+## User Prompt 60
+
+- **Timestamp:** 2026-11-18T11:30
+- **Goal:** State plainly that the course needs unrestricted computers.
+- **Summary:** Because students write real system utilities, the course likely needs standalone computers that aren't imaged by a school board and have few restrictions. Refurbished computers are ideal; students' own computers could work but probably shouldn't be recommended.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Reworked `before-you-begin.qmd` (callout, requirements table, reordered options); short pointers on About, home, and Modules 5–6.
+
+---
+
+## User Prompt 59
+
+- **Timestamp:** 2026-11-18T11:10
+- **Goal:** Apply the combined course-plan update.
+- **Summary:** The author approved the combined update: more practice on basics, ideas adopted from the ChatGPT review, and a sample folder generator.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Revised all module overview pages, the Scope and Sequence, and `teaching-approach.md`; verified hours, coverage, and links.
+
+---
+
+## User Prompt 58
+
+- **Timestamp:** 2026-11-18T10:55
+- **Goal:** Generate sample files for file-work lessons.
+- **Summary:** Instead of a teacher-supplied sample folder, the author would prefer a utility that creates the sample files, possibly by downloading resources from the web.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Proposed a standard-library generator script with fixed and per-student seeds, and an optional download from the course site; not built yet.
+
+---
+
+## User Prompt 57
+
+- **Timestamp:** 2026-11-18T10:40
+- **Goal:** Mine a ChatGPT course review for useful ideas.
+- **Summary:** The author shared ChatGPT's review of the course (based on the earlier six-module plan) and asked which of its ideas are worth adopting.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Compared against the new seven-module plan; no files changed beyond this log.
+
+---
+
+## User Prompt 56
+
+- **Timestamp:** 2026-11-18T10:25
+- **Goal:** Give students more practice with the basics.
+- **Summary:** The author is concerned that basics such as `print()` are introduced once and not consolidated, and asked whether to add lessons and assignments that build on them.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Proposed extra Module 1 lessons, per-module Skill Builder pages, Quick Builds, and spaced warm-ups; awaiting approval.
+
+---
+
+## User Prompt 55
+
+- **Timestamp:** 2026-11-18T10:00
+- **Goal:** Plan every module on its overview page.
+- **Summary:** The author asked for planned overview pages for all modules, without writing lessons yet, to see the course's direction. Fill any gaps with new ideas, keeping assignments practical for students who want to learn about their computers, how they use them, and related topics.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Proposed seven modules (Benchmark Lab and On the Network added); new overview pages, a Modules menu, and a rewritten Scope and Sequence; coverage of all 57 expectations checked by script.
+
+---
+
+## User Prompt 54
+
+- **Timestamp:** 2026-11-16T13:20
+- **Goal:** Plan programming projects about computer networks.
+- **Summary:** Inspired by an ACSE email thread, the author wants networking projects in the course. Add this to the task list with the netsim game and its source repository as resources.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Expanded the networking open question in `tasks.md`; the netsim repository is MIT licensed PHP.
+
+---
+
 ## User Prompt 53
 
 - **Timestamp:** 2026-11-16T11:45

@@ -22,10 +22,21 @@
     a.setAttribute("data-original-href", url);
     a.target = "_blank";
     a.rel = "noopener";
-    a.innerHTML = '<i class="bi bi-github"></i>' + label;
+    a.innerHTML = '<i class="bi bi-github"></i>' + label + ' (GitHub)';
+    addPrivate(a);
+  }
+  // Beside each GitHub link, add the private Google Form option.
+  function addPrivate(a) {
+    var li = a.closest("li");
+    if (!li || (li.nextElementSibling && li.nextElementSibling.classList.contains("feedback-private"))) return;
+    var item = document.createElement("li");
+    item.className = "feedback-private";
+    item.innerHTML = '<a class="' + a.className + '" target="_blank" rel="noopener" href="' + formUrl +
+      '"><i class="bi bi-envelope"></i>Send feedback privately (no account)</a>';
+    li.parentNode.insertBefore(item, li.nextSibling);
   }
   function rewriteAll() {
-    document.querySelectorAll('a[href$="/issues/new"]').forEach(rewrite);
+    document.querySelectorAll('a[href$="/issues/new"], a[href*="/issues/new?template=feedback.yml"]').forEach(rewrite);
   }
   // Quarto copies the margin links after this script runs, so repeat on load
   // and catch any copy at click time.

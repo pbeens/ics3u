@@ -282,6 +282,52 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../../scope-and-sequence.html">
  <span class="dropdown-text">Scope and Sequence</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">For students</li>
+        <li>
+    <a class="dropdown-item" href="../../course-folder.html">
+ <span class="dropdown-text">Set Up Your Course Folder</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-modules" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Modules</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-modules">    
+        <li>
+    <a class="dropdown-item" href="../../modules/module-01-about-this-computer/index.html">
+ <span class="dropdown-text">1. About This Computer</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-02-spec-checker/index.html">
+ <span class="dropdown-text">2. Spec Checker (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-03-benchmark-lab/index.html">
+ <span class="dropdown-text">3. Benchmark Lab (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-04-passwords-and-secret-messages/index.html">
+ <span class="dropdown-text">4. Passwords and Secret Messages (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-05-on-the-network/index.html">
+ <span class="dropdown-text">5. On the Network (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-06-data-detective/index.html">
+ <span class="dropdown-text">6. Data Detective (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-07-software-project/index.html">
+ <span class="dropdown-text">7. Software Development Project (planned)</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../modules/computer-science-in-the-world/index.html">
+ <span class="dropdown-text">Computer Science in the World (planned)</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -352,8 +398,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lessons" id="toc-lessons" class="nav-link active" data-scroll-target="#lessons">Lessons</a></li>
+  <li><a href="#lessons" id="toc-lessons" class="nav-link active" data-scroll-target="#lessons">Lessons</a>
+  <ul class="collapse">
+  <li><a href="#planned-lessons" id="toc-planned-lessons" class="nav-link" data-scroll-target="#planned-lessons">Planned lessons</a></li>
+  </ul></li>
   <li><a href="#assignment" id="toc-assignment" class="nav-link" data-scroll-target="#assignment">Assignment</a></li>
+  <li><a href="#practising-the-basics-planned" id="toc-practising-the-basics-planned" class="nav-link" data-scroll-target="#practising-the-basics-planned">Practising the Basics (Planned)</a></li>
   <li><a href="#how-module-1-fits" id="toc-how-module-1-fits" class="nav-link" data-scroll-target="#how-module-1-fits">How Module 1 Fits</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/pbeens/ics3u/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -408,26 +458,112 @@ ul.task-list li input[type="checkbox"] {
 <td><a href="../../modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html">Slides</a></td>
 <td><a href="../../modules/module-01-about-this-computer/practice.html#after-lesson-2-exploring-the-platform-library">Practice</a></td>
 </tr>
+</tbody>
+</table>
+<section id="planned-lessons" class="level3">
+<h3 class="anchored" data-anchor-id="planned-lessons">Planned lessons</h3>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Planned, not yet written.</strong> Titles and focus may change as lessons are built.</p>
+</div>
+</div>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lesson</th>
+<th>Focus</th>
+<th>Students read, then build</th>
+</tr>
+</thead>
+<tbody>
 <tr class="odd">
-<td>More lessons</td>
-<td>Coming soon</td>
-<td></td>
+<td>3. Getting Output Right</td>
+<td><code>print()</code> in depth: several arguments, <code>sep</code> and <code>end</code>, <code>\n</code> and <code>\t</code>, quotes inside strings, commas vs.&nbsp;<code>+</code>, common mistakes</td>
+<td>A system info banner</td>
+</tr>
+<tr class="even">
+<td>4. Better Reports with f-strings</td>
+<td>f-strings; comments; naming conventions (A4.2)</td>
+<td>Turn the Lesson 2 report into a tidy, aligned report card</td>
+</tr>
+<tr class="odd">
+<td>5. Values and Types</td>
+<td><code>str</code>, <code>int</code>, <code>float</code>, <code>type()</code>; simple arithmetic; why <code>"8" + "8"</code> is <code>"88"</code> (A1.1)</td>
+<td>Pull numbers out of the Python version and do arithmetic with them</td>
+</tr>
+<tr class="even">
+<td>6. Where Do My Programs Live?</td>
+<td>Files, folders, and paths; organizing a course folder on local and shared drives; the parts of the editor (C2.1, C3.1); first run of the sample folder generator; reading a two-line program that prints the current folder</td>
+<td>Explain the course folder students set up on day one, then add the toolkit folder; run the same file from the editor and the terminal</td>
+</tr>
+<tr class="odd">
+<td>7. What Python Actually Runs</td>
+<td>Source code vs.&nbsp;machine code; interpreters vs.&nbsp;compilers; bytecode with <code>dis</code>; applications vs.&nbsp;languages vs.&nbsp;operating systems (C3.3, C3.4, C3.5)</td>
+<td>Match <code>dis</code> output to lines of code; sort running programs into apps, languages, and OS parts</td>
+</tr>
+<tr class="even">
+<td>8. Inside the Computer: RAM and CPU</td>
+<td>Where variables live and where arithmetic happens; <code>sys.getsizeof()</code> and <code>id()</code> (C1.1, C1.4)</td>
+<td>Trace a program and label each line “RAM” or “CPU”</td>
+</tr>
+<tr class="odd">
+<td>9. Talking Back with <code>input()</code></td>
+<td>Reading a program that greets the user by name and gives a hardware summary (A2.1)</td>
+<td>Modify the greeter’s questions and messages</td>
+</tr>
+<tr class="even">
+<td>10. A First Look at Decisions and Loops</td>
+<td>Reading a simple <code>if</code> (e.g., “if this is Windows…”) and a <code>for</code> loop over a list of facts</td>
+<td>Predict the output on three different operating systems</td>
+</tr>
+<tr class="odd">
+<td>11. Error Clinic and Review</td>
+<td>Syntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4)</td>
+<td>Fix five broken report programs</td>
+</tr>
+<tr class="even">
+<td>12. Module 1 test</td>
+<td>Code reading and tracing; a short basics section</td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <p>Each lesson plan’s <strong>Code for This Lesson</strong> section has the <code>.py</code> files and notebooks. Students find the same files at the end of each lesson’s section on the Practice page.</p>
 </section>
+</section>
 <section id="assignment" class="level2">
 <h2 class="anchored" data-anchor-id="assignment">Assignment</h2>
 <p><a href="../../modules/module-01-about-this-computer/assignment.html"><strong>Computer Report Card</strong></a> (ready for Lessons 1–2; will grow with the module). Students read and trace a short program, write a report card using five <code>platform</code> functions stored in variables, then run it in two places and explain the difference. Students hand in one <code>.py</code> file built from a starter file.</p>
+<p><strong>Planned additions:</strong> an f-string version of the report, a short <code>input()</code> greeting, and a written part explaining what happens inside the computer when the report runs (RAM, CPU, interpreter).</p>
+<p><strong>Adds to the toolkit:</strong> <code>report_card.py</code>, the first file in the student’s <strong>My Computer Toolkit</strong> folder, which grows in every module (<a href="../../scope-and-sequence.html#the-toolkit-thread">see the toolkit thread</a>).</p>
+</section>
+<section id="practising-the-basics-planned" class="level2">
+<h2 class="anchored" data-anchor-id="practising-the-basics-planned">Practising the Basics (Planned)</h2>
+<ul>
+<li><strong>Skill Builder:</strong> short drills on <code>print()</code> arguments, <code>sep</code> and <code>end</code>, escape characters, quotes, variables, types, f-strings, and reading a traceback. Each drill set opens with predict-the-output and fix-the-error questions.</li>
+<li><strong>Quick Builds</strong> (small graded programs, before the assignment):
+<ul>
+<li><strong>System Banner:</strong> a boxed title banner for the computer, with exact spacing.</li>
+<li><strong>Parts Receipt:</strong> a receipt for computer parts, with prices, HST, and a total in aligned columns.</li>
+</ul></li>
+</ul>
 </section>
 <section id="how-module-1-fits" class="level2">
 <h2 class="anchored" data-anchor-id="how-module-1-fits">How Module 1 Fits</h2>
 <ul>
 <li><strong>Before:</strong> nothing. This is the first module; students need no programming experience.</li>
-<li><strong>Planned for the rest of the module:</strong> f-strings, comments and naming, <code>input()</code> to greet the user, and reading a simple <code>if</code> and a <code>for</code> loop over a list of facts. See the <a href="../../scope-and-sequence.html#module-1-about-this-computer-15-h">Scope and Sequence</a>.</li>
-<li><strong>Next:</strong> Module 2, Spec Checker, adds <code>os</code> and <code>shutil</code> to check whether a computer meets a program’s requirements.</li>
+<li><strong>Planned for the rest of the module:</strong> see Planned lessons above, and the <a href="../../scope-and-sequence.html">Scope and Sequence</a>.</li>
+<li><strong>Next:</strong> <a href="../../modules/module-02-spec-checker/index.html">Module 2, Spec Checker</a>, adds <code>os</code> and <code>shutil</code> to check whether a computer meets a program’s requirements.</li>
 </ul>
 <p>New to the course? Read <a href="../../how-a-lesson-works.html">How a Lesson Works</a> first.</p>
 </section>
@@ -471,10 +607,21 @@ ul.task-list li input[type="checkbox"] {
     a.setAttribute("data-original-href", url);
     a.target = "_blank";
     a.rel = "noopener";
-    a.innerHTML = '<i class="bi bi-github"></i>' + label;
+    a.innerHTML = '<i class="bi bi-github"></i>' + label + ' (GitHub)';
+    addPrivate(a);
+  }
+  // Beside each GitHub link, add the private Google Form option.
+  function addPrivate(a) {
+    var li = a.closest("li");
+    if (!li || (li.nextElementSibling && li.nextElementSibling.classList.contains("feedback-private"))) return;
+    var item = document.createElement("li");
+    item.className = "feedback-private";
+    item.innerHTML = '<a class="' + a.className + '" target="_blank" rel="noopener" href="' + formUrl +
+      '"><i class="bi bi-envelope"></i>Send feedback privately (no account)</a>';
+    li.parentNode.insertBefore(item, li.nextSibling);
   }
   function rewriteAll() {
-    document.querySelectorAll('a[href$="/issues/new"]').forEach(rewrite);
+    document.querySelectorAll('a[href$="/issues/new"], a[href*="/issues/new?template=feedback.yml"]').forEach(rewrite);
   }
   // Quarto copies the margin links after this script runs, so repeat on load
   // and catch any copy at click time.

@@ -30,6 +30,29 @@ website:
             text: How a Lesson Works
           - href: scope-and-sequence.qmd
             text: Scope and Sequence
+          - text: "---"
+          - text: "For students"
+          - href: course-folder.qmd
+            text: Set Up Your Course Folder
+      - text: Modules
+        menu:
+          - href: modules/module-01-about-this-computer/index.qmd
+            text: "1. About This Computer"
+          - href: modules/module-02-spec-checker/index.qmd
+            text: "2. Spec Checker (planned)"
+          - href: modules/module-03-benchmark-lab/index.qmd
+            text: "3. Benchmark Lab (planned)"
+          - href: modules/module-04-passwords-and-secret-messages/index.qmd
+            text: "4. Passwords and Secret Messages (planned)"
+          - href: modules/module-05-on-the-network/index.qmd
+            text: "5. On the Network (planned)"
+          - href: modules/module-06-data-detective/index.qmd
+            text: "6. Data Detective (planned)"
+          - href: modules/module-07-software-project/index.qmd
+            text: "7. Software Development Project (planned)"
+          - text: "---"
+          - href: modules/computer-science-in-the-world/index.qmd
+            text: "Computer Science in the World (planned)"
       - text: Module 1
         menu:
           - href: modules/module-01-about-this-computer/index.qmd

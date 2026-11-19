@@ -1,0 +1,67 @@
+---
+title: "Set Up Your Course Folder"
+subtitle: "For students · Do this before you save your first program"
+---
+
+::: {.callout-note appearance="simple"}
+**For students.** This takes about five minutes. You'll use this folder every day for the whole course.
+:::
+
+## Why You Need It
+
+Every lesson gives you programs to download and asks you to write your own. You'll keep improving some of them all year (your **toolkit**), and you'll hand some of them in. If they're scattered across Downloads and the Desktop, you'll lose them. One folder, organized the same way every time, means you can always find your work.
+
+## Where to Put It
+
+Make a folder called `ics3u` in your **home folder**:
+
+| Computer | Your course folder |
+|---|---|
+| Windows | `C:\Users\yourname\ics3u` |
+| macOS | `/Users/yourname/ics3u` |
+| Linux or Raspberry Pi | `/home/yourname/ics3u` |
+
+Not on the Desktop, and not in Downloads. On Windows, also avoid a Documents folder that syncs to OneDrive, unless your teacher says otherwise: later in the course you'll create hundreds of sample files, and syncing them all is slow.
+
+**To make it:**
+
+- **Windows:** open File Explorer, type `%USERPROFILE%` in the address bar and press Enter, then right-click and choose **New → Folder**.
+- **macOS:** in Finder, choose **Go → Home**, then **File → New Folder**.
+- **Linux or Raspberry Pi:** in the Files app, open **Home** and create a new folder.
+
+## How to Organize It
+
+Make the first module's folders now, and add the rest as you reach each module:
+
+```text
+ics3u/
+├── module-01/
+│   ├── lesson-01/        ← lesson downloads and the programs you write
+│   ├── lesson-02/
+│   └── assignment/       ← starter file and your finished work
+├── module-02/
+├── toolkit/              ← My Computer Toolkit: programs you keep improving all year
+├── sample-folder/        ← Module 6: built by a course tool; safe to delete and rebuild
+└── backups/              ← Module 6: your backups
+```
+
+## Naming Rules
+
+- **Lowercase, no spaces.** Spaces and capitals cause problems in the terminal and in code.
+- **Folders use dashes:** `module-01`, `lesson-02`.
+- **Python files use underscores:** `report_card.py`, not `report-card.py` or `Report Card.py`. From Module 4 on, your programs will `import` each other, and Python can't import a file name with a dash or a space.
+- **Hand-in files:** name them the way your teacher asks, for example `lastname_m01_report_card.py`.
+
+## Saving Downloads
+
+When you download a lesson's `.py` file, it lands in Downloads. **Move it into the right lesson folder** straight away, or right-click the link and choose **Save Link As…** to save it there directly. When you write a new program in Thonny, IDLE, or VS Code, choose **Save As** and pick the lesson folder.
+
+## Back It Up
+
+Once a week, copy your whole `ics3u` folder to a USB key or a cloud drive. A lost or broken computer shouldn't cost you a semester of work. In Module 6 you'll write a program that does this for you.
+
+You'll learn more about files, folders, and paths in Module 1, Lesson 6. For now, a tidy folder is enough.
+
+## Feedback {.unlisted}
+
+{{< feedback >}}

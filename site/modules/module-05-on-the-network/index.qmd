@@ -1,0 +1,78 @@
+---
+title: "Module 5: On the Network"
+subtitle: "About 14 hours · For teachers"
+---
+
+::: {.callout-note appearance="simple"}
+**Planned module.** This page shows the direction for Module 5. Lessons, slides, and practice pages are not written yet.
+:::
+
+**The big idea:** students find out how their computer talks to the rest of the world. Their programs report the computer's name and address on the network, look up websites, time how long servers take to answer, and download a page to measure the connection. An IP address is a string to split into a list, so this is where lists are written for the first time. Network failures make a natural reason to handle exceptions, and a test log gives students their first reason to write a file.
+
+**Why students care:** "Is it me or the Wi-Fi?" Students build a troubleshooting tool they can actually use at home, and learn what really happens between typing a web address and seeing the page.
+
+**Expectations:** A1.2, A1.5, A1.6, A2.3, A3.1, A3.2, A4.5, B1.1, B2.4, B3.3, D2.1
+
+## Anchor Programs
+
+- **Who am I on the network?** `socket.gethostname()` and the computer's local IP address.
+- **IP address explainer:** splits an address into a list of four numbers, shows each in binary, and uses the `ipaddress` module to say whether it is private or public.
+- **Website lookup:** turns a list of web addresses into IP addresses (DNS).
+- **Response timer:** times a connection to each server in a list, then reports the fastest, slowest, and average.
+- **Download speed test:** downloads a page with `urllib` and reports the speed in megabits per second.
+
+## Planned Lessons
+
+| Lesson | Focus | Students read, then build |
+|---|---|---|
+| 1. Who Am I on the Network? | `socket`; host names; local IP addresses; how this compares with `platform.node()` | Add network facts to the computer report card |
+| 2. IP Addresses | IPv4 and IPv6; private vs. public addresses; the `ipaddress` module (A3.1) | Explain why the school address starts with 10 or 192.168 |
+| 3. Lists, Properly | Elements, indexes, bounds, `IndexError`; `.split()` into a list (A1.5, A1.6) | Split an IP address into four numbers and show each in binary (A1.2) |
+| 4. Names to Numbers: DNS | `socket.gethostbyname()`; building a list of results with `.append()` | Look up a list of favourite websites |
+| 5. How Far Away Is That Server? | Timing a connection; looping over a list; count, total, lowest, highest (A2.3) | A response timer with fastest, slowest, and average |
+| 6. When the Network Fails | Timeouts, unknown hosts, `try`/`except` around network code (B3.3); testing with good, slow, and broken addresses (A4.5) | Make the response timer survive a typo and an unplugged cable |
+| 7. Keep a Log | Writing files: `open()` in append mode, `csv.writer`, timestamps with `datetime` | Log each test run to `network_log.csv`, collected over several days for Module 6 |
+| 8. Downloading a Web Page | `urllib.request`; bytes and megabits (Module 2 again); parsing a web address with `urllib.parse`; reading the sample folder generator's download code. Extension: read a page's title with `html.parser` | A download speed test |
+| 9. Be the Server | `python -m http.server`; ports; firewalls; visiting a classmate's computer | Serve a page from your own computer to the class |
+| 10. How the Internet Works, and Review | Packets and routers with the [netsim](https://cs.uwaterloo.ca/~m2mazmud/netsim/) game; a data flow diagram of a web request (B2.4); distributed computing (D2.1) | Draw the trip a web request takes |
+| 11. Module 5 test | Code reading and tracing; a short basics section | |
+
+## Assignment (Planned): Is It Me or the Wi-Fi?
+
+Students write a network troubleshooting tool that:
+
+1. Reports the computer's name, local IP address, and whether that address is private.
+2. Looks up a list of websites and times a connection to each, storing results in lists.
+3. Reports the fastest, slowest, and average response, and which sites failed.
+4. Appends each run to a CSV log with the date and time.
+5. Never crashes: every network failure gets a plain-language message and a suggestion.
+
+They hand in the program, a test plan (including deliberately broken addresses), and a short "what I'd check next" guide for a family member whose internet is slow.
+
+**Adds to the toolkit:** `network_check.py` and the `network_log.csv` it writes, which Module 6 analyzes.
+
+## Practising the Basics (Planned)
+
+- **Skill Builder:** creating lists, `.append()`, indexing and bounds, looping over a list, finding the total, highest, and lowest by hand, and writing a line to a file. Includes Module 4 string methods.
+- **Quick Builds** (small graded programs, before the assignment):
+  - **Speed Log Summary:** given a list of download speeds, report the count, average, fastest, slowest, and how many were below a target.
+  - **Web Address Splitter:** breaks a URL into its scheme, site, and path, and says whether it uses HTTPS.
+- **Warm-ups** in every lesson include a question from an earlier module.
+
+## Notes for Teachers
+
+- **Open computers needed.** This module is the most likely to be blocked on a managed lab computer. Check the [requirements table](../../before-you-begin.qmd#what-students-programs-need) with IT before the module starts.
+- **Local only.** This module's programs need a real computer on a real network. The site's browser boxes can't open network connections, which makes a good callback to Module 1's "where does my code run?"
+- **Check with IT first.** Some school networks block outside connections, DNS lookups, or student-run servers. Lesson 8 can run on one computer (`localhost`) if the network won't allow more.
+- **No `ping` command needed.** Timing a connection with `socket.create_connection()` works without administrator rights. Students can still read how `ping` works.
+- **netsim:** the public site slows down when a whole class registers at once, which is itself a lesson about server load. A school can host its own copy ([source, MIT licence](https://github.com/errorinn/netsim)).
+- **Be a good network citizen:** small, slow loops only; no scanning other computers.
+
+## How Module 5 Fits
+
+- **Before:** [Module 4](../module-04-passwords-and-secret-messages/index.qmd) taught binary, strings, and writing functions.
+- **Next:** [Module 6, Data Detective](../module-06-data-detective/index.qmd), uses lists to investigate files, folders, and real data.
+
+## Feedback {.unlisted}
+
+{{< feedback >}}

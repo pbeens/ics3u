@@ -10,7 +10,7 @@ Ready-to-teach lessons for Ontario ICS3U, each with slides, runnable code, and t
 
 - **Read first.** Students read, predict, and trace real code before they write their own.
 - **A spiral, not a list of topics.** Output, input, decisions, loops, and lists all appear early inside programs students read, then return in every module at a deeper level.
-- **Real programs from day one.** The first program asks the computer what processor it has, not "Hello, World". Later modules build games, secret codes, and data investigations.
+- **Real programs from day one.** The first program asks the computer what processor it has, not "Hello, World". Later modules check specs, run benchmarks, test password strength, troubleshoot the network, and track down what's filling the hard drive.
 
 [More about the course design →](about.qmd)
 
@@ -21,7 +21,7 @@ The whole course is free, with no ads and no sign-up. If it saves you time, a [c
 ::: {.g-col-12 .g-col-md-4}
 ::: {.card .h-100 .p-3}
 ### 1. Set up
-Get Python running on your computer and your students' computers.
+Students need open computers they fully control, not locked-down lab images. Refurbished computers are ideal.
 
 [Before You Begin →](before-you-begin.qmd)
 :::
@@ -57,4 +57,4 @@ Students ask the computer about itself, using one line of Python.
 | 2. Exploring the platform Library | [Lesson plan](modules/module-01-about-this-computer/lesson-02-exploring-platform.qmd) | [Slides](modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.qmd) | [Practice](modules/module-01-about-this-computer/practice.qmd#after-lesson-2-exploring-the-platform-library) |
 | Module assignment | | | [Computer Report Card](modules/module-01-about-this-computer/assignment.qmd) |
 
-More modules are on the way. See the [Scope and Sequence](scope-and-sequence.qmd) for the full plan of six modules.
+More modules are on the way. See the [Scope and Sequence](scope-and-sequence.qmd) for the full plan of seven modules; each planned module already has an overview page under **Modules**.

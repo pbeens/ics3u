@@ -2,6 +2,24 @@
 
 ## Current Focus
 
+### Module plans for the whole course (draft, 2026-11-18): awaiting author review
+
+Built planned overview pages for every module (no lessons yet) so the author can judge the direction. Verified: site renders with no warnings, no broken internal links, and all 57 expectations covered (checked by script).
+
+- [x] Module 1 overview: planned Lessons 3–11 and planned assignment additions; hours 15 → 14
+- [x] New overview pages: Module 2 Spec Checker, 3 Benchmark Lab, 4 Passwords and Secret Messages, 5 On the Network, 6 Data Detective, 7 Software Development Project, and Computer Science in the World
+- [x] Scope and Sequence rewritten for seven modules (hours, spiral with a files-and-folders row, module summaries, coverage table)
+- [x] New "Modules" navbar menu; home page wording; teaching-approach example
+- [ ] Author decisions: (1) Benchmark Lab replacing Games of Chance; (2) new On the Network module (resolves the networking open question); (3) seven modules with the project cut from 20 h to 16 h; (4) Module 7's teacher-led "Lab Health Check" class project; (5) lists in Module 5 rather than Module 6
+- [x] Combined update (2026-11-18): Module 1 gains Getting Output Right and Values and Types (15 h); Benchmark Lab drops the guessing game, swaps dice for shuffle, and becomes 14 h; Skill Builders, Quick Builds, and spaced warm-ups in every module; My Computer Toolkit thread; file writing (Module 5 network log, analyzed in Module 6); hash-verified backups; Caesar cipher as a short activity; practical-first rules in `teaching-approach.md`. Verified: 110 h, all 57 expectations, lesson counts fit hours, no broken links or anchors.
+- [x] Open computers (2026-11-18): Before You Begin now leads with a blunt "This course needs open computers" callout, a requirements table (what students' programs need vs. what managed computers block), standalone refurbished computers as first choice, opened-up lab computers second, and a students'-own-computers note (not recommended). Pointers on About, home, and Modules 5–6.
+- [x] Margin feedback link (2026-11-18): the right-margin "Report an error or suggest a change (GitHub)" link now has a "Send feedback privately (no account)" link beside it, opening the Google Form with the page filled in. Verified in headless Chrome on three pages (one private link per margin copy).
+- [x] Where answers go (2026-11-18): tracing notebook (paper) for in-class and Practice work; comments in the `.py` file for anything handed in. Assignment, Practice, Lessons 1–2 (plans and slides), How a Lesson Works, Before You Begin checklist, and `teaching-approach.md` updated.
+- [x] Course folder and hand-ins (2026-11-18): new student page `site/course-folder.qmd` (home-folder location, module/lesson structure, toolkit, naming rules incl. underscores for importable `.py` files, saving downloads, weekly backup), in the Getting Started menu and linked from Lesson 1, Practice, and the assignment. New "Handing In Work" section in How a Lesson Works (what's handed in and in what format; `.ipynb` accepted; tips). Before You Begin checklist updated.
+- [ ] Documents for written work: Word (`.docx`) and fillable PDF versions of longer written parts (test plans, structure charts, protection plan, project documents). Recommendation: Quarto's `docx` output from the same source for Word (uploads to Drive convert to Google Docs); fillable PDFs only for fixed forms such as the test plan table. Decide before Module 2's assignment.
+- [ ] Build `make_sample_folder.py` (planned for `site/tools/`): standard library only; fixed and per-student seeds; safe reset; optional `--download` from files hosted on the site. Needed by Module 1 Lesson 6.
+- [ ] When approved: remove "(planned)" labels and Draft callouts as modules are built; check network lessons with school IT constraints
+
 ### Audit follow-up (approved 2026-11-16; audits are in the git-ignored `audits/` folder)
 
 Approved: the quick fixes, and the recommended options for Decision 1 (Lesson 1), Decision 2 (reassignment in Lesson 2), and Decision 5 (VS Code placement; later reduced to one sentence at the author's request). Item numbers match `audits/audit-response.md`.
@@ -62,13 +80,22 @@ Approved: the quick fixes, and the recommended options for Decision 1 (Lesson 1)
 
 ## Open Questions
 
+- **Idea to consider (2026-11-18): two tracks.** Track 1 (current plan) builds computer-related utilities. Track 2 would teach the same ideas through creating media and art, the way Turing graphics did for Ontario beginners. Notes for discussion:
+  - Standard-library options: `turtle` (closest to Turing's drawing commands), `tkinter` Canvas (shapes, animation, simple games), writing SVG files as plain text (they open and edit in Inkscape), and generating sound with the `wave` module. Third-party options as extensions: Pillow (images), pygame-ce (games and animation), py5 (Processing-style).
+  - Fits the curriculum well: pixels, colour codes, and image and sound file sizes cover A1.2 (data representation); graphics cards and monitors connect to C1.
+  - MCP: the official Python MCP SDK makes small MCP servers possible, but MCP connects an AI assistant to an app, so it suits a Module 7 project or extension more than core lessons. For students' own code to control an app directly, the app's scripting interface (e.g., Inkscape's command line and Python extensions) is simpler. Candidate apps: the ArtCraft suite (e.g., PhotoCraft, a Photoshop alternative, and an Illustrator alternative) and Affinity; check which have MCP servers or scripting interfaces.
+  - Cost: two full tracks doubles the materials. A lighter version keeps shared lessons and skills, and gives each module a Track 1 and a Track 2 anchor program and assignment.
+  - Parked for now because of the extra work. If pursued, it may live in a separate GitHub repository rather than this one.
+
 - After the next push, test the notebook Open in Callysto | Colab links. (GitHub Pages is on; the site is served at https://peter.beens.ca/ics3u/.)
 
-- Networking: the author is considering programs that look at the network (e.g., the computer's address and name). Decide whether and where it fits in the scope and sequence.
+- (Proposed answer, 2026-11-18: Module 5, On the Network. See the module plan above.) Networking projects: the author wants programming projects about computer networks (e.g., programs that report the computer's address and name). Decide whether and where they fit in the scope and sequence. Resources:
+  - [netsim](https://cs.uwaterloo.ca/~m2mazmud/netsim/) (University of Waterloo): a browser game about how packets move across the Internet. Suggested on the ACSE list (2026-11-16) for Grade 10s.
+  - [errorinn/netsim](https://github.com/errorinn/netsim): its source code, MIT licensed, written in PHP, last updated 2020. A school can host its own copy. The public site slows down when a whole class registers at once, which could also be a teaching point about server load.
 
-- How worksheets reach Google Docs: Quarto `.docx` output uploaded to Drive, an export script, or manual copy.
+- How worksheets reach Google Docs: see the Documents task above (Word and fillable PDF, 2026-11-18).
 - Whether the GitHub account has Pro (needed for Pages from a private repository; free for verified teachers through GitHub Education).
-- Module themes and anchor programs: confirm or replace (e.g., Data Detective's data source).
+- Module themes and anchor programs: confirm or replace (now drafted on each module's overview page).
 - Whether Computer Science in the World (Strand D2–D3) runs alongside modules or as its own block.
 - This Mac has a global Jupyter kernel pointing to a missing environment (`/Volumes/Extreme-SSD/.../.venv`). Lesson pages avoid it with `engine: markdown`, but it may affect other Quarto projects.
 

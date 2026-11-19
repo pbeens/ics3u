@@ -20,10 +20,21 @@ Reading first means students can meet real, interesting code well before they co
 
 The course is organized as a spiral, not as topic units. There is no "output unit" followed by an "input unit" and a "decisions unit".
 
-- Modules are built around themes and anchor programs (e.g., About This Computer, Games of Chance), and each one uses most programming ideas at once.
+- Modules are built around themes and anchor programs (e.g., About This Computer, Benchmark Lab), and each one uses most programming ideas at once.
 - Every idea moves through four levels over the course: **read** it in existing code, **modify** code that uses it, **write** new code with it, then **design** with it in a project. The spiral table in the scope and sequence shows where each idea sits in each module.
 - Reading examples may use ideas not yet taught explicitly. The teacher names them briefly ("this is a loop; we'll write our own later") and keeps going.
 - This is not project-based learning: lessons stay teacher-led and structured, and the independent project comes at the end.
+- **Spiral does not mean skipping practice.** Basics get deliberate practice until they are automatic: each module has a Skill Builder page of short drills, and small graded Quick Builds before the module assignment.
+- **Retrieval across modules.** Every Review stage includes at least one question on something from two or more lessons back, often an earlier module. Module tests include a short basics section.
+- **One growing toolkit.** Each module's assignment adds a part to the student's own "My Computer Toolkit", so students keep reopening and improving their earlier code instead of starting fresh each time.
+
+## Practical First
+
+Every assignment should pass one test: *would someone who isn't taking a programming course have a reason to use this program?* Games and puzzles can appear as short activities, but module assignments are useful tools.
+
+- Open each lesson with the useful problem, not the construct: "How could we check 500 files without opening each one?" rather than "Today we learn `for` loops." Then show a working program and follow PRIMM.
+- Use Python's standard library almost exclusively. Third-party libraries (e.g., Pillow) appear only as marked extensions.
+- File work happens in a generated sample folder (`make_sample_folder.py`, planned), never in students' own files, unless an extension says otherwise.
 
 ## Why
 
@@ -38,7 +49,7 @@ Times are a guide for a 75-minute period. A concept may span more than one lesso
 
 | Stage | Who | What happens | Guide |
 |---|---|---|---|
-| 1. Review | Students | Short retrieval questions on earlier material, often reading or tracing code. | 5–10 min |
+| 1. Review | Students | Short retrieval questions on earlier material, often reading or tracing code; at least one from two or more lessons back. Then the teacher poses the lesson's useful problem. | 5–10 min |
 | 2. Teach | Teacher | Direct instruction: introduce the concept with a worked example, reading the code aloud and tracing it with a think-aloud. | 10–15 min |
 | 3. Predict | Students | Read a new short program and write down what it will output, *before* running it. | 5–10 min |
 | 4. Run | Students | Run the program and compare the result with their prediction. | 5 min |
@@ -65,7 +76,8 @@ Use a mix of these in lessons, worksheets, and assessments:
 ## Rules for Materials
 
 - **Lessons** follow the sequence above. The first student activity is reading code, never writing it.
-- **Predict and Run** happen together in the step-through box, so the prediction stays next to the real output.
+- **Predict and Run** happen together in the step-through box, so the prediction stays next to the real output. The box isn't saved.
+- **Where answers go:** students write predictions, trace tables, and short answers in a paper *tracing notebook* (never just "notebook", which means Jupyter here). Anything handed in has its written answers as comments in the `.py` file; assignments supply a starter file with a space for each answer. Longer written parts (test plans, structure charts, protection plans, project documents) are handed in as documents: Word and fillable PDF versions are planned. Every reading task says where to write, and students save everything in their course folder (`site/course-folder.qmd`).
 - **Worksheets** open with reading tasks (predict, trace, explain) before any writing tasks.
 - **Quizzes and tests** include a code-reading and tracing section.
 - **Code examples** are short enough to trace by hand and run on Python 3 exactly as shown.

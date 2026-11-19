@@ -282,6 +282,52 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./scope-and-sequence.html">
  <span class="dropdown-text">Scope and Sequence</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">For students</li>
+        <li>
+    <a class="dropdown-item" href="./course-folder.html">
+ <span class="dropdown-text">Set Up Your Course Folder</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-modules" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Modules</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-modules">    
+        <li>
+    <a class="dropdown-item" href="./modules/module-01-about-this-computer/index.html">
+ <span class="dropdown-text">1. About This Computer</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./modules/module-02-spec-checker/index.html">
+ <span class="dropdown-text">2. Spec Checker (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./modules/module-03-benchmark-lab/index.html">
+ <span class="dropdown-text">3. Benchmark Lab (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./modules/module-04-passwords-and-secret-messages/index.html">
+ <span class="dropdown-text">4. Passwords and Secret Messages (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./modules/module-05-on-the-network/index.html">
+ <span class="dropdown-text">5. On the Network (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./modules/module-06-data-detective/index.html">
+ <span class="dropdown-text">6. Data Detective (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./modules/module-07-software-project/index.html">
+ <span class="dropdown-text">7. Software Development Project (planned)</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="./modules/computer-science-in-the-world/index.html">
+ <span class="dropdown-text">Computer Science in the World (planned)</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -377,7 +423,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><strong>Read first.</strong> Students read, predict, and trace real code before they write their own.</li>
 <li><strong>A spiral, not a list of topics.</strong> Output, input, decisions, loops, and lists all appear early inside programs students read, then return in every module at a deeper level.</li>
-<li><strong>Real programs from day one.</strong> The first program asks the computer what processor it has, not “Hello, World”. Later modules build games, secret codes, and data investigations.</li>
+<li><strong>Real programs from day one.</strong> The first program asks the computer what processor it has, not “Hello, World”. Later modules check specs, run benchmarks, test password strength, troubleshoot the network, and track down what’s filling the hard drive.</li>
 </ul>
 <p><a href="./about.html">More about the course design →</a></p>
 <p>The whole course is free, with no ads and no sign-up. If it saves you time, a <a href="https://buymeacoffee.com/pbeens">coffee now and then</a> is always appreciated.</p>
@@ -385,7 +431,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="g-col-12 g-col-md-4">
 <section id="set-up" class="level3 card h-100 p-3">
 <h3 class="anchored" data-anchor-id="set-up">1. Set up</h3>
-<p>Get Python running on your computer and your students’ computers.</p>
+<p>Students need open computers they fully control, not locked-down lab images. Refurbished computers are ideal.</p>
 <p><a href="./before-you-begin.html">Before You Begin →</a></p>
 </section>
 </div>
@@ -437,7 +483,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>More modules are on the way. See the <a href="./scope-and-sequence.html">Scope and Sequence</a> for the full plan of six modules.</p>
+<p>More modules are on the way. See the <a href="./scope-and-sequence.html">Scope and Sequence</a> for the full plan of seven modules; each planned module already has an overview page under <strong>Modules</strong>.</p>
 
 
 </section>
@@ -467,10 +513,21 @@ ul.task-list li input[type="checkbox"] {
     a.setAttribute("data-original-href", url);
     a.target = "_blank";
     a.rel = "noopener";
-    a.innerHTML = '<i class="bi bi-github"></i>' + label;
+    a.innerHTML = '<i class="bi bi-github"></i>' + label + ' (GitHub)';
+    addPrivate(a);
+  }
+  // Beside each GitHub link, add the private Google Form option.
+  function addPrivate(a) {
+    var li = a.closest("li");
+    if (!li || (li.nextElementSibling && li.nextElementSibling.classList.contains("feedback-private"))) return;
+    var item = document.createElement("li");
+    item.className = "feedback-private";
+    item.innerHTML = '<a class="' + a.className + '" target="_blank" rel="noopener" href="' + formUrl +
+      '"><i class="bi bi-envelope"></i>Send feedback privately (no account)</a>';
+    li.parentNode.insertBefore(item, li.nextSibling);
   }
   function rewriteAll() {
-    document.querySelectorAll('a[href$="/issues/new"]').forEach(rewrite);
+    document.querySelectorAll('a[href$="/issues/new"], a[href*="/issues/new?template=feedback.yml"]').forEach(rewrite);
   }
   // Quarto copies the margin links after this script runs, so repeat on load
   // and catch any copy at click time.
