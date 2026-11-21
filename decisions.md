@@ -39,13 +39,14 @@ Consequential project decisions, newest first. Current files and newer instructi
 
 ---
 
-## 2026-11-18 — Seven practical modules (proposed, awaiting author review)
+## 2026-11-18 — Seven practical modules (approved 2026-11-21)
 
-- **Decision (proposed):** Reorganize the course into seven modules, all about the student's own computer, its use, and its connections: About This Computer (14 h), Spec Checker (15), Benchmark Lab (15, replaces Games of Chance), Passwords and Secret Messages (15), On the Network (14, new), Data Detective (15, now about files, backups, and energy), Software Development Project (16, down from 20, starting with a teacher-led class project), plus Computer Science in the World (6). Each module has an overview page with planned lessons and a practical assignment.
+- **Decision:** Reorganize the course into seven modules, all about the student's own computer, its use, and its connections: About This Computer (14 h), Spec Checker (15), Benchmark Lab (15, replaces Games of Chance), Passwords and Secret Messages (15), On the Network (14, new), Data Detective (15, now about files, backups, and energy), Software Development Project (16, down from 20, starting with a teacher-led class project), plus Computer Science in the World (6). Each module has an overview page with planned lessons and a practical assignment.
 - **Context:** The author asked for plans for every module, with practical assignments for students who want to learn about their computers and computer use, and earlier asked where networking projects fit.
 - **Alternatives:** Keep six modules and fold networking into Secret Messages (too crowded); keep Games of Chance (less tied to computers).
 - **Revisit if:** The author prefers the original six, or the network module is impractical on school networks.
 - **Update (same day, approved by the author):** Basics get deliberate practice (Skill Builders, Quick Builds, spaced warm-ups); students build one "My Computer Toolkit" across modules; assignments must pass the "would a non-programmer use this?" test; file work uses a generated sample folder (`make_sample_folder.py`), not students' own files. Module 1 is 15 h and Module 3 is 14 h. Some ideas came from a ChatGPT review the author shared.
+- **Approved (2026-11-21):** the author approved all five open points: Benchmark Lab replaces Games of Chance; On the Network is a new module; seven modules, with the project cut from 20 h to 16 h; Module 7 opens with the teacher-led "Lab Health Check" class project; lists are taught in Module 5, not Module 6.
 
 ---
 
