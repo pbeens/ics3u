@@ -1,0 +1,71 @@
+---
+title: "Quick Build: System Banner"
+subtitle: "Module 1 — About This Computer · For students"
+expectations: [A1.1, A2.1, A3.1, A4.2]
+---
+
+::: {.callout-note appearance="simple"}
+**For students.** After [Lesson 3](lesson-03-getting-output-right-slides.qmd). Start in class, finish for next class. Work on your classroom computer (Thonny, IDLE, or VS Code). **Hand in:** `system_banner.py`, saved in `ics3u/module-01/lesson-03/` in your [course folder](../../course-folder.qmd). · [Module 1 overview](index.qmd)
+:::
+
+## The Job
+
+When a lab computer starts up, it could greet whoever sits down with a banner: a title in a box, then the facts about that computer. Write the program that prints it.
+
+Here's one example. Your title, box style, and facts can be different.
+
+```text
++==============================+
+|        SYSTEM BANNER         |
+|   Computer Science Lab 214   |
++==============================+
+
+Name:   LAB-PC-14
+System: Windows 11
+CPU:    AMD64
+Python: 3.13.1
+Banner printed... done
+```
+
+## Your Program Must
+
+1. Start with a comment giving your name, the date, and what the program does.
+2. Print a **box around a title**, drawn with characters such as `+`, `-`, `=`, `|`, or `*`. The box has at least three lines, and **every line of the box is exactly the same width**.
+3. Print a blank line between the box and the facts.
+4. Print **at least four facts** about the computer, from four `platform` functions. Store each answer in a variable first, and give each fact a label.
+5. Line up the facts, so the values start in the same column.
+6. Use `sep` at least once, `end` at least once, and `\t` or `\n` at least once.
+
+## Plan It First
+
+Draw your box on graph paper or in your tracing notebook, **one character per square**. Count the characters on each line before you type it. Off-by-one spacing is the most common mistake.
+
+Labels that are 7 characters or shorter line up with one `\t`. Longer ones jump to the next tab stop. Keep your labels short, or test what happens.
+
+## Why the Facts Go Under the Box
+
+The computer's name is a different length on every computer, so it would push the right side of a box out of line. In Lesson 4 you'll learn f-strings, which can pad a value to an exact width. Then you'll come back and put the facts *inside* the box.
+
+## Check Before You Hand In
+
+- [ ] It runs on the classroom computer with no errors.
+- [ ] Every line of the box is the same width. (Hold a ruler to the screen, or count.)
+- [ ] Four facts, each stored in a variable, each with a label, lined up.
+- [ ] `sep`, `end`, and `\t` or `\n` each used at least once.
+- [ ] Header comment at the top.
+- [ ] Output pasted as a comment at the bottom of the file.
+
+## Success Criteria
+
+| | Level 1–2 | Level 3 | Level 4 |
+|---|---|---|---|
+| **Application** | Runs, but the box is uneven or there are fewer than four facts | Even box, four labelled facts stored in variables, `sep`, `end`, and an escape character used | Also neatly lined up, with a design that would look at home on a real computer |
+| **Communication** | Missing header comment or unclear labels | Header comment; clear labels and variable names | Clear, consistent names, labels, and comments throughout |
+
+## Previous and Next {.unlisted}
+
+[← Lesson 3 practice](practice.qmd#after-lesson-3-getting-output-right) · [Module 1 overview](index.qmd)
+
+## Feedback {.unlisted}
+
+{{< feedback >}}

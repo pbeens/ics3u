@@ -2,17 +2,18 @@
 
 ## Current Focus
 
-### Module 1, Lesson 3: Getting Output Right (started 2026-11-21)
+### Module 1, Lesson 3: Getting Output Right (built 2026-11-21; awaiting author review)
 
 The seven-module plan is approved (`decisions.md`, 2026-11-21). Lesson 3 is the first lesson built to the new rules: a practical opening problem, reading first, and a Quick Build (System Banner) as its Make product.
 
-- [ ] Example programs in `examples/` (`l03_*.py`), each run on Python 3 before publishing
-- [ ] Lesson plan `lesson-03-getting-output-right.qmd` (75 min; For teachers banner, At a Glance, teacher prompts for `sep`, `end`, and escape characters)
-- [ ] Slides `lesson-03-getting-output-right-slides.qmd`
-- [ ] Practice section for Lesson 3, and the System Banner Quick Build page
-- [ ] Answer key in `answer-keys/module-01-about-this-computer/`
-- [ ] Module 1 overview, sidebar, and Scope and Sequence links; Lesson 2 → Lesson 3 Previous/Next
-- [ ] Rebuild notebooks; render; check links, steppers, and slides in headless Chrome
+- [x] Eight example programs (`l03_*.py`), run on Python 3; browser outputs checked with the `platform` values the web page reports
+- [x] Lesson plan (75 min: Review 5, Teach 15, Predict 10, Investigate 20, Modify 10, Make 10, Check 5); real system tool (`systeminfo`, `system_profiler`, `hostnamectl`) as the opening problem; first-use teacher prompts for keyword arguments, escape characters, and syntax errors
+- [x] Slides (13), with speaker notes
+- [x] Practice section "After Lesson 3" on the existing Practice page (one page per lesson still deferred); new student page `quick-build-system-banner.qmd`
+- [x] Answer keys: `lesson-03-answers.md`, Lesson 3 practice answers, `quick-build-system-banner-marking.md` (sample solution run)
+- [x] Links: home table, Module 1 overview (Lesson 3 moved out of Planned; Lesson 4 row now "put the facts inside the banner"), sidebar, Lesson 2 Previous/Next
+- [x] Notebooks rebuilt; render with no warnings; no broken links; all five steppers run in Chromium (Playwright) with expected output, including the `SyntaxError`
+- [ ] Author review of Lesson 3
 
 ### Next
 

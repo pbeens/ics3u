@@ -65,3 +65,38 @@ print("Version:", platform.release())
 ### Make
 
 Answers vary. Check that the variable name describes the value, the output has a label, and the comment explains the function correctly.
+
+## After Lesson 3
+
+### Read and predict (`l03_practice_read.py`)
+
+On the web page (tab expanded):
+
+```text
++--------------------+
+|   LAB INVENTORY    |
++--------------------+
+Name:   emscripten
+Checked today
+```
+
+1. Five lines.
+2. A tab (`sep="\t"`). On screen, the name starts at column 8.
+3. Line 8 has `end=" "`, so it ends with a space instead of a new line.
+4. Yes, all 22 characters. If one line is shorter or longer, the right side of the box is jagged.
+
+### Spot the mistake (`l03_practice_mistake.py`)
+
+1. No. It's a syntax error, so Python can't understand the program and doesn't run any line.
+2. `SyntaxError: '(' was never closed`, pointing to line 3.
+3. Add the closing parenthesis: `print("Operating system:", platform.system())`.
+
+### Modify
+
+1. `print("CPU type", platform.machine(), sep=" -> ")`
+2. `print("Checking", end=" ")` then `print("done")`, giving `Checking done` (any `end` value is fine).
+3. `print('It\'s "fast"')` or `print("It's \"fast\"")`.
+
+### Make
+
+The System Banner Quick Build; see `quick-build-system-banner-marking.md`.

@@ -72,18 +72,24 @@ website:
               text: "Lesson 1 plan"
             - href: modules/module-01-about-this-computer/lesson-02-exploring-platform.qmd
               text: "Lesson 2 plan"
+            - href: modules/module-01-about-this-computer/lesson-03-getting-output-right.qmd
+              text: "Lesson 3 plan"
         - section: "For the class"
           contents:
             - href: modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.qmd
               text: "Lesson 1 slides"
             - href: modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.qmd
               text: "Lesson 2 slides"
+            - href: modules/module-01-about-this-computer/lesson-03-getting-output-right-slides.qmd
+              text: "Lesson 3 slides"
         - section: "For students"
           contents:
             - href: course-folder.qmd
               text: "Set Up Your Course Folder"
             - href: modules/module-01-about-this-computer/practice.qmd
               text: "Practice"
+            - href: modules/module-01-about-this-computer/quick-build-system-banner.qmd
+              text: "Quick Build: System Banner"
             - href: modules/module-01-about-this-computer/assignment.qmd
               text: "Assignment: Computer Report Card"
   page-footer:

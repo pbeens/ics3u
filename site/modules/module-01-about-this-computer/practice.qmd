@@ -3,7 +3,7 @@ title: "Module 1 Practice"
 subtitle: "Module 1 — About This Computer · For students"
 format: live-html
 engine: markdown
-expectations: [A1.1, A2.2, A3.1, A4.3, A4.4, C1.1]
+expectations: [A1.1, A2.1, A2.2, A3.1, A4.3, A4.4, C1.1]
 ---
 
 ::: {.callout-note appearance="simple"}
@@ -105,9 +105,58 @@ Lesson 2's programs, including the ones above. Download a `.py` file, or open th
 
 {{< lesson-code lesson="02" hide="exit_ticket" >}}
 
+## After Lesson 3: Getting Output Right
+
+### Read and predict
+
+Read this program **without running it**. In your tracing notebook, write the exact output, one line per row. Then type your prediction and press **Step**.
+
+1. How many lines will it print?
+2. What character appears between `Name:` and the computer's name? How will it look on the screen?
+3. Lines 8 and 9 are two `print()` calls. Why does their output appear on one line?
+4. Count the characters in lines 4, 5, and 6. Are they all the same width? Why does that matter?
+
+{{< stepper file="examples/l03_practice_read.py" >}}
+
+### Spot the mistake
+
+Predict what will happen, then press **Step**.
+
+1. Does any line run before Python stops? Why or why not?
+2. What kind of error is it, and what does the message say?
+3. Fix the program on your classroom computer and run it.
+
+{{< stepper file="examples/l03_practice_mistake.py" >}}
+
+### Modify
+
+Predict each change, then run it.
+
+1. Change line 3 so the output is `CPU type -> wasm32` (on the web page), using `sep`.
+2. Make lines 4 and 5 print on one line, using `end`.
+3. Print `It's "fast"` on its own line. You need both kinds of quotation marks.
+
+```{pyodide}
+import platform
+
+print("CPU type", platform.machine())
+print("Checking")
+print("done")
+```
+
+### Make
+
+Start the [System Banner Quick Build](quick-build-system-banner.qmd). It's graded, so check the list at the bottom of that page before you hand it in.
+
+### Code files
+
+Lesson 3's programs, including the ones above. Download a `.py` file, or open the notebook in Callysto or Colab.
+
+{{< lesson-code lesson="03" hide="exit_ticket" >}}
+
 ## Next
 
-When you've finished both, start the [Module 1 Assignment](assignment.qmd).
+When you've finished the Lesson 1 and Lesson 2 practice, start the [Module 1 Assignment](assignment.qmd). After Lesson 3, finish the [System Banner](quick-build-system-banner.qmd).
 
 ## Previous and Next {.unlisted}
 

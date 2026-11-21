@@ -4,6 +4,27 @@ Program-related prompts for this project, newest first. Paraphrased, not verbati
 
 ---
 
+## User Prompt 70
+
+- **Timestamp:** 2026-11-21T10:30
+- **Goal:** Approve the seven-module plan and build the next lesson.
+- **Summary:** Approve all five open points of the seven-module plan, then go ahead: commit the pending work, tidy the task list, and build Module 1 Lesson 3, Getting Output Right.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Lesson 3 plan, slides, eight example programs, practice section, System Banner Quick Build page, answer keys; notebooks rebuilt; steppers checked in Playwright Chromium.
+
+---
+
+## User Prompt 69
+
+- **Timestamp:** 2026-11-21T10:10
+- **Goal:** Find out what comes next in the plan.
+- **Summary:** Asked what the next steps are after the round 2 audit fixes.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+
+---
+
 ## User Prompt 68
 
 - **Timestamp:** 2026-11-19T10:20

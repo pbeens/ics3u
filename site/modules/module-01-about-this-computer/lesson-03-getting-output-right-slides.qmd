@@ -1,0 +1,150 @@
+---
+title: "Getting Output Right"
+subtitle: "Module 1, Lesson 3"
+format:
+  live-revealjs:
+    theme: default
+    slide-number: true
+    code-line-numbers: true
+    toc: false
+    footer: "[← Lesson 3 plan](lesson-03-getting-output-right.html) · [Module 1](index.html)"
+engine: markdown
+---
+
+## Review
+
+In your tracing notebook, without running anything:
+
+1. `cpu = platform.machine()` then `print("CPU:", cpu)`. What prints on the web page?
+2. When a variable gets a new value, what happens to the old one?
+
+## Would you hand this to someone?
+
+```text
+Computer report for LAB-PC-14
+CPU type: AMD64
+Operating system: Windows
+```
+
+::: {.fragment}
+A real system tool (`systeminfo` on Windows):
+
+```text
+Host Name:                 LAB-PC-14
+OS Name:                   Microsoft Windows 11 Pro
+System Type:               x64-based PC
+```
+:::
+
+::: {.notes}
+Open with the problem: "Our Lesson 2 report works, but would you hand it to someone?" Then run the real tool in a terminal: systeminfo (Windows), system_profiler SPSoftwareDataType (macOS), or hostnamectl (Linux / Raspberry Pi). Ask: what makes it easy to read? Labels, labels that line up, blank lines, a title. "Somebody wrote this tool. Underneath, it's a program printing lines with careful spacing. Today we learn to control every character."
+:::
+
+## Settings inside print()
+
+```{.python code-line-numbers="|1|2"}
+print("System", "Windows")
+print("System", "Windows", sep=": ")
+```
+
+::: {.fragment}
+- Commas: `print()` puts **one space** between things. That's `sep`
+- `sep=": "` changes it for this line
+- `end` changes what comes at the end (normally a new line)
+:::
+
+::: {.notes}
+TEACHER PROMPT (first use of keyword arguments): "When we give print() several things separated by commas, it puts one space between them. That space is a setting called sep, short for separator. sep=': ' changes the setting for this one line: the name, an equals sign, then the new value, after the things to print. There's a second setting, end. Normally print() finishes by moving to a new line; end changes what it prints instead. These are keyword arguments: the keyword tells Python which setting we mean."
+:::
+
+## Predict, then step
+
+{{< stepper file="examples/l03_print_arguments.py" >}}
+
+::: {.notes}
+About 10 minutes. Students write the exact output first, showing spaces as dots on the sep and end lines. Ask: Which line prints nothing but still changes the output? Why do lines 6 and 7 end up on one line? After line 6: "end replaced the new line with '... ', so the next print carries on from there." After line 8: "An empty print() prints only its end, a new line. That's how we make a blank line."
+:::
+
+## Special characters
+
+{{< stepper file="examples/l03_escapes.py" >}}
+
+::: {.notes}
+TEACHER PROMPT (first use of escape characters): "\n means new line. \t means tab: jump to the next tab stop. The backslash tells Python the next letter is special; it won't be printed." Ask: lines 1 and 2 line up, line 3 doesn't. Why? Tab stops are every 8 characters, and "Computer name:" is 14 characters long. How many lines does line 4 make?
+:::
+
+## Quotes, commas, and plus
+
+{{< stepper file="examples/l03_quotes_plus.py" >}}
+
+::: {.notes}
+Ask: Why doesn't the apostrophe in line 4 end the string? How does line 5 print double quotes, and why the spaces inside them? What's different about lines 6 and 7? Challenge: rewrite line 5 with sep="" so there are no spaces inside the quotes. TEACHER PROMPT: "A comma gives print() separate things, and print() adds the spaces. A plus sign joins two strings into one thing first, with nothing added. If you want a space, you type it." Keep + with numbers for Lesson 5.
+:::
+
+## Spot the problem: A
+
+{{< stepper file="examples/l03_mistake_quote.py" >}}
+
+::: {.notes}
+TEACHER PROMPT (first syntax error): "Nothing ran, not even line 1. A syntax error means Python couldn't understand the program at all, so it refused to start. The message points to the line where it got confused." Fix it two ways: double quotes around the string, or \'.
+:::
+
+## Spot the problem: B
+
+{{< stepper file="examples/l03_mistake_path.py" >}}
+
+::: {.notes}
+"This one ran to the end, and it's still wrong. That's a logic error: no message, just the wrong output. You only catch it by predicting what should happen." \t and \n changed the folder name. Fix with \\ (or forward slashes). This matters again in Lesson 6, with paths.
+:::
+
+## Modify
+
+1. Add a title and a blank line under it
+2. Use `\t` to line up the two values (one tab isn't enough)
+3. Use `end` to put `Report finished` on the `Checking...` line
+
+```{pyodide}
+import platform
+
+cpu = platform.machine()
+system = platform.system()
+name = platform.node()
+
+print("Computer report for", name)
+print("CPU type:", cpu)
+print("Operating system:", system)
+print("Checking...")
+print("Report finished")
+```
+
+## Make: the System Banner
+
+- A box drawn with characters around a title
+- The computer's facts underneath, lined up
+- Plan the box on paper first: count the characters
+- Save it as `system_banner.py` in `ics3u/module-01/lesson-03/`
+
+[System Banner Quick Build](quick-build-system-banner.qmd)
+
+::: {.notes}
+About 10 minutes in class: plan and print the box. Students finish the facts for next class. It's the first graded Quick Build.
+:::
+
+## Exit ticket
+
+1. Write the exact output:
+
+```python
+import platform
+
+print("OS", "check", sep="-", end="... ")
+print("done")
+```
+
+2. `print("CPU:" + cpu)` prints `CPU:arm64`. Change it to print `CPU: arm64`.
+
+## After class
+
+- Do the [Lesson 3 practice](practice.qmd#after-lesson-3-getting-output-right): read and predict first, then run
+- Finish the [System Banner](quick-build-system-banner.qmd) for next class
+- Today's programs are on the practice page: download the `.py` files, or open them as notebooks in Callysto or Colab

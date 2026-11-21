@@ -1,0 +1,221 @@
+---
+title: "Lesson 3: Getting Output Right"
+subtitle: "Module 1 — About This Computer"
+format: live-html
+engine: markdown
+expectations: [A1.1, A2.1, A3.1, A4.3, A4.4]
+---
+
+::: {.callout-important appearance="simple" icon=false}
+**For teachers.** This is the lesson plan: use it to prepare and as your script in class. Students work from the **slides**, the **code files and notebooks**, and the **practice** page. The step-through boxes and runnable code are here so you can try every activity first. [How a lesson works →](../../how-a-lesson-works.qmd)
+:::
+
+::: {.callout-note appearance="simple"}
+**Time:** 75 minutes · **Expectations:** A1.1, A2.1, A3.1, A4.3, A4.4 · **Slides:** [Lesson 3 slides](lesson-03-getting-output-right-slides.qmd) (press **S** for speaker notes) · [Module 1 overview](index.qmd) · **Previous:** [Lesson 2](lesson-02-exploring-platform.qmd)
+:::
+
+## At a Glance
+
+- **Big idea:** a real system tool is mostly careful output. `print()` has settings (`sep` and `end`) and special characters (`\n`, `\t`) that control exactly what appears on the screen.
+- **Students will:** compare their Lesson 2 report with the output of a real system tool, predict output character by character, and find two mistakes: one that crashes and one that doesn't.
+- **Students make:** the **System Banner** Quick Build, a boxed title banner with the computer's facts underneath (started in class, finished for next class).
+- **Prepare:** run each `l03_` program. On your demonstration computer, open a terminal and run the system tool for your operating system (see Teach) so you can show its output. Open the slides a few minutes before class so Python finishes loading.
+- **After class:** [Lesson 3 practice](practice.qmd#after-lesson-3-getting-output-right) and the [System Banner Quick Build](quick-build-system-banner.qmd).
+- **Where it fits:** builds on [Lesson 2](lesson-02-exploring-platform.qmd)'s report. Lesson 4 uses f-strings to put the computer's answers *inside* the banner's box, lined up.
+
+## Learning Goals
+
+- Explain what `print()` does with several arguments, and change that with `sep` and `end`.
+- Use `\n` and `\t` in a string, and predict what they print.
+- Put quotation marks inside a string.
+- Explain the difference between joining text with commas and with `+`.
+- Read a `SyntaxError` message and find the line that caused it.
+
+## Success Criteria
+
+Students can say:
+
+- I can predict a program's output exactly, including spaces and blank lines.
+- I can use `sep`, `end`, `\n`, and `\t` to lay out a report.
+- I can tell a mistake that stops the program (a syntax error) from one that just gives the wrong output.
+
+## Review (5 min)
+
+Without running anything, answer in tracing notebooks:
+
+1. What does this print on the course web page? `cpu = platform.machine()` then `print("CPU:", cpu)`
+2. In Lesson 2, which line of `l02_change_variable.py` replaced the value of `system`? What happened to the old value?
+
+## Teach: What Makes Output Readable? (15 min)
+
+Open with the problem: "Our Lesson 2 report works, but would you hand it to someone? Here's what a real system tool prints."
+
+On your demonstration computer, open a terminal and run the tool for your operating system:
+
+| Operating system | Command | What it shows |
+|---|---|---|
+| Windows | `systeminfo` | Host name, OS name and version, processor, memory |
+| macOS | `system_profiler SPSoftwareDataType` | macOS version, computer name, time since start-up |
+| Linux or Raspberry Pi | `hostnamectl` | Host name, operating system, kernel, architecture |
+
+A few lines of `systeminfo` look like this:
+
+```text
+Host Name:                 LAB-PC-14
+OS Name:                   Microsoft Windows 11 Pro
+System Type:               x64-based PC
+```
+
+Ask: "What makes this easy to read?" Collect answers: a label on every line, labels that line up, blank lines between groups, a title. Then: "Somebody wrote this tool. Underneath, it's a program printing lines with careful spacing. Today we learn to control every character."
+
+Then show how `print()` handles several things at once:
+
+```python
+print("System", "Windows")
+print("System", "Windows", sep=": ")
+```
+
+::: {.callout-tip title="Teacher prompt: settings inside print() (first use)"}
+- "When we give `print()` several things separated by commas, it puts **one space** between them. That space is a setting called `sep`, short for *separator*."
+- "`sep=": "` changes the setting for this one line. The name, an equals sign, then the new value. It goes **after** the things to print."
+- "There's a second setting, `end`. Normally `print()` finishes by moving to a new line. `end` changes what it prints at the end instead."
+- "These are called *keyword arguments*: the keyword tells Python which setting we mean. Other Python tools have them too."
+:::
+
+## Predict, Then Step (10 min)
+
+Read this program **without running it**, then answer in tracing notebooks:
+
+1. Write the exact output, one line per row. Show every space as a dot (`·`) on the lines that use `sep` and `end`.
+2. Which line prints nothing but still changes the output?
+3. Lines 6 and 7 are two `print()` calls. Why does their output end up on one line?
+
+Type your prediction in the box, then press **Step**.
+
+{{< stepper file="examples/l03_print_arguments.py" >}}
+
+::: {.callout-tip title="Teacher prompt"}
+After line 6 runs: "Look at the output box. The line isn't finished: `end` replaced the new line with `... `, so the next `print()` carries on from there." After line 8: "An empty `print()` prints only its `end`, which is a new line. That's how we make a blank line."
+:::
+
+## Investigate (20 min)
+
+### Special characters (5 min)
+
+A backslash inside a string starts an *escape sequence*: two characters that stand for one special character.
+
+::: {.callout-tip title="Teacher prompt: escape characters (first use)"}
+- "`\n` means *new line*. `\t` means *tab*: jump to the next tab stop, like the Tab key in a word processor."
+- "The backslash tells Python that the next letter is special. It won't be printed."
+:::
+
+{{< stepper file="examples/l03_escapes.py" >}}
+
+1. Lines 1 and 2 line up. Line 3 doesn't. Why? (Hint: tab stops are every 8 characters. Count the characters in `Computer name:`.)
+2. How many lines of output does line 4 make?
+
+### Quotes, commas, and plus (10 min)
+
+{{< stepper file="examples/l03_quotes_plus.py" >}}
+
+1. Line 4's text has an apostrophe in it. Why doesn't that end the string early?
+2. Line 5 prints double quotation marks. How? Why are there spaces inside them in the output?
+3. Lines 6 and 7 join text with `+` instead of a comma. What's different about the output? Which version would you put in a report?
+4. Rewrite line 5 so the output is `The label says "wasm32"`, with no spaces inside the quotation marks. (Hint: `sep`.)
+
+::: {.callout-tip title="Teacher prompt"}
+"A comma gives `print()` *separate things*, and `print()` adds the spaces. A plus sign joins two strings into *one* thing first, with nothing added. If you want a space, you type it." Leave `+` with numbers for Lesson 5: "`+` only joins text to text. We'll see what happens with numbers soon."
+:::
+
+### Spot the problem (5 min)
+
+Both programs have a mistake. Predict what will happen, then step through each.
+
+**Program A**
+
+{{< stepper file="examples/l03_mistake_quote.py" >}}
+
+**Program B**
+
+{{< stepper file="examples/l03_mistake_path.py" >}}
+
+::: {.callout-tip title="Teacher prompt: a syntax error (first use)"}
+After Program A: "Nothing ran. Not even line 1. A **syntax error** means Python couldn't understand the program at all, so it refused to start. The message points to the line where it got confused."
+
+After Program B: "This one ran to the end, and it's still wrong. That's a **logic error**: no message, just the wrong output. You only catch it by predicting what *should* happen and comparing."
+:::
+
+1. Program A stops before running anything. Which line does the message point to? Which quotation mark ended the string too early?
+2. Fix Program A two ways: with double quotation marks around the string, and with `\'`.
+3. Program B doesn't crash, but the output is wrong. What did `\t` and `\n` do to the folder name? How could you print a backslash? (Try `\\`.)
+
+## Modify (10 min)
+
+Make Lesson 2's report look like a real tool. Predict each change, then run it.
+
+1. Add a title line and a blank line under it.
+2. Use `\t` so the CPU type and the operating system start in the same column. (One tab isn't enough for both. Why?)
+3. Make the last line print `Report finished` on the same line as `Checking...`, using `end`.
+
+```{pyodide}
+import platform
+
+cpu = platform.machine()
+system = platform.system()
+name = platform.node()
+
+print("Computer report for", name)
+print("CPU type:", cpu)
+print("Operating system:", system)
+print("Checking...")
+print("Report finished")
+```
+
+## Make: The System Banner (10 min, then homework)
+
+Students start the [System Banner Quick Build](quick-build-system-banner.qmd) on the classroom computer: a box drawn with characters around a title, then the computer's facts underneath, lined up. They save it as `system_banner.py` in `ics3u/module-01/lesson-03/`. Ten minutes is enough to plan the box on paper (count the characters) and print it; students finish the facts for next class.
+
+## Check: Exit Ticket (5 min)
+
+1. Write the exact output of this program:
+
+   ```python
+   import platform
+
+   print("OS", "check", sep="-", end="... ")
+   print("done")
+   ```
+
+2. `print("CPU:" + cpu)` prints `CPU:arm64`. Change the line so it prints `CPU: arm64`.
+
+## After the Lesson
+
+- Students do the [Lesson 3 practice](practice.qmd#after-lesson-3-getting-output-right), then finish the [System Banner](quick-build-system-banner.qmd).
+- **Hand-in:** `system_banner.py`, the first Quick Build. It's graded; marking notes are in the answer keys.
+- Read the exit tickets. If many students missed the missing new line after `end="... "`, start Lesson 4's review with a `sep` and `end` trace.
+
+## Code for This Lesson
+
+Every program in this lesson, ready to run outside the browser. Download the `.py` file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.
+
+{{< lesson-code >}}
+
+## Teacher Notes
+
+- **Why a real tool first.** Students' Lesson 2 reports already work. Showing `systeminfo` (or the macOS and Linux equivalents) gives them a professional standard to aim at, and makes the point that polished output is just careful `print()` calls. Some school computers block the terminal; if so, show the sample output above.
+- **Tabs aren't a layout tool.** `\t` jumps to the next multiple of 8 characters, so labels longer than 7 characters jump further and break the line-up. Students meet this on purpose in Investigate. Lesson 4's f-strings fix it properly (`f"{label:<16}{value}"`).
+- **Windows paths.** Program B is a real bug: `"C:\temp\new"` contains a tab and a new line. It matters in Lesson 6, when students work with paths. Fixes: `\\`, forward slashes (Windows accepts them in Python), or raw strings (`r"C:\temp\new"`, a later extension).
+- **Commas vs. `+`.** Keep it to text today. `"Cores: " + 8` gives a `TypeError`, which belongs with Lesson 5's types.
+- **The banner's right side.** The computer's name is a different length on every computer, so students can't put it inside a box with a fixed right edge yet. The Quick Build boxes only the title and puts the facts underneath. Lesson 4 comes back to the banner and puts the values inside.
+- **Syntax errors in the step-through box.** The box reports the error and highlights the line before anything runs, just as Thonny, IDLE, and VS Code refuse to start the program. Python 3.10 and later say `unterminated string literal`; older versions say `EOL while scanning string literal`.
+- **Slides.** Open the slides on the projector and this plan on your own screen. Press **S** for speaker view.
+- **Spiral.** Students used `print()` with commas in Lessons 1–2 without knowing about `sep`. Keyword arguments come back with `round()`, `sorted()`, and `open()` in later modules.
+- Answers and the Quick Build marking notes are in the `answer-keys` folder of the course's GitHub repository, not on this site.
+
+## Previous and Next {.unlisted}
+
+[← Lesson 2](lesson-02-exploring-platform.qmd) · [Lesson 3 slides](lesson-03-getting-output-right-slides.qmd) · [Module 1 overview](index.qmd) · [Practice →](practice.qmd#after-lesson-3-getting-output-right)
+
+## Feedback {.unlisted}
+
+{{< feedback >}}

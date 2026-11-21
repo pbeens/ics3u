@@ -55,6 +55,7 @@ Students ask the computer about itself, using one line of Python.
 |---|---|---|---|
 | 1. Ask the Computer About Itself | [Lesson plan](modules/module-01-about-this-computer/lesson-01-ask-the-computer.qmd) | [Slides](modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.qmd) | [Practice](modules/module-01-about-this-computer/practice.qmd#after-lesson-1-ask-the-computer-about-itself) |
 | 2. Exploring the platform Library | [Lesson plan](modules/module-01-about-this-computer/lesson-02-exploring-platform.qmd) | [Slides](modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.qmd) | [Practice](modules/module-01-about-this-computer/practice.qmd#after-lesson-2-exploring-the-platform-library) |
+| 3. Getting Output Right | [Lesson plan](modules/module-01-about-this-computer/lesson-03-getting-output-right.qmd) | [Slides](modules/module-01-about-this-computer/lesson-03-getting-output-right-slides.qmd) | [Practice](modules/module-01-about-this-computer/practice.qmd#after-lesson-3-getting-output-right) · [Quick Build: System Banner](modules/module-01-about-this-computer/quick-build-system-banner.qmd) |
 | Module assignment | | | [Computer Report Card](modules/module-01-about-this-computer/assignment.qmd) |
 
 More modules are on the way. See the [Scope and Sequence](scope-and-sequence.qmd) for the full plan of seven modules; each planned module already has an overview page under **Modules**.
