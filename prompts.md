@@ -4,6 +4,49 @@ Program-related prompts for this project, newest first. Paraphrased, not verbati
 
 ---
 
+## User Prompt 74
+
+- **Timestamp:** 2026-11-21T11:40
+- **Goal:** Park the naming question and keep building Module 1.
+- **Summary:** The author is away in Manitoba for a week. Add the generic-name and multi-curriculum alignment idea to the tasks for later, and keep working on the Module 1 lessons.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Parked item in `tasks.md`; built Lessons 4 (f-strings) and 5 (values and types, Parts Receipt Quick Build) with slides, examples, practice, answer keys; steppers checked in Playwright Chromium.
+
+---
+
+## User Prompt 73
+
+- **Timestamp:** 2026-11-21T11:25
+- **Goal:** Decide whether to keep the course generic before public release.
+- **Summary:** Before announcing the site and fixing "ICS3U" in its URL, consider making the course generic and treating ICS3U as one curriculum it is audited against. Other curricula could then be audited too: TEJ4M Computer Technology, and courses from other provinces, states, or jurisdictions.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Advice only; measured how tightly the site is tied to ICS3U (repo and URL references, expectation codes, Ontario-specific content).
+
+---
+
+## User Prompt 72
+
+- **Timestamp:** 2026-11-21T11:10
+- **Goal:** Widen the reviewer request.
+- **Summary:** The lessons would also suit a TEJ4M (computer technology) student, because of the course's emphasis on hardware. Add that to the ACSE email draft.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+
+---
+
+## User Prompt 71
+
+- **Timestamp:** 2026-11-21T11:00
+- **Goal:** Recruit reviewers for the site.
+- **Summary:** Draft an email to the ACSE teachers' list asking for help reviewing the site: teachers, or ideally an ICS4U student doing independent work who knows Python and has a standalone computer. Describe the course's emphasis and big picture, why local computers are preferred, and the site's features (Pyodide in the browser, downloadable `.py` files and notebooks, notebooks in Callysto or Colab). Mention that the course is open source and still in development, and that feedback can go through GitHub or a Google Form.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Draft saved as `acse-review-request-email.md` in the project root.
+
+---
+
 ## User Prompt 70
 
 - **Timestamp:** 2026-11-21T10:30

@@ -1,0 +1,165 @@
+---
+title: "Better Reports with f-strings"
+subtitle: "Module 1, Lesson 4"
+format:
+  live-revealjs:
+    theme: default
+    slide-number: true
+    code-line-numbers: true
+    toc: false
+    footer: "[← Lesson 4 plan](lesson-04-better-reports-with-f-strings.html) · [Module 1](index.html)"
+engine: markdown
+---
+
+## Review
+
+In your tracing notebook, without running anything:
+
+1. What does `print("CPU", "arm64", sep=": ", end="!")` print?
+2. In your System Banner, why did the facts go *under* the box?
+
+::: {.notes}
+Take two or three answers to question 2. Land the point: the computer's name is a different length on every computer, so it pushes the box's right edge out of line.
+:::
+
+## Perfect on my computer…
+
+{{< stepper file="examples/l04_too_long.py" >}}
+
+::: {.notes}
+Open with the problem: "Here's a banner with the name inside the box. It looks perfect on my computer. Watch what happens with a longer name." Press Run all. "Today we fix this properly."
+:::
+
+## Values inside text
+
+```{.python code-line-numbers="|1|2"}
+name = "LAB-PC-14"
+print(f"Name: {name}")
+```
+
+::: {.fragment}
+- `f` before the quotation mark: an **f-string**
+- `{ }` is a hole, filled with the value inside it
+- Everything else prints exactly as typed
+:::
+
+::: {.notes}
+TEACHER PROMPT (first use of f-strings): "The f before the quotation mark makes this an f-string, short for formatted string. Inside it, curly braces are holes; Python fills each with the value of what's inside. Everything outside the braces prints exactly as typed, spaces included. No commas, no sep: what you see is what you get."
+:::
+
+## Padding
+
+```{.python code-line-numbers="2"}
+cpu = "arm64"
+print(f"[{cpu:<8}]")
+```
+
+::: {.fragment}
+- `:<8` take up **8 characters**, value on the **left**
+- `:>8` value on the right · `:^8` centred
+- The arrow points where the value goes
+:::
+
+::: {.notes}
+TEACHER PROMPT (first use of padding): "After the variable, a colon starts the format. <8 means take up 8 characters with the value on the left; the rest is spaces. > puts it on the right, ^ centres it. The square brackets aren't special: they let us see the spaces."
+:::
+
+## Predict, then step
+
+{{< stepper file="examples/l04_fstring_report.py" >}}
+
+::: {.notes}
+About 10 minutes. Students write the exact output first. Ask: lines 7 and 8 look almost the same; what will each print? After line 8: "No f, so no holes. The braces print as ordinary characters. The most common f-string mistake, and Python doesn't warn you: a logic error."
+:::
+
+## Padding inside a box
+
+{{< stepper file="examples/l04_padding.py" >}}
+
+::: {.notes}
+Ask: the top line is 30 characters. Show line 8 is too (1 + 28 + 1). Where does 18 come from on line 9? (10 characters before the hole, 2 after: 30 − 12.) Then go back to the "too long" slide: does Python cut the name off? TEACHER PROMPT: "Padding only ever adds spaces; it never cuts a value short. Pick a width bigger than any value you expect: slightly too wide looks fine, too narrow breaks."
+:::
+
+## Same output. Which would you rather read?
+
+```python
+a = platform.node()
+b = platform.system()
+x2 = platform.python_version()
+print(f"{a:<12}{b:<12}{x2}")
+```
+
+```python
+# One row of a lab inventory. Columns are 12 wide so rows line up.
+computer_name = platform.node()
+os_name = platform.system()
+python_version = platform.python_version()
+print(f"{computer_name:<12}{os_name:<12}{python_version}")
+```
+
+::: {.notes}
+TEACHER PROMPT (naming and comments): "Code is read far more often than it's written: by your teacher, a classmate, and you in three weeks. Python doesn't care what you call a variable. People do. A good name says what the value is; a good comment says why." Python names: lowercase with underscores. Ask: why can't a name have a space in it?
+:::
+
+## Spot the problem: A
+
+{{< stepper file="examples/l04_mistake_brace.py" >}}
+
+::: {.notes}
+Syntax error: the program never starts. The message says Python expected a closing brace.
+:::
+
+## Spot the problem: B
+
+{{< stepper file="examples/l04_mistake_name.py" >}}
+
+::: {.notes}
+TEACHER PROMPT (run-time error): "Line 4 ran: Report starting printed. Then Python stopped on line 5. That's a run-time error: the program started fine and broke while running. Program A never started; that was a syntax error." NameError: there's no variable called nme. Run it in Thonny or IDLE to show the "Did you mean: 'name'?" suggestion, which the step-through box doesn't show.
+:::
+
+## Modify
+
+1. Put the name and OS **inside** the box, padded
+2. Centre the title with `:^`
+3. Make the box 4 characters wider
+
+```{pyodide}
+import platform
+
+name = platform.node()
+system = platform.system()
+
+print("+============================+")
+print("|       SYSTEM BANNER        |")
+print("+============================+")
+print("Name:", name)
+print("System:", system)
+```
+
+## Make: System Banner, version 2
+
+- Open your `system_banner.py` from Lesson 3
+- Save a copy as `system_banner_v2.py` in `ics3u/module-01/lesson-04/`
+- Move every fact **inside** the box, with padding
+- Test it with `name = "a-twenty-char-name-x"`: the box must stay even
+
+::: {.notes}
+About 10 minutes. Not graded; the original Quick Build was. Students paste the 20-character test result as a comment at the bottom.
+:::
+
+## Exit ticket
+
+Write the exact output. Show each space as a dot (`·`).
+
+```python
+cpu = "arm64"
+print(f"[{cpu:<8}]")
+print(f"[{cpu:>8}]")
+print("[{cpu}]")
+```
+
+## After class
+
+- Do the [Lesson 4 practice](practice.qmd#after-lesson-4-better-reports-with-f-strings): read and predict first, then run
+- Finish `system_banner_v2.py`
+- Today's programs are on the practice page: download the `.py` files, or open them as notebooks in Callysto or Colab

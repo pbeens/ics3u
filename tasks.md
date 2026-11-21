@@ -15,6 +15,15 @@ The seven-module plan is approved (`decisions.md`, 2026-11-21). Lesson 3 is the 
 - [x] Notebooks rebuilt; render with no warnings; no broken links; all five steppers run in Chromium (Playwright) with expected output, including the `SyntaxError`
 - [ ] Author review of Lesson 3
 
+### Module 1, Lessons 4–5 (built 2026-11-21; awaiting author review)
+
+- [x] Lesson 4, Better Reports with f-strings: plan, slides (14), ten example programs; padding (`:<`, `:>`, `:^`) inside the System Banner's box; names and comments (A4.2); syntax vs. run-time errors; Make is System Banner version 2 (ungraded)
+- [x] Lesson 5, Values and Types: plan, slides (13), nine example programs; `str`/`int`/`float`/`bool`, `type()`, `/` gives a float, floating-point error and `:.2f`, `int()`/`float()`/`str()`, constants; Make is the Parts Receipt Quick Build (new student page `quick-build-parts-receipt.qmd`)
+- [x] Practice sections for Lessons 4 and 5; answer keys (`lesson-04-answers.md`, `lesson-05-answers.md`, practice answers, `quick-build-parts-receipt-marking.md` with a run sample solution)
+- [x] Links: home table, Module 1 overview (both moved out of Planned), sidebar, Previous/Next
+- [x] Notebooks rebuilt; render clean; no broken links; all steppers on Lessons 4–5 and the Practice page run in Chromium with expected output (the browser runs Python 3.13)
+- [ ] Author review of Lessons 4–5
+
 ### Next
 
 1. Build `make_sample_folder.py` (planned for `site/tools/`): standard library only; fixed and per-student seeds; safe reset; optional `--download` from files hosted on the site. Needed by Module 1 Lesson 6.
@@ -30,6 +39,9 @@ The seven-module plan is approved (`decisions.md`, 2026-11-21). Lesson 3 is the 
 - Lesson plans name the `answer-keys` folder in plain text (no link). Confirm that's wanted.
 
 ## Open Questions
+
+- **Parked (2026-11-21, author away for a week): generic name, ICS3U as the main alignment.** Before announcing the site, consider renaming it so the URL isn't tied to ICS3U ("design to one, map to many"): ICS3U stays the backbone (hours, pacing, assessment, Strand D) and its codes stay on the pages; other curricula get alignment pages built from compliance audits (first: TEJ4M, once the author has the curriculum PDF; later other provinces and states). Steps: (1) author picks a name and URL slug; (2) rename the repo, update about 30 files with repo or URL references (site config, feedback script, notebook Colab/Callysto links, READMEs), add redirect pages for old `/ics3u/` links, retitle the site, record the decision; (3) TEJ4M audit and alignment page; (4) then send the ACSE email. Ontario-specific details (HST, electricity rates, Computers for Schools; about 11 places) need only "use your local rate" notes.
+- **ACSE reviewer email** (`acse-review-request-email.md`, draft, not committed): on hold until the naming question is settled. Update the URL, the lesson count, and the TEJ4M angle before sending; decide whether to keep the draft out of the public repo.
 
 - **Idea to consider (2026-11-18): two tracks.** Track 1 (current plan) builds computer-related utilities. Track 2 would teach the same ideas through creating media and art, the way Turing graphics did for Ontario beginners. Notes for discussion:
   - Standard-library options: `turtle` (closest to Turing's drawing commands), `tkinter` Canvas (shapes, animation, simple games), writing SVG files as plain text (they open and edit in Inkscape), and generating sound with the `wave` module. Third-party options as extensions: Pillow (images), pygame-ce (games and animation), py5 (Processing-style).

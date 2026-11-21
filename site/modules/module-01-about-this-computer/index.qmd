@@ -14,6 +14,8 @@ subtitle: "About 15 hours · For teachers"
 | 1. Ask the Computer About Itself | [Lesson plan](lesson-01-ask-the-computer.qmd) | [Slides](lesson-01-ask-the-computer-slides.qmd) | [Practice](practice.qmd#after-lesson-1-ask-the-computer-about-itself) |
 | 2. Exploring the platform Library | [Lesson plan](lesson-02-exploring-platform.qmd) | [Slides](lesson-02-exploring-platform-slides.qmd) | [Practice](practice.qmd#after-lesson-2-exploring-the-platform-library) |
 | 3. Getting Output Right | [Lesson plan](lesson-03-getting-output-right.qmd) | [Slides](lesson-03-getting-output-right-slides.qmd) | [Practice](practice.qmd#after-lesson-3-getting-output-right) · [Quick Build: System Banner](quick-build-system-banner.qmd) |
+| 4. Better Reports with f-strings | [Lesson plan](lesson-04-better-reports-with-f-strings.qmd) | [Slides](lesson-04-better-reports-with-f-strings-slides.qmd) | [Practice](practice.qmd#after-lesson-4-better-reports-with-f-strings) |
+| 5. Values and Types | [Lesson plan](lesson-05-values-and-types.qmd) | [Slides](lesson-05-values-and-types-slides.qmd) | [Practice](practice.qmd#after-lesson-5-values-and-types) · [Quick Build: Parts Receipt](quick-build-parts-receipt.qmd) |
 
 ### Planned lessons
 
@@ -23,8 +25,6 @@ subtitle: "About 15 hours · For teachers"
 
 | Lesson | Focus | Students read, then build |
 |---|---|---|
-| 4. Better Reports with f-strings | f-strings; comments; naming conventions (A4.2) | Put the computer's facts inside the System Banner's box, padded to an exact width; tidy the report card |
-| 5. Values and Types | `str`, `int`, `float`, `type()`; simple arithmetic; why `"8" + "8"` is `"88"`; reading a program that pulls numbers out of the Python version (A1.1) | Make: the **Parts Receipt** Quick Build |
 | 6. Where Do My Programs Live? | Files, folders, and paths; organizing a course folder on local and shared drives; the parts of the editor (C2.1, C3.1); first run of the sample folder generator; reading a two-line program that prints the current folder | Explain the course folder students set up on day one, then add the toolkit folder; run the same file from the editor and the terminal |
 | 7. What Python Actually Runs | Source code vs. machine code; interpreters vs. compilers; bytecode with `dis`; applications vs. languages vs. operating systems (C3.3, C3.4, C3.5) | Match `dis` output to lines of code; sort running programs into apps, languages, and OS parts |
 | 8. Inside the Computer: RAM and CPU | Where variables live and where arithmetic happens; `sys.getsizeof()` and `id()` (C1.1, C1.4) | Trace a program and label each line "RAM" or "CPU" |
@@ -48,7 +48,7 @@ Each lesson plan's **Code for This Lesson** section has the `.py` files and note
 - **Skill Builder:** short drills on `print()` arguments, `sep` and `end`, escape characters, quotes, variables, types, f-strings, and reading a traceback. Each drill set opens with predict-the-output and fix-the-error questions.
 - **Quick Builds** (small graded programs; each is the Make product of a lesson, so it needs no extra period):
   - [**System Banner**](quick-build-system-banner.qmd) (Lesson 3): a boxed title banner for the computer, with exact spacing.
-  - **Parts Receipt** (Lesson 5): a receipt for computer parts, with prices, HST, and a total in aligned columns.
+  - [**Parts Receipt**](quick-build-parts-receipt.qmd) (Lesson 5): a receipt for computer parts, with prices, HST, and a total in aligned columns.
 
 Until the Skill Builder is ready, use the [Practice](practice.qmd) page and the exit tickets for retrieval practice.
 

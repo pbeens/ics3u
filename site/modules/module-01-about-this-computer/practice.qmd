@@ -154,9 +154,105 @@ Lesson 3's programs, including the ones above. Download a `.py` file, or open th
 
 {{< lesson-code lesson="03" hide="exit_ticket" >}}
 
+## After Lesson 4: Better Reports with f-strings
+
+### Read and predict
+
+Read this program **without running it**. In your tracing notebook, write the exact output, showing spaces as dots (`·`) on the first three lines. Then type your prediction and press **Step**.
+
+1. How many characters wide is the first line of output, spaces included?
+2. Why do `Emscripten` and the Python version start in the same column?
+3. Lines 5 to 7 have quotation marks inside the braces. What do they do?
+
+{{< stepper file="examples/l04_practice_read.py" >}}
+
+### Spot the mistakes
+
+This program has two mistakes. Predict what will happen, then press **Step**.
+
+1. Line 4 runs without an error, but its output is wrong. What's missing?
+2. Line 5 stops the program. What kind of error is it: syntax or run-time? How do you know?
+3. Fix both on your classroom computer. (For line 5, use `cores = 4` for now. In Module 2 you'll ask the computer.)
+
+{{< stepper file="examples/l04_practice_mistake.py" >}}
+
+### Modify
+
+Predict each change, then run it.
+
+1. Right-align the numbers so their last digits line up.
+2. Add a third row for a USB key that holds 64 GB.
+3. Make the label column wide enough for `External hard drive`.
+
+```{pyodide}
+laptop = 512
+desktop = 2000
+
+print(f"{'Laptop:':<10}{laptop} GB")
+print(f"{'Desktop:':<10}{desktop} GB")
+```
+
+### Make
+
+Rewrite your Lesson 2 report on the classroom computer so it looks like the `systeminfo` output from Lesson 3: every label padded to the same width with an f-string, so all the values start in one column. Save it as `systeminfo_style.py` in `ics3u/module-01/lesson-04/`.
+
+### Code files
+
+Lesson 4's programs, including the ones above. Download a `.py` file, or open the notebook in Callysto or Colab.
+
+{{< lesson-code lesson="04" hide="exit_ticket" >}}
+
+## After Lesson 5: Values and Types
+
+### Read and predict
+
+Read this program **without running it**. In your tracing notebook, write the type of each variable, then the exact output. Then type your prediction and press **Step**.
+
+1. What three types does line 4 print?
+2. Line 5 multiplies an `int` by a `float`. What type is the answer?
+3. Lines 6 and 7 use `*` and `+` with a string. What does each do?
+4. What does line 8 print, and what type is it?
+
+{{< stepper file="examples/l05_practice_read.py" >}}
+
+### Spot the mistake
+
+Predict what will happen, then press **Step**.
+
+1. Which line stops the program? What kind of error is it?
+2. What is the `TypeError` message telling you?
+3. Fix it two ways: by changing line 1, and by changing line 3 with `int()`.
+
+{{< stepper file="examples/l05_practice_mistake.py" >}}
+
+### Modify
+
+Predict each change, then run it.
+
+1. What type is `photos`? Why?
+2. Nobody stores part of a photo. Print the number of photos as a whole number, using `int()`.
+3. Put quotation marks around `4.5`. What happens? Why?
+
+```{pyodide}
+storage_gb = 512
+photo_mb = 4.5
+photos = storage_gb * 1000 / photo_mb
+print("Photos that fit:", photos)
+```
+
+### Make
+
+A school buys 30 refurbished computers at $219.99 each. On your classroom computer, write a program that prints the cost before tax, the HST (13%), the total, and the cost per computer including tax. Store the price, the number of computers, and the tax rate in variables (the tax rate as a constant), and show every amount to two decimal places. Save it as `lab_budget.py` in `ics3u/module-01/lesson-05/`.
+
+### Code files
+
+Lesson 5's programs, including the ones above. Download a `.py` file, or open the notebook in Callysto or Colab.
+
+{{< lesson-code lesson="05" hide="exit_ticket" >}}
+
 ## Next
 
-When you've finished the Lesson 1 and Lesson 2 practice, start the [Module 1 Assignment](assignment.qmd). After Lesson 3, finish the [System Banner](quick-build-system-banner.qmd).
+When you've finished the Lesson 1 and Lesson 2 practice, start the [Module 1 Assignment](assignment.qmd). After Lesson 3, finish the [System Banner](quick-build-system-banner.qmd); after Lesson 5, the [Parts Receipt](quick-build-parts-receipt.qmd).
 
 ## Previous and Next {.unlisted}
 

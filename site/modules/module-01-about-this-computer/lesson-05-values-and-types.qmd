@@ -1,0 +1,197 @@
+---
+title: "Lesson 5: Values and Types"
+subtitle: "Module 1 — About This Computer"
+format: live-html
+engine: markdown
+expectations: [A1.1, A2.1, A4.3, A4.4]
+---
+
+::: {.callout-important appearance="simple" icon=false}
+**For teachers.** This is the lesson plan: use it to prepare and as your script in class. Students work from the **slides**, the **code files and notebooks**, and the **practice** page. The step-through boxes and runnable code are here so you can try every activity first. [How a lesson works →](../../how-a-lesson-works.qmd)
+:::
+
+::: {.callout-note appearance="simple"}
+**Time:** 75 minutes · **Expectations:** A1.1, A2.1, A4.3, A4.4 · **Slides:** [Lesson 5 slides](lesson-05-values-and-types-slides.qmd) (press **S** for speaker notes) · [Module 1 overview](index.qmd) · **Previous:** [Lesson 4](lesson-04-better-reports-with-f-strings.qmd)
+:::
+
+## At a Glance
+
+- **Big idea:** every value has a type, and the type decides what operations do. `"8" + "8"` is `"88"`, but `8 + 8` is `16`. A program that handles computer specs and prices has to get the types right.
+- **Students will:** see the same digits behave differently as text and as numbers, use `type()`, calculate with integers and decimals, format money to two decimal places, and fix two type mistakes.
+- **Students make:** the **Parts Receipt** Quick Build: a receipt for computer parts with line totals, HST, and a total in aligned columns (started in class, finished for next class).
+- **Prepare:** run each `l05_` program. Open the slides a few minutes before class so Python finishes loading.
+- **After class:** [Lesson 5 practice](practice.qmd#after-lesson-5-values-and-types) and the [Parts Receipt Quick Build](quick-build-parts-receipt.qmd).
+- **Where it fits:** students have stored text in variables since Lesson 2. Now they meet numbers. Module 2 adds `//`, `%`, `**`, and converting what the user types with `int()` and `float()`.
+
+## Learning Goals
+
+- Name the four basic types: `str`, `int`, `float`, and `bool`, and use `type()` to check one.
+- Predict what `+` and `*` do with strings and with numbers.
+- Calculate with `+`, `-`, `*`, and `/`, and explain why `/` always gives a `float`.
+- Format a money amount to two decimal places with `:.2f`.
+- Convert between types with `int()`, `float()`, and `str()`.
+
+## Success Criteria
+
+Students can say:
+
+- I can look at a value and say what type it is, and why it matters.
+- I can explain why `"8" + "8"` gives `"88"`.
+- I can print a price correctly to the cent.
+
+## Review (5 min)
+
+Without running anything, answer in tracing notebooks:
+
+1. `cpu = "arm64"`. Write the exact output of `print(f"[{cpu:>7}]")`, showing spaces as dots.
+2. A program prints `Name: {name}`. What's the most likely mistake?
+
+## Teach: What Kind of Value? (15 min)
+
+Open with the problem: "Your computer has 8 GB of RAM. You add another 8 GB stick. Here's a program that works out the total." Show it, and ask the class to predict before running:
+
+```python
+ram = "8"
+extra = "8"
+print(ram + extra)
+```
+
+It prints `88`. "Did we just build an 88 GB computer? What went wrong?" Take guesses before explaining.
+
+::: {.callout-tip title="Teacher prompt: types (first use)"}
+- "Every value in Python has a **type**. The quotation marks made `"8"` a **string**: text that happens to be a digit. For strings, `+` means *join*."
+- "Without quotation marks, `8` is an **integer**, a whole number, type `int`. For numbers, `+` means *add*."
+- "A number with a decimal point, like `89.99`, is a **float**. And `True` and `False` are **Booleans**, type `bool`: the answer to a yes-or-no question."
+- "`type()` tells you a value's type. And look at the Variables panel: strings have quotation marks, numbers don't."
+:::
+
+## Predict, Then Step (10 min)
+
+Read this program **without running it**, then answer in tracing notebooks:
+
+1. What do lines 3 and 6 print? Why are they different?
+2. After line 4 runs, what does `ram` hold? How will the Variables panel show the difference between line 1's value and line 4's?
+3. What will line 9 print? (Python writes a type as `<class 'int'>`.)
+
+{{< stepper file="examples/l05_types.py" >}}
+
+::: {.callout-tip title="Teacher prompt"}
+After line 4: "Same name, new value, and a new type. In the Variables panel, `'8'` became `8`: the quotation marks are gone. The panel is showing you the type." After line 9: "`bool` is short for Boolean, after George Boole, a mathematician. Every yes-or-no question a program asks ends up as `True` or `False`."
+:::
+
+## Investigate (20 min)
+
+### Calculating with specs and prices (8 min)
+
+{{< stepper file="examples/l05_arithmetic.py" >}}
+
+1. Line 5 divides 16 by 2. Why does it print `8.0` and not `8`?
+2. Line 7 should print a price. What went wrong? Is Python bad at arithmetic?
+3. Line 8 fixes it. What does `:.2f` do?
+
+::: {.callout-tip title="Teacher prompt: decimals and :.2f (first use)"}
+- "Division with `/` always gives a float, even when it comes out even."
+- "Computers store decimals in binary, and most decimals, like 89.99, can't be stored exactly. So you get tiny errors like `269.96999999999997`. That's normal. Every language does it."
+- "`:.2f` in an f-string means: show this as a **f**loat, rounded to **2** decimal places. Use it for every amount of money."
+:::
+
+### Same fact, different types (7 min)
+
+{{< stepper file="examples/l05_version_numbers.py" >}}
+
+1. `platform.python_version()` and `sys.version_info.minor` both describe the Python version. What type is each?
+2. Line 8 needs `str()`. Why? What would happen without it?
+3. Line 9 prints `True` or `False`. Which type is that? What question is the program asking?
+
+::: {.callout-tip title="Teacher prompt"}
+"`sys` is another module that comes with Python; it knows about Python itself. You'll see `>=`, 'greater than or equal to', properly in Module 2. Today, just notice that the answer to a comparison is a Boolean."
+:::
+
+### Spot the problem (5 min)
+
+Predict what will happen, then step through each.
+
+**Program A**
+
+{{< stepper file="examples/l05_mistake_concat.py" >}}
+
+**Program B**
+
+{{< stepper file="examples/l05_mistake_repeat.py" >}}
+
+1. Program A: is this a syntax error or a run-time error? How do you know? What does the `TypeError` message mean?
+2. Fix Program A two ways: with `str()`, and with an f-string.
+3. Program B doesn't crash. What did `*` do to the string? Fix it with `float()`.
+
+::: {.callout-tip title="Teacher prompt"}
+"A `TypeError` means the right operation on the wrong type. Program B is sneakier: `*` *works* on a string, it repeats it, so there's no error, just a wrong answer. When numbers come from somewhere as text, convert them before you calculate."
+:::
+
+## Modify (10 min)
+
+A line from a receipt. Predict each change, then run it.
+
+1. Show both amounts to two decimal places with an f-string.
+2. Add a line that prints the total with HST.
+3. Change the quantity to 3. Which lines change?
+
+`TAX_RATE` is in capitals because it's a **constant**: a value the program never changes. Python programmers write constants in capitals so readers know not to change them.
+
+```{pyodide}
+TAX_RATE = 0.13
+mouse_price = 24.99
+quantity = 2
+line_total = mouse_price * quantity
+
+print("Mouse x", quantity, line_total)
+print("HST:", line_total * TAX_RATE)
+```
+
+## Make: The Parts Receipt (10 min, then homework)
+
+Students start the [Parts Receipt Quick Build](quick-build-parts-receipt.qmd) on the classroom computer: a receipt for at least three computer parts, with quantities, line totals, a subtotal, HST, and a total, all in aligned columns. They save it as `parts_receipt.py` in `ics3u/module-01/lesson-05/`. In class: choose the parts, store the prices and quantities in variables, and calculate the totals. The layout is homework.
+
+## Check: Exit Ticket (5 min)
+
+Write the exact output:
+
+```python
+a = "5"
+b = 5
+print(a * 3)
+print(b * 3)
+print(type(b / 5))
+```
+
+## After the Lesson
+
+- Students do the [Lesson 5 practice](practice.qmd#after-lesson-5-values-and-types), then finish the [Parts Receipt](quick-build-parts-receipt.qmd).
+- **Hand-in:** `parts_receipt.py`, the second Quick Build. It's graded; marking notes are in the answer keys.
+- Read the exit tickets. `555` versus `15` is the heart of the lesson; if many missed it, open Lesson 6 with three more "string or number?" predictions.
+
+## Code for This Lesson
+
+Every program in this lesson, ready to run outside the browser. Download the `.py` file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.
+
+{{< lesson-code >}}
+
+## Teacher Notes
+
+- **Why it matters here.** Everything the computer tells us through `platform` is a string, even when it looks like a number (`"3.11.4"`, `"11"`). From Module 2 on, students calculate with specs (cores, gigabytes, speeds), so the string-or-number question comes up constantly.
+- **Floating-point error.** `89.99 * 3` gives `269.96999999999997` because 89.99 can't be stored exactly in binary. Module 4 covers binary; for now, "computers store decimals in binary, and most can't be stored exactly" is enough. Formatting with `:.2f` is the fix for display. (Real money software stores cents as integers or uses the `decimal` module, a good extension question.)
+- **HST.** The receipt uses Ontario's 13% HST. Teachers in other provinces can change `TAX_RATE`; that's the point of a named constant.
+- **Rounding on receipts.** The Quick Build shows the total of the unrounded amounts, so occasionally the displayed subtotal plus displayed tax is off by a cent from the displayed total. That's a real issue for stores; accept either approach, and praise students who notice it.
+- **Booleans** appear today only as the answer to a comparison. Students write decisions with them in Module 2.
+- **`sys.version_info`** is a named tuple; students don't need the word. They just read `.minor` the same way they read `platform.machine()`: the dot means "the `minor` part of `sys.version_info`".
+- **String repetition** (`"-" * 40`) is useful for drawing lines in reports; students may use it in the receipt.
+- **Slides.** Open the slides on the projector and this plan on your own screen. Press **S** for speaker view.
+- **Spiral.** Types come back in Module 2 (`int()` and `float()` on user input, and `try`/`except` when the conversion fails), Module 4 (characters as numbers), and Module 5 (lists).
+- Answers and the Quick Build marking notes are in the `answer-keys` folder of the course's GitHub repository, not on this site.
+
+## Previous and Next {.unlisted}
+
+[← Lesson 4](lesson-04-better-reports-with-f-strings.qmd) · [Lesson 5 slides](lesson-05-values-and-types-slides.qmd) · [Module 1 overview](index.qmd) · [Practice →](practice.qmd#after-lesson-5-values-and-types)
+
+## Feedback {.unlisted}
+
+{{< feedback >}}

@@ -1,0 +1,145 @@
+---
+title: "Values and Types"
+subtitle: "Module 1, Lesson 5"
+format:
+  live-revealjs:
+    theme: default
+    slide-number: true
+    code-line-numbers: true
+    toc: false
+    footer: "[← Lesson 5 plan](lesson-05-values-and-types.html) · [Module 1](index.html)"
+engine: markdown
+---
+
+## Review
+
+In your tracing notebook, without running anything:
+
+1. `cpu = "arm64"`. Write the output of `print(f"[{cpu:>7}]")`, spaces as dots.
+2. A program prints `Name: {name}`. What's the most likely mistake?
+
+## 8 GB + 8 GB = ?
+
+```python
+ram = "8"
+extra = "8"
+print(ram + extra)
+```
+
+::: {.fragment}
+```text
+88
+```
+
+Did we just build an 88 GB computer?
+:::
+
+::: {.notes}
+Open with the problem: "Your computer has 8 GB of RAM. You add another 8 GB stick. Here's a program that works out the total." Students predict before the fragment. Take guesses about what went wrong before explaining.
+:::
+
+## Four types
+
+| Type | Example | What it is |
+|---|---|---|
+| `str` | `"8"`, `"arm64"` | text (a string) |
+| `int` | `8`, `512` | a whole number |
+| `float` | `89.99`, `8.0` | a number with a decimal point |
+| `bool` | `True`, `False` | the answer to a yes-or-no question |
+
+`type(value)` tells you which.
+
+::: {.notes}
+TEACHER PROMPT (first use of types): "Every value has a type. The quotation marks made '8' a string: text that happens to be a digit. For strings, + means join. Without quotation marks, 8 is an integer, and + means add. A number with a decimal point is a float. True and False are Booleans. type() tells you a value's type, and in the Variables panel strings have quotation marks and numbers don't."
+:::
+
+## Predict, then step
+
+{{< stepper file="examples/l05_types.py" >}}
+
+::: {.notes}
+About 10 minutes. Ask: what do lines 3 and 6 print, and why different? After line 4, how does the Variables panel show the difference? What will line 9 print (Python writes a type as <class 'int'>)? After line 4: "Same name, new value, and a new type: '8' became 8." After line 9: "bool is short for Boolean, after George Boole. Every yes-or-no question a program asks ends up True or False."
+:::
+
+## Calculating with specs and prices
+
+{{< stepper file="examples/l05_arithmetic.py" >}}
+
+::: {.notes}
+Ask: why does line 5 print 8.0? What went wrong on line 7; is Python bad at arithmetic? What does :.2f do? TEACHER PROMPT (decimals and :.2f): "Division with / always gives a float. Computers store decimals in binary, and most decimals can't be stored exactly, so you get tiny errors. That's normal in every language. :.2f means show this as a float rounded to 2 decimal places. Use it for every amount of money."
+:::
+
+## Same fact, different types
+
+{{< stepper file="examples/l05_version_numbers.py" >}}
+
+::: {.notes}
+Ask: what type is each version? Why does line 8 need str()? Line 9 prints True or False: which type, and what question is it asking? "sys is another module that comes with Python; it knows about Python itself. You'll see >= properly in Module 2. Today, notice that the answer to a comparison is a Boolean."
+:::
+
+## Spot the problem: A
+
+{{< stepper file="examples/l05_mistake_concat.py" >}}
+
+::: {.notes}
+Run-time error: "Checking memory" printed first. TypeError: can't join a string and an integer with +. Fix with str(ram_gb) or an f-string. "A TypeError means the right operation on the wrong type."
+:::
+
+## Spot the problem: B
+
+{{< stepper file="examples/l05_mistake_repeat.py" >}}
+
+::: {.notes}
+No crash, wrong answer: * repeats a string. Fix with float(price). "When numbers come from somewhere as text, convert them before you calculate."
+:::
+
+## Modify
+
+1. Show both amounts to two decimal places
+2. Add a line for the total with HST
+3. Change the quantity to 3
+
+```{pyodide}
+TAX_RATE = 0.13
+mouse_price = 24.99
+quantity = 2
+line_total = mouse_price * quantity
+
+print("Mouse x", quantity, line_total)
+print("HST:", line_total * TAX_RATE)
+```
+
+::: {.notes}
+TAX_RATE is in capitals because it's a constant: a value the program never changes. Python programmers write constants in capitals so readers know not to change them.
+:::
+
+## Make: the Parts Receipt
+
+- At least three computer parts: name, price, quantity
+- Line totals, subtotal, HST, and total
+- Money to two decimal places, in lined-up columns
+- Save it as `parts_receipt.py` in `ics3u/module-01/lesson-05/`
+
+[Parts Receipt Quick Build](quick-build-parts-receipt.qmd)
+
+::: {.notes}
+About 10 minutes in class: choose the parts, store prices and quantities in variables, calculate the totals. The layout is homework. It's the second graded Quick Build.
+:::
+
+## Exit ticket
+
+Write the exact output:
+
+```python
+a = "5"
+b = 5
+print(a * 3)
+print(b * 3)
+print(type(b / 5))
+```
+
+## After class
+
+- Do the [Lesson 5 practice](practice.qmd#after-lesson-5-values-and-types): read and predict first, then run
+- Finish the [Parts Receipt](quick-build-parts-receipt.qmd) for next class
+- Today's programs are on the practice page: download the `.py` files, or open them as notebooks in Callysto or Colab

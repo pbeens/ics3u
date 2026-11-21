@@ -1,0 +1,69 @@
+---
+title: "Quick Build: Parts Receipt"
+subtitle: "Module 1 — About This Computer · For students"
+expectations: [A1.1, A2.1, A4.2]
+---
+
+::: {.callout-note appearance="simple"}
+**For students.** After [Lesson 5](lesson-05-values-and-types-slides.qmd). Start in class, finish for next class. Work on your classroom computer (Thonny, IDLE, or VS Code). **Hand in:** `parts_receipt.py`, saved in `ics3u/module-01/lesson-05/` in your [course folder](../../course-folder.qmd). · [Module 1 overview](index.qmd)
+:::
+
+## The Job
+
+You're upgrading a computer, and the store's receipt printer is broken. Write the program that prints the receipt: what was bought, how many, what each line costs, the tax, and the total.
+
+Here's one example. Your parts and prices will be different.
+
+```text
+             PARTS RECEIPT
+----------------------------------------
+Item               Qty    Price    Total
+8 GB RAM stick       2    34.99    69.98
+1 TB SSD             1    89.99    89.99
+USB-C cable          3    12.49    37.47
+----------------------------------------
+Subtotal                          197.44
+HST (13%)                          25.67
+TOTAL                             223.11
+```
+
+## Your Program Must
+
+1. Start with a comment giving your name, the date, and what the program does.
+2. List **at least three** computer parts. For each, store its name, price, and quantity in variables with clear names.
+3. **Calculate** each line total, the subtotal, the tax, and the total. Don't work them out yourself and type them in.
+4. Store the tax rate in a **constant**, written in capitals: `TAX_RATE = 0.13` for Ontario's HST. (Outside Ontario, use your province's rate.)
+5. Show every amount of money to **two decimal places**.
+6. Line up the columns with f-string padding, so the numbers' decimal points line up.
+
+## Plan It First
+
+Choose real parts and prices: look them up on a store's website. Decide each column's width before you code: the item names need the widest column. Right-align the numbers (`:>9.2f`) so the decimal points line up.
+
+## Check Your Arithmetic
+
+Work out one line total and the tax on a calculator. Does your program agree? If your total is off by a cent from adding the subtotal and tax shown, that's rounding: the program adds the exact amounts and rounds only when it prints. Explain it in a comment if it happens.
+
+## Check Before You Hand In
+
+- [ ] It runs on the classroom computer with no errors.
+- [ ] At least three parts, each with name, price, and quantity in variables.
+- [ ] Every total is calculated by the program.
+- [ ] `TAX_RATE` constant, in capitals.
+- [ ] Money shown to two decimal places, with the decimal points lined up.
+- [ ] Header comment at the top; output pasted as a comment at the bottom.
+
+## Success Criteria
+
+| | Level 1–2 | Level 3 | Level 4 |
+|---|---|---|---|
+| **Application** | Runs, but some totals are typed in, wrong, or not shown to two decimal places | Three parts; all totals calculated correctly; constant for the tax rate; money to two decimal places | Also cleanly lined up, with realistic parts and prices |
+| **Communication** | Missing header comment, or unclear names | Header comment; clear variable names and labels | Clear, consistent names, labels, and comments throughout |
+
+## Previous and Next {.unlisted}
+
+[← Lesson 5 practice](practice.qmd#after-lesson-5-values-and-types) · [Module 1 overview](index.qmd)
+
+## Feedback {.unlisted}
+
+{{< feedback >}}

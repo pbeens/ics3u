@@ -1,0 +1,231 @@
+---
+title: "Lesson 4: Better Reports with f-strings"
+subtitle: "Module 1 — About This Computer"
+format: live-html
+engine: markdown
+expectations: [A1.1, A2.1, A4.2, A4.3]
+---
+
+::: {.callout-important appearance="simple" icon=false}
+**For teachers.** This is the lesson plan: use it to prepare and as your script in class. Students work from the **slides**, the **code files and notebooks**, and the **practice** page. The step-through boxes and runnable code are here so you can try every activity first. [How a lesson works →](../../how-a-lesson-works.qmd)
+:::
+
+::: {.callout-note appearance="simple"}
+**Time:** 75 minutes · **Expectations:** A1.1, A2.1, A4.2, A4.3 · **Slides:** [Lesson 4 slides](lesson-04-better-reports-with-f-strings-slides.qmd) (press **S** for speaker notes) · [Module 1 overview](index.qmd) · **Previous:** [Lesson 3](lesson-03-getting-output-right.qmd) · **Next:** [Lesson 5](lesson-05-values-and-types.qmd)
+:::
+
+## At a Glance
+
+- **Big idea:** an f-string puts values straight into text, and can pad each value to an exact width. That's how real tools line up columns, whatever the values turn out to be.
+- **Students will:** read f-strings, predict padded output character by character, compare a program with poor names to one with good names, and tell a syntax error from a run-time error.
+- **Students make:** version 2 of their System Banner, with the computer's facts *inside* the box.
+- **Prepare:** run each `l04_` program. Have a student's System Banner from Lesson 3 ready to show (with permission), or use the sample in Modify. Open the slides a few minutes before class so Python finishes loading.
+- **After class:** [Lesson 4 practice](practice.qmd#after-lesson-4-better-reports-with-f-strings).
+- **Where it fits:** keeps Lesson 3's promise (facts inside the banner). Lesson 5 asks what kind of value each answer is, and starts calculating with numbers.
+
+## Learning Goals
+
+- Read and write f-strings that put variables into text.
+- Pad a value to a width, aligned left, right, or centre (`:<`, `:>`, `:^`).
+- Choose clear variable names and write comments that explain *why*.
+- Tell a syntax error (the program never starts) from a run-time error (it stops partway).
+
+## Success Criteria
+
+Students can say:
+
+- I can predict exactly what an f-string will print, including padding.
+- I can line up a report so it looks right on any computer.
+- I can explain why `computer_name` is a better name than `a`.
+
+## Review (5 min)
+
+Without running anything, answer in tracing notebooks:
+
+1. What does `print("CPU", "arm64", sep=": ", end="!")` print?
+2. In your System Banner, why did the computer's facts go *under* the box instead of inside it?
+
+Take two or three answers to question 2. The point to land: the computer's name is a different length on every computer, so it pushes the box's right edge out of line.
+
+## Teach: Values Inside Text (15 min)
+
+Open with the problem: "Here's a banner with the name inside the box. It looks perfect on my computer. Watch what happens on a computer with a longer name." Press **Run all**. "Today we fix this properly."
+
+{{< stepper file="examples/l04_too_long.py" >}}
+
+Show the first f-string, and read it aloud before running:
+
+```python
+name = "LAB-PC-14"
+print(f"Name: {name}")
+```
+
+::: {.callout-tip title="Teacher prompt: f-strings (first use)"}
+- "The `f` before the quotation mark makes this an **f-string**, short for *formatted string*."
+- "Inside an f-string, curly braces `{ }` are holes. Python fills each hole with the value of whatever's inside it, here the variable `name`."
+- "Everything outside the braces prints exactly as typed, spaces included. No commas, no `sep`: what you see is what you get."
+:::
+
+Then padding:
+
+```python
+cpu = "arm64"
+print(f"[{cpu:<8}]")
+```
+
+::: {.callout-tip title="Teacher prompt: padding (first use)"}
+- "After the variable, a colon starts the *format*. `<8` means: take up **8 characters**, with the value on the **left**. The rest is filled with spaces."
+- "`>` puts the value on the right; `^` centres it. The arrow points where the value goes."
+- "The square brackets aren't special. They're there so we can *see* the spaces."
+:::
+
+## Predict, Then Step (10 min)
+
+Read this program **without running it**, then answer in tracing notebooks:
+
+1. Write the exact output, line by line.
+2. Lines 7 and 8 look almost the same. What will each print? Why?
+
+Type your prediction in the box, then press **Step**.
+
+{{< stepper file="examples/l04_fstring_report.py" >}}
+
+::: {.callout-tip title="Teacher prompt"}
+After line 8: "No `f`, so no holes. The braces print as ordinary characters. This is the most common f-string mistake, and Python doesn't warn you: it's a logic error."
+:::
+
+## Investigate (20 min)
+
+### Padding inside a box (10 min)
+
+{{< stepper file="examples/l04_padding.py" >}}
+
+1. The box's top line is 30 characters wide. Show that line 8 is 30 characters too: count the characters outside the braces, and add the padding.
+2. Line 9 uses `:<18`. Where does 18 come from?
+3. Now look again at the box from Teach (`l04_too_long.py`). The name is 26 characters, but the padding is 18. Does Python cut the name off? What happens to the box?
+4. How wide would the padding need to be to fit that name? How wide would the box be then?
+
+::: {.callout-tip title="Teacher prompt"}
+"Padding only ever *adds* spaces. It never cuts a value short. So pick a width bigger than any value you expect: a box that's slightly too wide looks fine; one that's too narrow breaks."
+:::
+
+### Names and comments (5 min)
+
+These two programs print exactly the same line. Read both.
+
+```python
+import platform
+
+a = platform.node()
+b = platform.system()
+x2 = platform.python_version()
+print(f"{a:<12}{b:<12}{x2}")
+```
+
+```python
+# Prints one row of a lab inventory: computer name, OS, Python version.
+# Columns are 12 characters wide so rows from different computers line up.
+import platform
+
+computer_name = platform.node()
+os_name = platform.system()
+python_version = platform.python_version()
+print(f"{computer_name:<12}{os_name:<12}{python_version}")
+```
+
+1. If they print the same thing, why would anyone bother with the second version?
+2. The second program's comment explains *why* the columns are 12 wide. Why is that more useful than a comment like `# print the variables`?
+3. Python names are lowercase, with underscores between words: `computer_name`, not `ComputerName` or `computer name`. Why can't a name have a space in it?
+
+::: {.callout-tip title="Teacher prompt: naming and comments (first use)"}
+"Code is read far more often than it's written: by your teacher, by a classmate, and by you in three weeks. Python doesn't care what you call a variable. People do. A good name says what the value *is*; a good comment says *why* the code does what it does."
+:::
+
+### Spot the problem (5 min)
+
+Predict what will happen, then step through each.
+
+**Program A**
+
+{{< stepper file="examples/l04_mistake_brace.py" >}}
+
+**Program B**
+
+{{< stepper file="examples/l04_mistake_name.py" >}}
+
+::: {.callout-tip title="Teacher prompt: a run-time error (first use of the term)"}
+After Program B: "Line 4 ran: `Report starting` printed. Then Python stopped on line 5. That's a **run-time error**: the program started fine, and broke while running. Program A never started at all; that was a **syntax error**, like the apostrophe in Lesson 3."
+:::
+
+1. Program A: which line? What does the message say Python was expecting?
+2. Program B: what printed before it stopped? What does `NameError` mean? What's the fix?
+3. Which program had a syntax error, and which a run-time error? How can you tell from the output?
+
+## Modify (10 min)
+
+This is a System Banner like the ones students made in Lesson 3. Predict each change, then run it.
+
+1. Put the computer's name and operating system **inside** the box, padded so the right edge lines up.
+2. Centre the title with `:^`.
+3. Make the whole box 4 characters wider. What else has to change?
+
+```{pyodide}
+import platform
+
+name = platform.node()
+system = platform.system()
+
+print("+============================+")
+print("|       SYSTEM BANNER        |")
+print("+============================+")
+print("Name:", name)
+print("System:", system)
+```
+
+## Make: System Banner, Version 2 (10 min)
+
+On the classroom computer, students open their own `system_banner.py` from Lesson 3, save a copy as `system_banner_v2.py` in `ics3u/module-01/lesson-04/`, and move every fact inside the box with f-string padding. The box must stay even with a computer name up to 20 characters long: test by temporarily setting `name = "a-twenty-char-name-x"`. This version isn't graded; the original Quick Build was.
+
+## Check: Exit Ticket (5 min)
+
+Write the exact output. Show each space as a dot (`·`).
+
+```python
+cpu = "arm64"
+print(f"[{cpu:<8}]")
+print(f"[{cpu:>8}]")
+print("[{cpu}]")
+```
+
+## After the Lesson
+
+- Students do the [Lesson 4 practice](practice.qmd#after-lesson-4-better-reports-with-f-strings).
+- **Suggested hand-in:** `system_banner_v2.py`, with the 20-character test result in a comment at the bottom.
+- Read the exit tickets. The third line (`[{cpu}]`, no `f`) shows who's reading the code and who's pattern-matching. If many missed it, open Lesson 5 with a "spot the missing f" warm-up.
+
+## Code for This Lesson
+
+Every program in this lesson, ready to run outside the browser. Download the `.py` file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.
+
+{{< lesson-code >}}
+
+## Teacher Notes
+
+- **Why f-strings now.** Lesson 3 left a real problem: values of unknown length break a layout. Padding solves it, and it's what students will use for every table and report in the course. f-strings need Python 3.6 or later.
+- **Commas vs. f-strings.** Both work. Encourage f-strings for anything with layout; commas are fine for quick checks. Don't ban one: students will read both in other people's code.
+- **Quotation marks inside braces.** `f"{'LAB REPORT':^20}"` (in the practice) works in every Python 3 version because the inner quotes differ from the outer ones. Python 3.12 also allows the same kind; avoid relying on that.
+- **Numbers come next.** Format codes like `:.2f` (two decimal places) and `:,` (thousands separators) belong with numbers in Lesson 5 and Module 2.
+- **The missing `f`.** Very common, and silent. Teach students to look for braces in their output as a sign.
+- **NameError messages.** Thonny, IDLE, and VS Code add a suggestion (`Did you mean: 'name'?`, Python 3.10 and later). The step-through box shows the error type and message, but not the suggestion. Run Program B on the classroom computer to show it.
+- **Naming conventions** follow PEP 8, Python's style guide: lowercase with underscores for variables, no single letters except in very short loops. Lesson 9's `for` loop is where `i` becomes acceptable.
+- **Slides.** Open the slides on the projector and this plan on your own screen. Press **S** for speaker view.
+- **Spiral.** Students first met formatted output as commas and `sep` (Lesson 3). f-strings come back in every module: Module 2's storage gauge, Module 3's benchmark table, Module 6's top-ten list.
+- Answers are in the `answer-keys` folder of the course's GitHub repository, not on this site.
+
+## Previous and Next {.unlisted}
+
+[← Lesson 3](lesson-03-getting-output-right.qmd) · [Lesson 4 slides](lesson-04-better-reports-with-f-strings-slides.qmd) · [Module 1 overview](index.qmd) · [Practice →](practice.qmd#after-lesson-4-better-reports-with-f-strings) · [Lesson 5 →](lesson-05-values-and-types.qmd)
+
+## Feedback {.unlisted}
+
+{{< feedback >}}
