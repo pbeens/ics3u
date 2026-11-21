@@ -1,0 +1,89 @@
+---
+title: "Review and Work Period"
+subtitle: "Module 1, Lesson 11"
+format:
+  live-revealjs:
+    theme: default
+    slide-number: true
+    code-line-numbers: true
+    toc: false
+    footer: "[← Lesson 11 plan](lesson-11-review-and-work-period.html) · [Module 1](index.html)"
+engine: markdown
+---
+
+## Predict-Off
+
+- Teams of three or four, one whiteboard
+- 60 seconds: write the **exact** output
+- A point per exactly correct line; a bonus for naming an error's kind
+
+::: {.notes}
+"Exact means exact: spaces, capitals, and blank lines count." After each reveal, one team explains the trickiest line before you do.
+:::
+
+## Round 1
+
+{{< stepper file="examples/l11_review_1.py" >}}
+
+## Round 2
+
+{{< stepper file="examples/l11_review_2.py" >}}
+
+## Round 3
+
+{{< stepper file="examples/l11_review_3.py" >}}
+
+## Round 4
+
+{{< stepper file="examples/l11_review_4.py" >}}
+
+## Round 5
+
+{{< stepper file="examples/l11_review_5.py" >}}
+
+## Round 6
+
+{{< stepper file="examples/l11_review_6.py" >}}
+
+::: {.notes}
+Run-time error after one line of output: Cores vs. cores. "Cores: 8" then NameError gets full marks.
+:::
+
+## Lightning round
+
+1. Where is a variable's value while the program runs? The `.py` file when the computer is off?
+2. What does a compiler do that an interpreter doesn't?
+3. One application, one language, one operating system
+4. What does `os.getcwd()` tell you? Why does it matter?
+5. Why do `input()` and `int()` usually go together?
+6. Read a traceback from which end first?
+
+## On the test
+
+- Predicting output exactly: `print`, `sep`, `end`, `\n`, `\t`, f-strings
+- Trace tables, including a variable that changes
+- Types and conversions
+- Reading `if`/`elif`/`else` and `for`
+- Paths and the current folder
+- Compilers, interpreters; applications, languages, operating systems
+- RAM, CPU, storage drive
+- Three kinds of error; tracebacks
+- A short basics section: write a few lines
+
+::: {.notes}
+Students rate themselves 1–3 on each topic and circle the two they'll review first.
+:::
+
+## Work period: Computer Report Card
+
+- [ ] Part A: seven answers, including the trace table
+- [ ] Part B: runs; `input()` greeting; five facts in variables; lined-up f-strings; a calculation; header comment
+- [ ] Part C: both outputs; `input()` replaced for the browser; three answers
+- [ ] Part D: three answers in your own words
+- [ ] Saved as `report_card.py` in `module-01/assignment/`, copy in `toolkit/`
+
+## Before you go
+
+In your tracing notebook:
+
+"The topic I'm least sure of is ___, and I'll review it by ___."

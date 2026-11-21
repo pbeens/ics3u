@@ -63,6 +63,7 @@ Students ask the computer about itself, using one line of Python.
 | 8. Inside the Computer: RAM and CPU | [Lesson plan](modules/module-01-about-this-computer/lesson-08-inside-the-computer.qmd) | [Slides](modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.qmd) | [Practice](modules/module-01-about-this-computer/practice.qmd#after-lesson-8-inside-the-computer-ram-and-cpu) |
 | 9. Talking Back, and a First Look Ahead | [Lesson plan](modules/module-01-about-this-computer/lesson-09-talking-back.qmd) | [Slides](modules/module-01-about-this-computer/lesson-09-talking-back-slides.qmd) | [Practice](modules/module-01-about-this-computer/practice.qmd#after-lesson-9-talking-back-and-a-first-look-ahead) |
 | 10. Error Clinic | [Lesson plan](modules/module-01-about-this-computer/lesson-10-error-clinic.qmd) | [Slides](modules/module-01-about-this-computer/lesson-10-error-clinic-slides.qmd) | [Practice](modules/module-01-about-this-computer/practice.qmd#after-lesson-10-error-clinic) |
+| 11. Review and Assignment Work Period | [Lesson plan](modules/module-01-about-this-computer/lesson-11-review-and-work-period.qmd) | [Slides](modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.qmd) | |
 | Module assignment | | | [Computer Report Card](modules/module-01-about-this-computer/assignment.qmd) |
 
 More modules are on the way. See the [Scope and Sequence](scope-and-sequence.qmd) for the full plan of seven modules; each planned module already has an overview page under **Modules**.

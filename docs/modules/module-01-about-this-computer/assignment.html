@@ -478,6 +478,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Lesson 10 plan</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/lesson-11-review-and-work-period.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lesson 11 plan</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -549,6 +555,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Lesson 10 slides</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lesson 11 slides</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -602,9 +614,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#part-a-read" id="toc-part-a-read" class="nav-link active" data-scroll-target="#part-a-read">Part A: Read</a></li>
+  <li><a href="#part-a-read" id="toc-part-a-read" class="nav-link active" data-scroll-target="#part-a-read">Part A: Read</a>
+  <ul class="collapse">
+  <li><a href="#a1-a-report-that-changes-its-mind" id="toc-a1-a-report-that-changes-its-mind" class="nav-link" data-scroll-target="#a1-a-report-that-changes-its-mind">A1: A report that changes its mind</a></li>
+  <li><a href="#a2-a-program-that-asks" id="toc-a2-a-program-that-asks" class="nav-link" data-scroll-target="#a2-a-program-that-asks">A2: A program that asks</a></li>
+  </ul></li>
   <li><a href="#part-b-write" id="toc-part-b-write" class="nav-link" data-scroll-target="#part-b-write">Part B: Write</a></li>
   <li><a href="#part-c-run-it-in-two-places" id="toc-part-c-run-it-in-two-places" class="nav-link" data-scroll-target="#part-c-run-it-in-two-places">Part C: Run It in Two Places</a></li>
+  <li><a href="#part-d-inside-the-computer" id="toc-part-d-inside-the-computer" class="nav-link" data-scroll-target="#part-d-inside-the-computer">Part D: Inside the Computer</a></li>
   <li><a href="#success-criteria" id="toc-success-criteria" class="nav-link" data-scroll-target="#success-criteria">Success Criteria</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/pbeens/ics3u/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -639,22 +656,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>For students.</strong> Covers Lessons 1–2. Work on your classroom computer (Thonny, IDLE, or VS Code). Download the <a href="examples/m01_report_card_starter.py" download="report_card.py">starter file</a>: <strong>this one file is your whole assignment.</strong> Save it as <code>report_card.py</code> in <code>ics3u/module-01/assignment/</code> in your <a href="../../course-folder.html">course folder</a>, answer Parts A and C in its comments, write your Part B program in it, and hand it in. When it works, copy it into <code>ics3u/toolkit/</code>: it’s the first program in your toolkit. · <a href="../../modules/module-01-about-this-computer/index.html">Module 1 overview</a></p>
+<p><strong>For students.</strong> Covers all of Module 1 (Lessons 1–10). Work on your classroom computer (Thonny, IDLE, or VS Code). Download the <a href="examples/m01_report_card_starter.py" download="report_card.py">starter file</a>: <strong>this one file is your whole assignment.</strong> Save it as <code>report_card.py</code> in <code>ics3u/module-01/assignment/</code> in your <a href="../../course-folder.html">course folder</a>, answer Parts A and C in its comments, write your Part B program in it, and hand it in. When it works, copy it into <code>ics3u/toolkit/</code>: it’s the first program in your toolkit. · <a href="../../modules/module-01-about-this-computer/index.html">Module 1 overview</a></p>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-warning">
+<div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Ready to use for Lessons 1–2.</strong> More parts will be added as Module 1 grows.</p>
+<p><strong>When to do each part.</strong> Parts A1, B (first version), and C after Lesson 2. Part A2 and the rest of Part B after Lesson 9. Part D after Lesson 8. Finish everything in the work period (Lesson 11).</p>
 </div>
 </div>
 </div>
 <section id="part-a-read" class="level2">
 <h2 class="anchored" data-anchor-id="part-a-read">Part A: Read</h2>
+<section id="a1-a-report-that-changes-its-mind" class="level3">
+<h3 class="anchored" data-anchor-id="a1-a-report-that-changes-its-mind">A1: A report that changes its mind</h3>
 <p>Read this program <strong>without running it</strong>, then answer the questions in <strong>Part A of your starter file</strong> (the comments near the top). Use the line numbers shown.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-label="1"></a><span class="im">import</span> platform</span>
 <span id="cb1-2"><a href="#cb1-2" aria-label="2"></a></span>
@@ -725,28 +744,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>How many times does the program ask the computer for its CPU type?</p></li>
 </ol>
 </section>
+<section id="a2-a-program-that-asks" class="level3">
+<h3 class="anchored" data-anchor-id="a2-a-program-that-asks">A2: A program that asks</h3>
+<p>Read this program <strong>without running it</strong>. The user types <code>Sam</code>, then <code>3</code>. Answer in Part A of your starter file.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-label="1"></a>name <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Your name? "</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-label="2"></a>hours <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Hours a day on a computer? "</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-label="3"></a>weekly <span class="op">=</span> <span class="bu">int</span>(hours) <span class="op">*</span> <span class="dv">7</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-label="4"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'User:'</span><span class="sc">:&lt;8}{</span>name<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-label="5"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'Weekly:'</span><span class="sc">:&lt;8}{</span>weekly<span class="sc">}</span><span class="ss"> hours"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-label="6"></a><span class="bu">print</span>(<span class="st">"Daily: "</span> <span class="op">+</span> hours <span class="op">+</span> <span class="st">" hours"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="5" type="1">
+<li>Write the last three lines of output exactly, showing each space as a dot (<code>·</code>).</li>
+<li>What type is <code>hours</code>? What type is <code>weekly</code>? How do you know?</li>
+<li>What would line 5 print if line 3 were <code>weekly = hours * 7</code>? Why?</li>
+</ol>
+</section>
+</section>
 <section id="part-b-write" class="level2">
 <h2 class="anchored" data-anchor-id="part-b-write">Part B: Write</h2>
 <p>In <strong>Part B of <code>report_card.py</code></strong>, write a program that prints a <strong>computer report card</strong> for the computer it runs on.</p>
 <p>Your program must:</p>
 <ol type="1">
-<li>Print a title line that includes the computer’s name.</li>
+<li>Start with a comment giving your name, the date, and what the program does.</li>
+<li>Ask the user’s name with <code>input()</code>, and print a title line that includes it and the computer’s name.</li>
 <li>Report <strong>at least five</strong> facts, using five different <code>platform</code> functions. At least one must be a function you found yourself with <code>dir(platform)</code> or the documentation.</li>
 <li>Store each answer in a <strong>variable</strong> with a clear name before printing it.</li>
-<li>Print each fact with a clear label.</li>
-<li>Start with a comment giving your name, the date, and what the program does.</li>
+<li>Print every fact with an <strong>f-string</strong>, with the labels padded so all the values start in the same column.</li>
+<li>Ask the user one question with a number answer (for example, how many hours a day they use the computer, or how old the computer is), convert it with <code>int()</code> or <code>float()</code>, and print something calculated from it.</li>
+<li>Use comments to explain anything a reader might not understand at a glance.</li>
 </ol>
-<p>Example of the style (your facts and labels will be different):</p>
-<pre class="text"><code>Report card for LAB-PC-14
-CPU type: AMD64
-Operating system: Windows
-...</code></pre>
+<p>Example of the style (your facts, labels, and question will be different):</p>
+<pre class="text"><code>Your name? Sam
+How many hours a day do you use this computer? 3
+
+Report card for LAB-PC-14, prepared for Sam
+Computer name:      LAB-PC-14
+CPU type:           AMD64
+Operating system:   Windows 11
+...
+Hours this week:    21</code></pre>
 </section>
 <section id="part-c-run-it-in-two-places" class="level2">
 <h2 class="anchored" data-anchor-id="part-c-run-it-in-two-places">Part C: Run It in Two Places</h2>
 <ol type="1">
 <li>Run your program on the classroom computer and paste the output into Part C of your starter file.</li>
-<li>Paste the same program into the box below and run it in the browser. The first run downloads Python into the browser (about 10 MB), so it can take a few seconds.</li>
+<li>Paste the same program into the box below and run it in the browser. The box can’t ask questions, so first replace each <code>input(...)</code> with a fixed answer, for example <code>name = "Sam"</code> and <code>hours = "3"</code>. The first run downloads Python into the browser (about 10 MB), so it can take a few seconds.</li>
 </ol>
 <div>
 <div id="pyodide-1" class="exercise-cell">
@@ -763,6 +805,15 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBQYXN0ZSB5b3VyIHByb2dy
 <li>Why are they different? Where did the program actually run each time?</li>
 <li>Name one mistake you made while writing the program, and explain how the error message helped you fix it. If you made none, explain what an <code>AttributeError</code> would tell you.</li>
 </ol></li>
+</ol>
+</section>
+<section id="part-d-inside-the-computer" class="level2">
+<h2 class="anchored" data-anchor-id="part-d-inside-the-computer">Part D: Inside the Computer</h2>
+<p>Answer in <strong>Part D of your starter file</strong>, in your own words.</p>
+<ol type="1">
+<li>Explain what happens between pressing <strong>Run</strong> and seeing your report card, in order. Use these words: <em>storage drive</em>, <em>RAM</em>, <em>CPU</em>, <em>interpreter</em>, <em>bytecode</em>, <em>operating system</em>.</li>
+<li>Copy three lines from your Part B program: one that only stores a value, one that calculates, and one that prints. For each, say which components do the work (RAM, CPU, screen).</li>
+<li>Is Python a compiled language or an interpreted one? Explain, using what happens when your program has a syntax error on its last line.</li>
 </ol>
 </section>
 <section id="success-criteria" class="level2">
@@ -784,16 +835,16 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBQYXN0ZSB5b3VyIHByb2dy
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Knowledge</strong> (Part A)</td>
-<td>Some predictions correct</td>
-<td>Trace table and output correct</td>
-<td>Correct, with clear explanations of why</td>
+<td><strong>Knowledge</strong> (Parts A and D)</td>
+<td>Some predictions correct; components named</td>
+<td>Trace table and outputs correct; components matched to lines correctly</td>
+<td>Correct, with clear explanations of why, including compiled vs.&nbsp;interpreted</td>
 </tr>
 <tr class="even">
 <td><strong>Application</strong> (Part B)</td>
-<td>Runs, but fewer than five facts or no variables</td>
-<td>Five labelled facts stored in variables</td>
-<td>Also uses a self-found function well, with very clear names and labels</td>
+<td>Runs, but fewer than five facts, no variables, or no <code>input()</code></td>
+<td>Five facts in variables, an <code>input()</code> greeting, f-strings with lined-up labels, a correct calculation</td>
+<td>Also uses a self-found function well, with a polished layout that would look at home on a real computer</td>
 </tr>
 <tr class="odd">
 <td><strong>Thinking</strong> (Part C)</td>
@@ -804,8 +855,8 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBQYXN0ZSB5b3VyIHByb2dy
 <tr class="even">
 <td><strong>Communication</strong></td>
 <td>Few comments or unclear labels</td>
-<td>Header comment; clear labels</td>
-<td>Clear, consistent comments, names, and output</td>
+<td>Header comment; clear labels and names</td>
+<td>Clear, consistent comments, names, and output; comments explain <em>why</em></td>
 </tr>
 </tbody>
 </table>
@@ -818,8 +869,8 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBQYXN0ZSB5b3VyIHByb2dy
 <h2 class="unlisted anchored" data-anchor-id="feedback">Feedback</h2>
 <div class="feedback-section">
 <p>Found a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.</p>
-<p><a href="https://github.com/pbeens/ics3u/issues/new?template=feedback.yml&amp;title=%5BModule%201%20Assignment%3A%20Computer%20Report%20Card%5D%20&amp;page=https%3A%2F%2Fpeter.beens.ca%2Fics3u%2Fmodules%2Fmodule-01-about-this-computer%2Fassignment.html" rel="noopener" target="_blank"><strong>Report an error or suggest a change</strong></a> opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.</p>
-<p>No GitHub account? <a href="https://docs.google.com/forms/d/e/1FAIpQLScI9qD_mr02kj8sqVdfarnlmPOxlr66rbpZL0aRaIlB37XQiQ/viewform?usp=pp_url&amp;entry.1446477366=https%3A%2F%2Fpeter.beens.ca%2Fics3u%2Fmodules%2Fmodule-01-about-this-computer%2Fassignment.html" rel="noopener" target="_blank"><strong>Send feedback privately</strong></a> with a Google Form instead. This page's address is filled in for you, and only the author sees your response.</p>
+<p><a href="https://github.com/pbeens/ics3u/issues/new?template=feedback.yml&amp;title=%5BModule%201%20Assignment%3A%20Computer%20Report%20Card%5D%20&amp;page=https%3A%2F%2Fpeter.beens.ca%2Fics3u%2Fmodules%2Fmodule-01-about-this-computer%2Fassignment.html" target="_blank" rel="noopener"><strong>Report an error or suggest a change</strong></a> opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.</p>
+<p>No GitHub account? <a href="https://docs.google.com/forms/d/e/1FAIpQLScI9qD_mr02kj8sqVdfarnlmPOxlr66rbpZL0aRaIlB37XQiQ/viewform?usp=pp_url&amp;entry.1446477366=https%3A%2F%2Fpeter.beens.ca%2Fics3u%2Fmodules%2Fmodule-01-about-this-computer%2Fassignment.html" target="_blank" rel="noopener"><strong>Send feedback privately</strong></a> with a Google Form instead. This page's address is filled in for you, and only the author sees your response.</p>
 </div>
 
 

@@ -1,0 +1,138 @@
+---
+title: "Lesson 11: Review and Assignment Work Period"
+subtitle: "Module 1 — About This Computer"
+format: live-html
+engine: markdown
+expectations: [A1.1, A2.1, A2.2, A4.3, A4.4, C1.4, C3.4]
+---
+
+::: {.callout-important appearance="simple" icon=false}
+**For teachers.** This is the lesson plan: use it to prepare and as your script in class. Students work from the **slides**, the **code files and notebooks**, and the **practice** page. The step-through boxes and runnable code are here so you can try every activity first. [How a lesson works →](../../how-a-lesson-works.qmd)
+:::
+
+::: {.callout-note appearance="simple"}
+**Time:** 75 minutes · **Expectations:** reviews Module 1 · **Slides:** [Lesson 11 slides](lesson-11-review-and-work-period-slides.qmd) (press **S** for speaker notes) · [Module 1 overview](index.qmd) · **Previous:** [Lesson 10](lesson-10-error-clinic.qmd)
+:::
+
+## At a Glance
+
+- **Big idea:** retrieval, then application. A fast review game brings back every idea in Module 1; then students use the rest of the period to finish the Computer Report Card, with the teacher conferencing.
+- **Students will:** predict the output of six short programs in teams, check their own readiness for the test, and finish the assignment.
+- **Students make:** the finished [Computer Report Card](assignment.qmd), handed in at the end of the period or by a date you set.
+- **Prepare:** know who is behind on the assignment (check the Part B progress from Lesson 9's practice or a quick hand-up). Have a conferencing list. Open the slides a few minutes before class so Python finishes loading.
+- **After class:** review for the Module 1 test.
+- **Where it fits:** the second-last period of Module 1. Every module from 2 to 6 has the same review and work period before its test.
+
+## Learning Goals
+
+- Recall and apply the ideas from Lessons 1–10 by predicting output.
+- Identify what to review before the test.
+- Finish and check the Module 1 assignment.
+
+## Success Criteria
+
+Students can say:
+
+- I can predict the output of a short program that mixes several ideas from this module.
+- I know which topics I need to review before the test.
+- My report card meets every requirement in the checklist.
+
+## Review Game: Predict-Off (25 min)
+
+Teams of three or four, one whiteboard (or a sheet of paper) per team. For each program: 60 seconds to write the exact output, then reveal by pressing **Run all**. A point for each exactly correct line; a bonus point for naming the kind of error correctly when there is one.
+
+::: {.callout-tip title="Teacher prompt"}
+"Exact means exact: spaces, capitals, and blank lines count. If you'd lose the point in a real program, you lose it here." After each reveal, ask one team to explain the trickiest line *before* you do.
+:::
+
+**Round 1: output** (Lesson 3)
+
+{{< stepper file="examples/l11_review_1.py" >}}
+
+**Round 2: f-strings and division** (Lessons 4–5)
+
+{{< stepper file="examples/l11_review_2.py" >}}
+
+**Round 3: types** (Lesson 5)
+
+{{< stepper file="examples/l11_review_3.py" >}}
+
+**Round 4: decisions and Booleans** (Lessons 5 and 9)
+
+{{< stepper file="examples/l11_review_4.py" >}}
+
+**Round 5: a loop** (Lessons 4 and 9)
+
+{{< stepper file="examples/l11_review_5.py" >}}
+
+**Round 6: errors** (Lessons 7 and 10)
+
+{{< stepper file="examples/l11_review_6.py" >}}
+
+**Lightning round** (spoken answers, one per team in turn):
+
+1. Where is a variable's value while the program runs? Where is the `.py` file when the computer is off?
+2. What does a compiler do that an interpreter doesn't?
+3. Name one application, one programming language, and one operating system.
+4. What does `os.getcwd()` tell you, and why does it matter?
+5. Why does `input()` plus `int()` usually go together?
+6. Read a traceback from which end first?
+
+## Test Check-In (5 min)
+
+Show the test outline (below). Each student rates themselves 1–3 on each topic in their tracing notebook, and circles the two they'll review first.
+
+| Topic | Lessons |
+|---|---|
+| Predicting output exactly (`print`, `sep`, `end`, `\n`, `\t`, f-strings and padding) | 3, 4 |
+| Trace tables with variables, including a variable that changes | 2, 4 |
+| Types: `str`, `int`, `float`, `bool`; `type()`; conversions | 5, 9 |
+| Reading `if`/`elif`/`else` and a `for` loop | 9 |
+| Paths and the current folder | 6 |
+| Source code and machine code; compilers and interpreters; applications, languages, operating systems | 7 |
+| RAM, CPU, and the storage drive: which does what | 8 |
+| The three kinds of error; reading a traceback | 10 |
+| A short basics section: write two or three lines of code | 3–5, 9 |
+
+## Assignment Work Period (40 min)
+
+Students finish the [Computer Report Card](assignment.qmd). Circulate with your conferencing list: start with students who haven't got Part B running.
+
+Before handing in, students check their work against this list:
+
+- [ ] Part A: all seven answers in the starter file, including the trace table.
+- [ ] Part B: runs with no errors; asks the user's name; five `platform` facts in variables; f-strings with lined-up labels; one number question converted and used in a calculation; header comment.
+- [ ] Part C: both outputs pasted; the `input()` lines replaced for the browser run; three answers.
+- [ ] Part D: three answers in their own words.
+- [ ] The file is saved as `report_card.py` in `ics3u/module-01/assignment/`, and a copy is in `ics3u/toolkit/`.
+
+## Check (5 min)
+
+No exit ticket today. Students write one sentence in their tracing notebooks: "The topic I'm least sure of is ___, and I'll review it by ___." Collect a few to adjust tomorrow's warm-up if your test isn't until later.
+
+## After the Lesson
+
+- Students review for the test, starting with the two topics they circled. The Practice page has every lesson's read-and-predict and spot-the-mistake questions.
+- The Module 1 test, with answers, is in the `answer-keys` folder of the course's GitHub repository, not on this site.
+
+## Code for This Lesson
+
+The review game's programs. Download the `.py` file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.
+
+{{< lesson-code >}}
+
+## Teacher Notes
+
+- **Keep the game moving.** Sixty seconds per program, reveal, one explanation, next. If a round reveals a widespread gap, note it and move on; it goes into the test review, not a reteach now.
+- **Round 6** is a run-time error after one line of output (`Cores` vs. `cores`). Teams that write `Cores: 8` and then the error type get full marks.
+- **Conferencing.** Two or three minutes per student: "Show me Part B running. What's left?" Students who finished early can help a neighbour (without typing for them), or try a Level 4 polish: a box around the title from the System Banner.
+- **Late assignments.** Set a firm hand-in time. The toolkit copy matters: Module 2 starts by adding to `report_card.py`.
+- **Slides.** Open the slides on the projector and this plan on your own screen. Press **S** for speaker view.
+
+## Previous and Next {.unlisted}
+
+[← Lesson 10](lesson-10-error-clinic.qmd) · [Lesson 11 slides](lesson-11-review-and-work-period-slides.qmd) · [Module 1 overview](index.qmd) · [Assignment →](assignment.qmd)
+
+## Feedback {.unlisted}
+
+{{< feedback >}}

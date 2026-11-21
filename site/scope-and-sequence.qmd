@@ -94,10 +94,10 @@ Each module's overview page has its planned lessons, anchor programs, and assign
 
 **Anchor programs:** a two-line program that prints the CPU type (`platform.machine()`); a labelled computer report built from the `platform` module and stored in variables; a greeter that asks the user's name and gives a hardware summary; a report that loops through a list of facts.
 
-**Pacing:** one library first. Lessons 1–2 use only `platform`, starting from a single line. Other modules (`os` for cores, `shutil` for storage) wait until Module 2.
+**Pacing:** one library first. Lessons 1–4 use only `platform`, starting from a single line; `sys` appears in Lesson 5 and `os` (for paths) in Lesson 6. `os.cpu_count()` and `shutil` wait until Module 2.
 
-- **Taught explicitly:** what a program is; reading and predicting output; `import` and calling a module's functions; `print()` in depth (arguments, `sep`, `end`, escape characters) and f-strings; variables and the basic types (`str`, `int`, `float`); simple arithmetic; tracing line by line; finding tools with `dir()` and the documentation; comments and naming conventions; syntax and run-time errors and how to read them
-- **Met through reading:** `input()`, a simple `if`, a `for` loop over a list
+- **Taught explicitly:** what a program is; reading and predicting output; `import` and calling a module's functions; `print()` in depth (arguments, `sep`, `end`, escape characters) and f-strings with padding; variables and the basic types (`str`, `int`, `float`, `bool`) and converting between them; simple arithmetic and `:.2f`; `input()`; tracing line by line; finding tools with `dir()` and the documentation; comments and naming conventions; paths, the current folder, and running a program from the terminal; syntax, run-time, and logic errors, reading a traceback, and a debugging routine
+- **Met through reading:** `if`/`elif`/`else`, a `for` loop over a list
 - **Computer science:** CPU types and operating systems; where code runs (classroom computer, browser, cloud); where variables live (RAM) and where arithmetic happens (CPU); source code vs. machine code (bytecode with `dis`); interpreters vs. compilers; applications, languages, and operating systems; organizing program files
 
 **Quick Builds:** System Banner, Parts Receipt. **Assignment:** Computer Report Card. **Expectations:** A1.1, A2.1, A2.2, A3.1, A4.1, A4.2, A4.3, A4.4, C1.1, C1.4, C2.1, C3.1, C3.3, C3.4, C3.5

@@ -89,6 +89,8 @@ website:
               text: "Lesson 9 plan"
             - href: modules/module-01-about-this-computer/lesson-10-error-clinic.qmd
               text: "Lesson 10 plan"
+            - href: modules/module-01-about-this-computer/lesson-11-review-and-work-period.qmd
+              text: "Lesson 11 plan"
         - section: "For the class"
           contents:
             - href: modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.qmd
@@ -111,6 +113,8 @@ website:
               text: "Lesson 9 slides"
             - href: modules/module-01-about-this-computer/lesson-10-error-clinic-slides.qmd
               text: "Lesson 10 slides"
+            - href: modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.qmd
+              text: "Lesson 11 slides"
         - section: "For students"
           contents:
             - href: course-folder.qmd

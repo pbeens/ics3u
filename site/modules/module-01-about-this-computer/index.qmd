@@ -21,25 +21,14 @@ subtitle: "About 15 hours · For teachers"
 | 8. Inside the Computer: RAM and CPU | [Lesson plan](lesson-08-inside-the-computer.qmd) | [Slides](lesson-08-inside-the-computer-slides.qmd) | [Practice](practice.qmd#after-lesson-8-inside-the-computer-ram-and-cpu) |
 | 9. Talking Back, and a First Look Ahead | [Lesson plan](lesson-09-talking-back.qmd) | [Slides](lesson-09-talking-back-slides.qmd) | [Practice](practice.qmd#after-lesson-9-talking-back-and-a-first-look-ahead) |
 | 10. Error Clinic | [Lesson plan](lesson-10-error-clinic.qmd) | [Slides](lesson-10-error-clinic-slides.qmd) | [Practice](practice.qmd#after-lesson-10-error-clinic) |
-
-### Planned lessons
-
-::: {.callout-note appearance="simple"}
-**Planned, not yet written.** Titles and focus may change as lessons are built.
-:::
-
-| Lesson | Focus | Students read, then build |
-|---|---|---|
-| 11. Review and assignment work period | A short review game on Lessons 1–10, then class time for the assignment | Finish the Computer Report Card |
-| 12. Module 1 test | Code reading and tracing; a short basics section | |
+| 11. Review and Assignment Work Period | [Lesson plan](lesson-11-review-and-work-period.qmd) | [Slides](lesson-11-review-and-work-period-slides.qmd) | [Assignment](assignment.qmd) |
+| 12. Module 1 test | In the `answer-keys` folder of the course's GitHub repository (not on this site) | | |
 
 Each lesson plan's **Code for This Lesson** section has the `.py` files and notebooks. Students find the same files at the end of each lesson's section on the Practice page.
 
 ## Assignment
 
-[**Computer Report Card**](assignment.qmd) (ready for Lessons 1–2; will grow with the module). Students read and trace a short program, write a report card using five `platform` functions stored in variables, then run it in two places and explain the difference. Students hand in one `.py` file built from a starter file.
-
-**Planned additions:** an f-string version of the report, a short `input()` greeting, and a written part explaining what happens inside the computer when the report runs (RAM, CPU, interpreter).
+[**Computer Report Card**](assignment.qmd). Students read and trace two short programs, write a report card that greets the user with `input()` and reports five `platform` facts in lined-up f-strings with one calculated value, run it in two places and explain the difference, and explain what happens inside the computer when it runs (drive, RAM, CPU, interpreter). They hand in one `.py` file built from a starter file, finished in the Lesson 11 work period.
 
 **Adds to the toolkit:** `report_card.py`, the first file in the student's **My Computer Toolkit** folder, which grows in every module ([see the toolkit thread](../../scope-and-sequence.qmd#the-toolkit-thread)).
 
@@ -55,7 +44,7 @@ Until the Skill Builder is ready, use the [Practice](practice.qmd) page and the 
 ## How Module 1 Fits
 
 - **Before:** nothing. This is the first module; students need no programming experience.
-- **Planned for the rest of the module:** see Planned lessons above, and the [Scope and Sequence](../../scope-and-sequence.qmd).
+- **Plan for the whole course:** the [Scope and Sequence](../../scope-and-sequence.qmd).
 - **Next:** [Module 2, Spec Checker](../module-02-spec-checker/index.qmd), adds `os` and `shutil` to check whether a computer meets a program's requirements.
 - **Students set up first:** their [course folder](../../course-folder.qmd), before Lesson 1's Make.
 

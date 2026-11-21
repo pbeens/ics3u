@@ -18,6 +18,8 @@ Answer keys and teacher-only material. This folder is in the public GitHub repos
 - [module-01-about-this-computer/lesson-08-answers.md](module-01-about-this-computer/lesson-08-answers.md) — answers for Module 1, Lesson 8.
 - [module-01-about-this-computer/lesson-09-answers.md](module-01-about-this-computer/lesson-09-answers.md) — answers for Module 1, Lesson 9.
 - [module-01-about-this-computer/lesson-10-answers.md](module-01-about-this-computer/lesson-10-answers.md) — answers for Module 1, Lesson 10.
+- [module-01-about-this-computer/lesson-11-answers.md](module-01-about-this-computer/lesson-11-answers.md) — answers for the Lesson 11 review game.
+- [module-01-about-this-computer/module-01-test.md](module-01-about-this-computer/module-01-test.md) and [module-01-test-answers.md](module-01-about-this-computer/module-01-test-answers.md) — the Module 1 test (60 marks) and its answers and marking.
 - [module-01-about-this-computer/practice-answers.md](module-01-about-this-computer/practice-answers.md) — answers for the Module 1 practice.
 - [module-01-about-this-computer/assignment-marking.md](module-01-about-this-computer/assignment-marking.md) — marking notes for the Module 1 assignment.
 - [module-01-about-this-computer/quick-build-system-banner-marking.md](module-01-about-this-computer/quick-build-system-banner-marking.md) — marking notes and a sample solution for the System Banner Quick Build.

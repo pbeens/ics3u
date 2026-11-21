@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://peter.beens.ca/ics3u/scope-and-sequence.html</loc>
-    <lastmod>2026-11-21T14:19:19.507Z</lastmod>
+    <lastmod>2026-11-21T14:24:14.747Z</lastmod>
   </url>
   <url>
     <loc>https://peter.beens.ca/ics3u/modules/module-06-data-detective/index.html</loc>
@@ -21,8 +21,12 @@
     <lastmod>2026-11-21T13:58:14.045Z</lastmod>
   </url>
   <url>
+    <loc>https://peter.beens.ca/ics3u/modules/module-01-about-this-computer/lesson-11-review-and-work-period.html</loc>
+    <lastmod>2026-11-21T14:23:24.871Z</lastmod>
+  </url>
+  <url>
     <loc>https://peter.beens.ca/ics3u/modules/module-01-about-this-computer/lesson-10-error-clinic.html</loc>
-    <lastmod>2026-11-21T14:18:41.422Z</lastmod>
+    <lastmod>2026-11-21T14:24:00.618Z</lastmod>
   </url>
   <url>
     <loc>https://peter.beens.ca/ics3u/modules/module-01-about-this-computer/lesson-09-talking-back.html</loc>
@@ -62,7 +66,7 @@
   </url>
   <url>
     <loc>https://peter.beens.ca/ics3u/modules/module-01-about-this-computer/index.html</loc>
-    <lastmod>2026-11-21T14:19:19.507Z</lastmod>
+    <lastmod>2026-11-21T14:23:46.671Z</lastmod>
   </url>
   <url>
     <loc>https://peter.beens.ca/ics3u/modules/computer-science-in-the-world/index.html</loc>
@@ -86,11 +90,11 @@
   </url>
   <url>
     <loc>https://peter.beens.ca/ics3u/index.html</loc>
-    <lastmod>2026-11-21T14:19:19.508Z</lastmod>
+    <lastmod>2026-11-21T14:24:00.617Z</lastmod>
   </url>
   <url>
     <loc>https://peter.beens.ca/ics3u/modules/module-01-about-this-computer/assignment.html</loc>
-    <lastmod>2026-11-19T15:13:58.534Z</lastmod>
+    <lastmod>2026-11-21T14:22:12.149Z</lastmod>
   </url>
   <url>
     <loc>https://peter.beens.ca/ics3u/modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html</loc>
@@ -131,6 +135,10 @@
   <url>
     <loc>https://peter.beens.ca/ics3u/modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html</loc>
     <lastmod>2026-11-21T14:19:00.733Z</lastmod>
+  </url>
+  <url>
+    <loc>https://peter.beens.ca/ics3u/modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html</loc>
+    <lastmod>2026-11-21T14:23:40.437Z</lastmod>
   </url>
   <url>
     <loc>https://peter.beens.ca/ics3u/modules/module-01-about-this-computer/practice.html</loc>

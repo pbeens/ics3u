@@ -53,7 +53,7 @@
     "href": "scope-and-sequence.html#modules",
     "title": "Scope and Sequence",
     "section": "Modules",
-    "text": "Modules\nEach module’s overview page has its planned lessons, anchor programs, and assignment. This section is the summary.\n\nModule 1 — About This Computer (15 h)\nPurpose: Ask the computer about itself.\nAnchor programs: a two-line program that prints the CPU type (platform.machine()); a labelled computer report built from the platform module and stored in variables; a greeter that asks the user’s name and gives a hardware summary; a report that loops through a list of facts.\nPacing: one library first. Lessons 1–2 use only platform, starting from a single line. Other modules (os for cores, shutil for storage) wait until Module 2.\n\nTaught explicitly: what a program is; reading and predicting output; import and calling a module’s functions; print() in depth (arguments, sep, end, escape characters) and f-strings; variables and the basic types (str, int, float); simple arithmetic; tracing line by line; finding tools with dir() and the documentation; comments and naming conventions; syntax and run-time errors and how to read them\nMet through reading: input(), a simple if, a for loop over a list\nComputer science: CPU types and operating systems; where code runs (classroom computer, browser, cloud); where variables live (RAM) and where arithmetic happens (CPU); source code vs. machine code (bytecode with dis); interpreters vs. compilers; applications, languages, and operating systems; organizing program files\n\nQuick Builds: System Banner, Parts Receipt. Assignment: Computer Report Card. Expectations: A1.1, A2.1, A2.2, A3.1, A4.1, A4.2, A4.3, A4.4, C1.1, C1.4, C2.1, C3.1, C3.3, C3.4, C3.5\n\n\nModule 2 — Spec Checker (15 h)\nPurpose: Decide whether a computer meets a user’s needs.\nAnchor programs: a core counter (os.cpu_count()); a storage calculator (why “1 TB” shows as 931 GB); a drive gauge (shutil.disk_usage()); “Will this game run?”; a monitor sharpness (pixels per inch) calculator.\n\nTaught explicitly: input and type conversion; data types; arithmetic, integer division, remainder, order of operations; comparison and logical operators; if/elif/else; try/except for bad input; user-friendly prompts and messages; test plans with normal, boundary, and invalid cases\nMet through modifying: a loop over a list of requirements; .strip() and .lower() for cleaning input\nComputer science: internal components, specifications, and peripherals related to user needs; the input-process-output model\n\nQuick Builds: Storage Unit Converter, Battery Life Estimator. Assignment: Will It Run? Expectations: A1.1, A1.3, A1.4, A2.1, A2.2, A4.1, A4.3, A4.5, B1.1, B1.3, B2.5, B3.2, B3.3, B4.4, C1.1, C1.2, C1.3\n\n\nModule 3 — Benchmark Lab (14 h)\nPurpose: Measure how fast the computer really is.\nAnchor programs: count to a million with a stopwatch; a benchmark suite (counting, string building, checking primes); a study timer; a reaction timer; “Is shuffle really random?”; a typing speed test.\n\nTaught explicitly: for loops and range(); while loops; counters and accumulators; nested loops and decisions; the time and random modules; reading and modifying first functions; flow charts and pseudocode; program skeletons; debugging by tracing and printing variables\nMet through modifying: a list of counts; random.shuffle(); strings in prompts and messages\nComputer science: benchmarks and fair tests; how CPU type, cores, and the interpreter affect speed; running the same code on different machines; determining primes\n\nQuick Builds: Download Time Table, Study Timer. Assignment: Typing Speed Test, with a benchmark report. Expectations: A2.2, A2.3, A3.1, A3.2, A4.1, A4.4, B1.1, B2.1, B2.4, B3.2, B4.5, C1.2, C1.4\n\n\nModule 4 — Passwords and Secret Messages (15 h)\nPurpose: Learn how computers store text, and keep it safe.\nAnchor programs: a binary and hex converter; a Unicode inspector; a password strength checker; a crack-time estimator (using Module 3’s benchmark); a Caesar cipher (short activity) that shows why simple ciphers aren’t secure.\n\nTaught explicitly: strings as sequences (indexing, slicing, traversal, methods); ord() and chr(); writing functions with parameters and return values; local and global scope; reusable modules; secrets and hashlib\nComputer science: binary, hexadecimal, ASCII, and Unicode; how websites store passwords; cryptography as a research area; malware and a system protection plan\n\nQuick Builds: Username Maker, File Name Cleaner. Assignment: Password Toolkit, with a home system protection plan. Expectations: A1.2, A3.1, A3.2, A4.1, B1.1, B2.3, B4.4, C2.2, D2.1\n\n\nModule 5 — On the Network (14 h)\nPurpose: Find out how the computer talks to the rest of the world.\nAnchor programs: “Who am I on the network?” (host name and local IP address); an IP address explainer (list of octets in binary, private or public); a website lookup (DNS); a response timer; a download speed test.\n\nTaught explicitly: lists as one-dimensional arrays (elements, indexes, bounds); .split() and .append(); count, total, highest, lowest; exceptions for network failures; testing with good, slow, and broken inputs; writing files (a CSV log with timestamps); socket, ipaddress, urllib, and datetime\nComputer science: IP addresses, DNS, ports, packets, and routers; private and public networks; firewalls; running a web server; distributed computing; data flow diagrams\n\nQuick Builds: Speed Log Summary, Web Address Splitter. Assignment: Is It Me or the Wi-Fi? Expectations: A1.2, A1.5, A1.6, A2.3, A3.1, A3.2, A4.5, B1.1, B2.4, B3.3, D2.1\n\n\nModule 6 — Data Detective (15 h)\nPurpose: Investigate data about the computer and its use.\nAnchor programs: a folder detective on a generated sample folder (files by type, total size, biggest, oldest, duplicates); a top-ten list of the biggest files kept in sorted order; a backup maker that verifies copies with hashes; an analysis of the students’ own Module 5 network log; the computer lab’s yearly power bill from a CSV file.\n\nTaught explicitly: lists and parallel lists; linear search; highest and lowest value; inserting into a sorted list and deleting from the middle; reading CSV files; breaking a program into functions; structure charts; describing and comparing designs; testing with a full range of cases\nComputer science: organizing files and folders; backing up and archiving (the 3-2-1 rule); environmental and health effects of computer use; reducing them; e-waste, refurbishing, and community partners\n\nQuick Builds: Extension Report, Duplicate Finder. Assignment: Folder Detective. Expectations: A1.5, A1.6, A2.3, A3.2, A4.4, A4.5, B2.2, B2.3, B2.4, B3.1, C2.1, C2.3, D1.1, D1.2, D1.3, D1.4\n\n\nModule 7 — Software Development Project (16 h)\nPurpose: Plan, build, test, and present a useful program for a real person.\n\nPart 1, teacher-led class project (about 4 h): “Lab Health Check”, built by teams from earlier modules’ code; the software development life cycle, a Gantt chart, and milestones practised together\nPart 2, individual or pair project (about 12 h): a real user; specification by interview or questionnaire; design documents; test plan first; written status reports; presentation\nDesign level: students choose and combine every idea from the spiral\n\nExpectations: A4.2, A4.5, B1.2, B2.1, B2.2, B2.3, B2.4, B2.5, B4.1, B4.2, B4.3, B4.4, B4.5, B4.6, C3.2\n\n\nComputer Science in the World (6 h, between Modules 2–6)\nPurpose: See where computer science leads.\nFive short lessons, each placed after a module and tied to it (careers in hardware after Module 2, distributed computing after Module 3, security after Module 4, collaborative research after Module 5, postsecondary programs after Module 6), plus a research report submitted in stages.\nExpectations: D2.1, D2.2, D2.3, D3.1, D3.2, D3.3, D3.4, D3.5"
+    "text": "Modules\nEach module’s overview page has its planned lessons, anchor programs, and assignment. This section is the summary.\n\nModule 1 — About This Computer (15 h)\nPurpose: Ask the computer about itself.\nAnchor programs: a two-line program that prints the CPU type (platform.machine()); a labelled computer report built from the platform module and stored in variables; a greeter that asks the user’s name and gives a hardware summary; a report that loops through a list of facts.\nPacing: one library first. Lessons 1–4 use only platform, starting from a single line; sys appears in Lesson 5 and os (for paths) in Lesson 6. os.cpu_count() and shutil wait until Module 2.\n\nTaught explicitly: what a program is; reading and predicting output; import and calling a module’s functions; print() in depth (arguments, sep, end, escape characters) and f-strings with padding; variables and the basic types (str, int, float, bool) and converting between them; simple arithmetic and :.2f; input(); tracing line by line; finding tools with dir() and the documentation; comments and naming conventions; paths, the current folder, and running a program from the terminal; syntax, run-time, and logic errors, reading a traceback, and a debugging routine\nMet through reading: if/elif/else, a for loop over a list\nComputer science: CPU types and operating systems; where code runs (classroom computer, browser, cloud); where variables live (RAM) and where arithmetic happens (CPU); source code vs. machine code (bytecode with dis); interpreters vs. compilers; applications, languages, and operating systems; organizing program files\n\nQuick Builds: System Banner, Parts Receipt. Assignment: Computer Report Card. Expectations: A1.1, A2.1, A2.2, A3.1, A4.1, A4.2, A4.3, A4.4, C1.1, C1.4, C2.1, C3.1, C3.3, C3.4, C3.5\n\n\nModule 2 — Spec Checker (15 h)\nPurpose: Decide whether a computer meets a user’s needs.\nAnchor programs: a core counter (os.cpu_count()); a storage calculator (why “1 TB” shows as 931 GB); a drive gauge (shutil.disk_usage()); “Will this game run?”; a monitor sharpness (pixels per inch) calculator.\n\nTaught explicitly: input and type conversion; data types; arithmetic, integer division, remainder, order of operations; comparison and logical operators; if/elif/else; try/except for bad input; user-friendly prompts and messages; test plans with normal, boundary, and invalid cases\nMet through modifying: a loop over a list of requirements; .strip() and .lower() for cleaning input\nComputer science: internal components, specifications, and peripherals related to user needs; the input-process-output model\n\nQuick Builds: Storage Unit Converter, Battery Life Estimator. Assignment: Will It Run? Expectations: A1.1, A1.3, A1.4, A2.1, A2.2, A4.1, A4.3, A4.5, B1.1, B1.3, B2.5, B3.2, B3.3, B4.4, C1.1, C1.2, C1.3\n\n\nModule 3 — Benchmark Lab (14 h)\nPurpose: Measure how fast the computer really is.\nAnchor programs: count to a million with a stopwatch; a benchmark suite (counting, string building, checking primes); a study timer; a reaction timer; “Is shuffle really random?”; a typing speed test.\n\nTaught explicitly: for loops and range(); while loops; counters and accumulators; nested loops and decisions; the time and random modules; reading and modifying first functions; flow charts and pseudocode; program skeletons; debugging by tracing and printing variables\nMet through modifying: a list of counts; random.shuffle(); strings in prompts and messages\nComputer science: benchmarks and fair tests; how CPU type, cores, and the interpreter affect speed; running the same code on different machines; determining primes\n\nQuick Builds: Download Time Table, Study Timer. Assignment: Typing Speed Test, with a benchmark report. Expectations: A2.2, A2.3, A3.1, A3.2, A4.1, A4.4, B1.1, B2.1, B2.4, B3.2, B4.5, C1.2, C1.4\n\n\nModule 4 — Passwords and Secret Messages (15 h)\nPurpose: Learn how computers store text, and keep it safe.\nAnchor programs: a binary and hex converter; a Unicode inspector; a password strength checker; a crack-time estimator (using Module 3’s benchmark); a Caesar cipher (short activity) that shows why simple ciphers aren’t secure.\n\nTaught explicitly: strings as sequences (indexing, slicing, traversal, methods); ord() and chr(); writing functions with parameters and return values; local and global scope; reusable modules; secrets and hashlib\nComputer science: binary, hexadecimal, ASCII, and Unicode; how websites store passwords; cryptography as a research area; malware and a system protection plan\n\nQuick Builds: Username Maker, File Name Cleaner. Assignment: Password Toolkit, with a home system protection plan. Expectations: A1.2, A3.1, A3.2, A4.1, B1.1, B2.3, B4.4, C2.2, D2.1\n\n\nModule 5 — On the Network (14 h)\nPurpose: Find out how the computer talks to the rest of the world.\nAnchor programs: “Who am I on the network?” (host name and local IP address); an IP address explainer (list of octets in binary, private or public); a website lookup (DNS); a response timer; a download speed test.\n\nTaught explicitly: lists as one-dimensional arrays (elements, indexes, bounds); .split() and .append(); count, total, highest, lowest; exceptions for network failures; testing with good, slow, and broken inputs; writing files (a CSV log with timestamps); socket, ipaddress, urllib, and datetime\nComputer science: IP addresses, DNS, ports, packets, and routers; private and public networks; firewalls; running a web server; distributed computing; data flow diagrams\n\nQuick Builds: Speed Log Summary, Web Address Splitter. Assignment: Is It Me or the Wi-Fi? Expectations: A1.2, A1.5, A1.6, A2.3, A3.1, A3.2, A4.5, B1.1, B2.4, B3.3, D2.1\n\n\nModule 6 — Data Detective (15 h)\nPurpose: Investigate data about the computer and its use.\nAnchor programs: a folder detective on a generated sample folder (files by type, total size, biggest, oldest, duplicates); a top-ten list of the biggest files kept in sorted order; a backup maker that verifies copies with hashes; an analysis of the students’ own Module 5 network log; the computer lab’s yearly power bill from a CSV file.\n\nTaught explicitly: lists and parallel lists; linear search; highest and lowest value; inserting into a sorted list and deleting from the middle; reading CSV files; breaking a program into functions; structure charts; describing and comparing designs; testing with a full range of cases\nComputer science: organizing files and folders; backing up and archiving (the 3-2-1 rule); environmental and health effects of computer use; reducing them; e-waste, refurbishing, and community partners\n\nQuick Builds: Extension Report, Duplicate Finder. Assignment: Folder Detective. Expectations: A1.5, A1.6, A2.3, A3.2, A4.4, A4.5, B2.2, B2.3, B2.4, B3.1, C2.1, C2.3, D1.1, D1.2, D1.3, D1.4\n\n\nModule 7 — Software Development Project (16 h)\nPurpose: Plan, build, test, and present a useful program for a real person.\n\nPart 1, teacher-led class project (about 4 h): “Lab Health Check”, built by teams from earlier modules’ code; the software development life cycle, a Gantt chart, and milestones practised together\nPart 2, individual or pair project (about 12 h): a real user; specification by interview or questionnaire; design documents; test plan first; written status reports; presentation\nDesign level: students choose and combine every idea from the spiral\n\nExpectations: A4.2, A4.5, B1.2, B2.1, B2.2, B2.3, B2.4, B2.5, B4.1, B4.2, B4.3, B4.4, B4.5, B4.6, C3.2\n\n\nComputer Science in the World (6 h, between Modules 2–6)\nPurpose: See where computer science leads.\nFive short lessons, each placed after a module and tied to it (careers in hardware after Module 2, distributed computing after Module 3, security after Module 4, collaborative research after Module 5, postsecondary programs after Module 6), plus a research report submitted in stages.\nExpectations: D2.1, D2.2, D2.3, D3.1, D3.2, D3.3, D3.4, D3.5"
   },
   {
     "objectID": "scope-and-sequence.html#expectation-coverage",
@@ -379,6 +379,149 @@
     ]
   },
   {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html",
+    "title": "Lesson 11: Review and Assignment Work Period",
+    "section": "",
+    "text": "For teachers. This is the lesson plan: use it to prepare and as your script in class. Students work from the slides, the code files and notebooks, and the practice page. The step-through boxes and runnable code are here so you can try every activity first. How a lesson works →",
+    "crumbs": [
+      "For teachers",
+      "Lesson 11 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#at-a-glance",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#at-a-glance",
+    "title": "Lesson 11: Review and Assignment Work Period",
+    "section": "At a Glance",
+    "text": "At a Glance\n\nBig idea: retrieval, then application. A fast review game brings back every idea in Module 1; then students use the rest of the period to finish the Computer Report Card, with the teacher conferencing.\nStudents will: predict the output of six short programs in teams, check their own readiness for the test, and finish the assignment.\nStudents make: the finished Computer Report Card, handed in at the end of the period or by a date you set.\nPrepare: know who is behind on the assignment (check the Part B progress from Lesson 9’s practice or a quick hand-up). Have a conferencing list. Open the slides a few minutes before class so Python finishes loading.\nAfter class: review for the Module 1 test.\nWhere it fits: the second-last period of Module 1. Every module from 2 to 6 has the same review and work period before its test.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 11 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#learning-goals",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#learning-goals",
+    "title": "Lesson 11: Review and Assignment Work Period",
+    "section": "Learning Goals",
+    "text": "Learning Goals\n\nRecall and apply the ideas from Lessons 1–10 by predicting output.\nIdentify what to review before the test.\nFinish and check the Module 1 assignment.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 11 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#success-criteria",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#success-criteria",
+    "title": "Lesson 11: Review and Assignment Work Period",
+    "section": "Success Criteria",
+    "text": "Success Criteria\nStudents can say:\n\nI can predict the output of a short program that mixes several ideas from this module.\nI know which topics I need to review before the test.\nMy report card meets every requirement in the checklist.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 11 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#review-game-predict-off-25-min",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#review-game-predict-off-25-min",
+    "title": "Lesson 11: Review and Assignment Work Period",
+    "section": "Review Game: Predict-Off (25 min)",
+    "text": "Review Game: Predict-Off (25 min)\nTeams of three or four, one whiteboard (or a sheet of paper) per team. For each program: 60 seconds to write the exact output, then reveal by pressing Run all. A point for each exactly correct line; a bonus point for naming the kind of error correctly when there is one.\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\n“Exact means exact: spaces, capitals, and blank lines count. If you’d lose the point in a real program, you lose it here.” After each reveal, ask one team to explain the trickiest line before you do.\n\n\nRound 1: output (Lesson 3)\nprint(\"CPU\", \"check\", sep=\": \", end=\" \")\nprint(\"done\")\nprint(\"Path: C:\\\\temp\")\nRound 2: f-strings and division (Lessons 4–5)\nmodel = \"LAB-PC-14\"\nram = 16\nprint(f\"[{model:&gt;12}]\")\nprint(f\"{ram / 4} GB per stick\")\nRound 3: types (Lesson 5)\nram = \"8\"\nextra = 8\nprint(ram * 2)\nprint(extra * 2)\nprint(int(ram) + extra)\nRound 4: decisions and Booleans (Lessons 5 and 9)\nsystem = \"Linux\"\nif system == \"Windows\":\n    print(\"Start menu\")\nelif system == \"Darwin\":\n    print(\"Dock\")\nelse:\n    print(\"Panel\")\nprint(type(system == \"Linux\"))\nRound 5: a loop (Lessons 4 and 9)\nspeeds = [2.4, 3.2]\nfor speed in speeds:\n    print(f\"{speed:.2f} GHz\")\nprint(\"Checked\", len(speeds), \"speeds\")\nRound 6: errors (Lessons 7 and 10)\ncores = 8\nprint(\"Cores:\", cores)\nprint(\"Threads:\", Cores * 2)\nprint(\"Done\")\nLightning round (spoken answers, one per team in turn):\n\nWhere is a variable’s value while the program runs? Where is the .py file when the computer is off?\nWhat does a compiler do that an interpreter doesn’t?\nName one application, one programming language, and one operating system.\nWhat does os.getcwd() tell you, and why does it matter?\nWhy does input() plus int() usually go together?\nRead a traceback from which end first?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 11 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#test-check-in-5-min",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#test-check-in-5-min",
+    "title": "Lesson 11: Review and Assignment Work Period",
+    "section": "Test Check-In (5 min)",
+    "text": "Test Check-In (5 min)\nShow the test outline (below). Each student rates themselves 1–3 on each topic in their tracing notebook, and circles the two they’ll review first.\n\n\n\n\n\n\n\nTopic\nLessons\n\n\n\n\nPredicting output exactly (print, sep, end, \\n, \\t, f-strings and padding)\n3, 4\n\n\nTrace tables with variables, including a variable that changes\n2, 4\n\n\nTypes: str, int, float, bool; type(); conversions\n5, 9\n\n\nReading if/elif/else and a for loop\n9\n\n\nPaths and the current folder\n6\n\n\nSource code and machine code; compilers and interpreters; applications, languages, operating systems\n7\n\n\nRAM, CPU, and the storage drive: which does what\n8\n\n\nThe three kinds of error; reading a traceback\n10\n\n\nA short basics section: write two or three lines of code\n3–5, 9",
+    "crumbs": [
+      "For teachers",
+      "Lesson 11 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#assignment-work-period-40-min",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#assignment-work-period-40-min",
+    "title": "Lesson 11: Review and Assignment Work Period",
+    "section": "Assignment Work Period (40 min)",
+    "text": "Assignment Work Period (40 min)\nStudents finish the Computer Report Card. Circulate with your conferencing list: start with students who haven’t got Part B running.\nBefore handing in, students check their work against this list:\n\nPart A: all seven answers in the starter file, including the trace table.\nPart B: runs with no errors; asks the user’s name; five platform facts in variables; f-strings with lined-up labels; one number question converted and used in a calculation; header comment.\nPart C: both outputs pasted; the input() lines replaced for the browser run; three answers.\nPart D: three answers in their own words.\nThe file is saved as report_card.py in ics3u/module-01/assignment/, and a copy is in ics3u/toolkit/.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 11 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#check-5-min",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#check-5-min",
+    "title": "Lesson 11: Review and Assignment Work Period",
+    "section": "Check (5 min)",
+    "text": "Check (5 min)\nNo exit ticket today. Students write one sentence in their tracing notebooks: “The topic I’m least sure of is , and I’ll review it by .” Collect a few to adjust tomorrow’s warm-up if your test isn’t until later.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 11 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#after-the-lesson",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#after-the-lesson",
+    "title": "Lesson 11: Review and Assignment Work Period",
+    "section": "After the Lesson",
+    "text": "After the Lesson\n\nStudents review for the test, starting with the two topics they circled. The Practice page has every lesson’s read-and-predict and spot-the-mistake questions.\nThe Module 1 test, with answers, is in the answer-keys folder of the course’s GitHub repository, not on this site.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 11 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#code-for-this-lesson",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#code-for-this-lesson",
+    "title": "Lesson 11: Review and Assignment Work Period",
+    "section": "Code for This Lesson",
+    "text": "Code for This Lesson\nThe review game’s programs. Download the .py file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nReview 1\nl11_review_1.py\nView or download\nCallysto | Colab\n\n\nReview 2\nl11_review_2.py\nView or download\nCallysto | Colab\n\n\nReview 3\nl11_review_3.py\nView or download\nCallysto | Colab\n\n\nReview 4\nl11_review_4.py\nView or download\nCallysto | Colab\n\n\nReview 5\nl11_review_5.py\nView or download\nCallysto | Colab\n\n\nReview 6\nl11_review_6.py\nView or download\nCallysto | Colab",
+    "crumbs": [
+      "For teachers",
+      "Lesson 11 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#teacher-notes",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#teacher-notes",
+    "title": "Lesson 11: Review and Assignment Work Period",
+    "section": "Teacher Notes",
+    "text": "Teacher Notes\n\nKeep the game moving. Sixty seconds per program, reveal, one explanation, next. If a round reveals a widespread gap, note it and move on; it goes into the test review, not a reteach now.\nRound 6 is a run-time error after one line of output (Cores vs. cores). Teams that write Cores: 8 and then the error type get full marks.\nConferencing. Two or three minutes per student: “Show me Part B running. What’s left?” Students who finished early can help a neighbour (without typing for them), or try a Level 4 polish: a box around the title from the System Banner.\nLate assignments. Set a firm hand-in time. The toolkit copy matters: Module 2 starts by adding to report_card.py.\nSlides. Open the slides on the projector and this plan on your own screen. Press S for speaker view.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 11 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#previous-and-next",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#previous-and-next",
+    "title": "Lesson 11: Review and Assignment Work Period",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Lesson 10 · Lesson 11 slides · Module 1 overview · Assignment →",
+    "crumbs": [
+      "For teachers",
+      "Lesson 11 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#feedback",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period.html#feedback",
+    "title": "Lesson 11: Review and Assignment Work Period",
+    "section": "Feedback",
+    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 11 plan"
+    ]
+  },
+  {
     "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic.html",
     "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html",
     "title": "Lesson 10: Error Clinic",
@@ -537,7 +680,7 @@
     "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#previous-and-next",
     "title": "Lesson 10: Error Clinic",
     "section": "Previous and Next",
-    "text": "Previous and Next\n← Lesson 9 · Lesson 10 slides · Module 1 overview · Practice →",
+    "text": "Previous and Next\n← Lesson 9 · Lesson 10 slides · Module 1 overview · Practice → · Lesson 11 →",
     "crumbs": [
       "For teachers",
       "Lesson 10 plan"
@@ -2153,7 +2296,7 @@
     "href": "modules/module-01-about-this-computer/index.html#lessons",
     "title": "Module 1: About This Computer",
     "section": "Lessons",
-    "text": "Lessons\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\n8. Inside the Computer: RAM and CPU\nLesson plan\nSlides\nPractice\n\n\n9. Talking Back, and a First Look Ahead\nLesson plan\nSlides\nPractice\n\n\n10. Error Clinic\nLesson plan\nSlides\nPractice\n\n\n\n\nPlanned lessons\n\n\n\n\n\n\nPlanned, not yet written. Titles and focus may change as lessons are built.\n\n\n\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n11. Review and assignment work period\nA short review game on Lessons 1–10, then class time for the assignment\nFinish the Computer Report Card\n\n\n12. Module 1 test\nCode reading and tracing; a short basics section\n\n\n\n\nEach lesson plan’s Code for This Lesson section has the .py files and notebooks. Students find the same files at the end of each lesson’s section on the Practice page.",
+    "text": "Lessons\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\n8. Inside the Computer: RAM and CPU\nLesson plan\nSlides\nPractice\n\n\n9. Talking Back, and a First Look Ahead\nLesson plan\nSlides\nPractice\n\n\n10. Error Clinic\nLesson plan\nSlides\nPractice\n\n\n11. Review and Assignment Work Period\nLesson plan\nSlides\nAssignment\n\n\n12. Module 1 test\nIn the answer-keys folder of the course’s GitHub repository (not on this site)\n\n\n\n\n\nEach lesson plan’s Code for This Lesson section has the .py files and notebooks. Students find the same files at the end of each lesson’s section on the Practice page.",
     "crumbs": [
       "Module 1 overview"
     ]
@@ -2163,7 +2306,7 @@
     "href": "modules/module-01-about-this-computer/index.html#assignment",
     "title": "Module 1: About This Computer",
     "section": "Assignment",
-    "text": "Assignment\nComputer Report Card (ready for Lessons 1–2; will grow with the module). Students read and trace a short program, write a report card using five platform functions stored in variables, then run it in two places and explain the difference. Students hand in one .py file built from a starter file.\nPlanned additions: an f-string version of the report, a short input() greeting, and a written part explaining what happens inside the computer when the report runs (RAM, CPU, interpreter).\nAdds to the toolkit: report_card.py, the first file in the student’s My Computer Toolkit folder, which grows in every module (see the toolkit thread).",
+    "text": "Assignment\nComputer Report Card. Students read and trace two short programs, write a report card that greets the user with input() and reports five platform facts in lined-up f-strings with one calculated value, run it in two places and explain the difference, and explain what happens inside the computer when it runs (drive, RAM, CPU, interpreter). They hand in one .py file built from a starter file, finished in the Lesson 11 work period.\nAdds to the toolkit: report_card.py, the first file in the student’s My Computer Toolkit folder, which grows in every module (see the toolkit thread).",
     "crumbs": [
       "Module 1 overview"
     ]
@@ -2183,7 +2326,7 @@
     "href": "modules/module-01-about-this-computer/index.html#how-module-1-fits",
     "title": "Module 1: About This Computer",
     "section": "How Module 1 Fits",
-    "text": "How Module 1 Fits\n\nBefore: nothing. This is the first module; students need no programming experience.\nPlanned for the rest of the module: see Planned lessons above, and the Scope and Sequence.\nNext: Module 2, Spec Checker, adds os and shutil to check whether a computer meets a program’s requirements.\nStudents set up first: their course folder, before Lesson 1’s Make.\n\nNew to the course? Read How a Lesson Works first.",
+    "text": "How Module 1 Fits\n\nBefore: nothing. This is the first module; students need no programming experience.\nPlan for the whole course: the Scope and Sequence.\nNext: Module 2, Spec Checker, adds os and shutil to check whether a computer meets a program’s requirements.\nStudents set up first: their course folder, before Lesson 1’s Make.\n\nNew to the course? Read How a Lesson Works first.",
     "crumbs": [
       "Module 1 overview"
     ]
@@ -2522,14 +2665,14 @@
     "href": "index.html#lessons",
     "title": "ICS3U: Introduction to Computer Science",
     "section": "Lessons",
-    "text": "Lessons\nModule 1: About This Computer\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\n8. Inside the Computer: RAM and CPU\nLesson plan\nSlides\nPractice\n\n\n9. Talking Back, and a First Look Ahead\nLesson plan\nSlides\nPractice\n\n\n10. Error Clinic\nLesson plan\nSlides\nPractice\n\n\nModule assignment\n\n\nComputer Report Card\n\n\n\nMore modules are on the way. See the Scope and Sequence for the full plan of seven modules; each planned module already has an overview page under Modules."
+    "text": "Lessons\nModule 1: About This Computer\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\n8. Inside the Computer: RAM and CPU\nLesson plan\nSlides\nPractice\n\n\n9. Talking Back, and a First Look Ahead\nLesson plan\nSlides\nPractice\n\n\n10. Error Clinic\nLesson plan\nSlides\nPractice\n\n\n11. Review and Assignment Work Period\nLesson plan\nSlides\n\n\n\nModule assignment\n\n\nComputer Report Card\n\n\n\nMore modules are on the way. See the Scope and Sequence for the full plan of seven modules; each planned module already has an overview page under Modules."
   },
   {
     "objectID": "modules/module-01-about-this-computer/assignment.html",
     "href": "modules/module-01-about-this-computer/assignment.html",
     "title": "Module 1 Assignment: Computer Report Card",
     "section": "",
-    "text": "For students. Covers Lessons 1–2. Work on your classroom computer (Thonny, IDLE, or VS Code). Download the starter file: this one file is your whole assignment. Save it as report_card.py in ics3u/module-01/assignment/ in your course folder, answer Parts A and C in its comments, write your Part B program in it, and hand it in. When it works, copy it into ics3u/toolkit/: it’s the first program in your toolkit. · Module 1 overview",
+    "text": "For students. Covers all of Module 1 (Lessons 1–10). Work on your classroom computer (Thonny, IDLE, or VS Code). Download the starter file: this one file is your whole assignment. Save it as report_card.py in ics3u/module-01/assignment/ in your course folder, answer Parts A and C in its comments, write your Part B program in it, and hand it in. When it works, copy it into ics3u/toolkit/: it’s the first program in your toolkit. · Module 1 overview",
     "crumbs": [
       "For students",
       "Assignment: Computer Report Card"
@@ -2540,7 +2683,7 @@
     "href": "modules/module-01-about-this-computer/assignment.html#part-a-read",
     "title": "Module 1 Assignment: Computer Report Card",
     "section": "Part A: Read",
-    "text": "Part A: Read\nRead this program without running it, then answer the questions in Part A of your starter file (the comments near the top). Use the line numbers shown.\nimport platform\n\nname = platform.node()\ncpu = platform.machine()\nprint(\"Report card for\", name)\nprint(\"CPU:\", cpu)\ncpu = \"unknown\"\nprint(\"Checked:\", cpu)\n\nHow many lines will it print?\nFill in a trace table. Every line that runs gets a row; blank lines don’t. Line 1 is filled in for you.\n\n\n\nLine\nname\ncpu\nOutput\n\n\n\n\n1\n—\n—\n—\n\n\n3\n\n\n\n\n\n4\n\n\n\n\n\n5\n\n\n\n\n\n6\n\n\n\n\n\n7\n\n\n\n\n\n8\n\n\n\n\n\n\nWhat does the last line print? Explain why.\nHow many times does the program ask the computer for its CPU type?",
+    "text": "Part A: Read\n\nA1: A report that changes its mind\nRead this program without running it, then answer the questions in Part A of your starter file (the comments near the top). Use the line numbers shown.\nimport platform\n\nname = platform.node()\ncpu = platform.machine()\nprint(\"Report card for\", name)\nprint(\"CPU:\", cpu)\ncpu = \"unknown\"\nprint(\"Checked:\", cpu)\n\nHow many lines will it print?\nFill in a trace table. Every line that runs gets a row; blank lines don’t. Line 1 is filled in for you.\n\n\n\nLine\nname\ncpu\nOutput\n\n\n\n\n1\n—\n—\n—\n\n\n3\n\n\n\n\n\n4\n\n\n\n\n\n5\n\n\n\n\n\n6\n\n\n\n\n\n7\n\n\n\n\n\n8\n\n\n\n\n\n\nWhat does the last line print? Explain why.\nHow many times does the program ask the computer for its CPU type?\n\n\n\nA2: A program that asks\nRead this program without running it. The user types Sam, then 3. Answer in Part A of your starter file.\nname = input(\"Your name? \")\nhours = input(\"Hours a day on a computer? \")\nweekly = int(hours) * 7\nprint(f\"{'User:':&lt;8}{name}\")\nprint(f\"{'Weekly:':&lt;8}{weekly} hours\")\nprint(\"Daily: \" + hours + \" hours\")\n\nWrite the last three lines of output exactly, showing each space as a dot (·).\nWhat type is hours? What type is weekly? How do you know?\nWhat would line 5 print if line 3 were weekly = hours * 7? Why?",
     "crumbs": [
       "For students",
       "Assignment: Computer Report Card"
@@ -2551,7 +2694,7 @@
     "href": "modules/module-01-about-this-computer/assignment.html#part-b-write",
     "title": "Module 1 Assignment: Computer Report Card",
     "section": "Part B: Write",
-    "text": "Part B: Write\nIn Part B of report_card.py, write a program that prints a computer report card for the computer it runs on.\nYour program must:\n\nPrint a title line that includes the computer’s name.\nReport at least five facts, using five different platform functions. At least one must be a function you found yourself with dir(platform) or the documentation.\nStore each answer in a variable with a clear name before printing it.\nPrint each fact with a clear label.\nStart with a comment giving your name, the date, and what the program does.\n\nExample of the style (your facts and labels will be different):\nReport card for LAB-PC-14\nCPU type: AMD64\nOperating system: Windows\n...",
+    "text": "Part B: Write\nIn Part B of report_card.py, write a program that prints a computer report card for the computer it runs on.\nYour program must:\n\nStart with a comment giving your name, the date, and what the program does.\nAsk the user’s name with input(), and print a title line that includes it and the computer’s name.\nReport at least five facts, using five different platform functions. At least one must be a function you found yourself with dir(platform) or the documentation.\nStore each answer in a variable with a clear name before printing it.\nPrint every fact with an f-string, with the labels padded so all the values start in the same column.\nAsk the user one question with a number answer (for example, how many hours a day they use the computer, or how old the computer is), convert it with int() or float(), and print something calculated from it.\nUse comments to explain anything a reader might not understand at a glance.\n\nExample of the style (your facts, labels, and question will be different):\nYour name? Sam\nHow many hours a day do you use this computer? 3\n\nReport card for LAB-PC-14, prepared for Sam\nComputer name:      LAB-PC-14\nCPU type:           AMD64\nOperating system:   Windows 11\n...\nHours this week:    21",
     "crumbs": [
       "For students",
       "Assignment: Computer Report Card"
@@ -2562,7 +2705,18 @@
     "href": "modules/module-01-about-this-computer/assignment.html#part-c-run-it-in-two-places",
     "title": "Module 1 Assignment: Computer Report Card",
     "section": "Part C: Run It in Two Places",
-    "text": "Part C: Run It in Two Places\n\nRun your program on the classroom computer and paste the output into Part C of your starter file.\nPaste the same program into the box below and run it in the browser. The first run downloads Python into the browser (about 10 MB), so it can take a few seconds.\n\n\n\n\n\n\n\n\nAnswer in two or three sentences each, in Part C of your starter file:\n\nWhich facts were the same in both places? Which were different?\nWhy are they different? Where did the program actually run each time?\nName one mistake you made while writing the program, and explain how the error message helped you fix it. If you made none, explain what an AttributeError would tell you.",
+    "text": "Part C: Run It in Two Places\n\nRun your program on the classroom computer and paste the output into Part C of your starter file.\nPaste the same program into the box below and run it in the browser. The box can’t ask questions, so first replace each input(...) with a fixed answer, for example name = \"Sam\" and hours = \"3\". The first run downloads Python into the browser (about 10 MB), so it can take a few seconds.\n\n\n\n\n\n\n\n\nAnswer in two or three sentences each, in Part C of your starter file:\n\nWhich facts were the same in both places? Which were different?\nWhy are they different? Where did the program actually run each time?\nName one mistake you made while writing the program, and explain how the error message helped you fix it. If you made none, explain what an AttributeError would tell you.",
+    "crumbs": [
+      "For students",
+      "Assignment: Computer Report Card"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/assignment.html#part-d-inside-the-computer",
+    "href": "modules/module-01-about-this-computer/assignment.html#part-d-inside-the-computer",
+    "title": "Module 1 Assignment: Computer Report Card",
+    "section": "Part D: Inside the Computer",
+    "text": "Part D: Inside the Computer\nAnswer in Part D of your starter file, in your own words.\n\nExplain what happens between pressing Run and seeing your report card, in order. Use these words: storage drive, RAM, CPU, interpreter, bytecode, operating system.\nCopy three lines from your Part B program: one that only stores a value, one that calculates, and one that prints. For each, say which components do the work (RAM, CPU, screen).\nIs Python a compiled language or an interpreted one? Explain, using what happens when your program has a syntax error on its last line.",
     "crumbs": [
       "For students",
       "Assignment: Computer Report Card"
@@ -2573,7 +2727,7 @@
     "href": "modules/module-01-about-this-computer/assignment.html#success-criteria",
     "title": "Module 1 Assignment: Computer Report Card",
     "section": "Success Criteria",
-    "text": "Success Criteria\n\n\n\n\n\n\n\n\n\n\nLevel 1–2\nLevel 3\nLevel 4\n\n\n\n\nKnowledge (Part A)\nSome predictions correct\nTrace table and output correct\nCorrect, with clear explanations of why\n\n\nApplication (Part B)\nRuns, but fewer than five facts or no variables\nFive labelled facts stored in variables\nAlso uses a self-found function well, with very clear names and labels\n\n\nThinking (Part C)\nLists differences\nExplains where the code ran\nExplains clearly, using evidence from both outputs\n\n\nCommunication\nFew comments or unclear labels\nHeader comment; clear labels\nClear, consistent comments, names, and output",
+    "text": "Success Criteria\n\n\n\n\n\n\n\n\n\n\nLevel 1–2\nLevel 3\nLevel 4\n\n\n\n\nKnowledge (Parts A and D)\nSome predictions correct; components named\nTrace table and outputs correct; components matched to lines correctly\nCorrect, with clear explanations of why, including compiled vs. interpreted\n\n\nApplication (Part B)\nRuns, but fewer than five facts, no variables, or no input()\nFive facts in variables, an input() greeting, f-strings with lined-up labels, a correct calculation\nAlso uses a self-found function well, with a polished layout that would look at home on a real computer\n\n\nThinking (Part C)\nLists differences\nExplains where the code ran\nExplains clearly, using evidence from both outputs\n\n\nCommunication\nFew comments or unclear labels\nHeader comment; clear labels and names\nClear, consistent comments, names, and output; comments explain why",
     "crumbs": [
       "For students",
       "Assignment: Computer Report Card"
@@ -3875,6 +4029,127 @@
     "crumbs": [
       "For the class",
       "Lesson 10 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#predict-off",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#predict-off",
+    "title": "Review and Work Period",
+    "section": "Predict-Off",
+    "text": "Predict-Off\n\nTeams of three or four, one whiteboard\n60 seconds: write the exact output\nA point per exactly correct line; a bonus for naming an error’s kind\n\n\n“Exact means exact: spaces, capitals, and blank lines count.” After each reveal, one team explains the trickiest line before you do.",
+    "crumbs": [
+      "For the class",
+      "Lesson 11 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#round-1",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#round-1",
+    "title": "Review and Work Period",
+    "section": "Round 1",
+    "text": "Round 1\nprint(\"CPU\", \"check\", sep=\": \", end=\" \")\nprint(\"done\")\nprint(\"Path: C:\\\\temp\")",
+    "crumbs": [
+      "For the class",
+      "Lesson 11 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#round-2",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#round-2",
+    "title": "Review and Work Period",
+    "section": "Round 2",
+    "text": "Round 2\nmodel = \"LAB-PC-14\"\nram = 16\nprint(f\"[{model:&gt;12}]\")\nprint(f\"{ram / 4} GB per stick\")",
+    "crumbs": [
+      "For the class",
+      "Lesson 11 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#round-3",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#round-3",
+    "title": "Review and Work Period",
+    "section": "Round 3",
+    "text": "Round 3\nram = \"8\"\nextra = 8\nprint(ram * 2)\nprint(extra * 2)\nprint(int(ram) + extra)",
+    "crumbs": [
+      "For the class",
+      "Lesson 11 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#round-4",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#round-4",
+    "title": "Review and Work Period",
+    "section": "Round 4",
+    "text": "Round 4\nsystem = \"Linux\"\nif system == \"Windows\":\n    print(\"Start menu\")\nelif system == \"Darwin\":\n    print(\"Dock\")\nelse:\n    print(\"Panel\")\nprint(type(system == \"Linux\"))",
+    "crumbs": [
+      "For the class",
+      "Lesson 11 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#round-5",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#round-5",
+    "title": "Review and Work Period",
+    "section": "Round 5",
+    "text": "Round 5\nspeeds = [2.4, 3.2]\nfor speed in speeds:\n    print(f\"{speed:.2f} GHz\")\nprint(\"Checked\", len(speeds), \"speeds\")",
+    "crumbs": [
+      "For the class",
+      "Lesson 11 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#round-6",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#round-6",
+    "title": "Review and Work Period",
+    "section": "Round 6",
+    "text": "Round 6\ncores = 8\nprint(\"Cores:\", cores)\nprint(\"Threads:\", Cores * 2)\nprint(\"Done\")\n\nRun-time error after one line of output: Cores vs. cores. “Cores: 8” then NameError gets full marks.",
+    "crumbs": [
+      "For the class",
+      "Lesson 11 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#lightning-round",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#lightning-round",
+    "title": "Review and Work Period",
+    "section": "Lightning round",
+    "text": "Lightning round\n\nWhere is a variable’s value while the program runs? The .py file when the computer is off?\nWhat does a compiler do that an interpreter doesn’t?\nOne application, one language, one operating system\nWhat does os.getcwd() tell you? Why does it matter?\nWhy do input() and int() usually go together?\nRead a traceback from which end first?",
+    "crumbs": [
+      "For the class",
+      "Lesson 11 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#on-the-test",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#on-the-test",
+    "title": "Review and Work Period",
+    "section": "On the test",
+    "text": "On the test\n\nPredicting output exactly: print, sep, end, \\n, \\t, f-strings\nTrace tables, including a variable that changes\nTypes and conversions\nReading if/elif/else and for\nPaths and the current folder\nCompilers, interpreters; applications, languages, operating systems\nRAM, CPU, storage drive\nThree kinds of error; tracebacks\nA short basics section: write a few lines\n\n\nStudents rate themselves 1–3 on each topic and circle the two they’ll review first.",
+    "crumbs": [
+      "For the class",
+      "Lesson 11 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#work-period-computer-report-card",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#work-period-computer-report-card",
+    "title": "Review and Work Period",
+    "section": "Work period: Computer Report Card",
+    "text": "Work period: Computer Report Card\n\nPart A: seven answers, including the trace table\nPart B: runs; input() greeting; five facts in variables; lined-up f-strings; a calculation; header comment\nPart C: both outputs; input() replaced for the browser; three answers\nPart D: three answers in your own words\nSaved as report_card.py in module-01/assignment/, copy in toolkit/",
+    "crumbs": [
+      "For the class",
+      "Lesson 11 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#before-you-go",
+    "href": "modules/module-01-about-this-computer/lesson-11-review-and-work-period-slides.html#before-you-go",
+    "title": "Review and Work Period",
+    "section": "Before you go",
+    "text": "Before you go\nIn your tracing notebook:\n“The topic I’m least sure of is , and I’ll review it by .”",
+    "crumbs": [
+      "For the class",
+      "Lesson 11 slides"
     ]
   },
   {

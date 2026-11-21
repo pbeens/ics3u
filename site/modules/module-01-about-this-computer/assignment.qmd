@@ -3,18 +3,20 @@ title: "Module 1 Assignment: Computer Report Card"
 subtitle: "Module 1 — About This Computer · For students"
 format: live-html
 engine: markdown
-expectations: [A1.1, A2.2, A3.1, A4.3, A4.4, C1.1, C3.1]
+expectations: [A1.1, A2.1, A2.2, A3.1, A4.2, A4.3, A4.4, C1.1, C1.4, C3.1, C3.3, C3.4]
 ---
 
 ::: {.callout-note appearance="simple"}
-**For students.** Covers Lessons 1–2. Work on your classroom computer (Thonny, IDLE, or VS Code). Download the [starter file](examples/m01_report_card_starter.py){download="report_card.py"}: **this one file is your whole assignment.** Save it as `report_card.py` in `ics3u/module-01/assignment/` in your [course folder](../../course-folder.qmd), answer Parts A and C in its comments, write your Part B program in it, and hand it in. When it works, copy it into `ics3u/toolkit/`: it's the first program in your toolkit. · [Module 1 overview](index.qmd)
+**For students.** Covers all of Module 1 (Lessons 1–10). Work on your classroom computer (Thonny, IDLE, or VS Code). Download the [starter file](examples/m01_report_card_starter.py){download="report_card.py"}: **this one file is your whole assignment.** Save it as `report_card.py` in `ics3u/module-01/assignment/` in your [course folder](../../course-folder.qmd), answer Parts A and C in its comments, write your Part B program in it, and hand it in. When it works, copy it into `ics3u/toolkit/`: it's the first program in your toolkit. · [Module 1 overview](index.qmd)
 :::
 
-::: {.callout-warning appearance="simple"}
-**Ready to use for Lessons 1–2.** More parts will be added as Module 1 grows.
+::: {.callout-tip appearance="simple"}
+**When to do each part.** Parts A1, B (first version), and C after Lesson 2. Part A2 and the rest of Part B after Lesson 9. Part D after Lesson 8. Finish everything in the work period (Lesson 11).
 :::
 
 ## Part A: Read
+
+### A1: A report that changes its mind
 
 Read this program **without running it**, then answer the questions in **Part A of your starter file** (the comments near the top). Use the line numbers shown.
 
@@ -45,31 +47,55 @@ print("Checked:", cpu)
 3. What does the last line print? Explain why.
 4. How many times does the program ask the computer for its CPU type?
 
+### A2: A program that asks
+
+Read this program **without running it**. The user types `Sam`, then `3`. Answer in Part A of your starter file.
+
+```{.python .number-lines}
+name = input("Your name? ")
+hours = input("Hours a day on a computer? ")
+weekly = int(hours) * 7
+print(f"{'User:':<8}{name}")
+print(f"{'Weekly:':<8}{weekly} hours")
+print("Daily: " + hours + " hours")
+```
+
+5. Write the last three lines of output exactly, showing each space as a dot (`·`).
+6. What type is `hours`? What type is `weekly`? How do you know?
+7. What would line 5 print if line 3 were `weekly = hours * 7`? Why?
+
 ## Part B: Write
 
 In **Part B of `report_card.py`**, write a program that prints a **computer report card** for the computer it runs on.
 
 Your program must:
 
-1. Print a title line that includes the computer's name.
-2. Report **at least five** facts, using five different `platform` functions. At least one must be a function you found yourself with `dir(platform)` or the documentation.
-3. Store each answer in a **variable** with a clear name before printing it.
-4. Print each fact with a clear label.
-5. Start with a comment giving your name, the date, and what the program does.
+1. Start with a comment giving your name, the date, and what the program does.
+2. Ask the user's name with `input()`, and print a title line that includes it and the computer's name.
+3. Report **at least five** facts, using five different `platform` functions. At least one must be a function you found yourself with `dir(platform)` or the documentation.
+4. Store each answer in a **variable** with a clear name before printing it.
+5. Print every fact with an **f-string**, with the labels padded so all the values start in the same column.
+6. Ask the user one question with a number answer (for example, how many hours a day they use the computer, or how old the computer is), convert it with `int()` or `float()`, and print something calculated from it.
+7. Use comments to explain anything a reader might not understand at a glance.
 
-Example of the style (your facts and labels will be different):
+Example of the style (your facts, labels, and question will be different):
 
 ```text
-Report card for LAB-PC-14
-CPU type: AMD64
-Operating system: Windows
+Your name? Sam
+How many hours a day do you use this computer? 3
+
+Report card for LAB-PC-14, prepared for Sam
+Computer name:      LAB-PC-14
+CPU type:           AMD64
+Operating system:   Windows 11
 ...
+Hours this week:    21
 ```
 
 ## Part C: Run It in Two Places
 
 1. Run your program on the classroom computer and paste the output into Part C of your starter file.
-2. Paste the same program into the box below and run it in the browser. The first run downloads Python into the browser (about 10 MB), so it can take a few seconds.
+2. Paste the same program into the box below and run it in the browser. The box can't ask questions, so first replace each `input(...)` with a fixed answer, for example `name = "Sam"` and `hours = "3"`. The first run downloads Python into the browser (about 10 MB), so it can take a few seconds.
 
 ```{pyodide}
 # Paste your program here and run it.
@@ -80,14 +106,22 @@ Operating system: Windows
    b. Why are they different? Where did the program actually run each time?
    c. Name one mistake you made while writing the program, and explain how the error message helped you fix it. If you made none, explain what an `AttributeError` would tell you.
 
+## Part D: Inside the Computer
+
+Answer in **Part D of your starter file**, in your own words.
+
+1. Explain what happens between pressing **Run** and seeing your report card, in order. Use these words: *storage drive*, *RAM*, *CPU*, *interpreter*, *bytecode*, *operating system*.
+2. Copy three lines from your Part B program: one that only stores a value, one that calculates, and one that prints. For each, say which components do the work (RAM, CPU, screen).
+3. Is Python a compiled language or an interpreted one? Explain, using what happens when your program has a syntax error on its last line.
+
 ## Success Criteria
 
 | | Level 1–2 | Level 3 | Level 4 |
 |---|---|---|---|
-| **Knowledge** (Part A) | Some predictions correct | Trace table and output correct | Correct, with clear explanations of why |
-| **Application** (Part B) | Runs, but fewer than five facts or no variables | Five labelled facts stored in variables | Also uses a self-found function well, with very clear names and labels |
+| **Knowledge** (Parts A and D) | Some predictions correct; components named | Trace table and outputs correct; components matched to lines correctly | Correct, with clear explanations of why, including compiled vs. interpreted |
+| **Application** (Part B) | Runs, but fewer than five facts, no variables, or no `input()` | Five facts in variables, an `input()` greeting, f-strings with lined-up labels, a correct calculation | Also uses a self-found function well, with a polished layout that would look at home on a real computer |
 | **Thinking** (Part C) | Lists differences | Explains where the code ran | Explains clearly, using evidence from both outputs |
-| **Communication** | Few comments or unclear labels | Header comment; clear labels | Clear, consistent comments, names, and output |
+| **Communication** | Few comments or unclear labels | Header comment; clear labels and names | Clear, consistent comments, names, and output; comments explain *why* |
 
 ## Previous and Next {.unlisted}
 

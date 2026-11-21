@@ -58,6 +58,16 @@ The seven-module plan is approved (`decisions.md`, 2026-11-21). Lesson 3 is the 
 - [x] Practice section, answer keys (`lesson-10-answers.md`), links, sidebar; steppers checked in Chromium
 - [ ] Author review of Lesson 10
 
+### Module 1 complete: Lesson 11, the test, and the full assignment (2026-11-21; awaiting author review)
+
+- [x] Assignment now covers all of Module 1: Part A2 (reading a program with `input()` and f-string padding), Part B upgraded (`input()` greeting, lined-up f-strings, one converted-and-calculated value), Part C notes that `input()` must be replaced for the browser box (quarto-live gives `[Errno 29] I/O error`), new Part D (drive, RAM, CPU, interpreter; compiled vs. interpreted). Starter file, rubric, marking notes, and overview text updated.
+- [x] Lesson 11, Review and Assignment Work Period: predict-off review game (six programs, lightning round), test check-in table, 40-minute work period with a hand-in checklist; slides; review answers
+- [x] Module 1 test (60 marks, three parts) and answers in `answer-keys/`, every code answer produced by running it; listed on the overview without a link
+- [x] Module 1 overview: all lessons listed, Planned section removed; Scope and Sequence Module 1 summary updated (input taught, `os` in Lesson 6)
+- [x] Render clean; no broken links; 57/57 expectations; no site links to `answer-keys`; all steppers checked in Chromium
+- [ ] Author review of Lesson 11, the assignment changes, and the test
+- [ ] Decide: split the Practice page into one page per lesson (it now has ten sections), and group the Module 1 sidebar by lesson instead of by audience (22 links)
+
 ### Next
 
 1. Sample folder tool: add `--download` (files hosted on the site, licence-checked, falling back to local generation) before Module 5 Lesson 7 reads its download code.
