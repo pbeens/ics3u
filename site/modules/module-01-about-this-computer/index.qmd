@@ -5,7 +5,7 @@ subtitle: "About 15 hours · For teachers"
 
 **The big idea:** students ask the computer about itself. They start with one line of Python that prints the processor type and build up to a labelled report stored in variables. Along the way they learn to read, predict, and trace code, use a module's tools, and read error messages. They also discover that a program reports on whatever computer it actually runs on.
 
-**Expectations:** A1.1, A2.1, A2.2, A3.1, A4.2, A4.3, A4.4, C1.1, C1.4, C2.1, C3.1, C3.3, C3.4, C3.5 (across the whole module)
+**Expectations:** A1.1, A2.1, A2.2, A3.1, A4.1, A4.2, A4.3, A4.4, C1.1, C1.4, C2.1, C3.1, C3.3, C3.4, C3.5 (across the whole module)
 
 ## Lessons
 
@@ -20,6 +20,7 @@ subtitle: "About 15 hours · For teachers"
 | 7. What Python Actually Runs | [Lesson plan](lesson-07-what-python-actually-runs.qmd) | [Slides](lesson-07-what-python-actually-runs-slides.qmd) | [Practice](practice.qmd#after-lesson-7-what-python-actually-runs) |
 | 8. Inside the Computer: RAM and CPU | [Lesson plan](lesson-08-inside-the-computer.qmd) | [Slides](lesson-08-inside-the-computer-slides.qmd) | [Practice](practice.qmd#after-lesson-8-inside-the-computer-ram-and-cpu) |
 | 9. Talking Back, and a First Look Ahead | [Lesson plan](lesson-09-talking-back.qmd) | [Slides](lesson-09-talking-back-slides.qmd) | [Practice](practice.qmd#after-lesson-9-talking-back-and-a-first-look-ahead) |
+| 10. Error Clinic | [Lesson plan](lesson-10-error-clinic.qmd) | [Slides](lesson-10-error-clinic-slides.qmd) | [Practice](practice.qmd#after-lesson-10-error-clinic) |
 
 ### Planned lessons
 
@@ -29,7 +30,6 @@ subtitle: "About 15 hours · For teachers"
 
 | Lesson | Focus | Students read, then build |
 |---|---|---|
-| 10. Error Clinic | Syntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4) | Fix five broken report programs |
 | 11. Review and assignment work period | A short review game on Lessons 1–10, then class time for the assignment | Finish the Computer Report Card |
 | 12. Module 1 test | Code reading and tracing; a short basics section | |
 

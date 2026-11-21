@@ -51,6 +51,13 @@ The seven-module plan is approved (`decisions.md`, 2026-11-21). Lesson 3 is the 
 - [x] Practice section, answer keys (`lesson-09-answers.md`), links, sidebar
 - [ ] Author review of Lesson 9
 
+### Module 1, Lesson 10 (built 2026-11-21; awaiting author review)
+
+- [x] Lesson 10, Error Clinic: plan, slides (14), eleven example programs; reading a traceback bottom up, finding your own line in a traceback through Python's files, the three kinds of error side by side, the six-step debugging routine, five "patients", bug swap, `error_guide.txt` for the toolkit. A4.1 added to Module 1's expectations (overview, Scope and Sequence summary and coverage table).
+- [x] Stepper now reports `IndentationError` by name (it showed every syntax-type error as `SyntaxError`).
+- [x] Practice section, answer keys (`lesson-10-answers.md`), links, sidebar; steppers checked in Chromium
+- [ ] Author review of Lesson 10
+
 ### Next
 
 1. Sample folder tool: add `--download` (files hosted on the site, licence-checked, falling back to local generation) before Module 5 Lesson 7 reads its download code.

@@ -1,0 +1,139 @@
+---
+title: "Error Clinic"
+subtitle: "Module 1, Lesson 10"
+format:
+  live-revealjs:
+    theme: default
+    slide-number: true
+    code-line-numbers: true
+    toc: false
+    footer: "[← Lesson 10 plan](lesson-10-error-clinic.html) · [Module 1](index.html)"
+engine: markdown
+---
+
+## Review
+
+In your tracing notebook, without running anything:
+
+1. `count = input("How many? ")`, and the user types `5`. What is `count + count`?
+2. In an `if`/`elif`/`else`, how many branches run?
+
+## Read it from the bottom up
+
+```text
+How much RAM, in GB? eight
+Traceback (most recent call last):
+  File "/Users/sam/ics3u/module-01/lesson-10/l10_traceback.py", line 2, in <module>
+    total = int(ram) * 2
+            ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'eight'
+```
+
+::: {.incremental}
+1. **Last line:** the kind of error and a message
+2. **Above it:** the code that failed, `^^^` under the exact part
+3. **Above that:** which file, which line
+4. **Top:** most recent call *last*, so start at the bottom
+:::
+
+::: {.notes}
+Open with the problem: "Error messages are the most useful thing Python ever says, and the thing beginners skip." Run l10_traceback.py on the classroom computer, typing eight. TEACHER PROMPT (tracebacks): walk through the four points bottom up. "int() was given something that isn't a whole number."
+:::
+
+## Three kinds of error
+
+| Kind | Python notices… | You see… |
+|---|---|---|
+| **Syntax** | before running | no output; a message at a line |
+| **Run-time** | while running | some output, then a traceback |
+| **Logic** | never | it finishes, but the output is wrong |
+
+::: {.notes}
+Students have met all three. Syntax: the apostrophe (L3), Lesson 7's last-line error. Run-time: AttributeError (L2), TypeError (L5), FileNotFoundError (L6). Logic: the Windows path (L3), missing f (L4), 44 threads (L9).
+:::
+
+## When the error is in Python's code
+
+{{< stepper file="examples/l10_library_error.py" >}}
+
+```text
+  File "/Users/sam/ics3u/module-01/lesson-10/l10_library_error.py", line 4, in <module>
+  File "<frozen posixpath>", line 90, in join
+  File "<frozen genericpath>", line 152, in _check_arg_types
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'int'
+```
+
+::: {.notes}
+Ask: which files did you write? Which belong to Python? Which line was the real cause? "When a traceback goes into Python's own files, the bug is almost never in Python. Work up from the bottom to the first file that's yours."
+:::
+
+## The clinic: the routine
+
+1. **Predict** what it should do
+2. **Run** it
+3. **Classify:** syntax, run-time, or logic?
+4. **Locate:** which line?
+5. **Explain** the message (or expected vs. actual)
+6. **Fix**, and run again
+
+::: {.notes}
+TEACHER PROMPT (debugging routine): "Doctors don't guess; they examine, then diagnose, then treat. Don't change anything until you can say what kind of error it is and which line caused it. Random changes make new bugs." Pairs, 20 minutes for five patients.
+:::
+
+## Patient 1
+
+{{< stepper file="examples/l10_broken_1.py" >}}
+
+## Patient 2
+
+{{< stepper file="examples/l10_broken_2.py" >}}
+
+## Patient 3
+
+{{< stepper file="examples/l10_broken_3.py" >}}
+
+## Patient 4
+
+{{< stepper file="examples/l10_broken_4.py" >}}
+
+::: {.notes}
+No error. How did you know it was broken? Only by predicting first: 512 GB is about 512,000 MB, not 0.512.
+:::
+
+## Patient 5
+
+{{< stepper file="examples/l10_broken_5.py" >}}
+
+## Modify: bug swap
+
+- Copy one of your working programs to `bug_swap.py`
+- Add **one** bug, of a kind you choose
+- Swap computers; your partner uses the routine to find and fix it
+- Did they classify it correctly?
+
+## Make: error field guide
+
+`ics3u/toolkit/error_guide.txt`, for every error you've met:
+
+- name, kind, an example message, what it usually means, how to fix it
+- `SyntaxError`, `IndentationError`, `NameError`, `AttributeError`, `TypeError`, `ValueError`, `FileNotFoundError`, `ZeroDivisionError`
+- and how to catch logic errors
+
+## Exit ticket
+
+```python
+speed = "3.2"
+cores = 4
+print("Total GHz:", speed * cores)
+print("Per core:", speed / cores)
+```
+
+1. Which line stops the program? What kind of error?
+2. Line 3 doesn't crash. What does it print? What kind of error is *that*?
+3. Fix it
+
+## After class
+
+- Do the [Lesson 10 practice](practice.qmd#after-lesson-10-error-clinic): read and predict first, then run
+- Finish `error_guide.txt`
+- Today's programs are on the practice page: download the `.py` files, or open them as notebooks in Callysto or Colab

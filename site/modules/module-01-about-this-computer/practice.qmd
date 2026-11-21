@@ -427,6 +427,49 @@ Lesson 9's programs, including the ones above. Download a `.py` file, or open th
 
 {{< lesson-code lesson="09" hide="exit_ticket" >}}
 
+## After Lesson 10: Error Clinic
+
+### Read and predict
+
+Read this program **without running it**. In your tracing notebook, write the exact output. Then type your prediction and press **Step**.
+
+1. How many lines print before the program stops?
+2. Line 4 works but line 5 doesn't. What's the difference?
+3. What kind of error is it, and what will the message say?
+
+{{< stepper file="examples/l10_practice_read.py" >}}
+
+### Spot the mistake
+
+Predict what will happen, then press **Step**.
+
+1. Does any line run? What kind of error is it?
+2. What does `unexpected indent` mean? Fix it two ways: by removing the indent, or by making line 3 belong to an `if`.
+
+{{< stepper file="examples/l10_practice_mistake.py" >}}
+
+### Modify
+
+This program has three bugs: one syntax, one run-time, one logic. Run it, fix the error Python reports, and run it again until it finishes. Then find the logic error by predicting what the output *should* be.
+
+```{pyodide}
+price = 34.99
+quantity = 2
+total = price + quantity
+print("Total: " + total)
+print(f"With tax: {total * 1.13:.2f}"
+```
+
+### Make
+
+Run three programs you wrote this module, each with one deliberate mistake of a different kind, on your classroom computer. For each, copy the full traceback (or the wrong output) into `traceback_notes.txt` in `ics3u/module-01/lesson-10/`, and under it write the five routine steps: kind, line, what the message means, the fix, and how you checked.
+
+### Code files
+
+Lesson 10's programs, including the ones above. Download a `.py` file, or open the notebook in Callysto or Colab.
+
+{{< lesson-code lesson="10" hide="exit_ticket" >}}
+
 ## Next
 
 When you've finished the Lesson 1 and Lesson 2 practice, start the [Module 1 Assignment](assignment.qmd). After Lesson 3, finish the [System Banner](quick-build-system-banner.qmd); after Lesson 5, the [Parts Receipt](quick-build-parts-receipt.qmd).

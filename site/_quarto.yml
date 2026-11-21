@@ -87,6 +87,8 @@ website:
               text: "Lesson 8 plan"
             - href: modules/module-01-about-this-computer/lesson-09-talking-back.qmd
               text: "Lesson 9 plan"
+            - href: modules/module-01-about-this-computer/lesson-10-error-clinic.qmd
+              text: "Lesson 10 plan"
         - section: "For the class"
           contents:
             - href: modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.qmd
@@ -107,6 +109,8 @@ website:
               text: "Lesson 8 slides"
             - href: modules/module-01-about-this-computer/lesson-09-talking-back-slides.qmd
               text: "Lesson 9 slides"
+            - href: modules/module-01-about-this-computer/lesson-10-error-clinic-slides.qmd
+              text: "Lesson 10 slides"
         - section: "For students"
           contents:
             - href: course-folder.qmd

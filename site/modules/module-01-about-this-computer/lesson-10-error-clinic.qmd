@@ -1,0 +1,195 @@
+---
+title: "Lesson 10: Error Clinic"
+subtitle: "Module 1 — About This Computer"
+format: live-html
+engine: markdown
+expectations: [A4.1, A4.3, A4.4]
+---
+
+::: {.callout-important appearance="simple" icon=false}
+**For teachers.** This is the lesson plan: use it to prepare and as your script in class. Students work from the **slides**, the **code files and notebooks**, and the **practice** page. The step-through boxes and runnable code are here so you can try every activity first. [How a lesson works →](../../how-a-lesson-works.qmd)
+:::
+
+::: {.callout-note appearance="simple"}
+**Time:** 75 minutes · **Expectations:** A4.1, A4.3, A4.4 · **Slides:** [Lesson 10 slides](lesson-10-error-clinic-slides.qmd) (press **S** for speaker notes) · [Module 1 overview](index.qmd) · **Previous:** [Lesson 9](lesson-09-talking-back.qmd)
+:::
+
+## At a Glance
+
+- **Big idea:** error messages are the most useful thing Python says. Read a traceback from the bottom up, decide which of the three kinds of error it is, and follow a routine to fix it.
+- **Students will:** take a traceback apart, find their own line in a traceback that goes into Python's code, and diagnose and fix five broken programs, one of which has no error message at all.
+- **Students make:** an error field guide for their toolkit, and a bug for a classmate to find.
+- **Prepare:** run each `l10_broken_` program on the classroom computer so you've seen the full tracebacks. Open the slides a few minutes before class so Python finishes loading.
+- **After class:** [Lesson 10 practice](practice.qmd#after-lesson-10-error-clinic).
+- **Where it fits:** students have met syntax, run-time, and logic errors one at a time since Lesson 3. Today puts them together, before the review and the test. Module 3 adds debugging loops by printing variables.
+
+## Learning Goals
+
+- Read a traceback from the bottom up: the error's type and message, the line of code, the file and line number.
+- Find your own line in a traceback that goes into Python's own files.
+- Classify an error as syntax, run-time, or logic, and explain how you can tell.
+- Use a routine to find and fix an error, including one with no message.
+
+## Success Criteria
+
+Students can say:
+
+- I can find the line that caused an error and explain the message in my own words.
+- I can tell which kind of error I'm looking at before I try to fix it.
+- I can find a logic error by predicting what the program *should* print.
+
+## Review (5 min)
+
+Without running anything, answer in tracing notebooks:
+
+1. A program runs `count = input("How many? ")` and the user types `5`. What is `count + count`?
+2. In an `if`/`elif`/`else`, how many branches run?
+
+## Teach: Reading a Traceback (15 min)
+
+Open with the problem: "Error messages are the most useful thing Python ever says to you, and the thing beginners skip. Today we read them properly."
+
+Run `l10_traceback.py` on the classroom computer and type `eight`. Display the result:
+
+```text
+How much RAM, in GB? eight
+Traceback (most recent call last):
+  File "/Users/sam/ics3u/module-01/lesson-10/l10_traceback.py", line 2, in <module>
+    total = int(ram) * 2
+            ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'eight'
+```
+
+::: {.callout-tip title="Teacher prompt: reading a traceback (first use)"}
+Read it from the **bottom up**:
+
+1. "**Last line:** the kind of error, `ValueError`, and a message. `int()` was given something that isn't a whole number: `'eight'`."
+2. "**Above it:** the line of code that failed, with `^^^` under the exact part."
+3. "**Above that:** which file and which line: line 2 of `l10_traceback.py`."
+4. "**Top:** *Traceback (most recent call last)*. When a program calls other code, Python lists every step, and the most recent one is at the bottom. That's why we start there."
+:::
+
+Then put the three kinds of error side by side. Students have met all three:
+
+| Kind | When Python notices | What you see | Met in |
+|---|---|---|---|
+| **Syntax error** | Before running, while compiling | No output at all; a message pointing at a line | Lesson 3 (the apostrophe), Lesson 7 |
+| **Run-time error** | While running | Some output, then a traceback | Lesson 2 (`AttributeError`), Lesson 5 (`TypeError`), Lesson 6 (`FileNotFoundError`) |
+| **Logic error** | Never | The program finishes, but the output is wrong | Lesson 3 (the Windows path), Lesson 4 (missing `f`), Lesson 9 (`44` threads) |
+
+## Predict, Then Step (10 min)
+
+This error happens deep inside Python's own code. Read the program and the traceback, then answer in tracing notebooks.
+
+{{< stepper file="examples/l10_library_error.py" >}}
+
+The full traceback on the classroom computer:
+
+```text
+Traceback (most recent call last):
+  File "/Users/sam/ics3u/module-01/lesson-10/l10_library_error.py", line 4, in <module>
+    folder = os.path.join("ics3u", "backups", year)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen posixpath>", line 90, in join
+  File "<frozen genericpath>", line 152, in _check_arg_types
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'int'
+```
+
+1. Which files in the traceback did *you* write? Which belong to Python?
+2. The bottom file is where the error was *noticed*. Which line was the real cause?
+3. What does the message say was wrong? Fix it.
+
+::: {.callout-tip title="Teacher prompt"}
+"When a traceback goes into Python's own files, the bug is almost never in Python. Work up from the bottom until you reach the first file that's yours. That's your line. The step-through box skips straight to it."
+:::
+
+## Investigate: The Clinic (20 min)
+
+Five broken programs. In pairs, for each one, follow the routine and record it in tracing notebooks:
+
+1. **Predict** what the program should do.
+2. **Run** it (press **Step** or **Run all**).
+3. **Classify:** syntax, run-time, or logic?
+4. **Locate:** which line?
+5. **Explain** the message (or, for a logic error, the difference between expected and actual).
+6. **Fix** it, and run it again to check.
+
+::: {.callout-tip title="Teacher prompt: the debugging routine (first use)"}
+"Doctors don't guess; they examine, then diagnose, then treat. Same here. Don't change anything until you can say what kind of error it is and which line caused it. Random changes make new bugs."
+:::
+
+**Patient 1**
+
+{{< stepper file="examples/l10_broken_1.py" >}}
+
+**Patient 2**
+
+{{< stepper file="examples/l10_broken_2.py" >}}
+
+**Patient 3**
+
+{{< stepper file="examples/l10_broken_3.py" >}}
+
+**Patient 4**
+
+{{< stepper file="examples/l10_broken_4.py" >}}
+
+**Patient 5**
+
+{{< stepper file="examples/l10_broken_5.py" >}}
+
+Take up Patient 4 together: "No error, so how did you know it was broken?" Only by predicting first: 512 GB is about 512,000 MB, not 0.512.
+
+## Modify: Bug Swap (10 min)
+
+Each student opens a working program of their own (the System Banner, Parts Receipt, or `welcome.py`), saves a copy as `bug_swap.py`, and adds **one** bug of a kind they choose. Partners swap computers and use the routine to find and fix it. Then swap back and compare: did the partner classify it correctly?
+
+## Make: Error Field Guide (10 min)
+
+Students create `error_guide.txt` in their `ics3u/toolkit/` folder: a reference for every error they've met. For each one: its name, its kind (syntax or run-time), an example message, what it usually means, and how to fix it. At least: `SyntaxError`, `IndentationError`, `NameError`, `AttributeError`, `TypeError`, `ValueError`, `FileNotFoundError`, `ZeroDivisionError`, plus a section on logic errors and how to catch them.
+
+## Check: Exit Ticket (5 min)
+
+Read without running:
+
+```python
+speed = "3.2"
+cores = 4
+print("Total GHz:", speed * cores)
+print("Per core:", speed / cores)
+```
+
+1. Which line stops the program, and what kind of error is it?
+2. Line 3 doesn't crash. What does it print, and what kind of error is *that*?
+3. Fix the program.
+
+## After the Lesson
+
+- Students do the [Lesson 10 practice](practice.qmd#after-lesson-10-error-clinic).
+- **Suggested hand-in:** `error_guide.txt`.
+- Read the exit tickets. Line 3 prints `3.23.23.23.2`: students who called it "fine" haven't yet made predicting a habit. Practise that in the review.
+
+## Code for This Lesson
+
+Every program in this lesson, ready to run outside the browser. Download the `.py` file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.
+
+{{< lesson-code >}}
+
+## Teacher Notes
+
+- **Bottom up, then up to your file.** These two habits solve most beginner errors. Practise saying the routine aloud until students do it without prompting.
+- **The step-through box vs. the real traceback.** The box shows the error type, the message, and the student's line, but not the full traceback or Python's "Did you mean" suggestions (Patients 1 and 5 get one on the classroom computer). Run at least two patients on the classroom computer so students see the full version.
+- **Patient 3's fix.** `int()` can't read `"8 GB"`. The simplest fix is to store `"8"`. Students who know about splitting strings can try `int(ram_text.split()[0])`; that's Module 4.
+- **Error messages vary by version.** Python 3.10 and later give much clearer messages (`expected ':'`, `Did you mean`). Older versions say `invalid syntax`. Another reason to check the classroom computers' Python version.
+- **Bug swap rules.** One bug, no deleting whole lines, and it must be a real kind of mistake. Logic bugs are the hardest to find and the most valuable to practise.
+- **Slides.** Open the slides on the projector and this plan on your own screen. Press **S** for speaker view.
+- **Spiral.** Module 2 handles run-time errors in the program itself with `try`/`except`; Module 3 debugs loops; every module's test includes a "find the bug" question.
+- Answers are in the `answer-keys` folder of the course's GitHub repository, not on this site.
+
+## Previous and Next {.unlisted}
+
+[← Lesson 9](lesson-09-talking-back.qmd) · [Lesson 10 slides](lesson-10-error-clinic-slides.qmd) · [Module 1 overview](index.qmd) · [Practice →](practice.qmd#after-lesson-10-error-clinic)
+
+## Feedback {.unlisted}
+
+{{< feedback >}}

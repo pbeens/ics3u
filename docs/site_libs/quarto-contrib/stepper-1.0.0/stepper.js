@@ -58,7 +58,7 @@ def __stepper_trace(src, max_steps, inputs=None):
         sys.settrace(tracer)
         exec(code, g)
     except SyntaxError as e:
-        error = {"type": "SyntaxError", "message": str(e.msg), "line": e.lineno}
+        error = {"type": type(e).__name__, "message": str(e.msg), "line": e.lineno}
     except Exception as e:
         tb = e.__traceback__
         line = None

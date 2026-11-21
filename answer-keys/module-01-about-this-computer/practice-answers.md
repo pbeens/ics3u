@@ -319,3 +319,40 @@ print(f"About {megabytes} MB, or {megabytes / 1000:.1f} GB, of RAM")
 ```
 
 For 40 tabs: `About 6000 MB, or 6.0 GB, of RAM`.
+
+## After Lesson 10
+
+### Read and predict (`l10_practice_read.py`)
+
+```text
+CPU: arm64
+Cores: 8
+```
+
+then `TypeError: can only concatenate str (not "int") to str` on line 5.
+
+1. Two.
+2. Line 4 converts the number with `str()`; line 5 tries to join a string and the integer `16`.
+3. Run-time error (`TypeError`). Fix: `print("Threads: " + str(cores * 2))` or an f-string.
+
+### Spot the mistake (`l10_practice_mistake.py`)
+
+1. No line runs: `IndentationError: unexpected indent`, a syntax error.
+2. Line 3 is indented but doesn't belong to anything. Remove the indent, or add a line before it such as `if battery < 100:`.
+
+### Modify
+
+1. Syntax: line 5 is missing its closing `)`. Nothing runs until it's fixed.
+2. Run-time: line 4, `TypeError` (string + float). Fix: `print(f"Total: {total:.2f}")` or `str(total)`.
+3. Logic: line 3 adds the quantity instead of multiplying (`36.99`). Fix: `total = price * quantity`.
+
+Fixed output:
+
+```text
+Total: 69.98
+With tax: 79.08
+```
+
+### Make (`traceback_notes.txt`)
+
+Answers vary. Check that three different kinds are shown and each analysis names the kind, the line, the meaning, the fix, and how it was checked.

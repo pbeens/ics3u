@@ -53,14 +53,14 @@
     "href": "scope-and-sequence.html#modules",
     "title": "Scope and Sequence",
     "section": "Modules",
-    "text": "Modules\nEach module’s overview page has its planned lessons, anchor programs, and assignment. This section is the summary.\n\nModule 1 — About This Computer (15 h)\nPurpose: Ask the computer about itself.\nAnchor programs: a two-line program that prints the CPU type (platform.machine()); a labelled computer report built from the platform module and stored in variables; a greeter that asks the user’s name and gives a hardware summary; a report that loops through a list of facts.\nPacing: one library first. Lessons 1–2 use only platform, starting from a single line. Other modules (os for cores, shutil for storage) wait until Module 2.\n\nTaught explicitly: what a program is; reading and predicting output; import and calling a module’s functions; print() in depth (arguments, sep, end, escape characters) and f-strings; variables and the basic types (str, int, float); simple arithmetic; tracing line by line; finding tools with dir() and the documentation; comments and naming conventions; syntax and run-time errors and how to read them\nMet through reading: input(), a simple if, a for loop over a list\nComputer science: CPU types and operating systems; where code runs (classroom computer, browser, cloud); where variables live (RAM) and where arithmetic happens (CPU); source code vs. machine code (bytecode with dis); interpreters vs. compilers; applications, languages, and operating systems; organizing program files\n\nQuick Builds: System Banner, Parts Receipt. Assignment: Computer Report Card. Expectations: A1.1, A2.1, A2.2, A3.1, A4.2, A4.3, A4.4, C1.1, C1.4, C2.1, C3.1, C3.3, C3.4, C3.5\n\n\nModule 2 — Spec Checker (15 h)\nPurpose: Decide whether a computer meets a user’s needs.\nAnchor programs: a core counter (os.cpu_count()); a storage calculator (why “1 TB” shows as 931 GB); a drive gauge (shutil.disk_usage()); “Will this game run?”; a monitor sharpness (pixels per inch) calculator.\n\nTaught explicitly: input and type conversion; data types; arithmetic, integer division, remainder, order of operations; comparison and logical operators; if/elif/else; try/except for bad input; user-friendly prompts and messages; test plans with normal, boundary, and invalid cases\nMet through modifying: a loop over a list of requirements; .strip() and .lower() for cleaning input\nComputer science: internal components, specifications, and peripherals related to user needs; the input-process-output model\n\nQuick Builds: Storage Unit Converter, Battery Life Estimator. Assignment: Will It Run? Expectations: A1.1, A1.3, A1.4, A2.1, A2.2, A4.1, A4.3, A4.5, B1.1, B1.3, B2.5, B3.2, B3.3, B4.4, C1.1, C1.2, C1.3\n\n\nModule 3 — Benchmark Lab (14 h)\nPurpose: Measure how fast the computer really is.\nAnchor programs: count to a million with a stopwatch; a benchmark suite (counting, string building, checking primes); a study timer; a reaction timer; “Is shuffle really random?”; a typing speed test.\n\nTaught explicitly: for loops and range(); while loops; counters and accumulators; nested loops and decisions; the time and random modules; reading and modifying first functions; flow charts and pseudocode; program skeletons; debugging by tracing and printing variables\nMet through modifying: a list of counts; random.shuffle(); strings in prompts and messages\nComputer science: benchmarks and fair tests; how CPU type, cores, and the interpreter affect speed; running the same code on different machines; determining primes\n\nQuick Builds: Download Time Table, Study Timer. Assignment: Typing Speed Test, with a benchmark report. Expectations: A2.2, A2.3, A3.1, A3.2, A4.1, A4.4, B1.1, B2.1, B2.4, B3.2, B4.5, C1.2, C1.4\n\n\nModule 4 — Passwords and Secret Messages (15 h)\nPurpose: Learn how computers store text, and keep it safe.\nAnchor programs: a binary and hex converter; a Unicode inspector; a password strength checker; a crack-time estimator (using Module 3’s benchmark); a Caesar cipher (short activity) that shows why simple ciphers aren’t secure.\n\nTaught explicitly: strings as sequences (indexing, slicing, traversal, methods); ord() and chr(); writing functions with parameters and return values; local and global scope; reusable modules; secrets and hashlib\nComputer science: binary, hexadecimal, ASCII, and Unicode; how websites store passwords; cryptography as a research area; malware and a system protection plan\n\nQuick Builds: Username Maker, File Name Cleaner. Assignment: Password Toolkit, with a home system protection plan. Expectations: A1.2, A3.1, A3.2, A4.1, B1.1, B2.3, B4.4, C2.2, D2.1\n\n\nModule 5 — On the Network (14 h)\nPurpose: Find out how the computer talks to the rest of the world.\nAnchor programs: “Who am I on the network?” (host name and local IP address); an IP address explainer (list of octets in binary, private or public); a website lookup (DNS); a response timer; a download speed test.\n\nTaught explicitly: lists as one-dimensional arrays (elements, indexes, bounds); .split() and .append(); count, total, highest, lowest; exceptions for network failures; testing with good, slow, and broken inputs; writing files (a CSV log with timestamps); socket, ipaddress, urllib, and datetime\nComputer science: IP addresses, DNS, ports, packets, and routers; private and public networks; firewalls; running a web server; distributed computing; data flow diagrams\n\nQuick Builds: Speed Log Summary, Web Address Splitter. Assignment: Is It Me or the Wi-Fi? Expectations: A1.2, A1.5, A1.6, A2.3, A3.1, A3.2, A4.5, B1.1, B2.4, B3.3, D2.1\n\n\nModule 6 — Data Detective (15 h)\nPurpose: Investigate data about the computer and its use.\nAnchor programs: a folder detective on a generated sample folder (files by type, total size, biggest, oldest, duplicates); a top-ten list of the biggest files kept in sorted order; a backup maker that verifies copies with hashes; an analysis of the students’ own Module 5 network log; the computer lab’s yearly power bill from a CSV file.\n\nTaught explicitly: lists and parallel lists; linear search; highest and lowest value; inserting into a sorted list and deleting from the middle; reading CSV files; breaking a program into functions; structure charts; describing and comparing designs; testing with a full range of cases\nComputer science: organizing files and folders; backing up and archiving (the 3-2-1 rule); environmental and health effects of computer use; reducing them; e-waste, refurbishing, and community partners\n\nQuick Builds: Extension Report, Duplicate Finder. Assignment: Folder Detective. Expectations: A1.5, A1.6, A2.3, A3.2, A4.4, A4.5, B2.2, B2.3, B2.4, B3.1, C2.1, C2.3, D1.1, D1.2, D1.3, D1.4\n\n\nModule 7 — Software Development Project (16 h)\nPurpose: Plan, build, test, and present a useful program for a real person.\n\nPart 1, teacher-led class project (about 4 h): “Lab Health Check”, built by teams from earlier modules’ code; the software development life cycle, a Gantt chart, and milestones practised together\nPart 2, individual or pair project (about 12 h): a real user; specification by interview or questionnaire; design documents; test plan first; written status reports; presentation\nDesign level: students choose and combine every idea from the spiral\n\nExpectations: A4.2, A4.5, B1.2, B2.1, B2.2, B2.3, B2.4, B2.5, B4.1, B4.2, B4.3, B4.4, B4.5, B4.6, C3.2\n\n\nComputer Science in the World (6 h, between Modules 2–6)\nPurpose: See where computer science leads.\nFive short lessons, each placed after a module and tied to it (careers in hardware after Module 2, distributed computing after Module 3, security after Module 4, collaborative research after Module 5, postsecondary programs after Module 6), plus a research report submitted in stages.\nExpectations: D2.1, D2.2, D2.3, D3.1, D3.2, D3.3, D3.4, D3.5"
+    "text": "Modules\nEach module’s overview page has its planned lessons, anchor programs, and assignment. This section is the summary.\n\nModule 1 — About This Computer (15 h)\nPurpose: Ask the computer about itself.\nAnchor programs: a two-line program that prints the CPU type (platform.machine()); a labelled computer report built from the platform module and stored in variables; a greeter that asks the user’s name and gives a hardware summary; a report that loops through a list of facts.\nPacing: one library first. Lessons 1–2 use only platform, starting from a single line. Other modules (os for cores, shutil for storage) wait until Module 2.\n\nTaught explicitly: what a program is; reading and predicting output; import and calling a module’s functions; print() in depth (arguments, sep, end, escape characters) and f-strings; variables and the basic types (str, int, float); simple arithmetic; tracing line by line; finding tools with dir() and the documentation; comments and naming conventions; syntax and run-time errors and how to read them\nMet through reading: input(), a simple if, a for loop over a list\nComputer science: CPU types and operating systems; where code runs (classroom computer, browser, cloud); where variables live (RAM) and where arithmetic happens (CPU); source code vs. machine code (bytecode with dis); interpreters vs. compilers; applications, languages, and operating systems; organizing program files\n\nQuick Builds: System Banner, Parts Receipt. Assignment: Computer Report Card. Expectations: A1.1, A2.1, A2.2, A3.1, A4.1, A4.2, A4.3, A4.4, C1.1, C1.4, C2.1, C3.1, C3.3, C3.4, C3.5\n\n\nModule 2 — Spec Checker (15 h)\nPurpose: Decide whether a computer meets a user’s needs.\nAnchor programs: a core counter (os.cpu_count()); a storage calculator (why “1 TB” shows as 931 GB); a drive gauge (shutil.disk_usage()); “Will this game run?”; a monitor sharpness (pixels per inch) calculator.\n\nTaught explicitly: input and type conversion; data types; arithmetic, integer division, remainder, order of operations; comparison and logical operators; if/elif/else; try/except for bad input; user-friendly prompts and messages; test plans with normal, boundary, and invalid cases\nMet through modifying: a loop over a list of requirements; .strip() and .lower() for cleaning input\nComputer science: internal components, specifications, and peripherals related to user needs; the input-process-output model\n\nQuick Builds: Storage Unit Converter, Battery Life Estimator. Assignment: Will It Run? Expectations: A1.1, A1.3, A1.4, A2.1, A2.2, A4.1, A4.3, A4.5, B1.1, B1.3, B2.5, B3.2, B3.3, B4.4, C1.1, C1.2, C1.3\n\n\nModule 3 — Benchmark Lab (14 h)\nPurpose: Measure how fast the computer really is.\nAnchor programs: count to a million with a stopwatch; a benchmark suite (counting, string building, checking primes); a study timer; a reaction timer; “Is shuffle really random?”; a typing speed test.\n\nTaught explicitly: for loops and range(); while loops; counters and accumulators; nested loops and decisions; the time and random modules; reading and modifying first functions; flow charts and pseudocode; program skeletons; debugging by tracing and printing variables\nMet through modifying: a list of counts; random.shuffle(); strings in prompts and messages\nComputer science: benchmarks and fair tests; how CPU type, cores, and the interpreter affect speed; running the same code on different machines; determining primes\n\nQuick Builds: Download Time Table, Study Timer. Assignment: Typing Speed Test, with a benchmark report. Expectations: A2.2, A2.3, A3.1, A3.2, A4.1, A4.4, B1.1, B2.1, B2.4, B3.2, B4.5, C1.2, C1.4\n\n\nModule 4 — Passwords and Secret Messages (15 h)\nPurpose: Learn how computers store text, and keep it safe.\nAnchor programs: a binary and hex converter; a Unicode inspector; a password strength checker; a crack-time estimator (using Module 3’s benchmark); a Caesar cipher (short activity) that shows why simple ciphers aren’t secure.\n\nTaught explicitly: strings as sequences (indexing, slicing, traversal, methods); ord() and chr(); writing functions with parameters and return values; local and global scope; reusable modules; secrets and hashlib\nComputer science: binary, hexadecimal, ASCII, and Unicode; how websites store passwords; cryptography as a research area; malware and a system protection plan\n\nQuick Builds: Username Maker, File Name Cleaner. Assignment: Password Toolkit, with a home system protection plan. Expectations: A1.2, A3.1, A3.2, A4.1, B1.1, B2.3, B4.4, C2.2, D2.1\n\n\nModule 5 — On the Network (14 h)\nPurpose: Find out how the computer talks to the rest of the world.\nAnchor programs: “Who am I on the network?” (host name and local IP address); an IP address explainer (list of octets in binary, private or public); a website lookup (DNS); a response timer; a download speed test.\n\nTaught explicitly: lists as one-dimensional arrays (elements, indexes, bounds); .split() and .append(); count, total, highest, lowest; exceptions for network failures; testing with good, slow, and broken inputs; writing files (a CSV log with timestamps); socket, ipaddress, urllib, and datetime\nComputer science: IP addresses, DNS, ports, packets, and routers; private and public networks; firewalls; running a web server; distributed computing; data flow diagrams\n\nQuick Builds: Speed Log Summary, Web Address Splitter. Assignment: Is It Me or the Wi-Fi? Expectations: A1.2, A1.5, A1.6, A2.3, A3.1, A3.2, A4.5, B1.1, B2.4, B3.3, D2.1\n\n\nModule 6 — Data Detective (15 h)\nPurpose: Investigate data about the computer and its use.\nAnchor programs: a folder detective on a generated sample folder (files by type, total size, biggest, oldest, duplicates); a top-ten list of the biggest files kept in sorted order; a backup maker that verifies copies with hashes; an analysis of the students’ own Module 5 network log; the computer lab’s yearly power bill from a CSV file.\n\nTaught explicitly: lists and parallel lists; linear search; highest and lowest value; inserting into a sorted list and deleting from the middle; reading CSV files; breaking a program into functions; structure charts; describing and comparing designs; testing with a full range of cases\nComputer science: organizing files and folders; backing up and archiving (the 3-2-1 rule); environmental and health effects of computer use; reducing them; e-waste, refurbishing, and community partners\n\nQuick Builds: Extension Report, Duplicate Finder. Assignment: Folder Detective. Expectations: A1.5, A1.6, A2.3, A3.2, A4.4, A4.5, B2.2, B2.3, B2.4, B3.1, C2.1, C2.3, D1.1, D1.2, D1.3, D1.4\n\n\nModule 7 — Software Development Project (16 h)\nPurpose: Plan, build, test, and present a useful program for a real person.\n\nPart 1, teacher-led class project (about 4 h): “Lab Health Check”, built by teams from earlier modules’ code; the software development life cycle, a Gantt chart, and milestones practised together\nPart 2, individual or pair project (about 12 h): a real user; specification by interview or questionnaire; design documents; test plan first; written status reports; presentation\nDesign level: students choose and combine every idea from the spiral\n\nExpectations: A4.2, A4.5, B1.2, B2.1, B2.2, B2.3, B2.4, B2.5, B4.1, B4.2, B4.3, B4.4, B4.5, B4.6, C3.2\n\n\nComputer Science in the World (6 h, between Modules 2–6)\nPurpose: See where computer science leads.\nFive short lessons, each placed after a module and tied to it (careers in hardware after Module 2, distributed computing after Module 3, security after Module 4, collaborative research after Module 5, postsecondary programs after Module 6), plus a research report submitted in stages.\nExpectations: D2.1, D2.2, D2.3, D3.1, D3.2, D3.3, D3.4, D3.5"
   },
   {
     "objectID": "scope-and-sequence.html#expectation-coverage",
     "href": "scope-and-sequence.html#expectation-coverage",
     "title": "Scope and Sequence",
     "section": "Expectation Coverage",
-    "text": "Expectation Coverage\nEvery specific expectation is addressed in at least one module. “World” is Computer Science in the World.\n\n\n\nExpectation\nModules\n\n\n\n\nA1.1\n1, 2\n\n\nA1.2\n4, 5\n\n\nA1.3\n2\n\n\nA1.4\n2\n\n\nA1.5\n5, 6\n\n\nA1.6\n5, 6\n\n\nA2.1\n1, 2\n\n\nA2.2\n1, 2, 3\n\n\nA2.3\n3, 5, 6\n\n\nA3.1\n1, 3, 4, 5\n\n\nA3.2\n3, 4, 5, 6\n\n\nA4.1\n2, 3, 4\n\n\nA4.2\n1, 7\n\n\nA4.3\n1, 2\n\n\nA4.4\n1, 3, 6\n\n\nA4.5\n2, 5, 6, 7\n\n\nB1.1\n2, 3, 4, 5\n\n\nB1.2\n7\n\n\nB1.3\n2\n\n\nB2.1\n3, 7\n\n\nB2.2\n6, 7\n\n\nB2.3\n4, 6, 7\n\n\nB2.4\n3, 5, 6, 7\n\n\nB2.5\n2, 7\n\n\nB3.1\n6\n\n\nB3.2\n2, 3\n\n\nB3.3\n2, 5\n\n\nB4.1\n7\n\n\nB4.2\n7\n\n\nB4.3\n7\n\n\nB4.4\n2, 4, 7\n\n\nB4.5\n3, 7\n\n\nB4.6\n7\n\n\nC1.1\n1, 2\n\n\nC1.2\n2, 3\n\n\nC1.3\n2\n\n\nC1.4\n1, 3\n\n\nC2.1\n1, 6\n\n\nC2.2\n4\n\n\nC2.3\n6\n\n\nC3.1\n1\n\n\nC3.2\n7\n\n\nC3.3\n1\n\n\nC3.4\n1\n\n\nC3.5\n1\n\n\nD1.1\n6\n\n\nD1.2\n6\n\n\nD1.3\n6\n\n\nD1.4\n6\n\n\nD2.1\n4, 5, World\n\n\nD2.2\nWorld\n\n\nD2.3\nWorld\n\n\nD3.1\nWorld\n\n\nD3.2\nWorld\n\n\nD3.3\nWorld\n\n\nD3.4\nWorld\n\n\nD3.5\nWorld"
+    "text": "Expectation Coverage\nEvery specific expectation is addressed in at least one module. “World” is Computer Science in the World.\n\n\n\nExpectation\nModules\n\n\n\n\nA1.1\n1, 2\n\n\nA1.2\n4, 5\n\n\nA1.3\n2\n\n\nA1.4\n2\n\n\nA1.5\n5, 6\n\n\nA1.6\n5, 6\n\n\nA2.1\n1, 2\n\n\nA2.2\n1, 2, 3\n\n\nA2.3\n3, 5, 6\n\n\nA3.1\n1, 3, 4, 5\n\n\nA3.2\n3, 4, 5, 6\n\n\nA4.1\n1, 2, 3, 4\n\n\nA4.2\n1, 7\n\n\nA4.3\n1, 2\n\n\nA4.4\n1, 3, 6\n\n\nA4.5\n2, 5, 6, 7\n\n\nB1.1\n2, 3, 4, 5\n\n\nB1.2\n7\n\n\nB1.3\n2\n\n\nB2.1\n3, 7\n\n\nB2.2\n6, 7\n\n\nB2.3\n4, 6, 7\n\n\nB2.4\n3, 5, 6, 7\n\n\nB2.5\n2, 7\n\n\nB3.1\n6\n\n\nB3.2\n2, 3\n\n\nB3.3\n2, 5\n\n\nB4.1\n7\n\n\nB4.2\n7\n\n\nB4.3\n7\n\n\nB4.4\n2, 4, 7\n\n\nB4.5\n3, 7\n\n\nB4.6\n7\n\n\nC1.1\n1, 2\n\n\nC1.2\n2, 3\n\n\nC1.3\n2\n\n\nC1.4\n1, 3\n\n\nC2.1\n1, 6\n\n\nC2.2\n4\n\n\nC2.3\n6\n\n\nC3.1\n1\n\n\nC3.2\n7\n\n\nC3.3\n1\n\n\nC3.4\n1\n\n\nC3.5\n1\n\n\nD1.1\n6\n\n\nD1.2\n6\n\n\nD1.3\n6\n\n\nD1.4\n6\n\n\nD2.1\n4, 5, World\n\n\nD2.2\nWorld\n\n\nD2.3\nWorld\n\n\nD3.1\nWorld\n\n\nD3.2\nWorld\n\n\nD3.3\nWorld\n\n\nD3.4\nWorld\n\n\nD3.5\nWorld"
   },
   {
     "objectID": "scope-and-sequence.html#assessment-overview",
@@ -379,6 +379,182 @@
     ]
   },
   {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic.html",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html",
+    "title": "Lesson 10: Error Clinic",
+    "section": "",
+    "text": "For teachers. This is the lesson plan: use it to prepare and as your script in class. Students work from the slides, the code files and notebooks, and the practice page. The step-through boxes and runnable code are here so you can try every activity first. How a lesson works →",
+    "crumbs": [
+      "For teachers",
+      "Lesson 10 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#at-a-glance",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#at-a-glance",
+    "title": "Lesson 10: Error Clinic",
+    "section": "At a Glance",
+    "text": "At a Glance\n\nBig idea: error messages are the most useful thing Python says. Read a traceback from the bottom up, decide which of the three kinds of error it is, and follow a routine to fix it.\nStudents will: take a traceback apart, find their own line in a traceback that goes into Python’s code, and diagnose and fix five broken programs, one of which has no error message at all.\nStudents make: an error field guide for their toolkit, and a bug for a classmate to find.\nPrepare: run each l10_broken_ program on the classroom computer so you’ve seen the full tracebacks. Open the slides a few minutes before class so Python finishes loading.\nAfter class: Lesson 10 practice.\nWhere it fits: students have met syntax, run-time, and logic errors one at a time since Lesson 3. Today puts them together, before the review and the test. Module 3 adds debugging loops by printing variables.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 10 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#learning-goals",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#learning-goals",
+    "title": "Lesson 10: Error Clinic",
+    "section": "Learning Goals",
+    "text": "Learning Goals\n\nRead a traceback from the bottom up: the error’s type and message, the line of code, the file and line number.\nFind your own line in a traceback that goes into Python’s own files.\nClassify an error as syntax, run-time, or logic, and explain how you can tell.\nUse a routine to find and fix an error, including one with no message.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 10 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#success-criteria",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#success-criteria",
+    "title": "Lesson 10: Error Clinic",
+    "section": "Success Criteria",
+    "text": "Success Criteria\nStudents can say:\n\nI can find the line that caused an error and explain the message in my own words.\nI can tell which kind of error I’m looking at before I try to fix it.\nI can find a logic error by predicting what the program should print.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 10 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#review-5-min",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#review-5-min",
+    "title": "Lesson 10: Error Clinic",
+    "section": "Review (5 min)",
+    "text": "Review (5 min)\nWithout running anything, answer in tracing notebooks:\n\nA program runs count = input(\"How many? \") and the user types 5. What is count + count?\nIn an if/elif/else, how many branches run?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 10 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#teach-reading-a-traceback-15-min",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#teach-reading-a-traceback-15-min",
+    "title": "Lesson 10: Error Clinic",
+    "section": "Teach: Reading a Traceback (15 min)",
+    "text": "Teach: Reading a Traceback (15 min)\nOpen with the problem: “Error messages are the most useful thing Python ever says to you, and the thing beginners skip. Today we read them properly.”\nRun l10_traceback.py on the classroom computer and type eight. Display the result:\nHow much RAM, in GB? eight\nTraceback (most recent call last):\n  File \"/Users/sam/ics3u/module-01/lesson-10/l10_traceback.py\", line 2, in &lt;module&gt;\n    total = int(ram) * 2\n            ^^^^^^^^\nValueError: invalid literal for int() with base 10: 'eight'\n\n\n\n\n\n\nTipTeacher prompt: reading a traceback (first use)\n\n\n\nRead it from the bottom up:\n\n“Last line: the kind of error, ValueError, and a message. int() was given something that isn’t a whole number: 'eight'.”\n“Above it: the line of code that failed, with ^^^ under the exact part.”\n“Above that: which file and which line: line 2 of l10_traceback.py.”\n“Top: Traceback (most recent call last). When a program calls other code, Python lists every step, and the most recent one is at the bottom. That’s why we start there.”\n\n\n\nThen put the three kinds of error side by side. Students have met all three:\n\n\n\n\n\n\n\n\n\nKind\nWhen Python notices\nWhat you see\nMet in\n\n\n\n\nSyntax error\nBefore running, while compiling\nNo output at all; a message pointing at a line\nLesson 3 (the apostrophe), Lesson 7\n\n\nRun-time error\nWhile running\nSome output, then a traceback\nLesson 2 (AttributeError), Lesson 5 (TypeError), Lesson 6 (FileNotFoundError)\n\n\nLogic error\nNever\nThe program finishes, but the output is wrong\nLesson 3 (the Windows path), Lesson 4 (missing f), Lesson 9 (44 threads)",
+    "crumbs": [
+      "For teachers",
+      "Lesson 10 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#predict-then-step-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#predict-then-step-10-min",
+    "title": "Lesson 10: Error Clinic",
+    "section": "Predict, Then Step (10 min)",
+    "text": "Predict, Then Step (10 min)\nThis error happens deep inside Python’s own code. Read the program and the traceback, then answer in tracing notebooks.\nimport os\n\nyear = 2026\nfolder = os.path.join(\"ics3u\", \"backups\", year)\nprint(folder)\nThe full traceback on the classroom computer:\nTraceback (most recent call last):\n  File \"/Users/sam/ics3u/module-01/lesson-10/l10_library_error.py\", line 4, in &lt;module&gt;\n    folder = os.path.join(\"ics3u\", \"backups\", year)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"&lt;frozen posixpath&gt;\", line 90, in join\n  File \"&lt;frozen genericpath&gt;\", line 152, in _check_arg_types\nTypeError: join() argument must be str, bytes, or os.PathLike object, not 'int'\n\nWhich files in the traceback did you write? Which belong to Python?\nThe bottom file is where the error was noticed. Which line was the real cause?\nWhat does the message say was wrong? Fix it.\n\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\n“When a traceback goes into Python’s own files, the bug is almost never in Python. Work up from the bottom until you reach the first file that’s yours. That’s your line. The step-through box skips straight to it.”",
+    "crumbs": [
+      "For teachers",
+      "Lesson 10 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#investigate-the-clinic-20-min",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#investigate-the-clinic-20-min",
+    "title": "Lesson 10: Error Clinic",
+    "section": "Investigate: The Clinic (20 min)",
+    "text": "Investigate: The Clinic (20 min)\nFive broken programs. In pairs, for each one, follow the routine and record it in tracing notebooks:\n\nPredict what the program should do.\nRun it (press Step or Run all).\nClassify: syntax, run-time, or logic?\nLocate: which line?\nExplain the message (or, for a logic error, the difference between expected and actual).\nFix it, and run it again to check.\n\n\n\n\n\n\n\nTipTeacher prompt: the debugging routine (first use)\n\n\n\n“Doctors don’t guess; they examine, then diagnose, then treat. Same here. Don’t change anything until you can say what kind of error it is and which line caused it. Random changes make new bugs.”\n\n\nPatient 1\nimport platform\n\ncpu = platform.machine()\nprint(\"CPU:\", Cpu)\nPatient 2\nimport platform\n\nsystem = platform.system()\nif system == \"Windows\"\n    print(\"This is a Windows computer.\")\nprint(\"Checked\")\nPatient 3\nram_text = \"8 GB\"\nram = int(ram_text)\nprint(\"Doubled:\", ram * 2, \"GB\")\nPatient 4\nstorage_gb = 512\nstorage_mb = storage_gb / 1000\nprint(\"Storage:\", storage_mb, \"MB\")\nPatient 5\nimport platform\n\nprint(\"Checking the system...\")\nprint(\"System:\", platform.sytem())\nTake up Patient 4 together: “No error, so how did you know it was broken?” Only by predicting first: 512 GB is about 512,000 MB, not 0.512.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 10 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#modify-bug-swap-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#modify-bug-swap-10-min",
+    "title": "Lesson 10: Error Clinic",
+    "section": "Modify: Bug Swap (10 min)",
+    "text": "Modify: Bug Swap (10 min)\nEach student opens a working program of their own (the System Banner, Parts Receipt, or welcome.py), saves a copy as bug_swap.py, and adds one bug of a kind they choose. Partners swap computers and use the routine to find and fix it. Then swap back and compare: did the partner classify it correctly?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 10 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#make-error-field-guide-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#make-error-field-guide-10-min",
+    "title": "Lesson 10: Error Clinic",
+    "section": "Make: Error Field Guide (10 min)",
+    "text": "Make: Error Field Guide (10 min)\nStudents create error_guide.txt in their ics3u/toolkit/ folder: a reference for every error they’ve met. For each one: its name, its kind (syntax or run-time), an example message, what it usually means, and how to fix it. At least: SyntaxError, IndentationError, NameError, AttributeError, TypeError, ValueError, FileNotFoundError, ZeroDivisionError, plus a section on logic errors and how to catch them.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 10 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#check-exit-ticket-5-min",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#check-exit-ticket-5-min",
+    "title": "Lesson 10: Error Clinic",
+    "section": "Check: Exit Ticket (5 min)",
+    "text": "Check: Exit Ticket (5 min)\nRead without running:\nspeed = \"3.2\"\ncores = 4\nprint(\"Total GHz:\", speed * cores)\nprint(\"Per core:\", speed / cores)\n\nWhich line stops the program, and what kind of error is it?\nLine 3 doesn’t crash. What does it print, and what kind of error is that?\nFix the program.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 10 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#after-the-lesson",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#after-the-lesson",
+    "title": "Lesson 10: Error Clinic",
+    "section": "After the Lesson",
+    "text": "After the Lesson\n\nStudents do the Lesson 10 practice.\nSuggested hand-in: error_guide.txt.\nRead the exit tickets. Line 3 prints 3.23.23.23.2: students who called it “fine” haven’t yet made predicting a habit. Practise that in the review.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 10 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#code-for-this-lesson",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#code-for-this-lesson",
+    "title": "Lesson 10: Error Clinic",
+    "section": "Code for This Lesson",
+    "text": "Code for This Lesson\nEvery program in this lesson, ready to run outside the browser. Download the .py file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nBroken 1\nl10_broken_1.py\nView or download\nCallysto | Colab\n\n\nBroken 2\nl10_broken_2.py\nView or download\nCallysto | Colab\n\n\nBroken 3\nl10_broken_3.py\nView or download\nCallysto | Colab\n\n\nBroken 4\nl10_broken_4.py\nView or download\nCallysto | Colab\n\n\nBroken 5\nl10_broken_5.py\nView or download\nCallysto | Colab\n\n\nExit ticket\nl10_exit_ticket.py\nView or download\nCallysto | Colab\n\n\nLibrary error\nl10_library_error.py\nView or download\nCallysto | Colab\n\n\nPractice mistake\nl10_practice_mistake.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl10_practice_read.py\nView or download\nCallysto | Colab\n\n\nTraceback\nl10_traceback.py\nView or download\nCallysto | Colab",
+    "crumbs": [
+      "For teachers",
+      "Lesson 10 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#teacher-notes",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#teacher-notes",
+    "title": "Lesson 10: Error Clinic",
+    "section": "Teacher Notes",
+    "text": "Teacher Notes\n\nBottom up, then up to your file. These two habits solve most beginner errors. Practise saying the routine aloud until students do it without prompting.\nThe step-through box vs. the real traceback. The box shows the error type, the message, and the student’s line, but not the full traceback or Python’s “Did you mean” suggestions (Patients 1 and 5 get one on the classroom computer). Run at least two patients on the classroom computer so students see the full version.\nPatient 3’s fix. int() can’t read \"8 GB\". The simplest fix is to store \"8\". Students who know about splitting strings can try int(ram_text.split()[0]); that’s Module 4.\nError messages vary by version. Python 3.10 and later give much clearer messages (expected ':', Did you mean). Older versions say invalid syntax. Another reason to check the classroom computers’ Python version.\nBug swap rules. One bug, no deleting whole lines, and it must be a real kind of mistake. Logic bugs are the hardest to find and the most valuable to practise.\nSlides. Open the slides on the projector and this plan on your own screen. Press S for speaker view.\nSpiral. Module 2 handles run-time errors in the program itself with try/except; Module 3 debugs loops; every module’s test includes a “find the bug” question.\nAnswers are in the answer-keys folder of the course’s GitHub repository, not on this site.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 10 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#previous-and-next",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#previous-and-next",
+    "title": "Lesson 10: Error Clinic",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Lesson 9 · Lesson 10 slides · Module 1 overview · Practice →",
+    "crumbs": [
+      "For teachers",
+      "Lesson 10 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#feedback",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic.html#feedback",
+    "title": "Lesson 10: Error Clinic",
+    "section": "Feedback",
+    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 10 plan"
+    ]
+  },
+  {
     "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back.html",
     "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html",
     "title": "Lesson 9: Talking Back, and a First Look Ahead",
@@ -537,7 +713,7 @@
     "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html#previous-and-next",
     "title": "Lesson 9: Talking Back, and a First Look Ahead",
     "section": "Previous and Next",
-    "text": "Previous and Next\n← Lesson 8 · Lesson 9 slides · Module 1 overview · Practice →",
+    "text": "Previous and Next\n← Lesson 8 · Lesson 9 slides · Module 1 overview · Practice → · Lesson 10 →",
     "crumbs": [
       "For teachers",
       "Lesson 9 plan"
@@ -1967,7 +2143,7 @@
     "href": "modules/module-01-about-this-computer/index.html",
     "title": "Module 1: About This Computer",
     "section": "",
-    "text": "The big idea: students ask the computer about itself. They start with one line of Python that prints the processor type and build up to a labelled report stored in variables. Along the way they learn to read, predict, and trace code, use a module’s tools, and read error messages. They also discover that a program reports on whatever computer it actually runs on.\nExpectations: A1.1, A2.1, A2.2, A3.1, A4.2, A4.3, A4.4, C1.1, C1.4, C2.1, C3.1, C3.3, C3.4, C3.5 (across the whole module)",
+    "text": "The big idea: students ask the computer about itself. They start with one line of Python that prints the processor type and build up to a labelled report stored in variables. Along the way they learn to read, predict, and trace code, use a module’s tools, and read error messages. They also discover that a program reports on whatever computer it actually runs on.\nExpectations: A1.1, A2.1, A2.2, A3.1, A4.1, A4.2, A4.3, A4.4, C1.1, C1.4, C2.1, C3.1, C3.3, C3.4, C3.5 (across the whole module)",
     "crumbs": [
       "Module 1 overview"
     ]
@@ -1977,7 +2153,7 @@
     "href": "modules/module-01-about-this-computer/index.html#lessons",
     "title": "Module 1: About This Computer",
     "section": "Lessons",
-    "text": "Lessons\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\n8. Inside the Computer: RAM and CPU\nLesson plan\nSlides\nPractice\n\n\n9. Talking Back, and a First Look Ahead\nLesson plan\nSlides\nPractice\n\n\n\n\nPlanned lessons\n\n\n\n\n\n\nPlanned, not yet written. Titles and focus may change as lessons are built.\n\n\n\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n10. Error Clinic\nSyntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4)\nFix five broken report programs\n\n\n11. Review and assignment work period\nA short review game on Lessons 1–10, then class time for the assignment\nFinish the Computer Report Card\n\n\n12. Module 1 test\nCode reading and tracing; a short basics section\n\n\n\n\nEach lesson plan’s Code for This Lesson section has the .py files and notebooks. Students find the same files at the end of each lesson’s section on the Practice page.",
+    "text": "Lessons\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\n8. Inside the Computer: RAM and CPU\nLesson plan\nSlides\nPractice\n\n\n9. Talking Back, and a First Look Ahead\nLesson plan\nSlides\nPractice\n\n\n10. Error Clinic\nLesson plan\nSlides\nPractice\n\n\n\n\nPlanned lessons\n\n\n\n\n\n\nPlanned, not yet written. Titles and focus may change as lessons are built.\n\n\n\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n11. Review and assignment work period\nA short review game on Lessons 1–10, then class time for the assignment\nFinish the Computer Report Card\n\n\n12. Module 1 test\nCode reading and tracing; a short basics section\n\n\n\n\nEach lesson plan’s Code for This Lesson section has the .py files and notebooks. Students find the same files at the end of each lesson’s section on the Practice page.",
     "crumbs": [
       "Module 1 overview"
     ]
@@ -2346,7 +2522,7 @@
     "href": "index.html#lessons",
     "title": "ICS3U: Introduction to Computer Science",
     "section": "Lessons",
-    "text": "Lessons\nModule 1: About This Computer\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\n8. Inside the Computer: RAM and CPU\nLesson plan\nSlides\nPractice\n\n\n9. Talking Back, and a First Look Ahead\nLesson plan\nSlides\nPractice\n\n\nModule assignment\n\n\nComputer Report Card\n\n\n\nMore modules are on the way. See the Scope and Sequence for the full plan of seven modules; each planned module already has an overview page under Modules."
+    "text": "Lessons\nModule 1: About This Computer\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\n8. Inside the Computer: RAM and CPU\nLesson plan\nSlides\nPractice\n\n\n9. Talking Back, and a First Look Ahead\nLesson plan\nSlides\nPractice\n\n\n10. Error Clinic\nLesson plan\nSlides\nPractice\n\n\nModule assignment\n\n\nComputer Report Card\n\n\n\nMore modules are on the way. See the Scope and Sequence for the full plan of seven modules; each planned module already has an overview page under Modules."
   },
   {
     "objectID": "modules/module-01-about-this-computer/assignment.html",
@@ -3548,6 +3724,160 @@
     ]
   },
   {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#review",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#review",
+    "title": "Error Clinic",
+    "section": "Review",
+    "text": "Review\nIn your tracing notebook, without running anything:\n\ncount = input(\"How many? \"), and the user types 5. What is count + count?\nIn an if/elif/else, how many branches run?",
+    "crumbs": [
+      "For the class",
+      "Lesson 10 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#read-it-from-the-bottom-up",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#read-it-from-the-bottom-up",
+    "title": "Error Clinic",
+    "section": "Read it from the bottom up",
+    "text": "Read it from the bottom up\nHow much RAM, in GB? eight\nTraceback (most recent call last):\n  File \"/Users/sam/ics3u/module-01/lesson-10/l10_traceback.py\", line 2, in &lt;module&gt;\n    total = int(ram) * 2\n            ^^^^^^^^\nValueError: invalid literal for int() with base 10: 'eight'\n\nLast line: the kind of error and a message\nAbove it: the code that failed, ^^^ under the exact part\nAbove that: which file, which line\nTop: most recent call last, so start at the bottom\n\n\nOpen with the problem: “Error messages are the most useful thing Python ever says, and the thing beginners skip.” Run l10_traceback.py on the classroom computer, typing eight. TEACHER PROMPT (tracebacks): walk through the four points bottom up. “int() was given something that isn’t a whole number.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 10 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#three-kinds-of-error",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#three-kinds-of-error",
+    "title": "Error Clinic",
+    "section": "Three kinds of error",
+    "text": "Three kinds of error\n\n\n\nKind\nPython notices…\nYou see…\n\n\n\n\nSyntax\nbefore running\nno output; a message at a line\n\n\nRun-time\nwhile running\nsome output, then a traceback\n\n\nLogic\nnever\nit finishes, but the output is wrong\n\n\n\n\nStudents have met all three. Syntax: the apostrophe (L3), Lesson 7’s last-line error. Run-time: AttributeError (L2), TypeError (L5), FileNotFoundError (L6). Logic: the Windows path (L3), missing f (L4), 44 threads (L9).",
+    "crumbs": [
+      "For the class",
+      "Lesson 10 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#when-the-error-is-in-pythons-code",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#when-the-error-is-in-pythons-code",
+    "title": "Error Clinic",
+    "section": "When the error is in Python’s code",
+    "text": "When the error is in Python’s code\nimport os\n\nyear = 2026\nfolder = os.path.join(\"ics3u\", \"backups\", year)\nprint(folder)\n  File \"/Users/sam/ics3u/module-01/lesson-10/l10_library_error.py\", line 4, in &lt;module&gt;\n  File \"&lt;frozen posixpath&gt;\", line 90, in join\n  File \"&lt;frozen genericpath&gt;\", line 152, in _check_arg_types\nTypeError: join() argument must be str, bytes, or os.PathLike object, not 'int'\n\nAsk: which files did you write? Which belong to Python? Which line was the real cause? “When a traceback goes into Python’s own files, the bug is almost never in Python. Work up from the bottom to the first file that’s yours.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 10 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#the-clinic-the-routine",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#the-clinic-the-routine",
+    "title": "Error Clinic",
+    "section": "The clinic: the routine",
+    "text": "The clinic: the routine\n\nPredict what it should do\nRun it\nClassify: syntax, run-time, or logic?\nLocate: which line?\nExplain the message (or expected vs. actual)\nFix, and run again\n\n\nTEACHER PROMPT (debugging routine): “Doctors don’t guess; they examine, then diagnose, then treat. Don’t change anything until you can say what kind of error it is and which line caused it. Random changes make new bugs.” Pairs, 20 minutes for five patients.",
+    "crumbs": [
+      "For the class",
+      "Lesson 10 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#patient-1",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#patient-1",
+    "title": "Error Clinic",
+    "section": "Patient 1",
+    "text": "Patient 1\nimport platform\n\ncpu = platform.machine()\nprint(\"CPU:\", Cpu)",
+    "crumbs": [
+      "For the class",
+      "Lesson 10 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#patient-2",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#patient-2",
+    "title": "Error Clinic",
+    "section": "Patient 2",
+    "text": "Patient 2\nimport platform\n\nsystem = platform.system()\nif system == \"Windows\"\n    print(\"This is a Windows computer.\")\nprint(\"Checked\")",
+    "crumbs": [
+      "For the class",
+      "Lesson 10 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#patient-3",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#patient-3",
+    "title": "Error Clinic",
+    "section": "Patient 3",
+    "text": "Patient 3\nram_text = \"8 GB\"\nram = int(ram_text)\nprint(\"Doubled:\", ram * 2, \"GB\")",
+    "crumbs": [
+      "For the class",
+      "Lesson 10 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#patient-4",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#patient-4",
+    "title": "Error Clinic",
+    "section": "Patient 4",
+    "text": "Patient 4\nstorage_gb = 512\nstorage_mb = storage_gb / 1000\nprint(\"Storage:\", storage_mb, \"MB\")\n\nNo error. How did you know it was broken? Only by predicting first: 512 GB is about 512,000 MB, not 0.512.",
+    "crumbs": [
+      "For the class",
+      "Lesson 10 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#patient-5",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#patient-5",
+    "title": "Error Clinic",
+    "section": "Patient 5",
+    "text": "Patient 5\nimport platform\n\nprint(\"Checking the system...\")\nprint(\"System:\", platform.sytem())",
+    "crumbs": [
+      "For the class",
+      "Lesson 10 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#modify-bug-swap",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#modify-bug-swap",
+    "title": "Error Clinic",
+    "section": "Modify: bug swap",
+    "text": "Modify: bug swap\n\nCopy one of your working programs to bug_swap.py\nAdd one bug, of a kind you choose\nSwap computers; your partner uses the routine to find and fix it\nDid they classify it correctly?",
+    "crumbs": [
+      "For the class",
+      "Lesson 10 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#make-error-field-guide",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#make-error-field-guide",
+    "title": "Error Clinic",
+    "section": "Make: error field guide",
+    "text": "Make: error field guide\nics3u/toolkit/error_guide.txt, for every error you’ve met:\n\nname, kind, an example message, what it usually means, how to fix it\nSyntaxError, IndentationError, NameError, AttributeError, TypeError, ValueError, FileNotFoundError, ZeroDivisionError\nand how to catch logic errors",
+    "crumbs": [
+      "For the class",
+      "Lesson 10 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#exit-ticket",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#exit-ticket",
+    "title": "Error Clinic",
+    "section": "Exit ticket",
+    "text": "Exit ticket\nspeed = \"3.2\"\ncores = 4\nprint(\"Total GHz:\", speed * cores)\nprint(\"Per core:\", speed / cores)\n\nWhich line stops the program? What kind of error?\nLine 3 doesn’t crash. What does it print? What kind of error is that?\nFix it",
+    "crumbs": [
+      "For the class",
+      "Lesson 10 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#after-class",
+    "href": "modules/module-01-about-this-computer/lesson-10-error-clinic-slides.html#after-class",
+    "title": "Error Clinic",
+    "section": "After class",
+    "text": "After class\n\nDo the Lesson 10 practice: read and predict first, then run\nFinish error_guide.txt\nToday’s programs are on the practice page: download the .py files, or open them as notebooks in Callysto or Colab",
+    "crumbs": [
+      "For the class",
+      "Lesson 10 slides"
+    ]
+  },
+  {
     "objectID": "modules/module-01-about-this-computer/practice.html",
     "href": "modules/module-01-about-this-computer/practice.html",
     "title": "Module 1 Practice",
@@ -3652,6 +3982,17 @@
     "title": "Module 1 Practice",
     "section": "After Lesson 9: Talking Back, and a First Look Ahead",
     "text": "After Lesson 9: Talking Back, and a First Look Ahead\n\nRead and predict\nRead this program without running it. In your tracing notebook, write the exact output. Then type your prediction and press Step.\n\nHow many values are in the list?\nHow many times does line 3 run? What does size hold each time?\nDoes line 4 run once, or once for every size?\n\nsizes = [4, 8, 16]\nfor size in sizes:\n    print(size, \"GB doubled is\", size * 2, \"GB\")\nprint(\"Checked\", len(sizes), \"sizes\")\n\n\nSpot the mistake\nPredict what will happen, then press Step.\n\nDoes any line run? What kind of error is it?\nWhat is the message telling you to do? Fix it on your classroom computer.\n\nsystem = \"Windows\"\nif system == \"Windows\":\nprint(\"Hello, Windows\")\n\n\nModify\nPredict the output first. Then make each change, predict again, and run it.\n\nChange cores to 8. Which message prints?\nAdd an elif cores &gt;= 4: branch that prints Good for most programs, between the if and the else.\nTry cores = 4, 6, and 2. Which branch runs each time?\n\n\n\n\n\n\n\n\n\nMake\nEach browser tab uses about 150 MB of RAM. On your classroom computer, write tab_check.py in ics3u/module-01/lesson-09/ that asks how many tabs the user has open, then prints roughly how much RAM they use, in megabytes and in gigabytes (1 GB = 1000 MB), with the gigabytes to one decimal place (:.1f).\n\n\nCode files\nLesson 9’s programs, including the ones above. Download a .py file, or open the notebook in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nFor facts\nl09_for_facts.py\nView or download\nCallysto | Colab\n\n\nGreeter\nl09_greeter.py\nView or download\nCallysto | Colab\n\n\nIf system\nl09_if_system.py\nView or download\nCallysto | Colab\n\n\nMistake: input\nl09_mistake_input.py\nView or download\nCallysto | Colab\n\n\nPractice mistake\nl09_practice_mistake.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl09_practice_read.py\nView or download\nCallysto | Colab\n\n\nRam upgrade\nl09_ram_upgrade.py\nView or download\nCallysto | Colab",
+    "crumbs": [
+      "For students",
+      "Practice"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/practice.html#after-lesson-10-error-clinic",
+    "href": "modules/module-01-about-this-computer/practice.html#after-lesson-10-error-clinic",
+    "title": "Module 1 Practice",
+    "section": "After Lesson 10: Error Clinic",
+    "text": "After Lesson 10: Error Clinic\n\nRead and predict\nRead this program without running it. In your tracing notebook, write the exact output. Then type your prediction and press Step.\n\nHow many lines print before the program stops?\nLine 4 works but line 5 doesn’t. What’s the difference?\nWhat kind of error is it, and what will the message say?\n\ncpu = \"arm64\"\ncores = 8\nprint(\"CPU: \" + cpu)\nprint(\"Cores: \" + str(cores))\nprint(\"Threads: \" + cores * 2)\nprint(\"Done\")\n\n\nSpot the mistake\nPredict what will happen, then press Step.\n\nDoes any line run? What kind of error is it?\nWhat does unexpected indent mean? Fix it two ways: by removing the indent, or by making line 3 belong to an if.\n\nbattery = 80\nprint(\"Battery:\", battery, \"%\")\n    print(\"Charging\")\n\n\nModify\nThis program has three bugs: one syntax, one run-time, one logic. Run it, fix the error Python reports, and run it again until it finishes. Then find the logic error by predicting what the output should be.\n\n\n\n\n\n\n\n\nMake\nRun three programs you wrote this module, each with one deliberate mistake of a different kind, on your classroom computer. For each, copy the full traceback (or the wrong output) into traceback_notes.txt in ics3u/module-01/lesson-10/, and under it write the five routine steps: kind, line, what the message means, the fix, and how you checked.\n\n\nCode files\nLesson 10’s programs, including the ones above. Download a .py file, or open the notebook in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nBroken 1\nl10_broken_1.py\nView or download\nCallysto | Colab\n\n\nBroken 2\nl10_broken_2.py\nView or download\nCallysto | Colab\n\n\nBroken 3\nl10_broken_3.py\nView or download\nCallysto | Colab\n\n\nBroken 4\nl10_broken_4.py\nView or download\nCallysto | Colab\n\n\nBroken 5\nl10_broken_5.py\nView or download\nCallysto | Colab\n\n\nLibrary error\nl10_library_error.py\nView or download\nCallysto | Colab\n\n\nPractice mistake\nl10_practice_mistake.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl10_practice_read.py\nView or download\nCallysto | Colab\n\n\nTraceback\nl10_traceback.py\nView or download\nCallysto | Colab",
     "crumbs": [
       "For students",
       "Practice"

@@ -11,7 +11,7 @@ expectations: [A1.1, A2.1, A2.2, A4.4]
 :::
 
 ::: {.callout-note appearance="simple"}
-**Time:** 75 minutes · **Expectations:** A1.1, A2.1, A2.2, A4.4 · **Slides:** [Lesson 9 slides](lesson-09-talking-back-slides.qmd) (press **S** for speaker notes) · [Module 1 overview](index.qmd) · **Previous:** [Lesson 8](lesson-08-inside-the-computer.qmd)
+**Time:** 75 minutes · **Expectations:** A1.1, A2.1, A2.2, A4.4 · **Slides:** [Lesson 9 slides](lesson-09-talking-back-slides.qmd) (press **S** for speaker notes) · [Module 1 overview](index.qmd) · **Previous:** [Lesson 8](lesson-08-inside-the-computer.qmd) · **Next:** [Lesson 10](lesson-10-error-clinic.qmd)
 :::
 
 ## At a Glance
@@ -181,7 +181,7 @@ Every program in this lesson, ready to run outside the browser. Download the `.p
 
 ## Previous and Next {.unlisted}
 
-[← Lesson 8](lesson-08-inside-the-computer.qmd) · [Lesson 9 slides](lesson-09-talking-back-slides.qmd) · [Module 1 overview](index.qmd) · [Practice →](practice.qmd#after-lesson-9-talking-back-and-a-first-look-ahead)
+[← Lesson 8](lesson-08-inside-the-computer.qmd) · [Lesson 9 slides](lesson-09-talking-back-slides.qmd) · [Module 1 overview](index.qmd) · [Practice →](practice.qmd#after-lesson-9-talking-back-and-a-first-look-ahead) · [Lesson 10 →](lesson-10-error-clinic.qmd)
 
 ## Feedback {.unlisted}
 
