@@ -226,3 +226,33 @@ print(os.path.basename(os.path.dirname(sys.executable)))
 ```
 
 Answers vary, e.g. `/usr/local/bin/python3` and `bin`, or `C:\Users\sam\AppData\Local\Programs\Python\Python313\python.exe` and `Python313`. Editors sometimes use a different Python from the terminal (Thonny bundles its own); that's the interesting finding.
+
+## After Lesson 7
+
+### Read and predict (`l07_practice_read.py`)
+
+```text
+Checking
+Speed: 3.2
+```
+
+then `NameError: name 'cores' is not defined` on line 4.
+
+1. Two.
+2. Run-time: the code is written correctly (no syntax mistake); it only fails when line 4 runs and `cores` doesn't exist.
+3. Running the bytecode. Compiling checks the grammar, not whether names exist.
+
+### Spot the mistake (`l07_practice_mistake.py`)
+
+1. It's a syntax error, so Python stops while compiling, before running any line.
+2. `SyntaxError: unterminated string literal` on line 3. Fix: `print("RAM: 8 GB")`.
+
+### Modify
+
+1. `LOAD_NAME price`, `LOAD_CONST 3`, `BINARY_OP *`, `STORE_NAME total`.
+2. `BINARY_OP` shows `+` (0) instead of `*` (5).
+3. `LOAD_NAME print`, `LOAD_NAME total`, a `CALL`, and `POP_TOP` (exact names vary by version).
+
+### Make (`explain_python.py`)
+
+Look for the correct order: source code is compiled to bytecode (syntax checked here), the interpreter carries out the bytecode using machine code the CPU runs, and the operating system starts the interpreter and gives it memory, files, and screen output.

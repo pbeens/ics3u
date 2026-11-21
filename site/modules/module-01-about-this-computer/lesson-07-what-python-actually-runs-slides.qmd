@@ -1,0 +1,131 @@
+---
+title: "What Python Actually Runs"
+subtitle: "Module 1, Lesson 7"
+format:
+  live-revealjs:
+    theme: default
+    slide-number: true
+    code-line-numbers: true
+    toc: false
+    footer: "[← Lesson 7 plan](lesson-07-what-python-actually-runs.html) · [Module 1](index.html)"
+engine: markdown
+---
+
+## Review
+
+In your tracing notebook, without running anything:
+
+1. `os.getcwd()` prints `/Users/sam/ics3u`. What does `os.path.basename(os.getcwd())` print?
+2. Why did `sample-folder` appear inside `ics3u`?
+
+## The CPU can't read text
+
+- Your `.py` file: letters, brackets, quotation marks
+- The CPU: only numbers, its own **machine code** (`arm64`, `x86_64`)
+- So how does `print()` ever happen?
+
+::: {.notes}
+Open with the problem: "In Lesson 1, arm64 and x86_64 were names for the instructions a CPU understands. Your .py file is text. The CPU can't read text. So how does print() ever happen?"
+:::
+
+## Two ways to translate
+
+- **Compiler:** translates the whole program *ahead of time* into an executable the CPU runs directly
+- **Interpreter:** reads the program and carries it out *as it goes*
+- **Python:** compiles your file to **bytecode**, then interprets the bytecode
+
+```text
+report.py ─► interpreter ─► bytecode ─► one by one ─► CPU
+```
+
+::: {.notes}
+TEACHER PROMPT (first use): "Source code is what we write, for people. Machine code is what the CPU runs: numbers, each a tiny instruction. Every CPU family has its own. A compiler translates the whole program ahead of time into an executable, like translating a whole book before it's printed; Chrome and Word arrive that way. An interpreter carries the program out as it goes, like an interpreter at a meeting. Python does both: it compiles the whole file into bytecode, simpler instructions for Python itself, then interprets them one at a time. The interpreter, python3 or python.exe, is a compiled program: machine code."
+:::
+
+## Predict: A
+
+{{< stepper file="examples/l07_runtime_error.py" >}}
+
+::: {.notes}
+Students predict both programs before stepping either. How many lines will each print? Which has a syntax error, which a run-time error?
+:::
+
+## Predict: B
+
+{{< stepper file="examples/l07_syntax_error.py" >}}
+
+::: {.notes}
+"Program B's mistake is on the last line, and nothing ran, not even line 1. So Python reads the whole file before running any of it: that's the compiling step, and the syntax error is found then. Program A compiled fine; dividing by zero only fails when line 3 runs. Two kinds of error, two steps."
+:::
+
+## Looking at bytecode
+
+```{pyodide}
+import dis
+
+source = "cores = 8\ndoubled = cores * 2\nprint(doubled)"
+dis.dis(source)
+```
+
+::: {.notes}
+Ask: which instructions came from line 2 (left-hand numbers)? Find the multiplication. Which instruction saves the answer in doubled? LOAD = fetch a value; STORE = save it under a name. "Still not machine code: Python's own instruction set. The interpreter turns each into machine code as it runs. Versions differ slightly; the ideas don't."
+:::
+
+## Who built your Python?
+
+{{< stepper file="examples/l07_who_built_python.py" >}}
+
+::: {.notes}
+Run it here, then on the classroom computer. Windows: usually MSC (Microsoft's compiler). macOS: Clang. Linux: GCC. The web page: Emscripten's Clang, compiling to WebAssembly. If a compiler made the interpreter, what was it written in? CPython is written in C.
+:::
+
+## Application, language, or OS?
+
+Windows · Python · Chrome · Thonny · macOS · Minecraft · JavaScript · Linux · Microsoft Word · Scratch · Android · VS Code · Java · iOS · `python.exe`
+
+::: {.notes}
+Pairs sort into three columns. Then the tricky ones: "Thonny and VS Code are applications for writing a language. Python is the language, a set of rules; python.exe is the application that runs it. The operating system runs underneath everything: it starts programs, gives them memory and files, and shares the CPU. When you ran os.getcwd(), Python asked the operating system." Scratch is a language and an application (its editor).
+:::
+
+## Modify
+
+1. Move the division to line 1. How many lines print?
+2. Then fix Program B
+3. In the `dis` box, add `print(doubled + cores)`. Predict its instructions
+
+```{pyodide}
+print("Line 1 runs")
+print("Line 2 runs")
+print("Line 3 runs", 10 / 0)
+print("Line 4 runs")
+```
+
+## Make: What runs this?
+
+`what_runs_this.py` in `ics3u/module-01/lesson-07/`: a labelled f-string report of every layer
+
+- CPU type
+- Operating system and version
+- Interpreter: `sys.executable`, implementation, version
+- The compiler that built it: `platform.python_compiler()`
+
+A comment on each line: which layer is it?
+
+## Exit ticket
+
+1. Write the exact output. Syntax error or run-time error?
+
+```python
+print("Start")
+cores = 8
+print("Cores:", cores / 0)
+print("Done")
+```
+
+2. One sentence each: what does a compiler do? An interpreter?
+
+## After class
+
+- Do the [Lesson 7 practice](practice.qmd#after-lesson-7-what-python-actually-runs): read and predict first, then run
+- Finish `what_runs_this.py`
+- Today's programs are on the practice page: download the `.py` files, or open them as notebooks in Callysto or Colab

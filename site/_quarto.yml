@@ -81,6 +81,8 @@ website:
               text: "Lesson 5 plan"
             - href: modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.qmd
               text: "Lesson 6 plan"
+            - href: modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.qmd
+              text: "Lesson 7 plan"
         - section: "For the class"
           contents:
             - href: modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.qmd
@@ -95,6 +97,8 @@ website:
               text: "Lesson 5 slides"
             - href: modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.qmd
               text: "Lesson 6 slides"
+            - href: modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.qmd
+              text: "Lesson 7 slides"
         - section: "For students"
           contents:
             - href: course-folder.qmd

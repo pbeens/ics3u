@@ -298,6 +298,52 @@ Lesson 6's programs, including the ones above. Download a `.py` file, or open th
 
 {{< lesson-code lesson="06" hide="exit_ticket" >}}
 
+## After Lesson 7: What Python Actually Runs
+
+### Read and predict
+
+Read this program **without running it**. In your tracing notebook, write the exact output. Then type your prediction and press **Step**.
+
+1. How many lines print before the program stops?
+2. Is the problem a syntax error or a run-time error? How can you tell before running it?
+3. Which step would catch it: compiling to bytecode, or running the bytecode?
+
+{{< stepper file="examples/l07_practice_read.py" >}}
+
+### Spot the mistake
+
+Predict what will happen, then press **Step**.
+
+1. The mistake is on line 3. Why don't lines 1 and 2 print?
+2. What is the error, and how do you fix it?
+
+{{< stepper file="examples/l07_practice_mistake.py" >}}
+
+### Modify
+
+Predict each change, then run it.
+
+1. Which instructions come from line 2? Find the multiplication.
+2. Change `* 3` to `+ 3`. What changes in the bytecode?
+3. Add a third line, `print(total)`. Which new instructions appear?
+
+```{pyodide}
+import dis
+
+source = "price = 19.99\ntotal = price * 3"
+dis.dis(source)
+```
+
+### Make
+
+On your classroom computer, write `explain_python.py` in `ics3u/module-01/lesson-07/`. At the top, in a comment, explain in your own words what happens between pressing **Run** and seeing output. Use all of these words: *source code*, *compiler* or *compiling*, *bytecode*, *interpreter*, *machine code*, *CPU*, *operating system*. Below it, write a two-line program, and paste its `dis` output as a comment at the bottom.
+
+### Code files
+
+Lesson 7's programs, including the ones above. Download a `.py` file, or open the notebook in Callysto or Colab.
+
+{{< lesson-code lesson="07" hide="exit_ticket" >}}
+
 ## Next
 
 When you've finished the Lesson 1 and Lesson 2 practice, start the [Module 1 Assignment](assignment.qmd). After Lesson 3, finish the [System Banner](quick-build-system-banner.qmd); after Lesson 5, the [Parts Receipt](quick-build-parts-receipt.qmd).

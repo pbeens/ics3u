@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Lesson 7: What Python Actually Runs – ICS3U</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f1b8ffe018e27b3e49848c173bc17ec4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-4d63793e1695400d669a5382393e356d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-f1b8ffe018e27b3e49848c173bc17ec4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/stepper-1.0.0/stepper.js"></script>
+<link href="../../site_libs/quarto-contrib/stepper-1.0.0/stepper.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script type="module" src="../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">ICS3U</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-getting-started" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Getting Started</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-getting-started">    
+        <li>
+    <a class="dropdown-item" href="../../before-you-begin.html">
+ <span class="dropdown-text">Before You Begin</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../how-a-lesson-works.html">
+ <span class="dropdown-text">How a Lesson Works</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../scope-and-sequence.html">
+ <span class="dropdown-text">Scope and Sequence</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">For students</li>
+        <li>
+    <a class="dropdown-item" href="../../course-folder.html">
+ <span class="dropdown-text">Set Up Your Course Folder</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-modules" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Modules</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-modules">    
+        <li>
+    <a class="dropdown-item" href="../../modules/module-01-about-this-computer/index.html">
+ <span class="dropdown-text">1. About This Computer</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-02-spec-checker/index.html">
+ <span class="dropdown-text">2. Spec Checker (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-03-benchmark-lab/index.html">
+ <span class="dropdown-text">3. Benchmark Lab (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-04-passwords-and-secret-messages/index.html">
+ <span class="dropdown-text">4. Passwords and Secret Messages (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-05-on-the-network/index.html">
+ <span class="dropdown-text">5. On the Network (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-06-data-detective/index.html">
+ <span class="dropdown-text">6. Data Detective (planned)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/module-07-software-project/index.html">
+ <span class="dropdown-text">7. Software Development Project (planned)</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../modules/computer-science-in-the-world/index.html">
+ <span class="dropdown-text">Computer Science in the World (planned)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://buymeacoffee.com/pbeens"> 
+<span class="menu-text">☕ Buy me a coffee</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../modules/module-01-about-this-computer/lesson-01-ask-the-computer.html">For teachers</a></li><li class="breadcrumb-item"><a href="../../modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html">Lesson 7 plan</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 1 overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">For teachers</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/lesson-01-ask-the-computer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lesson 1 plan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/lesson-02-exploring-platform.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lesson 2 plan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/lesson-03-getting-output-right.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lesson 3 plan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/lesson-04-better-reports-with-f-strings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lesson 4 plan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/lesson-05-values-and-types.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lesson 5 plan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lesson 6 plan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Lesson 7 plan</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">For the class</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lesson 1 slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lesson 2 slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/lesson-03-getting-output-right-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lesson 3 slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/lesson-04-better-reports-with-f-strings-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lesson 4 slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/lesson-05-values-and-types-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lesson 5 slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lesson 6 slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lesson 7 slides</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">For students</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../course-folder.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set Up Your Course Folder</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/practice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practice</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/quick-build-system-banner.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quick Build: System Banner</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/quick-build-parts-receipt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quick Build: Parts Receipt</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/module-01-about-this-computer/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignment: Computer Report Card</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#at-a-glance" id="toc-at-a-glance" class="nav-link active" data-scroll-target="#at-a-glance">At a Glance</a></li>
+  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link" data-scroll-target="#learning-goals">Learning Goals</a></li>
+  <li><a href="#success-criteria" id="toc-success-criteria" class="nav-link" data-scroll-target="#success-criteria">Success Criteria</a></li>
+  <li><a href="#review-5-min" id="toc-review-5-min" class="nav-link" data-scroll-target="#review-5-min">Review (5 min)</a></li>
+  <li><a href="#teach-source-code-and-machine-code-15-min" id="toc-teach-source-code-and-machine-code-15-min" class="nav-link" data-scroll-target="#teach-source-code-and-machine-code-15-min">Teach: Source Code and Machine Code (15 min)</a></li>
+  <li><a href="#predict-then-step-10-min" id="toc-predict-then-step-10-min" class="nav-link" data-scroll-target="#predict-then-step-10-min">Predict, Then Step (10 min)</a></li>
+  <li><a href="#investigate-20-min" id="toc-investigate-20-min" class="nav-link" data-scroll-target="#investigate-20-min">Investigate (20 min)</a>
+  <ul class="collapse">
+  <li><a href="#looking-at-bytecode-8-min" id="toc-looking-at-bytecode-8-min" class="nav-link" data-scroll-target="#looking-at-bytecode-8-min">Looking at bytecode (8 min)</a></li>
+  <li><a href="#who-built-your-python-5-min" id="toc-who-built-your-python-5-min" class="nav-link" data-scroll-target="#who-built-your-python-5-min">Who built your Python? (5 min)</a></li>
+  <li><a href="#application-language-or-operating-system-7-min" id="toc-application-language-or-operating-system-7-min" class="nav-link" data-scroll-target="#application-language-or-operating-system-7-min">Application, language, or operating system? (7 min)</a></li>
+  </ul></li>
+  <li><a href="#modify-10-min" id="toc-modify-10-min" class="nav-link" data-scroll-target="#modify-10-min">Modify (10 min)</a></li>
+  <li><a href="#make-what-runs-this-10-min" id="toc-make-what-runs-this-10-min" class="nav-link" data-scroll-target="#make-what-runs-this-10-min">Make: What Runs This? (10 min)</a></li>
+  <li><a href="#check-exit-ticket-5-min" id="toc-check-exit-ticket-5-min" class="nav-link" data-scroll-target="#check-exit-ticket-5-min">Check: Exit Ticket (5 min)</a></li>
+  <li><a href="#after-the-lesson" id="toc-after-the-lesson" class="nav-link" data-scroll-target="#after-the-lesson">After the Lesson</a></li>
+  <li><a href="#code-for-this-lesson" id="toc-code-for-this-lesson" class="nav-link" data-scroll-target="#code-for-this-lesson">Code for This Lesson</a></li>
+  <li><a href="#teacher-notes" id="toc-teacher-notes" class="nav-link" data-scroll-target="#teacher-notes">Teacher Notes</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/pbeens/ics3u/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../modules/module-01-about-this-computer/lesson-01-ask-the-computer.html">For teachers</a></li><li class="breadcrumb-item"><a href="../../modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html">Lesson 7 plan</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Lesson 7: What Python Actually Runs</h1>
+<p class="subtitle lead">Module 1 — About This Computer</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-important no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>For teachers.</strong> This is the lesson plan: use it to prepare and as your script in class. Students work from the <strong>slides</strong>, the <strong>code files and notebooks</strong>, and the <strong>practice</strong> page. The step-through boxes and runnable code are here so you can try every activity first. <a href="../../how-a-lesson-works.html">How a lesson works →</a></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Time:</strong> 75 minutes · <strong>Expectations:</strong> A4.3, C3.3, C3.4, C3.5 · <strong>Slides:</strong> <a href="../../modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html">Lesson 7 slides</a> (press <strong>S</strong> for speaker notes) · <a href="../../modules/module-01-about-this-computer/index.html">Module 1 overview</a> · <strong>Previous:</strong> <a href="../../modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html">Lesson 6</a></p>
+</div>
+</div>
+</div>
+<section id="at-a-glance" class="level2">
+<h2 class="anchored" data-anchor-id="at-a-glance">At a Glance</h2>
+<ul>
+<li><strong>Big idea:</strong> the CPU only understands machine code. A <code>.py</code> file is source code, text for people. The Python interpreter, itself a compiled program, reads the whole file, turns it into simpler instructions (bytecode), then carries them out one at a time.</li>
+<li><strong>Students will:</strong> use the two kinds of errors they already know as evidence for how Python works, look at real bytecode, find out which compiler built their Python, and sort software into applications, languages, and operating systems.</li>
+<li><strong>Students make:</strong> <code>what_runs_this.py</code>, a report on every layer under their program: CPU, operating system, interpreter, and the compiler that built it.</li>
+<li><strong>Prepare:</strong> run each <code>l07_</code> program, and <code>l07_who_built_python.py</code> on a student computer as well as yours (Windows and macOS give different answers). Print or display the sorting cards in Investigate. Open the slides a few minutes before class so Python finishes loading.</li>
+<li><strong>After class:</strong> <a href="../../modules/module-01-about-this-computer/practice.html#after-lesson-7-what-python-actually-runs">Lesson 7 practice</a>.</li>
+<li><strong>Where it fits:</strong> Lesson 1 said a CPU type names “the instructions it understands”. Today we see what that means. Lesson 8 follows a program into RAM and the CPU.</li>
+</ul>
+</section>
+<section id="learning-goals" class="level2">
+<h2 class="anchored" data-anchor-id="learning-goals">Learning Goals</h2>
+<ul>
+<li>Explain the difference between source code and machine code.</li>
+<li>Explain the difference between a compiler and an interpreter, and where Python fits.</li>
+<li>Explain why a syntax error stops a program before it starts, but a run-time error stops it partway.</li>
+<li>Explain the different jobs of applications, programming languages, and operating systems.</li>
+</ul>
+</section>
+<section id="success-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="success-criteria">Success Criteria</h2>
+<p>Students can say:</p>
+<ul>
+<li>I can explain why the CPU can’t run my <code>.py</code> file directly.</li>
+<li>I can use the two kinds of error as evidence that Python reads the whole file first.</li>
+<li>I can sort a piece of software into application, language, or operating system, and explain my choice.</li>
+</ul>
+</section>
+<section id="review-5-min" class="level2">
+<h2 class="anchored" data-anchor-id="review-5-min">Review (5 min)</h2>
+<p>Without running anything, answer in tracing notebooks:</p>
+<ol type="1">
+<li><code>os.getcwd()</code> prints <code>/Users/sam/ics3u</code>. What does <code>os.path.basename(os.getcwd())</code> print?</li>
+<li>Why did <code>sample-folder</code> appear inside <code>ics3u</code> last class?</li>
+</ol>
+</section>
+<section id="teach-source-code-and-machine-code-15-min" class="level2">
+<h2 class="anchored" data-anchor-id="teach-source-code-and-machine-code-15-min">Teach: Source Code and Machine Code (15 min)</h2>
+<p>Open with the problem: “In Lesson 1, <code>arm64</code> and <code>x86_64</code> were names for the instructions a CPU understands. Your <code>.py</code> file is text: letters, brackets, quotation marks. The CPU can’t read text. So how does <code>print()</code> ever happen?”</p>
+<p>Draw this on the board, building it left to right as you talk:</p>
+<pre class="text"><code>report.py  ──►  Python interpreter  ──►  bytecode  ──►  carried out one by one  ──►  CPU
+(source code,   (python3 or py: a       (simpler        (by the interpreter,        (runs machine code:
+ for people)     machine-code program)   instructions)   in machine code)            numbers)</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled" title="Teacher prompt: source code, machine code, compilers, interpreters (first use)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Teacher prompt: source code, machine code, compilers, interpreters (first use)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>“<strong>Source code</strong> is what we write: text, for people to read. <strong>Machine code</strong> is what the CPU runs: numbers, each one a tiny instruction like ‘add these two’ or ‘copy this here’. Every CPU family has its own machine code. That’s what <code>arm64</code> and <code>x86_64</code> name.”</li>
+<li>“Something has to turn source code into machine code. There are two ways.”</li>
+<li>“A <strong>compiler</strong> translates the whole program ahead of time and saves the result as a new file, an <em>executable</em>, that the CPU can run directly. Apps like Chrome and Microsoft Word arrive as compiled machine code. Like translating a whole book before it’s printed.”</li>
+<li>“An <strong>interpreter</strong> reads the program and carries it out as it goes. Like an interpreter at a meeting, translating as people speak.”</li>
+<li>“Python does a bit of both. It first compiles your whole file into <strong>bytecode</strong>, simpler instructions for Python itself, not for the CPU. Then it interprets the bytecode, one instruction at a time. The interpreter, <code>python3</code> or <code>python.exe</code>, is a compiled program: it’s machine code.”</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="predict-then-step-10-min" class="level2">
+<h2 class="anchored" data-anchor-id="predict-then-step-10-min">Predict, Then Step (10 min)</h2>
+<p>Two programs, four lines and three lines. Read each <strong>without running it</strong>, then answer in tracing notebooks:</p>
+<ol type="1">
+<li>How many lines of output will each print?</li>
+<li>One has a syntax error and one has a run-time error. Which is which?</li>
+</ol>
+<p><strong>Program A</strong></p>
+<div class="stepper"><pre class="stepper-source" hidden="">print("Line 1 runs")
+print("Line 2 runs")
+print("Line 3 runs", 10 / 0)
+print("Line 4 runs")</pre></div>
+<p><strong>Program B</strong></p>
+<div class="stepper"><pre class="stepper-source" hidden="">print("Line 1 runs")
+print("Line 2 runs")
+print("Line 3 runs"</pre></div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Teacher prompt">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Teacher prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“Program B’s mistake is on the <em>last</em> line, and still nothing ran. Not even line 1. So Python must read the <em>whole</em> file before running any of it. That’s the compiling step: the syntax error is found while turning the file into bytecode. Program A compiled fine; dividing by zero only fails when line 3 actually runs. Two kinds of error, two steps.”</p>
+</div>
+</div>
+</section>
+<section id="investigate-20-min" class="level2">
+<h2 class="anchored" data-anchor-id="investigate-20-min">Investigate (20 min)</h2>
+<section id="looking-at-bytecode-8-min" class="level3">
+<h3 class="anchored" data-anchor-id="looking-at-bytecode-8-min">Looking at bytecode (8 min)</h3>
+<p><code>dis</code> (short for <em>disassemble</em>) shows the bytecode Python makes from source code. Run it, then match each group of instructions to a line of the source.</p>
+<div>
+<div id="pyodide-1" class="exercise-cell">
+
+</div>
+<script type="pyodide-1-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IGRpc1xuXG5zb3VyY2UgPSBcImNvcmVzID0gOFxcbmRvdWJsZWQgPSBjb3JlcyAqIDJcXG5wcmludChkb3VibGVkKVwiXG5kaXMuZGlzKHNvdXJjZSkifQ==
+</script>
+</div>
+<ol type="1">
+<li>The numbers on the far left are line numbers. Which instructions came from line 2?</li>
+<li>Find the multiplication. What is it called?</li>
+<li><code>LOAD</code> means “fetch a value”; <code>STORE</code> means “save a value under a name”. Which instruction saves the answer in <code>doubled</code>?</li>
+<li>Change the source to <code>cores = 8\nprint(cores + 1)</code> and run it again. What changed?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Teacher prompt">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Teacher prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“This is still not machine code. It’s Python’s own instruction set. The interpreter turns each of these into machine code for <em>this</em> CPU as it runs. Different versions of Python make slightly different bytecode, so your list may not match your neighbour’s exactly. The ideas don’t change.”</p>
+</div>
+</div>
+</section>
+<section id="who-built-your-python-5-min" class="level3">
+<h3 class="anchored" data-anchor-id="who-built-your-python-5-min">Who built your Python? (5 min)</h3>
+<div class="stepper"><pre class="stepper-source" hidden="">import platform
+
+print("Operating system:", platform.system())
+print("Language:", platform.python_implementation(), platform.python_version())
+print("Python was compiled by:", platform.python_compiler())</pre></div>
+<p>Run it here, then on the classroom computer.</p>
+<ol type="1">
+<li>What compiler built the Python on this web page? On the classroom computer?</li>
+<li>If the interpreter was made by a compiler, what language do you think it was written in? (CPython is written in C.)</li>
+</ol>
+</section>
+<section id="application-language-or-operating-system-7-min" class="level3">
+<h3 class="anchored" data-anchor-id="application-language-or-operating-system-7-min">Application, language, or operating system? (7 min)</h3>
+<p>In pairs, sort these into three columns in tracing notebooks: <strong>application</strong> (a program people use to get something done), <strong>programming language</strong> (a way of writing instructions), <strong>operating system</strong> (the program that runs the computer and shares it among the other programs).</p>
+<blockquote class="blockquote">
+<p>Windows · Python · Chrome · Thonny · macOS · Minecraft · JavaScript · Linux · Microsoft Word · Scratch · Android · VS Code · Java · iOS · <code>python.exe</code> (or <code>python3</code>)</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Teacher prompt">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Teacher prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>After sorting, ask about the tricky ones. “Thonny and VS Code are <em>applications</em> for writing a language. Python is the <em>language</em>, a set of rules; <code>python.exe</code> is the <em>application</em> that runs it: the interpreter. The operating system sits underneath everything: it starts programs, gives them memory and files, and shares the CPU between them. When you ran <code>os.getcwd()</code> last lesson, Python asked the <em>operating system</em>.”</p>
+</div>
+</div>
+</section>
+</section>
+<section id="modify-10-min" class="level2">
+<h2 class="anchored" data-anchor-id="modify-10-min">Modify (10 min)</h2>
+<ol type="1">
+<li>In Program A, move the division to line 1. Predict, then run. How many lines print now?</li>
+<li>Fix Program B. How many lines print?</li>
+<li>In the <code>dis</code> box, add a fourth line, <code>print(doubled + cores)</code>. Before running, predict which instructions will appear for it.</li>
+</ol>
+<div>
+<div id="pyodide-2" class="exercise-cell">
+
+</div>
+<script type="pyodide-2-contents">
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoicHJpbnQoXCJMaW5lIDEgcnVuc1wiKVxucHJpbnQoXCJMaW5lIDIgcnVuc1wiKVxucHJpbnQoXCJMaW5lIDMgcnVuc1wiLCAxMCAvIDApXG5wcmludChcIkxpbmUgNCBydW5zXCIpIn0=
+</script>
+</div>
+</section>
+<section id="make-what-runs-this-10-min" class="level2">
+<h2 class="anchored" data-anchor-id="make-what-runs-this-10-min">Make: What Runs This? (10 min)</h2>
+<p>On the classroom computer, students write <code>what_runs_this.py</code> in <code>ics3u/module-01/lesson-07/</code>: a labelled report, using f-strings, of every layer under the program:</p>
+<ul>
+<li>the CPU type (<code>platform.machine()</code>),</li>
+<li>the operating system and its version,</li>
+<li>the interpreter’s location (<code>sys.executable</code>, after <code>import sys</code>) and its implementation and version,</li>
+<li>the compiler that built the interpreter (<code>platform.python_compiler()</code>).</li>
+</ul>
+<p>Each line gets a comment saying which layer it is: hardware, operating system, interpreter (an application), or the compiler that made it. Good programs go in the toolkit.</p>
+</section>
+<section id="check-exit-ticket-5-min" class="level2">
+<h2 class="anchored" data-anchor-id="check-exit-ticket-5-min">Check: Exit Ticket (5 min)</h2>
+<ol type="1">
+<li><p>Write the exact output. Then say: syntax error or run-time error?</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Start"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>cores <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Cores:"</span>, cores <span class="op">/</span> <span class="dv">0</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Done"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>In one sentence each: what does a compiler do? What does an interpreter do?</p></li>
+</ol>
+</section>
+<section id="after-the-lesson" class="level2">
+<h2 class="anchored" data-anchor-id="after-the-lesson">After the Lesson</h2>
+<ul>
+<li>Students do the <a href="../../modules/module-01-about-this-computer/practice.html#after-lesson-7-what-python-actually-runs">Lesson 7 practice</a>.</li>
+<li><strong>Suggested hand-in:</strong> <code>what_runs_this.py</code>, with its output pasted as a comment at the bottom.</li>
+<li>Read the exit tickets for the compiler/interpreter sentences. Common slip: “a compiler runs the program”. It translates; something else runs the result.</li>
+</ul>
+</section>
+<section id="code-for-this-lesson" class="level2">
+<h2 class="anchored" data-anchor-id="code-for-this-lesson">Code for This Lesson</h2>
+<p>Every program in this lesson, ready to run outside the browser. Download the <code>.py</code> file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Program</th>
+<th>Python file</th>
+<th>Notebook</th>
+<th>Open notebook in</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bytecode</td>
+<td><a href="examples/l07_bytecode.py" download="l07_bytecode.py"><code>l07_bytecode.py</code></a></td>
+<td><a href="https://github.com/pbeens/ics3u/blob/main/notebooks/01-07-bytecode.ipynb">View or download</a></td>
+<td><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fpbeens%2Fics3u&amp;branch=main&amp;subPath=notebooks/01-07-bytecode.ipynb&amp;depth=1">Callysto</a> | <a href="https://colab.research.google.com/github/pbeens/ics3u/blob/main/notebooks/01-07-bytecode.ipynb">Colab</a></td>
+</tr>
+<tr class="even">
+<td>Exit ticket</td>
+<td><a href="examples/l07_exit_ticket.py" download="l07_exit_ticket.py"><code>l07_exit_ticket.py</code></a></td>
+<td><a href="https://github.com/pbeens/ics3u/blob/main/notebooks/01-07-exit-ticket.ipynb">View or download</a></td>
+<td><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fpbeens%2Fics3u&amp;branch=main&amp;subPath=notebooks/01-07-exit-ticket.ipynb&amp;depth=1">Callysto</a> | <a href="https://colab.research.google.com/github/pbeens/ics3u/blob/main/notebooks/01-07-exit-ticket.ipynb">Colab</a></td>
+</tr>
+<tr class="odd">
+<td>Practice mistake</td>
+<td><a href="examples/l07_practice_mistake.py" download="l07_practice_mistake.py"><code>l07_practice_mistake.py</code></a></td>
+<td><a href="https://github.com/pbeens/ics3u/blob/main/notebooks/01-07-practice-mistake.ipynb">View or download</a></td>
+<td><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fpbeens%2Fics3u&amp;branch=main&amp;subPath=notebooks/01-07-practice-mistake.ipynb&amp;depth=1">Callysto</a> | <a href="https://colab.research.google.com/github/pbeens/ics3u/blob/main/notebooks/01-07-practice-mistake.ipynb">Colab</a></td>
+</tr>
+<tr class="even">
+<td>Practice read</td>
+<td><a href="examples/l07_practice_read.py" download="l07_practice_read.py"><code>l07_practice_read.py</code></a></td>
+<td><a href="https://github.com/pbeens/ics3u/blob/main/notebooks/01-07-practice-read.ipynb">View or download</a></td>
+<td><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fpbeens%2Fics3u&amp;branch=main&amp;subPath=notebooks/01-07-practice-read.ipynb&amp;depth=1">Callysto</a> | <a href="https://colab.research.google.com/github/pbeens/ics3u/blob/main/notebooks/01-07-practice-read.ipynb">Colab</a></td>
+</tr>
+<tr class="odd">
+<td>Runtime error</td>
+<td><a href="examples/l07_runtime_error.py" download="l07_runtime_error.py"><code>l07_runtime_error.py</code></a></td>
+<td><a href="https://github.com/pbeens/ics3u/blob/main/notebooks/01-07-runtime-error.ipynb">View or download</a></td>
+<td><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fpbeens%2Fics3u&amp;branch=main&amp;subPath=notebooks/01-07-runtime-error.ipynb&amp;depth=1">Callysto</a> | <a href="https://colab.research.google.com/github/pbeens/ics3u/blob/main/notebooks/01-07-runtime-error.ipynb">Colab</a></td>
+</tr>
+<tr class="even">
+<td>Syntax error</td>
+<td><a href="examples/l07_syntax_error.py" download="l07_syntax_error.py"><code>l07_syntax_error.py</code></a></td>
+<td><a href="https://github.com/pbeens/ics3u/blob/main/notebooks/01-07-syntax-error.ipynb">View or download</a></td>
+<td><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fpbeens%2Fics3u&amp;branch=main&amp;subPath=notebooks/01-07-syntax-error.ipynb&amp;depth=1">Callysto</a> | <a href="https://colab.research.google.com/github/pbeens/ics3u/blob/main/notebooks/01-07-syntax-error.ipynb">Colab</a></td>
+</tr>
+<tr class="odd">
+<td>Who built python</td>
+<td><a href="examples/l07_who_built_python.py" download="l07_who_built_python.py"><code>l07_who_built_python.py</code></a></td>
+<td><a href="https://github.com/pbeens/ics3u/blob/main/notebooks/01-07-who-built-python.ipynb">View or download</a></td>
+<td><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fpbeens%2Fics3u&amp;branch=main&amp;subPath=notebooks/01-07-who-built-python.ipynb&amp;depth=1">Callysto</a> | <a href="https://colab.research.google.com/github/pbeens/ics3u/blob/main/notebooks/01-07-who-built-python.ipynb">Colab</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="teacher-notes" class="level2">
+<h2 class="anchored" data-anchor-id="teacher-notes">Teacher Notes</h2>
+<ul>
+<li><strong>Keep it concrete.</strong> This lesson is mostly explanation, so anchor every idea to something students have seen: CPU names from Lesson 1, the two error types from Lessons 3–5, <code>os.getcwd()</code> asking the operating system from Lesson 6.</li>
+<li><strong>Is Python compiled or interpreted?</strong> Both, and saying “interpreted” isn’t wrong. CPython compiles source to bytecode (saving it in <code>__pycache__</code> folders as <code>.pyc</code> files when you import a module; students may have noticed these), then interprets the bytecode. The C3.4 distinction is about the main approach: compilers produce a standalone executable ahead of time; interpreters translate and run as they go.</li>
+<li><strong>Bytecode varies by version.</strong> Python 3.11 shows <code>PRECALL</code> and <code>BINARY_OP</code>; 3.13 (the web page) shows slightly different names. Focus on <code>LOAD</code>, <code>STORE</code>, and the operation.</li>
+<li><strong>Compilers named.</strong> Windows Python is usually built with Microsoft’s compiler (<code>MSC v.19xx</code>), macOS Python with <code>Clang</code>, Linux Python with <code>GCC</code>. The web page’s Python was compiled to WebAssembly with Emscripten’s Clang.</li>
+<li><strong>Machine code you can see.</strong> Optional demonstration: open <code>python.exe</code> or <code>python3</code> in a text editor and scroll. The unreadable bytes are machine code (with some readable text mixed in). Don’t save.</li>
+<li><strong>Operating systems (C3.5).</strong> Phones count: Android and iOS are operating systems. Scratch is a language <em>and</em> an application (its editor), a good discussion point.</li>
+<li><strong>Slides.</strong> Open the slides on the projector and this plan on your own screen. Press <strong>S</strong> for speaker view.</li>
+<li><strong>Spiral.</strong> Compiled languages (C, Java) appear as marked extensions only. Lesson 8 links <code>LOAD</code> and <code>STORE</code> to RAM and the operation to the CPU (C1.4).</li>
+<li>Answers are in the <code>answer-keys</code> folder of the course’s GitHub repository, not on this site.</li>
+</ul>
+</section>
+<section id="previous-and-next" class="level2 unlisted">
+<h2 class="unlisted anchored" data-anchor-id="previous-and-next">Previous and Next</h2>
+<p><a href="../../modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html">← Lesson 6</a> · <a href="../../modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html">Lesson 7 slides</a> · <a href="../../modules/module-01-about-this-computer/index.html">Module 1 overview</a> · <a href="../../modules/module-01-about-this-computer/practice.html#after-lesson-7-what-python-actually-runs">Practice →</a></p>
+</section>
+<section id="feedback" class="level2 unlisted">
+<h2 class="unlisted anchored" data-anchor-id="feedback">Feedback</h2>
+<div class="feedback-section">
+<p>Found a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.</p>
+<p><a href="https://github.com/pbeens/ics3u/issues/new?template=feedback.yml&amp;title=%5BLesson%207%3A%20What%20Python%20Actually%20Runs%5D%20&amp;page=https%3A%2F%2Fpeter.beens.ca%2Fics3u%2Fmodules%2Fmodule-01-about-this-computer%2Flesson-07-what-python-actually-runs.html" rel="noopener" target="_blank"><strong>Report an error or suggest a change</strong></a> opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.</p>
+<p>No GitHub account? <a href="https://docs.google.com/forms/d/e/1FAIpQLScI9qD_mr02kj8sqVdfarnlmPOxlr66rbpZL0aRaIlB37XQiQ/viewform?usp=pp_url&amp;entry.1446477366=https%3A%2F%2Fpeter.beens.ca%2Fics3u%2Fmodules%2Fmodule-01-about-this-computer%2Flesson-07-what-python-actually-runs.html" rel="noopener" target="_blank"><strong>Send feedback privately</strong></a> with a Google Form instead. This page's address is filled in for you, and only the author sees your response.</p>
+</div>
+
+
+<script type="pyodide-data">
+eyJvcHRpb25zIjp7ImVudiI6eyJQTE9UTFlfUkVOREVSRVIiOiJwbG90bHlfbWltZXR5cGUifSwiaW5kZXhVUkwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvcHlvZGlkZS92MC4yOC4xL2Z1bGwvIn0sInBhY2thZ2VzIjp7InBrZ3MiOlsicHlvZGlkZV9odHRwIiwibWljcm9waXAiLCJpcHl0aG9uIl19fQ==
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTIiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8yID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0yLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMi1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzIgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzIsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8xID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0xLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzEgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzEsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLXByZWx1ZGUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJweW9kaWRlT2pzID0ge1xuICBjb25zdCB7XG4gICAgUHlvZGlkZUV2YWx1YXRvcixcbiAgICBQeW9kaWRlRW52aXJvbm1lbnRNYW5hZ2VyLFxuICAgIHNldHVwUHl0aG9uLFxuICAgIHN0YXJ0UHlvZGlkZVdvcmtlcixcbiAgICBiNjREZWNvZGUsXG4gICAgY29sbGFwc2VQYXRoLFxuICB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcblxuICBjb25zdCBzdGF0dXNDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctc3RhdHVzXCIpO1xuICBjb25zdCBpbmRpY2F0b3JDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpbmRpY2F0b3JDb250YWluZXIuY2xhc3NMaXN0LnJlbW92ZShcImQtbm9uZVwiKTtcblxuICBsZXQgc3RhdHVzVGV4dCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIilcbiAgc3RhdHVzVGV4dC5jbGFzc0xpc3QgPSBcImV4ZXJjaXNlLWxvYWRpbmctZGV0YWlsc1wiO1xuICBzdGF0dXNUZXh0ID0gc3RhdHVzQ29udGFpbmVyLmFwcGVuZENoaWxkKHN0YXR1c1RleHQpO1xuICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluaXRpYWxpc2VgO1xuXG4gIC8vIEhvaXN0IGluZGljYXRvciBvdXQgZnJvbSBmaW5hbCBzbGlkZSB3aGVuIHJ1bm5pbmcgdW5kZXIgcmV2ZWFsXG4gIGNvbnN0IHJldmVhbFN0YXR1cyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsIC5leGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaWYgKHJldmVhbFN0YXR1cykge1xuICAgIHJldmVhbFN0YXR1cy5yZW1vdmUoKTtcbiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCA+IC5zbGlkZXNcIikuYXBwZW5kQ2hpbGQocmV2ZWFsU3RhdHVzKTtcbiAgfVxuXG4gIC8vIE1ha2UgYW55IHJldmVhbCBzbGlkZXMgd2l0aCBsaXZlIGNlbGxzIHNjcm9sbGFibGVcbiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChcIi5yZXZlYWwgLmV4ZXJjaXNlLWNlbGxcIikuZm9yRWFjaCgoZWwpID0+IHtcbiAgICBlbC5jbG9zZXN0KCdzZWN0aW9uLnNsaWRlJykuY2xhc3NMaXN0LmFkZChcInNjcm9sbGFibGVcIik7XG4gIH0pXG5cbiAgLy8gUHlvZGlkZSBzdXBwbGVtZW50YWwgZGF0YSBhbmQgb3B0aW9uc1xuICBjb25zdCBkYXRhQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLWRhdGFcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZGF0YUNvbnRlbnQpKTtcblxuICAvLyBHcmFiIGxpc3Qgb2YgcmVzb3VyY2VzIHRvIGJlIGRvd25sb2FkZWRcbiAgY29uc3QgZmlsZXNDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcInZmcy1maWxlXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZmlsZXMgPSBKU09OLnBhcnNlKGI2NERlY29kZShmaWxlc0NvbnRlbnQpKTtcblxuICBsZXQgcHlvZGlkZVByb21pc2UgPSAoYXN5bmMgKCkgPT4ge1xuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgUHlvZGlkZWA7XG4gICAgY29uc3QgcHlvZGlkZSA9IGF3YWl0IHN0YXJ0UHlvZGlkZVdvcmtlcihkYXRhLm9wdGlvbnMpO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiBtaWNyb3BpcGA7XG4gICAgYXdhaXQgcHlvZGlkZS5sb2FkUGFja2FnZShcIm1pY3JvcGlwXCIpO1xuICAgIGNvbnN0IG1pY3JvcGlwID0gYXdhaXQgcHlvZGlkZS5weWltcG9ydChcIm1pY3JvcGlwXCIpO1xuICAgIGF3YWl0IGRhdGEucGFja2FnZXMucGtncy5tYXAoKHBrZykgPT4gKCkgPT4ge1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiAke3BrZ31gO1xuICAgICAgcmV0dXJuIG1pY3JvcGlwLmluc3RhbGwocGtnKTtcbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcbiAgICBhd2FpdCBtaWNyb3BpcC5kZXN0cm95KCk7XG5cbiAgICAvLyBEb3dubG9hZCBhbmQgaW5zdGFsbCByZXNvdXJjZXNcbiAgICBhd2FpdCBmaWxlcy5tYXAoKGZpbGUpID0+IGFzeW5jICgpID0+IHtcbiAgICAgIGNvbnN0IG5hbWUgPSBmaWxlLnN1YnN0cmluZyhmaWxlLmxhc3RJbmRleE9mKCcvJykgKyAxKTtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcmVzb3VyY2U6ICR7bmFtZX1gO1xuICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChmaWxlKTtcbiAgICAgIGlmICghcmVzcG9uc2Uub2spIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBDYW4ndCBkb3dubG9hZCBcXGAke2ZpbGV9XFxgLiBFcnJvciAke3Jlc3BvbnNlLnN0YXR1c306IFwiJHtyZXNwb25zZS5zdGF0dXNUZXh0fVwiLmApO1xuICAgICAgfVxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmFycmF5QnVmZmVyKCk7XG5cbiAgICAgIC8vIFN0b3JlIFVSTHMgaW4gdGhlIGN3ZCB3aXRob3V0IGFueSBzdWJkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBpZiAoZmlsZS5pbmNsdWRlcyhcIjovL1wiKSkge1xuICAgICAgICBmaWxlID0gbmFtZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ29sbGFwc2UgaGlnaGVyIGRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGZpbGUgPSBjb2xsYXBzZVBhdGgoZmlsZSk7XG5cbiAgICAgIC8vIENyZWF0ZSBkaXJlY3RvcnkgdHJlZSwgaWdub3JpbmcgXCJkaXJlY3RvcnkgZXhpc3RzXCIgVkZTIGVycm9yc1xuICAgICAgY29uc3QgcGFydHMgPSBmaWxlLnNwbGl0KCcvJykuc2xpY2UoMCwgLTEpO1xuICAgICAgbGV0IHBhdGggPSAnJztcbiAgICAgIHdoaWxlIChwYXJ0cy5sZW5ndGggPiAwKSB7XG4gICAgICAgIHBhdGggKz0gcGFydHMuc2hpZnQoKSArICcvJztcbiAgICAgICAgdHJ5IHtcbiAgICAgICAgICBhd2FpdCBweW9kaWRlLkZTLm1rZGlyKHBhdGgpO1xuICAgICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgICAgaWYgKGUubmFtZSAhPT0gXCJFcnJub0Vycm9yXCIpIHRocm93IGU7XG4gICAgICAgICAgaWYgKGUuZXJybm8gIT09IDIwKSB7XG4gICAgICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICAgICAgY29uc3QgZXJyb3JUZXh0ID0gYXdhaXQgcHlvZGlkZS5fbW9kdWxlLlVURjhUb1N0cmluZyhlcnJvclRleHRQdHIpO1xuICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBGaWxlc3lzdGVtIEVycm9yICR7ZS5lcnJub30gXCIke2Vycm9yVGV4dH1cIi5gKTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgLy8gV3JpdGUgdGhpcyBmaWxlIHRvIHRoZSBWRlNcbiAgICAgIHRyeSB7XG4gICAgICAgIHJldHVybiBhd2FpdCBweW9kaWRlLkZTLndyaXRlRmlsZShmaWxlLCBuZXcgVWludDhBcnJheShkYXRhKSk7XG4gICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgIGlmIChlLm5hbWUgIT09IFwiRXJybm9FcnJvclwiKSB0aHJvdyBlO1xuICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICBjb25zdCBlcnJvclRleHQgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuVVRGOFRvU3RyaW5nKGVycm9yVGV4dFB0cik7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihgRmlsZXN5c3RlbSBFcnJvciAke2UuZXJybm99IFwiJHtlcnJvclRleHR9XCIuYCk7XG4gICAgICB9XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYFB5b2RpZGUgZW52aXJvbm1lbnQgc2V0dXBgO1xuICAgIGF3YWl0IHNldHVwUHl0aG9uKHB5b2RpZGUpO1xuXG4gICAgc3RhdHVzVGV4dC5yZW1vdmUoKTtcbiAgICBpZiAoc3RhdHVzQ29udGFpbmVyLmNoaWxkcmVuLmxlbmd0aCA9PSAwKSB7XG4gICAgICBzdGF0dXNDb250YWluZXIucGFyZW50Tm9kZS5yZW1vdmUoKTtcbiAgICB9XG4gICAgcmV0dXJuIHB5b2RpZGU7XG4gIH0pKCkuY2F0Y2goKGVycikgPT4ge1xuICAgIHN0YXR1c1RleHQuc3R5bGUuY29sb3IgPSBcInZhcigtLWV4ZXJjaXNlLWVkaXRvci1obC1lciwgI0FEMDAwMClcIjtcbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gZXJyLm1lc3NhZ2U7XG4gICAgLy9pbmRpY2F0b3JDb250YWluZXIucXVlcnlTZWxlY3RvcihcIi5zcGlubmVyLWdyb3dcIikuY2xhc3NMaXN0LmFkZChcImQtbm9uZVwiKTtcbiAgICB0aHJvdyBlcnI7XG4gIH0pO1xuXG4gIC8vIEtlZXAgdHJhY2sgb2YgaW5pdGlhbCBPSlMgYmxvY2sgcmVuZGVyXG4gIGNvbnN0IHJlbmRlcmVkT2pzID0ge307XG5cbiAgY29uc3QgcHJvY2VzcyA9IGFzeW5jIChjb250ZXh0LCBpbnB1dHMpID0+IHtcbiAgICBjb25zdCBweW9kaWRlID0gYXdhaXQgcHlvZGlkZVByb21pc2U7XG4gICAgY29uc3QgZXZhbHVhdG9yID0gbmV3IFB5b2RpZGVFdmFsdWF0b3IocHlvZGlkZSwgY29udGV4dCk7XG4gICAgYXdhaXQgZXZhbHVhdG9yLnByb2Nlc3MoaW5wdXRzKTtcbiAgICByZXR1cm4gZXZhbHVhdG9yLmNvbnRhaW5lcjtcbiAgfVxuXG4gIHJldHVybiB7XG4gICAgcHlvZGlkZVByb21pc2UsXG4gICAgcmVuZGVyZWRPanMsXG4gICAgcHJvY2VzcyxcbiAgfTtcbn1cbiJ9XX0=
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
+</section>
+
+</main> <!-- /main -->
+<script>
+/*
+  Feedback links: open the GitHub feedback form with this page's title and
+  address filled in. Rewrites Quarto's "Report an issue" link in the margin
+  and adds a line at the end of the page, which also links the Google Form
+  (for people without a GitHub account) with this page's address filled in.
+*/
+(function () {
+  var main = document.querySelector("main#quarto-document-content");
+  if (!main) return; // slides and other formats
+  var heading = document.querySelector("h1.title");
+  var pageTitle = (heading ? heading.textContent : document.title).trim();
+  var url = "https://github.com/pbeens/ics3u/issues/new?template=feedback.yml" +
+    "&title=" + encodeURIComponent("[" + pageTitle + "] ") +
+    "&page=" + encodeURIComponent(window.location.href.split("#")[0]);
+  var label = "Report an error or suggest a change";
+  var formUrl = "https://docs.google.com/forms/d/e/1FAIpQLScI9qD_mr02kj8sqVdfarnlmPOxlr66rbpZL0aRaIlB37XQiQ/viewform?usp=pp_url&entry.1446477366=" +
+    encodeURIComponent(window.location.href.split("#")[0]);
+
+  function rewrite(a) {
+    a.href = url;
+    a.setAttribute("data-original-href", url);
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.innerHTML = '<i class="bi bi-github"></i>' + label + ' (GitHub)';
+    addPrivate(a);
+  }
+  // Beside each GitHub link, add the private Google Form option.
+  function addPrivate(a) {
+    var li = a.closest("li");
+    if (!li || (li.nextElementSibling && li.nextElementSibling.classList.contains("feedback-private"))) return;
+    var item = document.createElement("li");
+    item.className = "feedback-private";
+    item.innerHTML = '<a class="' + a.className + '" target="_blank" rel="noopener" href="' + formUrl +
+      '"><i class="bi bi-envelope"></i>Send feedback privately (no account)</a>';
+    li.parentNode.insertBefore(item, li.nextSibling);
+  }
+  function rewriteAll() {
+    document.querySelectorAll('a[href$="/issues/new"], a[href*="/issues/new?template=feedback.yml"]').forEach(rewrite);
+  }
+  // Quarto copies the margin links after this script runs, so repeat on load
+  // and catch any copy at click time.
+  rewriteAll();
+  window.addEventListener("load", rewriteAll);
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href$="/issues/new"]');
+    if (a) rewrite(a);
+  }, true);
+
+  if (document.querySelector(".feedback-section")) return; // page has its own Feedback section
+  var note = document.createElement("p");
+  note.className = "feedback-link small text-muted";
+  note.style.marginTop = "3rem";
+  note.innerHTML = 'Found a mistake or have an idea? <a target="_blank" rel="noopener" href="' +
+    url + '">' + label + '</a> on GitHub, or <a target="_blank" rel="noopener" href="' +
+    formUrl + '">send it privately</a> (no account needed). Feedback is always appreciated.';
+  main.appendChild(note);
+})();
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../modules/module-01-about-this-computer";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "../..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/peter\.beens\.ca\/ics3u\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>ICS3U · Ontario Curriculum (2008) · <a href="https://github.com/pbeens/ics3u/blob/main/LICENSE">MIT License</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/pbeens/ics3u/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

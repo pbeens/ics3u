@@ -17,6 +17,7 @@ subtitle: "About 15 hours · For teachers"
 | 4. Better Reports with f-strings | [Lesson plan](lesson-04-better-reports-with-f-strings.qmd) | [Slides](lesson-04-better-reports-with-f-strings-slides.qmd) | [Practice](practice.qmd#after-lesson-4-better-reports-with-f-strings) |
 | 5. Values and Types | [Lesson plan](lesson-05-values-and-types.qmd) | [Slides](lesson-05-values-and-types-slides.qmd) | [Practice](practice.qmd#after-lesson-5-values-and-types) · [Quick Build: Parts Receipt](quick-build-parts-receipt.qmd) |
 | 6. Where Do My Programs Live? | [Lesson plan](lesson-06-where-do-my-programs-live.qmd) | [Slides](lesson-06-where-do-my-programs-live-slides.qmd) | [Practice](practice.qmd#after-lesson-6-where-do-my-programs-live) |
+| 7. What Python Actually Runs | [Lesson plan](lesson-07-what-python-actually-runs.qmd) | [Slides](lesson-07-what-python-actually-runs-slides.qmd) | [Practice](practice.qmd#after-lesson-7-what-python-actually-runs) |
 
 ### Planned lessons
 
@@ -26,7 +27,6 @@ subtitle: "About 15 hours · For teachers"
 
 | Lesson | Focus | Students read, then build |
 |---|---|---|
-| 7. What Python Actually Runs | Source code vs. machine code; interpreters vs. compilers; bytecode with `dis`; applications vs. languages vs. operating systems (C3.3, C3.4, C3.5) | Match `dis` output to lines of code; sort running programs into apps, languages, and OS parts |
 | 8. Inside the Computer: RAM and CPU | Where variables live and where arithmetic happens; `sys.getsizeof()` and `id()` (C1.1, C1.4) | Trace a program and label each line "RAM" or "CPU" |
 | 9. Talking Back, and a First Look Ahead | Reading a program that greets the user by name with `input()` and gives a hardware summary (A2.1); then reading a simple `if` ("if this is Windows…") and a `for` loop over a list of facts | Modify the greeter; predict the `if` program's output on three operating systems |
 | 10. Error Clinic | Syntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4) | Fix five broken report programs |

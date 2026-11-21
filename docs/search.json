@@ -379,6 +379,182 @@
     ]
   },
   {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html",
+    "title": "Lesson 7: What Python Actually Runs",
+    "section": "",
+    "text": "For teachers. This is the lesson plan: use it to prepare and as your script in class. Students work from the slides, the code files and notebooks, and the practice page. The step-through boxes and runnable code are here so you can try every activity first. How a lesson works →",
+    "crumbs": [
+      "For teachers",
+      "Lesson 7 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#at-a-glance",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#at-a-glance",
+    "title": "Lesson 7: What Python Actually Runs",
+    "section": "At a Glance",
+    "text": "At a Glance\n\nBig idea: the CPU only understands machine code. A .py file is source code, text for people. The Python interpreter, itself a compiled program, reads the whole file, turns it into simpler instructions (bytecode), then carries them out one at a time.\nStudents will: use the two kinds of errors they already know as evidence for how Python works, look at real bytecode, find out which compiler built their Python, and sort software into applications, languages, and operating systems.\nStudents make: what_runs_this.py, a report on every layer under their program: CPU, operating system, interpreter, and the compiler that built it.\nPrepare: run each l07_ program, and l07_who_built_python.py on a student computer as well as yours (Windows and macOS give different answers). Print or display the sorting cards in Investigate. Open the slides a few minutes before class so Python finishes loading.\nAfter class: Lesson 7 practice.\nWhere it fits: Lesson 1 said a CPU type names “the instructions it understands”. Today we see what that means. Lesson 8 follows a program into RAM and the CPU.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 7 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#learning-goals",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#learning-goals",
+    "title": "Lesson 7: What Python Actually Runs",
+    "section": "Learning Goals",
+    "text": "Learning Goals\n\nExplain the difference between source code and machine code.\nExplain the difference between a compiler and an interpreter, and where Python fits.\nExplain why a syntax error stops a program before it starts, but a run-time error stops it partway.\nExplain the different jobs of applications, programming languages, and operating systems.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 7 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#success-criteria",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#success-criteria",
+    "title": "Lesson 7: What Python Actually Runs",
+    "section": "Success Criteria",
+    "text": "Success Criteria\nStudents can say:\n\nI can explain why the CPU can’t run my .py file directly.\nI can use the two kinds of error as evidence that Python reads the whole file first.\nI can sort a piece of software into application, language, or operating system, and explain my choice.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 7 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#review-5-min",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#review-5-min",
+    "title": "Lesson 7: What Python Actually Runs",
+    "section": "Review (5 min)",
+    "text": "Review (5 min)\nWithout running anything, answer in tracing notebooks:\n\nos.getcwd() prints /Users/sam/ics3u. What does os.path.basename(os.getcwd()) print?\nWhy did sample-folder appear inside ics3u last class?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 7 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#teach-source-code-and-machine-code-15-min",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#teach-source-code-and-machine-code-15-min",
+    "title": "Lesson 7: What Python Actually Runs",
+    "section": "Teach: Source Code and Machine Code (15 min)",
+    "text": "Teach: Source Code and Machine Code (15 min)\nOpen with the problem: “In Lesson 1, arm64 and x86_64 were names for the instructions a CPU understands. Your .py file is text: letters, brackets, quotation marks. The CPU can’t read text. So how does print() ever happen?”\nDraw this on the board, building it left to right as you talk:\nreport.py  ──►  Python interpreter  ──►  bytecode  ──►  carried out one by one  ──►  CPU\n(source code,   (python3 or py: a       (simpler        (by the interpreter,        (runs machine code:\n for people)     machine-code program)   instructions)   in machine code)            numbers)\n\n\n\n\n\n\nTipTeacher prompt: source code, machine code, compilers, interpreters (first use)\n\n\n\n\n“Source code is what we write: text, for people to read. Machine code is what the CPU runs: numbers, each one a tiny instruction like ‘add these two’ or ‘copy this here’. Every CPU family has its own machine code. That’s what arm64 and x86_64 name.”\n“Something has to turn source code into machine code. There are two ways.”\n“A compiler translates the whole program ahead of time and saves the result as a new file, an executable, that the CPU can run directly. Apps like Chrome and Microsoft Word arrive as compiled machine code. Like translating a whole book before it’s printed.”\n“An interpreter reads the program and carries it out as it goes. Like an interpreter at a meeting, translating as people speak.”\n“Python does a bit of both. It first compiles your whole file into bytecode, simpler instructions for Python itself, not for the CPU. Then it interprets the bytecode, one instruction at a time. The interpreter, python3 or python.exe, is a compiled program: it’s machine code.”",
+    "crumbs": [
+      "For teachers",
+      "Lesson 7 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#predict-then-step-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#predict-then-step-10-min",
+    "title": "Lesson 7: What Python Actually Runs",
+    "section": "Predict, Then Step (10 min)",
+    "text": "Predict, Then Step (10 min)\nTwo programs, four lines and three lines. Read each without running it, then answer in tracing notebooks:\n\nHow many lines of output will each print?\nOne has a syntax error and one has a run-time error. Which is which?\n\nProgram A\nprint(\"Line 1 runs\")\nprint(\"Line 2 runs\")\nprint(\"Line 3 runs\", 10 / 0)\nprint(\"Line 4 runs\")\nProgram B\nprint(\"Line 1 runs\")\nprint(\"Line 2 runs\")\nprint(\"Line 3 runs\"\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\n“Program B’s mistake is on the last line, and still nothing ran. Not even line 1. So Python must read the whole file before running any of it. That’s the compiling step: the syntax error is found while turning the file into bytecode. Program A compiled fine; dividing by zero only fails when line 3 actually runs. Two kinds of error, two steps.”",
+    "crumbs": [
+      "For teachers",
+      "Lesson 7 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#investigate-20-min",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#investigate-20-min",
+    "title": "Lesson 7: What Python Actually Runs",
+    "section": "Investigate (20 min)",
+    "text": "Investigate (20 min)\n\nLooking at bytecode (8 min)\ndis (short for disassemble) shows the bytecode Python makes from source code. Run it, then match each group of instructions to a line of the source.\n\n\n\n\n\n\n\nThe numbers on the far left are line numbers. Which instructions came from line 2?\nFind the multiplication. What is it called?\nLOAD means “fetch a value”; STORE means “save a value under a name”. Which instruction saves the answer in doubled?\nChange the source to cores = 8\\nprint(cores + 1) and run it again. What changed?\n\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\n“This is still not machine code. It’s Python’s own instruction set. The interpreter turns each of these into machine code for this CPU as it runs. Different versions of Python make slightly different bytecode, so your list may not match your neighbour’s exactly. The ideas don’t change.”\n\n\n\n\nWho built your Python? (5 min)\nimport platform\n\nprint(\"Operating system:\", platform.system())\nprint(\"Language:\", platform.python_implementation(), platform.python_version())\nprint(\"Python was compiled by:\", platform.python_compiler())\nRun it here, then on the classroom computer.\n\nWhat compiler built the Python on this web page? On the classroom computer?\nIf the interpreter was made by a compiler, what language do you think it was written in? (CPython is written in C.)\n\n\n\nApplication, language, or operating system? (7 min)\nIn pairs, sort these into three columns in tracing notebooks: application (a program people use to get something done), programming language (a way of writing instructions), operating system (the program that runs the computer and shares it among the other programs).\n\nWindows · Python · Chrome · Thonny · macOS · Minecraft · JavaScript · Linux · Microsoft Word · Scratch · Android · VS Code · Java · iOS · python.exe (or python3)\n\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\nAfter sorting, ask about the tricky ones. “Thonny and VS Code are applications for writing a language. Python is the language, a set of rules; python.exe is the application that runs it: the interpreter. The operating system sits underneath everything: it starts programs, gives them memory and files, and shares the CPU between them. When you ran os.getcwd() last lesson, Python asked the operating system.”",
+    "crumbs": [
+      "For teachers",
+      "Lesson 7 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#modify-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#modify-10-min",
+    "title": "Lesson 7: What Python Actually Runs",
+    "section": "Modify (10 min)",
+    "text": "Modify (10 min)\n\nIn Program A, move the division to line 1. Predict, then run. How many lines print now?\nFix Program B. How many lines print?\nIn the dis box, add a fourth line, print(doubled + cores). Before running, predict which instructions will appear for it.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 7 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#make-what-runs-this-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#make-what-runs-this-10-min",
+    "title": "Lesson 7: What Python Actually Runs",
+    "section": "Make: What Runs This? (10 min)",
+    "text": "Make: What Runs This? (10 min)\nOn the classroom computer, students write what_runs_this.py in ics3u/module-01/lesson-07/: a labelled report, using f-strings, of every layer under the program:\n\nthe CPU type (platform.machine()),\nthe operating system and its version,\nthe interpreter’s location (sys.executable, after import sys) and its implementation and version,\nthe compiler that built the interpreter (platform.python_compiler()).\n\nEach line gets a comment saying which layer it is: hardware, operating system, interpreter (an application), or the compiler that made it. Good programs go in the toolkit.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 7 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#check-exit-ticket-5-min",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#check-exit-ticket-5-min",
+    "title": "Lesson 7: What Python Actually Runs",
+    "section": "Check: Exit Ticket (5 min)",
+    "text": "Check: Exit Ticket (5 min)\n\nWrite the exact output. Then say: syntax error or run-time error?\nprint(\"Start\")\ncores = 8\nprint(\"Cores:\", cores / 0)\nprint(\"Done\")\nIn one sentence each: what does a compiler do? What does an interpreter do?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 7 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#after-the-lesson",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#after-the-lesson",
+    "title": "Lesson 7: What Python Actually Runs",
+    "section": "After the Lesson",
+    "text": "After the Lesson\n\nStudents do the Lesson 7 practice.\nSuggested hand-in: what_runs_this.py, with its output pasted as a comment at the bottom.\nRead the exit tickets for the compiler/interpreter sentences. Common slip: “a compiler runs the program”. It translates; something else runs the result.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 7 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#code-for-this-lesson",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#code-for-this-lesson",
+    "title": "Lesson 7: What Python Actually Runs",
+    "section": "Code for This Lesson",
+    "text": "Code for This Lesson\nEvery program in this lesson, ready to run outside the browser. Download the .py file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nBytecode\nl07_bytecode.py\nView or download\nCallysto | Colab\n\n\nExit ticket\nl07_exit_ticket.py\nView or download\nCallysto | Colab\n\n\nPractice mistake\nl07_practice_mistake.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl07_practice_read.py\nView or download\nCallysto | Colab\n\n\nRuntime error\nl07_runtime_error.py\nView or download\nCallysto | Colab\n\n\nSyntax error\nl07_syntax_error.py\nView or download\nCallysto | Colab\n\n\nWho built python\nl07_who_built_python.py\nView or download\nCallysto | Colab",
+    "crumbs": [
+      "For teachers",
+      "Lesson 7 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#teacher-notes",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#teacher-notes",
+    "title": "Lesson 7: What Python Actually Runs",
+    "section": "Teacher Notes",
+    "text": "Teacher Notes\n\nKeep it concrete. This lesson is mostly explanation, so anchor every idea to something students have seen: CPU names from Lesson 1, the two error types from Lessons 3–5, os.getcwd() asking the operating system from Lesson 6.\nIs Python compiled or interpreted? Both, and saying “interpreted” isn’t wrong. CPython compiles source to bytecode (saving it in __pycache__ folders as .pyc files when you import a module; students may have noticed these), then interprets the bytecode. The C3.4 distinction is about the main approach: compilers produce a standalone executable ahead of time; interpreters translate and run as they go.\nBytecode varies by version. Python 3.11 shows PRECALL and BINARY_OP; 3.13 (the web page) shows slightly different names. Focus on LOAD, STORE, and the operation.\nCompilers named. Windows Python is usually built with Microsoft’s compiler (MSC v.19xx), macOS Python with Clang, Linux Python with GCC. The web page’s Python was compiled to WebAssembly with Emscripten’s Clang.\nMachine code you can see. Optional demonstration: open python.exe or python3 in a text editor and scroll. The unreadable bytes are machine code (with some readable text mixed in). Don’t save.\nOperating systems (C3.5). Phones count: Android and iOS are operating systems. Scratch is a language and an application (its editor), a good discussion point.\nSlides. Open the slides on the projector and this plan on your own screen. Press S for speaker view.\nSpiral. Compiled languages (C, Java) appear as marked extensions only. Lesson 8 links LOAD and STORE to RAM and the operation to the CPU (C1.4).\nAnswers are in the answer-keys folder of the course’s GitHub repository, not on this site.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 7 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#previous-and-next",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#previous-and-next",
+    "title": "Lesson 7: What Python Actually Runs",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Lesson 6 · Lesson 7 slides · Module 1 overview · Practice →",
+    "crumbs": [
+      "For teachers",
+      "Lesson 7 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#feedback",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#feedback",
+    "title": "Lesson 7: What Python Actually Runs",
+    "section": "Feedback",
+    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 7 plan"
+    ]
+  },
+  {
     "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html",
     "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html",
     "title": "Lesson 6: Where Do My Programs Live?",
@@ -537,7 +713,7 @@
     "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#previous-and-next",
     "title": "Lesson 6: Where Do My Programs Live?",
     "section": "Previous and Next",
-    "text": "Previous and Next\n← Lesson 5 · Lesson 6 slides · Module 1 overview · Practice →",
+    "text": "Previous and Next\n← Lesson 5 · Lesson 6 slides · Module 1 overview · Practice → · Lesson 7 →",
     "crumbs": [
       "For teachers",
       "Lesson 6 plan"
@@ -1449,7 +1625,7 @@
     "href": "modules/module-01-about-this-computer/index.html#lessons",
     "title": "Module 1: About This Computer",
     "section": "Lessons",
-    "text": "Lessons\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n\n\nPlanned lessons\n\n\n\n\n\n\nPlanned, not yet written. Titles and focus may change as lessons are built.\n\n\n\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n7. What Python Actually Runs\nSource code vs. machine code; interpreters vs. compilers; bytecode with dis; applications vs. languages vs. operating systems (C3.3, C3.4, C3.5)\nMatch dis output to lines of code; sort running programs into apps, languages, and OS parts\n\n\n8. Inside the Computer: RAM and CPU\nWhere variables live and where arithmetic happens; sys.getsizeof() and id() (C1.1, C1.4)\nTrace a program and label each line “RAM” or “CPU”\n\n\n9. Talking Back, and a First Look Ahead\nReading a program that greets the user by name with input() and gives a hardware summary (A2.1); then reading a simple if (“if this is Windows…”) and a for loop over a list of facts\nModify the greeter; predict the if program’s output on three operating systems\n\n\n10. Error Clinic\nSyntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4)\nFix five broken report programs\n\n\n11. Review and assignment work period\nA short review game on Lessons 1–10, then class time for the assignment\nFinish the Computer Report Card\n\n\n12. Module 1 test\nCode reading and tracing; a short basics section\n\n\n\n\nEach lesson plan’s Code for This Lesson section has the .py files and notebooks. Students find the same files at the end of each lesson’s section on the Practice page.",
+    "text": "Lessons\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\n\n\nPlanned lessons\n\n\n\n\n\n\nPlanned, not yet written. Titles and focus may change as lessons are built.\n\n\n\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n8. Inside the Computer: RAM and CPU\nWhere variables live and where arithmetic happens; sys.getsizeof() and id() (C1.1, C1.4)\nTrace a program and label each line “RAM” or “CPU”\n\n\n9. Talking Back, and a First Look Ahead\nReading a program that greets the user by name with input() and gives a hardware summary (A2.1); then reading a simple if (“if this is Windows…”) and a for loop over a list of facts\nModify the greeter; predict the if program’s output on three operating systems\n\n\n10. Error Clinic\nSyntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4)\nFix five broken report programs\n\n\n11. Review and assignment work period\nA short review game on Lessons 1–10, then class time for the assignment\nFinish the Computer Report Card\n\n\n12. Module 1 test\nCode reading and tracing; a short basics section\n\n\n\n\nEach lesson plan’s Code for This Lesson section has the .py files and notebooks. Students find the same files at the end of each lesson’s section on the Practice page.",
     "crumbs": [
       "Module 1 overview"
     ]
@@ -1818,7 +1994,7 @@
     "href": "index.html#lessons",
     "title": "ICS3U: Introduction to Computer Science",
     "section": "Lessons",
-    "text": "Lessons\nModule 1: About This Computer\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\nModule assignment\n\n\nComputer Report Card\n\n\n\nMore modules are on the way. See the Scope and Sequence for the full plan of seven modules; each planned module already has an overview page under Modules."
+    "text": "Lessons\nModule 1: About This Computer\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\nModule assignment\n\n\nComputer Report Card\n\n\n\nMore modules are on the way. See the Scope and Sequence for the full plan of seven modules; each planned module already has an overview page under Modules."
   },
   {
     "objectID": "modules/module-01-about-this-computer/assignment.html",
@@ -2646,6 +2822,138 @@
     ]
   },
   {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#review",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#review",
+    "title": "What Python Actually Runs",
+    "section": "Review",
+    "text": "Review\nIn your tracing notebook, without running anything:\n\nos.getcwd() prints /Users/sam/ics3u. What does os.path.basename(os.getcwd()) print?\nWhy did sample-folder appear inside ics3u?",
+    "crumbs": [
+      "For the class",
+      "Lesson 7 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#the-cpu-cant-read-text",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#the-cpu-cant-read-text",
+    "title": "What Python Actually Runs",
+    "section": "The CPU can’t read text",
+    "text": "The CPU can’t read text\n\nYour .py file: letters, brackets, quotation marks\nThe CPU: only numbers, its own machine code (arm64, x86_64)\nSo how does print() ever happen?\n\n\nOpen with the problem: “In Lesson 1, arm64 and x86_64 were names for the instructions a CPU understands. Your .py file is text. The CPU can’t read text. So how does print() ever happen?”",
+    "crumbs": [
+      "For the class",
+      "Lesson 7 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#two-ways-to-translate",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#two-ways-to-translate",
+    "title": "What Python Actually Runs",
+    "section": "Two ways to translate",
+    "text": "Two ways to translate\n\nCompiler: translates the whole program ahead of time into an executable the CPU runs directly\nInterpreter: reads the program and carries it out as it goes\nPython: compiles your file to bytecode, then interprets the bytecode\n\nreport.py ─► interpreter ─► bytecode ─► one by one ─► CPU\n\nTEACHER PROMPT (first use): “Source code is what we write, for people. Machine code is what the CPU runs: numbers, each a tiny instruction. Every CPU family has its own. A compiler translates the whole program ahead of time into an executable, like translating a whole book before it’s printed; Chrome and Word arrive that way. An interpreter carries the program out as it goes, like an interpreter at a meeting. Python does both: it compiles the whole file into bytecode, simpler instructions for Python itself, then interprets them one at a time. The interpreter, python3 or python.exe, is a compiled program: machine code.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 7 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#predict-a",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#predict-a",
+    "title": "What Python Actually Runs",
+    "section": "Predict: A",
+    "text": "Predict: A\nprint(\"Line 1 runs\")\nprint(\"Line 2 runs\")\nprint(\"Line 3 runs\", 10 / 0)\nprint(\"Line 4 runs\")\n\nStudents predict both programs before stepping either. How many lines will each print? Which has a syntax error, which a run-time error?",
+    "crumbs": [
+      "For the class",
+      "Lesson 7 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#predict-b",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#predict-b",
+    "title": "What Python Actually Runs",
+    "section": "Predict: B",
+    "text": "Predict: B\nprint(\"Line 1 runs\")\nprint(\"Line 2 runs\")\nprint(\"Line 3 runs\"\n\n“Program B’s mistake is on the last line, and nothing ran, not even line 1. So Python reads the whole file before running any of it: that’s the compiling step, and the syntax error is found then. Program A compiled fine; dividing by zero only fails when line 3 runs. Two kinds of error, two steps.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 7 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#looking-at-bytecode",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#looking-at-bytecode",
+    "title": "What Python Actually Runs",
+    "section": "Looking at bytecode",
+    "text": "Looking at bytecode\n\n\n\n\n\n\n\nAsk: which instructions came from line 2 (left-hand numbers)? Find the multiplication. Which instruction saves the answer in doubled? LOAD = fetch a value; STORE = save it under a name. “Still not machine code: Python’s own instruction set. The interpreter turns each into machine code as it runs. Versions differ slightly; the ideas don’t.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 7 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#who-built-your-python",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#who-built-your-python",
+    "title": "What Python Actually Runs",
+    "section": "Who built your Python?",
+    "text": "Who built your Python?\nimport platform\n\nprint(\"Operating system:\", platform.system())\nprint(\"Language:\", platform.python_implementation(), platform.python_version())\nprint(\"Python was compiled by:\", platform.python_compiler())\n\nRun it here, then on the classroom computer. Windows: usually MSC (Microsoft’s compiler). macOS: Clang. Linux: GCC. The web page: Emscripten’s Clang, compiling to WebAssembly. If a compiler made the interpreter, what was it written in? CPython is written in C.",
+    "crumbs": [
+      "For the class",
+      "Lesson 7 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#application-language-or-os",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#application-language-or-os",
+    "title": "What Python Actually Runs",
+    "section": "Application, language, or OS?",
+    "text": "Application, language, or OS?\nWindows · Python · Chrome · Thonny · macOS · Minecraft · JavaScript · Linux · Microsoft Word · Scratch · Android · VS Code · Java · iOS · python.exe\n\nPairs sort into three columns. Then the tricky ones: “Thonny and VS Code are applications for writing a language. Python is the language, a set of rules; python.exe is the application that runs it. The operating system runs underneath everything: it starts programs, gives them memory and files, and shares the CPU. When you ran os.getcwd(), Python asked the operating system.” Scratch is a language and an application (its editor).",
+    "crumbs": [
+      "For the class",
+      "Lesson 7 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#modify",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#modify",
+    "title": "What Python Actually Runs",
+    "section": "Modify",
+    "text": "Modify\n\nMove the division to line 1. How many lines print?\nThen fix Program B\nIn the dis box, add print(doubled + cores). Predict its instructions",
+    "crumbs": [
+      "For the class",
+      "Lesson 7 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#make-what-runs-this",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#make-what-runs-this",
+    "title": "What Python Actually Runs",
+    "section": "Make: What runs this?",
+    "text": "Make: What runs this?\nwhat_runs_this.py in ics3u/module-01/lesson-07/: a labelled f-string report of every layer\n\nCPU type\nOperating system and version\nInterpreter: sys.executable, implementation, version\nThe compiler that built it: platform.python_compiler()\n\nA comment on each line: which layer is it?",
+    "crumbs": [
+      "For the class",
+      "Lesson 7 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#exit-ticket",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#exit-ticket",
+    "title": "What Python Actually Runs",
+    "section": "Exit ticket",
+    "text": "Exit ticket\n\nWrite the exact output. Syntax error or run-time error?\n\nprint(\"Start\")\ncores = 8\nprint(\"Cores:\", cores / 0)\nprint(\"Done\")\n\nOne sentence each: what does a compiler do? An interpreter?",
+    "crumbs": [
+      "For the class",
+      "Lesson 7 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#after-class",
+    "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs-slides.html#after-class",
+    "title": "What Python Actually Runs",
+    "section": "After class",
+    "text": "After class\n\nDo the Lesson 7 practice: read and predict first, then run\nFinish what_runs_this.py\nToday’s programs are on the practice page: download the .py files, or open them as notebooks in Callysto or Colab",
+    "crumbs": [
+      "For the class",
+      "Lesson 7 slides"
+    ]
+  },
+  {
     "objectID": "modules/module-01-about-this-computer/practice.html",
     "href": "modules/module-01-about-this-computer/practice.html",
     "title": "Module 1 Practice",
@@ -2717,6 +3025,17 @@
     "title": "Module 1 Practice",
     "section": "After Lesson 6: Where Do My Programs Live?",
     "text": "After Lesson 6: Where Do My Programs Live?\n\nRead and predict\nRead this program without running it. On this web page, the home folder is /home/pyodide. In your tracing notebook, write the exact output. Then type your prediction and press Step.\n\nWhat does os.path.expanduser(\"~\") give you? (The ~ is short for “my home folder”.)\nWhat will line 7 print here? Would it print the same on your classroom computer?\nWhat type of value does os.path.isdir() give back?\n\nimport os\n\nhome = os.path.expanduser(\"~\")\ncourse = os.path.join(home, \"ics3u\")\nprint(\"Home folder:\", home)\nprint(\"Course folder:\", course)\nprint(\"Course folder exists:\", os.path.isdir(course))\nprint(\"Last part:\", os.path.basename(course))\n\n\nSpot the mistake\nPredict what will happen, then press Step.\n\nWhat printed before the program stopped? What kind of error is it?\nThe message mentions int. Which value is the problem?\nFix it two ways: with str(), and by changing line 3.\n\nimport os\n\nyear = 2026\nprint(\"Building the path...\")\nprint(os.path.join(\"ics3u\", \"backups\", year))\n\n\nModify\nPredict each change, then run it.\n\nPrint just the name of the lesson folder, lesson-06. (Hint: use basename on the result of dirname.)\nBuild the path to sample-folder/photos inside /Users/sam/ics3u, using os.path.join.\nWhat does os.path.basename(\"/Users/sam/ics3u/\") print? Why?\n\n\n\n\n\n\n\n\n\nMake\nWhere does Python itself live on your computer? On your classroom computer, write where_is_python.py (in ics3u/module-01/lesson-06/) that prints the full path to the Python program that’s running it (sys.executable, after import sys), then the name of the folder it’s in. Run it from your editor and from the terminal. Is it the same Python both times?\n\n\nCode files\nLesson 6’s programs, including the ones above. Download a .py file, or open the notebook in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nFolder contents\nl06_folder_contents.py\nView or download\nCallysto | Colab\n\n\nMistake: folder\nl06_mistake_folder.py\nView or download\nCallysto | Colab\n\n\nPaths\nl06_paths.py\nView or download\nCallysto | Colab\n\n\nPractice mistake\nl06_practice_mistake.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl06_practice_read.py\nView or download\nCallysto | Colab\n\n\nWhere am i\nl06_where_am_i.py\nView or download\nCallysto | Colab",
+    "crumbs": [
+      "For students",
+      "Practice"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/practice.html#after-lesson-7-what-python-actually-runs",
+    "href": "modules/module-01-about-this-computer/practice.html#after-lesson-7-what-python-actually-runs",
+    "title": "Module 1 Practice",
+    "section": "After Lesson 7: What Python Actually Runs",
+    "text": "After Lesson 7: What Python Actually Runs\n\nRead and predict\nRead this program without running it. In your tracing notebook, write the exact output. Then type your prediction and press Step.\n\nHow many lines print before the program stops?\nIs the problem a syntax error or a run-time error? How can you tell before running it?\nWhich step would catch it: compiling to bytecode, or running the bytecode?\n\nprint(\"Checking\")\nspeed = 3.2\nprint(\"Speed:\", speed)\nprint(\"Per core:\", speed / cores)\nprint(\"Finished\")\n\n\nSpot the mistake\nPredict what will happen, then press Step.\n\nThe mistake is on line 3. Why don’t lines 1 and 2 print?\nWhat is the error, and how do you fix it?\n\nprint(\"Report\")\nprint(\"CPU:\", \"arm64\")\nprint(\"RAM: 8 GB)\n\n\nModify\nPredict each change, then run it.\n\nWhich instructions come from line 2? Find the multiplication.\nChange * 3 to + 3. What changes in the bytecode?\nAdd a third line, print(total). Which new instructions appear?\n\n\n\n\n\n\n\n\n\nMake\nOn your classroom computer, write explain_python.py in ics3u/module-01/lesson-07/. At the top, in a comment, explain in your own words what happens between pressing Run and seeing output. Use all of these words: source code, compiler or compiling, bytecode, interpreter, machine code, CPU, operating system. Below it, write a two-line program, and paste its dis output as a comment at the bottom.\n\n\nCode files\nLesson 7’s programs, including the ones above. Download a .py file, or open the notebook in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nBytecode\nl07_bytecode.py\nView or download\nCallysto | Colab\n\n\nPractice mistake\nl07_practice_mistake.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl07_practice_read.py\nView or download\nCallysto | Colab\n\n\nRuntime error\nl07_runtime_error.py\nView or download\nCallysto | Colab\n\n\nSyntax error\nl07_syntax_error.py\nView or download\nCallysto | Colab\n\n\nWho built python\nl07_who_built_python.py\nView or download\nCallysto | Colab",
     "crumbs": [
       "For students",
       "Practice"

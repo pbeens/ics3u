@@ -1,0 +1,195 @@
+---
+title: "Lesson 7: What Python Actually Runs"
+subtitle: "Module 1 — About This Computer"
+format: live-html
+engine: markdown
+expectations: [A4.3, C3.3, C3.4, C3.5]
+---
+
+::: {.callout-important appearance="simple" icon=false}
+**For teachers.** This is the lesson plan: use it to prepare and as your script in class. Students work from the **slides**, the **code files and notebooks**, and the **practice** page. The step-through boxes and runnable code are here so you can try every activity first. [How a lesson works →](../../how-a-lesson-works.qmd)
+:::
+
+::: {.callout-note appearance="simple"}
+**Time:** 75 minutes · **Expectations:** A4.3, C3.3, C3.4, C3.5 · **Slides:** [Lesson 7 slides](lesson-07-what-python-actually-runs-slides.qmd) (press **S** for speaker notes) · [Module 1 overview](index.qmd) · **Previous:** [Lesson 6](lesson-06-where-do-my-programs-live.qmd)
+:::
+
+## At a Glance
+
+- **Big idea:** the CPU only understands machine code. A `.py` file is source code, text for people. The Python interpreter, itself a compiled program, reads the whole file, turns it into simpler instructions (bytecode), then carries them out one at a time.
+- **Students will:** use the two kinds of errors they already know as evidence for how Python works, look at real bytecode, find out which compiler built their Python, and sort software into applications, languages, and operating systems.
+- **Students make:** `what_runs_this.py`, a report on every layer under their program: CPU, operating system, interpreter, and the compiler that built it.
+- **Prepare:** run each `l07_` program, and `l07_who_built_python.py` on a student computer as well as yours (Windows and macOS give different answers). Print or display the sorting cards in Investigate. Open the slides a few minutes before class so Python finishes loading.
+- **After class:** [Lesson 7 practice](practice.qmd#after-lesson-7-what-python-actually-runs).
+- **Where it fits:** Lesson 1 said a CPU type names "the instructions it understands". Today we see what that means. Lesson 8 follows a program into RAM and the CPU.
+
+## Learning Goals
+
+- Explain the difference between source code and machine code.
+- Explain the difference between a compiler and an interpreter, and where Python fits.
+- Explain why a syntax error stops a program before it starts, but a run-time error stops it partway.
+- Explain the different jobs of applications, programming languages, and operating systems.
+
+## Success Criteria
+
+Students can say:
+
+- I can explain why the CPU can't run my `.py` file directly.
+- I can use the two kinds of error as evidence that Python reads the whole file first.
+- I can sort a piece of software into application, language, or operating system, and explain my choice.
+
+## Review (5 min)
+
+Without running anything, answer in tracing notebooks:
+
+1. `os.getcwd()` prints `/Users/sam/ics3u`. What does `os.path.basename(os.getcwd())` print?
+2. Why did `sample-folder` appear inside `ics3u` last class?
+
+## Teach: Source Code and Machine Code (15 min)
+
+Open with the problem: "In Lesson 1, `arm64` and `x86_64` were names for the instructions a CPU understands. Your `.py` file is text: letters, brackets, quotation marks. The CPU can't read text. So how does `print()` ever happen?"
+
+Draw this on the board, building it left to right as you talk:
+
+```text
+report.py  ──►  Python interpreter  ──►  bytecode  ──►  carried out one by one  ──►  CPU
+(source code,   (python3 or py: a       (simpler        (by the interpreter,        (runs machine code:
+ for people)     machine-code program)   instructions)   in machine code)            numbers)
+```
+
+::: {.callout-tip title="Teacher prompt: source code, machine code, compilers, interpreters (first use)"}
+- "**Source code** is what we write: text, for people to read. **Machine code** is what the CPU runs: numbers, each one a tiny instruction like 'add these two' or 'copy this here'. Every CPU family has its own machine code. That's what `arm64` and `x86_64` name."
+- "Something has to turn source code into machine code. There are two ways."
+- "A **compiler** translates the whole program ahead of time and saves the result as a new file, an *executable*, that the CPU can run directly. Apps like Chrome and Microsoft Word arrive as compiled machine code. Like translating a whole book before it's printed."
+- "An **interpreter** reads the program and carries it out as it goes. Like an interpreter at a meeting, translating as people speak."
+- "Python does a bit of both. It first compiles your whole file into **bytecode**, simpler instructions for Python itself, not for the CPU. Then it interprets the bytecode, one instruction at a time. The interpreter, `python3` or `python.exe`, is a compiled program: it's machine code."
+:::
+
+## Predict, Then Step (10 min)
+
+Two programs, four lines and three lines. Read each **without running it**, then answer in tracing notebooks:
+
+1. How many lines of output will each print?
+2. One has a syntax error and one has a run-time error. Which is which?
+
+**Program A**
+
+{{< stepper file="examples/l07_runtime_error.py" >}}
+
+**Program B**
+
+{{< stepper file="examples/l07_syntax_error.py" >}}
+
+::: {.callout-tip title="Teacher prompt"}
+"Program B's mistake is on the *last* line, and still nothing ran. Not even line 1. So Python must read the *whole* file before running any of it. That's the compiling step: the syntax error is found while turning the file into bytecode. Program A compiled fine; dividing by zero only fails when line 3 actually runs. Two kinds of error, two steps."
+:::
+
+## Investigate (20 min)
+
+### Looking at bytecode (8 min)
+
+`dis` (short for *disassemble*) shows the bytecode Python makes from source code. Run it, then match each group of instructions to a line of the source.
+
+```{pyodide}
+import dis
+
+source = "cores = 8\ndoubled = cores * 2\nprint(doubled)"
+dis.dis(source)
+```
+
+1. The numbers on the far left are line numbers. Which instructions came from line 2?
+2. Find the multiplication. What is it called?
+3. `LOAD` means "fetch a value"; `STORE` means "save a value under a name". Which instruction saves the answer in `doubled`?
+4. Change the source to `cores = 8\nprint(cores + 1)` and run it again. What changed?
+
+::: {.callout-tip title="Teacher prompt"}
+"This is still not machine code. It's Python's own instruction set. The interpreter turns each of these into machine code for *this* CPU as it runs. Different versions of Python make slightly different bytecode, so your list may not match your neighbour's exactly. The ideas don't change."
+:::
+
+### Who built your Python? (5 min)
+
+{{< stepper file="examples/l07_who_built_python.py" >}}
+
+Run it here, then on the classroom computer.
+
+1. What compiler built the Python on this web page? On the classroom computer?
+2. If the interpreter was made by a compiler, what language do you think it was written in? (CPython is written in C.)
+
+### Application, language, or operating system? (7 min)
+
+In pairs, sort these into three columns in tracing notebooks: **application** (a program people use to get something done), **programming language** (a way of writing instructions), **operating system** (the program that runs the computer and shares it among the other programs).
+
+> Windows · Python · Chrome · Thonny · macOS · Minecraft · JavaScript · Linux · Microsoft Word · Scratch · Android · VS Code · Java · iOS · `python.exe` (or `python3`)
+
+::: {.callout-tip title="Teacher prompt"}
+After sorting, ask about the tricky ones. "Thonny and VS Code are *applications* for writing a language. Python is the *language*, a set of rules; `python.exe` is the *application* that runs it: the interpreter. The operating system sits underneath everything: it starts programs, gives them memory and files, and shares the CPU between them. When you ran `os.getcwd()` last lesson, Python asked the *operating system*."
+:::
+
+## Modify (10 min)
+
+1. In Program A, move the division to line 1. Predict, then run. How many lines print now?
+2. Fix Program B. How many lines print?
+3. In the `dis` box, add a fourth line, `print(doubled + cores)`. Before running, predict which instructions will appear for it.
+
+```{pyodide}
+print("Line 1 runs")
+print("Line 2 runs")
+print("Line 3 runs", 10 / 0)
+print("Line 4 runs")
+```
+
+## Make: What Runs This? (10 min)
+
+On the classroom computer, students write `what_runs_this.py` in `ics3u/module-01/lesson-07/`: a labelled report, using f-strings, of every layer under the program:
+
+- the CPU type (`platform.machine()`),
+- the operating system and its version,
+- the interpreter's location (`sys.executable`, after `import sys`) and its implementation and version,
+- the compiler that built the interpreter (`platform.python_compiler()`).
+
+Each line gets a comment saying which layer it is: hardware, operating system, interpreter (an application), or the compiler that made it. Good programs go in the toolkit.
+
+## Check: Exit Ticket (5 min)
+
+1. Write the exact output. Then say: syntax error or run-time error?
+
+   ```python
+   print("Start")
+   cores = 8
+   print("Cores:", cores / 0)
+   print("Done")
+   ```
+
+2. In one sentence each: what does a compiler do? What does an interpreter do?
+
+## After the Lesson
+
+- Students do the [Lesson 7 practice](practice.qmd#after-lesson-7-what-python-actually-runs).
+- **Suggested hand-in:** `what_runs_this.py`, with its output pasted as a comment at the bottom.
+- Read the exit tickets for the compiler/interpreter sentences. Common slip: "a compiler runs the program". It translates; something else runs the result.
+
+## Code for This Lesson
+
+Every program in this lesson, ready to run outside the browser. Download the `.py` file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.
+
+{{< lesson-code >}}
+
+## Teacher Notes
+
+- **Keep it concrete.** This lesson is mostly explanation, so anchor every idea to something students have seen: CPU names from Lesson 1, the two error types from Lessons 3–5, `os.getcwd()` asking the operating system from Lesson 6.
+- **Is Python compiled or interpreted?** Both, and saying "interpreted" isn't wrong. CPython compiles source to bytecode (saving it in `__pycache__` folders as `.pyc` files when you import a module; students may have noticed these), then interprets the bytecode. The C3.4 distinction is about the main approach: compilers produce a standalone executable ahead of time; interpreters translate and run as they go.
+- **Bytecode varies by version.** Python 3.11 shows `PRECALL` and `BINARY_OP`; 3.13 (the web page) shows slightly different names. Focus on `LOAD`, `STORE`, and the operation.
+- **Compilers named.** Windows Python is usually built with Microsoft's compiler (`MSC v.19xx`), macOS Python with `Clang`, Linux Python with `GCC`. The web page's Python was compiled to WebAssembly with Emscripten's Clang.
+- **Machine code you can see.** Optional demonstration: open `python.exe` or `python3` in a text editor and scroll. The unreadable bytes are machine code (with some readable text mixed in). Don't save.
+- **Operating systems (C3.5).** Phones count: Android and iOS are operating systems. Scratch is a language *and* an application (its editor), a good discussion point.
+- **Slides.** Open the slides on the projector and this plan on your own screen. Press **S** for speaker view.
+- **Spiral.** Compiled languages (C, Java) appear as marked extensions only. Lesson 8 links `LOAD` and `STORE` to RAM and the operation to the CPU (C1.4).
+- Answers are in the `answer-keys` folder of the course's GitHub repository, not on this site.
+
+## Previous and Next {.unlisted}
+
+[← Lesson 6](lesson-06-where-do-my-programs-live.qmd) · [Lesson 7 slides](lesson-07-what-python-actually-runs-slides.qmd) · [Module 1 overview](index.qmd) · [Practice →](practice.qmd#after-lesson-7-what-python-actually-runs)
+
+## Feedback {.unlisted}
+
+{{< feedback >}}

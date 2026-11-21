@@ -11,7 +11,7 @@ expectations: [A4.3, C2.1, C3.1]
 :::
 
 ::: {.callout-note appearance="simple"}
-**Time:** 75 minutes · **Expectations:** A4.3, C2.1, C3.1 · **Slides:** [Lesson 6 slides](lesson-06-where-do-my-programs-live-slides.qmd) (press **S** for speaker notes) · [Module 1 overview](index.qmd) · **Previous:** [Lesson 5](lesson-05-values-and-types.qmd)
+**Time:** 75 minutes · **Expectations:** A4.3, C2.1, C3.1 · **Slides:** [Lesson 6 slides](lesson-06-where-do-my-programs-live-slides.qmd) (press **S** for speaker notes) · [Module 1 overview](index.qmd) · **Previous:** [Lesson 5](lesson-05-values-and-types.qmd) · **Next:** [Lesson 7](lesson-07-what-python-actually-runs.qmd)
 :::
 
 ## At a Glance
@@ -202,7 +202,7 @@ Every program in this lesson, ready to run outside the browser. Download the `.p
 
 ## Previous and Next {.unlisted}
 
-[← Lesson 5](lesson-05-values-and-types.qmd) · [Lesson 6 slides](lesson-06-where-do-my-programs-live-slides.qmd) · [Module 1 overview](index.qmd) · [Practice →](practice.qmd#after-lesson-6-where-do-my-programs-live)
+[← Lesson 5](lesson-05-values-and-types.qmd) · [Lesson 6 slides](lesson-06-where-do-my-programs-live-slides.qmd) · [Module 1 overview](index.qmd) · [Practice →](practice.qmd#after-lesson-6-where-do-my-programs-live) · [Lesson 7 →](lesson-07-what-python-actually-runs.qmd)
 
 ## Feedback {.unlisted}
 

@@ -32,6 +32,12 @@ The seven-module plan is approved (`decisions.md`, 2026-11-21). Lesson 3 is the 
 - [x] Render clean; no broken links; all steppers checked in Chromium
 - [ ] Author review of Lesson 6; check the sample folder tool on Windows (paths, `py` launcher, OneDrive)
 
+### Module 1, Lesson 7 (built 2026-11-21; awaiting author review)
+
+- [x] Lesson 7, What Python Actually Runs: plan, slides (12), seven example programs; source vs. machine code, compiler vs. interpreter (C3.3, C3.4), the two error kinds as evidence that Python compiles first, live `dis` bytecode box, `platform.python_compiler()`, sorting applications / languages / operating systems (C3.5); Make is `what_runs_this.py`
+- [x] Practice section, answer keys (`lesson-07-answers.md`), links, sidebar; steppers and the live `dis` box checked in Chromium
+- [ ] Author review of Lesson 7
+
 ### Next
 
 1. Sample folder tool: add `--download` (files hosted on the site, licence-checked, falling back to local generation) before Module 5 Lesson 7 reads its download code.
