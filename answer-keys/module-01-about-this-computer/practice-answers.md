@@ -256,3 +256,25 @@ then `NameError: name 'cores' is not defined` on line 4.
 ### Make (`explain_python.py`)
 
 Look for the correct order: source code is compiled to bytecode (syntax checked here), the interpreter carries out the bytecode using machine code the CPU runs, and the operating system starts the interpreter and gives it memory, files, and screen output.
+
+## After Lesson 8
+
+### Read and predict (`l08_practice_read.py`)
+
+```text
+179.98 89.99
+False
+```
+
+1. One value (89.99) and two names (`price`, `copy`) pointing at it.
+2. No. Line 3 makes a new value (CPU multiplies; RAM stores it) and moves `price` to it; `copy` still points to 89.99.
+3. `False`: it asks whether `price` and `copy` are now the same value in memory.
+
+### Modify
+
+1. 64-bit: `10**10` is 32 bytes, `10**20` is 36, `10**40` is 44. It grows in steps of 4 bytes (roughly every nine digits), not with every digit.
+2. No. `sys.getsizeof` measures the value, not the name; the name is stored separately, once.
+
+### Make (`my_computer_specs.py`)
+
+Answers vary. Check: one variable per spec with clear names, an f-string report, and an upgrade recommendation that matches the person's use (e.g. RAM for many browser tabs, video card for gaming).

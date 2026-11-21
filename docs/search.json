@@ -379,6 +379,182 @@
     ]
   },
   {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html",
+    "title": "Lesson 8: Inside the Computer: RAM and CPU",
+    "section": "",
+    "text": "For teachers. This is the lesson plan: use it to prepare and as your script in class. Students work from the slides, the code files and notebooks, and the practice page. The step-through boxes and runnable code are here so you can try every activity first. How a lesson works →",
+    "crumbs": [
+      "For teachers",
+      "Lesson 8 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#at-a-glance",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#at-a-glance",
+    "title": "Lesson 8: Inside the Computer: RAM and CPU",
+    "section": "At a Glance",
+    "text": "At a Glance\n\nBig idea: a running program lives in RAM. Every variable is a value stored there, at an address. Every calculation happens in the CPU. The drive keeps the program when the power is off.\nStudents will: follow a program from the drive into RAM, label each line of a program with the part that does the work, measure how many bytes values take, see a value’s address with id(), and match components to what people need.\nStudents make: an annotated copy of their Parts Receipt, with every line labelled RAM, CPU, or screen.\nPrepare:\n\nIf you can, have an open desktop computer (a refurbished one is perfect) to point at the CPU, RAM sticks, drive, motherboard, power supply, and video card. Otherwise, display a labelled photo.\nRun each l08_ program on the classroom computer and on this page: the byte counts differ, and that’s part of the lesson.\nOpen the slides a few minutes before class so Python finishes loading.\n\nAfter class: Lesson 8 practice.\nWhere it fits: Lesson 7 showed bytecode LOAD, STORE, and BINARY_OP instructions. Today: LOAD and STORE move values between RAM and the CPU, and the operation happens in the CPU. Module 2 measures RAM, cores, and storage on real computers.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 8 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#learning-goals",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#learning-goals",
+    "title": "Lesson 8: Inside the Computer: RAM and CPU",
+    "section": "Learning Goals",
+    "text": "Learning Goals\n\nName the main internal components and what each one does: CPU, RAM, storage drive, motherboard, power supply, video card, cache.\nExplain where a running program’s variables are stored, and where its arithmetic happens.\nUse sys.getsizeof() to see how many bytes a value takes, and id() to see that a value has a place in memory.\nMatch a component upgrade to what a person needs.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 8 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#success-criteria",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#success-criteria",
+    "title": "Lesson 8: Inside the Computer: RAM and CPU",
+    "section": "Success Criteria",
+    "text": "Success Criteria\nStudents can say:\n\nI can label each line of a program with the component doing the work.\nI can explain why my variables disappear when the program ends, but my .py file doesn’t.\nI can recommend which part to upgrade for a given person, and say why.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 8 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#review-5-min",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#review-5-min",
+    "title": "Lesson 8: Inside the Computer: RAM and CPU",
+    "section": "Review (5 min)",
+    "text": "Review (5 min)\nWithout running anything, answer in tracing notebooks:\n\nWhy does a syntax error on the last line stop every line from running?\nIn bytecode, what do LOAD and STORE mean?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 8 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#teach-a-tour-of-the-computer-15-min",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#teach-a-tour-of-the-computer-15-min",
+    "title": "Lesson 8: Inside the Computer: RAM and CPU",
+    "section": "Teach: A Tour of the Computer (15 min)",
+    "text": "Teach: A Tour of the Computer (15 min)\nOpen with the problem: “Last lesson, STORE_NAME cores saved 8 under the name cores. Saved it where? There’s a physical place in this computer where that 8 is sitting right now. Let’s find it.”\nPoint to each part on the open computer (or the photo) as you describe it:\n\n\n\n\n\n\n\n\nComponent\nWhat it does\nLike…\n\n\n\n\nStorage drive (SSD or hard drive)\nKeeps files, including Python and your .py files, when the power is off\nA filing cabinet\n\n\nRAM (memory)\nHolds running programs and their values; fast, but forgets everything when the power goes off\nThe top of your desk\n\n\nCPU (processor)\nCarries out instructions: arithmetic, comparisons, moving values. Its cache is a tiny, very fast memory inside it\nYou, doing the work\n\n\nMotherboard\nConnects everything; carries data between the parts\nThe building’s hallways\n\n\nPower supply\nTurns wall power into the voltages the parts need\n\n\n\nVideo card (GPU)\nTurns output into the picture on the screen\n\n\n\n\nThen trace the journey of a program, adding arrows on the board:\n\nYou press Run. The operating system copies Python (machine code) from the drive into RAM, and starts it.\nPython reads report.py from the drive into RAM, and compiles it to bytecode, also in RAM.\nThe CPU carries out the bytecode: LOAD copies a value from RAM into the CPU; the CPU does the arithmetic; STORE copies the answer back to RAM.\nprint() asks the operating system to show text; the video card draws it on the screen.\nThe program ends. Its part of RAM is handed back. The .py file is still on the drive.\n\n\n\n\n\n\n\nTipTeacher prompt: RAM and CPU (first use)\n\n\n\n\n“The Variables panel in the step-through box is a window into RAM. Every row is a value sitting in memory.”\n“When a line does arithmetic or compares two values, the CPU is doing it. When a line gives a variable a value, the answer is being stored in RAM.”\n“That’s why you save your work: RAM forgets when the power goes off. The drive doesn’t.”",
+    "crumbs": [
+      "For teachers",
+      "Lesson 8 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#predict-then-step-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#predict-then-step-10-min",
+    "title": "Lesson 8: Inside the Computer: RAM and CPU",
+    "section": "Predict, Then Step (10 min)",
+    "text": "Predict, Then Step (10 min)\nBefore stepping, students copy the four lines into tracing notebooks and label each with the components it uses: RAM, CPU, or screen (more than one is fine).\ncores = 8\nspeed_ghz = 3.2\ntotal_ghz = cores * speed_ghz\nprint(\"Total:\", total_ghz, \"GHz\")\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\nAfter line 3: “Two values were copied out of RAM into the CPU, multiplied there, and the answer went back to RAM as total_ghz. Watch it appear in the Variables panel.” After line 4: “The CPU fetches total_ghz from RAM again, and the operating system and video card put the text on the screen.”",
+    "crumbs": [
+      "For teachers",
+      "Lesson 8 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#investigate-20-min",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#investigate-20-min",
+    "title": "Lesson 8: Inside the Computer: RAM and CPU",
+    "section": "Investigate (20 min)",
+    "text": "Investigate (20 min)\n\nHow big is a value? (8 min)\nimport sys\n\nprint(\"8:\", sys.getsizeof(8), \"bytes\")\nprint(\"8 with 21 zeros:\", sys.getsizeof(8 * 10**21), \"bytes\")\nprint(\"3.2:\", sys.getsizeof(3.2), \"bytes\")\nprint(\"'8':\", sys.getsizeof(\"8\"), \"bytes\")\nprint(\"'LAB-PC-14':\", sys.getsizeof(\"LAB-PC-14\"), \"bytes\")\nRun it here, then on the classroom computer, and record both sets of numbers in a table.\n\nWhich takes more memory: the number 8 or the string '8'? Why might that be?\nHow much bigger is 'LAB-PC-14' than '8'? How many bytes does each extra character cost?\nWhy are the numbers different on this web page and on the classroom computer? (Hint: Lesson 1. What kind of computer is this web page?)\n\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\n“Every value carries a little extra information about itself, like its type, so even small values take dozens of bytes. On the classroom computer, a 64-bit processor uses bigger ‘boxes’ than the browser’s 32-bit virtual computer. A gigabyte of RAM is a billion bytes: room for tens of millions of values like these.”\n\n\n\n\nWhere is it? (7 min)\ncores = 1000\nbackup = cores\nprint(id(cores), id(backup))\ncores = 2000\nprint(id(cores), id(backup))\nprint(cores, backup)\nid() gives a number that identifies a value while the program runs. In the classroom computer’s Python, it’s the value’s address in RAM.\n\nAfter line 2, cores and backup have the same id. What does that tell you?\nAfter line 4, cores has a new id but backup doesn’t. What happened in RAM?\nWhy does backup still hold 1000? (Think back to Lesson 2: a variable holds one value at a time.)\n\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\n“A variable is a name pointing at a value in RAM. backup = cores didn’t copy the value; it pointed a second name at the same one. Line 4 made a new value, 2000, somewhere else in RAM, and moved the name cores to it. backup still points at 1000.”\n\n\n\n\nWhich part would you upgrade? (5 min)\nIn pairs, decide which component each person should upgrade, and why:\n\nA student whose laptop slows to a crawl with 40 browser tabs open.\nA video editor whose exports take an hour.\nSomeone who gets “Your disk is almost full” every week.\nA gamer whose games stutter at high graphics settings.\nA family computer that shuts off when a big game starts.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 8 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#modify-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#modify-10-min",
+    "title": "Lesson 8: Inside the Computer: RAM and CPU",
+    "section": "Modify (10 min)",
+    "text": "Modify (10 min)\nPredict each answer before you run it.\n\nHow many bytes does \"LAB\" take? \"LAB\" * 10? \"LAB\" * 100? What’s the pattern?\nTry a string with one emoji, such as \"🖥\". Is it the same as a one-letter string? (Module 4 explains why.)\nDoes True take as much memory as 1?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 8 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#make-trace-your-receipt-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#make-trace-your-receipt-10-min",
+    "title": "Lesson 8: Inside the Computer: RAM and CPU",
+    "section": "Make: Trace Your Receipt (10 min)",
+    "text": "Make: Trace Your Receipt (10 min)\nStudents open their parts_receipt.py from Lesson 5, save a copy as receipt_traced.py in ics3u/module-01/lesson-08/, and add a comment to the end of every line naming the components it uses and what they do, for example:\nram_total = ram_price * ram_quantity  # CPU multiplies two values from RAM; RAM stores the answer\nAt the top, in a comment, they explain where the program is when the computer is off, when it starts, and while it runs.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 8 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#check-exit-ticket-5-min",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#check-exit-ticket-5-min",
+    "title": "Lesson 8: Inside the Computer: RAM and CPU",
+    "section": "Check: Exit Ticket (5 min)",
+    "text": "Check: Exit Ticket (5 min)\n\nLabel each line RAM, CPU, or screen (more than one is fine):\nram_gb = 8\nupgraded = ram_gb * 2\nprint(upgraded)\nWhen the computer is off, where is parts_receipt.py? Where is the value of ram_total?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 8 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#after-the-lesson",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#after-the-lesson",
+    "title": "Lesson 8: Inside the Computer: RAM and CPU",
+    "section": "After the Lesson",
+    "text": "After the Lesson\n\nStudents do the Lesson 8 practice.\nSuggested hand-in: receipt_traced.py.\nRead the exit tickets. Line 2 should name both the CPU (multiplying) and RAM (fetching ram_gb, storing upgraded). If many wrote only “CPU”, revisit LOAD and STORE.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 8 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#code-for-this-lesson",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#code-for-this-lesson",
+    "title": "Lesson 8: Inside the Computer: RAM and CPU",
+    "section": "Code for This Lesson",
+    "text": "Code for This Lesson\nEvery program in this lesson, ready to run outside the browser. Download the .py file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nExit ticket\nl08_exit_ticket.py\nView or download\nCallysto | Colab\n\n\nIds\nl08_ids.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl08_practice_read.py\nView or download\nCallysto | Colab\n\n\nRam CPU\nl08_ram_cpu.py\nView or download\nCallysto | Colab\n\n\nSizes\nl08_sizes.py\nView or download\nCallysto | Colab",
+    "crumbs": [
+      "For teachers",
+      "Lesson 8 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#teacher-notes",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#teacher-notes",
+    "title": "Lesson 8: Inside the Computer: RAM and CPU",
+    "section": "Teacher Notes",
+    "text": "Teacher Notes\n\nA real computer helps. Opening a desktop (unplugged) makes this lesson memorable, and refurbished computers are cheap to keep for it. Point out that the RAM sticks and the drive are separate parts, and that the CPU sits under its cooler.\nThe C1.4 statement. The curriculum’s example, “assignment statements store a value in RAM, arithmetic operations are performed in the CPU”, is exactly the labelling task. Real computers add caches and registers in between; mention cache as “a tiny memory inside the CPU that saves trips to RAM”, and keep registers for students who ask.\nByte counts. On 64-bit CPython: 8 is 28 bytes, a float 24, '8' 50, 'LAB-PC-14' 58 (one byte per extra ASCII character). The web page runs 32-bit WebAssembly, so its numbers are smaller. Don’t make students memorize any of these; the point is that values have a size, and the size depends on the computer.\nid(). In CPython it is the memory address. Python reuses some small values (small integers like 8, short strings), so two variables set separately to 8 may share an id. That’s why the example uses 1000 and 2000 with an explicit backup = cores. Avoid going further into object identity; Module 5’s lists are the place.\nUpgrade answers. RAM (tabs), CPU (and GPU for some editors) for exports, storage drive (full disk), video card (games), power supply (shutting off under load). Module 2 turns this into a program.\nSlides. Open the slides on the projector and this plan on your own screen. Press S for speaker view.\nSpiral. Module 2 asks the computer for its cores and disk space; Module 3 measures CPU speed; Module 6 looks at the drive’s files and the power the lab uses.\nAnswers are in the answer-keys folder of the course’s GitHub repository, not on this site.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 8 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#previous-and-next",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#previous-and-next",
+    "title": "Lesson 8: Inside the Computer: RAM and CPU",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Lesson 7 · Lesson 8 slides · Module 1 overview · Practice →",
+    "crumbs": [
+      "For teachers",
+      "Lesson 8 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#feedback",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#feedback",
+    "title": "Lesson 8: Inside the Computer: RAM and CPU",
+    "section": "Feedback",
+    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 8 plan"
+    ]
+  },
+  {
     "objectID": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html",
     "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html",
     "title": "Lesson 7: What Python Actually Runs",
@@ -537,7 +713,7 @@
     "href": "modules/module-01-about-this-computer/lesson-07-what-python-actually-runs.html#previous-and-next",
     "title": "Lesson 7: What Python Actually Runs",
     "section": "Previous and Next",
-    "text": "Previous and Next\n← Lesson 6 · Lesson 7 slides · Module 1 overview · Practice →",
+    "text": "Previous and Next\n← Lesson 6 · Lesson 7 slides · Module 1 overview · Practice → · Lesson 8 →",
     "crumbs": [
       "For teachers",
       "Lesson 7 plan"
@@ -1625,7 +1801,7 @@
     "href": "modules/module-01-about-this-computer/index.html#lessons",
     "title": "Module 1: About This Computer",
     "section": "Lessons",
-    "text": "Lessons\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\n\n\nPlanned lessons\n\n\n\n\n\n\nPlanned, not yet written. Titles and focus may change as lessons are built.\n\n\n\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n8. Inside the Computer: RAM and CPU\nWhere variables live and where arithmetic happens; sys.getsizeof() and id() (C1.1, C1.4)\nTrace a program and label each line “RAM” or “CPU”\n\n\n9. Talking Back, and a First Look Ahead\nReading a program that greets the user by name with input() and gives a hardware summary (A2.1); then reading a simple if (“if this is Windows…”) and a for loop over a list of facts\nModify the greeter; predict the if program’s output on three operating systems\n\n\n10. Error Clinic\nSyntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4)\nFix five broken report programs\n\n\n11. Review and assignment work period\nA short review game on Lessons 1–10, then class time for the assignment\nFinish the Computer Report Card\n\n\n12. Module 1 test\nCode reading and tracing; a short basics section\n\n\n\n\nEach lesson plan’s Code for This Lesson section has the .py files and notebooks. Students find the same files at the end of each lesson’s section on the Practice page.",
+    "text": "Lessons\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\n8. Inside the Computer: RAM and CPU\nLesson plan\nSlides\nPractice\n\n\n\n\nPlanned lessons\n\n\n\n\n\n\nPlanned, not yet written. Titles and focus may change as lessons are built.\n\n\n\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n9. Talking Back, and a First Look Ahead\nReading a program that greets the user by name with input() and gives a hardware summary (A2.1); then reading a simple if (“if this is Windows…”) and a for loop over a list of facts\nModify the greeter; predict the if program’s output on three operating systems\n\n\n10. Error Clinic\nSyntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4)\nFix five broken report programs\n\n\n11. Review and assignment work period\nA short review game on Lessons 1–10, then class time for the assignment\nFinish the Computer Report Card\n\n\n12. Module 1 test\nCode reading and tracing; a short basics section\n\n\n\n\nEach lesson plan’s Code for This Lesson section has the .py files and notebooks. Students find the same files at the end of each lesson’s section on the Practice page.",
     "crumbs": [
       "Module 1 overview"
     ]
@@ -1994,7 +2170,7 @@
     "href": "index.html#lessons",
     "title": "ICS3U: Introduction to Computer Science",
     "section": "Lessons",
-    "text": "Lessons\nModule 1: About This Computer\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\nModule assignment\n\n\nComputer Report Card\n\n\n\nMore modules are on the way. See the Scope and Sequence for the full plan of seven modules; each planned module already has an overview page under Modules."
+    "text": "Lessons\nModule 1: About This Computer\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\n8. Inside the Computer: RAM and CPU\nLesson plan\nSlides\nPractice\n\n\nModule assignment\n\n\nComputer Report Card\n\n\n\nMore modules are on the way. See the Scope and Sequence for the full plan of seven modules; each planned module already has an overview page under Modules."
   },
   {
     "objectID": "modules/module-01-about-this-computer/assignment.html",
@@ -2954,6 +3130,127 @@
     ]
   },
   {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#review",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#review",
+    "title": "Inside the Computer: RAM and CPU",
+    "section": "Review",
+    "text": "Review\nIn your tracing notebook, without running anything:\n\nWhy does a syntax error on the last line stop every line?\nIn bytecode, what do LOAD and STORE mean?",
+    "crumbs": [
+      "For the class",
+      "Lesson 8 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#cores-8-where-is-that-8",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#cores-8-where-is-that-8",
+    "title": "Inside the Computer: RAM and CPU",
+    "section": "cores = 8 — where is that 8?",
+    "text": "cores = 8 — where is that 8?\n\n\n\n\n\n\n\n\nComponent\nJob\nLike…\n\n\n\n\nStorage drive\nKeeps files when the power is off\nA filing cabinet\n\n\nRAM\nHolds running programs and their values; forgets at power-off\nThe top of your desk\n\n\nCPU\nCarries out instructions; has a small, fast cache\nYou, doing the work\n\n\nMotherboard\nConnects everything\nHallways\n\n\nPower supply · Video card\nPower · the picture on screen\n\n\n\n\n\nOpen with the problem: “STORE_NAME cores saved 8 under the name cores. Saved it where? There’s a physical place in this computer where that 8 is sitting right now.” Point to each part on an open (unplugged) desktop or a labelled photo.",
+    "crumbs": [
+      "For the class",
+      "Lesson 8 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#the-journey-of-a-program",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#the-journey-of-a-program",
+    "title": "Inside the Computer: RAM and CPU",
+    "section": "The journey of a program",
+    "text": "The journey of a program\n\nRun: the OS copies Python from the drive into RAM\nPython reads report.py into RAM and compiles it\nCPU: LOAD from RAM → calculate → STORE back to RAM\nprint(): the OS and video card draw the text\nThe program ends: RAM is handed back; the .py file stays on the drive\n\n\nTEACHER PROMPT (RAM and CPU): “The Variables panel is a window into RAM: every row is a value in memory. When a line does arithmetic or compares, the CPU is doing it. When a line gives a variable a value, the answer is stored in RAM. That’s why you save your work: RAM forgets when the power goes off. The drive doesn’t.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 8 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#label-then-step",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#label-then-step",
+    "title": "Inside the Computer: RAM and CPU",
+    "section": "Label, then step",
+    "text": "Label, then step\ncores = 8\nspeed_ghz = 3.2\ntotal_ghz = cores * speed_ghz\nprint(\"Total:\", total_ghz, \"GHz\")\n\nBefore stepping: students label each line RAM, CPU, or screen. After line 3: “Two values were copied from RAM into the CPU, multiplied, and the answer went back to RAM as total_ghz.” After line 4: “The CPU fetches total_ghz again; the OS and video card put text on the screen.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 8 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#how-big-is-a-value",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#how-big-is-a-value",
+    "title": "Inside the Computer: RAM and CPU",
+    "section": "How big is a value?",
+    "text": "How big is a value?\nimport sys\n\nprint(\"8:\", sys.getsizeof(8), \"bytes\")\nprint(\"8 with 21 zeros:\", sys.getsizeof(8 * 10**21), \"bytes\")\nprint(\"3.2:\", sys.getsizeof(3.2), \"bytes\")\nprint(\"'8':\", sys.getsizeof(\"8\"), \"bytes\")\nprint(\"'LAB-PC-14':\", sys.getsizeof(\"LAB-PC-14\"), \"bytes\")\n\nRun here, then on the classroom computer; record both. Ask: 8 or ‘8’, which is bigger? How many bytes per extra character? Why different here (Lesson 1: a 32-bit virtual computer)? “Every value carries extra information about itself, like its type, so even small values take dozens of bytes. A gigabyte is a billion bytes: tens of millions of values like these.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 8 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#where-is-it",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#where-is-it",
+    "title": "Inside the Computer: RAM and CPU",
+    "section": "Where is it?",
+    "text": "Where is it?\ncores = 1000\nbackup = cores\nprint(id(cores), id(backup))\ncores = 2000\nprint(id(cores), id(backup))\nprint(cores, backup)\n\nid() identifies a value while the program runs; in CPython it’s the address in RAM. Ask: same id after line 2 means? New id for cores after line 4 means? Why does backup still hold 1000? “A variable is a name pointing at a value in RAM. backup = cores pointed a second name at the same value. Line 4 made a new value somewhere else and moved the name cores to it.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 8 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#which-part-would-you-upgrade",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#which-part-would-you-upgrade",
+    "title": "Inside the Computer: RAM and CPU",
+    "section": "Which part would you upgrade?",
+    "text": "Which part would you upgrade?\n\n40 browser tabs, and the laptop crawls\nVideo exports take an hour\n“Your disk is almost full” every week\nGames stutter at high graphics settings\nThe computer shuts off when a big game starts\n\n\nPairs, 5 minutes. RAM; CPU (and GPU); storage drive; video card; power supply.",
+    "crumbs": [
+      "For the class",
+      "Lesson 8 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#modify",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#modify",
+    "title": "Inside the Computer: RAM and CPU",
+    "section": "Modify",
+    "text": "Modify\n\n\"LAB\", \"LAB\" * 10, \"LAB\" * 100: the pattern?\nA one-emoji string, \"🖥\"\nTrue vs 1",
+    "crumbs": [
+      "For the class",
+      "Lesson 8 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#make-trace-your-receipt",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#make-trace-your-receipt",
+    "title": "Inside the Computer: RAM and CPU",
+    "section": "Make: trace your receipt",
+    "text": "Make: trace your receipt\n\nCopy parts_receipt.py to ics3u/module-01/lesson-08/receipt_traced.py\nComment every line with the components it uses:\n\nram_total = ram_price * ram_quantity  # CPU multiplies two values from RAM; RAM stores the answer\n\nAt the top: where is the program when the computer is off, when it starts, and while it runs?",
+    "crumbs": [
+      "For the class",
+      "Lesson 8 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#exit-ticket",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#exit-ticket",
+    "title": "Inside the Computer: RAM and CPU",
+    "section": "Exit ticket",
+    "text": "Exit ticket\n\nLabel each line RAM, CPU, or screen:\n\nram_gb = 8\nupgraded = ram_gb * 2\nprint(upgraded)\n\nComputer off: where is parts_receipt.py? Where is the value of ram_total?",
+    "crumbs": [
+      "For the class",
+      "Lesson 8 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#after-class",
+    "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer-slides.html#after-class",
+    "title": "Inside the Computer: RAM and CPU",
+    "section": "After class",
+    "text": "After class\n\nDo the Lesson 8 practice: read and predict first, then run\nFinish receipt_traced.py\nToday’s programs are on the practice page: download the .py files, or open them as notebooks in Callysto or Colab",
+    "crumbs": [
+      "For the class",
+      "Lesson 8 slides"
+    ]
+  },
+  {
     "objectID": "modules/module-01-about-this-computer/practice.html",
     "href": "modules/module-01-about-this-computer/practice.html",
     "title": "Module 1 Practice",
@@ -3036,6 +3333,17 @@
     "title": "Module 1 Practice",
     "section": "After Lesson 7: What Python Actually Runs",
     "text": "After Lesson 7: What Python Actually Runs\n\nRead and predict\nRead this program without running it. In your tracing notebook, write the exact output. Then type your prediction and press Step.\n\nHow many lines print before the program stops?\nIs the problem a syntax error or a run-time error? How can you tell before running it?\nWhich step would catch it: compiling to bytecode, or running the bytecode?\n\nprint(\"Checking\")\nspeed = 3.2\nprint(\"Speed:\", speed)\nprint(\"Per core:\", speed / cores)\nprint(\"Finished\")\n\n\nSpot the mistake\nPredict what will happen, then press Step.\n\nThe mistake is on line 3. Why don’t lines 1 and 2 print?\nWhat is the error, and how do you fix it?\n\nprint(\"Report\")\nprint(\"CPU:\", \"arm64\")\nprint(\"RAM: 8 GB)\n\n\nModify\nPredict each change, then run it.\n\nWhich instructions come from line 2? Find the multiplication.\nChange * 3 to + 3. What changes in the bytecode?\nAdd a third line, print(total). Which new instructions appear?\n\n\n\n\n\n\n\n\n\nMake\nOn your classroom computer, write explain_python.py in ics3u/module-01/lesson-07/. At the top, in a comment, explain in your own words what happens between pressing Run and seeing output. Use all of these words: source code, compiler or compiling, bytecode, interpreter, machine code, CPU, operating system. Below it, write a two-line program, and paste its dis output as a comment at the bottom.\n\n\nCode files\nLesson 7’s programs, including the ones above. Download a .py file, or open the notebook in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nBytecode\nl07_bytecode.py\nView or download\nCallysto | Colab\n\n\nPractice mistake\nl07_practice_mistake.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl07_practice_read.py\nView or download\nCallysto | Colab\n\n\nRuntime error\nl07_runtime_error.py\nView or download\nCallysto | Colab\n\n\nSyntax error\nl07_syntax_error.py\nView or download\nCallysto | Colab\n\n\nWho built python\nl07_who_built_python.py\nView or download\nCallysto | Colab",
+    "crumbs": [
+      "For students",
+      "Practice"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/practice.html#after-lesson-8-inside-the-computer-ram-and-cpu",
+    "href": "modules/module-01-about-this-computer/practice.html#after-lesson-8-inside-the-computer-ram-and-cpu",
+    "title": "Module 1 Practice",
+    "section": "After Lesson 8: Inside the Computer: RAM and CPU",
+    "text": "After Lesson 8: Inside the Computer: RAM and CPU\n\nRead and predict\nRead this program without running it. In your tracing notebook, label each line with the components it uses (RAM, CPU, screen), then write the exact output. Then type your prediction and press Step, watching the Variables panel.\n\nAfter line 2, how many values are in RAM? How many names?\nLine 3 gives price a new value. Does copy change?\nWhat does line 5 print? What question is it asking?\n\nprice = 89.99\ncopy = price\nprice = price * 2\nprint(price, copy)\nprint(id(price) == id(copy))\n\n\nModify\nPredict each answer before you run it.\n\nHow does the size change as a number gets longer? Try 10**10, 10**20, and 10**40. Does it grow with every digit, or in steps?\nDoes a longer variable name make the value bigger? Test it.\n\n\n\n\n\n\n\n\n\nMake\nChoose a real computer: your own, a family computer, or one you’d like to buy. Find its CPU, RAM, storage, and video card (Windows: Settings → System → About; macOS: Apple menu → About This Mac). On your classroom computer, write my_computer_specs.py in ics3u/module-01/lesson-08/ that stores each spec in a well-named variable and prints a labelled report with f-strings. Finish with a comment: which part would you upgrade first, for what you use it for, and why?\n\n\nCode files\nLesson 8’s programs, including the ones above. Download a .py file, or open the notebook in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nIds\nl08_ids.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl08_practice_read.py\nView or download\nCallysto | Colab\n\n\nRam CPU\nl08_ram_cpu.py\nView or download\nCallysto | Colab\n\n\nSizes\nl08_sizes.py\nView or download\nCallysto | Colab",
     "crumbs": [
       "For students",
       "Practice"

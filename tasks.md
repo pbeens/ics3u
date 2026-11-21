@@ -38,6 +38,12 @@ The seven-module plan is approved (`decisions.md`, 2026-11-21). Lesson 3 is the 
 - [x] Practice section, answer keys (`lesson-07-answers.md`), links, sidebar; steppers and the live `dis` box checked in Chromium
 - [ ] Author review of Lesson 7
 
+### Module 1, Lesson 8 (built 2026-11-21; awaiting author review)
+
+- [x] Lesson 8, Inside the Computer: RAM and CPU: plan, slides (11), five example programs; component tour (C1.1) and a program's journey from drive to RAM to CPU; labelling lines RAM / CPU / screen (C1.4); `sys.getsizeof` (64-bit vs. the browser's 32-bit sizes) and `id()`; upgrade scenarios; Make annotates the Parts Receipt
+- [x] Practice section, answer keys (`lesson-08-answers.md`), links, sidebar; steppers checked in Chromium
+- [ ] Author review of Lesson 8
+
 ### Next
 
 1. Sample folder tool: add `--download` (files hosted on the site, licence-checked, falling back to local generation) before Module 5 Lesson 7 reads its download code.

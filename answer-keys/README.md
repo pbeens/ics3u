@@ -15,6 +15,7 @@ Answer keys and teacher-only material. This folder is in the public GitHub repos
 - [module-01-about-this-computer/lesson-05-answers.md](module-01-about-this-computer/lesson-05-answers.md) — answers for Module 1, Lesson 5.
 - [module-01-about-this-computer/lesson-06-answers.md](module-01-about-this-computer/lesson-06-answers.md) — answers for Module 1, Lesson 6.
 - [module-01-about-this-computer/lesson-07-answers.md](module-01-about-this-computer/lesson-07-answers.md) — answers for Module 1, Lesson 7.
+- [module-01-about-this-computer/lesson-08-answers.md](module-01-about-this-computer/lesson-08-answers.md) — answers for Module 1, Lesson 8.
 - [module-01-about-this-computer/practice-answers.md](module-01-about-this-computer/practice-answers.md) — answers for the Module 1 practice.
 - [module-01-about-this-computer/assignment-marking.md](module-01-about-this-computer/assignment-marking.md) — marking notes for the Module 1 assignment.
 - [module-01-about-this-computer/quick-build-system-banner-marking.md](module-01-about-this-computer/quick-build-system-banner-marking.md) — marking notes and a sample solution for the System Banner Quick Build.

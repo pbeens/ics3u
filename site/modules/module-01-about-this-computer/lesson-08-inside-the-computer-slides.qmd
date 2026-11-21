@@ -1,0 +1,123 @@
+---
+title: "Inside the Computer: RAM and CPU"
+subtitle: "Module 1, Lesson 8"
+format:
+  live-revealjs:
+    theme: default
+    slide-number: true
+    code-line-numbers: true
+    toc: false
+    footer: "[← Lesson 8 plan](lesson-08-inside-the-computer.html) · [Module 1](index.html)"
+engine: markdown
+---
+
+## Review
+
+In your tracing notebook, without running anything:
+
+1. Why does a syntax error on the last line stop *every* line?
+2. In bytecode, what do `LOAD` and `STORE` mean?
+
+## `cores = 8` — where *is* that 8?
+
+| Component | Job | Like… |
+|---|---|---|
+| Storage drive | Keeps files when the power is off | A filing cabinet |
+| **RAM** | Holds running programs and their values; forgets at power-off | The top of your desk |
+| **CPU** | Carries out instructions; has a small, fast **cache** | You, doing the work |
+| Motherboard | Connects everything | Hallways |
+| Power supply · Video card | Power · the picture on screen | |
+
+::: {.notes}
+Open with the problem: "STORE_NAME cores saved 8 under the name cores. Saved it where? There's a physical place in this computer where that 8 is sitting right now." Point to each part on an open (unplugged) desktop or a labelled photo.
+:::
+
+## The journey of a program
+
+1. **Run:** the OS copies Python from the **drive** into **RAM**
+2. Python reads `report.py` into **RAM** and compiles it
+3. **CPU:** `LOAD` from RAM → calculate → `STORE` back to RAM
+4. `print()`: the OS and **video card** draw the text
+5. The program ends: RAM is handed back; the `.py` file stays on the drive
+
+::: {.notes}
+TEACHER PROMPT (RAM and CPU): "The Variables panel is a window into RAM: every row is a value in memory. When a line does arithmetic or compares, the CPU is doing it. When a line gives a variable a value, the answer is stored in RAM. That's why you save your work: RAM forgets when the power goes off. The drive doesn't."
+:::
+
+## Label, then step
+
+{{< stepper file="examples/l08_ram_cpu.py" >}}
+
+::: {.notes}
+Before stepping: students label each line RAM, CPU, or screen. After line 3: "Two values were copied from RAM into the CPU, multiplied, and the answer went back to RAM as total_ghz." After line 4: "The CPU fetches total_ghz again; the OS and video card put text on the screen."
+:::
+
+## How big is a value?
+
+{{< stepper file="examples/l08_sizes.py" >}}
+
+::: {.notes}
+Run here, then on the classroom computer; record both. Ask: 8 or '8', which is bigger? How many bytes per extra character? Why different here (Lesson 1: a 32-bit virtual computer)? "Every value carries extra information about itself, like its type, so even small values take dozens of bytes. A gigabyte is a billion bytes: tens of millions of values like these."
+:::
+
+## Where is it?
+
+{{< stepper file="examples/l08_ids.py" >}}
+
+::: {.notes}
+id() identifies a value while the program runs; in CPython it's the address in RAM. Ask: same id after line 2 means? New id for cores after line 4 means? Why does backup still hold 1000? "A variable is a name pointing at a value in RAM. backup = cores pointed a second name at the same value. Line 4 made a new value somewhere else and moved the name cores to it."
+:::
+
+## Which part would you upgrade?
+
+1. 40 browser tabs, and the laptop crawls
+2. Video exports take an hour
+3. "Your disk is almost full" every week
+4. Games stutter at high graphics settings
+5. The computer shuts off when a big game starts
+
+::: {.notes}
+Pairs, 5 minutes. RAM; CPU (and GPU); storage drive; video card; power supply.
+:::
+
+## Modify
+
+1. `"LAB"`, `"LAB" * 10`, `"LAB" * 100`: the pattern?
+2. A one-emoji string, `"🖥"`
+3. `True` vs `1`
+
+```{pyodide}
+import sys
+
+print(sys.getsizeof("LAB"))
+print(sys.getsizeof("LAB" * 10))
+```
+
+## Make: trace your receipt
+
+- Copy `parts_receipt.py` to `ics3u/module-01/lesson-08/receipt_traced.py`
+- Comment every line with the components it uses:
+
+```python
+ram_total = ram_price * ram_quantity  # CPU multiplies two values from RAM; RAM stores the answer
+```
+
+- At the top: where is the program when the computer is off, when it starts, and while it runs?
+
+## Exit ticket
+
+1. Label each line RAM, CPU, or screen:
+
+```python
+ram_gb = 8
+upgraded = ram_gb * 2
+print(upgraded)
+```
+
+2. Computer off: where is `parts_receipt.py`? Where is the value of `ram_total`?
+
+## After class
+
+- Do the [Lesson 8 practice](practice.qmd#after-lesson-8-inside-the-computer-ram-and-cpu): read and predict first, then run
+- Finish `receipt_traced.py`
+- Today's programs are on the practice page: download the `.py` files, or open them as notebooks in Callysto or Colab

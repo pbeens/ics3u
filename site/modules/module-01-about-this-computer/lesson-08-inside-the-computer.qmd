@@ -1,0 +1,196 @@
+---
+title: "Lesson 8: Inside the Computer: RAM and CPU"
+subtitle: "Module 1 — About This Computer"
+format: live-html
+engine: markdown
+expectations: [A1.1, C1.1, C1.4]
+---
+
+::: {.callout-important appearance="simple" icon=false}
+**For teachers.** This is the lesson plan: use it to prepare and as your script in class. Students work from the **slides**, the **code files and notebooks**, and the **practice** page. The step-through boxes and runnable code are here so you can try every activity first. [How a lesson works →](../../how-a-lesson-works.qmd)
+:::
+
+::: {.callout-note appearance="simple"}
+**Time:** 75 minutes · **Expectations:** A1.1, C1.1, C1.4 · **Slides:** [Lesson 8 slides](lesson-08-inside-the-computer-slides.qmd) (press **S** for speaker notes) · [Module 1 overview](index.qmd) · **Previous:** [Lesson 7](lesson-07-what-python-actually-runs.qmd)
+:::
+
+## At a Glance
+
+- **Big idea:** a running program lives in RAM. Every variable is a value stored there, at an address. Every calculation happens in the CPU. The drive keeps the program when the power is off.
+- **Students will:** follow a program from the drive into RAM, label each line of a program with the part that does the work, measure how many bytes values take, see a value's address with `id()`, and match components to what people need.
+- **Students make:** an annotated copy of their Parts Receipt, with every line labelled RAM, CPU, or screen.
+- **Prepare:**
+  - If you can, have an open desktop computer (a refurbished one is perfect) to point at the CPU, RAM sticks, drive, motherboard, power supply, and video card. Otherwise, display a labelled photo.
+  - Run each `l08_` program on the classroom computer and on this page: the byte counts differ, and that's part of the lesson.
+  - Open the slides a few minutes before class so Python finishes loading.
+- **After class:** [Lesson 8 practice](practice.qmd#after-lesson-8-inside-the-computer-ram-and-cpu).
+- **Where it fits:** Lesson 7 showed bytecode `LOAD`, `STORE`, and `BINARY_OP` instructions. Today: `LOAD` and `STORE` move values between RAM and the CPU, and the operation happens in the CPU. Module 2 measures RAM, cores, and storage on real computers.
+
+## Learning Goals
+
+- Name the main internal components and what each one does: CPU, RAM, storage drive, motherboard, power supply, video card, cache.
+- Explain where a running program's variables are stored, and where its arithmetic happens.
+- Use `sys.getsizeof()` to see how many bytes a value takes, and `id()` to see that a value has a place in memory.
+- Match a component upgrade to what a person needs.
+
+## Success Criteria
+
+Students can say:
+
+- I can label each line of a program with the component doing the work.
+- I can explain why my variables disappear when the program ends, but my `.py` file doesn't.
+- I can recommend which part to upgrade for a given person, and say why.
+
+## Review (5 min)
+
+Without running anything, answer in tracing notebooks:
+
+1. Why does a syntax error on the last line stop *every* line from running?
+2. In bytecode, what do `LOAD` and `STORE` mean?
+
+## Teach: A Tour of the Computer (15 min)
+
+Open with the problem: "Last lesson, `STORE_NAME cores` saved 8 under the name `cores`. Saved it *where*? There's a physical place in this computer where that 8 is sitting right now. Let's find it."
+
+Point to each part on the open computer (or the photo) as you describe it:
+
+| Component | What it does | Like… |
+|---|---|---|
+| **Storage drive** (SSD or hard drive) | Keeps files, including Python and your `.py` files, when the power is off | A filing cabinet |
+| **RAM** (memory) | Holds running programs and their values; fast, but forgets everything when the power goes off | The top of your desk |
+| **CPU** (processor) | Carries out instructions: arithmetic, comparisons, moving values. Its **cache** is a tiny, very fast memory inside it | You, doing the work |
+| **Motherboard** | Connects everything; carries data between the parts | The building's hallways |
+| **Power supply** | Turns wall power into the voltages the parts need | |
+| **Video card** (GPU) | Turns output into the picture on the screen | |
+
+Then trace the journey of a program, adding arrows on the board:
+
+1. You press **Run**. The operating system copies Python (machine code) from the **drive** into **RAM**, and starts it.
+2. Python reads `report.py` from the **drive** into **RAM**, and compiles it to bytecode, also in **RAM**.
+3. The **CPU** carries out the bytecode: `LOAD` copies a value from **RAM** into the CPU; the CPU does the arithmetic; `STORE` copies the answer back to **RAM**.
+4. `print()` asks the operating system to show text; the **video card** draws it on the screen.
+5. The program ends. Its part of RAM is handed back. The `.py` file is still on the drive.
+
+::: {.callout-tip title="Teacher prompt: RAM and CPU (first use)"}
+- "The Variables panel in the step-through box is a window into RAM. Every row is a value sitting in memory."
+- "When a line does arithmetic or compares two values, the CPU is doing it. When a line gives a variable a value, the answer is being stored in RAM."
+- "That's why you save your work: RAM forgets when the power goes off. The drive doesn't."
+:::
+
+## Predict, Then Step (10 min)
+
+Before stepping, students copy the four lines into tracing notebooks and label each with the components it uses: **RAM**, **CPU**, or **screen** (more than one is fine).
+
+{{< stepper file="examples/l08_ram_cpu.py" >}}
+
+::: {.callout-tip title="Teacher prompt"}
+After line 3: "Two values were copied out of RAM into the CPU, multiplied there, and the answer went back to RAM as `total_ghz`. Watch it appear in the Variables panel." After line 4: "The CPU fetches `total_ghz` from RAM again, and the operating system and video card put the text on the screen."
+:::
+
+## Investigate (20 min)
+
+### How big is a value? (8 min)
+
+{{< stepper file="examples/l08_sizes.py" >}}
+
+Run it here, then on the classroom computer, and record both sets of numbers in a table.
+
+1. Which takes more memory: the number `8` or the string `'8'`? Why might that be?
+2. How much bigger is `'LAB-PC-14'` than `'8'`? How many bytes does each extra character cost?
+3. Why are the numbers different on this web page and on the classroom computer? (Hint: Lesson 1. What kind of computer is this web page?)
+
+::: {.callout-tip title="Teacher prompt"}
+"Every value carries a little extra information about itself, like its type, so even small values take dozens of bytes. On the classroom computer, a 64-bit processor uses bigger 'boxes' than the browser's 32-bit virtual computer. A gigabyte of RAM is a billion bytes: room for tens of millions of values like these."
+:::
+
+### Where is it? (7 min)
+
+{{< stepper file="examples/l08_ids.py" >}}
+
+`id()` gives a number that identifies a value while the program runs. In the classroom computer's Python, it's the value's **address** in RAM.
+
+1. After line 2, `cores` and `backup` have the same id. What does that tell you?
+2. After line 4, `cores` has a new id but `backup` doesn't. What happened in RAM?
+3. Why does `backup` still hold 1000? (Think back to Lesson 2: a variable holds one value at a time.)
+
+::: {.callout-tip title="Teacher prompt"}
+"A variable is a *name* pointing at a value in RAM. `backup = cores` didn't copy the value; it pointed a second name at the same one. Line 4 made a new value, 2000, somewhere else in RAM, and moved the name `cores` to it. `backup` still points at 1000."
+:::
+
+### Which part would you upgrade? (5 min)
+
+In pairs, decide which component each person should upgrade, and why:
+
+1. A student whose laptop slows to a crawl with 40 browser tabs open.
+2. A video editor whose exports take an hour.
+3. Someone who gets "Your disk is almost full" every week.
+4. A gamer whose games stutter at high graphics settings.
+5. A family computer that shuts off when a big game starts.
+
+## Modify (10 min)
+
+Predict each answer before you run it.
+
+1. How many bytes does `"LAB"` take? `"LAB" * 10`? `"LAB" * 100`? What's the pattern?
+2. Try a string with one emoji, such as `"🖥"`. Is it the same as a one-letter string? (Module 4 explains why.)
+3. Does `True` take as much memory as `1`?
+
+```{pyodide}
+import sys
+
+print(sys.getsizeof("LAB"))
+print(sys.getsizeof("LAB" * 10))
+```
+
+## Make: Trace Your Receipt (10 min)
+
+Students open their `parts_receipt.py` from Lesson 5, save a copy as `receipt_traced.py` in `ics3u/module-01/lesson-08/`, and add a comment to the end of every line naming the components it uses and what they do, for example:
+
+```python
+ram_total = ram_price * ram_quantity  # CPU multiplies two values from RAM; RAM stores the answer
+```
+
+At the top, in a comment, they explain where the program is when the computer is off, when it starts, and while it runs.
+
+## Check: Exit Ticket (5 min)
+
+1. Label each line RAM, CPU, or screen (more than one is fine):
+
+   ```python
+   ram_gb = 8
+   upgraded = ram_gb * 2
+   print(upgraded)
+   ```
+
+2. When the computer is off, where is `parts_receipt.py`? Where is the value of `ram_total`?
+
+## After the Lesson
+
+- Students do the [Lesson 8 practice](practice.qmd#after-lesson-8-inside-the-computer-ram-and-cpu).
+- **Suggested hand-in:** `receipt_traced.py`.
+- Read the exit tickets. Line 2 should name both the CPU (multiplying) and RAM (fetching `ram_gb`, storing `upgraded`). If many wrote only "CPU", revisit `LOAD` and `STORE`.
+
+## Code for This Lesson
+
+Every program in this lesson, ready to run outside the browser. Download the `.py` file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.
+
+{{< lesson-code >}}
+
+## Teacher Notes
+
+- **A real computer helps.** Opening a desktop (unplugged) makes this lesson memorable, and refurbished computers are cheap to keep for it. Point out that the RAM sticks and the drive are separate parts, and that the CPU sits under its cooler.
+- **The C1.4 statement.** The curriculum's example, "assignment statements store a value in RAM, arithmetic operations are performed in the CPU", is exactly the labelling task. Real computers add caches and registers in between; mention cache as "a tiny memory inside the CPU that saves trips to RAM", and keep registers for students who ask.
+- **Byte counts.** On 64-bit CPython: `8` is 28 bytes, a float 24, `'8'` 50, `'LAB-PC-14'` 58 (one byte per extra ASCII character). The web page runs 32-bit WebAssembly, so its numbers are smaller. Don't make students memorize any of these; the point is that values have a size, and the size depends on the computer.
+- **`id()`.** In CPython it is the memory address. Python reuses some small values (small integers like 8, short strings), so two variables set separately to 8 may share an id. That's why the example uses 1000 and 2000 with an explicit `backup = cores`. Avoid going further into object identity; Module 5's lists are the place.
+- **Upgrade answers.** RAM (tabs), CPU (and GPU for some editors) for exports, storage drive (full disk), video card (games), power supply (shutting off under load). Module 2 turns this into a program.
+- **Slides.** Open the slides on the projector and this plan on your own screen. Press **S** for speaker view.
+- **Spiral.** Module 2 asks the computer for its cores and disk space; Module 3 measures CPU speed; Module 6 looks at the drive's files and the power the lab uses.
+- Answers are in the `answer-keys` folder of the course's GitHub repository, not on this site.
+
+## Previous and Next {.unlisted}
+
+[← Lesson 7](lesson-07-what-python-actually-runs.qmd) · [Lesson 8 slides](lesson-08-inside-the-computer-slides.qmd) · [Module 1 overview](index.qmd) · [Practice →](practice.qmd#after-lesson-8-inside-the-computer-ram-and-cpu)
+
+## Feedback {.unlisted}
+
+{{< feedback >}}

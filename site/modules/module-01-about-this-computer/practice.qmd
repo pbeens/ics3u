@@ -344,6 +344,42 @@ Lesson 7's programs, including the ones above. Download a `.py` file, or open th
 
 {{< lesson-code lesson="07" hide="exit_ticket" >}}
 
+## After Lesson 8: Inside the Computer: RAM and CPU
+
+### Read and predict
+
+Read this program **without running it**. In your tracing notebook, label each line with the components it uses (RAM, CPU, screen), then write the exact output. Then type your prediction and press **Step**, watching the Variables panel.
+
+1. After line 2, how many values are in RAM? How many names?
+2. Line 3 gives `price` a new value. Does `copy` change?
+3. What does line 5 print? What question is it asking?
+
+{{< stepper file="examples/l08_practice_read.py" >}}
+
+### Modify
+
+Predict each answer before you run it.
+
+1. How does the size change as a number gets longer? Try `10**10`, `10**20`, and `10**40`. Does it grow with every digit, or in steps?
+2. Does a longer variable *name* make the value bigger? Test it.
+
+```{pyodide}
+import sys
+
+big = 10**10
+print(sys.getsizeof(big))
+```
+
+### Make
+
+Choose a real computer: your own, a family computer, or one you'd like to buy. Find its CPU, RAM, storage, and video card (Windows: **Settings → System → About**; macOS: **Apple menu → About This Mac**). On your classroom computer, write `my_computer_specs.py` in `ics3u/module-01/lesson-08/` that stores each spec in a well-named variable and prints a labelled report with f-strings. Finish with a comment: which part would you upgrade first, for what you use it for, and why?
+
+### Code files
+
+Lesson 8's programs, including the ones above. Download a `.py` file, or open the notebook in Callysto or Colab.
+
+{{< lesson-code lesson="08" hide="exit_ticket" >}}
+
 ## Next
 
 When you've finished the Lesson 1 and Lesson 2 practice, start the [Module 1 Assignment](assignment.qmd). After Lesson 3, finish the [System Banner](quick-build-system-banner.qmd); after Lesson 5, the [Parts Receipt](quick-build-parts-receipt.qmd).
