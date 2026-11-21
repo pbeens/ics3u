@@ -55,7 +55,7 @@ Students run their folder detective on a sample folder generated with their own 
 ## Notes for Teachers
 
 - **Open computers needed.** On a managed computer, this module's problem is files: the course folder and sample folder must stay put between classes (no reset on log-off), and security software may flag a program that reads, hashes, and copies hundreds of files. Check the [requirements table](../../before-you-begin.qmd#what-students-programs-need) with IT before the module starts.
-- **Sample folder, not students' own files.** `make_sample_folder.py` (planned; see the [Scope and Sequence](../../scope-and-sequence.qmd#course-tools)) builds the same messy folder for everyone, or a different one per student with `--seed`. If a program wrecks it, run the script again.
+- **Sample folder, not students' own files.** [`make_sample_folder.py`](../../tools/make_sample_folder.py) (see the [Scope and Sequence](../../scope-and-sequence.qmd#course-tools)) builds the same messy folder for everyone, or a different one per student with `--seed`. If a program wrecks it, run the script again.
 - **Read-only programs.** Nothing in this module deletes or moves files. Tell students why: programs that delete files are dangerous, and you always back up first. A "dry run" (print what *would* happen) is the safe habit.
 - **Lists, not dictionaries.** The curriculum asks for one-dimensional arrays, so use lists (and parallel lists). Dictionaries can appear as a marked extension.
 - **Electricity rates:** use the current Ontario rate, and let students look it up.

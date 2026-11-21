@@ -16,6 +16,7 @@ subtitle: "About 15 hours · For teachers"
 | 3. Getting Output Right | [Lesson plan](lesson-03-getting-output-right.qmd) | [Slides](lesson-03-getting-output-right-slides.qmd) | [Practice](practice.qmd#after-lesson-3-getting-output-right) · [Quick Build: System Banner](quick-build-system-banner.qmd) |
 | 4. Better Reports with f-strings | [Lesson plan](lesson-04-better-reports-with-f-strings.qmd) | [Slides](lesson-04-better-reports-with-f-strings-slides.qmd) | [Practice](practice.qmd#after-lesson-4-better-reports-with-f-strings) |
 | 5. Values and Types | [Lesson plan](lesson-05-values-and-types.qmd) | [Slides](lesson-05-values-and-types-slides.qmd) | [Practice](practice.qmd#after-lesson-5-values-and-types) · [Quick Build: Parts Receipt](quick-build-parts-receipt.qmd) |
+| 6. Where Do My Programs Live? | [Lesson plan](lesson-06-where-do-my-programs-live.qmd) | [Slides](lesson-06-where-do-my-programs-live-slides.qmd) | [Practice](practice.qmd#after-lesson-6-where-do-my-programs-live) |
 
 ### Planned lessons
 
@@ -25,7 +26,6 @@ subtitle: "About 15 hours · For teachers"
 
 | Lesson | Focus | Students read, then build |
 |---|---|---|
-| 6. Where Do My Programs Live? | Files, folders, and paths; organizing a course folder on local and shared drives; the parts of the editor (C2.1, C3.1); first run of the sample folder generator; reading a two-line program that prints the current folder | Explain the course folder students set up on day one, then add the toolkit folder; run the same file from the editor and the terminal |
 | 7. What Python Actually Runs | Source code vs. machine code; interpreters vs. compilers; bytecode with `dis`; applications vs. languages vs. operating systems (C3.3, C3.4, C3.5) | Match `dis` output to lines of code; sort running programs into apps, languages, and OS parts |
 | 8. Inside the Computer: RAM and CPU | Where variables live and where arithmetic happens; `sys.getsizeof()` and `id()` (C1.1, C1.4) | Trace a program and label each line "RAM" or "CPU" |
 | 9. Talking Back, and a First Look Ahead | Reading a program that greets the user by name with `input()` and gives a hardware summary (A2.1); then reading a simple `if` ("if this is Windows…") and a `for` loop over a list of facts | Modify the greeter; predict the `if` program's output on three operating systems |

@@ -60,7 +60,7 @@ When you download a lesson's `.py` file, it lands in Downloads. **Move it into t
 
 Once a week, copy your whole `ics3u` folder to a USB key or a cloud drive. A lost or broken computer shouldn't cost you a semester of work. In Module 6 you'll write a program that does this for you.
 
-You'll learn more about files, folders, and paths in Module 1, Lesson 6. For now, a tidy folder is enough.
+You'll learn more about files, folders, and paths in [Module 1, Lesson 6](modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.qmd). For now, a tidy folder is enough.
 
 ## Previous and Next {.unlisted}
 

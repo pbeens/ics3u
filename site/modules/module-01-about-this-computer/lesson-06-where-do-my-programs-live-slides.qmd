@@ -1,0 +1,128 @@
+---
+title: "Where Do My Programs Live?"
+subtitle: "Module 1, Lesson 6"
+format:
+  live-revealjs:
+    theme: default
+    slide-number: true
+    code-line-numbers: true
+    toc: false
+    footer: "[← Lesson 6 plan](lesson-06-where-do-my-programs-live.html) · [Module 1](index.html)"
+engine: markdown
+---
+
+## Review
+
+In your tracing notebook, without running anything:
+
+1. What type is each: `"512"`, `512`, `512.0`, `512 > 256`?
+2. Why does `print("RAM: " + 8)` crash? Fix it.
+
+## Where is this program?
+
+{{< stepper file="examples/l06_where_am_i.py" >}}
+
+::: {.notes}
+Open with the problem: "Hands up if you've saved something and couldn't find it. When your program runs, where is it, and what can it see from there?" Run it on the classroom computer too. TEACHER PROMPT (paths): "os talks to the operating system. getcwd() means get current working directory; directory means folder. The answer is a path: the address, folder by folder from the top of the drive. Windows uses backslashes and a drive letter; macOS and Linux use forward slashes. On this page it's /home/pyodide: a folder inside the browser's virtual computer. Lesson 1 again."
+:::
+
+## Every file has an address
+
+```text
+/Users/sam/ics3u/
+├── module-01/
+│   ├── lesson-06/
+│   └── assignment/
+│       └── report_card.py
+└── toolkit/
+```
+
+- **Full path:** `/Users/sam/ics3u/module-01/assignment/report_card.py`
+- **Relative path** (from `module-01`): `assignment/report_card.py`
+
+::: {.notes}
+Trace both paths with a finger. Windows: C:\Users\sam\ics3u\... A relative path starts from the current folder.
+:::
+
+## Predict, then step
+
+{{< stepper file="examples/l06_paths.py" >}}
+
+::: {.notes}
+About 10 minutes. Ask: what will each line print here? What do basename and dirname do? Does report_card.py have to exist for line 7? "os.path.join glues folder names together with the right slash for the computer it runs on. It only builds the address; it doesn't check whether anything lives there."
+:::
+
+## The parts of your editor
+
+| Part | What it's for |
+|---|---|
+| Code editor | Writing and saving the program |
+| Shell or terminal | Output; typing one line of Python |
+| Run button | Saves and runs |
+| **Debugger** | One line at a time, showing variables |
+| File browser | Folders and files |
+
+::: {.notes}
+Students copy the table and find each part in their own editor. TEACHER PROMPT (debugger): "Step-through boxes are a simple debugger. Your editor has a real one: Thonny's bug button, IDLE's Debug > Debugger, VS Code's Run and Debug. Try it on l06_paths.py."
+:::
+
+## Run it from the terminal
+
+1. Open a terminal
+2. `cd ics3u`
+3. Save [`make_sample_folder.py`](../../tools/make_sample_folder.py){download="make_sample_folder.py"} in `ics3u`, then **read the comment at the top**
+4. `python3 make_sample_folder.py` (Windows: `py make_sample_folder.py`)
+5. Where did `sample-folder` appear? Why there?
+
+::: {.notes}
+TEACHER PROMPT (terminal): "The terminal has a current folder too. cd means change directory. To run a program, type python3 (Windows: py) and its name; it starts in the terminal's current folder. Nothing here can break the computer." Then: run l06_where_am_i.py from ics3u: python3 module-01/lesson-06/l06_where_am_i.py. It prints ics3u's path, not lesson-06's. "The current folder is where you started the program, not where the file lives. That's why sample-folder appeared inside ics3u."
+:::
+
+## Spot the problem
+
+{{< stepper file="examples/l06_mistake_folder.py" >}}
+
+::: {.notes}
+Run-time error (line 3 printed). FileNotFoundError: there's no toolkit folder in the current folder (here /home/pyodide; Errno 44 in the browser, Errno 2 on a real computer). Ask: the same file works when run from ics3u but crashes when double-clicked in lesson-06. Why?
+:::
+
+## Modify (on the classroom computer)
+
+```python
+import os
+
+folder = os.getcwd()
+items = os.listdir(folder)
+print(f"{folder} has {len(items)} items")
+print("Is there a toolkit folder?", os.path.isdir("toolkit"))
+```
+
+1. Run it from the editor, then from the terminal in `ics3u`. Why different?
+2. Check for `sample-folder` instead
+3. Print the list itself
+
+## Make: start your toolkit
+
+- Make `ics3u/toolkit`
+- Copy in your best programs: `report_card.py`, `system_banner_v2.py`, `parts_receipt.py`
+- Write `toolkit/folder_check.py`: the current folder's path and name, how many items, and whether `toolkit` and `sample-folder` are there
+- Run it from the terminal and from the editor; explain the difference in a comment
+
+## Exit ticket
+
+1. Write the exact output on a Mac:
+
+```python
+import os
+
+print(os.path.basename("/Users/sam/ics3u/toolkit"))
+print(os.path.join("ics3u", "module-01", "lesson-06"))
+```
+
+2. What would the second line print on Windows?
+
+## After class
+
+- Do the [Lesson 6 practice](practice.qmd#after-lesson-6-where-do-my-programs-live): read and predict first, then run
+- Finish `folder_check.py`
+- Today's programs are on the practice page: download the `.py` files, or open them as notebooks in Callysto or Colab

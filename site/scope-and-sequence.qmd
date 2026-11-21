@@ -82,7 +82,7 @@ A spiral brings every idea back, but basics also need practice until they're aut
 
 ## Course Tools {#course-tools}
 
-- **Sample folder generator (planned):** `make_sample_folder.py` builds a realistic, messy folder for file lessons: text, CSV, Python, and log files, real PNG images, zip archives, sub-folders, awkward names, duplicates, and backdated files. It uses only the standard library. With a fixed seed every student gets the same folder, so answer keys have exact answers; `--seed` gives each student a different one. It deletes only inside folders it created itself, so students can rebuild after a mistake. An optional `--download` adds real, licence-checked files hosted on this site, falling back to local generation if the network blocks it. Used in Modules 1, 5 (reading its download code), 6, and 7.
+- **Sample folder generator:** [`make_sample_folder.py`](tools/make_sample_folder.py) builds a realistic, messy folder for file lessons: text, CSV, Python, and log files, real PNG images, zip archives, sub-folders, awkward names, duplicates, and backdated files. It uses only the standard library. With a fixed seed every student gets the same folder, so answer keys have exact answers; `--seed` gives each student a different one. It deletes only inside folders it created itself, so students can rebuild after a mistake. Planned: an optional `--download` that adds real, licence-checked files hosted on this site, falling back to local generation if the network blocks it. Used in Modules 1, 5 (reading its download code), 6, and 7.
 
 ## Modules
 

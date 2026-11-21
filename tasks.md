@@ -24,9 +24,17 @@ The seven-module plan is approved (`decisions.md`, 2026-11-21). Lesson 3 is the 
 - [x] Notebooks rebuilt; render clean; no broken links; all steppers on Lessons 4–5 and the Practice page run in Chromium with expected output (the browser runs Python 3.13)
 - [ ] Author review of Lessons 4–5
 
+### Module 1, Lesson 6 and the sample folder tool (built 2026-11-21; awaiting author review)
+
+- [x] `site/tools/make_sample_folder.py` (published via `resources`; README in `site/tools/`): 156 files, about 7 MB, in documents, data, photos (real PNGs, dated sub-folders, 8 duplicate copies), music (WAV), projects, logs (with a zip), downloads (large filler and an empty file), old-stuff (up to 8 years old), and an empty folder. Tested: same seed gives byte-identical files and dates (also identical on Python 3.9 and 3.11); `--seed` changes it; refuses unmarked folders and files; `--reset` rebuilds only its own. `--download` still planned.
+- [x] Lesson 6, Where Do My Programs Live?: plan, slides (12), seven example programs; paths, `os.getcwd()`, `os.path`; parts of the editor and its debugger (C3.1); first terminal use and first run of the sample folder tool; `FileNotFoundError`; Make starts the `toolkit` folder with `folder_check.py`
+- [x] Practice section, answer keys (`lesson-06-answers.md`), links, sidebar; Scope and Sequence and Module 6 now link the tool
+- [x] Render clean; no broken links; all steppers checked in Chromium
+- [ ] Author review of Lesson 6; check the sample folder tool on Windows (paths, `py` launcher, OneDrive)
+
 ### Next
 
-1. Build `make_sample_folder.py` (planned for `site/tools/`): standard library only; fixed and per-student seeds; safe reset; optional `--download` from files hosted on the site. Needed by Module 1 Lesson 6.
+1. Sample folder tool: add `--download` (files hosted on the site, licence-checked, falling back to local generation) before Module 5 Lesson 7 reads its download code.
 2. Quizzes for Lessons 1–2, in `answer-keys/module-01-about-this-computer/` (public in the repo, off the site).
 3. Documents for written work: Word (`.docx`) and fillable PDF versions of longer written parts. Recommendation: Quarto's `docx` output from the same source (uploads to Drive convert to Google Docs); fillable PDFs only for fixed forms such as the test plan table. Decide before Module 2's assignment.
 4. Confirm the Colab values in Lesson 1's teacher notes by running the program in Colab (needs the author's account).
@@ -41,7 +49,7 @@ The seven-module plan is approved (`decisions.md`, 2026-11-21). Lesson 3 is the 
 ## Open Questions
 
 - **Parked (2026-11-21, author away for a week): generic name, ICS3U as the main alignment.** Before announcing the site, consider renaming it so the URL isn't tied to ICS3U ("design to one, map to many"): ICS3U stays the backbone (hours, pacing, assessment, Strand D) and its codes stay on the pages; other curricula get alignment pages built from compliance audits (first: TEJ4M, once the author has the curriculum PDF; later other provinces and states). Steps: (1) author picks a name and URL slug; (2) rename the repo, update about 30 files with repo or URL references (site config, feedback script, notebook Colab/Callysto links, READMEs), add redirect pages for old `/ics3u/` links, retitle the site, record the decision; (3) TEJ4M audit and alignment page; (4) then send the ACSE email. Ontario-specific details (HST, electricity rates, Computers for Schools; about 11 places) need only "use your local rate" notes.
-- **ACSE reviewer email** (`acse-review-request-email.md`, draft, not committed): on hold until the naming question is settled. Update the URL, the lesson count, and the TEJ4M angle before sending; decide whether to keep the draft out of the public repo.
+- **ACSE reviewer email** (`acse-review-request-email.md`, draft, not committed): on hold until the naming question is settled. Update the URL, the lesson count, and the TEJ4M angle before sending; the draft is git-ignored (author's change).
 
 - **Idea to consider (2026-11-18): two tracks.** Track 1 (current plan) builds computer-related utilities. Track 2 would teach the same ideas through creating media and art, the way Turing graphics did for Ontario beginners. Notes for discussion:
   - Standard-library options: `turtle` (closest to Turing's drawing commands), `tkinter` Canvas (shapes, animation, simple games), writing SVG files as plain text (they open and edit in Inkscape), and generating sound with the `wave` module. Third-party options as extensions: Pillow (images), pygame-ce (games and animation), py5 (Processing-style).

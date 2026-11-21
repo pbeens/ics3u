@@ -7,6 +7,7 @@ project:
   resources:
     - .nojekyll
     - "modules/*/examples/*.py"
+    - "tools/*.py"
 
 lang: en-CA
 
@@ -78,6 +79,8 @@ website:
               text: "Lesson 4 plan"
             - href: modules/module-01-about-this-computer/lesson-05-values-and-types.qmd
               text: "Lesson 5 plan"
+            - href: modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.qmd
+              text: "Lesson 6 plan"
         - section: "For the class"
           contents:
             - href: modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.qmd
@@ -90,6 +93,8 @@ website:
               text: "Lesson 4 slides"
             - href: modules/module-01-about-this-computer/lesson-05-values-and-types-slides.qmd
               text: "Lesson 5 slides"
+            - href: modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.qmd
+              text: "Lesson 6 slides"
         - section: "For students"
           contents:
             - href: course-folder.qmd

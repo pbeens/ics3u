@@ -1,0 +1,209 @@
+---
+title: "Lesson 6: Where Do My Programs Live?"
+subtitle: "Module 1 — About This Computer"
+format: live-html
+engine: markdown
+expectations: [A4.3, C2.1, C3.1]
+---
+
+::: {.callout-important appearance="simple" icon=false}
+**For teachers.** This is the lesson plan: use it to prepare and as your script in class. Students work from the **slides**, the **code files and notebooks**, and the **practice** page. The step-through boxes and runnable code are here so you can try every activity first. [How a lesson works →](../../how-a-lesson-works.qmd)
+:::
+
+::: {.callout-note appearance="simple"}
+**Time:** 75 minutes · **Expectations:** A4.3, C2.1, C3.1 · **Slides:** [Lesson 6 slides](lesson-06-where-do-my-programs-live-slides.qmd) (press **S** for speaker notes) · [Module 1 overview](index.qmd) · **Previous:** [Lesson 5](lesson-05-values-and-types.qmd)
+:::
+
+## At a Glance
+
+- **Big idea:** every file has an address (its *path*), and every running program has a *current folder*. Where you start a program decides which files it can find.
+- **Students will:** ask a program where it's running, take a path apart, label the parts of their editor, open a terminal, and build the course's sample folder with a real tool.
+- **Students make:** a `toolkit` folder holding their best programs so far, and a short program that reports on the folder it's run from.
+- **Prepare:**
+  - Run `make_sample_folder.py` once on a student computer, from the student's `ics3u` folder, and check it makes a `sample-folder` there (about 7 MB, 156 files).
+  - Check that students can open a terminal. On managed computers this is the first lesson most likely to hit a block; see [Before You Begin](../../before-you-begin.qmd#what-students-programs-need).
+  - Know how your editor runs a program: some start it in the program's own folder, others in the folder you opened. Run `l06_where_am_i.py` from your editor and note the answer.
+  - Open the slides a few minutes before class so Python finishes loading.
+- **After class:** [Lesson 6 practice](practice.qmd#after-lesson-6-where-do-my-programs-live).
+- **Where it fits:** students set up their [course folder](../../course-folder.qmd) in Lesson 1. Today they find out why it's organized that way. Module 6 uses the sample folder for every lesson.
+
+## Learning Goals
+
+- Explain what a path is, and the difference between a full path and a relative one.
+- Find a program's current folder with `os.getcwd()`, and explain why it matters.
+- Name the main parts of an editor: the code editor, the shell, the debugger, and the file browser.
+- Run a program from the terminal.
+
+## Success Criteria
+
+Students can say:
+
+- I can read a path and say which folder a file is in.
+- I can explain why a program can't find a file that's sitting right there.
+- I can run a program from my editor and from the terminal.
+
+## Review (5 min)
+
+Without running anything, answer in tracing notebooks:
+
+1. What type is each value: `"512"`, `512`, `512.0`, `512 > 256`?
+2. Why does `print("RAM: " + 8)` crash? Fix it.
+
+## Teach: Every File Has an Address (15 min)
+
+Open with the problem: "Hands up if you've ever saved something and then couldn't find it. Today's question: when your program runs, *where* is it? And what can it see from there?"
+
+Show the program before running it:
+
+```python
+import os
+
+print(os.getcwd())
+```
+
+Run it on the classroom computer, then in the box below.
+
+{{< stepper file="examples/l06_where_am_i.py" >}}
+
+::: {.callout-tip title="Teacher prompt: paths (first use)"}
+- "`os` is a module for talking to the operating system. `getcwd()` means *get current working directory*. *Directory* is another word for folder."
+- "The answer is a **path**: the file's address, folder by folder from the top of the drive. `/Users/sam/ics3u` means: start at the top, go into `Users`, then `sam`, then `ics3u`."
+- "Windows writes paths with backslashes and a drive letter: `C:\Users\sam\ics3u`. macOS and Linux use forward slashes. Same idea."
+- "On this web page, the answer is `/home/pyodide`: a folder inside the browser's little virtual computer. That's Lesson 1 again: the code runs somewhere, and *where* changes the answer."
+:::
+
+Draw the course folder on the board as a tree, and trace two paths with a finger: the full path to `report_card.py`, and the path to it *from* `module-01` (`assignment/report_card.py`). A path that starts from the current folder is a **relative** path.
+
+## Predict, Then Step (10 min)
+
+Read this program **without running it**, then answer in tracing notebooks:
+
+1. Using the answer from Teach, what will each line print on this web page?
+2. What do `basename` and `dirname` do to a path?
+3. Line 7 builds a path. Does `report_card.py` have to exist for it to work?
+
+{{< stepper file="examples/l06_paths.py" >}}
+
+::: {.callout-tip title="Teacher prompt"}
+"`os.path.join` glues folder names together with the right slash for whatever computer it runs on: forward slashes here, backslashes on Windows. It only builds the address; it doesn't check whether anything lives there."
+:::
+
+## Investigate (20 min)
+
+### The parts of your editor (5 min)
+
+Students copy this table into their tracing notebooks and fill in the last column for the editor they use, by finding each part on screen.
+
+| Part | What it's for | Where it is in my editor |
+|---|---|---|
+| Code editor | Writing and saving the program | |
+| Shell or terminal | Where output appears; where you can type one line of Python | |
+| Run button | Saves and runs the program | |
+| Debugger | Runs the program one line at a time, showing variables | |
+| File browser | Shows the folders and files | |
+
+::: {.callout-tip title="Teacher prompt: the editor's debugger (first use)"}
+"You've been using step-through boxes since Lesson 1. They're a simple **debugger**. Your editor has a real one: in Thonny it's the bug button, in IDLE it's **Debug → Debugger**, in VS Code it's **Run and Debug**. Same idea: one line at a time, watching the variables. Try it on `l06_paths.py`."
+:::
+
+### Run it from the terminal, and build the sample folder (10 min)
+
+The terminal is a window where you type commands instead of clicking.
+
+::: {.callout-tip title="Teacher prompt: the terminal (first use)"}
+- "The terminal always has a current folder too. `cd` means *change directory*: it moves you into a folder."
+- "To run a Python program, type `python3` (on Windows, `py`) and the program's name. The program starts in the terminal's current folder."
+- "Nothing here can break the computer. If you get lost, close the window and open a new one."
+:::
+
+1. Open a terminal. (Windows: **Terminal** or **Command Prompt**. macOS: **Terminal**. Linux or Raspberry Pi: **Terminal**.)
+2. Go to the course folder: `cd ics3u` (works if the terminal opens in your home folder; otherwise `cd %USERPROFILE%\ics3u` on Windows, `cd ~/ics3u` on macOS and Linux).
+3. Download [`make_sample_folder.py`](../../tools/make_sample_folder.py){download="make_sample_folder.py"} and save it directly in your `ics3u` folder.
+4. Before running it, open it in your editor and read the comment at the top. What will it make? What will it never delete?
+5. Run it: `python3 make_sample_folder.py` (Windows: `py make_sample_folder.py`).
+6. Open your `ics3u` folder in the file browser. Where did `sample-folder` appear? Why there?
+7. Save `l06_where_am_i.py` (from the code table at the end of the lesson) in `ics3u/module-01/lesson-06/`. Run it from the terminal, from the `ics3u` folder: `python3 module-01/lesson-06/l06_where_am_i.py`. It prints `ics3u`'s path, not `lesson-06`'s. Why?
+
+::: {.callout-tip title="Teacher prompt"}
+"The current folder is where you *started* the program, not where the program file lives. That's why the sample folder appeared inside `ics3u`: that's where we were standing. Run the tool from your Downloads folder, and the sample folder appears in Downloads."
+:::
+
+### Spot the problem (5 min)
+
+Predict what will happen, then step through it.
+
+{{< stepper file="examples/l06_mistake_folder.py" >}}
+
+1. Is this a syntax error or a run-time error? How do you know?
+2. What is `FileNotFoundError` telling you? (On this web page, there's no `toolkit` folder in `/home/pyodide`.)
+3. On the classroom computer, a student runs this program from `ics3u`, where a `toolkit` folder exists, and it works. Their partner runs the same file by double-clicking it in `lesson-06`, and it crashes. Explain why.
+
+## Modify (10 min)
+
+On the classroom computer, download `l06_folder_contents.py` into `ics3u/module-01/lesson-06/` and run it from the editor, then from the terminal in `ics3u`. Predict each answer first.
+
+```python
+import os
+
+folder = os.getcwd()
+items = os.listdir(folder)
+print(f"{folder} has {len(items)} items")
+print("Is there a toolkit folder?", os.path.isdir("toolkit"))
+```
+
+1. Why do the two runs give different answers?
+2. Change it to check for `sample-folder` instead of `toolkit`.
+3. `len()` counts the items in the list. Add a line that prints the list itself. What's in it?
+
+## Make: Start Your Toolkit (10 min)
+
+1. In the file browser, make a folder called `toolkit` inside `ics3u`.
+2. Copy into it your best working programs so far: `report_card.py` (once the assignment works), `system_banner_v2.py`, and `parts_receipt.py`.
+3. Write `folder_check.py` and save it in `toolkit`. It prints the current folder's path, its name, how many items it holds, and `True` or `False` for whether `toolkit` and `sample-folder` are in it. Use an f-string for at least one line.
+4. Run it from the terminal in `ics3u`. Then run it from the editor. Write in a comment at the bottom why the answers differ (or don't, in your editor).
+
+## Check: Exit Ticket (5 min)
+
+1. Write the exact output on a Mac:
+
+   ```python
+   import os
+
+   print(os.path.basename("/Users/sam/ics3u/toolkit"))
+   print(os.path.join("ics3u", "module-01", "lesson-06"))
+   ```
+
+2. What would the second line print on Windows?
+
+## After the Lesson
+
+- Students do the [Lesson 6 practice](practice.qmd#after-lesson-6-where-do-my-programs-live).
+- **Suggested hand-in:** `folder_check.py`, with both runs' output and the explanation in comments at the bottom.
+- Read the exit tickets. If many missed the backslashes on Windows, revisit the point that `os.path.join` adapts to the computer it runs on.
+
+## Code for This Lesson
+
+Every program in this lesson, ready to run outside the browser. Download the `.py` file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.
+
+{{< lesson-code >}}
+
+## Teacher Notes
+
+- **Why now.** From here on students download tools, keep a toolkit, and (in Module 6) scan folders. They need the idea of a current folder before a `FileNotFoundError` teaches it the hard way.
+- **Editors differ.** Thonny and IDLE usually run a program in its own folder; VS Code usually runs it in the folder you opened (the workspace), unless its settings say otherwise. Double-clicking a `.py` file in Windows runs it in its own folder. Don't memorize the rules: teach students to *check* with `os.getcwd()`.
+- **`python3` or `py`.** On Windows, the Python installer adds the `py` launcher; `python` may open the Microsoft Store instead. On macOS and Linux, use `python3`.
+- **The sample folder.** About 7 MB and 156 files: notes, CSV data, real PNG images, WAV sounds, Python files, logs, a zip archive, duplicates, awkward names, an empty folder, and files dated up to eight years back. Everyone who uses the default seed gets an identical folder, so answer keys in Module 6 can give exact counts. It refuses to overwrite a folder it didn't make, and `--reset` rebuilds its own. Details are in the [Scope and Sequence](../../scope-and-sequence.qmd#course-tools).
+- **OneDrive and synced folders.** If students' home folders sync to OneDrive or a network drive, building 156 files triggers a sync; see the advice on the [course folder page](../../course-folder.qmd).
+- **Shared drives (C2.1).** Talk through where the course folder would live on a school network drive, and why local is used here: speed, and Module 6's file work. Keep the backup habit from the course folder page.
+- **`FileNotFoundError` on the web page** shows `[Errno 44]`; on a real computer it's `[Errno 2]`. Same error, different numbering in the browser's virtual system.
+- **Slides.** Open the slides on the projector and this plan on your own screen. Press **S** for speaker view.
+- **Spiral.** Paths and `os` come back in Module 2 (`shutil.disk_usage` on a drive), Module 5 (writing a log file), and all of Module 6.
+- Answers are in the `answer-keys` folder of the course's GitHub repository, not on this site.
+
+## Previous and Next {.unlisted}
+
+[← Lesson 5](lesson-05-values-and-types.qmd) · [Lesson 6 slides](lesson-06-where-do-my-programs-live-slides.qmd) · [Module 1 overview](index.qmd) · [Practice →](practice.qmd#after-lesson-6-where-do-my-programs-live)
+
+## Feedback {.unlisted}
+
+{{< feedback >}}

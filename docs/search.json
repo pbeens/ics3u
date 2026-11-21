@@ -46,7 +46,7 @@
     "href": "scope-and-sequence.html#course-tools",
     "title": "Scope and Sequence",
     "section": "Course Tools",
-    "text": "Course Tools\n\nSample folder generator (planned): make_sample_folder.py builds a realistic, messy folder for file lessons: text, CSV, Python, and log files, real PNG images, zip archives, sub-folders, awkward names, duplicates, and backdated files. It uses only the standard library. With a fixed seed every student gets the same folder, so answer keys have exact answers; --seed gives each student a different one. It deletes only inside folders it created itself, so students can rebuild after a mistake. An optional --download adds real, licence-checked files hosted on this site, falling back to local generation if the network blocks it. Used in Modules 1, 5 (reading its download code), 6, and 7."
+    "text": "Course Tools\n\nSample folder generator: make_sample_folder.py builds a realistic, messy folder for file lessons: text, CSV, Python, and log files, real PNG images, zip archives, sub-folders, awkward names, duplicates, and backdated files. It uses only the standard library. With a fixed seed every student gets the same folder, so answer keys have exact answers; --seed gives each student a different one. It deletes only inside folders it created itself, so students can rebuild after a mistake. Planned: an optional --download that adds real, licence-checked files hosted on this site, falling back to local generation if the network blocks it. Used in Modules 1, 5 (reading its download code), 6, and 7."
   },
   {
     "objectID": "scope-and-sequence.html#modules",
@@ -130,7 +130,7 @@
     "href": "modules/module-06-data-detective/index.html#notes-for-teachers",
     "title": "Module 6: Data Detective",
     "section": "Notes for Teachers",
-    "text": "Notes for Teachers\n\nOpen computers needed. On a managed computer, this module’s problem is files: the course folder and sample folder must stay put between classes (no reset on log-off), and security software may flag a program that reads, hashes, and copies hundreds of files. Check the requirements table with IT before the module starts.\nSample folder, not students’ own files. make_sample_folder.py (planned; see the Scope and Sequence) builds the same messy folder for everyone, or a different one per student with --seed. If a program wrecks it, run the script again.\nRead-only programs. Nothing in this module deletes or moves files. Tell students why: programs that delete files are dangerous, and you always back up first. A “dry run” (print what would happen) is the safe habit.\nLists, not dictionaries. The curriculum asks for one-dimensional arrays, so use lists (and parallel lists). Dictionaries can appear as a marked extension.\nElectricity rates: use the current Ontario rate, and let students look it up."
+    "text": "Notes for Teachers\n\nOpen computers needed. On a managed computer, this module’s problem is files: the course folder and sample folder must stay put between classes (no reset on log-off), and security software may flag a program that reads, hashes, and copies hundreds of files. Check the requirements table with IT before the module starts.\nSample folder, not students’ own files. make_sample_folder.py (see the Scope and Sequence) builds the same messy folder for everyone, or a different one per student with --seed. If a program wrecks it, run the script again.\nRead-only programs. Nothing in this module deletes or moves files. Tell students why: programs that delete files are dangerous, and you always back up first. A “dry run” (print what would happen) is the safe habit.\nLists, not dictionaries. The curriculum asks for one-dimensional arrays, so use lists (and parallel lists). Dictionaries can appear as a marked extension.\nElectricity rates: use the current Ontario rate, and let students look it up."
   },
   {
     "objectID": "modules/module-06-data-detective/index.html#how-module-6-fits",
@@ -379,6 +379,182 @@
     ]
   },
   {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html",
+    "title": "Lesson 6: Where Do My Programs Live?",
+    "section": "",
+    "text": "For teachers. This is the lesson plan: use it to prepare and as your script in class. Students work from the slides, the code files and notebooks, and the practice page. The step-through boxes and runnable code are here so you can try every activity first. How a lesson works →",
+    "crumbs": [
+      "For teachers",
+      "Lesson 6 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#at-a-glance",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#at-a-glance",
+    "title": "Lesson 6: Where Do My Programs Live?",
+    "section": "At a Glance",
+    "text": "At a Glance\n\nBig idea: every file has an address (its path), and every running program has a current folder. Where you start a program decides which files it can find.\nStudents will: ask a program where it’s running, take a path apart, label the parts of their editor, open a terminal, and build the course’s sample folder with a real tool.\nStudents make: a toolkit folder holding their best programs so far, and a short program that reports on the folder it’s run from.\nPrepare:\n\nRun make_sample_folder.py once on a student computer, from the student’s ics3u folder, and check it makes a sample-folder there (about 7 MB, 156 files).\nCheck that students can open a terminal. On managed computers this is the first lesson most likely to hit a block; see Before You Begin.\nKnow how your editor runs a program: some start it in the program’s own folder, others in the folder you opened. Run l06_where_am_i.py from your editor and note the answer.\nOpen the slides a few minutes before class so Python finishes loading.\n\nAfter class: Lesson 6 practice.\nWhere it fits: students set up their course folder in Lesson 1. Today they find out why it’s organized that way. Module 6 uses the sample folder for every lesson.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 6 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#learning-goals",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#learning-goals",
+    "title": "Lesson 6: Where Do My Programs Live?",
+    "section": "Learning Goals",
+    "text": "Learning Goals\n\nExplain what a path is, and the difference between a full path and a relative one.\nFind a program’s current folder with os.getcwd(), and explain why it matters.\nName the main parts of an editor: the code editor, the shell, the debugger, and the file browser.\nRun a program from the terminal.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 6 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#success-criteria",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#success-criteria",
+    "title": "Lesson 6: Where Do My Programs Live?",
+    "section": "Success Criteria",
+    "text": "Success Criteria\nStudents can say:\n\nI can read a path and say which folder a file is in.\nI can explain why a program can’t find a file that’s sitting right there.\nI can run a program from my editor and from the terminal.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 6 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#review-5-min",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#review-5-min",
+    "title": "Lesson 6: Where Do My Programs Live?",
+    "section": "Review (5 min)",
+    "text": "Review (5 min)\nWithout running anything, answer in tracing notebooks:\n\nWhat type is each value: \"512\", 512, 512.0, 512 &gt; 256?\nWhy does print(\"RAM: \" + 8) crash? Fix it.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 6 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#teach-every-file-has-an-address-15-min",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#teach-every-file-has-an-address-15-min",
+    "title": "Lesson 6: Where Do My Programs Live?",
+    "section": "Teach: Every File Has an Address (15 min)",
+    "text": "Teach: Every File Has an Address (15 min)\nOpen with the problem: “Hands up if you’ve ever saved something and then couldn’t find it. Today’s question: when your program runs, where is it? And what can it see from there?”\nShow the program before running it:\nimport os\n\nprint(os.getcwd())\nRun it on the classroom computer, then in the box below.\nimport os\n\nprint(os.getcwd())\n\n\n\n\n\n\nTipTeacher prompt: paths (first use)\n\n\n\n\n“os is a module for talking to the operating system. getcwd() means get current working directory. Directory is another word for folder.”\n“The answer is a path: the file’s address, folder by folder from the top of the drive. /Users/sam/ics3u means: start at the top, go into Users, then sam, then ics3u.”\n“Windows writes paths with backslashes and a drive letter: C:\\Users\\sam\\ics3u. macOS and Linux use forward slashes. Same idea.”\n“On this web page, the answer is /home/pyodide: a folder inside the browser’s little virtual computer. That’s Lesson 1 again: the code runs somewhere, and where changes the answer.”\n\n\n\nDraw the course folder on the board as a tree, and trace two paths with a finger: the full path to report_card.py, and the path to it from module-01 (assignment/report_card.py). A path that starts from the current folder is a relative path.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 6 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#predict-then-step-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#predict-then-step-10-min",
+    "title": "Lesson 6: Where Do My Programs Live?",
+    "section": "Predict, Then Step (10 min)",
+    "text": "Predict, Then Step (10 min)\nRead this program without running it, then answer in tracing notebooks:\n\nUsing the answer from Teach, what will each line print on this web page?\nWhat do basename and dirname do to a path?\nLine 7 builds a path. Does report_card.py have to exist for it to work?\n\nimport os\n\nfolder = os.getcwd()\nprint(\"Running in:\", folder)\nprint(\"This folder's name:\", os.path.basename(folder))\nprint(\"The folder it's inside:\", os.path.dirname(folder))\nprint(os.path.join(folder, \"toolkit\", \"report_card.py\"))\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\n“os.path.join glues folder names together with the right slash for whatever computer it runs on: forward slashes here, backslashes on Windows. It only builds the address; it doesn’t check whether anything lives there.”",
+    "crumbs": [
+      "For teachers",
+      "Lesson 6 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#investigate-20-min",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#investigate-20-min",
+    "title": "Lesson 6: Where Do My Programs Live?",
+    "section": "Investigate (20 min)",
+    "text": "Investigate (20 min)\n\nThe parts of your editor (5 min)\nStudents copy this table into their tracing notebooks and fill in the last column for the editor they use, by finding each part on screen.\n\n\n\n\n\n\n\n\nPart\nWhat it’s for\nWhere it is in my editor\n\n\n\n\nCode editor\nWriting and saving the program\n\n\n\nShell or terminal\nWhere output appears; where you can type one line of Python\n\n\n\nRun button\nSaves and runs the program\n\n\n\nDebugger\nRuns the program one line at a time, showing variables\n\n\n\nFile browser\nShows the folders and files\n\n\n\n\n\n\n\n\n\n\nTipTeacher prompt: the editor’s debugger (first use)\n\n\n\n“You’ve been using step-through boxes since Lesson 1. They’re a simple debugger. Your editor has a real one: in Thonny it’s the bug button, in IDLE it’s Debug → Debugger, in VS Code it’s Run and Debug. Same idea: one line at a time, watching the variables. Try it on l06_paths.py.”\n\n\n\n\nRun it from the terminal, and build the sample folder (10 min)\nThe terminal is a window where you type commands instead of clicking.\n\n\n\n\n\n\nTipTeacher prompt: the terminal (first use)\n\n\n\n\n“The terminal always has a current folder too. cd means change directory: it moves you into a folder.”\n“To run a Python program, type python3 (on Windows, py) and the program’s name. The program starts in the terminal’s current folder.”\n“Nothing here can break the computer. If you get lost, close the window and open a new one.”\n\n\n\n\nOpen a terminal. (Windows: Terminal or Command Prompt. macOS: Terminal. Linux or Raspberry Pi: Terminal.)\nGo to the course folder: cd ics3u (works if the terminal opens in your home folder; otherwise cd %USERPROFILE%\\ics3u on Windows, cd ~/ics3u on macOS and Linux).\nDownload make_sample_folder.py and save it directly in your ics3u folder.\nBefore running it, open it in your editor and read the comment at the top. What will it make? What will it never delete?\nRun it: python3 make_sample_folder.py (Windows: py make_sample_folder.py).\nOpen your ics3u folder in the file browser. Where did sample-folder appear? Why there?\nSave l06_where_am_i.py (from the code table at the end of the lesson) in ics3u/module-01/lesson-06/. Run it from the terminal, from the ics3u folder: python3 module-01/lesson-06/l06_where_am_i.py. It prints ics3u’s path, not lesson-06’s. Why?\n\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\n“The current folder is where you started the program, not where the program file lives. That’s why the sample folder appeared inside ics3u: that’s where we were standing. Run the tool from your Downloads folder, and the sample folder appears in Downloads.”\n\n\n\n\nSpot the problem (5 min)\nPredict what will happen, then step through it.\nimport os\n\nprint(\"Looking for the toolkit...\")\nprint(os.listdir(\"toolkit\"))\n\nIs this a syntax error or a run-time error? How do you know?\nWhat is FileNotFoundError telling you? (On this web page, there’s no toolkit folder in /home/pyodide.)\nOn the classroom computer, a student runs this program from ics3u, where a toolkit folder exists, and it works. Their partner runs the same file by double-clicking it in lesson-06, and it crashes. Explain why.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 6 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#modify-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#modify-10-min",
+    "title": "Lesson 6: Where Do My Programs Live?",
+    "section": "Modify (10 min)",
+    "text": "Modify (10 min)\nOn the classroom computer, download l06_folder_contents.py into ics3u/module-01/lesson-06/ and run it from the editor, then from the terminal in ics3u. Predict each answer first.\nimport os\n\nfolder = os.getcwd()\nitems = os.listdir(folder)\nprint(f\"{folder} has {len(items)} items\")\nprint(\"Is there a toolkit folder?\", os.path.isdir(\"toolkit\"))\n\nWhy do the two runs give different answers?\nChange it to check for sample-folder instead of toolkit.\nlen() counts the items in the list. Add a line that prints the list itself. What’s in it?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 6 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#make-start-your-toolkit-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#make-start-your-toolkit-10-min",
+    "title": "Lesson 6: Where Do My Programs Live?",
+    "section": "Make: Start Your Toolkit (10 min)",
+    "text": "Make: Start Your Toolkit (10 min)\n\nIn the file browser, make a folder called toolkit inside ics3u.\nCopy into it your best working programs so far: report_card.py (once the assignment works), system_banner_v2.py, and parts_receipt.py.\nWrite folder_check.py and save it in toolkit. It prints the current folder’s path, its name, how many items it holds, and True or False for whether toolkit and sample-folder are in it. Use an f-string for at least one line.\nRun it from the terminal in ics3u. Then run it from the editor. Write in a comment at the bottom why the answers differ (or don’t, in your editor).",
+    "crumbs": [
+      "For teachers",
+      "Lesson 6 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#check-exit-ticket-5-min",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#check-exit-ticket-5-min",
+    "title": "Lesson 6: Where Do My Programs Live?",
+    "section": "Check: Exit Ticket (5 min)",
+    "text": "Check: Exit Ticket (5 min)\n\nWrite the exact output on a Mac:\nimport os\n\nprint(os.path.basename(\"/Users/sam/ics3u/toolkit\"))\nprint(os.path.join(\"ics3u\", \"module-01\", \"lesson-06\"))\nWhat would the second line print on Windows?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 6 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#after-the-lesson",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#after-the-lesson",
+    "title": "Lesson 6: Where Do My Programs Live?",
+    "section": "After the Lesson",
+    "text": "After the Lesson\n\nStudents do the Lesson 6 practice.\nSuggested hand-in: folder_check.py, with both runs’ output and the explanation in comments at the bottom.\nRead the exit tickets. If many missed the backslashes on Windows, revisit the point that os.path.join adapts to the computer it runs on.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 6 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#code-for-this-lesson",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#code-for-this-lesson",
+    "title": "Lesson 6: Where Do My Programs Live?",
+    "section": "Code for This Lesson",
+    "text": "Code for This Lesson\nEvery program in this lesson, ready to run outside the browser. Download the .py file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nExit ticket\nl06_exit_ticket.py\nView or download\nCallysto | Colab\n\n\nFolder contents\nl06_folder_contents.py\nView or download\nCallysto | Colab\n\n\nMistake: folder\nl06_mistake_folder.py\nView or download\nCallysto | Colab\n\n\nPaths\nl06_paths.py\nView or download\nCallysto | Colab\n\n\nPractice mistake\nl06_practice_mistake.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl06_practice_read.py\nView or download\nCallysto | Colab\n\n\nWhere am i\nl06_where_am_i.py\nView or download\nCallysto | Colab",
+    "crumbs": [
+      "For teachers",
+      "Lesson 6 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#teacher-notes",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#teacher-notes",
+    "title": "Lesson 6: Where Do My Programs Live?",
+    "section": "Teacher Notes",
+    "text": "Teacher Notes\n\nWhy now. From here on students download tools, keep a toolkit, and (in Module 6) scan folders. They need the idea of a current folder before a FileNotFoundError teaches it the hard way.\nEditors differ. Thonny and IDLE usually run a program in its own folder; VS Code usually runs it in the folder you opened (the workspace), unless its settings say otherwise. Double-clicking a .py file in Windows runs it in its own folder. Don’t memorize the rules: teach students to check with os.getcwd().\npython3 or py. On Windows, the Python installer adds the py launcher; python may open the Microsoft Store instead. On macOS and Linux, use python3.\nThe sample folder. About 7 MB and 156 files: notes, CSV data, real PNG images, WAV sounds, Python files, logs, a zip archive, duplicates, awkward names, an empty folder, and files dated up to eight years back. Everyone who uses the default seed gets an identical folder, so answer keys in Module 6 can give exact counts. It refuses to overwrite a folder it didn’t make, and --reset rebuilds its own. Details are in the Scope and Sequence.\nOneDrive and synced folders. If students’ home folders sync to OneDrive or a network drive, building 156 files triggers a sync; see the advice on the course folder page.\nShared drives (C2.1). Talk through where the course folder would live on a school network drive, and why local is used here: speed, and Module 6’s file work. Keep the backup habit from the course folder page.\nFileNotFoundError on the web page shows [Errno 44]; on a real computer it’s [Errno 2]. Same error, different numbering in the browser’s virtual system.\nSlides. Open the slides on the projector and this plan on your own screen. Press S for speaker view.\nSpiral. Paths and os come back in Module 2 (shutil.disk_usage on a drive), Module 5 (writing a log file), and all of Module 6.\nAnswers are in the answer-keys folder of the course’s GitHub repository, not on this site.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 6 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#previous-and-next",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#previous-and-next",
+    "title": "Lesson 6: Where Do My Programs Live?",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Lesson 5 · Lesson 6 slides · Module 1 overview · Practice →",
+    "crumbs": [
+      "For teachers",
+      "Lesson 6 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#feedback",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live.html#feedback",
+    "title": "Lesson 6: Where Do My Programs Live?",
+    "section": "Feedback",
+    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 6 plan"
+    ]
+  },
+  {
     "objectID": "modules/module-01-about-this-computer/lesson-05-values-and-types.html",
     "href": "modules/module-01-about-this-computer/lesson-05-values-and-types.html",
     "title": "Lesson 5: Values and Types",
@@ -537,7 +713,7 @@
     "href": "modules/module-01-about-this-computer/lesson-05-values-and-types.html#previous-and-next",
     "title": "Lesson 5: Values and Types",
     "section": "Previous and Next",
-    "text": "Previous and Next\n← Lesson 4 · Lesson 5 slides · Module 1 overview · Practice →",
+    "text": "Previous and Next\n← Lesson 4 · Lesson 5 slides · Module 1 overview · Practice → · Lesson 6 →",
     "crumbs": [
       "For teachers",
       "Lesson 5 plan"
@@ -1273,7 +1449,7 @@
     "href": "modules/module-01-about-this-computer/index.html#lessons",
     "title": "Module 1: About This Computer",
     "section": "Lessons",
-    "text": "Lessons\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n\n\nPlanned lessons\n\n\n\n\n\n\nPlanned, not yet written. Titles and focus may change as lessons are built.\n\n\n\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n6. Where Do My Programs Live?\nFiles, folders, and paths; organizing a course folder on local and shared drives; the parts of the editor (C2.1, C3.1); first run of the sample folder generator; reading a two-line program that prints the current folder\nExplain the course folder students set up on day one, then add the toolkit folder; run the same file from the editor and the terminal\n\n\n7. What Python Actually Runs\nSource code vs. machine code; interpreters vs. compilers; bytecode with dis; applications vs. languages vs. operating systems (C3.3, C3.4, C3.5)\nMatch dis output to lines of code; sort running programs into apps, languages, and OS parts\n\n\n8. Inside the Computer: RAM and CPU\nWhere variables live and where arithmetic happens; sys.getsizeof() and id() (C1.1, C1.4)\nTrace a program and label each line “RAM” or “CPU”\n\n\n9. Talking Back, and a First Look Ahead\nReading a program that greets the user by name with input() and gives a hardware summary (A2.1); then reading a simple if (“if this is Windows…”) and a for loop over a list of facts\nModify the greeter; predict the if program’s output on three operating systems\n\n\n10. Error Clinic\nSyntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4)\nFix five broken report programs\n\n\n11. Review and assignment work period\nA short review game on Lessons 1–10, then class time for the assignment\nFinish the Computer Report Card\n\n\n12. Module 1 test\nCode reading and tracing; a short basics section\n\n\n\n\nEach lesson plan’s Code for This Lesson section has the .py files and notebooks. Students find the same files at the end of each lesson’s section on the Practice page.",
+    "text": "Lessons\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n\n\nPlanned lessons\n\n\n\n\n\n\nPlanned, not yet written. Titles and focus may change as lessons are built.\n\n\n\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n7. What Python Actually Runs\nSource code vs. machine code; interpreters vs. compilers; bytecode with dis; applications vs. languages vs. operating systems (C3.3, C3.4, C3.5)\nMatch dis output to lines of code; sort running programs into apps, languages, and OS parts\n\n\n8. Inside the Computer: RAM and CPU\nWhere variables live and where arithmetic happens; sys.getsizeof() and id() (C1.1, C1.4)\nTrace a program and label each line “RAM” or “CPU”\n\n\n9. Talking Back, and a First Look Ahead\nReading a program that greets the user by name with input() and gives a hardware summary (A2.1); then reading a simple if (“if this is Windows…”) and a for loop over a list of facts\nModify the greeter; predict the if program’s output on three operating systems\n\n\n10. Error Clinic\nSyntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4)\nFix five broken report programs\n\n\n11. Review and assignment work period\nA short review game on Lessons 1–10, then class time for the assignment\nFinish the Computer Report Card\n\n\n12. Module 1 test\nCode reading and tracing; a short basics section\n\n\n\n\nEach lesson plan’s Code for This Lesson section has the .py files and notebooks. Students find the same files at the end of each lesson’s section on the Practice page.",
     "crumbs": [
       "Module 1 overview"
     ]
@@ -1642,7 +1818,7 @@
     "href": "index.html#lessons",
     "title": "ICS3U: Introduction to Computer Science",
     "section": "Lessons",
-    "text": "Lessons\nModule 1: About This Computer\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\nModule assignment\n\n\nComputer Report Card\n\n\n\nMore modules are on the way. See the Scope and Sequence for the full plan of seven modules; each planned module already has an overview page under Modules."
+    "text": "Lessons\nModule 1: About This Computer\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\nModule assignment\n\n\nComputer Report Card\n\n\n\nMore modules are on the way. See the Scope and Sequence for the full plan of seven modules; each planned module already has an overview page under Modules."
   },
   {
     "objectID": "modules/module-01-about-this-computer/assignment.html",
@@ -2349,6 +2525,127 @@
     ]
   },
   {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#review",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#review",
+    "title": "Where Do My Programs Live?",
+    "section": "Review",
+    "text": "Review\nIn your tracing notebook, without running anything:\n\nWhat type is each: \"512\", 512, 512.0, 512 &gt; 256?\nWhy does print(\"RAM: \" + 8) crash? Fix it.",
+    "crumbs": [
+      "For the class",
+      "Lesson 6 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#where-is-this-program",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#where-is-this-program",
+    "title": "Where Do My Programs Live?",
+    "section": "Where is this program?",
+    "text": "Where is this program?\nimport os\n\nprint(os.getcwd())\n\nOpen with the problem: “Hands up if you’ve saved something and couldn’t find it. When your program runs, where is it, and what can it see from there?” Run it on the classroom computer too. TEACHER PROMPT (paths): “os talks to the operating system. getcwd() means get current working directory; directory means folder. The answer is a path: the address, folder by folder from the top of the drive. Windows uses backslashes and a drive letter; macOS and Linux use forward slashes. On this page it’s /home/pyodide: a folder inside the browser’s virtual computer. Lesson 1 again.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 6 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#every-file-has-an-address",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#every-file-has-an-address",
+    "title": "Where Do My Programs Live?",
+    "section": "Every file has an address",
+    "text": "Every file has an address\n/Users/sam/ics3u/\n├── module-01/\n│   ├── lesson-06/\n│   └── assignment/\n│       └── report_card.py\n└── toolkit/\n\nFull path: /Users/sam/ics3u/module-01/assignment/report_card.py\nRelative path (from module-01): assignment/report_card.py\n\n\nTrace both paths with a finger. Windows: C:3u... A relative path starts from the current folder.",
+    "crumbs": [
+      "For the class",
+      "Lesson 6 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#predict-then-step",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#predict-then-step",
+    "title": "Where Do My Programs Live?",
+    "section": "Predict, then step",
+    "text": "Predict, then step\nimport os\n\nfolder = os.getcwd()\nprint(\"Running in:\", folder)\nprint(\"This folder's name:\", os.path.basename(folder))\nprint(\"The folder it's inside:\", os.path.dirname(folder))\nprint(os.path.join(folder, \"toolkit\", \"report_card.py\"))\n\nAbout 10 minutes. Ask: what will each line print here? What do basename and dirname do? Does report_card.py have to exist for line 7? “os.path.join glues folder names together with the right slash for the computer it runs on. It only builds the address; it doesn’t check whether anything lives there.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 6 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#the-parts-of-your-editor",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#the-parts-of-your-editor",
+    "title": "Where Do My Programs Live?",
+    "section": "The parts of your editor",
+    "text": "The parts of your editor\n\n\n\nPart\nWhat it’s for\n\n\n\n\nCode editor\nWriting and saving the program\n\n\nShell or terminal\nOutput; typing one line of Python\n\n\nRun button\nSaves and runs\n\n\nDebugger\nOne line at a time, showing variables\n\n\nFile browser\nFolders and files\n\n\n\n\nStudents copy the table and find each part in their own editor. TEACHER PROMPT (debugger): “Step-through boxes are a simple debugger. Your editor has a real one: Thonny’s bug button, IDLE’s Debug &gt; Debugger, VS Code’s Run and Debug. Try it on l06_paths.py.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 6 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#run-it-from-the-terminal",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#run-it-from-the-terminal",
+    "title": "Where Do My Programs Live?",
+    "section": "Run it from the terminal",
+    "text": "Run it from the terminal\n\nOpen a terminal\ncd ics3u\nSave make_sample_folder.py in ics3u, then read the comment at the top\npython3 make_sample_folder.py (Windows: py make_sample_folder.py)\nWhere did sample-folder appear? Why there?\n\n\nTEACHER PROMPT (terminal): “The terminal has a current folder too. cd means change directory. To run a program, type python3 (Windows: py) and its name; it starts in the terminal’s current folder. Nothing here can break the computer.” Then: run l06_where_am_i.py from ics3u: python3 module-01/lesson-06/l06_where_am_i.py. It prints ics3u’s path, not lesson-06’s. “The current folder is where you started the program, not where the file lives. That’s why sample-folder appeared inside ics3u.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 6 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#spot-the-problem",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#spot-the-problem",
+    "title": "Where Do My Programs Live?",
+    "section": "Spot the problem",
+    "text": "Spot the problem\nimport os\n\nprint(\"Looking for the toolkit...\")\nprint(os.listdir(\"toolkit\"))\n\nRun-time error (line 3 printed). FileNotFoundError: there’s no toolkit folder in the current folder (here /home/pyodide; Errno 44 in the browser, Errno 2 on a real computer). Ask: the same file works when run from ics3u but crashes when double-clicked in lesson-06. Why?",
+    "crumbs": [
+      "For the class",
+      "Lesson 6 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#modify-on-the-classroom-computer",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#modify-on-the-classroom-computer",
+    "title": "Where Do My Programs Live?",
+    "section": "Modify (on the classroom computer)",
+    "text": "Modify (on the classroom computer)\nimport os\n\nfolder = os.getcwd()\nitems = os.listdir(folder)\nprint(f\"{folder} has {len(items)} items\")\nprint(\"Is there a toolkit folder?\", os.path.isdir(\"toolkit\"))\n\nRun it from the editor, then from the terminal in ics3u. Why different?\nCheck for sample-folder instead\nPrint the list itself",
+    "crumbs": [
+      "For the class",
+      "Lesson 6 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#make-start-your-toolkit",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#make-start-your-toolkit",
+    "title": "Where Do My Programs Live?",
+    "section": "Make: start your toolkit",
+    "text": "Make: start your toolkit\n\nMake ics3u/toolkit\nCopy in your best programs: report_card.py, system_banner_v2.py, parts_receipt.py\nWrite toolkit/folder_check.py: the current folder’s path and name, how many items, and whether toolkit and sample-folder are there\nRun it from the terminal and from the editor; explain the difference in a comment",
+    "crumbs": [
+      "For the class",
+      "Lesson 6 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#exit-ticket",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#exit-ticket",
+    "title": "Where Do My Programs Live?",
+    "section": "Exit ticket",
+    "text": "Exit ticket\n\nWrite the exact output on a Mac:\n\nimport os\n\nprint(os.path.basename(\"/Users/sam/ics3u/toolkit\"))\nprint(os.path.join(\"ics3u\", \"module-01\", \"lesson-06\"))\n\nWhat would the second line print on Windows?",
+    "crumbs": [
+      "For the class",
+      "Lesson 6 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#after-class",
+    "href": "modules/module-01-about-this-computer/lesson-06-where-do-my-programs-live-slides.html#after-class",
+    "title": "Where Do My Programs Live?",
+    "section": "After class",
+    "text": "After class\n\nDo the Lesson 6 practice: read and predict first, then run\nFinish folder_check.py\nToday’s programs are on the practice page: download the .py files, or open them as notebooks in Callysto or Colab",
+    "crumbs": [
+      "For the class",
+      "Lesson 6 slides"
+    ]
+  },
+  {
     "objectID": "modules/module-01-about-this-computer/practice.html",
     "href": "modules/module-01-about-this-computer/practice.html",
     "title": "Module 1 Practice",
@@ -2409,6 +2706,17 @@
     "title": "Module 1 Practice",
     "section": "After Lesson 5: Values and Types",
     "text": "After Lesson 5: Values and Types\n\nRead and predict\nRead this program without running it. In your tracing notebook, write the type of each variable, then the exact output. Then type your prediction and press Step.\n\nWhat three types does line 4 print?\nLine 5 multiplies an int by a float. What type is the answer?\nLines 6 and 7 use * and + with a string. What does each do?\nWhat does line 8 print, and what type is it?\n\ncores = 8\nspeed_ghz = 3.2\nname = \"LAB-PC-14\"\nprint(type(cores), type(speed_ghz), type(name))\nprint(cores * speed_ghz)\nprint(name * 2)\nprint(str(cores) + \" cores\")\nprint(cores &gt; 4)\n\n\nSpot the mistake\nPredict what will happen, then press Step.\n\nWhich line stops the program? What kind of error is it?\nWhat is the TypeError message telling you?\nFix it two ways: by changing line 1, and by changing line 3 with int().\n\nstorage_gb = \"512\"\nused_gb = 200\nfree_gb = storage_gb - used_gb\nprint(f\"Free: {free_gb} GB\")\n\n\nModify\nPredict each change, then run it.\n\nWhat type is photos? Why?\nNobody stores part of a photo. Print the number of photos as a whole number, using int().\nPut quotation marks around 4.5. What happens? Why?\n\n\n\n\n\n\n\n\n\nMake\nA school buys 30 refurbished computers at $219.99 each. On your classroom computer, write a program that prints the cost before tax, the HST (13%), the total, and the cost per computer including tax. Store the price, the number of computers, and the tax rate in variables (the tax rate as a constant), and show every amount to two decimal places. Save it as lab_budget.py in ics3u/module-01/lesson-05/.\n\n\nCode files\nLesson 5’s programs, including the ones above. Download a .py file, or open the notebook in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nArithmetic\nl05_arithmetic.py\nView or download\nCallysto | Colab\n\n\nMistake: concat\nl05_mistake_concat.py\nView or download\nCallysto | Colab\n\n\nMistake: repeat\nl05_mistake_repeat.py\nView or download\nCallysto | Colab\n\n\nPractice mistake\nl05_practice_mistake.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl05_practice_read.py\nView or download\nCallysto | Colab\n\n\nTypes\nl05_types.py\nView or download\nCallysto | Colab\n\n\nVersion numbers\nl05_version_numbers.py\nView or download\nCallysto | Colab",
+    "crumbs": [
+      "For students",
+      "Practice"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/practice.html#after-lesson-6-where-do-my-programs-live",
+    "href": "modules/module-01-about-this-computer/practice.html#after-lesson-6-where-do-my-programs-live",
+    "title": "Module 1 Practice",
+    "section": "After Lesson 6: Where Do My Programs Live?",
+    "text": "After Lesson 6: Where Do My Programs Live?\n\nRead and predict\nRead this program without running it. On this web page, the home folder is /home/pyodide. In your tracing notebook, write the exact output. Then type your prediction and press Step.\n\nWhat does os.path.expanduser(\"~\") give you? (The ~ is short for “my home folder”.)\nWhat will line 7 print here? Would it print the same on your classroom computer?\nWhat type of value does os.path.isdir() give back?\n\nimport os\n\nhome = os.path.expanduser(\"~\")\ncourse = os.path.join(home, \"ics3u\")\nprint(\"Home folder:\", home)\nprint(\"Course folder:\", course)\nprint(\"Course folder exists:\", os.path.isdir(course))\nprint(\"Last part:\", os.path.basename(course))\n\n\nSpot the mistake\nPredict what will happen, then press Step.\n\nWhat printed before the program stopped? What kind of error is it?\nThe message mentions int. Which value is the problem?\nFix it two ways: with str(), and by changing line 3.\n\nimport os\n\nyear = 2026\nprint(\"Building the path...\")\nprint(os.path.join(\"ics3u\", \"backups\", year))\n\n\nModify\nPredict each change, then run it.\n\nPrint just the name of the lesson folder, lesson-06. (Hint: use basename on the result of dirname.)\nBuild the path to sample-folder/photos inside /Users/sam/ics3u, using os.path.join.\nWhat does os.path.basename(\"/Users/sam/ics3u/\") print? Why?\n\n\n\n\n\n\n\n\n\nMake\nWhere does Python itself live on your computer? On your classroom computer, write where_is_python.py (in ics3u/module-01/lesson-06/) that prints the full path to the Python program that’s running it (sys.executable, after import sys), then the name of the folder it’s in. Run it from your editor and from the terminal. Is it the same Python both times?\n\n\nCode files\nLesson 6’s programs, including the ones above. Download a .py file, or open the notebook in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nFolder contents\nl06_folder_contents.py\nView or download\nCallysto | Colab\n\n\nMistake: folder\nl06_mistake_folder.py\nView or download\nCallysto | Colab\n\n\nPaths\nl06_paths.py\nView or download\nCallysto | Colab\n\n\nPractice mistake\nl06_practice_mistake.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl06_practice_read.py\nView or download\nCallysto | Colab\n\n\nWhere am i\nl06_where_am_i.py\nView or download\nCallysto | Colab",
     "crumbs": [
       "For students",
       "Practice"

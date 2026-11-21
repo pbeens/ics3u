@@ -185,3 +185,44 @@ Per computer: $248.59
 ```
 
 Check: a `TAX_RATE` constant, calculated (not typed) amounts, and `:.2f` throughout.
+
+## After Lesson 6
+
+### Read and predict (`l06_practice_read.py`)
+
+On the web page:
+
+```text
+Home folder: /home/pyodide
+Course folder: /home/pyodide/ics3u
+Course folder exists: False
+Last part: ics3u
+```
+
+1. The path of the home folder.
+2. `False`, because the browser has no `ics3u` folder. On a classroom computer with a course folder in the home folder: `True` (and paths like `/Users/sam/ics3u` or `C:\Users\sam\ics3u`).
+3. A `bool`.
+
+### Spot the mistake (`l06_practice_mistake.py`)
+
+1. `Building the path...`, then a run-time `TypeError`.
+2. `year` is an `int`; `os.path.join` only joins strings (the message says `argument must be str, bytes, or os.PathLike object, not 'int'`).
+3. `os.path.join("ics3u", "backups", str(year))`, or `year = "2026"`. Output: `ics3u/backups/2026`.
+
+### Modify
+
+1. `print(os.path.basename(os.path.dirname(path)))` gives `lesson-06`.
+2. `print(os.path.join("/Users/sam/ics3u", "sample-folder", "photos"))` gives `/Users/sam/ics3u/sample-folder/photos`.
+3. An empty string (shows as a blank line): after the final slash, there's no last part.
+
+### Make (`where_is_python.py`)
+
+```python
+import os
+import sys
+
+print(sys.executable)
+print(os.path.basename(os.path.dirname(sys.executable)))
+```
+
+Answers vary, e.g. `/usr/local/bin/python3` and `bin`, or `C:\Users\sam\AppData\Local\Programs\Python\Python313\python.exe` and `Python313`. Editors sometimes use a different Python from the terminal (Thonny bundles its own); that's the interesting finding.

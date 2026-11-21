@@ -250,6 +250,54 @@ Lesson 5's programs, including the ones above. Download a `.py` file, or open th
 
 {{< lesson-code lesson="05" hide="exit_ticket" >}}
 
+## After Lesson 6: Where Do My Programs Live?
+
+### Read and predict
+
+Read this program **without running it**. On this web page, the home folder is `/home/pyodide`. In your tracing notebook, write the exact output. Then type your prediction and press **Step**.
+
+1. What does `os.path.expanduser("~")` give you? (The `~` is short for "my home folder".)
+2. What will line 7 print here? Would it print the same on your classroom computer?
+3. What type of value does `os.path.isdir()` give back?
+
+{{< stepper file="examples/l06_practice_read.py" >}}
+
+### Spot the mistake
+
+Predict what will happen, then press **Step**.
+
+1. What printed before the program stopped? What kind of error is it?
+2. The message mentions `int`. Which value is the problem?
+3. Fix it two ways: with `str()`, and by changing line 3.
+
+{{< stepper file="examples/l06_practice_mistake.py" >}}
+
+### Modify
+
+Predict each change, then run it.
+
+1. Print just the name of the lesson folder, `lesson-06`. (Hint: use `basename` on the result of `dirname`.)
+2. Build the path to `sample-folder/photos` inside `/Users/sam/ics3u`, using `os.path.join`.
+3. What does `os.path.basename("/Users/sam/ics3u/")` print? Why?
+
+```{pyodide}
+import os
+
+path = "/Users/sam/ics3u/module-01/lesson-06/folder_check.py"
+print(os.path.basename(path))
+print(os.path.dirname(path))
+```
+
+### Make
+
+Where does Python itself live on your computer? On your classroom computer, write `where_is_python.py` (in `ics3u/module-01/lesson-06/`) that prints the full path to the Python program that's running it (`sys.executable`, after `import sys`), then the name of the folder it's in. Run it from your editor and from the terminal. Is it the same Python both times?
+
+### Code files
+
+Lesson 6's programs, including the ones above. Download a `.py` file, or open the notebook in Callysto or Colab.
+
+{{< lesson-code lesson="06" hide="exit_ticket" >}}
+
 ## Next
 
 When you've finished the Lesson 1 and Lesson 2 practice, start the [Module 1 Assignment](assignment.qmd). After Lesson 3, finish the [System Banner](quick-build-system-banner.qmd); after Lesson 5, the [Parts Receipt](quick-build-parts-receipt.qmd).
