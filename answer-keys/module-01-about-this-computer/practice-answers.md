@@ -278,3 +278,44 @@ False
 ### Make (`my_computer_specs.py`)
 
 Answers vary. Check: one variable per spec with clear names, an f-string report, and an upgrade recommendation that matches the person's use (e.g. RAM for many browser tabs, video card for gaming).
+
+## After Lesson 9
+
+### Read and predict (`l09_practice_read.py`)
+
+```text
+4 GB doubled is 8 GB
+8 GB doubled is 16 GB
+16 GB doubled is 32 GB
+Checked 3 sizes
+```
+
+1. Three. 2. Three times: `size` is 4, then 8, then 16. 3. Once, after the loop (it isn't indented).
+
+### Spot the mistake (`l09_practice_mistake.py`)
+
+1. No line runs: it's an `IndentationError`, a kind of syntax error.
+2. `expected an indented block after 'if' statement on line 2`. Indent line 3 (four spaces or Tab).
+
+### Modify
+
+1. With `cores = 4`: `Fine for school work`. With 8: `Great for video editing`.
+2. ```python
+   if cores >= 8:
+       print("Great for video editing")
+   elif cores >= 4:
+       print("Good for most programs")
+   else:
+       print("Fine for school work")
+   ```
+3. 4: `Good for most programs`; 6: `Good for most programs`; 2: `Fine for school work`.
+
+### Make (`tab_check.py`)
+
+```python
+tabs = int(input("How many browser tabs are open? "))
+megabytes = tabs * 150
+print(f"About {megabytes} MB, or {megabytes / 1000:.1f} GB, of RAM")
+```
+
+For 40 tabs: `About 6000 MB, or 6.0 GB, of RAM`.

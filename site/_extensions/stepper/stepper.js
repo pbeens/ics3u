@@ -17,10 +17,21 @@
   const TRACER = `
 import sys, io, types, json
 
-def __stepper_trace(src, max_steps):
+def __stepper_trace(src, max_steps, inputs=None):
     events = []
     out = io.StringIO()
     g = {"__name__": "__main__"}
+    answers = list(inputs or [])
+
+    def typed_input(prompt=""):
+        out.write(str(prompt))
+        if not answers:
+            raise EOFError("this box has no more typed answers")
+        answer = answers.pop(0)
+        out.write(answer + "\\n")
+        return answer
+
+    g["input"] = typed_input
 
     def snapshot(line):
         variables = {}
@@ -91,6 +102,7 @@ def __stepper_trace(src, max_steps):
   function build(root) {
     const sourceEl = root.querySelector(".stepper-source");
     const source = sourceEl.textContent;
+    const inputs = root.dataset.input ? root.dataset.input.split("|") : [];
     sourceEl.remove();
     const lines = source.split("\n");
 
@@ -138,6 +150,10 @@ def __stepper_trace(src, max_steps):
     const left = el("div", "stepper-left");
     left.appendChild(codePanel);
     left.appendChild(legend);
+    if (inputs.length) {
+      left.appendChild(el("div", "stepper-inputs",
+        "When the program asks for input, this box types: " + inputs.join(", ")));
+    }
 
     const body = el("div", "stepper-body");
     body.appendChild(left);
@@ -212,7 +228,8 @@ def __stepper_trace(src, max_steps):
       try {
         const py = await loadPython();
         py.globals.set("__stepper_src", source);
-        const json = await py.runPythonAsync(`__stepper_trace(__stepper_src, ${MAX_STEPS})`);
+        py.globals.set("__stepper_inputs", JSON.stringify(inputs));
+        const json = await py.runPythonAsync(`__stepper_trace(__stepper_src, ${MAX_STEPS}, json.loads(__stepper_inputs))`);
         trace = JSON.parse(json);
         step = 0;
         return true;

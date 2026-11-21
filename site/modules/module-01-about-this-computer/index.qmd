@@ -19,6 +19,7 @@ subtitle: "About 15 hours · For teachers"
 | 6. Where Do My Programs Live? | [Lesson plan](lesson-06-where-do-my-programs-live.qmd) | [Slides](lesson-06-where-do-my-programs-live-slides.qmd) | [Practice](practice.qmd#after-lesson-6-where-do-my-programs-live) |
 | 7. What Python Actually Runs | [Lesson plan](lesson-07-what-python-actually-runs.qmd) | [Slides](lesson-07-what-python-actually-runs-slides.qmd) | [Practice](practice.qmd#after-lesson-7-what-python-actually-runs) |
 | 8. Inside the Computer: RAM and CPU | [Lesson plan](lesson-08-inside-the-computer.qmd) | [Slides](lesson-08-inside-the-computer-slides.qmd) | [Practice](practice.qmd#after-lesson-8-inside-the-computer-ram-and-cpu) |
+| 9. Talking Back, and a First Look Ahead | [Lesson plan](lesson-09-talking-back.qmd) | [Slides](lesson-09-talking-back-slides.qmd) | [Practice](practice.qmd#after-lesson-9-talking-back-and-a-first-look-ahead) |
 
 ### Planned lessons
 
@@ -28,7 +29,6 @@ subtitle: "About 15 hours · For teachers"
 
 | Lesson | Focus | Students read, then build |
 |---|---|---|
-| 9. Talking Back, and a First Look Ahead | Reading a program that greets the user by name with `input()` and gives a hardware summary (A2.1); then reading a simple `if` ("if this is Windows…") and a `for` loop over a list of facts | Modify the greeter; predict the `if` program's output on three operating systems |
 | 10. Error Clinic | Syntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4) | Fix five broken report programs |
 | 11. Review and assignment work period | A short review game on Lessons 1–10, then class time for the assignment | Finish the Computer Report Card |
 | 12. Module 1 test | Code reading and tracing; a short basics section | |

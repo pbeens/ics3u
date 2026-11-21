@@ -379,6 +379,182 @@
     ]
   },
   {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back.html",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html",
+    "title": "Lesson 9: Talking Back, and a First Look Ahead",
+    "section": "",
+    "text": "For teachers. This is the lesson plan: use it to prepare and as your script in class. Students work from the slides, the code files and notebooks, and the practice page. The step-through boxes and runnable code are here so you can try every activity first. How a lesson works →",
+    "crumbs": [
+      "For teachers",
+      "Lesson 9 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back.html#at-a-glance",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html#at-a-glance",
+    "title": "Lesson 9: Talking Back, and a First Look Ahead",
+    "section": "At a Glance",
+    "text": "At a Glance\n\nBig idea: a program can ask the user a question with input(), and the answer always arrives as a string. Programs can also choose what to do (if) and repeat (for). Today students read those two; they write them in Modules 2 and 3.\nStudents will: read and run programs that ask questions, meet \"8\" + \"8\" again in a new disguise, predict which branch of an if runs on three operating systems, and watch a for loop repeat in the step-through box.\nStudents make: welcome.py, a program that asks the user two questions and answers with a personal report about the computer.\nPrepare: run each l09_ program on the classroom computer, typing your own answers. The step-through boxes type preset answers (shown under the code). Open the slides a few minutes before class so Python finishes loading.\nAfter class: Lesson 9 practice.\nWhere it fits: completes input, processing, and output (A2.1) for Module 1. Module 2 writes decisions with if/elif/else and converts input with int() and float(); Module 3 writes loops.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 9 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back.html#learning-goals",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html#learning-goals",
+    "title": "Lesson 9: Talking Back, and a First Look Ahead",
+    "section": "Learning Goals",
+    "text": "Learning Goals\n\nUse input() to ask a question and store the answer.\nExplain why the answer from input() is always a string, and convert it with int() when it should be a number.\nRead an if/elif/else and predict which branch runs.\nRead a for loop and predict how many times its body runs.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 9 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back.html#success-criteria",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html#success-criteria",
+    "title": "Lesson 9: Talking Back, and a First Look Ahead",
+    "section": "Success Criteria",
+    "text": "Success Criteria\nStudents can say:\n\nI can write a program that asks a question and uses the answer.\nI can explain why typing 8 and 8 can give 88.\nI can trace which lines of an if or a for run, and how many times.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 9 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back.html#review-5-min",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html#review-5-min",
+    "title": "Lesson 9: Talking Back, and a First Look Ahead",
+    "section": "Review (5 min)",
+    "text": "Review (5 min)\nWithout running anything, answer in tracing notebooks:\n\nLabel each line RAM, CPU, or screen: cores = 4, threads = cores * 2, print(threads).\nWhere is a program’s variable when the program has ended?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 9 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back.html#teach-programs-that-ask-15-min",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html#teach-programs-that-ask-15-min",
+    "title": "Lesson 9: Talking Back, and a First Look Ahead",
+    "section": "Teach: Programs That Ask (15 min)",
+    "text": "Teach: Programs That Ask (15 min)\nOpen with the problem: “Every program we’ve written talks at the user. Real tools ask questions: ‘Are you sure you want to delete this?’, ‘Enter your password’, ‘Which drive?’. Today our programs talk back.”\nShow the program, and read it aloud before running it on the classroom computer:\nimport platform\n\nname = input(\"What's your name? \")\nprint(f\"Hi, {name}! This computer runs {platform.system()}.\")\nprint(f\"Its processor is {platform.machine()}.\")\n\n\n\n\n\n\nTipTeacher prompt: input() (first use)\n\n\n\n\n“input() does three things: it prints the question, waits for the user to type and press Enter, then hands back what they typed.”\n“We store the answer in a variable, name, like any other value. Notice the space at the end of the question, so the answer doesn’t touch the question mark.”\n“This is the pattern of almost every program: input (ask), processing (work something out), output (show the result).”\n\n\n\nThen show it in the step-through box. It can’t wait for a keyboard, so it types a preset answer (shown under the code).\nimport platform\n\nname = input(\"What's your name? \")\nprint(f\"Hi, {name}! This computer runs {platform.system()}.\")\nprint(f\"Its processor is {platform.machine()}.\")",
+    "crumbs": [
+      "For teachers",
+      "Lesson 9 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back.html#predict-then-step-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html#predict-then-step-10-min",
+    "title": "Lesson 9: Talking Back, and a First Look Ahead",
+    "section": "Predict, Then Step (10 min)",
+    "text": "Predict, Then Step (10 min)\nThis program asks two questions. The box will type 8 both times. Read it without running it, then answer in tracing notebooks:\n\nWhat will lines 3 and 4 print?\nAfter line 1, what does the Variables panel show for ram? Quotation marks or not?\n\nram = input(\"How many GB of RAM now? \")\nextra = input(\"How many GB are you adding? \")\nprint(\"Total:\", ram + extra, \"GB\")\nprint(\"Total:\", int(ram) + int(extra), \"GB\")\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\n“This is Lesson 5’s 88 GB computer again. input() always gives back a string, even when the user types digits. If you want to do arithmetic, convert it with int() first, like line 4. In Module 2 you’ll handle what happens when someone types lots instead of a number.”",
+    "crumbs": [
+      "For teachers",
+      "Lesson 9 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back.html#investigate-20-min",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html#investigate-20-min",
+    "title": "Lesson 9: Talking Back, and a First Look Ahead",
+    "section": "Investigate (20 min)",
+    "text": "Investigate (20 min)\n\nA first look at decisions (8 min)\nimport platform\n\nsystem = platform.system()\nif system == \"Windows\":\n    print(\"Open File Explorer to see your files.\")\nelif system == \"Darwin\":\n    print(\"Open Finder to see your files.\")\nelse:\n    print(\"Open your file browser to see your files.\")\nprint(\"Your course folder is called ics3u.\")\nBefore stepping, predict the output on three computers in a table in tracing notebooks: a Windows laptop, a Mac, and this web page.\n\nWhich lines run on this web page? Which lines are skipped? (Watch which lines the box highlights.)\nWhat would the output be on a Mac? (Remember: macOS reports Darwin.)\nLine 10 isn’t indented. Does it run on every computer?\n\n\n\n\n\n\n\nTipTeacher prompt: if, elif, else (first reading)\n\n\n\n\n“if asks a yes-or-no question. == means is equal to: two equals signs, because one equals sign already means store.”\n“If the answer is True, Python runs the indented lines under it, and skips the rest of the if. If not, it checks the elif (short for else if), then falls through to else.”\n“Exactly one branch runs. The indentation shows which lines belong to which branch.”\n“You don’t need to write these yet. Module 2 is all about decisions. Today, just read them.”\n\n\n\n\n\nA first look at loops (7 min)\nimport platform\n\nfacts = [platform.machine(), platform.system(), platform.node()]\nfor fact in facts:\n    print(\"-\", fact)\nprint(\"Done:\", len(facts), \"facts\")\n\nLine 3 makes a list: several values in square brackets. How many values are in it?\nHow many times does line 5 run? Watch the arrow.\nWhat does fact hold each time line 5 runs? Watch the Variables panel.\n\n\n\n\n\n\n\nTipTeacher prompt: for (first reading)\n\n\n\n“for fact in facts: means: take each value in the list, one at a time, call it fact, and run the indented lines. When the list runs out, carry on below. You’ll write loops in Module 3, and lists properly in Module 5.”\n\n\n\n\nSpot the problem (5 min)\nThe box types 4. Predict the output, then step.\ncores = input(\"How many cores? \")\nprint(\"Threads:\", cores * 2)\n\nIs this a syntax error, a run-time error, or a logic error?\nWhy is the answer 44? Fix it.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 9 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back.html#modify-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html#modify-10-min",
+    "title": "Lesson 9: Talking Back, and a First Look Ahead",
+    "section": "Modify (10 min)",
+    "text": "Modify (10 min)\nOn the classroom computer, download the programs and make each change. Predict first. (The boxes on this page can’t type your own answers; the classroom computer can.)\n\nGreeter: ask for the user’s grade too, and include it in the greeting.\nDecisions: add an elif for \"Linux\" that says Open Files to see your files. Test it on a Raspberry Pi or Linux computer if you have one.\nLoop: add platform.release() to the list. How many times does line 5 run now?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 9 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back.html#make-welcome-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html#make-welcome-10-min",
+    "title": "Lesson 9: Talking Back, and a First Look Ahead",
+    "section": "Make: Welcome (10 min)",
+    "text": "Make: Welcome (10 min)\nOn the classroom computer, students write welcome.py in ics3u/module-01/lesson-09/. It asks the user:\n\ntheir name, and\nhow many hours a day they use a computer.\n\nThen it prints a short welcome with their name, the computer’s operating system and processor, and how many hours a week that is (convert with int(), multiply by 7). Use f-strings. Extension: if you can, add an if that prints a reminder to take breaks when the weekly total is over 28 hours. (Module 2 teaches this properly.)",
+    "crumbs": [
+      "For teachers",
+      "Lesson 9 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back.html#check-exit-ticket-5-min",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html#check-exit-ticket-5-min",
+    "title": "Lesson 9: Talking Back, and a First Look Ahead",
+    "section": "Check: Exit Ticket (5 min)",
+    "text": "Check: Exit Ticket (5 min)\n\nWrite the exact output:\nsystem = \"Darwin\"\nif system == \"Windows\":\n    print(\"Start menu\")\nelif system == \"Darwin\":\n    print(\"Dock\")\nelse:\n    print(\"Taskbar\")\nprint(\"Ready\")\nA program runs count = input(\"How many? \") and the user types 3. What does count * 2 give? Why?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 9 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back.html#after-the-lesson",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html#after-the-lesson",
+    "title": "Lesson 9: Talking Back, and a First Look Ahead",
+    "section": "After the Lesson",
+    "text": "After the Lesson\n\nStudents do the Lesson 9 practice.\nSuggested hand-in: welcome.py, with two sample runs (different answers) pasted as comments at the bottom.\nRead the exit tickets. Question 2’s answer is 33; anyone who wrote 6 needs one more look at why input() gives a string.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 9 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back.html#code-for-this-lesson",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html#code-for-this-lesson",
+    "title": "Lesson 9: Talking Back, and a First Look Ahead",
+    "section": "Code for This Lesson",
+    "text": "Code for This Lesson\nEvery program in this lesson, ready to run outside the browser. Download the .py file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nExit ticket\nl09_exit_ticket.py\nView or download\nCallysto | Colab\n\n\nFor facts\nl09_for_facts.py\nView or download\nCallysto | Colab\n\n\nGreeter\nl09_greeter.py\nView or download\nCallysto | Colab\n\n\nIf system\nl09_if_system.py\nView or download\nCallysto | Colab\n\n\nMistake: input\nl09_mistake_input.py\nView or download\nCallysto | Colab\n\n\nPractice mistake\nl09_practice_mistake.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl09_practice_read.py\nView or download\nCallysto | Colab\n\n\nRam upgrade\nl09_ram_upgrade.py\nView or download\nCallysto | Colab",
+    "crumbs": [
+      "For teachers",
+      "Lesson 9 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back.html#teacher-notes",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html#teacher-notes",
+    "title": "Lesson 9: Talking Back, and a First Look Ahead",
+    "section": "Teacher Notes",
+    "text": "Teacher Notes\n\nReading ahead on purpose. Students read if and for today so that Module 2 and Module 3 start from something familiar. Don’t assess writing them yet; the exit ticket only asks students to trace.\nThe step-through box and input(). The box can’t pause for a keyboard, so each input() is answered from a preset list shown under the code, and the answer appears in the output as if typed. On the classroom computer, students type their own.\nIndentation. Python uses indentation to group lines. Most editors indent automatically after a colon; tell students to use the Tab key or four spaces, never a mix. The practice includes an IndentationError.\ninput() in notebooks. In Colab and Callysto, input() shows a text box under the cell. It works, but it’s easy to miss.\nBreaks and screen time. The Make’s extension previews Module 6’s healthy computing lesson.\nSlides. Open the slides on the projector and this plan on your own screen. Press S for speaker view.\nSpiral. input() and int() return in Module 2 with error handling; if is Module 2’s core; for and range() are Module 3’s; lists are Module 5’s.\nAnswers are in the answer-keys folder of the course’s GitHub repository, not on this site.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 9 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back.html#previous-and-next",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html#previous-and-next",
+    "title": "Lesson 9: Talking Back, and a First Look Ahead",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Lesson 8 · Lesson 9 slides · Module 1 overview · Practice →",
+    "crumbs": [
+      "For teachers",
+      "Lesson 9 plan"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back.html#feedback",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back.html#feedback",
+    "title": "Lesson 9: Talking Back, and a First Look Ahead",
+    "section": "Feedback",
+    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 9 plan"
+    ]
+  },
+  {
     "objectID": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html",
     "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html",
     "title": "Lesson 8: Inside the Computer: RAM and CPU",
@@ -537,7 +713,7 @@
     "href": "modules/module-01-about-this-computer/lesson-08-inside-the-computer.html#previous-and-next",
     "title": "Lesson 8: Inside the Computer: RAM and CPU",
     "section": "Previous and Next",
-    "text": "Previous and Next\n← Lesson 7 · Lesson 8 slides · Module 1 overview · Practice →",
+    "text": "Previous and Next\n← Lesson 7 · Lesson 8 slides · Module 1 overview · Practice → · Lesson 9 →",
     "crumbs": [
       "For teachers",
       "Lesson 8 plan"
@@ -1801,7 +1977,7 @@
     "href": "modules/module-01-about-this-computer/index.html#lessons",
     "title": "Module 1: About This Computer",
     "section": "Lessons",
-    "text": "Lessons\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\n8. Inside the Computer: RAM and CPU\nLesson plan\nSlides\nPractice\n\n\n\n\nPlanned lessons\n\n\n\n\n\n\nPlanned, not yet written. Titles and focus may change as lessons are built.\n\n\n\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n9. Talking Back, and a First Look Ahead\nReading a program that greets the user by name with input() and gives a hardware summary (A2.1); then reading a simple if (“if this is Windows…”) and a for loop over a list of facts\nModify the greeter; predict the if program’s output on three operating systems\n\n\n10. Error Clinic\nSyntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4)\nFix five broken report programs\n\n\n11. Review and assignment work period\nA short review game on Lessons 1–10, then class time for the assignment\nFinish the Computer Report Card\n\n\n12. Module 1 test\nCode reading and tracing; a short basics section\n\n\n\n\nEach lesson plan’s Code for This Lesson section has the .py files and notebooks. Students find the same files at the end of each lesson’s section on the Practice page.",
+    "text": "Lessons\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\n8. Inside the Computer: RAM and CPU\nLesson plan\nSlides\nPractice\n\n\n9. Talking Back, and a First Look Ahead\nLesson plan\nSlides\nPractice\n\n\n\n\nPlanned lessons\n\n\n\n\n\n\nPlanned, not yet written. Titles and focus may change as lessons are built.\n\n\n\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n10. Error Clinic\nSyntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4)\nFix five broken report programs\n\n\n11. Review and assignment work period\nA short review game on Lessons 1–10, then class time for the assignment\nFinish the Computer Report Card\n\n\n12. Module 1 test\nCode reading and tracing; a short basics section\n\n\n\n\nEach lesson plan’s Code for This Lesson section has the .py files and notebooks. Students find the same files at the end of each lesson’s section on the Practice page.",
     "crumbs": [
       "Module 1 overview"
     ]
@@ -2170,7 +2346,7 @@
     "href": "index.html#lessons",
     "title": "ICS3U: Introduction to Computer Science",
     "section": "Lessons",
-    "text": "Lessons\nModule 1: About This Computer\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\n8. Inside the Computer: RAM and CPU\nLesson plan\nSlides\nPractice\n\n\nModule assignment\n\n\nComputer Report Card\n\n\n\nMore modules are on the way. See the Scope and Sequence for the full plan of seven modules; each planned module already has an overview page under Modules."
+    "text": "Lessons\nModule 1: About This Computer\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n3. Getting Output Right\nLesson plan\nSlides\nPractice · Quick Build: System Banner\n\n\n4. Better Reports with f-strings\nLesson plan\nSlides\nPractice\n\n\n5. Values and Types\nLesson plan\nSlides\nPractice · Quick Build: Parts Receipt\n\n\n6. Where Do My Programs Live?\nLesson plan\nSlides\nPractice\n\n\n7. What Python Actually Runs\nLesson plan\nSlides\nPractice\n\n\n8. Inside the Computer: RAM and CPU\nLesson plan\nSlides\nPractice\n\n\n9. Talking Back, and a First Look Ahead\nLesson plan\nSlides\nPractice\n\n\nModule assignment\n\n\nComputer Report Card\n\n\n\nMore modules are on the way. See the Scope and Sequence for the full plan of seven modules; each planned module already has an overview page under Modules."
   },
   {
     "objectID": "modules/module-01-about-this-computer/assignment.html",
@@ -3251,6 +3427,127 @@
     ]
   },
   {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#review",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#review",
+    "title": "Talking Back, and a First Look Ahead",
+    "section": "Review",
+    "text": "Review\nIn your tracing notebook, without running anything:\n\nLabel each line RAM, CPU, or screen: cores = 4, threads = cores * 2, print(threads)\nWhere is a program’s variable when the program has ended?",
+    "crumbs": [
+      "For the class",
+      "Lesson 9 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#programs-that-ask",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#programs-that-ask",
+    "title": "Talking Back, and a First Look Ahead",
+    "section": "Programs that ask",
+    "text": "Programs that ask\nimport platform\n\nname = input(\"What's your name? \")\nprint(f\"Hi, {name}! This computer runs {platform.system()}.\")\nprint(f\"Its processor is {platform.machine()}.\")\n\n\ninput() prints the question, waits, then hands back what was typed\nInput → processing → output\n\n\n\nOpen with the problem: “Every program so far talks at the user. Real tools ask questions: Are you sure? Enter your password. Which drive? Today our programs talk back.” Run it on the classroom computer. TEACHER PROMPT (input): “input prints the question, waits for the user to type and press Enter, then hands back what they typed. We store it in a variable like any other value. Note the space after the question mark. This is the pattern of almost every program: input, processing, output.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 9 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#in-the-step-through-box",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#in-the-step-through-box",
+    "title": "Talking Back, and a First Look Ahead",
+    "section": "In the step-through box",
+    "text": "In the step-through box\nimport platform\n\nname = input(\"What's your name? \")\nprint(f\"Hi, {name}! This computer runs {platform.system()}.\")\nprint(f\"Its processor is {platform.machine()}.\")\n\nThe box can’t wait for a keyboard, so it types a preset answer, shown under the code.",
+    "crumbs": [
+      "For the class",
+      "Lesson 9 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#predict-then-step",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#predict-then-step",
+    "title": "Talking Back, and a First Look Ahead",
+    "section": "Predict, then step",
+    "text": "Predict, then step\nram = input(\"How many GB of RAM now? \")\nextra = input(\"How many GB are you adding? \")\nprint(\"Total:\", ram + extra, \"GB\")\nprint(\"Total:\", int(ram) + int(extra), \"GB\")\n\nThe box types 8 both times. Ask: what will lines 3 and 4 print? What does the Variables panel show for ram: quotation marks or not? “Lesson 5’s 88 GB computer again. input() always gives back a string, even when the user types digits. Convert with int() before doing arithmetic.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 9 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#a-first-look-at-decisions",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#a-first-look-at-decisions",
+    "title": "Talking Back, and a First Look Ahead",
+    "section": "A first look at decisions",
+    "text": "A first look at decisions\nimport platform\n\nsystem = platform.system()\nif system == \"Windows\":\n    print(\"Open File Explorer to see your files.\")\nelif system == \"Darwin\":\n    print(\"Open Finder to see your files.\")\nelse:\n    print(\"Open your file browser to see your files.\")\nprint(\"Your course folder is called ics3u.\")\n\nPredict on three computers first: Windows, Mac (Darwin), this web page. Which lines are skipped here? Does line 10 run everywhere? TEACHER PROMPT (if, first reading): “if asks a yes-or-no question. == means is equal to: two equals signs, because one already means store. If True, Python runs the indented lines and skips the rest of the if; if not, it checks the elif, then falls through to else. Exactly one branch runs. Module 2 is all about decisions; today, just read them.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 9 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#a-first-look-at-loops",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#a-first-look-at-loops",
+    "title": "Talking Back, and a First Look Ahead",
+    "section": "A first look at loops",
+    "text": "A first look at loops\nimport platform\n\nfacts = [platform.machine(), platform.system(), platform.node()]\nfor fact in facts:\n    print(\"-\", fact)\nprint(\"Done:\", len(facts), \"facts\")\n\nAsk: how many values in the list (square brackets)? How many times does line 5 run? What does fact hold each time (Variables panel)? TEACHER PROMPT (for, first reading): “for fact in facts means: take each value in the list, one at a time, call it fact, and run the indented lines. When the list runs out, carry on below. Loops are Module 3; lists are Module 5.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 9 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#spot-the-problem",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#spot-the-problem",
+    "title": "Talking Back, and a First Look Ahead",
+    "section": "Spot the problem",
+    "text": "Spot the problem\ncores = input(\"How many cores? \")\nprint(\"Threads:\", cores * 2)\n\nLogic error: no crash, wrong answer. cores is the string “4”, and * repeats a string: 44. Fix: int(cores) * 2.",
+    "crumbs": [
+      "For the class",
+      "Lesson 9 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#modify-on-the-classroom-computer",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#modify-on-the-classroom-computer",
+    "title": "Talking Back, and a First Look Ahead",
+    "section": "Modify (on the classroom computer)",
+    "text": "Modify (on the classroom computer)\n\nGreeter: also ask for the user’s grade\nDecisions: add an elif for \"Linux\"\nLoop: add platform.release() to the list. How many times does the loop run now?",
+    "crumbs": [
+      "For the class",
+      "Lesson 9 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#make-welcome",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#make-welcome",
+    "title": "Talking Back, and a First Look Ahead",
+    "section": "Make: Welcome",
+    "text": "Make: Welcome\nwelcome.py in ics3u/module-01/lesson-09/:\n\nAsk for the user’s name and hours a day on a computer\nPrint a welcome with their name, the OS, the processor, and hours a week (int(), × 7)\nUse f-strings\nExtension: an if that reminds them to take breaks over 28 hours a week",
+    "crumbs": [
+      "For the class",
+      "Lesson 9 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#exit-ticket",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#exit-ticket",
+    "title": "Talking Back, and a First Look Ahead",
+    "section": "Exit ticket",
+    "text": "Exit ticket\n\nWrite the exact output:\n\nsystem = \"Darwin\"\nif system == \"Windows\":\n    print(\"Start menu\")\nelif system == \"Darwin\":\n    print(\"Dock\")\nelse:\n    print(\"Taskbar\")\nprint(\"Ready\")\n\ncount = input(\"How many? \") and the user types 3. What is count * 2? Why?",
+    "crumbs": [
+      "For the class",
+      "Lesson 9 slides"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#after-class",
+    "href": "modules/module-01-about-this-computer/lesson-09-talking-back-slides.html#after-class",
+    "title": "Talking Back, and a First Look Ahead",
+    "section": "After class",
+    "text": "After class\n\nDo the Lesson 9 practice: read and predict first, then run\nFinish welcome.py\nToday’s programs are on the practice page: download the .py files, or open them as notebooks in Callysto or Colab",
+    "crumbs": [
+      "For the class",
+      "Lesson 9 slides"
+    ]
+  },
+  {
     "objectID": "modules/module-01-about-this-computer/practice.html",
     "href": "modules/module-01-about-this-computer/practice.html",
     "title": "Module 1 Practice",
@@ -3344,6 +3641,17 @@
     "title": "Module 1 Practice",
     "section": "After Lesson 8: Inside the Computer: RAM and CPU",
     "text": "After Lesson 8: Inside the Computer: RAM and CPU\n\nRead and predict\nRead this program without running it. In your tracing notebook, label each line with the components it uses (RAM, CPU, screen), then write the exact output. Then type your prediction and press Step, watching the Variables panel.\n\nAfter line 2, how many values are in RAM? How many names?\nLine 3 gives price a new value. Does copy change?\nWhat does line 5 print? What question is it asking?\n\nprice = 89.99\ncopy = price\nprice = price * 2\nprint(price, copy)\nprint(id(price) == id(copy))\n\n\nModify\nPredict each answer before you run it.\n\nHow does the size change as a number gets longer? Try 10**10, 10**20, and 10**40. Does it grow with every digit, or in steps?\nDoes a longer variable name make the value bigger? Test it.\n\n\n\n\n\n\n\n\n\nMake\nChoose a real computer: your own, a family computer, or one you’d like to buy. Find its CPU, RAM, storage, and video card (Windows: Settings → System → About; macOS: Apple menu → About This Mac). On your classroom computer, write my_computer_specs.py in ics3u/module-01/lesson-08/ that stores each spec in a well-named variable and prints a labelled report with f-strings. Finish with a comment: which part would you upgrade first, for what you use it for, and why?\n\n\nCode files\nLesson 8’s programs, including the ones above. Download a .py file, or open the notebook in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nIds\nl08_ids.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl08_practice_read.py\nView or download\nCallysto | Colab\n\n\nRam CPU\nl08_ram_cpu.py\nView or download\nCallysto | Colab\n\n\nSizes\nl08_sizes.py\nView or download\nCallysto | Colab",
+    "crumbs": [
+      "For students",
+      "Practice"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/practice.html#after-lesson-9-talking-back-and-a-first-look-ahead",
+    "href": "modules/module-01-about-this-computer/practice.html#after-lesson-9-talking-back-and-a-first-look-ahead",
+    "title": "Module 1 Practice",
+    "section": "After Lesson 9: Talking Back, and a First Look Ahead",
+    "text": "After Lesson 9: Talking Back, and a First Look Ahead\n\nRead and predict\nRead this program without running it. In your tracing notebook, write the exact output. Then type your prediction and press Step.\n\nHow many values are in the list?\nHow many times does line 3 run? What does size hold each time?\nDoes line 4 run once, or once for every size?\n\nsizes = [4, 8, 16]\nfor size in sizes:\n    print(size, \"GB doubled is\", size * 2, \"GB\")\nprint(\"Checked\", len(sizes), \"sizes\")\n\n\nSpot the mistake\nPredict what will happen, then press Step.\n\nDoes any line run? What kind of error is it?\nWhat is the message telling you to do? Fix it on your classroom computer.\n\nsystem = \"Windows\"\nif system == \"Windows\":\nprint(\"Hello, Windows\")\n\n\nModify\nPredict the output first. Then make each change, predict again, and run it.\n\nChange cores to 8. Which message prints?\nAdd an elif cores &gt;= 4: branch that prints Good for most programs, between the if and the else.\nTry cores = 4, 6, and 2. Which branch runs each time?\n\n\n\n\n\n\n\n\n\nMake\nEach browser tab uses about 150 MB of RAM. On your classroom computer, write tab_check.py in ics3u/module-01/lesson-09/ that asks how many tabs the user has open, then prints roughly how much RAM they use, in megabytes and in gigabytes (1 GB = 1000 MB), with the gigabytes to one decimal place (:.1f).\n\n\nCode files\nLesson 9’s programs, including the ones above. Download a .py file, or open the notebook in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nFor facts\nl09_for_facts.py\nView or download\nCallysto | Colab\n\n\nGreeter\nl09_greeter.py\nView or download\nCallysto | Colab\n\n\nIf system\nl09_if_system.py\nView or download\nCallysto | Colab\n\n\nMistake: input\nl09_mistake_input.py\nView or download\nCallysto | Colab\n\n\nPractice mistake\nl09_practice_mistake.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl09_practice_read.py\nView or download\nCallysto | Colab\n\n\nRam upgrade\nl09_ram_upgrade.py\nView or download\nCallysto | Colab",
     "crumbs": [
       "For students",
       "Practice"

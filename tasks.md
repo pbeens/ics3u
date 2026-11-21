@@ -44,6 +44,13 @@ The seven-module plan is approved (`decisions.md`, 2026-11-21). Lesson 3 is the 
 - [x] Practice section, answer keys (`lesson-08-answers.md`), links, sidebar; steppers checked in Chromium
 - [ ] Author review of Lesson 8
 
+### Module 1, Lesson 9 (built 2026-11-21; awaiting author review)
+
+- [x] Stepper: new `input="Sam|8"` option answers `input()` prompts from a preset list, shows each answer as if typed, and notes the answers under the code (`site/README.md` updated). Retested all 50 steppers on Lessons 1–9 and the Practice page after a first version broke them (a `\n` inside the JavaScript template string).
+- [x] Lesson 9, Talking Back, and a First Look Ahead: plan, slides (11), eight example programs; `input()` and input-processing-output (A2.1); `input()` gives strings (88 GB again); reading `if`/`elif`/`else` on three operating systems and a `for` loop (A2.2); `IndentationError` in the practice; Make is `welcome.py`
+- [x] Practice section, answer keys (`lesson-09-answers.md`), links, sidebar
+- [ ] Author review of Lesson 9
+
 ### Next
 
 1. Sample folder tool: add `--download` (files hosted on the site, licence-checked, falling back to local generation) before Module 5 Lesson 7 reads its download code.

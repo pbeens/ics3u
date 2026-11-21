@@ -1,0 +1,116 @@
+---
+title: "Talking Back, and a First Look Ahead"
+subtitle: "Module 1, Lesson 9"
+format:
+  live-revealjs:
+    theme: default
+    slide-number: true
+    code-line-numbers: true
+    toc: false
+    footer: "[← Lesson 9 plan](lesson-09-talking-back.html) · [Module 1](index.html)"
+engine: markdown
+---
+
+## Review
+
+In your tracing notebook, without running anything:
+
+1. Label each line RAM, CPU, or screen: `cores = 4`, `threads = cores * 2`, `print(threads)`
+2. Where is a program's variable when the program has ended?
+
+## Programs that ask
+
+```{.python code-line-numbers="|3|4"}
+import platform
+
+name = input("What's your name? ")
+print(f"Hi, {name}! This computer runs {platform.system()}.")
+print(f"Its processor is {platform.machine()}.")
+```
+
+::: {.fragment}
+- `input()` prints the question, **waits**, then hands back what was typed
+- **Input → processing → output**
+:::
+
+::: {.notes}
+Open with the problem: "Every program so far talks at the user. Real tools ask questions: Are you sure? Enter your password. Which drive? Today our programs talk back." Run it on the classroom computer. TEACHER PROMPT (input): "input prints the question, waits for the user to type and press Enter, then hands back what they typed. We store it in a variable like any other value. Note the space after the question mark. This is the pattern of almost every program: input, processing, output."
+:::
+
+## In the step-through box
+
+{{< stepper file="examples/l09_greeter.py" input="Sam" >}}
+
+::: {.notes}
+The box can't wait for a keyboard, so it types a preset answer, shown under the code.
+:::
+
+## Predict, then step
+
+{{< stepper file="examples/l09_ram_upgrade.py" input="8|8" >}}
+
+::: {.notes}
+The box types 8 both times. Ask: what will lines 3 and 4 print? What does the Variables panel show for ram: quotation marks or not? "Lesson 5's 88 GB computer again. input() always gives back a string, even when the user types digits. Convert with int() before doing arithmetic."
+:::
+
+## A first look at decisions
+
+{{< stepper file="examples/l09_if_system.py" >}}
+
+::: {.notes}
+Predict on three computers first: Windows, Mac (Darwin), this web page. Which lines are skipped here? Does line 10 run everywhere? TEACHER PROMPT (if, first reading): "if asks a yes-or-no question. == means is equal to: two equals signs, because one already means store. If True, Python runs the indented lines and skips the rest of the if; if not, it checks the elif, then falls through to else. Exactly one branch runs. Module 2 is all about decisions; today, just read them."
+:::
+
+## A first look at loops
+
+{{< stepper file="examples/l09_for_facts.py" >}}
+
+::: {.notes}
+Ask: how many values in the list (square brackets)? How many times does line 5 run? What does fact hold each time (Variables panel)? TEACHER PROMPT (for, first reading): "for fact in facts means: take each value in the list, one at a time, call it fact, and run the indented lines. When the list runs out, carry on below. Loops are Module 3; lists are Module 5."
+:::
+
+## Spot the problem
+
+{{< stepper file="examples/l09_mistake_input.py" input="4" >}}
+
+::: {.notes}
+Logic error: no crash, wrong answer. cores is the string "4", and * repeats a string: 44. Fix: int(cores) * 2.
+:::
+
+## Modify (on the classroom computer)
+
+1. **Greeter:** also ask for the user's grade
+2. **Decisions:** add an `elif` for `"Linux"`
+3. **Loop:** add `platform.release()` to the list. How many times does the loop run now?
+
+## Make: Welcome
+
+`welcome.py` in `ics3u/module-01/lesson-09/`:
+
+- Ask for the user's **name** and **hours a day** on a computer
+- Print a welcome with their name, the OS, the processor, and hours a **week** (`int()`, × 7)
+- Use f-strings
+- **Extension:** an `if` that reminds them to take breaks over 28 hours a week
+
+## Exit ticket
+
+1. Write the exact output:
+
+```python
+system = "Darwin"
+if system == "Windows":
+    print("Start menu")
+elif system == "Darwin":
+    print("Dock")
+else:
+    print("Taskbar")
+print("Ready")
+```
+
+2. `count = input("How many? ")` and the user types `3`. What is `count * 2`? Why?
+
+## After class
+
+- Do the [Lesson 9 practice](practice.qmd#after-lesson-9-talking-back-and-a-first-look-ahead): read and predict first, then run
+- Finish `welcome.py`
+- Today's programs are on the practice page: download the `.py` files, or open them as notebooks in Callysto or Colab

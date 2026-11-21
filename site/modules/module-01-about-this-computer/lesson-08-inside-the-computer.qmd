@@ -11,7 +11,7 @@ expectations: [A1.1, C1.1, C1.4]
 :::
 
 ::: {.callout-note appearance="simple"}
-**Time:** 75 minutes · **Expectations:** A1.1, C1.1, C1.4 · **Slides:** [Lesson 8 slides](lesson-08-inside-the-computer-slides.qmd) (press **S** for speaker notes) · [Module 1 overview](index.qmd) · **Previous:** [Lesson 7](lesson-07-what-python-actually-runs.qmd)
+**Time:** 75 minutes · **Expectations:** A1.1, C1.1, C1.4 · **Slides:** [Lesson 8 slides](lesson-08-inside-the-computer-slides.qmd) (press **S** for speaker notes) · [Module 1 overview](index.qmd) · **Previous:** [Lesson 7](lesson-07-what-python-actually-runs.qmd) · **Next:** [Lesson 9](lesson-09-talking-back.qmd)
 :::
 
 ## At a Glance
@@ -189,7 +189,7 @@ Every program in this lesson, ready to run outside the browser. Download the `.p
 
 ## Previous and Next {.unlisted}
 
-[← Lesson 7](lesson-07-what-python-actually-runs.qmd) · [Lesson 8 slides](lesson-08-inside-the-computer-slides.qmd) · [Module 1 overview](index.qmd) · [Practice →](practice.qmd#after-lesson-8-inside-the-computer-ram-and-cpu)
+[← Lesson 7](lesson-07-what-python-actually-runs.qmd) · [Lesson 8 slides](lesson-08-inside-the-computer-slides.qmd) · [Module 1 overview](index.qmd) · [Practice →](practice.qmd#after-lesson-8-inside-the-computer-ram-and-cpu) · [Lesson 9 →](lesson-09-talking-back.qmd)
 
 ## Feedback {.unlisted}
 

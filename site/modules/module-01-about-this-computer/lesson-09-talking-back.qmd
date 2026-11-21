@@ -1,0 +1,188 @@
+---
+title: "Lesson 9: Talking Back, and a First Look Ahead"
+subtitle: "Module 1 — About This Computer"
+format: live-html
+engine: markdown
+expectations: [A1.1, A2.1, A2.2, A4.4]
+---
+
+::: {.callout-important appearance="simple" icon=false}
+**For teachers.** This is the lesson plan: use it to prepare and as your script in class. Students work from the **slides**, the **code files and notebooks**, and the **practice** page. The step-through boxes and runnable code are here so you can try every activity first. [How a lesson works →](../../how-a-lesson-works.qmd)
+:::
+
+::: {.callout-note appearance="simple"}
+**Time:** 75 minutes · **Expectations:** A1.1, A2.1, A2.2, A4.4 · **Slides:** [Lesson 9 slides](lesson-09-talking-back-slides.qmd) (press **S** for speaker notes) · [Module 1 overview](index.qmd) · **Previous:** [Lesson 8](lesson-08-inside-the-computer.qmd)
+:::
+
+## At a Glance
+
+- **Big idea:** a program can ask the user a question with `input()`, and the answer always arrives as a string. Programs can also choose what to do (`if`) and repeat (`for`). Today students *read* those two; they write them in Modules 2 and 3.
+- **Students will:** read and run programs that ask questions, meet `"8" + "8"` again in a new disguise, predict which branch of an `if` runs on three operating systems, and watch a `for` loop repeat in the step-through box.
+- **Students make:** `welcome.py`, a program that asks the user two questions and answers with a personal report about the computer.
+- **Prepare:** run each `l09_` program on the classroom computer, typing your own answers. The step-through boxes type preset answers (shown under the code). Open the slides a few minutes before class so Python finishes loading.
+- **After class:** [Lesson 9 practice](practice.qmd#after-lesson-9-talking-back-and-a-first-look-ahead).
+- **Where it fits:** completes input, processing, and output (A2.1) for Module 1. Module 2 writes decisions with `if`/`elif`/`else` and converts input with `int()` and `float()`; Module 3 writes loops.
+
+## Learning Goals
+
+- Use `input()` to ask a question and store the answer.
+- Explain why the answer from `input()` is always a string, and convert it with `int()` when it should be a number.
+- Read an `if`/`elif`/`else` and predict which branch runs.
+- Read a `for` loop and predict how many times its body runs.
+
+## Success Criteria
+
+Students can say:
+
+- I can write a program that asks a question and uses the answer.
+- I can explain why typing 8 and 8 can give 88.
+- I can trace which lines of an `if` or a `for` run, and how many times.
+
+## Review (5 min)
+
+Without running anything, answer in tracing notebooks:
+
+1. Label each line RAM, CPU, or screen: `cores = 4`, `threads = cores * 2`, `print(threads)`.
+2. Where is a program's variable when the program has ended?
+
+## Teach: Programs That Ask (15 min)
+
+Open with the problem: "Every program we've written talks *at* the user. Real tools ask questions: 'Are you sure you want to delete this?', 'Enter your password', 'Which drive?'. Today our programs talk back."
+
+Show the program, and read it aloud before running it on the classroom computer:
+
+```python
+import platform
+
+name = input("What's your name? ")
+print(f"Hi, {name}! This computer runs {platform.system()}.")
+print(f"Its processor is {platform.machine()}.")
+```
+
+::: {.callout-tip title="Teacher prompt: input() (first use)"}
+- "`input()` does three things: it prints the question, **waits** for the user to type and press Enter, then hands back what they typed."
+- "We store the answer in a variable, `name`, like any other value. Notice the space at the end of the question, so the answer doesn't touch the question mark."
+- "This is the pattern of almost every program: **input** (ask), **processing** (work something out), **output** (show the result)."
+:::
+
+Then show it in the step-through box. It can't wait for a keyboard, so it types a preset answer (shown under the code).
+
+{{< stepper file="examples/l09_greeter.py" input="Sam" >}}
+
+## Predict, Then Step (10 min)
+
+This program asks two questions. The box will type `8` both times. Read it **without running it**, then answer in tracing notebooks:
+
+1. What will lines 3 and 4 print?
+2. After line 1, what does the Variables panel show for `ram`? Quotation marks or not?
+
+{{< stepper file="examples/l09_ram_upgrade.py" input="8|8" >}}
+
+::: {.callout-tip title="Teacher prompt"}
+"This is Lesson 5's 88 GB computer again. `input()` always gives back a **string**, even when the user types digits. If you want to do arithmetic, convert it with `int()` first, like line 4. In Module 2 you'll handle what happens when someone types `lots` instead of a number."
+:::
+
+## Investigate (20 min)
+
+### A first look at decisions (8 min)
+
+{{< stepper file="examples/l09_if_system.py" >}}
+
+Before stepping, predict the output on three computers in a table in tracing notebooks: a Windows laptop, a Mac, and this web page.
+
+1. Which lines run on this web page? Which lines are skipped? (Watch which lines the box highlights.)
+2. What would the output be on a Mac? (Remember: macOS reports `Darwin`.)
+3. Line 10 isn't indented. Does it run on every computer?
+
+::: {.callout-tip title="Teacher prompt: if, elif, else (first reading)"}
+- "`if` asks a yes-or-no question. `==` means *is equal to*: two equals signs, because one equals sign already means *store*."
+- "If the answer is `True`, Python runs the indented lines under it, and skips the rest of the `if`. If not, it checks the `elif` (short for *else if*), then falls through to `else`."
+- "Exactly **one** branch runs. The indentation shows which lines belong to which branch."
+- "You don't need to write these yet. Module 2 is all about decisions. Today, just read them."
+:::
+
+### A first look at loops (7 min)
+
+{{< stepper file="examples/l09_for_facts.py" >}}
+
+1. Line 3 makes a **list**: several values in square brackets. How many values are in it?
+2. How many times does line 5 run? Watch the arrow.
+3. What does `fact` hold each time line 5 runs? Watch the Variables panel.
+
+::: {.callout-tip title="Teacher prompt: for (first reading)"}
+"`for fact in facts:` means: take each value in the list, one at a time, call it `fact`, and run the indented lines. When the list runs out, carry on below. You'll write loops in Module 3, and lists properly in Module 5."
+:::
+
+### Spot the problem (5 min)
+
+The box types `4`. Predict the output, then step.
+
+{{< stepper file="examples/l09_mistake_input.py" input="4" >}}
+
+1. Is this a syntax error, a run-time error, or a logic error?
+2. Why is the answer `44`? Fix it.
+
+## Modify (10 min)
+
+On the classroom computer, download the programs and make each change. Predict first. (The boxes on this page can't type your own answers; the classroom computer can.)
+
+1. **Greeter:** ask for the user's grade too, and include it in the greeting.
+2. **Decisions:** add an `elif` for `"Linux"` that says `Open Files to see your files.` Test it on a Raspberry Pi or Linux computer if you have one.
+3. **Loop:** add `platform.release()` to the list. How many times does line 5 run now?
+
+## Make: Welcome (10 min)
+
+On the classroom computer, students write `welcome.py` in `ics3u/module-01/lesson-09/`. It asks the user:
+
+1. their name, and
+2. how many hours a day they use a computer.
+
+Then it prints a short welcome with their name, the computer's operating system and processor, and how many hours a **week** that is (convert with `int()`, multiply by 7). Use f-strings. **Extension:** if you can, add an `if` that prints a reminder to take breaks when the weekly total is over 28 hours. (Module 2 teaches this properly.)
+
+## Check: Exit Ticket (5 min)
+
+1. Write the exact output:
+
+   ```python
+   system = "Darwin"
+   if system == "Windows":
+       print("Start menu")
+   elif system == "Darwin":
+       print("Dock")
+   else:
+       print("Taskbar")
+   print("Ready")
+   ```
+
+2. A program runs `count = input("How many? ")` and the user types `3`. What does `count * 2` give? Why?
+
+## After the Lesson
+
+- Students do the [Lesson 9 practice](practice.qmd#after-lesson-9-talking-back-and-a-first-look-ahead).
+- **Suggested hand-in:** `welcome.py`, with two sample runs (different answers) pasted as comments at the bottom.
+- Read the exit tickets. Question 2's answer is `33`; anyone who wrote `6` needs one more look at why `input()` gives a string.
+
+## Code for This Lesson
+
+Every program in this lesson, ready to run outside the browser. Download the `.py` file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.
+
+{{< lesson-code >}}
+
+## Teacher Notes
+
+- **Reading ahead on purpose.** Students read `if` and `for` today so that Module 2 and Module 3 start from something familiar. Don't assess writing them yet; the exit ticket only asks students to trace.
+- **The step-through box and `input()`.** The box can't pause for a keyboard, so each `input()` is answered from a preset list shown under the code, and the answer appears in the output as if typed. On the classroom computer, students type their own.
+- **Indentation.** Python uses indentation to group lines. Most editors indent automatically after a colon; tell students to use the Tab key or four spaces, never a mix. The practice includes an `IndentationError`.
+- **`input()` in notebooks.** In Colab and Callysto, `input()` shows a text box under the cell. It works, but it's easy to miss.
+- **Breaks and screen time.** The Make's extension previews Module 6's healthy computing lesson.
+- **Slides.** Open the slides on the projector and this plan on your own screen. Press **S** for speaker view.
+- **Spiral.** `input()` and `int()` return in Module 2 with error handling; `if` is Module 2's core; `for` and `range()` are Module 3's; lists are Module 5's.
+- Answers are in the `answer-keys` folder of the course's GitHub repository, not on this site.
+
+## Previous and Next {.unlisted}
+
+[← Lesson 8](lesson-08-inside-the-computer.qmd) · [Lesson 9 slides](lesson-09-talking-back-slides.qmd) · [Module 1 overview](index.qmd) · [Practice →](practice.qmd#after-lesson-9-talking-back-and-a-first-look-ahead)
+
+## Feedback {.unlisted}
+
+{{< feedback >}}

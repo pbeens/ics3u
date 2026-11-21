@@ -95,3 +95,6 @@ body.quarto-dark .stepper {
   --stepper-next: #5a4a12;
   --stepper-error: #5c1f1f;
 }
+
+/* Preset answers for input() */
+.stepper-inputs { font-size: 0.75em; color: var(--stepper-muted); margin-top: 0.2rem; }

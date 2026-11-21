@@ -41,7 +41,7 @@ Answer keys for each lesson go in `../answer-keys/module-NN-name/`.
 ## Interactive Code
 
 - **Runnable code:** a code block marked `{pyodide}` becomes an editor with a **Run Code** button. Python runs in the browser, in a small virtual computer (it reports `Emscripten`, `wasm32`, one core). The first run downloads about 10 MB.
-- **Predict and step:** `{{< stepper file="examples/l01_computer_report.py" >}}` shows the file with a prediction box and Step / Back / Run all / Start over buttons. Python runs in the browser, so `platform` and other standard modules work. Colours: yellow with an arrow = next line, green = just ran, red = stopped with an error. It does not support `input()` yet.
+- **Predict and step:** `{{< stepper file="examples/l01_computer_report.py" >}}` shows the file with a prediction box and Step / Back / Run all / Start over buttons. Python runs in the browser, so `platform` and other standard modules work. Colours: yellow with an arrow = next line, green = just ran, red = stopped with an error. For programs that use `input()`, add `input="Sam|8"`: the box answers each prompt in turn and shows the answer as if typed.
 - **Python Tutor:** `{{< pytutor file="examples/....py" height="500" >}}` embeds a file in Python Tutor (Python 3.11). It needs internet access, runs code on Python Tutor's server, and rejects many modules (including `platform`, `os`, and `shutil`).
 - **Teacher prompts:** on lesson pages use `::: {.callout-tip title="Teacher prompt"}`; on slides put the prompt in speaker notes. See [../project-docs/teaching-approach.md](../project-docs/teaching-approach.md).
 - Pages and decks that use `{pyodide}` blocks must set `engine: markdown` so Quarto does not try to run them with Jupyter at build time.

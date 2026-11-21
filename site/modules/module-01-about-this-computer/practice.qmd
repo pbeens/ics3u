@@ -380,6 +380,53 @@ Lesson 8's programs, including the ones above. Download a `.py` file, or open th
 
 {{< lesson-code lesson="08" hide="exit_ticket" >}}
 
+## After Lesson 9: Talking Back, and a First Look Ahead
+
+### Read and predict
+
+Read this program **without running it**. In your tracing notebook, write the exact output. Then type your prediction and press **Step**.
+
+1. How many values are in the list?
+2. How many times does line 3 run? What does `size` hold each time?
+3. Does line 4 run once, or once for every size?
+
+{{< stepper file="examples/l09_practice_read.py" >}}
+
+### Spot the mistake
+
+Predict what will happen, then press **Step**.
+
+1. Does any line run? What kind of error is it?
+2. What is the message telling you to do? Fix it on your classroom computer.
+
+{{< stepper file="examples/l09_practice_mistake.py" >}}
+
+### Modify
+
+Predict the output first. Then make each change, predict again, and run it.
+
+1. Change `cores` to 8. Which message prints?
+2. Add an `elif cores >= 4:` branch that prints `Good for most programs`, between the `if` and the `else`.
+3. Try `cores = 4`, `6`, and `2`. Which branch runs each time?
+
+```{pyodide}
+cores = 4
+if cores >= 8:
+    print("Great for video editing")
+else:
+    print("Fine for school work")
+```
+
+### Make
+
+Each browser tab uses about 150 MB of RAM. On your classroom computer, write `tab_check.py` in `ics3u/module-01/lesson-09/` that asks how many tabs the user has open, then prints roughly how much RAM they use, in megabytes and in gigabytes (1 GB = 1000 MB), with the gigabytes to one decimal place (`:.1f`).
+
+### Code files
+
+Lesson 9's programs, including the ones above. Download a `.py` file, or open the notebook in Callysto or Colab.
+
+{{< lesson-code lesson="09" hide="exit_ticket" >}}
+
 ## Next
 
 When you've finished the Lesson 1 and Lesson 2 practice, start the [Module 1 Assignment](assignment.qmd). After Lesson 3, finish the [System Banner](quick-build-system-banner.qmd); after Lesson 5, the [Parts Receipt](quick-build-parts-receipt.qmd).
