@@ -18,6 +18,8 @@ engine: markdown
 
 ## What else is in the toolbox?
 
+Lesson 1 asked `platform` three questions. What else does it know?
+
 ```{pyodide}
 import platform
 
@@ -27,7 +29,7 @@ print(dir(platform))
 [Python documentation: platform](https://docs.python.org/3/library/platform.html)
 
 ::: {.notes}
-Skip names starting with an underscore. Point out familiar names (machine, system, node, python_version, release) and new ones (platform, architecture, version, uname). Then open docs.python.org/3/library/platform.html and read the entry for machine() together.
+Open with the problem: "Lesson 1 asked platform three questions. What else does it know about this computer? And how do we make a program remember an answer instead of asking twice?" Skip names starting with an underscore. Point out familiar names (machine, system, node, python_version, release) and new ones (platform, architecture, version, uname). Then open docs.python.org/3/library/platform.html and read the entry for machine() together.
 :::
 
 ## Predict, then step
@@ -98,6 +100,11 @@ print("Operating system:", system)
 - Store each answer in a well-named variable
 - Print a labelled report
 - Write and run it on the classroom computer
+- Save it as `my_report.py` in `ics3u/module-01/lesson-02/`
+
+::: {.notes}
+About 10 minutes. Practice for the assignment's Part B: make sure everyone writes and runs at least two lines.
+:::
 
 ## Exit ticket
 

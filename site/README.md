@@ -2,7 +2,7 @@
 
 Quarto source for the public ICS3U teacher website. Everything here is published.
 
-- `_quarto.yml` — site settings and navigation.
+- `_quarto.yml` — site settings and navigation. The navbar stays Home · Getting Started · Modules · About; each built module gets its own left sidebar (overview, For teachers, For the class, For students) under `website.sidebar`, shown only on that module's pages. Every page ends with a `## Previous and Next {.unlisted}` section.
 - `index.qmd` — home page: quick start and lesson list.
 - `how-a-lesson-works.qmd` — for teachers: who each piece is for, and the before / during / after class cycle.
 - `about.qmd` — course philosophy, lesson structure, research, feedback, and license.

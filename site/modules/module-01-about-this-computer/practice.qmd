@@ -109,6 +109,10 @@ Lesson 2's programs, including the ones above. Download a `.py` file, or open th
 
 When you've finished both, start the [Module 1 Assignment](assignment.qmd).
 
+## Previous and Next {.unlisted}
+
+[← Module 1 overview](index.qmd) · [Assignment: Computer Report Card →](assignment.qmd)
+
 ## Feedback {.unlisted}
 
 {{< feedback >}}

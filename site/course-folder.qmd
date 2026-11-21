@@ -62,6 +62,10 @@ Once a week, copy your whole `ics3u` folder to a USB key or a cloud drive. A los
 
 You'll learn more about files, folders, and paths in Module 1, Lesson 6. For now, a tidy folder is enough.
 
+## Previous and Next {.unlisted}
+
+[← Scope and Sequence](scope-and-sequence.qmd) · [Module 1 →](modules/module-01-about-this-computer/index.qmd)
+
 ## Feedback {.unlisted}
 
 {{< feedback >}}

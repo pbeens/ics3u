@@ -25,6 +25,22 @@ subtitle: "About 6 hours, spread through Modules 2–6 · For teachers"
 
 Students research one emerging area of computer science (for example, artificial intelligence, computer vision, cryptography, robotics, or human–computer interaction) and its link to another field. It is submitted in stages: topic and sources, notes and outline, then a final report in a format of the student's choice (website, slide presentation, or video). Where possible, students connect the topic to the kind of computer and network they have studied in the course.
 
+## How It Fits
+
+Each lesson goes in the gap after a module, and each module's overview points to it under **Then**:
+
+- After [Module 2](../module-02-spec-checker/index.qmd): *Who Builds Computers?*
+- After [Module 3](../module-03-benchmark-lab/index.qmd): *Faster Than One Computer*
+- After [Module 4](../module-04-passwords-and-secret-messages/index.qmd): *Security as a Career*
+- After [Module 5](../module-05-on-the-network/index.qmd): *Computer Science + Another Field*
+- After [Module 6](../module-06-data-detective/index.qmd): *Where Next?*
+
+The five lessons take about 5 hours; the sixth hour is for research report presentations, which start in *Where Next?*
+
+## Previous and Next {.unlisted}
+
+[← Module 7](../module-07-software-project/index.qmd) · [Scope and Sequence](../../scope-and-sequence.qmd)
+
 ## Feedback {.unlisted}
 
 {{< feedback >}}

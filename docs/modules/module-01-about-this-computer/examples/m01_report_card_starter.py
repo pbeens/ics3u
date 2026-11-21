@@ -3,8 +3,10 @@
 # Date:
 # What this program does:
 #
-# Hand in this one file. Answer Parts A and C in the comments below,
-# and write your Part B program where it says so.
+# This one file is your whole assignment. Save it as report_card.py in
+# ics3u/module-01/assignment/ and hand it in. Answer Parts A and C in the
+# comments below, and write your Part B program where it says so.
+# When it works, copy it into ics3u/toolkit/ (your toolkit's first program).
 
 # ---------------------------------------------------------------
 # PART A: READ (answer without running the program on the page)

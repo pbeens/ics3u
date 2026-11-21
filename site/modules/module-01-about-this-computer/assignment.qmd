@@ -7,7 +7,7 @@ expectations: [A1.1, A2.2, A3.1, A4.3, A4.4, C1.1, C3.1]
 ---
 
 ::: {.callout-note appearance="simple"}
-**For students.** Covers Lessons 1–2. Work on your classroom computer (Thonny, IDLE, or VS Code). **Hand in:** one `.py` file. Start from the [starter file](examples/m01_report_card_starter.py){download="report_card_starter.py"}: it has spaces for your Part A and Part C answers, and a place for your Part B program. Save it in `ics3u/module-01/assignment/` in your [course folder](../../course-folder.qmd). · [Module 1 overview](index.qmd)
+**For students.** Covers Lessons 1–2. Work on your classroom computer (Thonny, IDLE, or VS Code). Download the [starter file](examples/m01_report_card_starter.py){download="report_card.py"}: **this one file is your whole assignment.** Save it as `report_card.py` in `ics3u/module-01/assignment/` in your [course folder](../../course-folder.qmd), answer Parts A and C in its comments, write your Part B program in it, and hand it in. When it works, copy it into `ics3u/toolkit/`: it's the first program in your toolkit. · [Module 1 overview](index.qmd)
 :::
 
 ::: {.callout-warning appearance="simple"}
@@ -47,7 +47,7 @@ print("Checked:", cpu)
 
 ## Part B: Write
 
-Write a program called `report_card.py` that prints a **computer report card** for the computer it runs on.
+In **Part B of `report_card.py`**, write a program that prints a **computer report card** for the computer it runs on.
 
 Your program must:
 
@@ -88,6 +88,10 @@ Operating system: Windows
 | **Application** (Part B) | Runs, but fewer than five facts or no variables | Five labelled facts stored in variables | Also uses a self-found function well, with very clear names and labels |
 | **Thinking** (Part C) | Lists differences | Explains where the code ran | Explains clearly, using evidence from both outputs |
 | **Communication** | Few comments or unclear labels | Header comment; clear labels | Clear, consistent comments, names, and output |
+
+## Previous and Next {.unlisted}
+
+[← Practice](practice.qmd) · [Module 1 overview](index.qmd)
 
 ## Feedback {.unlisted}
 

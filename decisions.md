@@ -4,6 +4,32 @@ Consequential project decisions, newest first. Current files and newer instructi
 
 ---
 
+## 2026-11-19 — Quick Builds are lesson Make products; every module has a work period
+
+- **Decision:** Each module's two Quick Builds are the graded Make products of named lessons, so they cost no extra class time. In Modules 1–6 the period before the test is "Review and assignment work period". To make room without changing hours (110 total), lessons were merged: Module 1 Lessons 9–10 (`input()` and the first look at `if`/`for`), Module 3 "Plan Before You Code" + "Your First Functions", Module 4 "Reusable Code" into "Password Strength Checker", Module 5 "Who Am I on the Network?" + "IP Addresses", Module 6 "Counting by Type" + "Where Did My Space Go?".
+- **Context:** Round 2 audit (Antigravity): modules filled every period with lessons and a test, leaving no class time for Quick Builds or assignments.
+- **Alternatives:** Take the work periods from Module 7 (16 → about 12 h); rejected because the project is the final 30%.
+- **Revisit if:** Merged lessons run long once written.
+
+---
+
+## 2026-11-19 — Module navigation in a left sidebar
+
+- **Decision:** The navbar is Home · Getting Started · Modules · About. Each built module gets a left sidebar (overview; For teachers; For the class; For students) shown only on its own pages, defined in `site/_quarto.yml`. Module 1 has one now; the separate "Module 1" menu is gone. Every page ends with Previous and Next links.
+- **Context:** Round 2 audits: two module menus side by side were confusing, and many pages had no way forward.
+- **Alternatives:** Wait until Module 2 has lessons.
+- **Revisit if:** Sidebars get crowded once a module has 10+ lessons (group by lesson, not by audience).
+
+---
+
+## 2026-11-19 — Open computers: lead with the minimum
+
+- **Decision:** The "This course needs open computers" callout stays blunt but opens with the minimum: Modules 1–4 run on any computer with Python and files that stay saved; the whole course needs open computers. Home card 1 says the same.
+- **Context:** Both round 2 audits worried that teachers in managed labs would stop reading before learning that the early modules work.
+- **Revisit if:** Teachers report the message is still off-putting, or that Modules 1–4 also fail on their lab computers.
+
+---
+
 ## 2026-11-18 — Where students write answers
 
 - **Decision:** Students write predictions, trace tables, and short answers in a paper *tracing notebook*, in class and on Practice pages. Anything handed in has its written answers as comments at the top of the `.py` file; assignments supply a starter file with a space for each answer. Every reading task says where to write. "Notebook" alone means Jupyter on this site.

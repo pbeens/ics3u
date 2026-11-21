@@ -26,16 +26,16 @@ subtitle: "About 15 hours · For teachers"
 | Lesson | Focus | Students read, then build |
 |---|---|---|
 | 1. What's in This Folder? | Building the sample folder with `make_sample_folder.py` (and reading how it works); `os.scandir()`; paths; file names, sizes, and dates; organizing files (C2.1) | List the files in the sample folder |
-| 2. Counting by Type | Parallel lists; linear search; counting (A1.6, A2.3) | How many `.py`, `.png`, and `.csv` files are there? |
-| 3. Where Did My Space Go? | Total, highest, lowest; the oldest file | Find the biggest and oldest files |
-| 4. Top Ten | Inserting into a sorted list; deleting from the middle; bounds (A1.5, B3.1) | A top-ten list of the biggest files |
-| 5. Breaking It into Functions | Structure charts (B2.4); modularity (B2.3); describing two designs (B2.2) | Reorganize the folder detective into functions |
-| 6. Back It Up, and Prove It | `shutil.make_archive()`; dated file names; the 3-2-1 backup rule; archiving (C2.3); checking copies with `hashlib`; finding duplicates | A backup of the course folder that verifies every file and writes a log |
-| 7. Reading Your Own Data | The `csv` module; lists from a file; the students' Module 5 network log | When was the network slowest? |
-| 8. What Does the Lab Cost to Run? | Watts, hours, kilowatt-hours, and electricity rates; sleep settings (D1.1, D1.2) | The yearly power bill for the lab, and the savings from sleep mode |
-| 9. Where Old Computers Go | E-waste; refurbishing and recycling; community partners such as Ontario Computers for Schools (D1.1, D1.3, D1.4) | Analyze e-waste data; plan a lab's end-of-life policy |
-| 10. Healthy Computing | Ergonomics, eye strain, and breaks (D1.1, D1.2) | A break reminder; an analysis of a week of screen-time data |
-| 11. Testing with Every Case | Empty folders, one file, unreadable files, ties in the top ten (A4.4, A4.5); regenerate the sample folder with different seeds | A full test plan for the folder detective |
+| 2. Counting and Comparing | Parallel lists; linear search; counting; total, highest, lowest (A1.6, A2.3); reading a program that finds the biggest and oldest files | Make: the **Extension Report** Quick Build |
+| 3. Top Ten | Inserting into a sorted list; deleting from the middle; bounds (A1.5, B3.1) | A top-ten list of the biggest files |
+| 4. Breaking It into Functions | Structure charts (B2.4); modularity (B2.3); describing two designs (B2.2) | Reorganize the folder detective into functions |
+| 5. Back It Up, and Prove It | `shutil.make_archive()`; dated file names; the 3-2-1 backup rule; archiving (C2.3); checking copies with `hashlib`; finding duplicates; modifying a backup program that verifies every file and writes a log | Make: the **Duplicate Finder** Quick Build |
+| 6. Reading Your Own Data | The `csv` module; lists from a file; the students' Module 5 network log | When was the network slowest? |
+| 7. What Does the Lab Cost to Run? | Watts, hours, kilowatt-hours, and electricity rates; sleep settings (D1.1, D1.2) | The yearly power bill for the lab, and the savings from sleep mode |
+| 8. Where Old Computers Go | E-waste; refurbishing and recycling; community partners such as Ontario Computers for Schools (D1.1, D1.3, D1.4) | Analyze e-waste data; plan a lab's end-of-life policy |
+| 9. Healthy Computing | Ergonomics, eye strain, and breaks (D1.1, D1.2) | A break reminder; an analysis of a week of screen-time data |
+| 10. Testing with Every Case | Empty folders, one file, unreadable files, ties in the top ten (A4.4, A4.5); regenerate the sample folder with different seeds | A full test plan for the folder detective |
+| 11. Review and assignment work period | A short review of Lessons 1–10, then class time for the assignment | Finish Folder Detective |
 | 12. Module 6 test | Code reading and tracing; a short basics section | |
 
 ## Assignment (Planned): Folder Detective
@@ -47,14 +47,14 @@ Students run their folder detective on a sample folder generated with their own 
 ## Practising the Basics (Planned)
 
 - **Skill Builder:** list algorithms (count, total, highest, lowest, linear search, sorted insert, delete), functions and scope, and reading and writing files. Includes Module 5 list review.
-- **Quick Builds** (small graded programs, before the assignment):
-  - **Extension Report:** counts the sample folder's files by type and writes the result to a CSV file.
-  - **Duplicate Finder:** lists every set of identical files in the sample folder, using hashes.
+- **Quick Builds** (small graded programs; each is the Make product of a lesson, so it needs no extra period):
+  - **Extension Report** (Lesson 2): counts the sample folder's files by type and writes the result to a CSV file.
+  - **Duplicate Finder** (Lesson 5): lists every set of identical files in the sample folder, using hashes.
 - **Warm-ups** in every lesson include a question from an earlier module.
 
 ## Notes for Teachers
 
-- **Open computers needed.** This module is the most likely to be blocked on a managed lab computer. Check the [requirements table](../../before-you-begin.qmd#what-students-programs-need) with IT before the module starts.
+- **Open computers needed.** On a managed computer, this module's problem is files: the course folder and sample folder must stay put between classes (no reset on log-off), and security software may flag a program that reads, hashes, and copies hundreds of files. Check the [requirements table](../../before-you-begin.qmd#what-students-programs-need) with IT before the module starts.
 - **Sample folder, not students' own files.** `make_sample_folder.py` (planned; see the [Scope and Sequence](../../scope-and-sequence.qmd#course-tools)) builds the same messy folder for everyone, or a different one per student with `--seed`. If a program wrecks it, run the script again.
 - **Read-only programs.** Nothing in this module deletes or moves files. Tell students why: programs that delete files are dangerous, and you always back up first. A "dry run" (print what *would* happen) is the safe habit.
 - **Lists, not dictionaries.** The curriculum asks for one-dimensional arrays, so use lists (and parallel lists). Dictionaries can appear as a marked extension.
@@ -64,6 +64,11 @@ Students run their folder detective on a sample folder generated with their own 
 
 - **Before:** [Module 5](../module-05-on-the-network/index.qmd) wrote lists for the first time and handled exceptions.
 - **Next:** [Module 7, Software Development Project](../module-07-software-project/index.qmd), where students design a program of their own.
+- **Then:** the [Computer Science in the World](../computer-science-in-the-world/index.qmd) lesson *Where Next?* (about 1 hour), before Module 7.
+
+## Previous and Next {.unlisted}
+
+[← Module 5](../module-05-on-the-network/index.qmd) · [Scope and Sequence](../../scope-and-sequence.qmd) · [Module 7 →](../module-07-software-project/index.qmd)
 
 ## Feedback {.unlisted}
 

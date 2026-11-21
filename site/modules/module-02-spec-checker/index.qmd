@@ -26,16 +26,16 @@ subtitle: "About 15 hours · For teachers"
 | Lesson | Focus | Students read, then build |
 |---|---|---|
 | 1. How Many Cores? | `os.cpu_count()`; integers vs. strings; what a core is (C1.1) | Add cores to the Module 1 report card |
-| 2. Bytes to Gigabytes | Arithmetic, `//`, `%`, `**`, order of operations (A1.3, A1.4) | A converter that explains why "1 TB" shows as 931 GB |
+| 2. Bytes to Gigabytes | Arithmetic, `//`, `%`, `**`, order of operations (A1.3, A1.4); reading a converter that explains why "1 TB" shows as 931 GB | Make: the **Storage Unit Converter** Quick Build |
 | 3. How Full Is My Drive? | `shutil.disk_usage()`; percentages; rounding in f-strings | A drive gauge for the classroom computer and a USB key |
 | 4. Asking the User | `input()`, `int()`, `float()`; the input-process-output model (A2.1, B1.3) | "How many 4 GB movies fit on this drive?" |
-| 5. Making Decisions | Comparison operators; `if`/`else`; Boolean values (A1.1, A1.4) | "Is there room for this download?" |
+| 5. Making Decisions | Comparison operators; `if`/`else`; Boolean values (A1.1, A1.4); modifying "Is there room for this download?" | Make: the **Battery Life Estimator** Quick Build |
 | 6. More Than Two Choices | `elif`; `and`, `or`, `not` | Rate the drive: plenty, getting full, or critical |
 | 7. When Users Type Nonsense | `try`/`except`; `ValueError`, `ZeroDivisionError`; friendly messages (B3.3, B2.5) | Make the storage calculator survive "lots" and "0" |
 | 8. Testing with a Test Plan | Normal, boundary, and invalid cases; expected vs. actual; pass or fail (B4.4, A4.5) | A test plan for the drive gauge |
 | 9. Will This Game Run? | Comparing specifications to requirements (C1.2); modifying a loop over a list of requirements; `.strip()`, `.lower()` | Check this computer against a real game's minimums |
 | 10. Peripherals and People | Monitors, printers, keyboards, storage devices and who needs what (C1.3); pixels per inch (B3.2) | Compare two monitors; recommend a set-up for a gamer, a coder, and a grandparent |
-| 11. Review and work period | | |
+| 11. Review and assignment work period | A short review of Lessons 1–10, then class time for the assignment | Finish Will It Run? |
 | 12. Module 2 test | Includes a code-reading and tracing section | |
 
 ## Assignment (Planned): Will It Run?
@@ -53,9 +53,9 @@ They also hand in a **test plan** (normal, boundary, and invalid cases) and a on
 ## Practising the Basics (Planned)
 
 - **Skill Builder:** `input()` and type conversion, arithmetic operators and order of operations, comparisons, `if`/`elif`/`else`, and `try`/`except`. Includes Module 1 `print()` and f-string review.
-- **Quick Builds** (small graded programs, before the assignment):
-  - **Storage Unit Converter:** bytes, KB, MB, GB, and TB in both directions.
-  - **Battery Life Estimator:** battery capacity and power draw in, hours of use out, with a warning for impossible values.
+- **Quick Builds** (small graded programs; each is the Make product of a lesson, so it needs no extra period):
+  - **Storage Unit Converter** (Lesson 2): bytes, KB, MB, GB, and TB in both directions.
+  - **Battery Life Estimator** (Lesson 5): battery capacity and power draw in, hours of use out, with a warning for impossible values.
 - **Warm-ups** in every lesson include a question from an earlier module.
 
 ## Notes for Teachers
@@ -68,6 +68,11 @@ They also hand in a **test plan** (normal, boundary, and invalid cases) and a on
 
 - **Before:** [Module 1](../module-01-about-this-computer/index.qmd) taught `import`, `print()`, variables, and reading errors, and let students read their first `if` and `input()`.
 - **Next:** [Module 3, Benchmark Lab](../module-03-benchmark-lab/index.qmd), measures how *fast* the computer is, using loops.
+- **Then:** the [Computer Science in the World](../computer-science-in-the-world/index.qmd) lesson *Who Builds Computers?* (about 1 hour), before Module 3.
+
+## Previous and Next {.unlisted}
+
+[← Module 1](../module-01-about-this-computer/index.qmd) · [Scope and Sequence](../../scope-and-sequence.qmd) · [Module 3 →](../module-03-benchmark-lab/index.qmd)
 
 ## Feedback {.unlisted}
 

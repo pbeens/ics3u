@@ -19,7 +19,7 @@ expectations: [A2.2, A3.1, C1.1]
 - **Big idea:** a program can ask the computer about itself, and the answer depends on which computer runs it.
 - **Students will:** guess their computer's processor and operating system, read and step through a four-line program that checks, then change it.
 - **Students make:** a short report program that prints the operating system and its version.
-- **Prepare:** run `l01_computer_report.py` on your computer and on a student computer; optionally in Colab for the demonstration. Students need their [course folder](../../course-folder.qmd) before Make: set it up beforehand, or take the first five minutes of Make.
+- **Prepare:** run `l01_computer_report.py` on your computer and on a student computer; optionally in Colab for the demonstration. Students need their [course folder](../../course-folder.qmd) before Make: set it up beforehand, or take the first five minutes of Make. Open the slides a few minutes before class: Python loads into the browser in the background, and a small "Downloading Pyodide" note shows until it's ready.
 - **After class:** [Lesson 1 practice](practice.qmd#after-lesson-1-ask-the-computer-about-itself).
 - **Where it fits:** the first lesson of [Module 1](index.qmd). Lesson 2 adds `dir()`, variables, and error messages.
 

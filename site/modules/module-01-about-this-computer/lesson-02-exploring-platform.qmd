@@ -19,7 +19,7 @@ expectations: [A1.1, A3.1, A4.3, A4.4, C1.1]
 - **Big idea:** a module is a toolbox you can explore, and variables let a program remember answers to use later.
 - **Students will:** list the `platform` toolbox with `dir()`, look up a function in the documentation, trace a program that stores answers in variables, see that a variable can be changed, and read two common error messages.
 - **Students make:** a computer report built from four `platform` functions stored in variables.
-- **Prepare:** run `l02_report_variables.py` and both mistake programs, so you've seen the error messages students will see.
+- **Prepare:** run `l02_report_variables.py` and both mistake programs, so you've seen the error messages students will see. Open the slides a few minutes before class: Python loads into the browser in the background, and a small "Downloading Pyodide" note shows until it's ready.
 - **After class:** [Lesson 2 practice](practice.qmd#after-lesson-2-exploring-the-platform-library), then the [Module 1 Assignment](assignment.qmd).
 - **Where it fits:** builds on [Lesson 1](lesson-01-ask-the-computer.qmd); part of [Module 1](index.qmd).
 
@@ -47,6 +47,8 @@ Without running anything, answer in tracing notebooks:
 
 ## Teach: What Else Is in the Toolbox? (15 min)
 
+Open with the problem: "Lesson 1 asked `platform` three questions. What else does it know about this computer? And how do we make a program remember an answer instead of asking twice?"
+
 A module can contain many tools. `dir()` lists them. Run it and read the list together.
 
 ```{pyodide}
@@ -65,7 +67,7 @@ Think aloud while reading the list:
 
 Open the official documentation for the module: [docs.python.org/3/library/platform.html](https://docs.python.org/3/library/platform.html). Find `platform.machine()` and read its description together. Then choose one new function from the list, predict what it does from its name, and try it.
 
-## Predict, Then Step (15 min)
+## Predict, Then Step (10 min)
 
 This is Lesson 1's computer report, rewritten so that each answer is stored in a *variable* before it is printed. Read it **without running it**, then answer in tracing notebooks:
 
@@ -84,7 +86,7 @@ Type your prediction in the box, then press **Step** to run one line at a time. 
 
 {{< stepper file="examples/l02_report_variables.py" >}}
 
-## Investigate (25 min)
+## Investigate (20 min)
 
 ### What the variables hold
 
@@ -143,7 +145,7 @@ After Program B stops:
 1. Program A does not crash, but prints something strange. What is missing?
 2. Program B stops with an `AttributeError`. Which line caused it? What is the message telling you?
 3. How could `dir(platform)` have prevented the mistake in Program B?
-4. Run Program B on the classroom computer. How does the full error message there show the same information?
+4. *If time allows:* run Program B on the classroom computer. How does the full error message there show the same information? (Otherwise, students meet the full message in Make.)
 
 ## Modify (10 min)
 
@@ -164,9 +166,9 @@ print("CPU type:", cpu)
 print("Operating system:", system)
 ```
 
-## Make: My Computer Report (if time allows)
+## Make: My Computer Report (10 min)
 
-On the classroom computer (Thonny, IDLE, or VS Code), write a computer report that uses **four** `platform` functions, including at least one you found with `dir()` or the documentation. Store each answer in a variable with a clear name, then print a labelled report. Early finishers can paste it into the Modify box above and compare the browser's answers.
+On the classroom computer (Thonny, IDLE, or VS Code), write a computer report that uses **four** `platform` functions, including at least one you found with `dir()` or the documentation. Store each answer in a variable with a clear name, then print a labelled report. Students save it as `my_report.py` in `ics3u/module-01/lesson-02/`. This is practice for the assignment's Part B, so make sure everyone writes and runs at least two lines before the bell. Early finishers can paste it into the Modify box above and compare the browser's answers.
 
 ## Check: Exit Ticket (5 min)
 

@@ -99,7 +99,7 @@ On the classroom computer, write a program that prints:
 - the operating system: `platform.system()`
 - its version number: `platform.release()`
 
-Give each answer a label. Finished? Add a third fact.
+Give each answer a label. Save it as `os_report.py` in `ics3u/module-01/lesson-01/`. Finished? Add a third fact.
 
 ::: {.notes}
 About 10 minutes, in Thonny, IDLE, or VS Code. Two print lines plus the import.

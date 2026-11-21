@@ -22,15 +22,15 @@ subtitle: "About 15 hours · For teachers"
 
 | Lesson | Focus | Students read, then build |
 |---|---|---|
-| 3. Getting Output Right | `print()` in depth: several arguments, `sep` and `end`, `\n` and `\t`, quotes inside strings, commas vs. `+`, common mistakes | A system info banner |
+| 3. Getting Output Right | `print()` in depth: several arguments, `sep` and `end`, `\n` and `\t`, quotes inside strings, commas vs. `+`, common mistakes | Make: the **System Banner** Quick Build |
 | 4. Better Reports with f-strings | f-strings; comments; naming conventions (A4.2) | Turn the Lesson 2 report into a tidy, aligned report card |
-| 5. Values and Types | `str`, `int`, `float`, `type()`; simple arithmetic; why `"8" + "8"` is `"88"` (A1.1) | Pull numbers out of the Python version and do arithmetic with them |
+| 5. Values and Types | `str`, `int`, `float`, `type()`; simple arithmetic; why `"8" + "8"` is `"88"`; reading a program that pulls numbers out of the Python version (A1.1) | Make: the **Parts Receipt** Quick Build |
 | 6. Where Do My Programs Live? | Files, folders, and paths; organizing a course folder on local and shared drives; the parts of the editor (C2.1, C3.1); first run of the sample folder generator; reading a two-line program that prints the current folder | Explain the course folder students set up on day one, then add the toolkit folder; run the same file from the editor and the terminal |
 | 7. What Python Actually Runs | Source code vs. machine code; interpreters vs. compilers; bytecode with `dis`; applications vs. languages vs. operating systems (C3.3, C3.4, C3.5) | Match `dis` output to lines of code; sort running programs into apps, languages, and OS parts |
 | 8. Inside the Computer: RAM and CPU | Where variables live and where arithmetic happens; `sys.getsizeof()` and `id()` (C1.1, C1.4) | Trace a program and label each line "RAM" or "CPU" |
-| 9. Talking Back with `input()` | Reading a program that greets the user by name and gives a hardware summary (A2.1) | Modify the greeter's questions and messages |
-| 10. A First Look at Decisions and Loops | Reading a simple `if` (e.g., "if this is Windows…") and a `for` loop over a list of facts | Predict the output on three different operating systems |
-| 11. Error Clinic and Review | Syntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4) | Fix five broken report programs |
+| 9. Talking Back, and a First Look Ahead | Reading a program that greets the user by name with `input()` and gives a hardware summary (A2.1); then reading a simple `if` ("if this is Windows…") and a `for` loop over a list of facts | Modify the greeter; predict the `if` program's output on three operating systems |
+| 10. Error Clinic | Syntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4) | Fix five broken report programs |
+| 11. Review and assignment work period | A short review game on Lessons 1–10, then class time for the assignment | Finish the Computer Report Card |
 | 12. Module 1 test | Code reading and tracing; a short basics section | |
 
 Each lesson plan's **Code for This Lesson** section has the `.py` files and notebooks. Students find the same files at the end of each lesson's section on the Practice page.
@@ -46,21 +46,24 @@ Each lesson plan's **Code for This Lesson** section has the `.py` files and note
 ## Practising the Basics (Planned)
 
 - **Skill Builder:** short drills on `print()` arguments, `sep` and `end`, escape characters, quotes, variables, types, f-strings, and reading a traceback. Each drill set opens with predict-the-output and fix-the-error questions.
-- **Quick Builds** (small graded programs, before the assignment):
-  - **System Banner:** a boxed title banner for the computer, with exact spacing.
-  - **Parts Receipt:** a receipt for computer parts, with prices, HST, and a total in aligned columns.
+- **Quick Builds** (small graded programs; each is the Make product of a lesson, so it needs no extra period):
+  - **System Banner** (Lesson 3): a boxed title banner for the computer, with exact spacing.
+  - **Parts Receipt** (Lesson 5): a receipt for computer parts, with prices, HST, and a total in aligned columns.
+
+Until the Skill Builder is ready, use the [Practice](practice.qmd) page and the exit tickets for retrieval practice.
 
 ## How Module 1 Fits
 
 - **Before:** nothing. This is the first module; students need no programming experience.
 - **Planned for the rest of the module:** see Planned lessons above, and the [Scope and Sequence](../../scope-and-sequence.qmd).
 - **Next:** [Module 2, Spec Checker](../module-02-spec-checker/index.qmd), adds `os` and `shutil` to check whether a computer meets a program's requirements.
+- **Students set up first:** their [course folder](../../course-folder.qmd), before Lesson 1's Make.
 
 New to the course? Read [How a Lesson Works](../../how-a-lesson-works.qmd) first.
 
 ## Previous and Next {.unlisted}
 
-[← How a Lesson Works](../../how-a-lesson-works.qmd) · [Lesson 1 plan →](lesson-01-ask-the-computer.qmd)
+[← Scope and Sequence](../../scope-and-sequence.qmd) · [Lesson 1 plan →](lesson-01-ask-the-computer.qmd) · [Module 2 →](../module-02-spec-checker/index.qmd)
 
 ## Feedback {.unlisted}
 

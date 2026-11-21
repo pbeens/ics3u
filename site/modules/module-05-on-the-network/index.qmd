@@ -25,16 +25,16 @@ subtitle: "About 14 hours · For teachers"
 
 | Lesson | Focus | Students read, then build |
 |---|---|---|
-| 1. Who Am I on the Network? | `socket`; host names; local IP addresses; how this compares with `platform.node()` | Add network facts to the computer report card |
-| 2. IP Addresses | IPv4 and IPv6; private vs. public addresses; the `ipaddress` module (A3.1) | Explain why the school address starts with 10 or 192.168 |
-| 3. Lists, Properly | Elements, indexes, bounds, `IndexError`; `.split()` into a list (A1.5, A1.6) | Split an IP address into four numbers and show each in binary (A1.2) |
-| 4. Names to Numbers: DNS | `socket.gethostbyname()`; building a list of results with `.append()` | Look up a list of favourite websites |
-| 5. How Far Away Is That Server? | Timing a connection; looping over a list; count, total, lowest, highest (A2.3) | A response timer with fastest, slowest, and average |
-| 6. When the Network Fails | Timeouts, unknown hosts, `try`/`except` around network code (B3.3); testing with good, slow, and broken addresses (A4.5) | Make the response timer survive a typo and an unplugged cable |
-| 7. Keep a Log | Writing files: `open()` in append mode, `csv.writer`, timestamps with `datetime` | Log each test run to `network_log.csv`, collected over several days for Module 6 |
-| 8. Downloading a Web Page | `urllib.request`; bytes and megabits (Module 2 again); parsing a web address with `urllib.parse`; reading the sample folder generator's download code. Extension: read a page's title with `html.parser` | A download speed test |
-| 9. Be the Server | `python -m http.server`; ports; firewalls; visiting a classmate's computer | Serve a page from your own computer to the class |
-| 10. How the Internet Works, and Review | Packets and routers with the [netsim](https://cs.uwaterloo.ca/~m2mazmud/netsim/) game; a data flow diagram of a web request (B2.4); distributed computing (D2.1) | Draw the trip a web request takes |
+| 1. Who Am I on the Network? | `socket`; host names; local IP addresses and how they compare with `platform.node()`; IPv4 and IPv6; private vs. public addresses with the `ipaddress` module (A3.1) | Add network facts to the computer report card; explain why the school address starts with 10 or 192.168 |
+| 2. Lists, Properly | Elements, indexes, bounds, `IndexError`; `.split()` into a list (A1.5, A1.6) | Split an IP address into four numbers and show each in binary (A1.2) |
+| 3. Names to Numbers: DNS | `socket.gethostbyname()`; building a list of results with `.append()` | Look up a list of favourite websites |
+| 4. How Far Away Is That Server? | Timing a connection; looping over a list; count, total, lowest, highest (A2.3); modifying a response timer | Make: the **Speed Log Summary** Quick Build |
+| 5. When the Network Fails | Timeouts, unknown hosts, `try`/`except` around network code (B3.3); testing with good, slow, and broken addresses (A4.5) | Make the response timer survive a typo and an unplugged cable |
+| 6. Keep a Log | Writing files: `open()` in append mode, `csv.writer`, timestamps with `datetime` | Log each test run to `network_log.csv`, collected over several days for Module 6 |
+| 7. Downloading a Web Page | `urllib.request`; bytes and megabits (Module 2 again); parsing a web address with `urllib.parse`; reading the sample folder generator's download code; modifying a download speed test. Extension: read a page's title with `html.parser` | Make: the **Web Address Splitter** Quick Build |
+| 8. Be the Server | `python -m http.server`; ports; firewalls; visiting a classmate's computer | Serve a page from your own computer to the class |
+| 9. How the Internet Works | Packets and routers with the [netsim](https://cs.uwaterloo.ca/~m2mazmud/netsim/) game; a data flow diagram of a web request (B2.4); distributed computing (D2.1) | Draw the trip a web request takes |
+| 10. Review and assignment work period | A short review of Lessons 1–9, then class time for the assignment | Finish Is It Me or the Wi-Fi? |
 | 11. Module 5 test | Code reading and tracing; a short basics section | |
 
 ## Assignment (Planned): Is It Me or the Wi-Fi?
@@ -54,14 +54,14 @@ They hand in the program, a test plan (including deliberately broken addresses),
 ## Practising the Basics (Planned)
 
 - **Skill Builder:** creating lists, `.append()`, indexing and bounds, looping over a list, finding the total, highest, and lowest by hand, and writing a line to a file. Includes Module 4 string methods.
-- **Quick Builds** (small graded programs, before the assignment):
-  - **Speed Log Summary:** given a list of download speeds, report the count, average, fastest, slowest, and how many were below a target.
-  - **Web Address Splitter:** breaks a URL into its scheme, site, and path, and says whether it uses HTTPS.
+- **Quick Builds** (small graded programs; each is the Make product of a lesson, so it needs no extra period):
+  - **Speed Log Summary** (Lesson 4): given a list of download speeds, report the count, average, fastest, slowest, and how many were below a target.
+  - **Web Address Splitter** (Lesson 7): breaks a URL into its scheme, site, and path, and says whether it uses HTTPS.
 - **Warm-ups** in every lesson include a question from an earlier module.
 
 ## Notes for Teachers
 
-- **Open computers needed.** This module is the most likely to be blocked on a managed lab computer. Check the [requirements table](../../before-you-begin.qmd#what-students-programs-need) with IT before the module starts.
+- **Open computers needed.** On a managed computer, this module is the one most likely to hit the network rules: school proxies and firewalls often block Python's own connections even when the browser works, and running a server (Lesson 8) is usually forbidden. Check the [requirements table](../../before-you-begin.qmd#what-students-programs-need) with IT before the module starts.
 - **Local only.** This module's programs need a real computer on a real network. The site's browser boxes can't open network connections, which makes a good callback to Module 1's "where does my code run?"
 - **Check with IT first.** Some school networks block outside connections, DNS lookups, or student-run servers. Lesson 8 can run on one computer (`localhost`) if the network won't allow more.
 - **No `ping` command needed.** Timing a connection with `socket.create_connection()` works without administrator rights. Students can still read how `ping` works.
@@ -72,6 +72,11 @@ They hand in the program, a test plan (including deliberately broken addresses),
 
 - **Before:** [Module 4](../module-04-passwords-and-secret-messages/index.qmd) taught binary, strings, and writing functions.
 - **Next:** [Module 6, Data Detective](../module-06-data-detective/index.qmd), uses lists to investigate files, folders, and real data.
+- **Then:** the [Computer Science in the World](../computer-science-in-the-world/index.qmd) lesson *Computer Science + Another Field* (about 1 hour), before Module 6.
+
+## Previous and Next {.unlisted}
+
+[← Module 4](../module-04-passwords-and-secret-messages/index.qmd) · [Scope and Sequence](../../scope-and-sequence.qmd) · [Module 6 →](../module-06-data-detective/index.qmd)
 
 ## Feedback {.unlisted}
 

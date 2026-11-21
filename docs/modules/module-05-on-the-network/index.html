@@ -47,9 +47,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a2b564723c042b0e428f357d9a015bd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-e5c1a4e5cb8a150ea5a3824803bbddb8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-6a2b564723c042b0e428f357d9a015bd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-f1b8ffe018e27b3e49848c173bc17ec4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-4d63793e1695400d669a5382393e356d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-f1b8ffe018e27b3e49848c173bc17ec4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -330,47 +330,6 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-module-1" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Module 1</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-module-1">    
-        <li>
-    <a class="dropdown-item" href="../../modules/module-01-about-this-computer/index.html">
- <span class="dropdown-text">Module 1 overview</span></a>
-  </li>  
-        <li><hr class="dropdown-divider"></li>
-        <li class="dropdown-header">For teachers</li>
-        <li>
-    <a class="dropdown-item" href="../../modules/module-01-about-this-computer/lesson-01-ask-the-computer.html">
- <span class="dropdown-text">Lesson 1 plan: Ask the Computer About Itself</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../modules/module-01-about-this-computer/lesson-02-exploring-platform.html">
- <span class="dropdown-text">Lesson 2 plan: Exploring the platform Library</span></a>
-  </li>  
-        <li><hr class="dropdown-divider"></li>
-        <li class="dropdown-header">For the class</li>
-        <li>
-    <a class="dropdown-item" href="../../modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html">
- <span class="dropdown-text">Lesson 1 slides</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html">
- <span class="dropdown-text">Lesson 2 slides</span></a>
-  </li>  
-        <li><hr class="dropdown-divider"></li>
-        <li class="dropdown-header">For students</li>
-        <li>
-    <a class="dropdown-item" href="../../modules/module-01-about-this-computer/practice.html">
- <span class="dropdown-text">Practice</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../modules/module-01-about-this-computer/assignment.html">
- <span class="dropdown-text">Assignment: Computer Report Card</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
@@ -467,53 +426,53 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>1. Who Am I on the Network?</td>
-<td><code>socket</code>; host names; local IP addresses; how this compares with <code>platform.node()</code></td>
-<td>Add network facts to the computer report card</td>
+<td><code>socket</code>; host names; local IP addresses and how they compare with <code>platform.node()</code>; IPv4 and IPv6; private vs.&nbsp;public addresses with the <code>ipaddress</code> module (A3.1)</td>
+<td>Add network facts to the computer report card; explain why the school address starts with 10 or 192.168</td>
 </tr>
 <tr class="even">
-<td>2. IP Addresses</td>
-<td>IPv4 and IPv6; private vs.&nbsp;public addresses; the <code>ipaddress</code> module (A3.1)</td>
-<td>Explain why the school address starts with 10 or 192.168</td>
-</tr>
-<tr class="odd">
-<td>3. Lists, Properly</td>
+<td>2. Lists, Properly</td>
 <td>Elements, indexes, bounds, <code>IndexError</code>; <code>.split()</code> into a list (A1.5, A1.6)</td>
 <td>Split an IP address into four numbers and show each in binary (A1.2)</td>
 </tr>
-<tr class="even">
-<td>4. Names to Numbers: DNS</td>
+<tr class="odd">
+<td>3. Names to Numbers: DNS</td>
 <td><code>socket.gethostbyname()</code>; building a list of results with <code>.append()</code></td>
 <td>Look up a list of favourite websites</td>
 </tr>
-<tr class="odd">
-<td>5. How Far Away Is That Server?</td>
-<td>Timing a connection; looping over a list; count, total, lowest, highest (A2.3)</td>
-<td>A response timer with fastest, slowest, and average</td>
-</tr>
 <tr class="even">
-<td>6. When the Network Fails</td>
+<td>4. How Far Away Is That Server?</td>
+<td>Timing a connection; looping over a list; count, total, lowest, highest (A2.3); modifying a response timer</td>
+<td>Make: the <strong>Speed Log Summary</strong> Quick Build</td>
+</tr>
+<tr class="odd">
+<td>5. When the Network Fails</td>
 <td>Timeouts, unknown hosts, <code>try</code>/<code>except</code> around network code (B3.3); testing with good, slow, and broken addresses (A4.5)</td>
 <td>Make the response timer survive a typo and an unplugged cable</td>
 </tr>
-<tr class="odd">
-<td>7. Keep a Log</td>
+<tr class="even">
+<td>6. Keep a Log</td>
 <td>Writing files: <code>open()</code> in append mode, <code>csv.writer</code>, timestamps with <code>datetime</code></td>
 <td>Log each test run to <code>network_log.csv</code>, collected over several days for Module 6</td>
 </tr>
-<tr class="even">
-<td>8. Downloading a Web Page</td>
-<td><code>urllib.request</code>; bytes and megabits (Module 2 again); parsing a web address with <code>urllib.parse</code>; reading the sample folder generator’s download code. Extension: read a page’s title with <code>html.parser</code></td>
-<td>A download speed test</td>
-</tr>
 <tr class="odd">
-<td>9. Be the Server</td>
+<td>7. Downloading a Web Page</td>
+<td><code>urllib.request</code>; bytes and megabits (Module 2 again); parsing a web address with <code>urllib.parse</code>; reading the sample folder generator’s download code; modifying a download speed test. Extension: read a page’s title with <code>html.parser</code></td>
+<td>Make: the <strong>Web Address Splitter</strong> Quick Build</td>
+</tr>
+<tr class="even">
+<td>8. Be the Server</td>
 <td><code>python -m http.server</code>; ports; firewalls; visiting a classmate’s computer</td>
 <td>Serve a page from your own computer to the class</td>
 </tr>
-<tr class="even">
-<td>10. How the Internet Works, and Review</td>
+<tr class="odd">
+<td>9. How the Internet Works</td>
 <td>Packets and routers with the <a href="https://cs.uwaterloo.ca/~m2mazmud/netsim/">netsim</a> game; a data flow diagram of a web request (B2.4); distributed computing (D2.1)</td>
 <td>Draw the trip a web request takes</td>
+</tr>
+<tr class="even">
+<td>10. Review and assignment work period</td>
+<td>A short review of Lessons 1–9, then class time for the assignment</td>
+<td>Finish Is It Me or the Wi-Fi?</td>
 </tr>
 <tr class="odd">
 <td>11. Module 5 test</td>
@@ -540,10 +499,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="practising-the-basics-planned">Practising the Basics (Planned)</h2>
 <ul>
 <li><strong>Skill Builder:</strong> creating lists, <code>.append()</code>, indexing and bounds, looping over a list, finding the total, highest, and lowest by hand, and writing a line to a file. Includes Module 4 string methods.</li>
-<li><strong>Quick Builds</strong> (small graded programs, before the assignment):
+<li><strong>Quick Builds</strong> (small graded programs; each is the Make product of a lesson, so it needs no extra period):
 <ul>
-<li><strong>Speed Log Summary:</strong> given a list of download speeds, report the count, average, fastest, slowest, and how many were below a target.</li>
-<li><strong>Web Address Splitter:</strong> breaks a URL into its scheme, site, and path, and says whether it uses HTTPS.</li>
+<li><strong>Speed Log Summary</strong> (Lesson 4): given a list of download speeds, report the count, average, fastest, slowest, and how many were below a target.</li>
+<li><strong>Web Address Splitter</strong> (Lesson 7): breaks a URL into its scheme, site, and path, and says whether it uses HTTPS.</li>
 </ul></li>
 <li><strong>Warm-ups</strong> in every lesson include a question from an earlier module.</li>
 </ul>
@@ -551,7 +510,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="notes-for-teachers" class="level2">
 <h2 class="anchored" data-anchor-id="notes-for-teachers">Notes for Teachers</h2>
 <ul>
-<li><strong>Open computers needed.</strong> This module is the most likely to be blocked on a managed lab computer. Check the <a href="../../before-you-begin.html#what-students-programs-need">requirements table</a> with IT before the module starts.</li>
+<li><strong>Open computers needed.</strong> On a managed computer, this module is the one most likely to hit the network rules: school proxies and firewalls often block Python’s own connections even when the browser works, and running a server (Lesson 8) is usually forbidden. Check the <a href="../../before-you-begin.html#what-students-programs-need">requirements table</a> with IT before the module starts.</li>
 <li><strong>Local only.</strong> This module’s programs need a real computer on a real network. The site’s browser boxes can’t open network connections, which makes a good callback to Module 1’s “where does my code run?”</li>
 <li><strong>Check with IT first.</strong> Some school networks block outside connections, DNS lookups, or student-run servers. Lesson 8 can run on one computer (<code>localhost</code>) if the network won’t allow more.</li>
 <li><strong>No <code>ping</code> command needed.</strong> Timing a connection with <code>socket.create_connection()</code> works without administrator rights. Students can still read how <code>ping</code> works.</li>
@@ -564,7 +523,12 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><strong>Before:</strong> <a href="../../modules/module-04-passwords-and-secret-messages/index.html">Module 4</a> taught binary, strings, and writing functions.</li>
 <li><strong>Next:</strong> <a href="../../modules/module-06-data-detective/index.html">Module 6, Data Detective</a>, uses lists to investigate files, folders, and real data.</li>
+<li><strong>Then:</strong> the <a href="../../modules/computer-science-in-the-world/index.html">Computer Science in the World</a> lesson <em>Computer Science + Another Field</em> (about 1 hour), before Module 6.</li>
 </ul>
+</section>
+<section id="previous-and-next" class="level2 unlisted">
+<h2 class="unlisted anchored" data-anchor-id="previous-and-next">Previous and Next</h2>
+<p><a href="../../modules/module-04-passwords-and-secret-messages/index.html">← Module 4</a> · <a href="../../scope-and-sequence.html">Scope and Sequence</a> · <a href="../../modules/module-06-data-detective/index.html">Module 6 →</a></p>
 </section>
 <section id="feedback" class="level2 unlisted">
 <h2 class="unlisted anchored" data-anchor-id="feedback">Feedback</h2>

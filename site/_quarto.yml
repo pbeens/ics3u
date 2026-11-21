@@ -53,33 +53,39 @@ website:
           - text: "---"
           - href: modules/computer-science-in-the-world/index.qmd
             text: "Computer Science in the World (planned)"
-      - text: Module 1
-        menu:
-          - href: modules/module-01-about-this-computer/index.qmd
-            text: "Module 1 overview"
-          - text: "---"
-          - text: "For teachers"
-          - href: modules/module-01-about-this-computer/lesson-01-ask-the-computer.qmd
-            text: "Lesson 1 plan: Ask the Computer About Itself"
-          - href: modules/module-01-about-this-computer/lesson-02-exploring-platform.qmd
-            text: "Lesson 2 plan: Exploring the platform Library"
-          - text: "---"
-          - text: "For the class"
-          - href: modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.qmd
-            text: "Lesson 1 slides"
-          - href: modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.qmd
-            text: "Lesson 2 slides"
-          - text: "---"
-          - text: "For students"
-          - href: modules/module-01-about-this-computer/practice.qmd
-            text: "Practice"
-          - href: modules/module-01-about-this-computer/assignment.qmd
-            text: "Assignment: Computer Report Card"
       - href: about.qmd
         text: About
     right:
       - href: https://buymeacoffee.com/pbeens
         text: "☕ Buy me a coffee"
+  sidebar:
+    - id: module-01
+      title: "Module 1: About This Computer"
+      style: docked
+      collapse-level: 2
+      contents:
+        - href: modules/module-01-about-this-computer/index.qmd
+          text: "Module 1 overview"
+        - section: "For teachers"
+          contents:
+            - href: modules/module-01-about-this-computer/lesson-01-ask-the-computer.qmd
+              text: "Lesson 1 plan"
+            - href: modules/module-01-about-this-computer/lesson-02-exploring-platform.qmd
+              text: "Lesson 2 plan"
+        - section: "For the class"
+          contents:
+            - href: modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.qmd
+              text: "Lesson 1 slides"
+            - href: modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.qmd
+              text: "Lesson 2 slides"
+        - section: "For students"
+          contents:
+            - href: course-folder.qmd
+              text: "Set Up Your Course Folder"
+            - href: modules/module-01-about-this-computer/practice.qmd
+              text: "Practice"
+            - href: modules/module-01-about-this-computer/assignment.qmd
+              text: "Assignment: Computer Report Card"
   page-footer:
     center: "ICS3U · Ontario Curriculum (2008) · [MIT License](https://github.com/pbeens/ics3u/blob/main/LICENSE)"
 

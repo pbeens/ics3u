@@ -28,14 +28,14 @@ subtitle: "About 15 hours · For teachers"
 | 1. Everything Is a Number | Binary and hexadecimal; why storage sizes are powers of two; where hex appears on a real computer (A1.2) | A binary and hex converter; decode a web colour and a MAC address |
 | 2. Text Is Numbers Too | `ord()`, `chr()`; ASCII and Unicode; how many bytes an emoji takes | Print the code of every character in a message |
 | 3. Strings Up Close | Indexing, slicing, `len()`, looping through a string | Show a password with all but the last two characters hidden |
-| 4. String Methods | `.isdigit()`, `.isupper()`, `.count()`, `.replace()`, `in` (A3.1) | Count the character types in a password |
-| 5. Writing Functions | Parameters, return values, local and global scope (A3.2) | `has_digit(password)` and friends |
-| 6. Password Strength Checker | Combining functions; testing with a test plan (B4.4) | A checker that explains its score |
+| 4. String Methods | `.isdigit()`, `.isupper()`, `.count()`, `.replace()`, `in` (A3.1) | Count the character types in a password; Make: the **Username Maker** Quick Build |
+| 5. Writing Functions | Parameters, return values, local and global scope (A3.2) | `has_digit(password)` and friends; Make: the **File Name Cleaner** Quick Build |
+| 6. Password Strength Checker | Combining functions; putting them in your own module and importing it (B2.3); testing with a test plan (B4.4) | A checker that explains its score, built on `password_tools.py` |
 | 7. How Long to Crack a Password? | Combinations (`characters ** length`); guesses per second from Module 3; why length beats complexity | A crack-time estimator; passphrases with the `secrets` module |
 | 8. How Websites Store Passwords | Hashing with `hashlib`; data breaches; why reuse is risky | Compare the hashes of two nearly identical passwords |
 | 9. Why Simple Ciphers Fail | The Caesar cipher as a short activity: modulo wrap-around; breaking it by brute force and letter frequency; why real encryption is different; cryptography as a research area (B1.1, D2.1) | Encode a class message, then crack one by trying all 26 shifts |
 | 10. Malware and a Protection Plan | Viruses, worms, Trojans, spyware, adware, macros; updates, backups, and accounts (C2.2) | A protection plan for a real computer at home |
-| 11. Reusable Code | Putting functions in your own module and importing it (B2.3) | `password_tools.py` |
+| 11. Review and assignment work period | A short review of Lessons 1–10, then class time for the assignment | Finish the Password Toolkit |
 | 12. Module 4 test | Includes a code-reading and tracing section | |
 
 ## Assignment (Planned): Password Toolkit
@@ -47,9 +47,9 @@ Students build `password_tools.py`, a module of their own functions (strength ch
 ## Practising the Basics (Planned)
 
 - **Skill Builder:** indexing, slicing, string methods, `ord()` and `chr()`, binary and hex conversions, and writing functions with parameters and return values. Includes Module 3 loop tracing.
-- **Quick Builds** (small graded programs, before the assignment):
-  - **Username Maker:** builds a school-style username from a first and last name (slicing, `.lower()`).
-  - **File Name Cleaner:** turns `My Essay FINAL (2).docx` into `my-essay-final-2.docx`, as a function.
+- **Quick Builds** (small graded programs; each is the Make product of a lesson, so it needs no extra period):
+  - **Username Maker** (Lesson 4): builds a school-style username from a first and last name (slicing, `.lower()`).
+  - **File Name Cleaner** (Lesson 5): turns `My Essay FINAL (2).docx` into `my-essay-final-2.docx`, as a function.
 - **Warm-ups** in every lesson include a question from an earlier module.
 
 ## Notes for Teachers
@@ -62,6 +62,11 @@ Students build `password_tools.py`, a module of their own functions (strength ch
 
 - **Before:** [Module 3](../module-03-benchmark-lab/index.qmd) wrote loops and met functions.
 - **Next:** [Module 5, On the Network](../module-05-on-the-network/index.qmd), turns IP addresses into binary and sends messages between computers.
+- **Then:** the [Computer Science in the World](../computer-science-in-the-world/index.qmd) lesson *Security as a Career* (about 1 hour), before Module 5.
+
+## Previous and Next {.unlisted}
+
+[← Module 3](../module-03-benchmark-lab/index.qmd) · [Scope and Sequence](../../scope-and-sequence.qmd) · [Module 5 →](../module-05-on-the-network/index.qmd)
 
 ## Feedback {.unlisted}
 

@@ -4,6 +4,50 @@ Program-related prompts for this project, newest first. Paraphrased, not verbati
 
 ---
 
+## User Prompt 68
+
+- **Timestamp:** 2026-11-19T10:20
+- **Goal:** Act on the round 2 audit response.
+- **Summary:** Go ahead with all the recommendations in `audits/audit-response_2.md`: the small fixes and the recommended option for each of the four decisions (Lesson 2 timing, Quick Builds and work periods, the open-computers message, and sidebar navigation now).
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Edited Module 1 pages, slides, and starter file; all module overviews, World, Scope and Sequence, Getting Started pages, `_quarto.yml` (Module 1 sidebar), and `styles.css`; rendered the site, checked links and expectation coverage, and rebuilt notebooks.
+
+---
+
+## User Prompt 67
+
+- **Timestamp:** 2026-11-18T21:02
+- **Goal:** Audit the live ICS3U site again without overwriting the first Grok audit.
+- **Summary:** Review https://peter.beens.ca/ics3u/ as a pedagogical expert and as a teacher opening the site for the first time. Keep the 16 November report, and write this pass to `audits/audit-grok_2.md`.
+- **Host:** m4-mini
+- **Agent:** Grok
+- **Technical context:** Walked every sitemap URL in Playwright Chromium (desktop and mobile), stepped through both slide decks and steppers, and checked hash links, nav, `.py` downloads, and internal HTTP status.
+
+---
+
+## User Prompt 66
+
+- **Timestamp:** 2026-11-18T21:03
+- **Goal:** Conduct a second usability and pedagogical audit of the expanded website.
+- **Summary:** Review the expanded site at `https://peter.beens.ca/ics3u/` as both a pedagogical expert and a first-time teacher, and save the new report in `audits/audit-antigravity_2.md` without overwriting the first audit.
+- **Host:** m4-mini
+- **Agent:** Antigravity (Gemini 4 Argon)
+- **Technical context:** Verified all Round 1 audit fixes, reviewed the new seven-module course architecture, student course-folder setup page, starter file workflow, and navigation, and wrote findings to `audits/audit-antigravity_2.md`.
+
+---
+
+## User Prompt 66
+
+- **Timestamp:** 2026-11-19T07:45
+- **Goal:** Respond to the round 2 site audits.
+- **Summary:** Two new audits (Antigravity and Grok, round 2) are in the audits folder. Review them and write a response as a new file with a `_2` suffix, without overwriting the first response.
+- **Host:** m4-mini
+- **Agent:** Claude Code
+- **Technical context:** Wrote `audits/audit-response_2.md` after checking claims in the source and in headless Chrome; listed it in `audits/README.md`.
+
+---
+
 ## User Prompt 65
 
 - **Timestamp:** 2026-11-18T12:40

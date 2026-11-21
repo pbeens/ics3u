@@ -3,13 +3,11 @@ title: "Before You Begin"
 subtitle: "Set up a working Python computer for you and your students"
 ---
 
-::: {.callout-note appearance="simple"}
-**Expectations:** C3.1 (software development environment), D1.4 (organizations that refurbish computers)
-:::
-
 This course asks the computer about itself. The first program students read reports the CPU type, the operating system, and the computer's name. Later modules measure the disk, time the processor, test the network, run a small web server, and build, scan, and back up folders of files. All of this only means something when the code runs **on the computer in front of the student**.
 
 ::: {.callout-important title="This course needs open computers"}
+**To start:** Modules 1–4 run on any computer with Python installed and files that stay saved between classes. **For the whole course,** you need open computers.
+
 Let's be blunt: **a typical board-imaged lab computer will not run this course well.** Students write real utilities, and real utilities do the things locked-down computers are set up to prevent: installing software, using the terminal, keeping files from one class to the next, opening network connections, and running a server.
 
 The ideal is a **standalone computer that students fully control**: not imaged or managed by the board, with a local administrator account and no software restrictions. **Refurbished computers are perfect for this**, and cheap. If you can only get managed computers, take the [list below](#what-students-programs-need) to IT early and ask what they can unlock.
@@ -111,3 +109,7 @@ Online notebooks also can't see the student's own files, drives, or classroom ne
 - [ ] You know whether Colab or the Callysto Hub works for your students' accounts, in case you need a backup.
 
 When you're ready, start with [Module 1, Lesson 1](modules/module-01-about-this-computer/lesson-01-ask-the-computer.qmd).
+
+## Previous and Next {.unlisted}
+
+[← Home](index.qmd) · [How a Lesson Works →](how-a-lesson-works.qmd)

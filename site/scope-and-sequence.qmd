@@ -11,7 +11,7 @@ subtitle: "ICS3U — 110 hours, Python 3"
 
 This is a **spiral course**, not a sequence of topic units. Students do not spend weeks on output, then weeks on input, then weeks on decisions. From the first week, they read real programs that already use output, input, variables, decisions, loops, strings, and lists. Each module comes back to all of these ideas at a deeper level.
 
-- **Modules are built around themes and anchor programs**, not single programming constructs. Each module has a purpose students can see (find out about this computer, check whether it meets a need, build a game, send a secret message, investigate data).
+- **Modules are built around themes and anchor programs**, not single programming constructs. Each module has a purpose students can see (find out about this computer, check whether it meets a need, measure how fast it is, keep passwords safe, troubleshoot the network, investigate data).
 - **Reading makes early depth possible.** Students can read and predict code that uses a loop or a list weeks before they are asked to write one. When code uses something not yet taught, the teacher explains it briefly and moves on: "You'll learn to write these properly later."
 - **Each idea moves through four levels across the course:** read it, modify it, write it, then design with it.
 - **Not project-based.** Lessons stay teacher-led and structured (see the [teaching approach](#teaching-approach)); a full independent project comes only at the end.
@@ -76,7 +76,8 @@ Students keep one folder, **My Computer Toolkit**, for the whole course. Each mo
 A spiral brings every idea back, but basics also need practice until they're automatic. Each module has:
 
 - **A Skill Builder page:** short drills on the module's basics and earlier ones (predict the output, fix the error, Parsons problems, fill in the blank, write a tiny program). Drills can be plainer than lessons; not every exercise needs to be about hardware.
-- **Quick Builds:** two small graded programs before the module assignment, such as a system banner and a parts receipt in Module 1, or a file name cleaner in Module 4.
+- **Quick Builds:** two small graded programs before the module assignment, such as a system banner and a parts receipt in Module 1, or a file name cleaner in Module 4. Each is the Make product of a named lesson, so it costs no extra class time.
+- **A work period:** in Modules 1–6, the period before the test is a short review followed by class time for the module assignment.
 - **Spaced warm-ups:** every lesson's review includes a question from two or more lessons back, often an earlier module.
 
 ## Course Tools {#course-tools}
@@ -263,3 +264,7 @@ The 2008 curriculum uses general terms. In Python:
 ## Teaching Approach {#teaching-approach}
 
 Every lesson follows the course's reading-first approach: students read, trace, and predict code before they write it. Each lesson opens with review and a useful problem ("How could we check 500 files without opening each one?"), then moves through a teacher-led worked example, then Predict, Run, Investigate, Modify, and Make (PRIMM). Writing new code from scratch always comes after reading and modifying.
+
+## Previous and Next {.unlisted}
+
+[← How a Lesson Works](how-a-lesson-works.qmd) · [Set Up Your Course Folder →](course-folder.qmd) · [Module 1 →](modules/module-01-about-this-computer/index.qmd)

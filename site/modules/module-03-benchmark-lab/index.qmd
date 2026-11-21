@@ -27,14 +27,14 @@ subtitle: "About 14 hours · For teachers"
 |---|---|---|
 | 1. How Fast Is This Computer? | Reading a benchmark; `for` and `range()`; the `time` module (A3.1) | Time counting to one million, then ten million |
 | 2. Counting and Adding | Counters and accumulators; comparing a loop to a formula (B3.2) | Add 1 to *n* with a loop and with *n*(*n*+1)/2; which is faster? |
-| 3. A Fair Benchmark Suite | Nested loops and decisions; checking for primes as one test among several (A2.3, B3.2); fair tests: repeat and take the median (B1.1) | A three-test benchmark suite |
+| 3. A Fair Benchmark Suite | Nested loops and decisions; checking for primes as one test among several (A2.3, B3.2); fair tests: repeat and take the median (B1.1); reading and modifying a three-test benchmark suite | Make: the **Download Time Table** Quick Build |
 | 4. Run It Everywhere | Same code, different machines; CPU type and cores (C1.2, C1.4) | Compare results from the classroom, the browser, and Colab |
-| 5. Keep Going Until… | `while` loops; loop conditions; infinite loops and how to stop them | A study timer (25 minutes on, 5 off) and "run the benchmark until five seconds pass" |
+| 5. Keep Going Until… | `while` loops; loop conditions; infinite loops and how to stop them | Make: the **Study Timer** Quick Build (25 minutes on, 5 off); modify the benchmark to run until five seconds pass |
 | 6. Reaction Timer | `random`, `time`, and `input()` together | A reaction test; best of five |
 | 7. Is Shuffle Really Random? | Simulation; `random.shuffle()`; counting results (reading and modifying a list of counts) | 1000 shuffles, with a simple text bar chart |
-| 8. Plan Before You Code | Flow charts and pseudocode (B2.4); working from a skeleton (B2.1) | A flow chart for the typing test |
-| 9. Your First Functions | Reading and modifying `def`, parameters, and return values (A3.2) | Wrap the benchmark in a `time_it()` function |
-| 10. Debugging a Loop | Tracing; printing variables to find a bug; off-by-one errors (A4.1, A4.4, B4.5) | Fix three broken benchmarks |
+| 8. Plan It, Then Wrap It | Flow charts and pseudocode (B2.4); working from a skeleton (B2.1); reading and modifying `def`, parameters, and return values (A3.2) | A flow chart for the typing test; wrap the benchmark in a `time_it()` function |
+| 9. Debugging a Loop | Tracing; printing variables to find a bug; off-by-one errors (A4.1, A4.4, B4.5) | Fix three broken benchmarks |
+| 10. Review and assignment work period | A short review of Lessons 1–9, then class time for the assignment | Finish the Typing Speed Test |
 | 11. Module 3 test | Code reading and tracing; a short basics section | |
 
 ## Assignment (Planned): Typing Speed Test
@@ -46,9 +46,9 @@ From a teacher-supplied skeleton, students build a typing test that shows a sent
 ## Practising the Basics (Planned)
 
 - **Skill Builder:** `for` and `range()`, `while`, counters and accumulators, nested loops, and tracing loops in a table. Includes Module 2 decisions and conversions.
-- **Quick Builds** (small graded programs, before the assignment):
-  - **Download Time Table:** a table of how long files of different sizes take to download at different speeds (nested loops, aligned columns).
-  - **Study Timer:** a countdown with work and break periods and a session count.
+- **Quick Builds** (small graded programs; each is the Make product of a lesson, so it needs no extra period):
+  - **Download Time Table** (Lesson 3): a table of how long files of different sizes take to download at different speeds (nested loops, aligned columns).
+  - **Study Timer** (Lesson 5): a countdown with work and break periods and a session count.
 - **Warm-ups** in every lesson include a question from an earlier module.
 
 ## Notes for Teachers
@@ -61,6 +61,11 @@ From a teacher-supplied skeleton, students build a typing test that shows a sent
 
 - **Before:** [Module 2](../module-02-spec-checker/index.qmd) made decisions with `if`/`elif`/`else` and handled bad input.
 - **Next:** [Module 4, Passwords and Secret Messages](../module-04-passwords-and-secret-messages/index.qmd), uses the benchmark to estimate how long a password takes to crack.
+- **Then:** the [Computer Science in the World](../computer-science-in-the-world/index.qmd) lesson *Faster Than One Computer* (about 1 hour), before Module 4.
+
+## Previous and Next {.unlisted}
+
+[← Module 2](../module-02-spec-checker/index.qmd) · [Scope and Sequence](../../scope-and-sequence.qmd) · [Module 4 →](../module-04-passwords-and-secret-messages/index.qmd)
 
 ## Feedback {.unlisted}
 

@@ -61,8 +61,12 @@ Part of the final 30%. Evaluated on the specification, design documents, test pl
 
 ## How Module 7 Fits
 
-- **Before:** [Modules 1–6](../../scope-and-sequence.qmd) took every programming idea through reading, modifying, and writing.
+- **Before:** [Module 6, Data Detective](../module-06-data-detective/index.qmd), and the five modules before it ([Scope and Sequence](../../scope-and-sequence.qmd)), took every programming idea through reading, modifying, and writing.
 - **Now:** students design with all of them.
+
+## Previous and Next {.unlisted}
+
+[← Module 6](../module-06-data-detective/index.qmd) · [Scope and Sequence](../../scope-and-sequence.qmd) · [Computer Science in the World →](../computer-science-in-the-world/index.qmd)
 
 ## Feedback {.unlisted}
 

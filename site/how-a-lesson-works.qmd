@@ -102,6 +102,10 @@ The step-through boxes are cramped on a phone. In class, students should use a c
 
 Practice and assignments live on this site because they're interactive: students predict, step through, and run code right on the page. Downloadable versions (Google Docs, Word, or PDF) may be added later for printing or for a learning management system.
 
+## Previous and Next {.unlisted}
+
+[← Before You Begin](before-you-begin.qmd) · [Scope and Sequence →](scope-and-sequence.qmd)
+
 ## Feedback {.unlisted}
 
 {{< feedback >}}

@@ -11,7 +11,7 @@
     "href": "scope-and-sequence.html#how-this-course-is-organized",
     "title": "Scope and Sequence",
     "section": "How This Course Is Organized",
-    "text": "How This Course Is Organized\nThis is a spiral course, not a sequence of topic units. Students do not spend weeks on output, then weeks on input, then weeks on decisions. From the first week, they read real programs that already use output, input, variables, decisions, loops, strings, and lists. Each module comes back to all of these ideas at a deeper level.\n\nModules are built around themes and anchor programs, not single programming constructs. Each module has a purpose students can see (find out about this computer, check whether it meets a need, build a game, send a secret message, investigate data).\nReading makes early depth possible. Students can read and predict code that uses a loop or a list weeks before they are asked to write one. When code uses something not yet taught, the teacher explains it briefly and moves on: “You’ll learn to write these properly later.”\nEach idea moves through four levels across the course: read it, modify it, write it, then design with it.\nNot project-based. Lessons stay teacher-led and structured (see the teaching approach); a full independent project comes only at the end."
+    "text": "How This Course Is Organized\nThis is a spiral course, not a sequence of topic units. Students do not spend weeks on output, then weeks on input, then weeks on decisions. From the first week, they read real programs that already use output, input, variables, decisions, loops, strings, and lists. Each module comes back to all of these ideas at a deeper level.\n\nModules are built around themes and anchor programs, not single programming constructs. Each module has a purpose students can see (find out about this computer, check whether it meets a need, measure how fast it is, keep passwords safe, troubleshoot the network, investigate data).\nReading makes early depth possible. Students can read and predict code that uses a loop or a list weeks before they are asked to write one. When code uses something not yet taught, the teacher explains it briefly and moves on: “You’ll learn to write these properly later.”\nEach idea moves through four levels across the course: read it, modify it, write it, then design with it.\nNot project-based. Lessons stay teacher-led and structured (see the teaching approach); a full independent project comes only at the end."
   },
   {
     "objectID": "scope-and-sequence.html#course-at-a-glance",
@@ -39,7 +39,7 @@
     "href": "scope-and-sequence.html#practising-the-basics",
     "title": "Scope and Sequence",
     "section": "Practising the Basics",
-    "text": "Practising the Basics\nA spiral brings every idea back, but basics also need practice until they’re automatic. Each module has:\n\nA Skill Builder page: short drills on the module’s basics and earlier ones (predict the output, fix the error, Parsons problems, fill in the blank, write a tiny program). Drills can be plainer than lessons; not every exercise needs to be about hardware.\nQuick Builds: two small graded programs before the module assignment, such as a system banner and a parts receipt in Module 1, or a file name cleaner in Module 4.\nSpaced warm-ups: every lesson’s review includes a question from two or more lessons back, often an earlier module."
+    "text": "Practising the Basics\nA spiral brings every idea back, but basics also need practice until they’re automatic. Each module has:\n\nA Skill Builder page: short drills on the module’s basics and earlier ones (predict the output, fix the error, Parsons problems, fill in the blank, write a tiny program). Drills can be plainer than lessons; not every exercise needs to be about hardware.\nQuick Builds: two small graded programs before the module assignment, such as a system banner and a parts receipt in Module 1, or a file name cleaner in Module 4. Each is the Make product of a named lesson, so it costs no extra class time.\nA work period: in Modules 1–6, the period before the test is a short review followed by class time for the module assignment.\nSpaced warm-ups: every lesson’s review includes a question from two or more lessons back, often an earlier module."
   },
   {
     "objectID": "scope-and-sequence.html#course-tools",
@@ -84,6 +84,13 @@
     "text": "Teaching Approach\nEvery lesson follows the course’s reading-first approach: students read, trace, and predict code before they write it. Each lesson opens with review and a useful problem (“How could we check 500 files without opening each one?”), then moves through a teacher-led worked example, then Predict, Run, Investigate, Modify, and Make (PRIMM). Writing new code from scratch always comes after reading and modifying."
   },
   {
+    "objectID": "scope-and-sequence.html#previous-and-next",
+    "href": "scope-and-sequence.html#previous-and-next",
+    "title": "Scope and Sequence",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← How a Lesson Works · Set Up Your Course Folder → · Module 1 →"
+  },
+  {
     "objectID": "modules/module-06-data-detective/index.html",
     "href": "modules/module-06-data-detective/index.html",
     "title": "Module 6: Data Detective",
@@ -102,7 +109,7 @@
     "href": "modules/module-06-data-detective/index.html#planned-lessons",
     "title": "Module 6: Data Detective",
     "section": "Planned Lessons",
-    "text": "Planned Lessons\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n1. What’s in This Folder?\nBuilding the sample folder with make_sample_folder.py (and reading how it works); os.scandir(); paths; file names, sizes, and dates; organizing files (C2.1)\nList the files in the sample folder\n\n\n2. Counting by Type\nParallel lists; linear search; counting (A1.6, A2.3)\nHow many .py, .png, and .csv files are there?\n\n\n3. Where Did My Space Go?\nTotal, highest, lowest; the oldest file\nFind the biggest and oldest files\n\n\n4. Top Ten\nInserting into a sorted list; deleting from the middle; bounds (A1.5, B3.1)\nA top-ten list of the biggest files\n\n\n5. Breaking It into Functions\nStructure charts (B2.4); modularity (B2.3); describing two designs (B2.2)\nReorganize the folder detective into functions\n\n\n6. Back It Up, and Prove It\nshutil.make_archive(); dated file names; the 3-2-1 backup rule; archiving (C2.3); checking copies with hashlib; finding duplicates\nA backup of the course folder that verifies every file and writes a log\n\n\n7. Reading Your Own Data\nThe csv module; lists from a file; the students’ Module 5 network log\nWhen was the network slowest?\n\n\n8. What Does the Lab Cost to Run?\nWatts, hours, kilowatt-hours, and electricity rates; sleep settings (D1.1, D1.2)\nThe yearly power bill for the lab, and the savings from sleep mode\n\n\n9. Where Old Computers Go\nE-waste; refurbishing and recycling; community partners such as Ontario Computers for Schools (D1.1, D1.3, D1.4)\nAnalyze e-waste data; plan a lab’s end-of-life policy\n\n\n10. Healthy Computing\nErgonomics, eye strain, and breaks (D1.1, D1.2)\nA break reminder; an analysis of a week of screen-time data\n\n\n11. Testing with Every Case\nEmpty folders, one file, unreadable files, ties in the top ten (A4.4, A4.5); regenerate the sample folder with different seeds\nA full test plan for the folder detective\n\n\n12. Module 6 test\nCode reading and tracing; a short basics section"
+    "text": "Planned Lessons\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n1. What’s in This Folder?\nBuilding the sample folder with make_sample_folder.py (and reading how it works); os.scandir(); paths; file names, sizes, and dates; organizing files (C2.1)\nList the files in the sample folder\n\n\n2. Counting and Comparing\nParallel lists; linear search; counting; total, highest, lowest (A1.6, A2.3); reading a program that finds the biggest and oldest files\nMake: the Extension Report Quick Build\n\n\n3. Top Ten\nInserting into a sorted list; deleting from the middle; bounds (A1.5, B3.1)\nA top-ten list of the biggest files\n\n\n4. Breaking It into Functions\nStructure charts (B2.4); modularity (B2.3); describing two designs (B2.2)\nReorganize the folder detective into functions\n\n\n5. Back It Up, and Prove It\nshutil.make_archive(); dated file names; the 3-2-1 backup rule; archiving (C2.3); checking copies with hashlib; finding duplicates; modifying a backup program that verifies every file and writes a log\nMake: the Duplicate Finder Quick Build\n\n\n6. Reading Your Own Data\nThe csv module; lists from a file; the students’ Module 5 network log\nWhen was the network slowest?\n\n\n7. What Does the Lab Cost to Run?\nWatts, hours, kilowatt-hours, and electricity rates; sleep settings (D1.1, D1.2)\nThe yearly power bill for the lab, and the savings from sleep mode\n\n\n8. Where Old Computers Go\nE-waste; refurbishing and recycling; community partners such as Ontario Computers for Schools (D1.1, D1.3, D1.4)\nAnalyze e-waste data; plan a lab’s end-of-life policy\n\n\n9. Healthy Computing\nErgonomics, eye strain, and breaks (D1.1, D1.2)\nA break reminder; an analysis of a week of screen-time data\n\n\n10. Testing with Every Case\nEmpty folders, one file, unreadable files, ties in the top ten (A4.4, A4.5); regenerate the sample folder with different seeds\nA full test plan for the folder detective\n\n\n11. Review and assignment work period\nA short review of Lessons 1–10, then class time for the assignment\nFinish Folder Detective\n\n\n12. Module 6 test\nCode reading and tracing; a short basics section"
   },
   {
     "objectID": "modules/module-06-data-detective/index.html#assignment-planned-folder-detective",
@@ -116,21 +123,28 @@
     "href": "modules/module-06-data-detective/index.html#practising-the-basics-planned",
     "title": "Module 6: Data Detective",
     "section": "Practising the Basics (Planned)",
-    "text": "Practising the Basics (Planned)\n\nSkill Builder: list algorithms (count, total, highest, lowest, linear search, sorted insert, delete), functions and scope, and reading and writing files. Includes Module 5 list review.\nQuick Builds (small graded programs, before the assignment):\n\nExtension Report: counts the sample folder’s files by type and writes the result to a CSV file.\nDuplicate Finder: lists every set of identical files in the sample folder, using hashes.\n\nWarm-ups in every lesson include a question from an earlier module."
+    "text": "Practising the Basics (Planned)\n\nSkill Builder: list algorithms (count, total, highest, lowest, linear search, sorted insert, delete), functions and scope, and reading and writing files. Includes Module 5 list review.\nQuick Builds (small graded programs; each is the Make product of a lesson, so it needs no extra period):\n\nExtension Report (Lesson 2): counts the sample folder’s files by type and writes the result to a CSV file.\nDuplicate Finder (Lesson 5): lists every set of identical files in the sample folder, using hashes.\n\nWarm-ups in every lesson include a question from an earlier module."
   },
   {
     "objectID": "modules/module-06-data-detective/index.html#notes-for-teachers",
     "href": "modules/module-06-data-detective/index.html#notes-for-teachers",
     "title": "Module 6: Data Detective",
     "section": "Notes for Teachers",
-    "text": "Notes for Teachers\n\nOpen computers needed. This module is the most likely to be blocked on a managed lab computer. Check the requirements table with IT before the module starts.\nSample folder, not students’ own files. make_sample_folder.py (planned; see the Scope and Sequence) builds the same messy folder for everyone, or a different one per student with --seed. If a program wrecks it, run the script again.\nRead-only programs. Nothing in this module deletes or moves files. Tell students why: programs that delete files are dangerous, and you always back up first. A “dry run” (print what would happen) is the safe habit.\nLists, not dictionaries. The curriculum asks for one-dimensional arrays, so use lists (and parallel lists). Dictionaries can appear as a marked extension.\nElectricity rates: use the current Ontario rate, and let students look it up."
+    "text": "Notes for Teachers\n\nOpen computers needed. On a managed computer, this module’s problem is files: the course folder and sample folder must stay put between classes (no reset on log-off), and security software may flag a program that reads, hashes, and copies hundreds of files. Check the requirements table with IT before the module starts.\nSample folder, not students’ own files. make_sample_folder.py (planned; see the Scope and Sequence) builds the same messy folder for everyone, or a different one per student with --seed. If a program wrecks it, run the script again.\nRead-only programs. Nothing in this module deletes or moves files. Tell students why: programs that delete files are dangerous, and you always back up first. A “dry run” (print what would happen) is the safe habit.\nLists, not dictionaries. The curriculum asks for one-dimensional arrays, so use lists (and parallel lists). Dictionaries can appear as a marked extension.\nElectricity rates: use the current Ontario rate, and let students look it up."
   },
   {
     "objectID": "modules/module-06-data-detective/index.html#how-module-6-fits",
     "href": "modules/module-06-data-detective/index.html#how-module-6-fits",
     "title": "Module 6: Data Detective",
     "section": "How Module 6 Fits",
-    "text": "How Module 6 Fits\n\nBefore: Module 5 wrote lists for the first time and handled exceptions.\nNext: Module 7, Software Development Project, where students design a program of their own."
+    "text": "How Module 6 Fits\n\nBefore: Module 5 wrote lists for the first time and handled exceptions.\nNext: Module 7, Software Development Project, where students design a program of their own.\nThen: the Computer Science in the World lesson Where Next? (about 1 hour), before Module 7."
+  },
+  {
+    "objectID": "modules/module-06-data-detective/index.html#previous-and-next",
+    "href": "modules/module-06-data-detective/index.html#previous-and-next",
+    "title": "Module 6: Data Detective",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Module 5 · Scope and Sequence · Module 7 →"
   },
   {
     "objectID": "modules/module-06-data-detective/index.html#feedback",
@@ -158,7 +172,7 @@
     "href": "modules/module-04-passwords-and-secret-messages/index.html#planned-lessons",
     "title": "Module 4: Passwords and Secret Messages",
     "section": "Planned Lessons",
-    "text": "Planned Lessons\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n1. Everything Is a Number\nBinary and hexadecimal; why storage sizes are powers of two; where hex appears on a real computer (A1.2)\nA binary and hex converter; decode a web colour and a MAC address\n\n\n2. Text Is Numbers Too\nord(), chr(); ASCII and Unicode; how many bytes an emoji takes\nPrint the code of every character in a message\n\n\n3. Strings Up Close\nIndexing, slicing, len(), looping through a string\nShow a password with all but the last two characters hidden\n\n\n4. String Methods\n.isdigit(), .isupper(), .count(), .replace(), in (A3.1)\nCount the character types in a password\n\n\n5. Writing Functions\nParameters, return values, local and global scope (A3.2)\nhas_digit(password) and friends\n\n\n6. Password Strength Checker\nCombining functions; testing with a test plan (B4.4)\nA checker that explains its score\n\n\n7. How Long to Crack a Password?\nCombinations (characters ** length); guesses per second from Module 3; why length beats complexity\nA crack-time estimator; passphrases with the secrets module\n\n\n8. How Websites Store Passwords\nHashing with hashlib; data breaches; why reuse is risky\nCompare the hashes of two nearly identical passwords\n\n\n9. Why Simple Ciphers Fail\nThe Caesar cipher as a short activity: modulo wrap-around; breaking it by brute force and letter frequency; why real encryption is different; cryptography as a research area (B1.1, D2.1)\nEncode a class message, then crack one by trying all 26 shifts\n\n\n10. Malware and a Protection Plan\nViruses, worms, Trojans, spyware, adware, macros; updates, backups, and accounts (C2.2)\nA protection plan for a real computer at home\n\n\n11. Reusable Code\nPutting functions in your own module and importing it (B2.3)\npassword_tools.py\n\n\n12. Module 4 test\nIncludes a code-reading and tracing section"
+    "text": "Planned Lessons\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n1. Everything Is a Number\nBinary and hexadecimal; why storage sizes are powers of two; where hex appears on a real computer (A1.2)\nA binary and hex converter; decode a web colour and a MAC address\n\n\n2. Text Is Numbers Too\nord(), chr(); ASCII and Unicode; how many bytes an emoji takes\nPrint the code of every character in a message\n\n\n3. Strings Up Close\nIndexing, slicing, len(), looping through a string\nShow a password with all but the last two characters hidden\n\n\n4. String Methods\n.isdigit(), .isupper(), .count(), .replace(), in (A3.1)\nCount the character types in a password; Make: the Username Maker Quick Build\n\n\n5. Writing Functions\nParameters, return values, local and global scope (A3.2)\nhas_digit(password) and friends; Make: the File Name Cleaner Quick Build\n\n\n6. Password Strength Checker\nCombining functions; putting them in your own module and importing it (B2.3); testing with a test plan (B4.4)\nA checker that explains its score, built on password_tools.py\n\n\n7. How Long to Crack a Password?\nCombinations (characters ** length); guesses per second from Module 3; why length beats complexity\nA crack-time estimator; passphrases with the secrets module\n\n\n8. How Websites Store Passwords\nHashing with hashlib; data breaches; why reuse is risky\nCompare the hashes of two nearly identical passwords\n\n\n9. Why Simple Ciphers Fail\nThe Caesar cipher as a short activity: modulo wrap-around; breaking it by brute force and letter frequency; why real encryption is different; cryptography as a research area (B1.1, D2.1)\nEncode a class message, then crack one by trying all 26 shifts\n\n\n10. Malware and a Protection Plan\nViruses, worms, Trojans, spyware, adware, macros; updates, backups, and accounts (C2.2)\nA protection plan for a real computer at home\n\n\n11. Review and assignment work period\nA short review of Lessons 1–10, then class time for the assignment\nFinish the Password Toolkit\n\n\n12. Module 4 test\nIncludes a code-reading and tracing section"
   },
   {
     "objectID": "modules/module-04-passwords-and-secret-messages/index.html#assignment-planned-password-toolkit",
@@ -172,7 +186,7 @@
     "href": "modules/module-04-passwords-and-secret-messages/index.html#practising-the-basics-planned",
     "title": "Module 4: Passwords and Secret Messages",
     "section": "Practising the Basics (Planned)",
-    "text": "Practising the Basics (Planned)\n\nSkill Builder: indexing, slicing, string methods, ord() and chr(), binary and hex conversions, and writing functions with parameters and return values. Includes Module 3 loop tracing.\nQuick Builds (small graded programs, before the assignment):\n\nUsername Maker: builds a school-style username from a first and last name (slicing, .lower()).\nFile Name Cleaner: turns My Essay FINAL (2).docx into my-essay-final-2.docx, as a function.\n\nWarm-ups in every lesson include a question from an earlier module."
+    "text": "Practising the Basics (Planned)\n\nSkill Builder: indexing, slicing, string methods, ord() and chr(), binary and hex conversions, and writing functions with parameters and return values. Includes Module 3 loop tracing.\nQuick Builds (small graded programs; each is the Make product of a lesson, so it needs no extra period):\n\nUsername Maker (Lesson 4): builds a school-style username from a first and last name (slicing, .lower()).\nFile Name Cleaner (Lesson 5): turns My Essay FINAL (2).docx into my-essay-final-2.docx, as a function.\n\nWarm-ups in every lesson include a question from an earlier module."
   },
   {
     "objectID": "modules/module-04-passwords-and-secret-messages/index.html#notes-for-teachers",
@@ -186,7 +200,14 @@
     "href": "modules/module-04-passwords-and-secret-messages/index.html#how-module-4-fits",
     "title": "Module 4: Passwords and Secret Messages",
     "section": "How Module 4 Fits",
-    "text": "How Module 4 Fits\n\nBefore: Module 3 wrote loops and met functions.\nNext: Module 5, On the Network, turns IP addresses into binary and sends messages between computers."
+    "text": "How Module 4 Fits\n\nBefore: Module 3 wrote loops and met functions.\nNext: Module 5, On the Network, turns IP addresses into binary and sends messages between computers.\nThen: the Computer Science in the World lesson Security as a Career (about 1 hour), before Module 5."
+  },
+  {
+    "objectID": "modules/module-04-passwords-and-secret-messages/index.html#previous-and-next",
+    "href": "modules/module-04-passwords-and-secret-messages/index.html#previous-and-next",
+    "title": "Module 4: Passwords and Secret Messages",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Module 3 · Scope and Sequence · Module 5 →"
   },
   {
     "objectID": "modules/module-04-passwords-and-secret-messages/index.html#feedback",
@@ -214,7 +235,7 @@
     "href": "modules/module-02-spec-checker/index.html#planned-lessons",
     "title": "Module 2: Spec Checker",
     "section": "Planned Lessons",
-    "text": "Planned Lessons\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n1. How Many Cores?\nos.cpu_count(); integers vs. strings; what a core is (C1.1)\nAdd cores to the Module 1 report card\n\n\n2. Bytes to Gigabytes\nArithmetic, //, %, **, order of operations (A1.3, A1.4)\nA converter that explains why “1 TB” shows as 931 GB\n\n\n3. How Full Is My Drive?\nshutil.disk_usage(); percentages; rounding in f-strings\nA drive gauge for the classroom computer and a USB key\n\n\n4. Asking the User\ninput(), int(), float(); the input-process-output model (A2.1, B1.3)\n“How many 4 GB movies fit on this drive?”\n\n\n5. Making Decisions\nComparison operators; if/else; Boolean values (A1.1, A1.4)\n“Is there room for this download?”\n\n\n6. More Than Two Choices\nelif; and, or, not\nRate the drive: plenty, getting full, or critical\n\n\n7. When Users Type Nonsense\ntry/except; ValueError, ZeroDivisionError; friendly messages (B3.3, B2.5)\nMake the storage calculator survive “lots” and “0”\n\n\n8. Testing with a Test Plan\nNormal, boundary, and invalid cases; expected vs. actual; pass or fail (B4.4, A4.5)\nA test plan for the drive gauge\n\n\n9. Will This Game Run?\nComparing specifications to requirements (C1.2); modifying a loop over a list of requirements; .strip(), .lower()\nCheck this computer against a real game’s minimums\n\n\n10. Peripherals and People\nMonitors, printers, keyboards, storage devices and who needs what (C1.3); pixels per inch (B3.2)\nCompare two monitors; recommend a set-up for a gamer, a coder, and a grandparent\n\n\n11. Review and work period\n\n\n\n\n12. Module 2 test\nIncludes a code-reading and tracing section"
+    "text": "Planned Lessons\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n1. How Many Cores?\nos.cpu_count(); integers vs. strings; what a core is (C1.1)\nAdd cores to the Module 1 report card\n\n\n2. Bytes to Gigabytes\nArithmetic, //, %, **, order of operations (A1.3, A1.4); reading a converter that explains why “1 TB” shows as 931 GB\nMake: the Storage Unit Converter Quick Build\n\n\n3. How Full Is My Drive?\nshutil.disk_usage(); percentages; rounding in f-strings\nA drive gauge for the classroom computer and a USB key\n\n\n4. Asking the User\ninput(), int(), float(); the input-process-output model (A2.1, B1.3)\n“How many 4 GB movies fit on this drive?”\n\n\n5. Making Decisions\nComparison operators; if/else; Boolean values (A1.1, A1.4); modifying “Is there room for this download?”\nMake: the Battery Life Estimator Quick Build\n\n\n6. More Than Two Choices\nelif; and, or, not\nRate the drive: plenty, getting full, or critical\n\n\n7. When Users Type Nonsense\ntry/except; ValueError, ZeroDivisionError; friendly messages (B3.3, B2.5)\nMake the storage calculator survive “lots” and “0”\n\n\n8. Testing with a Test Plan\nNormal, boundary, and invalid cases; expected vs. actual; pass or fail (B4.4, A4.5)\nA test plan for the drive gauge\n\n\n9. Will This Game Run?\nComparing specifications to requirements (C1.2); modifying a loop over a list of requirements; .strip(), .lower()\nCheck this computer against a real game’s minimums\n\n\n10. Peripherals and People\nMonitors, printers, keyboards, storage devices and who needs what (C1.3); pixels per inch (B3.2)\nCompare two monitors; recommend a set-up for a gamer, a coder, and a grandparent\n\n\n11. Review and assignment work period\nA short review of Lessons 1–10, then class time for the assignment\nFinish Will It Run?\n\n\n12. Module 2 test\nIncludes a code-reading and tracing section"
   },
   {
     "objectID": "modules/module-02-spec-checker/index.html#assignment-planned-will-it-run",
@@ -228,7 +249,7 @@
     "href": "modules/module-02-spec-checker/index.html#practising-the-basics-planned",
     "title": "Module 2: Spec Checker",
     "section": "Practising the Basics (Planned)",
-    "text": "Practising the Basics (Planned)\n\nSkill Builder: input() and type conversion, arithmetic operators and order of operations, comparisons, if/elif/else, and try/except. Includes Module 1 print() and f-string review.\nQuick Builds (small graded programs, before the assignment):\n\nStorage Unit Converter: bytes, KB, MB, GB, and TB in both directions.\nBattery Life Estimator: battery capacity and power draw in, hours of use out, with a warning for impossible values.\n\nWarm-ups in every lesson include a question from an earlier module."
+    "text": "Practising the Basics (Planned)\n\nSkill Builder: input() and type conversion, arithmetic operators and order of operations, comparisons, if/elif/else, and try/except. Includes Module 1 print() and f-string review.\nQuick Builds (small graded programs; each is the Make product of a lesson, so it needs no extra period):\n\nStorage Unit Converter (Lesson 2): bytes, KB, MB, GB, and TB in both directions.\nBattery Life Estimator (Lesson 5): battery capacity and power draw in, hours of use out, with a warning for impossible values.\n\nWarm-ups in every lesson include a question from an earlier module."
   },
   {
     "objectID": "modules/module-02-spec-checker/index.html#notes-for-teachers",
@@ -242,7 +263,14 @@
     "href": "modules/module-02-spec-checker/index.html#how-module-2-fits",
     "title": "Module 2: Spec Checker",
     "section": "How Module 2 Fits",
-    "text": "How Module 2 Fits\n\nBefore: Module 1 taught import, print(), variables, and reading errors, and let students read their first if and input().\nNext: Module 3, Benchmark Lab, measures how fast the computer is, using loops."
+    "text": "How Module 2 Fits\n\nBefore: Module 1 taught import, print(), variables, and reading errors, and let students read their first if and input().\nNext: Module 3, Benchmark Lab, measures how fast the computer is, using loops.\nThen: the Computer Science in the World lesson Who Builds Computers? (about 1 hour), before Module 3."
+  },
+  {
+    "objectID": "modules/module-02-spec-checker/index.html#previous-and-next",
+    "href": "modules/module-02-spec-checker/index.html#previous-and-next",
+    "title": "Module 2: Spec Checker",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Module 1 · Scope and Sequence · Module 3 →"
   },
   {
     "objectID": "modules/module-02-spec-checker/index.html#feedback",
@@ -256,273 +284,422 @@
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html",
     "title": "Lesson 2: Exploring the platform Library",
     "section": "",
-    "text": "For teachers. This is the lesson plan: use it to prepare and as your script in class. Students work from the slides, the code files and notebooks, and the practice page. The step-through boxes and runnable code are here so you can try every activity first. How a lesson works →"
+    "text": "For teachers. This is the lesson plan: use it to prepare and as your script in class. Students work from the slides, the code files and notebooks, and the practice page. The step-through boxes and runnable code are here so you can try every activity first. How a lesson works →",
+    "crumbs": [
+      "For teachers",
+      "Lesson 2 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#at-a-glance",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#at-a-glance",
     "title": "Lesson 2: Exploring the platform Library",
     "section": "At a Glance",
-    "text": "At a Glance\n\nBig idea: a module is a toolbox you can explore, and variables let a program remember answers to use later.\nStudents will: list the platform toolbox with dir(), look up a function in the documentation, trace a program that stores answers in variables, see that a variable can be changed, and read two common error messages.\nStudents make: a computer report built from four platform functions stored in variables.\nPrepare: run l02_report_variables.py and both mistake programs, so you’ve seen the error messages students will see.\nAfter class: Lesson 2 practice, then the Module 1 Assignment.\nWhere it fits: builds on Lesson 1; part of Module 1."
+    "text": "At a Glance\n\nBig idea: a module is a toolbox you can explore, and variables let a program remember answers to use later.\nStudents will: list the platform toolbox with dir(), look up a function in the documentation, trace a program that stores answers in variables, see that a variable can be changed, and read two common error messages.\nStudents make: a computer report built from four platform functions stored in variables.\nPrepare: run l02_report_variables.py and both mistake programs, so you’ve seen the error messages students will see. Open the slides a few minutes before class: Python loads into the browser in the background, and a small “Downloading Pyodide” note shows until it’s ready.\nAfter class: Lesson 2 practice, then the Module 1 Assignment.\nWhere it fits: builds on Lesson 1; part of Module 1.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 2 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#learning-goals",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#learning-goals",
     "title": "Lesson 2: Exploring the platform Library",
     "section": "Learning Goals",
-    "text": "Learning Goals\n\nFind out what tools a module contains, using dir() and the Python documentation.\nStore answers in variables and use them later in a program.\nTrace which variables exist and what they hold, line by line, including when a variable is given a new value.\nRead two common error messages and explain what caused them."
+    "text": "Learning Goals\n\nFind out what tools a module contains, using dir() and the Python documentation.\nStore answers in variables and use them later in a program.\nTrace which variables exist and what they hold, line by line, including when a variable is given a new value.\nRead two common error messages and explain what caused them.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 2 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#success-criteria",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#success-criteria",
     "title": "Lesson 2: Exploring the platform Library",
     "section": "Success Criteria",
-    "text": "Success Criteria\nStudents can say:\n\nI can find a new function in the platform module and use it.\nI can predict the output of a program that stores values in variables.\nI can explain what an AttributeError message is telling me."
+    "text": "Success Criteria\nStudents can say:\n\nI can find a new function in the platform module and use it.\nI can predict the output of a program that stores values in variables.\nI can explain what an AttributeError message is telling me.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 2 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#review-5-min",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#review-5-min",
     "title": "Lesson 2: Exploring the platform Library",
     "section": "Review (5 min)",
-    "text": "Review (5 min)\nWithout running anything, answer in tracing notebooks:\n\nWhat does platform.machine() print on the classroom computer? On the course web page?\nWhat does the dot in platform.machine() mean? What do the parentheses mean?"
+    "text": "Review (5 min)\nWithout running anything, answer in tracing notebooks:\n\nWhat does platform.machine() print on the classroom computer? On the course web page?\nWhat does the dot in platform.machine() mean? What do the parentheses mean?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 2 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#teach-what-else-is-in-the-toolbox-15-min",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#teach-what-else-is-in-the-toolbox-15-min",
     "title": "Lesson 2: Exploring the platform Library",
     "section": "Teach: What Else Is in the Toolbox? (15 min)",
-    "text": "Teach: What Else Is in the Toolbox? (15 min)\nA module can contain many tools. dir() lists them. Run it and read the list together.\n\n\n\n\n\n\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\nThink aloud while reading the list:\n\n“Names starting with an underscore, like _comparable_version, are for Python’s own use. We skip those.”\n“Some names look familiar from Lesson 1: machine, system, node, python_version, release.”\n“Others are new: platform, architecture, version, uname. The name gives a hint, but the documentation tells us for sure.”\n\n\n\nOpen the official documentation for the module: docs.python.org/3/library/platform.html. Find platform.machine() and read its description together. Then choose one new function from the list, predict what it does from its name, and try it."
+    "text": "Teach: What Else Is in the Toolbox? (15 min)\nOpen with the problem: “Lesson 1 asked platform three questions. What else does it know about this computer? And how do we make a program remember an answer instead of asking twice?”\nA module can contain many tools. dir() lists them. Run it and read the list together.\n\n\n\n\n\n\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\nThink aloud while reading the list:\n\n“Names starting with an underscore, like _comparable_version, are for Python’s own use. We skip those.”\n“Some names look familiar from Lesson 1: machine, system, node, python_version, release.”\n“Others are new: platform, architecture, version, uname. The name gives a hint, but the documentation tells us for sure.”\n\n\n\nOpen the official documentation for the module: docs.python.org/3/library/platform.html. Find platform.machine() and read its description together. Then choose one new function from the list, predict what it does from its name, and try it.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 2 plan"
+    ]
   },
   {
-    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#predict-then-step-15-min",
-    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#predict-then-step-15-min",
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#predict-then-step-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#predict-then-step-10-min",
     "title": "Lesson 2: Exploring the platform Library",
-    "section": "Predict, Then Step (15 min)",
-    "text": "Predict, Then Step (15 min)\nThis is Lesson 1’s computer report, rewritten so that each answer is stored in a variable before it is printed. Read it without running it, then answer in tracing notebooks:\n\nWhich lines ask the computer a question? Which lines print?\nWhat will the first line of output be?\nHow is this program different from Lesson 1’s program? Will the output be different?\n\nType your prediction in the box, then press Step to run one line at a time. Watch the Variables panel as well as the output.\n\n\n\n\n\n\nTipTeacher prompt: the Variables panel (first use)\n\n\n\n\n“Same colours as last lesson: yellow with an arrow is the next line, green just ran.”\n“There’s a new panel today: Variables. A variable is a name that holds a value. When line 3 runs, watch a new row appear.”\nAfter stepping line 3: “Nothing was printed, but something happened. The answer was stored under the name cpu.”\n“The quotation marks around 'wasm32' tell us the value is text. Python calls text a string. The quotation marks won’t be printed.”\n\n\n\nimport platform\n\ncpu = platform.machine()\nsystem = platform.system()\nname = platform.node()\n\nprint(\"Computer report for\", name)\nprint(\"CPU type:\", cpu)\nprint(\"Operating system:\", system)"
+    "section": "Predict, Then Step (10 min)",
+    "text": "Predict, Then Step (10 min)\nThis is Lesson 1’s computer report, rewritten so that each answer is stored in a variable before it is printed. Read it without running it, then answer in tracing notebooks:\n\nWhich lines ask the computer a question? Which lines print?\nWhat will the first line of output be?\nHow is this program different from Lesson 1’s program? Will the output be different?\n\nType your prediction in the box, then press Step to run one line at a time. Watch the Variables panel as well as the output.\n\n\n\n\n\n\nTipTeacher prompt: the Variables panel (first use)\n\n\n\n\n“Same colours as last lesson: yellow with an arrow is the next line, green just ran.”\n“There’s a new panel today: Variables. A variable is a name that holds a value. When line 3 runs, watch a new row appear.”\nAfter stepping line 3: “Nothing was printed, but something happened. The answer was stored under the name cpu.”\n“The quotation marks around 'wasm32' tell us the value is text. Python calls text a string. The quotation marks won’t be printed.”\n\n\n\nimport platform\n\ncpu = platform.machine()\nsystem = platform.system()\nname = platform.node()\n\nprint(\"Computer report for\", name)\nprint(\"CPU type:\", cpu)\nprint(\"Operating system:\", system)",
+    "crumbs": [
+      "For teachers",
+      "Lesson 2 plan"
+    ]
   },
   {
-    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#investigate-25-min",
-    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#investigate-25-min",
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#investigate-20-min",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#investigate-20-min",
     "title": "Lesson 2: Exploring the platform Library",
-    "section": "Investigate (25 min)",
-    "text": "Investigate (25 min)\n\nWhat the variables hold\nUse Back and Step to answer:\n\nAfter line 3 runs, which variable exists and what is its value?\nLines 3–5 run, but nothing is printed yet. Where did the answers go?\nLine 7 uses name, which was created on line 5. What would happen if line 7 came before line 5?\nComplete a trace table. Every line that runs gets a row; blank lines don’t. Line 1 is filled in for you.\n\n\n\n\nLine\ncpu\nsystem\nname\nOutput\n\n\n\n\n1\n—\n—\n—\n—\n\n\n3\n\n\n\n\n\n\n4\n\n\n\n\n\n\n5\n\n\n\n\n\n\n7\n\n\n\n\n\n\n8\n\n\n\n\n\n\n9\n\n\n\n\n\n\n\n\n\nA variable can change (5 min)\nRead this program without running it. What will each line of output be? Then step through it and watch the system row in the Variables panel.\nimport platform\n\nsystem = platform.system()\nprint(\"Before:\", system)\nsystem = \"my computer\"\nprint(\"After:\", system)\n\n\n\n\n\n\nTipTeacher prompt: changing a variable (first use)\n\n\n\n\n“Line 5 uses the same name, system, again. Watch the Variables panel when it runs.”\nAfter line 5: “The old value is gone. A variable holds one value at a time; giving it a new value replaces the old one.”\n“Line 4 already printed the old value, so that output doesn’t change. Python never goes back.”\n\n\n\n\nWhat does system hold after line 3? After line 5?\nWhy does the first output line show the operating system but the second doesn’t?\n\n\n\nSpot the problem\nEach program has a mistake. Predict what will happen, then step through it and read the result carefully.\n\n\n\n\n\n\nTipTeacher prompt: reading an error (first use)\n\n\n\nAfter Program B stops:\n\n“A red line means Python stopped on that line because of an error. The lines below it never ran.”\n“The message under the buttons has three parts: the line number, the kind of error (AttributeError), and a description in plain words. Read them in that order.”\n“Errors aren’t failures. They’re Python telling us exactly where to look.”\n\n\n\nProgram A\nimport platform\n\nprint(platform.machine)\nProgram B\nimport platform\n\nprint(platform.cpu())\n\nProgram A does not crash, but prints something strange. What is missing?\nProgram B stops with an AttributeError. Which line caused it? What is the message telling you?\nHow could dir(platform) have prevented the mistake in Program B?\nRun Program B on the classroom computer. How does the full error message there show the same information?"
+    "section": "Investigate (20 min)",
+    "text": "Investigate (20 min)\n\nWhat the variables hold\nUse Back and Step to answer:\n\nAfter line 3 runs, which variable exists and what is its value?\nLines 3–5 run, but nothing is printed yet. Where did the answers go?\nLine 7 uses name, which was created on line 5. What would happen if line 7 came before line 5?\nComplete a trace table. Every line that runs gets a row; blank lines don’t. Line 1 is filled in for you.\n\n\n\n\nLine\ncpu\nsystem\nname\nOutput\n\n\n\n\n1\n—\n—\n—\n—\n\n\n3\n\n\n\n\n\n\n4\n\n\n\n\n\n\n5\n\n\n\n\n\n\n7\n\n\n\n\n\n\n8\n\n\n\n\n\n\n9\n\n\n\n\n\n\n\n\n\nA variable can change (5 min)\nRead this program without running it. What will each line of output be? Then step through it and watch the system row in the Variables panel.\nimport platform\n\nsystem = platform.system()\nprint(\"Before:\", system)\nsystem = \"my computer\"\nprint(\"After:\", system)\n\n\n\n\n\n\nTipTeacher prompt: changing a variable (first use)\n\n\n\n\n“Line 5 uses the same name, system, again. Watch the Variables panel when it runs.”\nAfter line 5: “The old value is gone. A variable holds one value at a time; giving it a new value replaces the old one.”\n“Line 4 already printed the old value, so that output doesn’t change. Python never goes back.”\n\n\n\n\nWhat does system hold after line 3? After line 5?\nWhy does the first output line show the operating system but the second doesn’t?\n\n\n\nSpot the problem\nEach program has a mistake. Predict what will happen, then step through it and read the result carefully.\n\n\n\n\n\n\nTipTeacher prompt: reading an error (first use)\n\n\n\nAfter Program B stops:\n\n“A red line means Python stopped on that line because of an error. The lines below it never ran.”\n“The message under the buttons has three parts: the line number, the kind of error (AttributeError), and a description in plain words. Read them in that order.”\n“Errors aren’t failures. They’re Python telling us exactly where to look.”\n\n\n\nProgram A\nimport platform\n\nprint(platform.machine)\nProgram B\nimport platform\n\nprint(platform.cpu())\n\nProgram A does not crash, but prints something strange. What is missing?\nProgram B stops with an AttributeError. Which line caused it? What is the message telling you?\nHow could dir(platform) have prevented the mistake in Program B?\nIf time allows: run Program B on the classroom computer. How does the full error message there show the same information? (Otherwise, students meet the full message in Make.)",
+    "crumbs": [
+      "For teachers",
+      "Lesson 2 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#modify-10-min",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#modify-10-min",
     "title": "Lesson 2: Exploring the platform Library",
     "section": "Modify (10 min)",
-    "text": "Modify (10 min)\nAdd two more facts to the report. For each one, create a variable and print it with a label.\n\nThe Python version: platform.python_version()\nThe operating system’s version number: platform.release()"
+    "text": "Modify (10 min)\nAdd two more facts to the report. For each one, create a variable and print it with a label.\n\nThe Python version: platform.python_version()\nThe operating system’s version number: platform.release()",
+    "crumbs": [
+      "For teachers",
+      "Lesson 2 plan"
+    ]
   },
   {
-    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#make-my-computer-report-if-time-allows",
-    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#make-my-computer-report-if-time-allows",
+    "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#make-my-computer-report-10-min",
+    "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#make-my-computer-report-10-min",
     "title": "Lesson 2: Exploring the platform Library",
-    "section": "Make: My Computer Report (if time allows)",
-    "text": "Make: My Computer Report (if time allows)\nOn the classroom computer (Thonny, IDLE, or VS Code), write a computer report that uses four platform functions, including at least one you found with dir() or the documentation. Store each answer in a variable with a clear name, then print a labelled report. Early finishers can paste it into the Modify box above and compare the browser’s answers."
+    "section": "Make: My Computer Report (10 min)",
+    "text": "Make: My Computer Report (10 min)\nOn the classroom computer (Thonny, IDLE, or VS Code), write a computer report that uses four platform functions, including at least one you found with dir() or the documentation. Store each answer in a variable with a clear name, then print a labelled report. Students save it as my_report.py in ics3u/module-01/lesson-02/. This is practice for the assignment’s Part B, so make sure everyone writes and runs at least two lines before the bell. Early finishers can paste it into the Modify box above and compare the browser’s answers.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 2 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#check-exit-ticket-5-min",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#check-exit-ticket-5-min",
     "title": "Lesson 2: Exploring the platform Library",
     "section": "Check: Exit Ticket (5 min)",
-    "text": "Check: Exit Ticket (5 min)\nSuppose this program were run on a Windows laptop with an Intel processor.\nimport platform\n\ncpu = platform.machine()\nprint(\"CPU:\", cpu)\nprint(\"Again:\", cpu)\n\nWhat would the output be? Write it exactly.\nHow many times does the program ask the computer for its CPU type?"
+    "text": "Check: Exit Ticket (5 min)\nSuppose this program were run on a Windows laptop with an Intel processor.\nimport platform\n\ncpu = platform.machine()\nprint(\"CPU:\", cpu)\nprint(\"Again:\", cpu)\n\nWhat would the output be? Write it exactly.\nHow many times does the program ask the computer for its CPU type?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 2 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#after-the-lesson",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#after-the-lesson",
     "title": "Lesson 2: Exploring the platform Library",
     "section": "After the Lesson",
-    "text": "After the Lesson\n\nStudents do the Lesson 2 practice: trace a program that changes a variable, fix a mistake, and use a function they found with dir().\nSuggested hand-in: the Make program’s .py file with its output pasted as a comment at the bottom. Check trace tables in tracing notebooks as you circulate.\nStudents then start the Module 1 Assignment, the Computer Report Card.\nRead the exit tickets. Students who answered “twice” to question 2 still think a variable re-asks the computer; revisit the trace table."
+    "text": "After the Lesson\n\nStudents do the Lesson 2 practice: trace a program that changes a variable, fix a mistake, and use a function they found with dir().\nSuggested hand-in: the Make program’s .py file with its output pasted as a comment at the bottom. Check trace tables in tracing notebooks as you circulate.\nStudents then start the Module 1 Assignment, the Computer Report Card.\nRead the exit tickets. Students who answered “twice” to question 2 still think a variable re-asks the computer; revisit the trace table.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 2 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#code-for-this-lesson",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#code-for-this-lesson",
     "title": "Lesson 2: Exploring the platform Library",
     "section": "Code for This Lesson",
-    "text": "Code for This Lesson\nEvery program in this lesson, ready to run outside the browser. Download the .py file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nChange variable\nl02_change_variable.py\nView or download\nCallysto | Colab\n\n\nExit ticket\nl02_exit_ticket.py\nView or download\nCallysto | Colab\n\n\nMistake: attribute\nl02_mistake_attribute.py\nView or download\nCallysto | Colab\n\n\nMistake: parentheses\nl02_mistake_parentheses.py\nView or download\nCallysto | Colab\n\n\nPractice mistake\nl02_practice_mistake.py\nView or download\nCallysto | Colab\n\n\nPractice trace\nl02_practice_trace.py\nView or download\nCallysto | Colab\n\n\nReport variables\nl02_report_variables.py\nView or download\nCallysto | Colab"
+    "text": "Code for This Lesson\nEvery program in this lesson, ready to run outside the browser. Download the .py file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nChange variable\nl02_change_variable.py\nView or download\nCallysto | Colab\n\n\nExit ticket\nl02_exit_ticket.py\nView or download\nCallysto | Colab\n\n\nMistake: attribute\nl02_mistake_attribute.py\nView or download\nCallysto | Colab\n\n\nMistake: parentheses\nl02_mistake_parentheses.py\nView or download\nCallysto | Colab\n\n\nPractice mistake\nl02_practice_mistake.py\nView or download\nCallysto | Colab\n\n\nPractice trace\nl02_practice_trace.py\nView or download\nCallysto | Colab\n\n\nReport variables\nl02_report_variables.py\nView or download\nCallysto | Colab",
+    "crumbs": [
+      "For teachers",
+      "Lesson 2 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#teacher-notes",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#teacher-notes",
     "title": "Lesson 2: Exploring the platform Library",
     "section": "Teacher Notes",
-    "text": "Teacher Notes\n\nVariables. A variable is a name that stores a value. cpu = platform.machine() asks the question once and keeps the answer, so the program can use it later, as many times as needed.\nStep-through box. It runs the real program in the browser, so platform works and the variables hold the browser’s answers ('wasm32', 'Emscripten'). Python Tutor is not used here because it does not allow the platform module.\nChanging a variable. Introduced briefly, through reading only: a variable holds one value at a time, and a new value replaces the old one. Students trace it again in the practice and in Assignment Part A. Updating a variable from its own value (count = count + 1) comes later, when programs start calculating.\ndir() output is long and includes names starting with _; tell students to skip those. In the browser and on the classroom computer, the lists may differ slightly between Python versions.\nSpot the problem. Without parentheses, platform.machine is the tool itself, not its answer, so Python prints a description of the function, e.g. &lt;function machine at 0x104cb3e20&gt;. The AttributeError says the module has no tool by that name. The step-through box highlights the line that caused the error and shows the error type and message; Thonny, IDLE, and VS Code show the same information as a full traceback, which students should learn to read too.\nSlides. Open the slides on the projector and this plan on your own screen. Press S in the slides for speaker view.\nSpiral. Students now write variables and read error messages. Calculating with values (os.cpu_count(), storage in gigabytes) comes in Module 2.\nAnswers are in the answer-keys folder of the course’s GitHub repository, not on this site."
+    "text": "Teacher Notes\n\nVariables. A variable is a name that stores a value. cpu = platform.machine() asks the question once and keeps the answer, so the program can use it later, as many times as needed.\nStep-through box. It runs the real program in the browser, so platform works and the variables hold the browser’s answers ('wasm32', 'Emscripten'). Python Tutor is not used here because it does not allow the platform module.\nChanging a variable. Introduced briefly, through reading only: a variable holds one value at a time, and a new value replaces the old one. Students trace it again in the practice and in Assignment Part A. Updating a variable from its own value (count = count + 1) comes later, when programs start calculating.\ndir() output is long and includes names starting with _; tell students to skip those. In the browser and on the classroom computer, the lists may differ slightly between Python versions.\nSpot the problem. Without parentheses, platform.machine is the tool itself, not its answer, so Python prints a description of the function, e.g. &lt;function machine at 0x104cb3e20&gt;. The AttributeError says the module has no tool by that name. The step-through box highlights the line that caused the error and shows the error type and message; Thonny, IDLE, and VS Code show the same information as a full traceback, which students should learn to read too.\nSlides. Open the slides on the projector and this plan on your own screen. Press S in the slides for speaker view.\nSpiral. Students now write variables and read error messages. Calculating with values (os.cpu_count(), storage in gigabytes) comes in Module 2.\nAnswers are in the answer-keys folder of the course’s GitHub repository, not on this site.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 2 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#previous-and-next",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#previous-and-next",
     "title": "Lesson 2: Exploring the platform Library",
     "section": "Previous and Next",
-    "text": "Previous and Next\n← Lesson 1 · Lesson 2 slides · Module 1 overview · Practice →"
+    "text": "Previous and Next\n← Lesson 1 · Lesson 2 slides · Module 1 overview · Practice →",
+    "crumbs": [
+      "For teachers",
+      "Lesson 2 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#feedback",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform.html#feedback",
     "title": "Lesson 2: Exploring the platform Library",
     "section": "Feedback",
-    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response."
+    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 2 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html",
     "title": "Lesson 1: Ask the Computer About Itself",
     "section": "",
-    "text": "For teachers. This is the lesson plan: use it to prepare and as your script in class. Students work from the slides, the code files and notebooks, and the practice page. The step-through boxes and runnable code are here so you can try every activity first. How a lesson works →"
+    "text": "For teachers. This is the lesson plan: use it to prepare and as your script in class. Students work from the slides, the code files and notebooks, and the practice page. The step-through boxes and runnable code are here so you can try every activity first. How a lesson works →",
+    "crumbs": [
+      "For teachers",
+      "Lesson 1 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#at-a-glance",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#at-a-glance",
     "title": "Lesson 1: Ask the Computer About Itself",
     "section": "At a Glance",
-    "text": "At a Glance\n\nBig idea: a program can ask the computer about itself, and the answer depends on which computer runs it.\nStudents will: guess their computer’s processor and operating system, read and step through a four-line program that checks, then change it.\nStudents make: a short report program that prints the operating system and its version.\nPrepare: run l01_computer_report.py on your computer and on a student computer; optionally in Colab for the demonstration. Students need their course folder before Make: set it up beforehand, or take the first five minutes of Make.\nAfter class: Lesson 1 practice.\nWhere it fits: the first lesson of Module 1. Lesson 2 adds dir(), variables, and error messages."
+    "text": "At a Glance\n\nBig idea: a program can ask the computer about itself, and the answer depends on which computer runs it.\nStudents will: guess their computer’s processor and operating system, read and step through a four-line program that checks, then change it.\nStudents make: a short report program that prints the operating system and its version.\nPrepare: run l01_computer_report.py on your computer and on a student computer; optionally in Colab for the demonstration. Students need their course folder before Make: set it up beforehand, or take the first five minutes of Make. Open the slides a few minutes before class: Python loads into the browser in the background, and a small “Downloading Pyodide” note shows until it’s ready.\nAfter class: Lesson 1 practice.\nWhere it fits: the first lesson of Module 1. Lesson 2 adds dir(), variables, and error messages.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 1 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#learning-goals",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#learning-goals",
     "title": "Lesson 1: Ask the Computer About Itself",
     "section": "Learning Goals",
-    "text": "Learning Goals\n\nRead a short Python program and predict what it will print.\nExplain what import platform and print() do.\nExplain what a CPU type such as arm64 or x86_64 tells us.\nRecognize that a program reports on whatever computer it actually runs on."
+    "text": "Learning Goals\n\nRead a short Python program and predict what it will print.\nExplain what import platform and print() do.\nExplain what a CPU type such as arm64 or x86_64 tells us.\nRecognize that a program reports on whatever computer it actually runs on.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 1 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#success-criteria",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#success-criteria",
     "title": "Lesson 1: Ask the Computer About Itself",
     "section": "Success Criteria",
-    "text": "Success Criteria\nStudents can say:\n\nI can predict which parts of a program’s output are fixed text and which parts come from the computer.\nI can name the CPU type and operating system of the computer I am using.\nI can explain why the same program gives different answers in different places."
+    "text": "Success Criteria\nStudents can say:\n\nI can predict which parts of a program’s output are fixed text and which parts come from the computer.\nI can name the CPU type and operating system of the computer I am using.\nI can explain why the same program gives different answers in different places.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 1 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#warm-up-5-min",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#warm-up-5-min",
     "title": "Lesson 1: Ask the Computer About Itself",
     "section": "Warm-up (5 min)",
-    "text": "Warm-up (5 min)\nStudents write their best guesses about the computer in front of them in their tracing notebooks:\n\nWhat kind of processor (CPU) does it have?\nWhich operating system does it run?\nWhat is the computer’s name?\n\nKeep the guesses. Today’s programs will check them."
+    "text": "Warm-up (5 min)\nStudents write their best guesses about the computer in front of them in their tracing notebooks:\n\nWhat kind of processor (CPU) does it have?\nWhich operating system does it run?\nWhat is the computer’s name?\n\nKeep the guesses. Today’s programs will check them.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 1 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#teach-two-lines-of-python-15-min",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#teach-two-lines-of-python-15-min",
     "title": "Lesson 1: Ask the Computer About Itself",
     "section": "Teach: Two Lines of Python (15 min)",
-    "text": "Teach: Two Lines of Python (15 min)\nShow this program and read it aloud before running it.\nimport platform\n\nprint(platform.machine())\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\nThink aloud while reading, one line at a time:\n\n“import platform brings in a module: a toolbox of ready-made code that comes with Python. This one can answer questions about the computer.”\n“platform.machine() asks one question: what type of CPU is this? The dot means ‘the machine tool from the platform toolbox’. The parentheses mean ‘use it now’.”\n“print() shows the answer on the screen.”\n“Python runs a program from top to bottom, one line at a time.”\n\n\n\nNow run it on the classroom computer (Thonny, IDLE, or VS Code). Compare the answer with the warm-up guesses.\nWhat the answer means. The CPU type names the family of processor and the instructions it understands:\n\n\n\n\n\n\n\n\nAnswer\nMeaning\nFound in\n\n\n\n\narm64 or aarch64\n64-bit ARM processor\nApple silicon Macs, most phones and tablets, some Chromebooks and Windows laptops\n\n\nx86_64 or AMD64\n64-bit Intel or AMD processor\nMost Windows laptops and desktops, older Macs, most servers\n\n\n\nWindows reports Intel and AMD processors as AMD64 because AMD designed the 64-bit version of this processor family."
+    "text": "Teach: Two Lines of Python (15 min)\nShow this program and read it aloud before running it.\nimport platform\n\nprint(platform.machine())\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\nThink aloud while reading, one line at a time:\n\n“import platform brings in a module: a toolbox of ready-made code that comes with Python. This one can answer questions about the computer.”\n“platform.machine() asks one question: what type of CPU is this? The dot means ‘the machine tool from the platform toolbox’. The parentheses mean ‘use it now’.”\n“print() shows the answer on the screen.”\n“Python runs a program from top to bottom, one line at a time.”\n\n\n\nNow run it on the classroom computer (Thonny, IDLE, or VS Code). Compare the answer with the warm-up guesses.\nWhat the answer means. The CPU type names the family of processor and the instructions it understands:\n\n\n\n\n\n\n\n\nAnswer\nMeaning\nFound in\n\n\n\n\narm64 or aarch64\n64-bit ARM processor\nApple silicon Macs, most phones and tablets, some Chromebooks and Windows laptops\n\n\nx86_64 or AMD64\n64-bit Intel or AMD processor\nMost Windows laptops and desktops, older Macs, most servers\n\n\n\nWindows reports Intel and AMD processors as AMD64 because AMD designed the 64-bit version of this processor family.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 1 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#predict-then-run-15-min",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#predict-then-run-15-min",
     "title": "Lesson 1: Ask the Computer About Itself",
     "section": "Predict, Then Run (15 min)",
-    "text": "Predict, Then Run (15 min)\nRead this program without running it, then answer (students write in their tracing notebooks):\n\nHow many lines will it print?\nWhich words will appear exactly as they are written in the code?\nWhich parts will depend on the computer?\n\nType your prediction in the box. Then press Step to run the program one line at a time, and compare each line of output with your prediction.\n\n\n\n\n\n\nTipTeacher prompt: the step-through box (first use)\n\n\n\nBefore anyone presses Step, explain the colours:\n\n“This box runs the program one line at a time. Nothing has run yet.”\n“The red arrow on a yellow line marks the next line Python will run. It hasn’t run yet.”\n“When I press Step, that line runs and turns green. Green means just ran. The arrow moves to the next line.”\n“Anything the program prints appears in the Output box the moment its line turns green. Your prediction stays above it, so you can compare.”\n“Back replays a step. Run all jumps to the end. Start over resets everything.”\n\nThen: “Write your prediction first. No pressing Step until you’ve committed.”\n\n\nimport platform\n\nprint(\"CPU type:\", platform.machine())\nprint(\"Operating system:\", platform.system())\nprint(\"Computer name:\", platform.node())\nNow run the same program on the classroom computer (Thonny, IDLE, or VS Code). Which lines of output are the same as on this page? Which are different?"
+    "text": "Predict, Then Run (15 min)\nRead this program without running it, then answer (students write in their tracing notebooks):\n\nHow many lines will it print?\nWhich words will appear exactly as they are written in the code?\nWhich parts will depend on the computer?\n\nType your prediction in the box. Then press Step to run the program one line at a time, and compare each line of output with your prediction.\n\n\n\n\n\n\nTipTeacher prompt: the step-through box (first use)\n\n\n\nBefore anyone presses Step, explain the colours:\n\n“This box runs the program one line at a time. Nothing has run yet.”\n“The red arrow on a yellow line marks the next line Python will run. It hasn’t run yet.”\n“When I press Step, that line runs and turns green. Green means just ran. The arrow moves to the next line.”\n“Anything the program prints appears in the Output box the moment its line turns green. Your prediction stays above it, so you can compare.”\n“Back replays a step. Run all jumps to the end. Start over resets everything.”\n\nThen: “Write your prediction first. No pressing Step until you’ve committed.”\n\n\nimport platform\n\nprint(\"CPU type:\", platform.machine())\nprint(\"Operating system:\", platform.system())\nprint(\"Computer name:\", platform.node())\nNow run the same program on the classroom computer (Thonny, IDLE, or VS Code). Which lines of output are the same as on this page? Which are different?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 1 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#investigate-where-does-my-code-run-10-min",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#investigate-where-does-my-code-run-10-min",
     "title": "Lesson 1: Ask the Computer About Itself",
     "section": "Investigate: Where Does My Code Run? (10 min)",
-    "text": "Investigate: Where Does My Code Run? (10 min)\nThe same four lines give different answers depending on where they run. Students copy this table into their tracing notebooks and fill it in. Add the Colab column only if you demonstrate Colab.\n\n\n\n\n\n\n\n\n\n\nClassroom computer (Thonny, IDLE, or VS Code)\nThis web page\nGoogle Colab (optional teacher demo)\n\n\n\n\nCPU type\n\n\n\n\n\nOperating system\n\n\n\n\n\nComputer name\n\n\n\n\n\n\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\n“Every column came from exactly the same four lines of code. So the code didn’t change. What did change?” Let students answer before naming it: the computer the code ran on.\n\n\nThen discuss:\n\nWhy does this web page report wasm32 and Emscripten? Is that the classroom computer?\nIn which place does the program run on the computer in front of you?\n(If you showed Colab) Where is the computer that Colab describes? Who owns it?"
+    "text": "Investigate: Where Does My Code Run? (10 min)\nThe same four lines give different answers depending on where they run. Students copy this table into their tracing notebooks and fill it in. Add the Colab column only if you demonstrate Colab.\n\n\n\n\n\n\n\n\n\n\nClassroom computer (Thonny, IDLE, or VS Code)\nThis web page\nGoogle Colab (optional teacher demo)\n\n\n\n\nCPU type\n\n\n\n\n\nOperating system\n\n\n\n\n\nComputer name\n\n\n\n\n\n\n\n\n\n\n\n\nTipTeacher prompt\n\n\n\n“Every column came from exactly the same four lines of code. So the code didn’t change. What did change?” Let students answer before naming it: the computer the code ran on.\n\n\nThen discuss:\n\nWhy does this web page report wasm32 and Emscripten? Is that the classroom computer?\nIn which place does the program run on the computer in front of you?\n(If you showed Colab) Where is the computer that Colab describes? Who owns it?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 1 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#modify-15-min",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#modify-15-min",
     "title": "Lesson 1: Ask the Computer About Itself",
     "section": "Modify (15 min)",
-    "text": "Modify (15 min)\nChange the program, predict the output, then run it.\n\nChange the labels: for example, \"Processor:\" instead of \"CPU type:\".\nAdd a line that prints the Python version using platform.python_version().\nSwap the order of two print() lines. What changes in the output? What stays the same?"
+    "text": "Modify (15 min)\nChange the program, predict the output, then run it.\n\nChange the labels: for example, \"Processor:\" instead of \"CPU type:\".\nAdd a line that prints the Python version using platform.python_version().\nSwap the order of two print() lines. What changes in the output? What stays the same?",
+    "crumbs": [
+      "For teachers",
+      "Lesson 1 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#make-10-min",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#make-10-min",
     "title": "Lesson 1: Ask the Computer About Itself",
     "section": "Make (10 min)",
-    "text": "Make (10 min)\nOn the classroom computer (Thonny, IDLE, or VS Code), write a two-line program (plus the import) that prints the operating system and its version number, using platform.system() and platform.release(). Students who finish early can add a third labelled fact. They save it as os_report.py in ics3u/module-01/lesson-01/ (see Set Up Your Course Folder)."
+    "text": "Make (10 min)\nOn the classroom computer (Thonny, IDLE, or VS Code), write a two-line program (plus the import) that prints the operating system and its version number, using platform.system() and platform.release(). Students who finish early can add a third labelled fact. They save it as os_report.py in ics3u/module-01/lesson-01/ (see Set Up Your Course Folder).",
+    "crumbs": [
+      "For teachers",
+      "Lesson 1 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#check-exit-ticket-5-min",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#check-exit-ticket-5-min",
     "title": "Lesson 1: Ask the Computer About Itself",
     "section": "Check: Exit Ticket (5 min)",
-    "text": "Check: Exit Ticket (5 min)\nWhat would the output be if this program were run on a Windows laptop with an Intel processor? Write the exact output.\nimport platform\n\nprint(\"Report\")\nprint(\"CPU:\", platform.machine())"
+    "text": "Check: Exit Ticket (5 min)\nWhat would the output be if this program were run on a Windows laptop with an Intel processor? Write the exact output.\nimport platform\n\nprint(\"Report\")\nprint(\"CPU:\", platform.machine())",
+    "crumbs": [
+      "For teachers",
+      "Lesson 1 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#after-the-lesson",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#after-the-lesson",
     "title": "Lesson 1: Ask the Computer About Itself",
     "section": "After the Lesson",
-    "text": "After the Lesson\n\nStudents do the Lesson 1 practice: read and predict, modify, then make a three-fact report on the classroom computer.\nSuggested hand-in: the Make program’s .py file, with the Read and predict answers in a comment at the top and its output pasted as a comment at the bottom.\nRead the exit tickets. If many students mixed up the fixed text and the computer’s answers, start Lesson 2’s review there."
+    "text": "After the Lesson\n\nStudents do the Lesson 1 practice: read and predict, modify, then make a three-fact report on the classroom computer.\nSuggested hand-in: the Make program’s .py file, with the Read and predict answers in a comment at the top and its output pasted as a comment at the bottom.\nRead the exit tickets. If many students mixed up the fixed text and the computer’s answers, start Lesson 2’s review there.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 1 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#code-for-this-lesson",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#code-for-this-lesson",
     "title": "Lesson 1: Ask the Computer About Itself",
     "section": "Code for This Lesson",
-    "text": "Code for This Lesson\nEvery program in this lesson, ready to run outside the browser. Download the .py file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nComputer report\nl01_computer_report.py\nView or download\nCallysto | Colab\n\n\nCPU type\nl01_cpu_type.py\nView or download\nCallysto | Colab\n\n\nExit ticket\nl01_exit_ticket.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl01_practice_read.py\nView or download\nCallysto | Colab"
+    "text": "Code for This Lesson\nEvery program in this lesson, ready to run outside the browser. Download the .py file to open it in Thonny, IDLE, or VS Code, or open the notebook version in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nComputer report\nl01_computer_report.py\nView or download\nCallysto | Colab\n\n\nCPU type\nl01_cpu_type.py\nView or download\nCallysto | Colab\n\n\nExit ticket\nl01_exit_ticket.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl01_practice_read.py\nView or download\nCallysto | Colab",
+    "crumbs": [
+      "For teachers",
+      "Lesson 1 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#teacher-notes",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#teacher-notes",
     "title": "Lesson 1: Ask the Computer About Itself",
     "section": "Teacher Notes",
-    "text": "Teacher Notes\n\nWhy platform only. Every platform function follows one pattern (platform.something() gives back text), is safe to experiment with, and answers a question students care about. Other modules (os for cores, shutil for storage) come later, one at a time.\nmachine(), not processor(). platform.processor() is unreliable: it returns a long description on Windows, arm on Apple silicon, and often nothing on Linux or in the browser.\nThree places, three computers.\n\nClassroom computer: the real hardware, e.g. arm64 / Darwin (macOS) or AMD64 / Windows. macOS reports itself as “Darwin”, the name of its core.\nThis web page: Python runs inside the browser (Pyodide, WebAssembly). It reports wasm32, Emscripten, and emscripten: a small virtual computer that exists only inside the browser tab, though it still uses the classroom computer’s processor underneath.\nGoogle Colab: the code runs on a Google server in a data centre. It typically reports x86_64, Linux, and a random-looking machine name. Check by running the program in Colab before class.\n\nColab access. Many school boards disable Colab for student accounts, so plan it as a teacher demonstration. For setting up classroom computers, see Before You Begin.\nPredict, then run. The step-through box keeps the prediction next to the real output. Encourage students to commit to a prediction before pressing Step; the Back button lets them replay any line.\nFirst load. The step-through box and the runnable boxes download Python into the browser the first time (about 10 MB), which can take a few seconds.\nSlides. Open the slides on the projector and this plan on your own screen. Press S in the slides to open speaker view, which shows the teacher prompts and timings.\nSpiral. Students meet import, function calls, and comma-separated print() items through reading today. Variables come in Lesson 2.\nAnswers are in the answer-keys folder of the course’s GitHub repository, not on this site."
+    "text": "Teacher Notes\n\nWhy platform only. Every platform function follows one pattern (platform.something() gives back text), is safe to experiment with, and answers a question students care about. Other modules (os for cores, shutil for storage) come later, one at a time.\nmachine(), not processor(). platform.processor() is unreliable: it returns a long description on Windows, arm on Apple silicon, and often nothing on Linux or in the browser.\nThree places, three computers.\n\nClassroom computer: the real hardware, e.g. arm64 / Darwin (macOS) or AMD64 / Windows. macOS reports itself as “Darwin”, the name of its core.\nThis web page: Python runs inside the browser (Pyodide, WebAssembly). It reports wasm32, Emscripten, and emscripten: a small virtual computer that exists only inside the browser tab, though it still uses the classroom computer’s processor underneath.\nGoogle Colab: the code runs on a Google server in a data centre. It typically reports x86_64, Linux, and a random-looking machine name. Check by running the program in Colab before class.\n\nColab access. Many school boards disable Colab for student accounts, so plan it as a teacher demonstration. For setting up classroom computers, see Before You Begin.\nPredict, then run. The step-through box keeps the prediction next to the real output. Encourage students to commit to a prediction before pressing Step; the Back button lets them replay any line.\nFirst load. The step-through box and the runnable boxes download Python into the browser the first time (about 10 MB), which can take a few seconds.\nSlides. Open the slides on the projector and this plan on your own screen. Press S in the slides to open speaker view, which shows the teacher prompts and timings.\nSpiral. Students meet import, function calls, and comma-separated print() items through reading today. Variables come in Lesson 2.\nAnswers are in the answer-keys folder of the course’s GitHub repository, not on this site.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 1 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#previous-and-next",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#previous-and-next",
     "title": "Lesson 1: Ask the Computer About Itself",
     "section": "Previous and Next",
-    "text": "Previous and Next\n← Module 1 overview · Lesson 1 slides · Lesson 2 →"
+    "text": "Previous and Next\n← Module 1 overview · Lesson 1 slides · Lesson 2 →",
+    "crumbs": [
+      "For teachers",
+      "Lesson 1 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#feedback",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer.html#feedback",
     "title": "Lesson 1: Ask the Computer About Itself",
     "section": "Feedback",
-    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response."
+    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response.",
+    "crumbs": [
+      "For teachers",
+      "Lesson 1 plan"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/index.html",
     "href": "modules/module-01-about-this-computer/index.html",
     "title": "Module 1: About This Computer",
     "section": "",
-    "text": "The big idea: students ask the computer about itself. They start with one line of Python that prints the processor type and build up to a labelled report stored in variables. Along the way they learn to read, predict, and trace code, use a module’s tools, and read error messages. They also discover that a program reports on whatever computer it actually runs on.\nExpectations: A1.1, A2.1, A2.2, A3.1, A4.2, A4.3, A4.4, C1.1, C1.4, C2.1, C3.1, C3.3, C3.4, C3.5 (across the whole module)"
+    "text": "The big idea: students ask the computer about itself. They start with one line of Python that prints the processor type and build up to a labelled report stored in variables. Along the way they learn to read, predict, and trace code, use a module’s tools, and read error messages. They also discover that a program reports on whatever computer it actually runs on.\nExpectations: A1.1, A2.1, A2.2, A3.1, A4.2, A4.3, A4.4, C1.1, C1.4, C2.1, C3.1, C3.3, C3.4, C3.5 (across the whole module)",
+    "crumbs": [
+      "Module 1 overview"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/index.html#lessons",
     "href": "modules/module-01-about-this-computer/index.html#lessons",
     "title": "Module 1: About This Computer",
     "section": "Lessons",
-    "text": "Lessons\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n\n\nPlanned lessons\n\n\n\n\n\n\nPlanned, not yet written. Titles and focus may change as lessons are built.\n\n\n\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n3. Getting Output Right\nprint() in depth: several arguments, sep and end, \\n and \\t, quotes inside strings, commas vs. +, common mistakes\nA system info banner\n\n\n4. Better Reports with f-strings\nf-strings; comments; naming conventions (A4.2)\nTurn the Lesson 2 report into a tidy, aligned report card\n\n\n5. Values and Types\nstr, int, float, type(); simple arithmetic; why \"8\" + \"8\" is \"88\" (A1.1)\nPull numbers out of the Python version and do arithmetic with them\n\n\n6. Where Do My Programs Live?\nFiles, folders, and paths; organizing a course folder on local and shared drives; the parts of the editor (C2.1, C3.1); first run of the sample folder generator; reading a two-line program that prints the current folder\nExplain the course folder students set up on day one, then add the toolkit folder; run the same file from the editor and the terminal\n\n\n7. What Python Actually Runs\nSource code vs. machine code; interpreters vs. compilers; bytecode with dis; applications vs. languages vs. operating systems (C3.3, C3.4, C3.5)\nMatch dis output to lines of code; sort running programs into apps, languages, and OS parts\n\n\n8. Inside the Computer: RAM and CPU\nWhere variables live and where arithmetic happens; sys.getsizeof() and id() (C1.1, C1.4)\nTrace a program and label each line “RAM” or “CPU”\n\n\n9. Talking Back with input()\nReading a program that greets the user by name and gives a hardware summary (A2.1)\nModify the greeter’s questions and messages\n\n\n10. A First Look at Decisions and Loops\nReading a simple if (e.g., “if this is Windows…”) and a for loop over a list of facts\nPredict the output on three different operating systems\n\n\n11. Error Clinic and Review\nSyntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4)\nFix five broken report programs\n\n\n12. Module 1 test\nCode reading and tracing; a short basics section\n\n\n\n\nEach lesson plan’s Code for This Lesson section has the .py files and notebooks. Students find the same files at the end of each lesson’s section on the Practice page."
+    "text": "Lessons\n\n\n\nLesson\nFor teachers\nFor the class\nFor students\n\n\n\n\n1. Ask the Computer About Itself\nLesson plan\nSlides\nPractice\n\n\n2. Exploring the platform Library\nLesson plan\nSlides\nPractice\n\n\n\n\nPlanned lessons\n\n\n\n\n\n\nPlanned, not yet written. Titles and focus may change as lessons are built.\n\n\n\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n3. Getting Output Right\nprint() in depth: several arguments, sep and end, \\n and \\t, quotes inside strings, commas vs. +, common mistakes\nMake: the System Banner Quick Build\n\n\n4. Better Reports with f-strings\nf-strings; comments; naming conventions (A4.2)\nTurn the Lesson 2 report into a tidy, aligned report card\n\n\n5. Values and Types\nstr, int, float, type(); simple arithmetic; why \"8\" + \"8\" is \"88\"; reading a program that pulls numbers out of the Python version (A1.1)\nMake: the Parts Receipt Quick Build\n\n\n6. Where Do My Programs Live?\nFiles, folders, and paths; organizing a course folder on local and shared drives; the parts of the editor (C2.1, C3.1); first run of the sample folder generator; reading a two-line program that prints the current folder\nExplain the course folder students set up on day one, then add the toolkit folder; run the same file from the editor and the terminal\n\n\n7. What Python Actually Runs\nSource code vs. machine code; interpreters vs. compilers; bytecode with dis; applications vs. languages vs. operating systems (C3.3, C3.4, C3.5)\nMatch dis output to lines of code; sort running programs into apps, languages, and OS parts\n\n\n8. Inside the Computer: RAM and CPU\nWhere variables live and where arithmetic happens; sys.getsizeof() and id() (C1.1, C1.4)\nTrace a program and label each line “RAM” or “CPU”\n\n\n9. Talking Back, and a First Look Ahead\nReading a program that greets the user by name with input() and gives a hardware summary (A2.1); then reading a simple if (“if this is Windows…”) and a for loop over a list of facts\nModify the greeter; predict the if program’s output on three operating systems\n\n\n10. Error Clinic\nSyntax and run-time errors; reading a traceback from the bottom up (A4.3, A4.4)\nFix five broken report programs\n\n\n11. Review and assignment work period\nA short review game on Lessons 1–10, then class time for the assignment\nFinish the Computer Report Card\n\n\n12. Module 1 test\nCode reading and tracing; a short basics section\n\n\n\n\nEach lesson plan’s Code for This Lesson section has the .py files and notebooks. Students find the same files at the end of each lesson’s section on the Practice page.",
+    "crumbs": [
+      "Module 1 overview"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/index.html#assignment",
     "href": "modules/module-01-about-this-computer/index.html#assignment",
     "title": "Module 1: About This Computer",
     "section": "Assignment",
-    "text": "Assignment\nComputer Report Card (ready for Lessons 1–2; will grow with the module). Students read and trace a short program, write a report card using five platform functions stored in variables, then run it in two places and explain the difference. Students hand in one .py file built from a starter file.\nPlanned additions: an f-string version of the report, a short input() greeting, and a written part explaining what happens inside the computer when the report runs (RAM, CPU, interpreter).\nAdds to the toolkit: report_card.py, the first file in the student’s My Computer Toolkit folder, which grows in every module (see the toolkit thread)."
+    "text": "Assignment\nComputer Report Card (ready for Lessons 1–2; will grow with the module). Students read and trace a short program, write a report card using five platform functions stored in variables, then run it in two places and explain the difference. Students hand in one .py file built from a starter file.\nPlanned additions: an f-string version of the report, a short input() greeting, and a written part explaining what happens inside the computer when the report runs (RAM, CPU, interpreter).\nAdds to the toolkit: report_card.py, the first file in the student’s My Computer Toolkit folder, which grows in every module (see the toolkit thread).",
+    "crumbs": [
+      "Module 1 overview"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/index.html#practising-the-basics-planned",
     "href": "modules/module-01-about-this-computer/index.html#practising-the-basics-planned",
     "title": "Module 1: About This Computer",
     "section": "Practising the Basics (Planned)",
-    "text": "Practising the Basics (Planned)\n\nSkill Builder: short drills on print() arguments, sep and end, escape characters, quotes, variables, types, f-strings, and reading a traceback. Each drill set opens with predict-the-output and fix-the-error questions.\nQuick Builds (small graded programs, before the assignment):\n\nSystem Banner: a boxed title banner for the computer, with exact spacing.\nParts Receipt: a receipt for computer parts, with prices, HST, and a total in aligned columns."
+    "text": "Practising the Basics (Planned)\n\nSkill Builder: short drills on print() arguments, sep and end, escape characters, quotes, variables, types, f-strings, and reading a traceback. Each drill set opens with predict-the-output and fix-the-error questions.\nQuick Builds (small graded programs; each is the Make product of a lesson, so it needs no extra period):\n\nSystem Banner (Lesson 3): a boxed title banner for the computer, with exact spacing.\nParts Receipt (Lesson 5): a receipt for computer parts, with prices, HST, and a total in aligned columns.\n\n\nUntil the Skill Builder is ready, use the Practice page and the exit tickets for retrieval practice.",
+    "crumbs": [
+      "Module 1 overview"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/index.html#how-module-1-fits",
     "href": "modules/module-01-about-this-computer/index.html#how-module-1-fits",
     "title": "Module 1: About This Computer",
     "section": "How Module 1 Fits",
-    "text": "How Module 1 Fits\n\nBefore: nothing. This is the first module; students need no programming experience.\nPlanned for the rest of the module: see Planned lessons above, and the Scope and Sequence.\nNext: Module 2, Spec Checker, adds os and shutil to check whether a computer meets a program’s requirements.\n\nNew to the course? Read How a Lesson Works first."
+    "text": "How Module 1 Fits\n\nBefore: nothing. This is the first module; students need no programming experience.\nPlanned for the rest of the module: see Planned lessons above, and the Scope and Sequence.\nNext: Module 2, Spec Checker, adds os and shutil to check whether a computer meets a program’s requirements.\nStudents set up first: their course folder, before Lesson 1’s Make.\n\nNew to the course? Read How a Lesson Works first.",
+    "crumbs": [
+      "Module 1 overview"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/index.html#previous-and-next",
     "href": "modules/module-01-about-this-computer/index.html#previous-and-next",
     "title": "Module 1: About This Computer",
     "section": "Previous and Next",
-    "text": "Previous and Next\n← How a Lesson Works · Lesson 1 plan →"
+    "text": "Previous and Next\n← Scope and Sequence · Lesson 1 plan → · Module 2 →",
+    "crumbs": [
+      "Module 1 overview"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/index.html#feedback",
     "href": "modules/module-01-about-this-computer/index.html#feedback",
     "title": "Module 1: About This Computer",
     "section": "Feedback",
-    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response."
+    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response.",
+    "crumbs": [
+      "Module 1 overview"
+    ]
   },
   {
     "objectID": "modules/computer-science-in-the-world/index.html",
@@ -544,6 +721,20 @@
     "title": "Computer Science in the World",
     "section": "Research Report (Planned)",
     "text": "Research Report (Planned)\nStudents research one emerging area of computer science (for example, artificial intelligence, computer vision, cryptography, robotics, or human–computer interaction) and its link to another field. It is submitted in stages: topic and sources, notes and outline, then a final report in a format of the student’s choice (website, slide presentation, or video). Where possible, students connect the topic to the kind of computer and network they have studied in the course."
+  },
+  {
+    "objectID": "modules/computer-science-in-the-world/index.html#how-it-fits",
+    "href": "modules/computer-science-in-the-world/index.html#how-it-fits",
+    "title": "Computer Science in the World",
+    "section": "How It Fits",
+    "text": "How It Fits\nEach lesson goes in the gap after a module, and each module’s overview points to it under Then:\n\nAfter Module 2: Who Builds Computers?\nAfter Module 3: Faster Than One Computer\nAfter Module 4: Security as a Career\nAfter Module 5: Computer Science + Another Field\nAfter Module 6: Where Next?\n\nThe five lessons take about 5 hours; the sixth hour is for research report presentations, which start in Where Next?"
+  },
+  {
+    "objectID": "modules/computer-science-in-the-world/index.html#previous-and-next",
+    "href": "modules/computer-science-in-the-world/index.html#previous-and-next",
+    "title": "Computer Science in the World",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Module 7 · Scope and Sequence"
   },
   {
     "objectID": "modules/computer-science-in-the-world/index.html#feedback",
@@ -581,6 +772,13 @@
     "text": "Formats\nPractice and assignments live on this site because they’re interactive: students predict, step through, and run code right on the page. Downloadable versions (Google Docs, Word, or PDF) may be added later for printing or for a learning management system."
   },
   {
+    "objectID": "how-a-lesson-works.html#previous-and-next",
+    "href": "how-a-lesson-works.html#previous-and-next",
+    "title": "How a Lesson Works",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Before You Begin · Scope and Sequence →"
+  },
+  {
     "objectID": "how-a-lesson-works.html#feedback",
     "href": "how-a-lesson-works.html#feedback",
     "title": "How a Lesson Works",
@@ -592,7 +790,7 @@
     "href": "before-you-begin.html",
     "title": "Before You Begin",
     "section": "",
-    "text": "Expectations: C3.1 (software development environment), D1.4 (organizations that refurbish computers)\nThis course asks the computer about itself. The first program students read reports the CPU type, the operating system, and the computer’s name. Later modules measure the disk, time the processor, test the network, run a small web server, and build, scan, and back up folders of files. All of this only means something when the code runs on the computer in front of the student.\nGet Python working before Lesson 1, both on your own demonstration computer and on the computers your students will use."
+    "text": "This course asks the computer about itself. The first program students read reports the CPU type, the operating system, and the computer’s name. Later modules measure the disk, time the processor, test the network, run a small web server, and build, scan, and back up folders of files. All of this only means something when the code runs on the computer in front of the student.\nGet Python working before Lesson 1, both on your own demonstration computer and on the computers your students will use."
   },
   {
     "objectID": "before-you-begin.html#what-students-programs-need",
@@ -628,6 +826,13 @@
     "title": "Before You Begin",
     "section": "Checklist Before Lesson 1",
     "text": "Checklist Before Lesson 1\n\nPython 3 and an editor are installed on your demonstration computer, and it works with the projector.\nEvery student has a computer that runs Python locally (refurbished computer, opened-up lab computer, Raspberry Pi, or a similar device).\nYou’ve checked those computers against What Students’ Programs Need, or talked to IT about the rows that are blocked.\nYou’ve run l01_computer_report.py on both your computer and a student computer, and noted what each reports.\nYou’ve decided how students will hand in work and name their files (see Handing In Work), and students know to follow Set Up Your Course Folder.\nEvery student has a paper tracing notebook for predictions and trace tables.\nThe lesson pages load on student computers. The runnable boxes download about 10 MB the first time.\nYou know whether Colab or the Callysto Hub works for your students’ accounts, in case you need a backup.\n\nWhen you’re ready, start with Module 1, Lesson 1."
+  },
+  {
+    "objectID": "before-you-begin.html#previous-and-next",
+    "href": "before-you-begin.html#previous-and-next",
+    "title": "Before You Begin",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Home · How a Lesson Works →"
   },
   {
     "objectID": "about.html",
@@ -704,56 +909,99 @@
     "href": "course-folder.html",
     "title": "Set Up Your Course Folder",
     "section": "",
-    "text": "For students. This takes about five minutes. You’ll use this folder every day for the whole course."
+    "text": "For students. This takes about five minutes. You’ll use this folder every day for the whole course.",
+    "crumbs": [
+      "For students",
+      "Set Up Your Course Folder"
+    ]
   },
   {
     "objectID": "course-folder.html#why-you-need-it",
     "href": "course-folder.html#why-you-need-it",
     "title": "Set Up Your Course Folder",
     "section": "Why You Need It",
-    "text": "Why You Need It\nEvery lesson gives you programs to download and asks you to write your own. You’ll keep improving some of them all year (your toolkit), and you’ll hand some of them in. If they’re scattered across Downloads and the Desktop, you’ll lose them. One folder, organized the same way every time, means you can always find your work."
+    "text": "Why You Need It\nEvery lesson gives you programs to download and asks you to write your own. You’ll keep improving some of them all year (your toolkit), and you’ll hand some of them in. If they’re scattered across Downloads and the Desktop, you’ll lose them. One folder, organized the same way every time, means you can always find your work.",
+    "crumbs": [
+      "For students",
+      "Set Up Your Course Folder"
+    ]
   },
   {
     "objectID": "course-folder.html#where-to-put-it",
     "href": "course-folder.html#where-to-put-it",
     "title": "Set Up Your Course Folder",
     "section": "Where to Put It",
-    "text": "Where to Put It\nMake a folder called ics3u in your home folder:\n\n\n\nComputer\nYour course folder\n\n\n\n\nWindows\nC:\\Users\\yourname\\ics3u\n\n\nmacOS\n/Users/yourname/ics3u\n\n\nLinux or Raspberry Pi\n/home/yourname/ics3u\n\n\n\nNot on the Desktop, and not in Downloads. On Windows, also avoid a Documents folder that syncs to OneDrive, unless your teacher says otherwise: later in the course you’ll create hundreds of sample files, and syncing them all is slow.\nTo make it:\n\nWindows: open File Explorer, type %USERPROFILE% in the address bar and press Enter, then right-click and choose New → Folder.\nmacOS: in Finder, choose Go → Home, then File → New Folder.\nLinux or Raspberry Pi: in the Files app, open Home and create a new folder."
+    "text": "Where to Put It\nMake a folder called ics3u in your home folder:\n\n\n\nComputer\nYour course folder\n\n\n\n\nWindows\nC:\\Users\\yourname\\ics3u\n\n\nmacOS\n/Users/yourname/ics3u\n\n\nLinux or Raspberry Pi\n/home/yourname/ics3u\n\n\n\nNot on the Desktop, and not in Downloads. On Windows, also avoid a Documents folder that syncs to OneDrive, unless your teacher says otherwise: later in the course you’ll create hundreds of sample files, and syncing them all is slow.\nTo make it:\n\nWindows: open File Explorer, type %USERPROFILE% in the address bar and press Enter, then right-click and choose New → Folder.\nmacOS: in Finder, choose Go → Home, then File → New Folder.\nLinux or Raspberry Pi: in the Files app, open Home and create a new folder.",
+    "crumbs": [
+      "For students",
+      "Set Up Your Course Folder"
+    ]
   },
   {
     "objectID": "course-folder.html#how-to-organize-it",
     "href": "course-folder.html#how-to-organize-it",
     "title": "Set Up Your Course Folder",
     "section": "How to Organize It",
-    "text": "How to Organize It\nMake the first module’s folders now, and add the rest as you reach each module:\nics3u/\n├── module-01/\n│   ├── lesson-01/        ← lesson downloads and the programs you write\n│   ├── lesson-02/\n│   └── assignment/       ← starter file and your finished work\n├── module-02/\n├── toolkit/              ← My Computer Toolkit: programs you keep improving all year\n├── sample-folder/        ← Module 6: built by a course tool; safe to delete and rebuild\n└── backups/              ← Module 6: your backups"
+    "text": "How to Organize It\nMake the first module’s folders now, and add the rest as you reach each module:\nics3u/\n├── module-01/\n│   ├── lesson-01/        ← lesson downloads and the programs you write\n│   ├── lesson-02/\n│   └── assignment/       ← starter file and your finished work\n├── module-02/\n├── toolkit/              ← My Computer Toolkit: programs you keep improving all year\n├── sample-folder/        ← Module 6: built by a course tool; safe to delete and rebuild\n└── backups/              ← Module 6: your backups",
+    "crumbs": [
+      "For students",
+      "Set Up Your Course Folder"
+    ]
   },
   {
     "objectID": "course-folder.html#naming-rules",
     "href": "course-folder.html#naming-rules",
     "title": "Set Up Your Course Folder",
     "section": "Naming Rules",
-    "text": "Naming Rules\n\nLowercase, no spaces. Spaces and capitals cause problems in the terminal and in code.\nFolders use dashes: module-01, lesson-02.\nPython files use underscores: report_card.py, not report-card.py or Report Card.py. From Module 4 on, your programs will import each other, and Python can’t import a file name with a dash or a space.\nHand-in files: name them the way your teacher asks, for example lastname_m01_report_card.py."
+    "text": "Naming Rules\n\nLowercase, no spaces. Spaces and capitals cause problems in the terminal and in code.\nFolders use dashes: module-01, lesson-02.\nPython files use underscores: report_card.py, not report-card.py or Report Card.py. From Module 4 on, your programs will import each other, and Python can’t import a file name with a dash or a space.\nHand-in files: name them the way your teacher asks, for example lastname_m01_report_card.py.",
+    "crumbs": [
+      "For students",
+      "Set Up Your Course Folder"
+    ]
   },
   {
     "objectID": "course-folder.html#saving-downloads",
     "href": "course-folder.html#saving-downloads",
     "title": "Set Up Your Course Folder",
     "section": "Saving Downloads",
-    "text": "Saving Downloads\nWhen you download a lesson’s .py file, it lands in Downloads. Move it into the right lesson folder straight away, or right-click the link and choose Save Link As… to save it there directly. When you write a new program in Thonny, IDLE, or VS Code, choose Save As and pick the lesson folder."
+    "text": "Saving Downloads\nWhen you download a lesson’s .py file, it lands in Downloads. Move it into the right lesson folder straight away, or right-click the link and choose Save Link As… to save it there directly. When you write a new program in Thonny, IDLE, or VS Code, choose Save As and pick the lesson folder.",
+    "crumbs": [
+      "For students",
+      "Set Up Your Course Folder"
+    ]
   },
   {
     "objectID": "course-folder.html#back-it-up",
     "href": "course-folder.html#back-it-up",
     "title": "Set Up Your Course Folder",
     "section": "Back It Up",
-    "text": "Back It Up\nOnce a week, copy your whole ics3u folder to a USB key or a cloud drive. A lost or broken computer shouldn’t cost you a semester of work. In Module 6 you’ll write a program that does this for you.\nYou’ll learn more about files, folders, and paths in Module 1, Lesson 6. For now, a tidy folder is enough."
+    "text": "Back It Up\nOnce a week, copy your whole ics3u folder to a USB key or a cloud drive. A lost or broken computer shouldn’t cost you a semester of work. In Module 6 you’ll write a program that does this for you.\nYou’ll learn more about files, folders, and paths in Module 1, Lesson 6. For now, a tidy folder is enough.",
+    "crumbs": [
+      "For students",
+      "Set Up Your Course Folder"
+    ]
+  },
+  {
+    "objectID": "course-folder.html#previous-and-next",
+    "href": "course-folder.html#previous-and-next",
+    "title": "Set Up Your Course Folder",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Scope and Sequence · Module 1 →",
+    "crumbs": [
+      "For students",
+      "Set Up Your Course Folder"
+    ]
   },
   {
     "objectID": "course-folder.html#feedback",
     "href": "course-folder.html#feedback",
     "title": "Set Up Your Course Folder",
     "section": "Feedback",
-    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response."
+    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response.",
+    "crumbs": [
+      "For students",
+      "Set Up Your Course Folder"
+    ]
   },
   {
     "objectID": "index.html",
@@ -774,217 +1022,363 @@
     "href": "modules/module-01-about-this-computer/assignment.html",
     "title": "Module 1 Assignment: Computer Report Card",
     "section": "",
-    "text": "For students. Covers Lessons 1–2. Work on your classroom computer (Thonny, IDLE, or VS Code). Hand in: one .py file. Start from the starter file: it has spaces for your Part A and Part C answers, and a place for your Part B program. Save it in ics3u/module-01/assignment/ in your course folder. · Module 1 overview"
+    "text": "For students. Covers Lessons 1–2. Work on your classroom computer (Thonny, IDLE, or VS Code). Download the starter file: this one file is your whole assignment. Save it as report_card.py in ics3u/module-01/assignment/ in your course folder, answer Parts A and C in its comments, write your Part B program in it, and hand it in. When it works, copy it into ics3u/toolkit/: it’s the first program in your toolkit. · Module 1 overview",
+    "crumbs": [
+      "For students",
+      "Assignment: Computer Report Card"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/assignment.html#part-a-read",
     "href": "modules/module-01-about-this-computer/assignment.html#part-a-read",
     "title": "Module 1 Assignment: Computer Report Card",
     "section": "Part A: Read",
-    "text": "Part A: Read\nRead this program without running it, then answer the questions in Part A of your starter file (the comments near the top). Use the line numbers shown.\nimport platform\n\nname = platform.node()\ncpu = platform.machine()\nprint(\"Report card for\", name)\nprint(\"CPU:\", cpu)\ncpu = \"unknown\"\nprint(\"Checked:\", cpu)\n\nHow many lines will it print?\nFill in a trace table. Every line that runs gets a row; blank lines don’t. Line 1 is filled in for you.\n\n\n\nLine\nname\ncpu\nOutput\n\n\n\n\n1\n—\n—\n—\n\n\n3\n\n\n\n\n\n4\n\n\n\n\n\n5\n\n\n\n\n\n6\n\n\n\n\n\n7\n\n\n\n\n\n8\n\n\n\n\n\n\nWhat does the last line print? Explain why.\nHow many times does the program ask the computer for its CPU type?"
+    "text": "Part A: Read\nRead this program without running it, then answer the questions in Part A of your starter file (the comments near the top). Use the line numbers shown.\nimport platform\n\nname = platform.node()\ncpu = platform.machine()\nprint(\"Report card for\", name)\nprint(\"CPU:\", cpu)\ncpu = \"unknown\"\nprint(\"Checked:\", cpu)\n\nHow many lines will it print?\nFill in a trace table. Every line that runs gets a row; blank lines don’t. Line 1 is filled in for you.\n\n\n\nLine\nname\ncpu\nOutput\n\n\n\n\n1\n—\n—\n—\n\n\n3\n\n\n\n\n\n4\n\n\n\n\n\n5\n\n\n\n\n\n6\n\n\n\n\n\n7\n\n\n\n\n\n8\n\n\n\n\n\n\nWhat does the last line print? Explain why.\nHow many times does the program ask the computer for its CPU type?",
+    "crumbs": [
+      "For students",
+      "Assignment: Computer Report Card"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/assignment.html#part-b-write",
     "href": "modules/module-01-about-this-computer/assignment.html#part-b-write",
     "title": "Module 1 Assignment: Computer Report Card",
     "section": "Part B: Write",
-    "text": "Part B: Write\nWrite a program called report_card.py that prints a computer report card for the computer it runs on.\nYour program must:\n\nPrint a title line that includes the computer’s name.\nReport at least five facts, using five different platform functions. At least one must be a function you found yourself with dir(platform) or the documentation.\nStore each answer in a variable with a clear name before printing it.\nPrint each fact with a clear label.\nStart with a comment giving your name, the date, and what the program does.\n\nExample of the style (your facts and labels will be different):\nReport card for LAB-PC-14\nCPU type: AMD64\nOperating system: Windows\n..."
+    "text": "Part B: Write\nIn Part B of report_card.py, write a program that prints a computer report card for the computer it runs on.\nYour program must:\n\nPrint a title line that includes the computer’s name.\nReport at least five facts, using five different platform functions. At least one must be a function you found yourself with dir(platform) or the documentation.\nStore each answer in a variable with a clear name before printing it.\nPrint each fact with a clear label.\nStart with a comment giving your name, the date, and what the program does.\n\nExample of the style (your facts and labels will be different):\nReport card for LAB-PC-14\nCPU type: AMD64\nOperating system: Windows\n...",
+    "crumbs": [
+      "For students",
+      "Assignment: Computer Report Card"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/assignment.html#part-c-run-it-in-two-places",
     "href": "modules/module-01-about-this-computer/assignment.html#part-c-run-it-in-two-places",
     "title": "Module 1 Assignment: Computer Report Card",
     "section": "Part C: Run It in Two Places",
-    "text": "Part C: Run It in Two Places\n\nRun your program on the classroom computer and paste the output into Part C of your starter file.\nPaste the same program into the box below and run it in the browser. The first run downloads Python into the browser (about 10 MB), so it can take a few seconds.\n\n\n\n\n\n\n\n\nAnswer in two or three sentences each, in Part C of your starter file:\n\nWhich facts were the same in both places? Which were different?\nWhy are they different? Where did the program actually run each time?\nName one mistake you made while writing the program, and explain how the error message helped you fix it. If you made none, explain what an AttributeError would tell you."
+    "text": "Part C: Run It in Two Places\n\nRun your program on the classroom computer and paste the output into Part C of your starter file.\nPaste the same program into the box below and run it in the browser. The first run downloads Python into the browser (about 10 MB), so it can take a few seconds.\n\n\n\n\n\n\n\n\nAnswer in two or three sentences each, in Part C of your starter file:\n\nWhich facts were the same in both places? Which were different?\nWhy are they different? Where did the program actually run each time?\nName one mistake you made while writing the program, and explain how the error message helped you fix it. If you made none, explain what an AttributeError would tell you.",
+    "crumbs": [
+      "For students",
+      "Assignment: Computer Report Card"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/assignment.html#success-criteria",
     "href": "modules/module-01-about-this-computer/assignment.html#success-criteria",
     "title": "Module 1 Assignment: Computer Report Card",
     "section": "Success Criteria",
-    "text": "Success Criteria\n\n\n\n\n\n\n\n\n\n\nLevel 1–2\nLevel 3\nLevel 4\n\n\n\n\nKnowledge (Part A)\nSome predictions correct\nTrace table and output correct\nCorrect, with clear explanations of why\n\n\nApplication (Part B)\nRuns, but fewer than five facts or no variables\nFive labelled facts stored in variables\nAlso uses a self-found function well, with very clear names and labels\n\n\nThinking (Part C)\nLists differences\nExplains where the code ran\nExplains clearly, using evidence from both outputs\n\n\nCommunication\nFew comments or unclear labels\nHeader comment; clear labels\nClear, consistent comments, names, and output"
+    "text": "Success Criteria\n\n\n\n\n\n\n\n\n\n\nLevel 1–2\nLevel 3\nLevel 4\n\n\n\n\nKnowledge (Part A)\nSome predictions correct\nTrace table and output correct\nCorrect, with clear explanations of why\n\n\nApplication (Part B)\nRuns, but fewer than five facts or no variables\nFive labelled facts stored in variables\nAlso uses a self-found function well, with very clear names and labels\n\n\nThinking (Part C)\nLists differences\nExplains where the code ran\nExplains clearly, using evidence from both outputs\n\n\nCommunication\nFew comments or unclear labels\nHeader comment; clear labels\nClear, consistent comments, names, and output",
+    "crumbs": [
+      "For students",
+      "Assignment: Computer Report Card"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/assignment.html#previous-and-next",
+    "href": "modules/module-01-about-this-computer/assignment.html#previous-and-next",
+    "title": "Module 1 Assignment: Computer Report Card",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Practice · Module 1 overview",
+    "crumbs": [
+      "For students",
+      "Assignment: Computer Report Card"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/assignment.html#feedback",
     "href": "modules/module-01-about-this-computer/assignment.html#feedback",
     "title": "Module 1 Assignment: Computer Report Card",
     "section": "Feedback",
-    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response."
+    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response.",
+    "crumbs": [
+      "For students",
+      "Assignment: Computer Report Card"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#warm-up",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#warm-up",
     "title": "Ask the Computer About Itself",
     "section": "Warm-up",
-    "text": "Warm-up\nIn your tracing notebook, write your best guesses about this computer:\n\nWhat kind of processor (CPU) does it have?\nWhich operating system does it run?\nWhat is the computer’s name?"
+    "text": "Warm-up\nIn your tracing notebook, write your best guesses about this computer:\n\nWhat kind of processor (CPU) does it have?\nWhich operating system does it run?\nWhat is the computer’s name?",
+    "crumbs": [
+      "For the class",
+      "Lesson 1 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#two-lines-of-python",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#two-lines-of-python",
     "title": "Ask the Computer About Itself",
     "section": "Two lines of Python",
-    "text": "Two lines of Python\nimport platform\n\nprint(platform.machine())\n\n\nimport platform brings in a toolbox of ready-made code\nplatform.machine() asks: what type of CPU is this?\nprint() shows the answer\n\n\n\nRead the program aloud before running it. The dot means “the machine tool from the platform toolbox”; the parentheses mean “use it now”. Then run it on the classroom computer in Thonny, IDLE, or VS Code and compare with the warm-up guesses."
+    "text": "Two lines of Python\nimport platform\n\nprint(platform.machine())\n\n\nimport platform brings in a toolbox of ready-made code\nplatform.machine() asks: what type of CPU is this?\nprint() shows the answer\n\n\n\nRead the program aloud before running it. The dot means “the machine tool from the platform toolbox”; the parentheses mean “use it now”. Then run it on the classroom computer in Thonny, IDLE, or VS Code and compare with the warm-up guesses.",
+    "crumbs": [
+      "For the class",
+      "Lesson 1 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#what-does-the-answer-mean",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#what-does-the-answer-mean",
     "title": "Ask the Computer About Itself",
     "section": "What does the answer mean?",
-    "text": "What does the answer mean?\n\n\n\n\n\n\n\n\nAnswer\nMeaning\nFound in\n\n\n\n\narm64 / aarch64\n64-bit ARM\nApple silicon Macs, phones, tablets\n\n\nx86_64 / AMD64\n64-bit Intel or AMD\nMost Windows PCs, older Macs, servers\n\n\n\n\nWindows reports Intel and AMD processors as AMD64 because AMD designed the 64-bit version of this processor family."
+    "text": "What does the answer mean?\n\n\n\n\n\n\n\n\nAnswer\nMeaning\nFound in\n\n\n\n\narm64 / aarch64\n64-bit ARM\nApple silicon Macs, phones, tablets\n\n\nx86_64 / AMD64\n64-bit Intel or AMD\nMost Windows PCs, older Macs, servers\n\n\n\n\nWindows reports Intel and AMD processors as AMD64 because AMD designed the 64-bit version of this processor family.",
+    "crumbs": [
+      "For the class",
+      "Lesson 1 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#predict-then-run",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#predict-then-run",
     "title": "Ask the Computer About Itself",
     "section": "Predict, then run",
-    "text": "Predict, then run\nimport platform\n\nprint(\"CPU type:\", platform.machine())\nprint(\"Operating system:\", platform.system())\nprint(\"Computer name:\", platform.node())\n\n* Why wasm32 and Emscripten? This box runs Python inside your web browser, using Pyodide, so it describes a small virtual computer in this browser tab. Run the program in Thonny, IDLE, or VS Code to see your computer’s real answers.\n\n\nTEACHER PROMPT (first use of the step-through box): “Nothing has run yet. The red arrow on a yellow line is the NEXT line Python will run. When I press Step, that line runs and turns GREEN — green means just ran. Anything printed appears in Output the moment its line turns green. Back replays a step; Run all jumps to the end; Start over resets.” Then: “Write your prediction first — no pressing Step until you’ve committed.” Ask first: How many lines will it print? Which words appear exactly as written? Which parts depend on the computer? Have students commit to a prediction (type it in the box or write it down), then press Step one line at a time. Afterwards, click once to show the asterisk note explaining the odd answers (wasm32, Emscripten): the box runs Python inside the browser with Pyodide, so it describes a virtual computer in the tab. Then run the same program on the classroom computer and compare."
+    "text": "Predict, then run\nimport platform\n\nprint(\"CPU type:\", platform.machine())\nprint(\"Operating system:\", platform.system())\nprint(\"Computer name:\", platform.node())\n\n* Why wasm32 and Emscripten? This box runs Python inside your web browser, using Pyodide, so it describes a small virtual computer in this browser tab. Run the program in Thonny, IDLE, or VS Code to see your computer’s real answers.\n\n\nTEACHER PROMPT (first use of the step-through box): “Nothing has run yet. The red arrow on a yellow line is the NEXT line Python will run. When I press Step, that line runs and turns GREEN — green means just ran. Anything printed appears in Output the moment its line turns green. Back replays a step; Run all jumps to the end; Start over resets.” Then: “Write your prediction first — no pressing Step until you’ve committed.” Ask first: How many lines will it print? Which words appear exactly as written? Which parts depend on the computer? Have students commit to a prediction (type it in the box or write it down), then press Step one line at a time. Afterwards, click once to show the asterisk note explaining the odd answers (wasm32, Emscripten): the box runs Python inside the browser with Pyodide, so it describes a virtual computer in the tab. Then run the same program on the classroom computer and compare.",
+    "crumbs": [
+      "For the class",
+      "Lesson 1 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#compare-where-did-it-run",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#compare-where-did-it-run",
     "title": "Ask the Computer About Itself",
     "section": "Compare: where did it run?",
-    "text": "Compare: where did it run?\nCopy this table into your tracing notebook and fill it in:\n\n\n\n\nClassroom computer\nThis web page\n\n\n\n\nCPU type\n\n\n\n\nOperating system\n\n\n\n\nComputer name\n\n\n\n\n\n\nSame code. Different answers. What changed?\n\n\nAbout 10 minutes. Students run l01_computer_report.py in Thonny, IDLE, or VS Code and fill in the classroom column; the web page column comes from the step-through box on the previous slide. TEACHER PROMPT: “Every column came from exactly the same four lines of code. So the code didn’t change. What did change?” Let students answer before naming it: the computer the code ran on. Ask: Why does the web page report wasm32 and Emscripten? Is that the classroom computer? Optional: demonstrate the program in Google Colab and add a third column (a Google server, usually x86_64 / Linux)."
+    "text": "Compare: where did it run?\nCopy this table into your tracing notebook and fill it in:\n\n\n\n\nClassroom computer\nThis web page\n\n\n\n\nCPU type\n\n\n\n\nOperating system\n\n\n\n\nComputer name\n\n\n\n\n\n\nSame code. Different answers. What changed?\n\n\nAbout 10 minutes. Students run l01_computer_report.py in Thonny, IDLE, or VS Code and fill in the classroom column; the web page column comes from the step-through box on the previous slide. TEACHER PROMPT: “Every column came from exactly the same four lines of code. So the code didn’t change. What did change?” Let students answer before naming it: the computer the code ran on. Ask: Why does the web page report wasm32 and Emscripten? Is that the classroom computer? Optional: demonstrate the program in Google Colab and add a third column (a Google server, usually x86_64 / Linux).",
+    "crumbs": [
+      "For the class",
+      "Lesson 1 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#modify",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#modify",
     "title": "Ask the Computer About Itself",
     "section": "Modify",
-    "text": "Modify\n\nChange the labels, e.g. \"Processor:\"\nAdd a line that prints platform.python_version()\nSwap two print() lines. What changes?"
+    "text": "Modify\n\nChange the labels, e.g. \"Processor:\"\nAdd a line that prints platform.python_version()\nSwap two print() lines. What changes?",
+    "crumbs": [
+      "For the class",
+      "Lesson 1 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#make",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#make",
     "title": "Ask the Computer About Itself",
     "section": "Make",
-    "text": "Make\nOn the classroom computer, write a program that prints:\n\nthe operating system: platform.system()\nits version number: platform.release()\n\nGive each answer a label. Finished? Add a third fact.\n\nAbout 10 minutes, in Thonny, IDLE, or VS Code. Two print lines plus the import."
+    "text": "Make\nOn the classroom computer, write a program that prints:\n\nthe operating system: platform.system()\nits version number: platform.release()\n\nGive each answer a label. Save it as os_report.py in ics3u/module-01/lesson-01/. Finished? Add a third fact.\n\nAbout 10 minutes, in Thonny, IDLE, or VS Code. Two print lines plus the import.",
+    "crumbs": [
+      "For the class",
+      "Lesson 1 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#exit-ticket",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#exit-ticket",
     "title": "Ask the Computer About Itself",
     "section": "Exit ticket",
-    "text": "Exit ticket\nWhat would the output be if this program were run on a Windows laptop with an Intel processor?\nimport platform\n\nprint(\"Report\")\nprint(\"CPU:\", platform.machine())"
+    "text": "Exit ticket\nWhat would the output be if this program were run on a Windows laptop with an Intel processor?\nimport platform\n\nprint(\"Report\")\nprint(\"CPU:\", platform.machine())",
+    "crumbs": [
+      "For the class",
+      "Lesson 1 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#after-class",
     "href": "modules/module-01-about-this-computer/lesson-01-ask-the-computer-slides.html#after-class",
     "title": "Ask the Computer About Itself",
     "section": "After class",
-    "text": "After class\n\nDo the Lesson 1 practice: read and predict first, then run\nToday’s programs are on the practice page: download the .py files, or open them as notebooks in Callysto or Colab"
+    "text": "After class\n\nDo the Lesson 1 practice: read and predict first, then run\nToday’s programs are on the practice page: download the .py files, or open them as notebooks in Callysto or Colab",
+    "crumbs": [
+      "For the class",
+      "Lesson 1 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#review",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#review",
     "title": "Exploring the platform Library",
     "section": "Review",
-    "text": "Review\n\nWhat does platform.machine() print on the classroom computer? On the web page?\nWhat does the dot in platform.machine() mean? The parentheses?"
+    "text": "Review\n\nWhat does platform.machine() print on the classroom computer? On the web page?\nWhat does the dot in platform.machine() mean? The parentheses?",
+    "crumbs": [
+      "For the class",
+      "Lesson 2 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#what-else-is-in-the-toolbox",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#what-else-is-in-the-toolbox",
     "title": "Exploring the platform Library",
     "section": "What else is in the toolbox?",
-    "text": "What else is in the toolbox?\n\n\n\n\n\n\nPython documentation: platform\n\nSkip names starting with an underscore. Point out familiar names (machine, system, node, python_version, release) and new ones (platform, architecture, version, uname). Then open docs.python.org/3/library/platform.html and read the entry for machine() together."
+    "text": "What else is in the toolbox?\nLesson 1 asked platform three questions. What else does it know?\n\n\n\n\n\n\nPython documentation: platform\n\nOpen with the problem: “Lesson 1 asked platform three questions. What else does it know about this computer? And how do we make a program remember an answer instead of asking twice?” Skip names starting with an underscore. Point out familiar names (machine, system, node, python_version, release) and new ones (platform, architecture, version, uname). Then open docs.python.org/3/library/platform.html and read the entry for machine() together.",
+    "crumbs": [
+      "For the class",
+      "Lesson 2 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#predict-then-step",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#predict-then-step",
     "title": "Exploring the platform Library",
     "section": "Predict, then step",
-    "text": "Predict, then step\nimport platform\n\ncpu = platform.machine()\nsystem = platform.system()\nname = platform.node()\n\nprint(\"Computer report for\", name)\nprint(\"CPU type:\", cpu)\nprint(\"Operating system:\", system)\n\nTEACHER PROMPT (first use of the Variables panel): “Same colours as last lesson. New panel: Variables. A variable is a name that holds a value — watch a row appear when line 3 runs.” After line 3: “Nothing printed, but the answer was stored under the name cpu. The quotation marks around ‘wasm32’ mean the value is text — a string. They won’t be printed.” This is Lesson 1’s report with each answer stored in a variable first. Ask: Which lines ask a question? Which lines print? What will the first line of output be? After predicting, step through and watch the Variables panel: lines 3–5 print nothing, but the variables appear."
+    "text": "Predict, then step\nimport platform\n\ncpu = platform.machine()\nsystem = platform.system()\nname = platform.node()\n\nprint(\"Computer report for\", name)\nprint(\"CPU type:\", cpu)\nprint(\"Operating system:\", system)\n\nTEACHER PROMPT (first use of the Variables panel): “Same colours as last lesson. New panel: Variables. A variable is a name that holds a value — watch a row appear when line 3 runs.” After line 3: “Nothing printed, but the answer was stored under the name cpu. The quotation marks around ‘wasm32’ mean the value is text — a string. They won’t be printed.” This is Lesson 1’s report with each answer stored in a variable first. Ask: Which lines ask a question? Which lines print? What will the first line of output be? After predicting, step through and watch the Variables panel: lines 3–5 print nothing, but the variables appear.",
+    "crumbs": [
+      "For the class",
+      "Lesson 2 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#what-the-variables-hold",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#what-the-variables-hold",
     "title": "Exploring the platform Library",
     "section": "What the variables hold",
-    "text": "What the variables hold\n\nAfter line 3, which variable exists? What is its value?\nLines 3–5 print nothing. Where did the answers go?\nWhat if line 7 came before line 5?\n\n\nQuotation marks in the Variables panel (e.g. ‘wasm32’) show the value is text (a string); they are not printed."
+    "text": "What the variables hold\n\nAfter line 3, which variable exists? What is its value?\nLines 3–5 print nothing. Where did the answers go?\nWhat if line 7 came before line 5?\n\n\nQuotation marks in the Variables panel (e.g. ‘wasm32’) show the value is text (a string); they are not printed.",
+    "crumbs": [
+      "For the class",
+      "Lesson 2 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#a-variable-can-change",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#a-variable-can-change",
     "title": "Exploring the platform Library",
     "section": "A variable can change",
-    "text": "A variable can change\nimport platform\n\nsystem = platform.system()\nprint(\"Before:\", system)\nsystem = \"my computer\"\nprint(\"After:\", system)\n\nAbout 5 minutes. Read first: what will each output line be? Step through and watch the system row in Variables. TEACHER PROMPT (first time a variable changes): “Line 5 uses the same name again. Watch the Variables panel.” After line 5: “The old value is gone. A variable holds one value at a time; a new value replaces the old one. Line 4 already printed the old value, and Python never goes back.”"
+    "text": "A variable can change\nimport platform\n\nsystem = platform.system()\nprint(\"Before:\", system)\nsystem = \"my computer\"\nprint(\"After:\", system)\n\nAbout 5 minutes. Read first: what will each output line be? Step through and watch the system row in Variables. TEACHER PROMPT (first time a variable changes): “Line 5 uses the same name again. Watch the Variables panel.” After line 5: “The old value is gone. A variable holds one value at a time; a new value replaces the old one. Line 4 already printed the old value, and Python never goes back.”",
+    "crumbs": [
+      "For the class",
+      "Lesson 2 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#spot-the-problem-a",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#spot-the-problem-a",
     "title": "Exploring the platform Library",
     "section": "Spot the problem: A",
-    "text": "Spot the problem: A\nimport platform\n\nprint(platform.machine)\n\nNo parentheses, so Python prints the tool itself, not its answer."
+    "text": "Spot the problem: A\nimport platform\n\nprint(platform.machine)\n\nNo parentheses, so Python prints the tool itself, not its answer.",
+    "crumbs": [
+      "For the class",
+      "Lesson 2 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#spot-the-problem-b",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#spot-the-problem-b",
     "title": "Exploring the platform Library",
     "section": "Spot the problem: B",
-    "text": "Spot the problem: B\nimport platform\n\nprint(platform.cpu())\n\nTEACHER PROMPT (first error): “A red line means Python stopped there because of an error; the lines below never ran. Read the message in order: line number, kind of error, description. Errors are Python telling us exactly where to look.” AttributeError on line 3: the module has no tool called cpu. Then run it in Thonny, IDLE, or VS Code and read the full traceback."
+    "text": "Spot the problem: B\nimport platform\n\nprint(platform.cpu())\n\nTEACHER PROMPT (first error): “A red line means Python stopped there because of an error; the lines below never ran. Read the message in order: line number, kind of error, description. Errors are Python telling us exactly where to look.” AttributeError on line 3: the module has no tool called cpu. Then run it in Thonny, IDLE, or VS Code and read the full traceback.",
+    "crumbs": [
+      "For the class",
+      "Lesson 2 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#modify",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#modify",
     "title": "Exploring the platform Library",
     "section": "Modify",
-    "text": "Modify\nAdd a variable and a labelled line for:\n\nplatform.python_version()\nplatform.release()"
+    "text": "Modify\nAdd a variable and a labelled line for:\n\nplatform.python_version()\nplatform.release()",
+    "crumbs": [
+      "For the class",
+      "Lesson 2 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#make-my-computer-report",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#make-my-computer-report",
     "title": "Exploring the platform Library",
     "section": "Make: My Computer Report",
-    "text": "Make: My Computer Report\n\nUse four platform functions\nAt least one you found with dir() or the documentation\nStore each answer in a well-named variable\nPrint a labelled report\nWrite and run it on the classroom computer"
+    "text": "Make: My Computer Report\n\nUse four platform functions\nAt least one you found with dir() or the documentation\nStore each answer in a well-named variable\nPrint a labelled report\nWrite and run it on the classroom computer\nSave it as my_report.py in ics3u/module-01/lesson-02/\n\n\nAbout 10 minutes. Practice for the assignment’s Part B: make sure everyone writes and runs at least two lines.",
+    "crumbs": [
+      "For the class",
+      "Lesson 2 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#exit-ticket",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#exit-ticket",
     "title": "Exploring the platform Library",
     "section": "Exit ticket",
-    "text": "Exit ticket\nSuppose this program were run on a Windows laptop with an Intel processor.\nimport platform\n\ncpu = platform.machine()\nprint(\"CPU:\", cpu)\nprint(\"Again:\", cpu)\n\nWhat would the output be?\nHow many times does it ask for the CPU type?"
+    "text": "Exit ticket\nSuppose this program were run on a Windows laptop with an Intel processor.\nimport platform\n\ncpu = platform.machine()\nprint(\"CPU:\", cpu)\nprint(\"Again:\", cpu)\n\nWhat would the output be?\nHow many times does it ask for the CPU type?",
+    "crumbs": [
+      "For the class",
+      "Lesson 2 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#after-class",
     "href": "modules/module-01-about-this-computer/lesson-02-exploring-platform-slides.html#after-class",
     "title": "Exploring the platform Library",
     "section": "After class",
-    "text": "After class\n\nDo the Lesson 2 practice: read and predict first, then run\nThen start the Module 1 Assignment\nToday’s programs are on the practice page: download the .py files, or open them as notebooks in Callysto or Colab"
+    "text": "After class\n\nDo the Lesson 2 practice: read and predict first, then run\nThen start the Module 1 Assignment\nToday’s programs are on the practice page: download the .py files, or open them as notebooks in Callysto or Colab",
+    "crumbs": [
+      "For the class",
+      "Lesson 2 slides"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/practice.html",
     "href": "modules/module-01-about-this-computer/practice.html",
     "title": "Module 1 Practice",
     "section": "",
-    "text": "For students. Do each lesson’s practice after that lesson. Read first: predict before you run anything. Write your answers in your tracing notebook (paper). The prediction box beside the code isn’t saved. If your teacher asks you to hand something in, put your written answers in a comment at the top of your .py file. · Module 1 overview\nSave every file in your course folder, in the folder for that lesson."
+    "text": "For students. Do each lesson’s practice after that lesson. Read first: predict before you run anything. Write your answers in your tracing notebook (paper). The prediction box beside the code isn’t saved. If your teacher asks you to hand something in, put your written answers in a comment at the top of your .py file. · Module 1 overview\nSave every file in your course folder, in the folder for that lesson.",
+    "crumbs": [
+      "For students",
+      "Practice"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/practice.html#after-lesson-1-ask-the-computer-about-itself",
     "href": "modules/module-01-about-this-computer/practice.html#after-lesson-1-ask-the-computer-about-itself",
     "title": "Module 1 Practice",
     "section": "After Lesson 1: Ask the Computer About Itself",
-    "text": "After Lesson 1: Ask the Computer About Itself\n\nRead and predict\nRead this program without running it. Write your answers in your tracing notebook, then type your prediction in the box and press Step.\n\nHow many lines will it print?\nWhich lines will be exactly the same on every computer?\nWhich parts will change from computer to computer?\nWhich line of code prints Done?\n\nimport platform\n\nprint(\"Python report\")\nprint(\"System:\", platform.system())\nprint(\"Python version:\", platform.python_version())\nprint(\"Done\")\n\n\nModify\nMake each change, predict the new output, then run it.\n\nAdd a line that prints the CPU type with the label CPU:.\nChange the first line so it prints your name instead of Python report, for example Python report by Sam.\nMove print(\"Done\") to the top of the program. What happens? Why?\n\n\n\n\n\n\n\n\n\nMake\nOn your classroom computer (Thonny, IDLE, or VS Code), write a program that prints:\n\na title line, and\nthree labelled facts about the computer: its CPU type, its operating system, and the operating system’s version number (platform.release()).\n\nRun it, then copy its output under your code as a comment.\n\n\nCode files\nLesson 1’s programs, including the ones above. Download a .py file for Thonny, IDLE, or VS Code, or open the notebook in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nComputer report\nl01_computer_report.py\nView or download\nCallysto | Colab\n\n\nCPU type\nl01_cpu_type.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl01_practice_read.py\nView or download\nCallysto | Colab"
+    "text": "After Lesson 1: Ask the Computer About Itself\n\nRead and predict\nRead this program without running it. Write your answers in your tracing notebook, then type your prediction in the box and press Step.\n\nHow many lines will it print?\nWhich lines will be exactly the same on every computer?\nWhich parts will change from computer to computer?\nWhich line of code prints Done?\n\nimport platform\n\nprint(\"Python report\")\nprint(\"System:\", platform.system())\nprint(\"Python version:\", platform.python_version())\nprint(\"Done\")\n\n\nModify\nMake each change, predict the new output, then run it.\n\nAdd a line that prints the CPU type with the label CPU:.\nChange the first line so it prints your name instead of Python report, for example Python report by Sam.\nMove print(\"Done\") to the top of the program. What happens? Why?\n\n\n\n\n\n\n\n\n\nMake\nOn your classroom computer (Thonny, IDLE, or VS Code), write a program that prints:\n\na title line, and\nthree labelled facts about the computer: its CPU type, its operating system, and the operating system’s version number (platform.release()).\n\nRun it, then copy its output under your code as a comment.\n\n\nCode files\nLesson 1’s programs, including the ones above. Download a .py file for Thonny, IDLE, or VS Code, or open the notebook in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nComputer report\nl01_computer_report.py\nView or download\nCallysto | Colab\n\n\nCPU type\nl01_cpu_type.py\nView or download\nCallysto | Colab\n\n\nPractice read\nl01_practice_read.py\nView or download\nCallysto | Colab",
+    "crumbs": [
+      "For students",
+      "Practice"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/practice.html#after-lesson-2-exploring-the-platform-library",
     "href": "modules/module-01-about-this-computer/practice.html#after-lesson-2-exploring-the-platform-library",
     "title": "Module 1 Practice",
     "section": "After Lesson 2: Exploring the platform Library",
-    "text": "After Lesson 2: Exploring the platform Library\n\nTrace\nRead this program without running it. In your tracing notebook, fill in a trace table like the one below: every line that runs gets a row, and blank lines don’t. Line 1 is filled in for you. Then type your prediction and press Step to check, watching the Variables panel.\n\n\n\nLine\nsystem\nversion\nOutput\n\n\n\n\n1\n—\n—\n—\n\n\n3\n\n\n\n\n\n4\n\n\n\n\n\n5\n\n\n\n\n\n6\n\n\n\n\n\n7\n\n\n\n\n\n\nimport platform\n\nsystem = platform.system()\nversion = platform.python_version()\nprint(\"Running on\", system)\nsystem = \"my computer\"\nprint(\"Python\", version, \"on\", system)\n\nWhat does system hold after line 3? After line 6?\nWhy does the last line print my computer and not the operating system’s name?\n\n\n\nSpot the mistake\nThis program has a mistake. Predict what will happen, then press Step to find out.\n\nWhat type of error is it?\nWhich line does it point to?\nPython makes a suggestion. What is it? Fix the program on your classroom computer and run it.\n\nimport platform\n\nversion = platform.python_versions()\nprint(\"Python version:\", version)\n\n\nMake\n\nRun print(dir(platform)) (after import platform) and choose one function you haven’t used yet. Check what it does in the platform documentation.\nOn your classroom computer, write a program that stores its answer in a variable with a clear name and prints it with a label.\nAdd a comment at the top explaining, in your own words, what the function tells you.\n\n\n\n\n\n\n\n\n\nCode files\nLesson 2’s programs, including the ones above. Download a .py file, or open the notebook in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nChange variable\nl02_change_variable.py\nView or download\nCallysto | Colab\n\n\nMistake: attribute\nl02_mistake_attribute.py\nView or download\nCallysto | Colab\n\n\nMistake: parentheses\nl02_mistake_parentheses.py\nView or download\nCallysto | Colab\n\n\nPractice mistake\nl02_practice_mistake.py\nView or download\nCallysto | Colab\n\n\nPractice trace\nl02_practice_trace.py\nView or download\nCallysto | Colab\n\n\nReport variables\nl02_report_variables.py\nView or download\nCallysto | Colab"
+    "text": "After Lesson 2: Exploring the platform Library\n\nTrace\nRead this program without running it. In your tracing notebook, fill in a trace table like the one below: every line that runs gets a row, and blank lines don’t. Line 1 is filled in for you. Then type your prediction and press Step to check, watching the Variables panel.\n\n\n\nLine\nsystem\nversion\nOutput\n\n\n\n\n1\n—\n—\n—\n\n\n3\n\n\n\n\n\n4\n\n\n\n\n\n5\n\n\n\n\n\n6\n\n\n\n\n\n7\n\n\n\n\n\n\nimport platform\n\nsystem = platform.system()\nversion = platform.python_version()\nprint(\"Running on\", system)\nsystem = \"my computer\"\nprint(\"Python\", version, \"on\", system)\n\nWhat does system hold after line 3? After line 6?\nWhy does the last line print my computer and not the operating system’s name?\n\n\n\nSpot the mistake\nThis program has a mistake. Predict what will happen, then press Step to find out.\n\nWhat type of error is it?\nWhich line does it point to?\nPython makes a suggestion. What is it? Fix the program on your classroom computer and run it.\n\nimport platform\n\nversion = platform.python_versions()\nprint(\"Python version:\", version)\n\n\nMake\n\nRun print(dir(platform)) (after import platform) and choose one function you haven’t used yet. Check what it does in the platform documentation.\nOn your classroom computer, write a program that stores its answer in a variable with a clear name and prints it with a label.\nAdd a comment at the top explaining, in your own words, what the function tells you.\n\n\n\n\n\n\n\n\n\nCode files\nLesson 2’s programs, including the ones above. Download a .py file, or open the notebook in Callysto or Colab.\n\n\n\nProgram\nPython file\nNotebook\nOpen notebook in\n\n\n\n\nChange variable\nl02_change_variable.py\nView or download\nCallysto | Colab\n\n\nMistake: attribute\nl02_mistake_attribute.py\nView or download\nCallysto | Colab\n\n\nMistake: parentheses\nl02_mistake_parentheses.py\nView or download\nCallysto | Colab\n\n\nPractice mistake\nl02_practice_mistake.py\nView or download\nCallysto | Colab\n\n\nPractice trace\nl02_practice_trace.py\nView or download\nCallysto | Colab\n\n\nReport variables\nl02_report_variables.py\nView or download\nCallysto | Colab",
+    "crumbs": [
+      "For students",
+      "Practice"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/practice.html#next",
     "href": "modules/module-01-about-this-computer/practice.html#next",
     "title": "Module 1 Practice",
     "section": "Next",
-    "text": "Next\nWhen you’ve finished both, start the Module 1 Assignment."
+    "text": "Next\nWhen you’ve finished both, start the Module 1 Assignment.",
+    "crumbs": [
+      "For students",
+      "Practice"
+    ]
+  },
+  {
+    "objectID": "modules/module-01-about-this-computer/practice.html#previous-and-next",
+    "href": "modules/module-01-about-this-computer/practice.html#previous-and-next",
+    "title": "Module 1 Practice",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Module 1 overview · Assignment: Computer Report Card →",
+    "crumbs": [
+      "For students",
+      "Practice"
+    ]
   },
   {
     "objectID": "modules/module-01-about-this-computer/practice.html#feedback",
     "href": "modules/module-01-about-this-computer/practice.html#feedback",
     "title": "Module 1 Practice",
     "section": "Feedback",
-    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response."
+    "text": "Feedback\n\nFound a mistake, a code example that doesn't run, or an idea that would make this lesson better? Feedback from teachers and students is always appreciated.\nReport an error or suggest a change opens a short form on GitHub with this lesson already filled in. Please don't post answers to worksheets, quizzes, or tests: issues are public.\nNo GitHub account? Send feedback privately with a Google Form instead. This page's address is filled in for you, and only the author sees your response.",
+    "crumbs": [
+      "For students",
+      "Practice"
+    ]
   },
   {
     "objectID": "modules/module-03-benchmark-lab/index.html",
@@ -1005,7 +1399,7 @@
     "href": "modules/module-03-benchmark-lab/index.html#planned-lessons",
     "title": "Module 3: Benchmark Lab",
     "section": "Planned Lessons",
-    "text": "Planned Lessons\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n1. How Fast Is This Computer?\nReading a benchmark; for and range(); the time module (A3.1)\nTime counting to one million, then ten million\n\n\n2. Counting and Adding\nCounters and accumulators; comparing a loop to a formula (B3.2)\nAdd 1 to n with a loop and with n(n+1)/2; which is faster?\n\n\n3. A Fair Benchmark Suite\nNested loops and decisions; checking for primes as one test among several (A2.3, B3.2); fair tests: repeat and take the median (B1.1)\nA three-test benchmark suite\n\n\n4. Run It Everywhere\nSame code, different machines; CPU type and cores (C1.2, C1.4)\nCompare results from the classroom, the browser, and Colab\n\n\n5. Keep Going Until…\nwhile loops; loop conditions; infinite loops and how to stop them\nA study timer (25 minutes on, 5 off) and “run the benchmark until five seconds pass”\n\n\n6. Reaction Timer\nrandom, time, and input() together\nA reaction test; best of five\n\n\n7. Is Shuffle Really Random?\nSimulation; random.shuffle(); counting results (reading and modifying a list of counts)\n1000 shuffles, with a simple text bar chart\n\n\n8. Plan Before You Code\nFlow charts and pseudocode (B2.4); working from a skeleton (B2.1)\nA flow chart for the typing test\n\n\n9. Your First Functions\nReading and modifying def, parameters, and return values (A3.2)\nWrap the benchmark in a time_it() function\n\n\n10. Debugging a Loop\nTracing; printing variables to find a bug; off-by-one errors (A4.1, A4.4, B4.5)\nFix three broken benchmarks\n\n\n11. Module 3 test\nCode reading and tracing; a short basics section"
+    "text": "Planned Lessons\n\n\n\n\n\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n1. How Fast Is This Computer?\nReading a benchmark; for and range(); the time module (A3.1)\nTime counting to one million, then ten million\n\n\n2. Counting and Adding\nCounters and accumulators; comparing a loop to a formula (B3.2)\nAdd 1 to n with a loop and with n(n+1)/2; which is faster?\n\n\n3. A Fair Benchmark Suite\nNested loops and decisions; checking for primes as one test among several (A2.3, B3.2); fair tests: repeat and take the median (B1.1); reading and modifying a three-test benchmark suite\nMake: the Download Time Table Quick Build\n\n\n4. Run It Everywhere\nSame code, different machines; CPU type and cores (C1.2, C1.4)\nCompare results from the classroom, the browser, and Colab\n\n\n5. Keep Going Until…\nwhile loops; loop conditions; infinite loops and how to stop them\nMake: the Study Timer Quick Build (25 minutes on, 5 off); modify the benchmark to run until five seconds pass\n\n\n6. Reaction Timer\nrandom, time, and input() together\nA reaction test; best of five\n\n\n7. Is Shuffle Really Random?\nSimulation; random.shuffle(); counting results (reading and modifying a list of counts)\n1000 shuffles, with a simple text bar chart\n\n\n8. Plan It, Then Wrap It\nFlow charts and pseudocode (B2.4); working from a skeleton (B2.1); reading and modifying def, parameters, and return values (A3.2)\nA flow chart for the typing test; wrap the benchmark in a time_it() function\n\n\n9. Debugging a Loop\nTracing; printing variables to find a bug; off-by-one errors (A4.1, A4.4, B4.5)\nFix three broken benchmarks\n\n\n10. Review and assignment work period\nA short review of Lessons 1–9, then class time for the assignment\nFinish the Typing Speed Test\n\n\n11. Module 3 test\nCode reading and tracing; a short basics section"
   },
   {
     "objectID": "modules/module-03-benchmark-lab/index.html#assignment-planned-typing-speed-test",
@@ -1019,7 +1413,7 @@
     "href": "modules/module-03-benchmark-lab/index.html#practising-the-basics-planned",
     "title": "Module 3: Benchmark Lab",
     "section": "Practising the Basics (Planned)",
-    "text": "Practising the Basics (Planned)\n\nSkill Builder: for and range(), while, counters and accumulators, nested loops, and tracing loops in a table. Includes Module 2 decisions and conversions.\nQuick Builds (small graded programs, before the assignment):\n\nDownload Time Table: a table of how long files of different sizes take to download at different speeds (nested loops, aligned columns).\nStudy Timer: a countdown with work and break periods and a session count.\n\nWarm-ups in every lesson include a question from an earlier module."
+    "text": "Practising the Basics (Planned)\n\nSkill Builder: for and range(), while, counters and accumulators, nested loops, and tracing loops in a table. Includes Module 2 decisions and conversions.\nQuick Builds (small graded programs; each is the Make product of a lesson, so it needs no extra period):\n\nDownload Time Table (Lesson 3): a table of how long files of different sizes take to download at different speeds (nested loops, aligned columns).\nStudy Timer (Lesson 5): a countdown with work and break periods and a session count.\n\nWarm-ups in every lesson include a question from an earlier module."
   },
   {
     "objectID": "modules/module-03-benchmark-lab/index.html#notes-for-teachers",
@@ -1033,7 +1427,14 @@
     "href": "modules/module-03-benchmark-lab/index.html#how-module-3-fits",
     "title": "Module 3: Benchmark Lab",
     "section": "How Module 3 Fits",
-    "text": "How Module 3 Fits\n\nBefore: Module 2 made decisions with if/elif/else and handled bad input.\nNext: Module 4, Passwords and Secret Messages, uses the benchmark to estimate how long a password takes to crack."
+    "text": "How Module 3 Fits\n\nBefore: Module 2 made decisions with if/elif/else and handled bad input.\nNext: Module 4, Passwords and Secret Messages, uses the benchmark to estimate how long a password takes to crack.\nThen: the Computer Science in the World lesson Faster Than One Computer (about 1 hour), before Module 4."
+  },
+  {
+    "objectID": "modules/module-03-benchmark-lab/index.html#previous-and-next",
+    "href": "modules/module-03-benchmark-lab/index.html#previous-and-next",
+    "title": "Module 3: Benchmark Lab",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Module 2 · Scope and Sequence · Module 4 →"
   },
   {
     "objectID": "modules/module-03-benchmark-lab/index.html#feedback",
@@ -1061,7 +1462,7 @@
     "href": "modules/module-05-on-the-network/index.html#planned-lessons",
     "title": "Module 5: On the Network",
     "section": "Planned Lessons",
-    "text": "Planned Lessons\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n1. Who Am I on the Network?\nsocket; host names; local IP addresses; how this compares with platform.node()\nAdd network facts to the computer report card\n\n\n2. IP Addresses\nIPv4 and IPv6; private vs. public addresses; the ipaddress module (A3.1)\nExplain why the school address starts with 10 or 192.168\n\n\n3. Lists, Properly\nElements, indexes, bounds, IndexError; .split() into a list (A1.5, A1.6)\nSplit an IP address into four numbers and show each in binary (A1.2)\n\n\n4. Names to Numbers: DNS\nsocket.gethostbyname(); building a list of results with .append()\nLook up a list of favourite websites\n\n\n5. How Far Away Is That Server?\nTiming a connection; looping over a list; count, total, lowest, highest (A2.3)\nA response timer with fastest, slowest, and average\n\n\n6. When the Network Fails\nTimeouts, unknown hosts, try/except around network code (B3.3); testing with good, slow, and broken addresses (A4.5)\nMake the response timer survive a typo and an unplugged cable\n\n\n7. Keep a Log\nWriting files: open() in append mode, csv.writer, timestamps with datetime\nLog each test run to network_log.csv, collected over several days for Module 6\n\n\n8. Downloading a Web Page\nurllib.request; bytes and megabits (Module 2 again); parsing a web address with urllib.parse; reading the sample folder generator’s download code. Extension: read a page’s title with html.parser\nA download speed test\n\n\n9. Be the Server\npython -m http.server; ports; firewalls; visiting a classmate’s computer\nServe a page from your own computer to the class\n\n\n10. How the Internet Works, and Review\nPackets and routers with the netsim game; a data flow diagram of a web request (B2.4); distributed computing (D2.1)\nDraw the trip a web request takes\n\n\n11. Module 5 test\nCode reading and tracing; a short basics section"
+    "text": "Planned Lessons\n\n\n\nLesson\nFocus\nStudents read, then build\n\n\n\n\n1. Who Am I on the Network?\nsocket; host names; local IP addresses and how they compare with platform.node(); IPv4 and IPv6; private vs. public addresses with the ipaddress module (A3.1)\nAdd network facts to the computer report card; explain why the school address starts with 10 or 192.168\n\n\n2. Lists, Properly\nElements, indexes, bounds, IndexError; .split() into a list (A1.5, A1.6)\nSplit an IP address into four numbers and show each in binary (A1.2)\n\n\n3. Names to Numbers: DNS\nsocket.gethostbyname(); building a list of results with .append()\nLook up a list of favourite websites\n\n\n4. How Far Away Is That Server?\nTiming a connection; looping over a list; count, total, lowest, highest (A2.3); modifying a response timer\nMake: the Speed Log Summary Quick Build\n\n\n5. When the Network Fails\nTimeouts, unknown hosts, try/except around network code (B3.3); testing with good, slow, and broken addresses (A4.5)\nMake the response timer survive a typo and an unplugged cable\n\n\n6. Keep a Log\nWriting files: open() in append mode, csv.writer, timestamps with datetime\nLog each test run to network_log.csv, collected over several days for Module 6\n\n\n7. Downloading a Web Page\nurllib.request; bytes and megabits (Module 2 again); parsing a web address with urllib.parse; reading the sample folder generator’s download code; modifying a download speed test. Extension: read a page’s title with html.parser\nMake: the Web Address Splitter Quick Build\n\n\n8. Be the Server\npython -m http.server; ports; firewalls; visiting a classmate’s computer\nServe a page from your own computer to the class\n\n\n9. How the Internet Works\nPackets and routers with the netsim game; a data flow diagram of a web request (B2.4); distributed computing (D2.1)\nDraw the trip a web request takes\n\n\n10. Review and assignment work period\nA short review of Lessons 1–9, then class time for the assignment\nFinish Is It Me or the Wi-Fi?\n\n\n11. Module 5 test\nCode reading and tracing; a short basics section"
   },
   {
     "objectID": "modules/module-05-on-the-network/index.html#assignment-planned-is-it-me-or-the-wi-fi",
@@ -1075,21 +1476,28 @@
     "href": "modules/module-05-on-the-network/index.html#practising-the-basics-planned",
     "title": "Module 5: On the Network",
     "section": "Practising the Basics (Planned)",
-    "text": "Practising the Basics (Planned)\n\nSkill Builder: creating lists, .append(), indexing and bounds, looping over a list, finding the total, highest, and lowest by hand, and writing a line to a file. Includes Module 4 string methods.\nQuick Builds (small graded programs, before the assignment):\n\nSpeed Log Summary: given a list of download speeds, report the count, average, fastest, slowest, and how many were below a target.\nWeb Address Splitter: breaks a URL into its scheme, site, and path, and says whether it uses HTTPS.\n\nWarm-ups in every lesson include a question from an earlier module."
+    "text": "Practising the Basics (Planned)\n\nSkill Builder: creating lists, .append(), indexing and bounds, looping over a list, finding the total, highest, and lowest by hand, and writing a line to a file. Includes Module 4 string methods.\nQuick Builds (small graded programs; each is the Make product of a lesson, so it needs no extra period):\n\nSpeed Log Summary (Lesson 4): given a list of download speeds, report the count, average, fastest, slowest, and how many were below a target.\nWeb Address Splitter (Lesson 7): breaks a URL into its scheme, site, and path, and says whether it uses HTTPS.\n\nWarm-ups in every lesson include a question from an earlier module."
   },
   {
     "objectID": "modules/module-05-on-the-network/index.html#notes-for-teachers",
     "href": "modules/module-05-on-the-network/index.html#notes-for-teachers",
     "title": "Module 5: On the Network",
     "section": "Notes for Teachers",
-    "text": "Notes for Teachers\n\nOpen computers needed. This module is the most likely to be blocked on a managed lab computer. Check the requirements table with IT before the module starts.\nLocal only. This module’s programs need a real computer on a real network. The site’s browser boxes can’t open network connections, which makes a good callback to Module 1’s “where does my code run?”\nCheck with IT first. Some school networks block outside connections, DNS lookups, or student-run servers. Lesson 8 can run on one computer (localhost) if the network won’t allow more.\nNo ping command needed. Timing a connection with socket.create_connection() works without administrator rights. Students can still read how ping works.\nnetsim: the public site slows down when a whole class registers at once, which is itself a lesson about server load. A school can host its own copy (source, MIT licence).\nBe a good network citizen: small, slow loops only; no scanning other computers."
+    "text": "Notes for Teachers\n\nOpen computers needed. On a managed computer, this module is the one most likely to hit the network rules: school proxies and firewalls often block Python’s own connections even when the browser works, and running a server (Lesson 8) is usually forbidden. Check the requirements table with IT before the module starts.\nLocal only. This module’s programs need a real computer on a real network. The site’s browser boxes can’t open network connections, which makes a good callback to Module 1’s “where does my code run?”\nCheck with IT first. Some school networks block outside connections, DNS lookups, or student-run servers. Lesson 8 can run on one computer (localhost) if the network won’t allow more.\nNo ping command needed. Timing a connection with socket.create_connection() works without administrator rights. Students can still read how ping works.\nnetsim: the public site slows down when a whole class registers at once, which is itself a lesson about server load. A school can host its own copy (source, MIT licence).\nBe a good network citizen: small, slow loops only; no scanning other computers."
   },
   {
     "objectID": "modules/module-05-on-the-network/index.html#how-module-5-fits",
     "href": "modules/module-05-on-the-network/index.html#how-module-5-fits",
     "title": "Module 5: On the Network",
     "section": "How Module 5 Fits",
-    "text": "How Module 5 Fits\n\nBefore: Module 4 taught binary, strings, and writing functions.\nNext: Module 6, Data Detective, uses lists to investigate files, folders, and real data."
+    "text": "How Module 5 Fits\n\nBefore: Module 4 taught binary, strings, and writing functions.\nNext: Module 6, Data Detective, uses lists to investigate files, folders, and real data.\nThen: the Computer Science in the World lesson Computer Science + Another Field (about 1 hour), before Module 6."
+  },
+  {
+    "objectID": "modules/module-05-on-the-network/index.html#previous-and-next",
+    "href": "modules/module-05-on-the-network/index.html#previous-and-next",
+    "title": "Module 5: On the Network",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Module 4 · Scope and Sequence · Module 6 →"
   },
   {
     "objectID": "modules/module-05-on-the-network/index.html#feedback",
@@ -1145,7 +1553,14 @@
     "href": "modules/module-07-software-project/index.html#how-module-7-fits",
     "title": "Module 7: Software Development Project",
     "section": "How Module 7 Fits",
-    "text": "How Module 7 Fits\n\nBefore: Modules 1–6 took every programming idea through reading, modifying, and writing.\nNow: students design with all of them."
+    "text": "How Module 7 Fits\n\nBefore: Module 6, Data Detective, and the five modules before it (Scope and Sequence), took every programming idea through reading, modifying, and writing.\nNow: students design with all of them."
+  },
+  {
+    "objectID": "modules/module-07-software-project/index.html#previous-and-next",
+    "href": "modules/module-07-software-project/index.html#previous-and-next",
+    "title": "Module 7: Software Development Project",
+    "section": "Previous and Next",
+    "text": "Previous and Next\n← Module 6 · Scope and Sequence · Computer Science in the World →"
   },
   {
     "objectID": "modules/module-07-software-project/index.html#feedback",

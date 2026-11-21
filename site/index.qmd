@@ -21,7 +21,7 @@ The whole course is free, with no ads and no sign-up. If it saves you time, a [c
 ::: {.g-col-12 .g-col-md-4}
 ::: {.card .h-100 .p-3}
 ### 1. Set up
-Students need open computers they fully control, not locked-down lab images. Refurbished computers are ideal.
+Modules 1–4 run on any computer with Python and files that stay saved. The whole course needs open computers students fully control; refurbished computers are ideal.
 
 [Before You Begin →](before-you-begin.qmd)
 :::
@@ -30,7 +30,7 @@ Students need open computers they fully control, not locked-down lab images. Ref
 ::: {.g-col-12 .g-col-md-4}
 ::: {.card .h-100 .p-3}
 ### 2. Learn the routine
-What's for you, what's for students, and what happens before, during, and after class.
+What's for you, what's for students, and what happens before, during, and after class. On day one, students [set up their course folder](course-folder.qmd).
 
 [How a Lesson Works →](how-a-lesson-works.qmd)
 :::

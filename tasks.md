@@ -2,6 +2,30 @@
 
 ## Current Focus
 
+### Second live-site audits (2026-11-18): done 2026-11-19
+
+Response: `audits/audit-response_2.md`. The author approved all recommendations (item numbers from that file).
+
+- [x] #1 Assignment: starter downloads as `report_card.py`; one sentence (save here, hand in, copy to `toolkit/`) on the page and in the starter header; Part B written in that file
+- [x] #2 / D1 Lesson 2: Predict 15 → 10, Investigate 25 → 20 (Spot the problem Q4 optional), Make 10 min with `my_report.py`
+- [x] #3 Make slides name the file and folder (`os_report.py`, `my_report.py`)
+- [x] #4 Lesson 2 opens with a useful problem (plan and slides)
+- [x] #5 quarto-live can't delay loading Python, so both plans' Prepare line says to open the slides a few minutes early
+- [x] #8 "build a game" replaced in Scope and Sequence
+- [x] #9 World: a **Then** line in Modules 2–6 and a "How It Fits" section on the World page
+- [x] #10 / D2 Quick Builds named as lesson Make products; review and work period before every Modules 1–6 test (merges recorded in `decisions.md`)
+- [x] #11 Skill Builder stand-in line on Module 1
+- [x] #12 Distinct "open computers" reasons for Modules 5 and 6
+- [x] #13 Previous and Next on every module, World, Getting Started, Practice, and Assignment page; Module 7 links back to Module 6
+- [x] #14 / D3 Callout and home card 1 lead with "Modules 1–4 run on any computer…"
+- [x] #15 Before You Begin expectations tag removed
+- [x] #16 Course folder in the Module 1 sidebar and on home card 2
+- [x] #17 / D4 Module 1 sidebar; "Module 1" navbar menu removed
+- [x] #18 `html { scroll-padding-top: 5.5rem; }` replaces the heading-only rule
+- [ ] Later: #7 screen-reader fragments, #20 skip link, #21 wide tables, #22 expectation glosses, #23 one practice page per lesson
+
+Verified: render with no warnings, no broken internal links or anchors, all 57 expectations covered, sidebar only on Module 1 pages and the course folder page (headless Chrome screenshots), notebooks rebuilt.
+
 ### Module plans for the whole course (draft, 2026-11-18): awaiting author review
 
 Built planned overview pages for every module (no lessons yet) so the author can judge the direction. Verified: site renders with no warnings, no broken internal links, and all 57 expectations covered (checked by script).
